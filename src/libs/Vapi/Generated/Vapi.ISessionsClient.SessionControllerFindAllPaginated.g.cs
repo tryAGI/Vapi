@@ -8,7 +8,7 @@ namespace Vapi
         /// List Sessions
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="name1"></param>
+        /// <param name="name"></param>
         /// <param name="assistantId"></param>
         /// <param name="assistantIdAny">
         /// Example: assistant-1,assistant-2,assistant-3
@@ -24,7 +24,7 @@ namespace Vapi
         /// <param name="assistantOverrides"></param>
         /// <param name="number"></param>
         /// <param name="sipUri"></param>
-        /// <param name="name2"></param>
+        /// <param name="name"></param>
         /// <param name="email"></param>
         /// <param name="externalId"></param>
         /// <param name="customerNumberAny">
@@ -47,7 +47,7 @@ namespace Vapi
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.SessionPaginatedResponse> SessionControllerFindAllPaginatedAsync(
             string? id = default,
-            string? name1 = default,
+            string? name = default,
             string? assistantId = default,
             string? assistantIdAny = default,
             string? squadId = default,
@@ -57,7 +57,7 @@ namespace Vapi
             object? assistantOverrides = default,
             string? number = default,
             string? sipUri = default,
-            string? name2 = default,
+            string? name = default,
             string? email = default,
             string? externalId = default,
             string? customerNumberAny = default,
