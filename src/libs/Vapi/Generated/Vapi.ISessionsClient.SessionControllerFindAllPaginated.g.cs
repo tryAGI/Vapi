@@ -24,7 +24,7 @@ namespace Vapi
         /// <param name="assistantOverrides"></param>
         /// <param name="number"></param>
         /// <param name="sipUri"></param>
-        /// <param name="name"></param>
+        /// <param name="customerName"></param>
         /// <param name="email"></param>
         /// <param name="externalId"></param>
         /// <param name="customerNumberAny">
@@ -57,7 +57,7 @@ namespace Vapi
             object? assistantOverrides = default,
             string? number = default,
             string? sipUri = default,
-            string? name = default,
+            string? customerName = default,
             string? email = default,
             string? externalId = default,
             string? customerNumberAny = default,

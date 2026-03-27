@@ -22,6 +22,8 @@ curl --fail --silent --show-error --location "$openapi_url" -o openapi.yaml
 #         ("11labs" sanitizes to "x11labs" which collides with the parameter name in generated Match methods).
 # Fix 8: Deduplicate enum arrays (DeepgramVoice voiceId, endedReason, etc.)
 #         (duplicate values cause CS0102 errors in generated C# enums).
+# Fix 9: Rename duplicate 'name' parameter in /session GET to 'customerName'
+#         (two query params named 'name' — session name and customer name — cause CS0100).
 jq '
   # Fix 1: top-level security
   .security = [{"bearer": []}] |
@@ -34,6 +36,10 @@ jq '
   .paths["/tool/{id}"].patch.requestBody.content["application/json"].schema.discriminator.mapping["code"] = "#/components/schemas/UpdateCodeToolDTO" |
   .paths["/tool/{id}"].patch.responses["200"].content["application/json"].schema.discriminator.mapping["ghl"] = "#/components/schemas/GhlTool" |
   .paths["/tool/{id}"].delete.responses["200"].content["application/json"].schema.discriminator.mapping["ghl"] = "#/components/schemas/GhlTool" |
+
+  # Fix 9: Rename duplicate "name" param in /session GET (customer name → customerName)
+  (.paths["/session"].get.parameters[] |
+    select(.name == "name" and (.description | test("customer")))) .name = "customerName" |
 
   # Fix 3: Flatten LMNTVoice/FallbackLMNTVoice language oneOf
   .components.schemas.LMNTVoice.properties.language |= (del(.oneOf) | .type = "string") |
