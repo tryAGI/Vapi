@@ -8,7 +8,7 @@ namespace Vapi
         partial void PrepareSessionControllerFindAllPaginatedArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? id,
-            ref string? name1,
+            ref string? name,
             ref string? assistantId,
             ref string? assistantIdAny,
             ref string? squadId,
@@ -18,7 +18,7 @@ namespace Vapi
             object? assistantOverrides,
             ref string? number,
             ref string? sipUri,
-            ref string? name2,
+            ref string? name,
             ref string? email,
             ref string? externalId,
             ref string? customerNumberAny,
@@ -39,7 +39,7 @@ namespace Vapi
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string? id,
-            string? name1,
+            string? name,
             string? assistantId,
             string? assistantIdAny,
             string? squadId,
@@ -49,7 +49,7 @@ namespace Vapi
             object? assistantOverrides,
             string? number,
             string? sipUri,
-            string? name2,
+            string? name,
             string? email,
             string? externalId,
             string? customerNumberAny,
@@ -79,7 +79,7 @@ namespace Vapi
         /// List Sessions
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="name1"></param>
+        /// <param name="name"></param>
         /// <param name="assistantId"></param>
         /// <param name="assistantIdAny">
         /// Example: assistant-1,assistant-2,assistant-3
@@ -95,7 +95,7 @@ namespace Vapi
         /// <param name="assistantOverrides"></param>
         /// <param name="number"></param>
         /// <param name="sipUri"></param>
-        /// <param name="name2"></param>
+        /// <param name="name"></param>
         /// <param name="email"></param>
         /// <param name="externalId"></param>
         /// <param name="customerNumberAny">
@@ -118,7 +118,7 @@ namespace Vapi
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.SessionPaginatedResponse> SessionControllerFindAllPaginatedAsync(
             string? id = default,
-            string? name1 = default,
+            string? name = default,
             string? assistantId = default,
             string? assistantIdAny = default,
             string? squadId = default,
@@ -128,7 +128,7 @@ namespace Vapi
             object? assistantOverrides = default,
             string? number = default,
             string? sipUri = default,
-            string? name2 = default,
+            string? name = default,
             string? email = default,
             string? externalId = default,
             string? customerNumberAny = default,
@@ -152,7 +152,7 @@ namespace Vapi
             PrepareSessionControllerFindAllPaginatedArguments(
                 httpClient: HttpClient,
                 id: ref id,
-                name1: ref name1,
+                name: ref name,
                 assistantId: ref assistantId,
                 assistantIdAny: ref assistantIdAny,
                 squadId: ref squadId,
@@ -162,7 +162,7 @@ namespace Vapi
                 assistantOverrides: assistantOverrides,
                 number: ref number,
                 sipUri: ref sipUri,
-                name2: ref name2,
+                name: ref name,
                 email: ref email,
                 externalId: ref externalId,
                 customerNumberAny: ref customerNumberAny,
@@ -185,7 +185,7 @@ namespace Vapi
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("id", id)
-                .AddOptionalParameter("name", name1)
+                .AddOptionalParameter("name", name)
                 .AddOptionalParameter("assistantId", assistantId)
                 .AddOptionalParameter("assistantIdAny", assistantIdAny)
                 .AddOptionalParameter("squadId", squadId)
@@ -195,7 +195,7 @@ namespace Vapi
                 .AddOptionalParameter("assistantOverrides", assistantOverrides?.ToString())
                 .AddOptionalParameter("number", number)
                 .AddOptionalParameter("sipUri", sipUri)
-                .AddOptionalParameter("name", name2)
+                .AddOptionalParameter("name", name)
                 .AddOptionalParameter("email", email)
                 .AddOptionalParameter("externalId", externalId)
                 .AddOptionalParameter("customerNumberAny", customerNumberAny)
@@ -245,7 +245,7 @@ namespace Vapi
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 id: id,
-                name1: name1,
+                name: name,
                 assistantId: assistantId,
                 assistantIdAny: assistantIdAny,
                 squadId: squadId,
@@ -255,7 +255,7 @@ namespace Vapi
                 assistantOverrides: assistantOverrides,
                 number: number,
                 sipUri: sipUri,
-                name2: name2,
+                name: name,
                 email: email,
                 externalId: externalId,
                 customerNumberAny: customerNumberAny,
