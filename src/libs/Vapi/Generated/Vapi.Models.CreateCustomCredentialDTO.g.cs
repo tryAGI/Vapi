@@ -1,0 +1,79 @@
+
+#nullable enable
+
+namespace Vapi
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class CreateCustomCredentialDTO
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.CreateCustomCredentialDTOProviderJsonConverter))]
+        public global::Vapi.CreateCustomCredentialDTOProvider Provider { get; set; }
+
+        /// <summary>
+        /// This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("authenticationPlan")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AuthenticationPlan6JsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Vapi.AuthenticationPlan6 AuthenticationPlan { get; set; }
+
+        /// <summary>
+        /// This is the encryption plan for encrypting sensitive data. Currently supports public-key encryption.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("encryptionPlan")]
+        public global::Vapi.PublicKeyEncryptionPlan? EncryptionPlan { get; set; }
+
+        /// <summary>
+        /// This is the name of credential. This is just for your reference.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateCustomCredentialDTO" /> class.
+        /// </summary>
+        /// <param name="provider"></param>
+        /// <param name="authenticationPlan">
+        /// This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.
+        /// </param>
+        /// <param name="encryptionPlan">
+        /// This is the encryption plan for encrypting sensitive data. Currently supports public-key encryption.
+        /// </param>
+        /// <param name="name">
+        /// This is the name of credential. This is just for your reference.
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public CreateCustomCredentialDTO(
+            global::Vapi.AuthenticationPlan6 authenticationPlan,
+            global::Vapi.CreateCustomCredentialDTOProvider provider,
+            global::Vapi.PublicKeyEncryptionPlan? encryptionPlan,
+            string? name)
+        {
+            this.AuthenticationPlan = authenticationPlan;
+            this.Provider = provider;
+            this.EncryptionPlan = encryptionPlan;
+            this.Name = name;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateCustomCredentialDTO" /> class.
+        /// </summary>
+        public CreateCustomCredentialDTO()
+        {
+        }
+    }
+}

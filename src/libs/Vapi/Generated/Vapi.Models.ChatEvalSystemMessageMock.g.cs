@@ -1,0 +1,70 @@
+
+#nullable enable
+
+namespace Vapi
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class ChatEvalSystemMessageMock
+    {
+        /// <summary>
+        /// This is the role of the message author.<br/>
+        /// For a mock system message, the role is always 'system'<br/>
+        /// @default 'system'<br/>
+        /// Default Value: system
+        /// </summary>
+        /// <default>global::Vapi.ChatEvalSystemMessageMockRole.System</default>
+        [global::System.Text.Json.Serialization.JsonPropertyName("role")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.ChatEvalSystemMessageMockRoleJsonConverter))]
+        public global::Vapi.ChatEvalSystemMessageMockRole Role { get; set; } = global::Vapi.ChatEvalSystemMessageMockRole.System;
+
+        /// <summary>
+        /// This is the content of the system message that would have been added in the middle of the conversation.<br/>
+        /// Do not include the assistant prompt as a part of this message. It will automatically be fetched during runtime.<br/>
+        /// Example: You are a helpful assistant.
+        /// </summary>
+        /// <example>You are a helpful assistant.</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Content { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ChatEvalSystemMessageMock" /> class.
+        /// </summary>
+        /// <param name="role">
+        /// This is the role of the message author.<br/>
+        /// For a mock system message, the role is always 'system'<br/>
+        /// @default 'system'<br/>
+        /// Default Value: system
+        /// </param>
+        /// <param name="content">
+        /// This is the content of the system message that would have been added in the middle of the conversation.<br/>
+        /// Do not include the assistant prompt as a part of this message. It will automatically be fetched during runtime.<br/>
+        /// Example: You are a helpful assistant.
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public ChatEvalSystemMessageMock(
+            string content,
+            global::Vapi.ChatEvalSystemMessageMockRole role = global::Vapi.ChatEvalSystemMessageMockRole.System)
+        {
+            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
+            this.Role = role;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ChatEvalSystemMessageMock" /> class.
+        /// </summary>
+        public ChatEvalSystemMessageMock()
+        {
+        }
+    }
+}

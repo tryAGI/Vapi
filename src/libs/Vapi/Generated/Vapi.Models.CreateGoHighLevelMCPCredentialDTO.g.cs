@@ -1,0 +1,67 @@
+
+#nullable enable
+
+namespace Vapi
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class CreateGoHighLevelMCPCredentialDTO
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.CreateGoHighLevelMCPCredentialDTOProviderJsonConverter))]
+        public global::Vapi.CreateGoHighLevelMCPCredentialDTOProvider Provider { get; set; }
+
+        /// <summary>
+        /// This is the authentication session for the credential.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("authenticationSession")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Vapi.Oauth2AuthenticationSession AuthenticationSession { get; set; }
+
+        /// <summary>
+        /// This is the name of credential. This is just for your reference.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateGoHighLevelMCPCredentialDTO" /> class.
+        /// </summary>
+        /// <param name="provider"></param>
+        /// <param name="authenticationSession">
+        /// This is the authentication session for the credential.
+        /// </param>
+        /// <param name="name">
+        /// This is the name of credential. This is just for your reference.
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public CreateGoHighLevelMCPCredentialDTO(
+            global::Vapi.Oauth2AuthenticationSession authenticationSession,
+            global::Vapi.CreateGoHighLevelMCPCredentialDTOProvider provider,
+            string? name)
+        {
+            this.AuthenticationSession = authenticationSession ?? throw new global::System.ArgumentNullException(nameof(authenticationSession));
+            this.Provider = provider;
+            this.Name = name;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateGoHighLevelMCPCredentialDTO" /> class.
+        /// </summary>
+        public CreateGoHighLevelMCPCredentialDTO()
+        {
+        }
+    }
+}

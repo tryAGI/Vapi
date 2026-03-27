@@ -1,0 +1,60 @@
+#nullable enable
+
+namespace Vapi.JsonConverters
+{
+    /// <inheritdoc />
+    public sealed class UpdateTextInsightFromCallTableDTOTypeNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.UpdateTextInsightFromCallTableDTOType?>
+    {
+        /// <inheritdoc />
+        public override global::Vapi.UpdateTextInsightFromCallTableDTOType? Read(
+            ref global::System.Text.Json.Utf8JsonReader reader,
+            global::System.Type typeToConvert,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            switch (reader.TokenType)
+            {
+                case global::System.Text.Json.JsonTokenType.String:
+                {
+                    var stringValue = reader.GetString();
+                    if (stringValue != null)
+                    {
+                        return global::Vapi.UpdateTextInsightFromCallTableDTOTypeExtensions.ToEnum(stringValue);
+                    }
+                    
+                    break;
+                }
+                case global::System.Text.Json.JsonTokenType.Number:
+                {
+                    var numValue = reader.GetInt32();
+                    return (global::Vapi.UpdateTextInsightFromCallTableDTOType)numValue;
+                }
+                case global::System.Text.Json.JsonTokenType.Null:
+                {
+                    return default(global::Vapi.UpdateTextInsightFromCallTableDTOType?);
+                }
+                default:
+                    throw new global::System.ArgumentOutOfRangeException(nameof(reader));
+            }
+
+            return default;
+        }
+
+        /// <inheritdoc />
+        public override void Write(
+            global::System.Text.Json.Utf8JsonWriter writer,
+            global::Vapi.UpdateTextInsightFromCallTableDTOType? value,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
+
+            if (value == null)
+            {
+                writer.WriteNullValue();
+            }
+            else
+            {
+                writer.WriteStringValue(global::Vapi.UpdateTextInsightFromCallTableDTOTypeExtensions.ToValueString(value.Value));
+            }
+        }
+    }
+}

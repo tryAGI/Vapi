@@ -1,0 +1,78 @@
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+#nullable enable
+
+namespace Vapi
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class GroupCondition
+    {
+        /// <summary>
+        /// This is the type discriminator for group condition<br/>
+        /// Example: group
+        /// </summary>
+        /// <example>group</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.GroupConditionTypeJsonConverter))]
+        public global::Vapi.GroupConditionType Type { get; set; }
+
+        /// <summary>
+        /// This is the logical operator for combining conditions in this group
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("operator")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.GroupConditionOperatorJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Vapi.GroupConditionOperator Operator { get; set; }
+
+        /// <summary>
+        /// This is the list of nested conditions to evaluate.<br/>
+        /// Supports recursive nesting of groups for complex logic.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.RegexCondition, global::Vapi.LiquidCondition, global::Vapi.GroupCondition>> Conditions { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GroupCondition" /> class.
+        /// </summary>
+        /// <param name="type">
+        /// This is the type discriminator for group condition<br/>
+        /// Example: group
+        /// </param>
+        /// <param name="operator">
+        /// This is the logical operator for combining conditions in this group
+        /// </param>
+        /// <param name="conditions">
+        /// This is the list of nested conditions to evaluate.<br/>
+        /// Supports recursive nesting of groups for complex logic.
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public GroupCondition(
+            global::Vapi.GroupConditionOperator @operator,
+            global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.RegexCondition, global::Vapi.LiquidCondition, global::Vapi.GroupCondition>> conditions,
+            global::Vapi.GroupConditionType type)
+        {
+            this.Operator = @operator;
+            this.Conditions = conditions ?? throw new global::System.ArgumentNullException(nameof(conditions));
+            this.Type = type;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GroupCondition" /> class.
+        /// </summary>
+        public GroupCondition()
+        {
+        }
+    }
+}

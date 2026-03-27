@@ -1,0 +1,241 @@
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+#nullable enable
+
+namespace Vapi
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class TransferDestinationAssistant
+    {
+        /// <summary>
+        /// This is spoken to the customer before connecting them to the destination.<br/>
+        /// Usage:<br/>
+        /// - If this is not provided and transfer tool messages is not provided, default is "Transferring the call now".<br/>
+        /// - If set to "", nothing is spoken. This is useful when you want to silently transfer. This is especially useful when transferring between assistants in a squad. In this scenario, you likely also want to set `assistant.firstMessageMode=assistant-speaks-first-with-model-generated-message` for the destination assistant.<br/>
+        /// This accepts a string or a ToolMessageStart class. Latter is useful if you want to specify multiple messages for different languages through the `contents` field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<string, global::Vapi.CustomMessage>))]
+        public global::Vapi.OneOf<string, global::Vapi.CustomMessage>? Message { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.TransferDestinationAssistantTypeJsonConverter))]
+        public global::Vapi.TransferDestinationAssistantType Type { get; set; }
+
+        /// <summary>
+        /// This is the mode to use for the transfer. Defaults to `rolling-history`.<br/>
+        /// - `rolling-history`: This is the default mode. It keeps the entire conversation history and appends the new assistant's system message on transfer.<br/>
+        ///   Example:<br/>
+        ///   Pre-transfer:<br/>
+        ///     system: assistant1 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///   Post-transfer:<br/>
+        ///     system: assistant1 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///     system: assistant2 system message<br/>
+        ///     assistant: assistant2 first message (or model generated if firstMessageMode is set to `assistant-speaks-first-with-model-generated-message`)<br/>
+        /// - `swap-system-message-in-history`: This replaces the original system message with the new assistant's system message on transfer.<br/>
+        ///   Example:<br/>
+        ///   Pre-transfer:<br/>
+        ///     system: assistant1 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///   Post-transfer:<br/>
+        ///     system: assistant2 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///     assistant: assistant2 first message (or model generated if firstMessageMode is set to `assistant-speaks-first-with-model-generated-message`)<br/>
+        /// - `delete-history`: This deletes the entire conversation history on transfer.<br/>
+        ///   Example:<br/>
+        ///   Pre-transfer:<br/>
+        ///     system: assistant1 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///   Post-transfer:<br/>
+        ///     system: assistant2 system message<br/>
+        ///     assistant: assistant2 first message<br/>
+        ///     user: Yes, please<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        /// - `swap-system-message-in-history-and-remove-transfer-tool-messages`: This replaces the original system message with the new assistant's system message on transfer and removes transfer tool messages from conversation history sent to the LLM.<br/>
+        ///   Example:<br/>
+        ///   Pre-transfer:<br/>
+        ///     system: assistant1 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     transfer-tool<br/>
+        ///     transfer-tool-result<br/>
+        ///     assistant: (destination.message)<br/>
+        ///   Post-transfer:<br/>
+        ///     system: assistant2 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///     assistant: assistant2 first message (or model generated if firstMessageMode is set to `assistant-speaks-first-with-model-generated-message`)<br/>
+        /// @default 'rolling-history'
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transferMode")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.TransferDestinationAssistantTransferModeJsonConverter))]
+        public global::Vapi.TransferDestinationAssistantTransferMode? TransferMode { get; set; }
+
+        /// <summary>
+        /// This is the assistant to transfer the call to.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantName")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string AssistantName { get; set; }
+
+        /// <summary>
+        /// This is the description of the destination, used by the AI to choose when and how to transfer the call.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? Description { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TransferDestinationAssistant" /> class.
+        /// </summary>
+        /// <param name="message">
+        /// This is spoken to the customer before connecting them to the destination.<br/>
+        /// Usage:<br/>
+        /// - If this is not provided and transfer tool messages is not provided, default is "Transferring the call now".<br/>
+        /// - If set to "", nothing is spoken. This is useful when you want to silently transfer. This is especially useful when transferring between assistants in a squad. In this scenario, you likely also want to set `assistant.firstMessageMode=assistant-speaks-first-with-model-generated-message` for the destination assistant.<br/>
+        /// This accepts a string or a ToolMessageStart class. Latter is useful if you want to specify multiple messages for different languages through the `contents` field.
+        /// </param>
+        /// <param name="type"></param>
+        /// <param name="transferMode">
+        /// This is the mode to use for the transfer. Defaults to `rolling-history`.<br/>
+        /// - `rolling-history`: This is the default mode. It keeps the entire conversation history and appends the new assistant's system message on transfer.<br/>
+        ///   Example:<br/>
+        ///   Pre-transfer:<br/>
+        ///     system: assistant1 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///   Post-transfer:<br/>
+        ///     system: assistant1 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///     system: assistant2 system message<br/>
+        ///     assistant: assistant2 first message (or model generated if firstMessageMode is set to `assistant-speaks-first-with-model-generated-message`)<br/>
+        /// - `swap-system-message-in-history`: This replaces the original system message with the new assistant's system message on transfer.<br/>
+        ///   Example:<br/>
+        ///   Pre-transfer:<br/>
+        ///     system: assistant1 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///   Post-transfer:<br/>
+        ///     system: assistant2 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///     assistant: assistant2 first message (or model generated if firstMessageMode is set to `assistant-speaks-first-with-model-generated-message`)<br/>
+        /// - `delete-history`: This deletes the entire conversation history on transfer.<br/>
+        ///   Example:<br/>
+        ///   Pre-transfer:<br/>
+        ///     system: assistant1 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///   Post-transfer:<br/>
+        ///     system: assistant2 system message<br/>
+        ///     assistant: assistant2 first message<br/>
+        ///     user: Yes, please<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        /// - `swap-system-message-in-history-and-remove-transfer-tool-messages`: This replaces the original system message with the new assistant's system message on transfer and removes transfer tool messages from conversation history sent to the LLM.<br/>
+        ///   Example:<br/>
+        ///   Pre-transfer:<br/>
+        ///     system: assistant1 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     transfer-tool<br/>
+        ///     transfer-tool-result<br/>
+        ///     assistant: (destination.message)<br/>
+        ///   Post-transfer:<br/>
+        ///     system: assistant2 system message<br/>
+        ///     assistant: assistant1 first message<br/>
+        ///     user: hey, good morning<br/>
+        ///     assistant: how can i help?<br/>
+        ///     user: i need help with my account<br/>
+        ///     assistant: (destination.message)<br/>
+        ///     assistant: assistant2 first message (or model generated if firstMessageMode is set to `assistant-speaks-first-with-model-generated-message`)<br/>
+        /// @default 'rolling-history'
+        /// </param>
+        /// <param name="assistantName">
+        /// This is the assistant to transfer the call to.
+        /// </param>
+        /// <param name="description">
+        /// This is the description of the destination, used by the AI to choose when and how to transfer the call.
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public TransferDestinationAssistant(
+            string assistantName,
+            global::Vapi.OneOf<string, global::Vapi.CustomMessage>? message,
+            global::Vapi.TransferDestinationAssistantType type,
+            global::Vapi.TransferDestinationAssistantTransferMode? transferMode,
+            string? description)
+        {
+            this.AssistantName = assistantName ?? throw new global::System.ArgumentNullException(nameof(assistantName));
+            this.Message = message;
+            this.Type = type;
+            this.TransferMode = transferMode;
+            this.Description = description;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TransferDestinationAssistant" /> class.
+        /// </summary>
+        public TransferDestinationAssistant()
+        {
+        }
+    }
+}
