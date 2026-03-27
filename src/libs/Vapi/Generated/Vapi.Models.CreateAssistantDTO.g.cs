@@ -70,17 +70,17 @@ namespace Vapi
 
         /// <summary>
         /// These are the messages that will be sent to your Client SDKs. Default is conversation-update,function-call,hang,model-output,speech-update,status-update,transfer-update,transcript,tool-calls,user-interrupted,voice-input,workflow.node.started,assistant.started. You can check the shape of the messages in ClientMessage schema.<br/>
-        /// Example: [conversation-update, function-call, hang, model-output, speech-update, status-update, transfer-update, transcript, tool-calls, user-interrupted, voice-input, workflow.node.started, assistant.started]
+        /// Example: [assistant.started, conversation-update, function-call, hang, model-output, speech-update, status-update, tool-calls, transcript, transfer-update, user-interrupted, voice-input, workflow.node.started]
         /// </summary>
-        /// <example>[conversation-update, function-call, hang, model-output, speech-update, status-update, transfer-update, transcript, tool-calls, user-interrupted, voice-input, workflow.node.started, assistant.started]</example>
+        /// <example>[assistant.started, conversation-update, function-call, hang, model-output, speech-update, status-update, tool-calls, transcript, transfer-update, user-interrupted, voice-input, workflow.node.started]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("clientMessages")]
         public global::System.Collections.Generic.IList<global::Vapi.CreateAssistantDTOClientMessage>? ClientMessages { get; set; }
 
         /// <summary>
         /// These are the messages that will be sent to your Server URL. Default is conversation-update,end-of-call-report,function-call,hang,speech-update,status-update,tool-calls,transfer-destination-request,handoff-destination-request,user-interrupted,assistant.started. You can check the shape of the messages in ServerMessage schema.<br/>
-        /// Example: [conversation-update, end-of-call-report, function-call, hang, speech-update, status-update, tool-calls, transfer-destination-request, handoff-destination-request, user-interrupted, assistant.started]
+        /// Example: [assistant.started, conversation-update, end-of-call-report, function-call, handoff-destination-request, hang, speech-update, status-update, tool-calls, transfer-destination-request, user-interrupted]
         /// </summary>
-        /// <example>[conversation-update, end-of-call-report, function-call, hang, speech-update, status-update, tool-calls, transfer-destination-request, handoff-destination-request, user-interrupted, assistant.started]</example>
+        /// <example>[assistant.started, conversation-update, end-of-call-report, function-call, handoff-destination-request, hang, speech-update, status-update, tool-calls, transfer-destination-request, user-interrupted]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("serverMessages")]
         public global::System.Collections.Generic.IList<global::Vapi.CreateAssistantDTOServerMessage>? ServerMessages { get; set; }
 
@@ -294,11 +294,11 @@ namespace Vapi
         /// </param>
         /// <param name="clientMessages">
         /// These are the messages that will be sent to your Client SDKs. Default is conversation-update,function-call,hang,model-output,speech-update,status-update,transfer-update,transcript,tool-calls,user-interrupted,voice-input,workflow.node.started,assistant.started. You can check the shape of the messages in ClientMessage schema.<br/>
-        /// Example: [conversation-update, function-call, hang, model-output, speech-update, status-update, transfer-update, transcript, tool-calls, user-interrupted, voice-input, workflow.node.started, assistant.started]
+        /// Example: [assistant.started, conversation-update, function-call, hang, model-output, speech-update, status-update, tool-calls, transcript, transfer-update, user-interrupted, voice-input, workflow.node.started]
         /// </param>
         /// <param name="serverMessages">
         /// These are the messages that will be sent to your Server URL. Default is conversation-update,end-of-call-report,function-call,hang,speech-update,status-update,tool-calls,transfer-destination-request,handoff-destination-request,user-interrupted,assistant.started. You can check the shape of the messages in ServerMessage schema.<br/>
-        /// Example: [conversation-update, end-of-call-report, function-call, hang, speech-update, status-update, tool-calls, transfer-destination-request, handoff-destination-request, user-interrupted, assistant.started]
+        /// Example: [assistant.started, conversation-update, end-of-call-report, function-call, handoff-destination-request, hang, speech-update, status-update, tool-calls, transfer-destination-request, user-interrupted]
         /// </param>
         /// <param name="maxDurationSeconds">
         /// This is the maximum number of seconds that the call will last. When the call reaches this duration, it will be ended.<br/>

@@ -24,9 +24,9 @@ namespace Vapi
 
         /// <summary>
         /// Array of prefixes to match. Do not include the + prefix. Inbound calls from numbers starting with any of these prefixes will trigger the hook actions.<br/>
-        /// Example: [91, 86, 7]
+        /// Example: [7, 86, 91]
         /// </summary>
-        /// <example>[91, 86, 7]</example>
+        /// <example>[7, 86, 91]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("startsWith")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> StartsWith { get; set; }
@@ -48,7 +48,7 @@ namespace Vapi
         /// </param>
         /// <param name="startsWith">
         /// Array of prefixes to match. Do not include the + prefix. Inbound calls from numbers starting with any of these prefixes will trigger the hook actions.<br/>
-        /// Example: [91, 86, 7]
+        /// Example: [7, 86, 91]
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

@@ -39,10 +39,6 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Ghl,
-        /// <summary>
-        /// 
-        /// </summary>
         GohighlevelCalendarAvailabilityCheck,
         /// <summary>
         /// 
@@ -125,7 +121,6 @@ namespace Vapi
                 ToolControllerCreateRequestDiscriminatorType.Dtmf => "dtmf",
                 ToolControllerCreateRequestDiscriminatorType.EndCall => "endCall",
                 ToolControllerCreateRequestDiscriminatorType.Function => "function",
-                ToolControllerCreateRequestDiscriminatorType.Ghl => "ghl",
                 ToolControllerCreateRequestDiscriminatorType.GohighlevelCalendarAvailabilityCheck => "gohighlevel.calendar.availability.check",
                 ToolControllerCreateRequestDiscriminatorType.GohighlevelCalendarEventCreate => "gohighlevel.calendar.event.create",
                 ToolControllerCreateRequestDiscriminatorType.GohighlevelContactCreate => "gohighlevel.contact.create",
@@ -159,7 +154,6 @@ namespace Vapi
                 "dtmf" => ToolControllerCreateRequestDiscriminatorType.Dtmf,
                 "endCall" => ToolControllerCreateRequestDiscriminatorType.EndCall,
                 "function" => ToolControllerCreateRequestDiscriminatorType.Function,
-                "ghl" => ToolControllerCreateRequestDiscriminatorType.Ghl,
                 "gohighlevel.calendar.availability.check" => ToolControllerCreateRequestDiscriminatorType.GohighlevelCalendarAvailabilityCheck,
                 "gohighlevel.calendar.event.create" => ToolControllerCreateRequestDiscriminatorType.GohighlevelCalendarEventCreate,
                 "gohighlevel.contact.create" => ToolControllerCreateRequestDiscriminatorType.GohighlevelContactCreate,

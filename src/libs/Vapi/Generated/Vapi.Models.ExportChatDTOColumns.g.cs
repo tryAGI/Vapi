@@ -5,7 +5,7 @@ namespace Vapi
 {
     /// <summary>
     /// Columns to include in the CSV export<br/>
-    /// Default Value: [id, assistantId, squadId, sessionId, previousChatId, cost, messages, output, createdAt, updatedAt]
+    /// Default Value: [assistantId, cost, createdAt, id, messages, output, previousChatId, sessionId, squadId, updatedAt]
     /// </summary>
     public enum ExportChatDTOColumns
     {

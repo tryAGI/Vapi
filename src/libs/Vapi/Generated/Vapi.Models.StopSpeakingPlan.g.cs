@@ -48,20 +48,20 @@ namespace Vapi
         /// <summary>
         /// These are the phrases that will never interrupt the assistant, even if numWords threshold is met.<br/>
         /// These are typically acknowledgement or backchanneling phrases.<br/>
-        /// Default Value: [i understand, i see, i got it, i hear you, im listening, im with you, right, okay, ok, sure, alright, got it, understood, yeah, yes, uh-huh, mm-hmm, gotcha, mhmm, ah, yeah okay, yeah sure]<br/>
-        /// Example: [i understand, i see, i got it, i hear you, im listening, im with you, right, okay, ok, sure, alright, got it, understood, yeah, yes, uh-huh, mm-hmm, gotcha, mhmm, ah, yeah okay, yeah sure]
+        /// Default Value: [ah, alright, got it, gotcha, i got it, i hear you, i see, i understand, im listening, im with you, mhmm, mm-hmm, ok, okay, right, sure, uh-huh, understood, yeah, yeah okay, yeah sure, yes]<br/>
+        /// Example: [ah, alright, got it, gotcha, i got it, i hear you, i see, i understand, im listening, im with you, mhmm, mm-hmm, ok, okay, right, sure, uh-huh, understood, yeah, yeah okay, yeah sure, yes]
         /// </summary>
-        /// <example>[i understand, i see, i got it, i hear you, im listening, im with you, right, okay, ok, sure, alright, got it, understood, yeah, yes, uh-huh, mm-hmm, gotcha, mhmm, ah, yeah okay, yeah sure]</example>
+        /// <example>[ah, alright, got it, gotcha, i got it, i hear you, i see, i understand, im listening, im with you, mhmm, mm-hmm, ok, okay, right, sure, uh-huh, understood, yeah, yeah okay, yeah sure, yes]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("acknowledgementPhrases")]
         public global::System.Collections.Generic.IList<string>? AcknowledgementPhrases { get; set; }
 
         /// <summary>
         /// These are the phrases that will always interrupt the assistant immediately, regardless of numWords.<br/>
         /// These are typically phrases indicating disagreement or desire to stop.<br/>
-        /// Default Value: [stop, shut, up, enough, quiet, silence, but, dont, not, no, hold, wait, cut, pause, nope, nah, nevermind, never, bad, actually]<br/>
-        /// Example: [stop, shut, up, enough, quiet, silence, but, dont, not, no, hold, wait, cut, pause, nope, nah, nevermind, never, bad, actually]
+        /// Default Value: [actually, bad, but, cut, dont, enough, hold, nah, never, nevermind, no, nope, not, pause, quiet, shut, silence, stop, up, wait]<br/>
+        /// Example: [actually, bad, but, cut, dont, enough, hold, nah, never, nevermind, no, nope, not, pause, quiet, shut, silence, stop, up, wait]
         /// </summary>
-        /// <example>[stop, shut, up, enough, quiet, silence, but, dont, not, no, hold, wait, cut, pause, nope, nah, nevermind, never, bad, actually]</example>
+        /// <example>[actually, bad, but, cut, dont, enough, hold, nah, never, nevermind, no, nope, not, pause, quiet, shut, silence, stop, up, wait]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("interruptionPhrases")]
         public global::System.Collections.Generic.IList<string>? InterruptionPhrases { get; set; }
 
@@ -102,14 +102,14 @@ namespace Vapi
         /// <param name="acknowledgementPhrases">
         /// These are the phrases that will never interrupt the assistant, even if numWords threshold is met.<br/>
         /// These are typically acknowledgement or backchanneling phrases.<br/>
-        /// Default Value: [i understand, i see, i got it, i hear you, im listening, im with you, right, okay, ok, sure, alright, got it, understood, yeah, yes, uh-huh, mm-hmm, gotcha, mhmm, ah, yeah okay, yeah sure]<br/>
-        /// Example: [i understand, i see, i got it, i hear you, im listening, im with you, right, okay, ok, sure, alright, got it, understood, yeah, yes, uh-huh, mm-hmm, gotcha, mhmm, ah, yeah okay, yeah sure]
+        /// Default Value: [ah, alright, got it, gotcha, i got it, i hear you, i see, i understand, im listening, im with you, mhmm, mm-hmm, ok, okay, right, sure, uh-huh, understood, yeah, yeah okay, yeah sure, yes]<br/>
+        /// Example: [ah, alright, got it, gotcha, i got it, i hear you, i see, i understand, im listening, im with you, mhmm, mm-hmm, ok, okay, right, sure, uh-huh, understood, yeah, yeah okay, yeah sure, yes]
         /// </param>
         /// <param name="interruptionPhrases">
         /// These are the phrases that will always interrupt the assistant immediately, regardless of numWords.<br/>
         /// These are typically phrases indicating disagreement or desire to stop.<br/>
-        /// Default Value: [stop, shut, up, enough, quiet, silence, but, dont, not, no, hold, wait, cut, pause, nope, nah, nevermind, never, bad, actually]<br/>
-        /// Example: [stop, shut, up, enough, quiet, silence, but, dont, not, no, hold, wait, cut, pause, nope, nah, nevermind, never, bad, actually]
+        /// Default Value: [actually, bad, but, cut, dont, enough, hold, nah, never, nevermind, no, nope, not, pause, quiet, shut, silence, stop, up, wait]<br/>
+        /// Example: [actually, bad, but, cut, dont, enough, hold, nah, never, nevermind, no, nope, not, pause, quiet, shut, silence, stop, up, wait]
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
