@@ -23,7 +23,7 @@ var client = new VapiClient(apiKey); // VAPI_API_KEY env var
 ## Key Files
 
 - `src/libs/Vapi/openapi.yaml` -- OpenAPI spec (downloaded from Vapi API)
-- `src/libs/Vapi/generate.sh` -- Downloads spec, applies 8 fixes, runs autosdk
+- `src/libs/Vapi/generate.sh` -- Downloads spec, applies 9 fixes, runs autosdk
 - `src/libs/Vapi/Generated/` -- **Never edit** -- auto-generated code
 - `src/libs/Vapi/Extensions/VapiClient.AsTool.cs` -- MEAI `AIFunction` tools (assistants, calls, phone numbers)
 - `src/tests/IntegrationTests/Tests.cs` -- Test helper with bearer auth
@@ -31,7 +31,7 @@ var client = new VapiClient(apiKey); // VAPI_API_KEY env var
 
 ## Spec Notes
 
-The `generate.sh` applies 8 fixes to the downloaded spec via `jq`:
+The `generate.sh` applies 9 fixes to the downloaded spec via `jq`:
 
 1. **Top-level security:** Adds `security` array for Bearer auth constructor generation
 2. **Transcript enum:** Renames `transcript[transcriptType="final"]` to `transcript-final` (embedded quotes break C# string escaping)
@@ -41,6 +41,7 @@ The `generate.sh` applies 8 fixes to the downloaded spec via `jq`:
 6. **Missing discriminator mappings:** Adds `code` -> `CreateCodeToolDTO` and `ghl` -> `GhlTool` to tool endpoint discriminators
 7. **11labs rename:** Renames `11labs` discriminator key to `elevenlabs` (numeric prefix causes C# naming collisions)
 8. **Enum deduplication:** Deduplicates string enum arrays to avoid CS0102 errors
+9. **Duplicate parameter rename:** Renames second `name` query param in `/session` GET to `customerName` (two params named `name` — session name and customer name — cause CS0100)
 
 Uses `--exclude-deprecated-operations` flag.
 
