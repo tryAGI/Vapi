@@ -39,9 +39,9 @@ namespace Vapi
         /// - To increase quality, constrain to fewer boundaries.<br/>
         /// - To decrease latency, enable all.<br/>
         /// Default is automatically set to balance the trade-off between quality and latency based on the provider.<br/>
-        /// Example: [cjk-period, cjk-comma, period, exclamation, question, semicolon, arabic-comma, urdu-period, devanagari-danda, devanagari-double-danda, pipe, double-pipe, comma, colon]
+        /// Example: [。, ，, ., !, ?, ;, ،, ۔, ।, ॥, |, ||, ,, :]
         /// </summary>
-        /// <example>[cjk-period, cjk-comma, period, exclamation, question, semicolon, arabic-comma, urdu-period, devanagari-danda, devanagari-double-danda, pipe, double-pipe, comma, colon]</example>
+        /// <example>[。, ，, ., !, ?, ;, ،, ۔, ।, ॥, |, ||, ,, :]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("punctuationBoundaries")]
         public global::System.Collections.Generic.IList<global::Vapi.ChunkPlanPunctuationBoundarie>? PunctuationBoundaries { get; set; }
 
@@ -83,7 +83,7 @@ namespace Vapi
         /// - To increase quality, constrain to fewer boundaries.<br/>
         /// - To decrease latency, enable all.<br/>
         /// Default is automatically set to balance the trade-off between quality and latency based on the provider.<br/>
-        /// Example: [cjk-period, cjk-comma, period, exclamation, question, semicolon, arabic-comma, urdu-period, devanagari-danda, devanagari-double-danda, pipe, double-pipe, comma, colon]
+        /// Example: [。, ，, ., !, ?, ;, ،, ۔, ।, ॥, |, ||, ,, :]
         /// </param>
         /// <param name="formatPlan">
         /// This is the plan for formatting the chunk before it is sent to the voice provider.

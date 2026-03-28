@@ -62,7 +62,7 @@ namespace Vapi
 
         /// <summary>
         /// Columns to include in the CSV export<br/>
-        /// Default Value: [assistantId, cost, createdAt, customerName, customerNumber, id, messages, name, phoneNumberId, squadId, status, updatedAt]
+        /// Default Value: [id, name, status, assistantId, squadId, customerName, customerNumber, phoneNumberId, cost, messages, createdAt, updatedAt]
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("columns")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.ExportSessionDTOColumnsJsonConverter))]
@@ -200,7 +200,7 @@ namespace Vapi
         /// </param>
         /// <param name="columns">
         /// Columns to include in the CSV export<br/>
-        /// Default Value: [assistantId, cost, createdAt, customerName, customerNumber, id, messages, name, phoneNumberId, squadId, status, updatedAt]
+        /// Default Value: [id, name, status, assistantId, squadId, customerName, customerNumber, phoneNumberId, cost, messages, createdAt, updatedAt]
         /// </param>
         /// <param name="email">
         /// This is the email address to send the export to.<br/>

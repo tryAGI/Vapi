@@ -11,6 +11,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        x11labs,
+        /// <summary>
+        /// 
+        /// </summary>
         Anthropic,
         /// <summary>
         /// 
@@ -68,10 +72,6 @@ namespace Vapi
         /// 
         /// </summary>
         Deepinfra,
-        /// <summary>
-        /// 
-        /// </summary>
-        Elevenlabs,
         /// <summary>
         /// 
         /// </summary>
@@ -246,6 +246,7 @@ namespace Vapi
         {
             return value switch
             {
+                WorkflowCredentialDiscriminatorProvider.x11labs => "11labs",
                 WorkflowCredentialDiscriminatorProvider.Anthropic => "anthropic",
                 WorkflowCredentialDiscriminatorProvider.AnthropicBedrock => "anthropic-bedrock",
                 WorkflowCredentialDiscriminatorProvider.Anyscale => "anyscale",
@@ -261,7 +262,6 @@ namespace Vapi
                 WorkflowCredentialDiscriminatorProvider.DeepSeek => "deep-seek",
                 WorkflowCredentialDiscriminatorProvider.Deepgram => "deepgram",
                 WorkflowCredentialDiscriminatorProvider.Deepinfra => "deepinfra",
-                WorkflowCredentialDiscriminatorProvider.Elevenlabs => "elevenlabs",
                 WorkflowCredentialDiscriminatorProvider.Email => "email",
                 WorkflowCredentialDiscriminatorProvider.Gcp => "gcp",
                 WorkflowCredentialDiscriminatorProvider.GhlOauth2Authorization => "ghl.oauth2-authorization",
@@ -312,6 +312,7 @@ namespace Vapi
         {
             return value switch
             {
+                "11labs" => WorkflowCredentialDiscriminatorProvider.x11labs,
                 "anthropic" => WorkflowCredentialDiscriminatorProvider.Anthropic,
                 "anthropic-bedrock" => WorkflowCredentialDiscriminatorProvider.AnthropicBedrock,
                 "anyscale" => WorkflowCredentialDiscriminatorProvider.Anyscale,
@@ -327,7 +328,6 @@ namespace Vapi
                 "deep-seek" => WorkflowCredentialDiscriminatorProvider.DeepSeek,
                 "deepgram" => WorkflowCredentialDiscriminatorProvider.Deepgram,
                 "deepinfra" => WorkflowCredentialDiscriminatorProvider.Deepinfra,
-                "elevenlabs" => WorkflowCredentialDiscriminatorProvider.Elevenlabs,
                 "email" => WorkflowCredentialDiscriminatorProvider.Email,
                 "gcp" => WorkflowCredentialDiscriminatorProvider.Gcp,
                 "ghl.oauth2-authorization" => WorkflowCredentialDiscriminatorProvider.GhlOauth2Authorization,

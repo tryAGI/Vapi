@@ -11,6 +11,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        x11labs,
+        /// <summary>
+        /// 
+        /// </summary>
         Anthropic,
         /// <summary>
         /// 
@@ -68,10 +72,6 @@ namespace Vapi
         /// 
         /// </summary>
         Deepinfra,
-        /// <summary>
-        /// 
-        /// </summary>
-        Elevenlabs,
         /// <summary>
         /// 
         /// </summary>
@@ -246,6 +246,7 @@ namespace Vapi
         {
             return value switch
             {
+                AssistantOverridesCredentialDiscriminatorProvider.x11labs => "11labs",
                 AssistantOverridesCredentialDiscriminatorProvider.Anthropic => "anthropic",
                 AssistantOverridesCredentialDiscriminatorProvider.AnthropicBedrock => "anthropic-bedrock",
                 AssistantOverridesCredentialDiscriminatorProvider.Anyscale => "anyscale",
@@ -261,7 +262,6 @@ namespace Vapi
                 AssistantOverridesCredentialDiscriminatorProvider.DeepSeek => "deep-seek",
                 AssistantOverridesCredentialDiscriminatorProvider.Deepgram => "deepgram",
                 AssistantOverridesCredentialDiscriminatorProvider.Deepinfra => "deepinfra",
-                AssistantOverridesCredentialDiscriminatorProvider.Elevenlabs => "elevenlabs",
                 AssistantOverridesCredentialDiscriminatorProvider.Email => "email",
                 AssistantOverridesCredentialDiscriminatorProvider.Gcp => "gcp",
                 AssistantOverridesCredentialDiscriminatorProvider.GhlOauth2Authorization => "ghl.oauth2-authorization",
@@ -312,6 +312,7 @@ namespace Vapi
         {
             return value switch
             {
+                "11labs" => AssistantOverridesCredentialDiscriminatorProvider.x11labs,
                 "anthropic" => AssistantOverridesCredentialDiscriminatorProvider.Anthropic,
                 "anthropic-bedrock" => AssistantOverridesCredentialDiscriminatorProvider.AnthropicBedrock,
                 "anyscale" => AssistantOverridesCredentialDiscriminatorProvider.Anyscale,
@@ -327,7 +328,6 @@ namespace Vapi
                 "deep-seek" => AssistantOverridesCredentialDiscriminatorProvider.DeepSeek,
                 "deepgram" => AssistantOverridesCredentialDiscriminatorProvider.Deepgram,
                 "deepinfra" => AssistantOverridesCredentialDiscriminatorProvider.Deepinfra,
-                "elevenlabs" => AssistantOverridesCredentialDiscriminatorProvider.Elevenlabs,
                 "email" => AssistantOverridesCredentialDiscriminatorProvider.Email,
                 "gcp" => AssistantOverridesCredentialDiscriminatorProvider.Gcp,
                 "ghl.oauth2-authorization" => AssistantOverridesCredentialDiscriminatorProvider.GhlOauth2Authorization,

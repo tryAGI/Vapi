@@ -11,27 +11,27 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Eq,
+        x__,
         /// <summary>
         /// 
         /// </summary>
-        Gt,
+        x_3,
         /// <summary>
         /// 
         /// </summary>
-        Gte,
+        x__3,
         /// <summary>
         /// 
         /// </summary>
-        Lt,
+        x_,
         /// <summary>
         /// 
         /// </summary>
-        Lte,
+        x_2,
         /// <summary>
         /// 
         /// </summary>
-        Neq,
+        x__2,
     }
 
     /// <summary>
@@ -46,12 +46,12 @@ namespace Vapi
         {
             return value switch
             {
-                StructuredOutputEvaluationResultComparator.Eq => "eq",
-                StructuredOutputEvaluationResultComparator.Gt => "gt",
-                StructuredOutputEvaluationResultComparator.Gte => "gte",
-                StructuredOutputEvaluationResultComparator.Lt => "lt",
-                StructuredOutputEvaluationResultComparator.Lte => "lte",
-                StructuredOutputEvaluationResultComparator.Neq => "neq",
+                StructuredOutputEvaluationResultComparator.x__ => "!=",
+                StructuredOutputEvaluationResultComparator.x_3 => "<",
+                StructuredOutputEvaluationResultComparator.x__3 => "<=",
+                StructuredOutputEvaluationResultComparator.x_ => "=",
+                StructuredOutputEvaluationResultComparator.x_2 => ">",
+                StructuredOutputEvaluationResultComparator.x__2 => ">=",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -62,12 +62,12 @@ namespace Vapi
         {
             return value switch
             {
-                "eq" => StructuredOutputEvaluationResultComparator.Eq,
-                "gt" => StructuredOutputEvaluationResultComparator.Gt,
-                "gte" => StructuredOutputEvaluationResultComparator.Gte,
-                "lt" => StructuredOutputEvaluationResultComparator.Lt,
-                "lte" => StructuredOutputEvaluationResultComparator.Lte,
-                "neq" => StructuredOutputEvaluationResultComparator.Neq,
+                "!=" => StructuredOutputEvaluationResultComparator.x__,
+                "<" => StructuredOutputEvaluationResultComparator.x_3,
+                "<=" => StructuredOutputEvaluationResultComparator.x__3,
+                "=" => StructuredOutputEvaluationResultComparator.x_,
+                ">" => StructuredOutputEvaluationResultComparator.x_2,
+                ">=" => StructuredOutputEvaluationResultComparator.x__2,
                 _ => null,
             };
         }

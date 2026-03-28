@@ -18,7 +18,7 @@ namespace Vapi
             object? assistantOverrides,
             ref string? number,
             ref string? sipUri,
-            ref string? customerName,
+            ref string? name2,
             ref string? email,
             ref string? externalId,
             ref string? customerNumberAny,
@@ -49,7 +49,7 @@ namespace Vapi
             object? assistantOverrides,
             string? number,
             string? sipUri,
-            string? customerName,
+            string? name2,
             string? email,
             string? externalId,
             string? customerNumberAny,
@@ -95,7 +95,7 @@ namespace Vapi
         /// <param name="assistantOverrides"></param>
         /// <param name="number"></param>
         /// <param name="sipUri"></param>
-        /// <param name="customerName"></param>
+        /// <param name="name2"></param>
         /// <param name="email"></param>
         /// <param name="externalId"></param>
         /// <param name="customerNumberAny">
@@ -128,7 +128,7 @@ namespace Vapi
             object? assistantOverrides = default,
             string? number = default,
             string? sipUri = default,
-            string? customerName = default,
+            string? name2 = default,
             string? email = default,
             string? externalId = default,
             string? customerNumberAny = default,
@@ -162,7 +162,7 @@ namespace Vapi
                 assistantOverrides: assistantOverrides,
                 number: ref number,
                 sipUri: ref sipUri,
-                customerName: ref customerName,
+                name2: ref name2,
                 email: ref email,
                 externalId: ref externalId,
                 customerNumberAny: ref customerNumberAny,
@@ -195,7 +195,7 @@ namespace Vapi
                 .AddOptionalParameter("assistantOverrides", assistantOverrides?.ToString())
                 .AddOptionalParameter("number", number)
                 .AddOptionalParameter("sipUri", sipUri)
-                .AddOptionalParameter("customerName", customerName)
+                .AddOptionalParameter("name", name2)
                 .AddOptionalParameter("email", email)
                 .AddOptionalParameter("externalId", externalId)
                 .AddOptionalParameter("customerNumberAny", customerNumberAny)
@@ -255,7 +255,7 @@ namespace Vapi
                 assistantOverrides: assistantOverrides,
                 number: number,
                 sipUri: sipUri,
-                customerName: customerName,
+                name2: name2,
                 email: email,
                 externalId: externalId,
                 customerNumberAny: customerNumberAny,

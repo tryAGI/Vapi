@@ -11,6 +11,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        x11labs,
+        /// <summary>
+        /// 
+        /// </summary>
         Anthropic,
         /// <summary>
         /// 
@@ -68,10 +72,6 @@ namespace Vapi
         /// 
         /// </summary>
         Deepinfra,
-        /// <summary>
-        /// 
-        /// </summary>
-        Elevenlabs,
         /// <summary>
         /// 
         /// </summary>
@@ -246,6 +246,7 @@ namespace Vapi
         {
             return value switch
             {
+                WorkflowUserEditableCredentialDiscriminatorProvider.x11labs => "11labs",
                 WorkflowUserEditableCredentialDiscriminatorProvider.Anthropic => "anthropic",
                 WorkflowUserEditableCredentialDiscriminatorProvider.AnthropicBedrock => "anthropic-bedrock",
                 WorkflowUserEditableCredentialDiscriminatorProvider.Anyscale => "anyscale",
@@ -261,7 +262,6 @@ namespace Vapi
                 WorkflowUserEditableCredentialDiscriminatorProvider.DeepSeek => "deep-seek",
                 WorkflowUserEditableCredentialDiscriminatorProvider.Deepgram => "deepgram",
                 WorkflowUserEditableCredentialDiscriminatorProvider.Deepinfra => "deepinfra",
-                WorkflowUserEditableCredentialDiscriminatorProvider.Elevenlabs => "elevenlabs",
                 WorkflowUserEditableCredentialDiscriminatorProvider.Email => "email",
                 WorkflowUserEditableCredentialDiscriminatorProvider.Gcp => "gcp",
                 WorkflowUserEditableCredentialDiscriminatorProvider.GhlOauth2Authorization => "ghl.oauth2-authorization",
@@ -312,6 +312,7 @@ namespace Vapi
         {
             return value switch
             {
+                "11labs" => WorkflowUserEditableCredentialDiscriminatorProvider.x11labs,
                 "anthropic" => WorkflowUserEditableCredentialDiscriminatorProvider.Anthropic,
                 "anthropic-bedrock" => WorkflowUserEditableCredentialDiscriminatorProvider.AnthropicBedrock,
                 "anyscale" => WorkflowUserEditableCredentialDiscriminatorProvider.Anyscale,
@@ -327,7 +328,6 @@ namespace Vapi
                 "deep-seek" => WorkflowUserEditableCredentialDiscriminatorProvider.DeepSeek,
                 "deepgram" => WorkflowUserEditableCredentialDiscriminatorProvider.Deepgram,
                 "deepinfra" => WorkflowUserEditableCredentialDiscriminatorProvider.Deepinfra,
-                "elevenlabs" => WorkflowUserEditableCredentialDiscriminatorProvider.Elevenlabs,
                 "email" => WorkflowUserEditableCredentialDiscriminatorProvider.Email,
                 "gcp" => WorkflowUserEditableCredentialDiscriminatorProvider.Gcp,
                 "ghl.oauth2-authorization" => WorkflowUserEditableCredentialDiscriminatorProvider.GhlOauth2Authorization,

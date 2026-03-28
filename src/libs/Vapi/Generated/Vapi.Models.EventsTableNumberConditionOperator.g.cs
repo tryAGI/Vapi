@@ -12,27 +12,27 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Eq,
+        x__,
         /// <summary>
         /// 
         /// </summary>
-        Gt,
+        x_3,
         /// <summary>
         /// 
         /// </summary>
-        Gte,
+        x__3,
         /// <summary>
         /// 
         /// </summary>
-        Lt,
+        x_,
         /// <summary>
         /// 
         /// </summary>
-        Lte,
+        x_2,
         /// <summary>
         /// 
         /// </summary>
-        Neq,
+        x__2,
     }
 
     /// <summary>
@@ -47,12 +47,12 @@ namespace Vapi
         {
             return value switch
             {
-                EventsTableNumberConditionOperator.Eq => "eq",
-                EventsTableNumberConditionOperator.Gt => "gt",
-                EventsTableNumberConditionOperator.Gte => "gte",
-                EventsTableNumberConditionOperator.Lt => "lt",
-                EventsTableNumberConditionOperator.Lte => "lte",
-                EventsTableNumberConditionOperator.Neq => "neq",
+                EventsTableNumberConditionOperator.x__ => "!=",
+                EventsTableNumberConditionOperator.x_3 => "<",
+                EventsTableNumberConditionOperator.x__3 => "<=",
+                EventsTableNumberConditionOperator.x_ => "=",
+                EventsTableNumberConditionOperator.x_2 => ">",
+                EventsTableNumberConditionOperator.x__2 => ">=",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,12 +63,12 @@ namespace Vapi
         {
             return value switch
             {
-                "eq" => EventsTableNumberConditionOperator.Eq,
-                "gt" => EventsTableNumberConditionOperator.Gt,
-                "gte" => EventsTableNumberConditionOperator.Gte,
-                "lt" => EventsTableNumberConditionOperator.Lt,
-                "lte" => EventsTableNumberConditionOperator.Lte,
-                "neq" => EventsTableNumberConditionOperator.Neq,
+                "!=" => EventsTableNumberConditionOperator.x__,
+                "<" => EventsTableNumberConditionOperator.x_3,
+                "<=" => EventsTableNumberConditionOperator.x__3,
+                "=" => EventsTableNumberConditionOperator.x_,
+                ">" => EventsTableNumberConditionOperator.x_2,
+                ">=" => EventsTableNumberConditionOperator.x__2,
                 _ => null,
             };
         }
