@@ -166,7 +166,7 @@ namespace Vapi
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Vapi.ToolControllerFindAllResponseItem>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::Vapi.ToolControllerFindAllResponseItem> ??
+                        (global::System.Collections.Generic.IList<global::Vapi.ToolControllerFindAllResponseItem>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Vapi.ToolControllerFindAllResponseItem>), JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -197,7 +197,7 @@ namespace Vapi
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Vapi.ToolControllerFindAllResponseItem>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::Vapi.ToolControllerFindAllResponseItem> ??
+                        (global::System.Collections.Generic.IList<global::Vapi.ToolControllerFindAllResponseItem>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Vapi.ToolControllerFindAllResponseItem>), JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
