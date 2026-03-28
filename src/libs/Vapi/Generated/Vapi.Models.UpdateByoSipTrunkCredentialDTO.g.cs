@@ -51,7 +51,7 @@ namespace Vapi
         /// This is an advanced configuration for enterprise deployments. This uses the onprem SBC to trunk into the SIP trunk's `gateways`, rather than the managed SBC provided by Vapi.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sbcConfiguration")]
-        public object? SbcConfiguration { get; set; }
+        public global::Vapi.SbcConfiguration? SbcConfiguration { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -96,7 +96,7 @@ namespace Vapi
             bool? outboundLeadingPlusEnabled,
             string? techPrefix,
             string? sipDiversionHeader,
-            object? sbcConfiguration)
+            global::Vapi.SbcConfiguration? sbcConfiguration)
         {
             this.Name = name;
             this.Gateways = gateways;
