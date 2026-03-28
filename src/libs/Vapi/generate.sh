@@ -3,10 +3,9 @@ set -euo pipefail
 
 # OpenAPI spec: https://api.vapi.ai/api-json
 
-readonly openapi_url="https://api.vapi.ai/api-json"
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
-curl --fail --silent --show-error --location "$openapi_url" -o openapi.yaml
+curl --fail --silent --show-error --location https://api.vapi.ai/api-json -o openapi.yaml
 
 # Fix 1: Add top-level security array so AutoSDK generates bearer auth constructor.
 # Fix 2: Replace problematic enum value 'transcript[transcriptType="final"]' with 'transcript-final'
