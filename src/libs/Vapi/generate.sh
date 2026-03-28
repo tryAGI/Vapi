@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
+
+# OpenAPI spec: https://api.vapi.ai/api-json
+
 readonly openapi_url="https://api.vapi.ai/api-json"
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
