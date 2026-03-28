@@ -23,7 +23,7 @@ namespace Vapi
         /// </summary>
         /// <example>[{ type: "sql-injection" }, { type: "xss" }]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("filters")]
-        public global::System.Collections.Generic.IList<object>? Filters { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.SecurityFilterBase>? Filters { get; set; }
 
         /// <summary>
         /// Mode of operation when a security threat is detected.<br/>
@@ -82,7 +82,7 @@ namespace Vapi
 #endif
         public SecurityFilterPlan(
             bool? enabled,
-            global::System.Collections.Generic.IList<object>? filters,
+            global::System.Collections.Generic.IList<global::Vapi.SecurityFilterBase>? filters,
             global::Vapi.SecurityFilterPlanMode? mode,
             string? replacementText)
         {
