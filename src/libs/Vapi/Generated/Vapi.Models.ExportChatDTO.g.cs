@@ -48,7 +48,7 @@ namespace Vapi
 
         /// <summary>
         /// Columns to include in the CSV export<br/>
-        /// Default Value: [assistantId, cost, createdAt, id, messages, output, previousChatId, sessionId, squadId, updatedAt]
+        /// Default Value: [id, assistantId, squadId, sessionId, previousChatId, cost, messages, output, createdAt, updatedAt]
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("columns")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.ExportChatDTOColumnsJsonConverter))]
@@ -167,7 +167,7 @@ namespace Vapi
         /// </param>
         /// <param name="columns">
         /// Columns to include in the CSV export<br/>
-        /// Default Value: [assistantId, cost, createdAt, id, messages, output, previousChatId, sessionId, squadId, updatedAt]
+        /// Default Value: [id, assistantId, squadId, sessionId, previousChatId, cost, messages, output, createdAt, updatedAt]
         /// </param>
         /// <param name="email">
         /// This is the email address to send the export to.<br/>

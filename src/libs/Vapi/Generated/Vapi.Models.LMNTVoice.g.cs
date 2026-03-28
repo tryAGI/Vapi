@@ -46,8 +46,8 @@ namespace Vapi
         /// </summary>
         /// <example>en</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("language")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.LMNTVoiceLanguageJsonConverter))]
-        public global::Vapi.LMNTVoiceLanguage? Language { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOf<LMNTVoiceLanguageIso6391LanguageCode?, LMNTVoiceLanguageAutoDetect?>JsonConverter))]
+        public global::Vapi.OneOf<global::Vapi.LMNTVoiceLanguageIso6391LanguageCode?, global::Vapi.LMNTVoiceLanguageAutoDetect?>? Language { get; set; }
 
         /// <summary>
         /// This is the plan for chunking the model output before it is sent to the voice provider.
@@ -103,7 +103,7 @@ namespace Vapi
             bool? cachingEnabled,
             global::Vapi.LMNTVoiceProvider provider,
             double? speed,
-            global::Vapi.LMNTVoiceLanguage? language,
+            global::Vapi.OneOf<global::Vapi.LMNTVoiceLanguageIso6391LanguageCode?, global::Vapi.LMNTVoiceLanguageAutoDetect?>? language,
             global::Vapi.ChunkPlan? chunkPlan,
             global::Vapi.FallbackPlan? fallbackPlan)
         {

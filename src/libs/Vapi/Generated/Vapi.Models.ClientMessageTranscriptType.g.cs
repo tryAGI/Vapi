@@ -15,7 +15,7 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        TranscriptFinal,
+        TranscripttranscriptType__final_,
     }
 
     /// <summary>
@@ -31,7 +31,7 @@ namespace Vapi
             return value switch
             {
                 ClientMessageTranscriptType.Transcript => "transcript",
-                ClientMessageTranscriptType.TranscriptFinal => "transcript-final",
+                ClientMessageTranscriptType.TranscripttranscriptType__final_ => "transcript[transcriptType="final"]",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -43,7 +43,7 @@ namespace Vapi
             return value switch
             {
                 "transcript" => ClientMessageTranscriptType.Transcript,
-                "transcript-final" => ClientMessageTranscriptType.TranscriptFinal,
+                "transcript[transcriptType="final"]" => ClientMessageTranscriptType.TranscripttranscriptType__final_,
                 _ => null,
             };
         }

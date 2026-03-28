@@ -3,10 +3,10 @@
 namespace Vapi.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class FallbackLMNTVoiceLanguageNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.FallbackLMNTVoiceLanguage?>
+    public sealed class FallbackLMNTVoiceLanguageAutoDetectJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.FallbackLMNTVoiceLanguageAutoDetect>
     {
         /// <inheritdoc />
-        public override global::Vapi.FallbackLMNTVoiceLanguage? Read(
+        public override global::Vapi.FallbackLMNTVoiceLanguageAutoDetect Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Vapi.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Vapi.FallbackLMNTVoiceLanguageExtensions.ToEnum(stringValue);
+                        return global::Vapi.FallbackLMNTVoiceLanguageAutoDetectExtensions.ToEnum(stringValue) ?? default;
                     }
                     
                     break;
@@ -26,11 +26,11 @@ namespace Vapi.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Vapi.FallbackLMNTVoiceLanguage)numValue;
+                    return (global::Vapi.FallbackLMNTVoiceLanguageAutoDetect)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Vapi.FallbackLMNTVoiceLanguage?);
+                    return default(global::Vapi.FallbackLMNTVoiceLanguageAutoDetect);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,19 +42,12 @@ namespace Vapi.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Vapi.FallbackLMNTVoiceLanguage? value,
+            global::Vapi.FallbackLMNTVoiceLanguageAutoDetect value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            if (value == null)
-            {
-                writer.WriteNullValue();
-            }
-            else
-            {
-                writer.WriteStringValue(global::Vapi.FallbackLMNTVoiceLanguageExtensions.ToValueString(value.Value));
-            }
+            writer.WriteStringValue(global::Vapi.FallbackLMNTVoiceLanguageAutoDetectExtensions.ToValueString(value));
         }
     }
 }

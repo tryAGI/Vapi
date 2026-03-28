@@ -14,29 +14,29 @@ namespace Vapi
     public enum EvaluationPlanItemComparator
     {
         /// <summary>
-        /// 
+        /// '=', '!='
         /// </summary>
-        Eq,
+        x__,
         /// <summary>
-        /// 
+        /// '=', '!=', '&gt;', '&lt;', '&gt;=', '&lt;='
         /// </summary>
-        Gt,
+        x_3,
         /// <summary>
-        /// 
+        /// '=', '!=', '&gt;', '&lt;', '&gt;=', '&lt;='
         /// </summary>
-        Gte,
+        x__3,
         /// <summary>
-        /// 
+        /// '=', '!='
         /// </summary>
-        Lt,
+        x_,
         /// <summary>
-        /// 
+        /// '=', '!=', '&gt;', '&lt;', '&gt;=', '&lt;='
         /// </summary>
-        Lte,
+        x_2,
         /// <summary>
-        /// 
+        /// '=', '!=', '&gt;', '&lt;', '&gt;=', '&lt;='
         /// </summary>
-        Neq,
+        x__2,
     }
 
     /// <summary>
@@ -51,12 +51,12 @@ namespace Vapi
         {
             return value switch
             {
-                EvaluationPlanItemComparator.Eq => "eq",
-                EvaluationPlanItemComparator.Gt => "gt",
-                EvaluationPlanItemComparator.Gte => "gte",
-                EvaluationPlanItemComparator.Lt => "lt",
-                EvaluationPlanItemComparator.Lte => "lte",
-                EvaluationPlanItemComparator.Neq => "neq",
+                EvaluationPlanItemComparator.x__ => "!=",
+                EvaluationPlanItemComparator.x_3 => "<",
+                EvaluationPlanItemComparator.x__3 => "<=",
+                EvaluationPlanItemComparator.x_ => "=",
+                EvaluationPlanItemComparator.x_2 => ">",
+                EvaluationPlanItemComparator.x__2 => ">=",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -67,12 +67,12 @@ namespace Vapi
         {
             return value switch
             {
-                "eq" => EvaluationPlanItemComparator.Eq,
-                "gt" => EvaluationPlanItemComparator.Gt,
-                "gte" => EvaluationPlanItemComparator.Gte,
-                "lt" => EvaluationPlanItemComparator.Lt,
-                "lte" => EvaluationPlanItemComparator.Lte,
-                "neq" => EvaluationPlanItemComparator.Neq,
+                "!=" => EvaluationPlanItemComparator.x__,
+                "<" => EvaluationPlanItemComparator.x_3,
+                "<=" => EvaluationPlanItemComparator.x__3,
+                "=" => EvaluationPlanItemComparator.x_,
+                ">" => EvaluationPlanItemComparator.x_2,
+                ">=" => EvaluationPlanItemComparator.x__2,
                 _ => null,
             };
         }

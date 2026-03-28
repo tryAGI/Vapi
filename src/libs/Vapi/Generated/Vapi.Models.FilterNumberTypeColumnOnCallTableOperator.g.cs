@@ -13,27 +13,27 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Eq,
+        x__,
         /// <summary>
         /// 
         /// </summary>
-        Gt,
+        x_3,
         /// <summary>
         /// 
         /// </summary>
-        Gte,
+        x__3,
         /// <summary>
         /// 
         /// </summary>
-        Lt,
+        x_,
         /// <summary>
         /// 
         /// </summary>
-        Lte,
+        x_2,
         /// <summary>
         /// 
         /// </summary>
-        Neq,
+        x__2,
     }
 
     /// <summary>
@@ -48,12 +48,12 @@ namespace Vapi
         {
             return value switch
             {
-                FilterNumberTypeColumnOnCallTableOperator.Eq => "eq",
-                FilterNumberTypeColumnOnCallTableOperator.Gt => "gt",
-                FilterNumberTypeColumnOnCallTableOperator.Gte => "gte",
-                FilterNumberTypeColumnOnCallTableOperator.Lt => "lt",
-                FilterNumberTypeColumnOnCallTableOperator.Lte => "lte",
-                FilterNumberTypeColumnOnCallTableOperator.Neq => "neq",
+                FilterNumberTypeColumnOnCallTableOperator.x__ => "!=",
+                FilterNumberTypeColumnOnCallTableOperator.x_3 => "<",
+                FilterNumberTypeColumnOnCallTableOperator.x__3 => "<=",
+                FilterNumberTypeColumnOnCallTableOperator.x_ => "=",
+                FilterNumberTypeColumnOnCallTableOperator.x_2 => ">",
+                FilterNumberTypeColumnOnCallTableOperator.x__2 => ">=",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -64,12 +64,12 @@ namespace Vapi
         {
             return value switch
             {
-                "eq" => FilterNumberTypeColumnOnCallTableOperator.Eq,
-                "gt" => FilterNumberTypeColumnOnCallTableOperator.Gt,
-                "gte" => FilterNumberTypeColumnOnCallTableOperator.Gte,
-                "lt" => FilterNumberTypeColumnOnCallTableOperator.Lt,
-                "lte" => FilterNumberTypeColumnOnCallTableOperator.Lte,
-                "neq" => FilterNumberTypeColumnOnCallTableOperator.Neq,
+                "!=" => FilterNumberTypeColumnOnCallTableOperator.x__,
+                "<" => FilterNumberTypeColumnOnCallTableOperator.x_3,
+                "<=" => FilterNumberTypeColumnOnCallTableOperator.x__3,
+                "=" => FilterNumberTypeColumnOnCallTableOperator.x_,
+                ">" => FilterNumberTypeColumnOnCallTableOperator.x_2,
+                ">=" => FilterNumberTypeColumnOnCallTableOperator.x__2,
                 _ => null,
             };
         }

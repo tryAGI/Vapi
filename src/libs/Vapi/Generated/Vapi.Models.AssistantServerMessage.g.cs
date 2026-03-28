@@ -95,7 +95,7 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        TranscriptFinal,
+        TranscripttranscriptType__final_,
         /// <summary>
         /// 
         /// </summary>
@@ -147,7 +147,7 @@ namespace Vapi
                 AssistantServerMessage.StatusUpdate => "status-update",
                 AssistantServerMessage.ToolCalls => "tool-calls",
                 AssistantServerMessage.Transcript => "transcript",
-                AssistantServerMessage.TranscriptFinal => "transcript-final",
+                AssistantServerMessage.TranscripttranscriptType__final_ => "transcript[transcriptType="final"]",
                 AssistantServerMessage.TransferDestinationRequest => "transfer-destination-request",
                 AssistantServerMessage.TransferUpdate => "transfer-update",
                 AssistantServerMessage.UserInterrupted => "user-interrupted",
@@ -183,7 +183,7 @@ namespace Vapi
                 "status-update" => AssistantServerMessage.StatusUpdate,
                 "tool-calls" => AssistantServerMessage.ToolCalls,
                 "transcript" => AssistantServerMessage.Transcript,
-                "transcript-final" => AssistantServerMessage.TranscriptFinal,
+                "transcript[transcriptType="final"]" => AssistantServerMessage.TranscripttranscriptType__final_,
                 "transfer-destination-request" => AssistantServerMessage.TransferDestinationRequest,
                 "transfer-update" => AssistantServerMessage.TransferUpdate,
                 "user-interrupted" => AssistantServerMessage.UserInterrupted,
