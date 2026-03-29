@@ -1,8 +1,9 @@
 # Microsoft.Extensions.AI Integration
 
-Vapi provides `AIFunction` tools compatible with
-[Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI),
-allowing any `IChatClient` to manage voice AI assistants, calls, and phone numbers via Vapi.
+!!! tip "Cross-SDK comparison"
+    See the [centralized MEAI documentation](https://tryagi.github.io/docs/meai/) for feature matrices and comparisons across all tryAGI SDKs.
+
+The Vapi SDK provides `AIFunction` tool wrappers compatible with [Microsoft.Extensions.AI](https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai). These tools can be used with any `IChatClient` to give AI models the ability to manage voice AI assistants, calls, and phone numbers via Vapi.
 
 > **Tip:** See the [cross-SDK MEAI comparison](https://tryagi.github.io/docs/guides/meai/) for
 > a full list of tryAGI SDKs with MEAI support.
