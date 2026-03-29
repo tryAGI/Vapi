@@ -26910,7 +26910,7 @@
               "status-update",
               "tool-calls",
               "transcript",
-              "transcript-final",
+              "transcript[transcriptType=\"final\"]",
               "transfer-destination-request",
               "transfer-update",
               "user-interrupted",
@@ -26954,7 +26954,7 @@
                 "status-update",
                 "tool-calls",
                 "transcript",
-                "transcript-final",
+                "transcript[transcriptType=\"final\"]",
                 "transfer-destination-request",
                 "transfer-update",
                 "user-interrupted",
@@ -27872,7 +27872,7 @@
               "status-update",
               "tool-calls",
               "transcript",
-              "transcript-final",
+              "transcript[transcriptType=\"final\"]",
               "transfer-destination-request",
               "transfer-update",
               "user-interrupted",
@@ -27916,7 +27916,7 @@
                 "status-update",
                 "tool-calls",
                 "transcript",
-                "transcript-final",
+                "transcript[transcriptType=\"final\"]",
                 "transfer-destination-request",
                 "transfer-update",
                 "user-interrupted",
@@ -28731,7 +28731,7 @@
               "status-update",
               "tool-calls",
               "transcript",
-              "transcript-final",
+              "transcript[transcriptType=\"final\"]",
               "transfer-destination-request",
               "transfer-update",
               "user-interrupted",
@@ -28775,7 +28775,7 @@
                 "status-update",
                 "tool-calls",
                 "transcript",
-                "transcript-final",
+                "transcript[transcriptType=\"final\"]",
                 "transfer-destination-request",
                 "transfer-update",
                 "user-interrupted",
@@ -29680,7 +29680,7 @@
               "status-update",
               "tool-calls",
               "transcript",
-              "transcript-final",
+              "transcript[transcriptType=\"final\"]",
               "transfer-destination-request",
               "transfer-update",
               "user-interrupted",
@@ -29724,7 +29724,7 @@
                 "status-update",
                 "tool-calls",
                 "transcript",
-                "transcript-final",
+                "transcript[transcriptType=\"final\"]",
                 "transfer-destination-request",
                 "transfer-update",
                 "user-interrupted",
@@ -57525,7 +57525,7 @@
             "description": "This is the type of the message. \"transcript\" is sent as transcriber outputs partial or final transcript.",
             "enum": [
               "transcript",
-              "transcript-final"
+              "transcript[transcriptType=\"final\"]"
             ]
           },
           "timestamp": {
@@ -61356,7 +61356,7 @@
             "description": "This is the type of the message. \"transcript\" is sent as transcriber outputs partial or final transcript.",
             "enum": [
               "transcript",
-              "transcript-final"
+              "transcript[transcriptType=\"final\"]"
             ]
           },
           "timestamp": {

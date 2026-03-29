@@ -95,7 +95,7 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        TranscriptFinal,
+        TranscripttranscriptType__final_,
         /// <summary>
         /// 
         /// </summary>
@@ -147,7 +147,7 @@ namespace Vapi
                 CreateAssistantDTOServerMessage.StatusUpdate => "status-update",
                 CreateAssistantDTOServerMessage.ToolCalls => "tool-calls",
                 CreateAssistantDTOServerMessage.Transcript => "transcript",
-                CreateAssistantDTOServerMessage.TranscriptFinal => "transcript-final",
+                CreateAssistantDTOServerMessage.TranscripttranscriptType__final_ => "transcript[transcriptType=\"final\"]",
                 CreateAssistantDTOServerMessage.TransferDestinationRequest => "transfer-destination-request",
                 CreateAssistantDTOServerMessage.TransferUpdate => "transfer-update",
                 CreateAssistantDTOServerMessage.UserInterrupted => "user-interrupted",
@@ -183,7 +183,7 @@ namespace Vapi
                 "status-update" => CreateAssistantDTOServerMessage.StatusUpdate,
                 "tool-calls" => CreateAssistantDTOServerMessage.ToolCalls,
                 "transcript" => CreateAssistantDTOServerMessage.Transcript,
-                "transcript-final" => CreateAssistantDTOServerMessage.TranscriptFinal,
+                "transcript[transcriptType=\"final\"]" => CreateAssistantDTOServerMessage.TranscripttranscriptType__final_,
                 "transfer-destination-request" => CreateAssistantDTOServerMessage.TransferDestinationRequest,
                 "transfer-update" => CreateAssistantDTOServerMessage.TransferUpdate,
                 "user-interrupted" => CreateAssistantDTOServerMessage.UserInterrupted,
