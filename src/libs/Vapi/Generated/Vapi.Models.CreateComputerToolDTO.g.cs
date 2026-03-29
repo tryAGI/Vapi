@@ -158,6 +158,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateComputerToolDTO" /> class.
         /// </summary>
+        /// <param name="displayWidthPx">
+        /// The display width in pixels
+        /// </param>
+        /// <param name="displayHeightPx">
+        /// The display height in pixels
+        /// </param>
         /// <param name="messages">
         /// These are the messages that will be spoken to the user as the tool is running.<br/>
         /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
@@ -176,16 +182,6 @@ namespace Vapi
         ///   - Webhook contains the variables set on the assistant.<br/>
         ///   - Webhook is sent to the first available URL in this order: {{tool.server.url}}, {{assistant.server.url}}, {{phoneNumber.server.url}}, {{org.server.url}}.<br/>
         ///   - Webhook expects a response with tool call result.
-        /// </param>
-        /// <param name="name">
-        /// The name of the tool, fixed to 'computer'<br/>
-        /// Default Value: computer
-        /// </param>
-        /// <param name="displayWidthPx">
-        /// The display width in pixels
-        /// </param>
-        /// <param name="displayHeightPx">
-        /// The display height in pixels
         /// </param>
         /// <param name="displayNumber">
         /// Optional display number
@@ -266,6 +262,10 @@ namespace Vapi
         /// }<br/>
         /// ```
         /// </param>
+        /// <param name="name">
+        /// The name of the tool, fixed to 'computer'<br/>
+        /// Default Value: computer
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -280,13 +280,13 @@ namespace Vapi
             global::Vapi.ToolRejectionPlan? rejectionPlan,
             global::Vapi.CreateComputerToolDTOName name = global::Vapi.CreateComputerToolDTOName.Computer)
         {
-            this.DisplayWidthPx = displayWidthPx;
-            this.DisplayHeightPx = displayHeightPx;
             this.Messages = messages;
             this.Type = type;
             this.SubType = subType;
             this.Server = server;
             this.Name = name;
+            this.DisplayWidthPx = displayWidthPx;
+            this.DisplayHeightPx = displayHeightPx;
             this.DisplayNumber = displayNumber;
             this.RejectionPlan = rejectionPlan;
         }

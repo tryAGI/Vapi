@@ -37,10 +37,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSlackWebhookCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="webhookUrl">
         /// Slack incoming webhook URL. See https://api.slack.com/messaging/webhooks for setup instructions. This is not returned in the API.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -52,8 +52,8 @@ namespace Vapi
             global::Vapi.CreateSlackWebhookCredentialDTOProvider provider,
             string? name)
         {
-            this.WebhookUrl = webhookUrl ?? throw new global::System.ArgumentNullException(nameof(webhookUrl));
             this.Provider = provider;
+            this.WebhookUrl = webhookUrl ?? throw new global::System.ArgumentNullException(nameof(webhookUrl));
             this.Name = name;
         }
 

@@ -102,6 +102,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerMessageCallEndpointingRequest" /> class.
         /// </summary>
+        /// <param name="messagesOpenAIFormatted">
+        /// This is just `messages` formatted for OpenAI.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
@@ -131,9 +134,6 @@ namespace Vapi
         /// </param>
         /// <param name="messages">
         /// This is the conversation history at the time of the endpointing request.
-        /// </param>
-        /// <param name="messagesOpenAIFormatted">
-        /// This is just `messages` formatted for OpenAI.
         /// </param>
         /// <param name="timestamp">
         /// This is the timestamp of the message.
@@ -169,10 +169,10 @@ namespace Vapi
             global::Vapi.Call? call,
             global::Vapi.Chat? chat)
         {
-            this.MessagesOpenAIFormatted = messagesOpenAIFormatted ?? throw new global::System.ArgumentNullException(nameof(messagesOpenAIFormatted));
             this.PhoneNumber = phoneNumber;
             this.Type = type;
             this.Messages = messages;
+            this.MessagesOpenAIFormatted = messagesOpenAIFormatted ?? throw new global::System.ArgumentNullException(nameof(messagesOpenAIFormatted));
             this.Timestamp = timestamp;
             this.Artifact = artifact;
             this.Assistant = assistant;

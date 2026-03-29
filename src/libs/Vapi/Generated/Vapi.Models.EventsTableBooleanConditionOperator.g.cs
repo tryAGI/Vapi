@@ -12,7 +12,7 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        x_,
+        Eq,
     }
 
     /// <summary>
@@ -27,7 +27,7 @@ namespace Vapi
         {
             return value switch
             {
-                EventsTableBooleanConditionOperator.x_ => "=",
+                EventsTableBooleanConditionOperator.Eq => "=",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -38,7 +38,7 @@ namespace Vapi
         {
             return value switch
             {
-                "=" => EventsTableBooleanConditionOperator.x_,
+                "=" => EventsTableBooleanConditionOperator.Eq,
                 _ => null,
             };
         }

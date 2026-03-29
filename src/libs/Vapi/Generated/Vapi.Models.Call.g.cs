@@ -303,6 +303,18 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="Call" /> class.
         /// </summary>
+        /// <param name="id">
+        /// This is the unique identifier for the call.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the unique identifier for the org that this call belongs to.
+        /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the call was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the call was last updated.
+        /// </param>
         /// <param name="type">
         /// This is the type of call.
         /// </param>
@@ -325,18 +337,6 @@ namespace Vapi
         /// </param>
         /// <param name="destination">
         /// This is the destination where the call ended up being transferred to. If the call was not transferred, this will be empty.
-        /// </param>
-        /// <param name="id">
-        /// This is the unique identifier for the call.
-        /// </param>
-        /// <param name="orgId">
-        /// This is the unique identifier for the org that this call belongs to.
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the call was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the call was last updated.
         /// </param>
         /// <param name="startedAt">
         /// This is the ISO 8601 date-time string of when the call was started.
@@ -488,10 +488,6 @@ namespace Vapi
             global::Vapi.SchedulePlan? schedulePlan,
             object? transport)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.Type = type;
             this.Costs = costs;
             this.Messages = messages;
@@ -500,6 +496,10 @@ namespace Vapi
             this.EndedReason = endedReason;
             this.EndedMessage = endedMessage;
             this.Destination = destination;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.StartedAt = startedAt;
             this.EndedAt = endedAt;
             this.Cost = cost;

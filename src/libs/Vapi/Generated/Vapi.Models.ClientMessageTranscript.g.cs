@@ -97,11 +97,20 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientMessageTranscript" /> class.
         /// </summary>
-        /// <param name="phoneNumber">
-        /// This is the phone number that the message is associated with.
-        /// </param>
         /// <param name="type">
         /// This is the type of the message. "transcript" is sent as transcriber outputs partial or final transcript.
+        /// </param>
+        /// <param name="role">
+        /// This is the role for which the transcript is for.
+        /// </param>
+        /// <param name="transcriptType">
+        /// This is the type of the transcript.
+        /// </param>
+        /// <param name="transcript">
+        /// This is the transcript content.
+        /// </param>
+        /// <param name="phoneNumber">
+        /// This is the phone number that the message is associated with.
         /// </param>
         /// <param name="timestamp">
         /// This is the timestamp of the message.
@@ -114,15 +123,6 @@ namespace Vapi
         /// </param>
         /// <param name="assistant">
         /// This is the assistant that the message is associated with.
-        /// </param>
-        /// <param name="role">
-        /// This is the role for which the transcript is for.
-        /// </param>
-        /// <param name="transcriptType">
-        /// This is the type of the transcript.
-        /// </param>
-        /// <param name="transcript">
-        /// This is the transcript content.
         /// </param>
         /// <param name="isFiltered">
         /// Indicates if the transcript was filtered for security reasons.
@@ -150,15 +150,15 @@ namespace Vapi
             global::System.Collections.Generic.IList<string>? detectedThreats,
             string? originalTranscript)
         {
-            this.Type = type;
-            this.Role = role;
-            this.TranscriptType = transcriptType;
-            this.Transcript = transcript ?? throw new global::System.ArgumentNullException(nameof(transcript));
             this.PhoneNumber = phoneNumber;
+            this.Type = type;
             this.Timestamp = timestamp;
             this.Call = call;
             this.Customer = customer;
             this.Assistant = assistant;
+            this.Role = role;
+            this.TranscriptType = transcriptType;
+            this.Transcript = transcript ?? throw new global::System.ArgumentNullException(nameof(transcript));
             this.IsFiltered = isFiltered;
             this.DetectedThreats = detectedThreats;
             this.OriginalTranscript = originalTranscript;

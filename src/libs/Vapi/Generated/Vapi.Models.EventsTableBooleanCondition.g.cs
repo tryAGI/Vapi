@@ -48,13 +48,13 @@ namespace Vapi
         /// The boolean field name from the event data<br/>
         /// Example: success
         /// </param>
-        /// <param name="operator">
-        /// Boolean comparison operator<br/>
-        /// Example: =
-        /// </param>
         /// <param name="value">
         /// The boolean value to compare<br/>
         /// Example: true
+        /// </param>
+        /// <param name="operator">
+        /// Boolean comparison operator<br/>
+        /// Example: =
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -65,8 +65,8 @@ namespace Vapi
             global::Vapi.EventsTableBooleanConditionOperator @operator)
         {
             this.Column = column ?? throw new global::System.ArgumentNullException(nameof(column));
-            this.Value = value;
             this.Operator = @operator;
+            this.Value = value;
         }
 
         /// <summary>

@@ -88,6 +88,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TransferDestinationNumber" /> class.
         /// </summary>
+        /// <param name="number">
+        /// This is the phone number to transfer the call to.
+        /// </param>
         /// <param name="message">
         /// This is spoken to the customer before connecting them to the destination.<br/>
         /// Usage:<br/>
@@ -104,9 +107,6 @@ namespace Vapi
         /// If `false`, the `number` is still required to only contain alphanumeric characters (regex: `/^\+?[a-zA-Z0-9]+$/`).<br/>
         /// @default true (E164 check is enabled)<br/>
         /// Default Value: true
-        /// </param>
-        /// <param name="number">
-        /// This is the phone number to transfer the call to.
         /// </param>
         /// <param name="extension">
         /// This is the extension to dial after transferring the call to the `number`.
@@ -143,10 +143,10 @@ namespace Vapi
             global::Vapi.TransferPlan? transferPlan,
             string? description)
         {
-            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
             this.Message = message;
             this.Type = type;
             this.NumberE164CheckEnabled = numberE164CheckEnabled;
+            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
             this.Extension = extension;
             this.CallerId = callerId;
             this.TransferPlan = transferPlan;

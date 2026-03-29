@@ -46,13 +46,13 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAnthropicBedrockCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="region">
         /// AWS region where Bedrock is configured.
         /// </param>
         /// <param name="authenticationPlan">
         /// Authentication method - either direct IAM credentials or cross-account role assumption.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -65,9 +65,9 @@ namespace Vapi
             global::Vapi.CreateAnthropicBedrockCredentialDTOProvider provider,
             string? name)
         {
+            this.Provider = provider;
             this.Region = region;
             this.AuthenticationPlan = authenticationPlan;
-            this.Provider = provider;
             this.Name = name;
         }
 

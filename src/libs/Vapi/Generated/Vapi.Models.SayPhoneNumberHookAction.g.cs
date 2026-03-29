@@ -31,11 +31,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="SayPhoneNumberHookAction" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of action - must be "say"
-        /// </param>
         /// <param name="exact">
         /// This is the message to say
+        /// </param>
+        /// <param name="type">
+        /// This is the type of action - must be "say"
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Vapi
             string exact,
             global::Vapi.SayPhoneNumberHookActionType type)
         {
-            this.Exact = exact ?? throw new global::System.ArgumentNullException(nameof(exact));
             this.Type = type;
+            this.Exact = exact ?? throw new global::System.ArgumentNullException(nameof(exact));
         }
 
         /// <summary>

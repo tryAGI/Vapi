@@ -144,6 +144,24 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="VoiceLibrary" /> class.
         /// </summary>
+        /// <param name="id">
+        /// The unique identifier for the voice library.
+        /// </param>
+        /// <param name="orgId">
+        /// The unique identifier for the organization that this voice library belongs to.
+        /// </param>
+        /// <param name="isPublic">
+        /// The Public voice is shared accross all the organizations.
+        /// </param>
+        /// <param name="isDeleted">
+        /// The deletion status of the voice.
+        /// </param>
+        /// <param name="createdAt">
+        /// The ISO 8601 date-time string of when the voice library was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// The ISO 8601 date-time string of when the voice library was last updated.
+        /// </param>
         /// <param name="provider">
         /// This is the voice provider that will be used.
         /// </param>
@@ -186,24 +204,6 @@ namespace Vapi
         /// <param name="credentialId">
         /// The credential ID of the voice.
         /// </param>
-        /// <param name="id">
-        /// The unique identifier for the voice library.
-        /// </param>
-        /// <param name="orgId">
-        /// The unique identifier for the organization that this voice library belongs to.
-        /// </param>
-        /// <param name="isPublic">
-        /// The Public voice is shared accross all the organizations.
-        /// </param>
-        /// <param name="isDeleted">
-        /// The deletion status of the voice.
-        /// </param>
-        /// <param name="createdAt">
-        /// The ISO 8601 date-time string of when the voice library was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// The ISO 8601 date-time string of when the voice library was last updated.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -229,12 +229,6 @@ namespace Vapi
             string? description,
             string? credentialId)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.IsPublic = isPublic;
-            this.IsDeleted = isDeleted;
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.Provider = provider;
             this.ProviderId = providerId;
             this.Slug = slug;
@@ -249,6 +243,12 @@ namespace Vapi
             this.SortOrder = sortOrder;
             this.Description = description;
             this.CredentialId = credentialId;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
+            this.IsPublic = isPublic;
+            this.IsDeleted = isDeleted;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>

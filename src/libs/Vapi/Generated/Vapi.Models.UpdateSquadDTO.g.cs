@@ -38,12 +38,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateSquadDTO" /> class.
         /// </summary>
-        /// <param name="name">
-        /// This is the name of the squad.
-        /// </param>
         /// <param name="members">
         /// This is the list of assistants that make up the squad.<br/>
         /// The call will start with the first assistant in the list.
+        /// </param>
+        /// <param name="name">
+        /// This is the name of the squad.
         /// </param>
         /// <param name="membersOverrides">
         /// This can be used to override all the assistants' settings and provide values for their template variables.<br/>
@@ -57,8 +57,8 @@ namespace Vapi
             string? name,
             global::Vapi.AssistantOverrides? membersOverrides)
         {
-            this.Members = members ?? throw new global::System.ArgumentNullException(nameof(members));
             this.Name = name;
+            this.Members = members ?? throw new global::System.ArgumentNullException(nameof(members));
             this.MembersOverrides = membersOverrides;
         }
 

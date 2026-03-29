@@ -104,6 +104,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateByoPhoneNumberDTO" /> class.
         /// </summary>
+        /// <param name="credentialId">
+        /// This is the credential of your own SIP trunk or Carrier (type `byo-sip-trunk`) which can be used to make calls to this phone number.<br/>
+        /// You can add the SIP trunk or Carrier credential in the Provider Credentials page on the Dashboard to get the credentialId.
+        /// </param>
         /// <param name="fallbackDestination">
         /// This is the fallback destination an inbound call will be transferred to if:<br/>
         /// 1. `assistantId` is not set<br/>
@@ -128,10 +132,6 @@ namespace Vapi
         /// </param>
         /// <param name="number">
         /// This is the number of the customer.
-        /// </param>
-        /// <param name="credentialId">
-        /// This is the credential of your own SIP trunk or Carrier (type `byo-sip-trunk`) which can be used to make calls to this phone number.<br/>
-        /// You can add the SIP trunk or Carrier credential in the Provider Credentials page on the Dashboard to get the credentialId.
         /// </param>
         /// <param name="name">
         /// This is the name of the phone number. This is just for your own reference.
@@ -171,12 +171,12 @@ namespace Vapi
             string? squadId,
             global::Vapi.Server? server)
         {
-            this.CredentialId = credentialId ?? throw new global::System.ArgumentNullException(nameof(credentialId));
             this.FallbackDestination = fallbackDestination;
             this.Hooks = hooks;
             this.Provider = provider;
             this.NumberE164CheckEnabled = numberE164CheckEnabled;
             this.Number = number;
+            this.CredentialId = credentialId ?? throw new global::System.ArgumentNullException(nameof(credentialId));
             this.Name = name;
             this.AssistantId = assistantId;
             this.WorkflowId = workflowId;

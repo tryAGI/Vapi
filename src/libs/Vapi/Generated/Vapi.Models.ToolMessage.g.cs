@@ -52,10 +52,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ToolMessage" /> class.
         /// </summary>
-        /// <param name="role">
-        /// This is the role of the message author<br/>
-        /// Default Value: tool
-        /// </param>
         /// <param name="content">
         /// This is the content of the tool message
         /// </param>
@@ -68,6 +64,10 @@ namespace Vapi
         /// <param name="metadata">
         /// This is an optional metadata for the message
         /// </param>
+        /// <param name="role">
+        /// This is the role of the message author<br/>
+        /// Default Value: tool
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -78,9 +78,9 @@ namespace Vapi
             object? metadata,
             global::Vapi.ToolMessageRole role = global::Vapi.ToolMessageRole.Tool)
         {
+            this.Role = role;
             this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.ToolCallId = toolCallId ?? throw new global::System.ArgumentNullException(nameof(toolCallId));
-            this.Role = role;
             this.Name = name;
             this.Metadata = metadata;
         }

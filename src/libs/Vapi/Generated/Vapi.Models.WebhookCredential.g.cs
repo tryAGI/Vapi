@@ -73,7 +73,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookCredential" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="authenticationPlan">
         /// This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.
         /// </param>
@@ -92,6 +91,7 @@ namespace Vapi
         /// <param name="authenticationSession">
         /// This is the authentication session for the credential. Available for credentials that have an authentication plan.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -108,13 +108,13 @@ namespace Vapi
             global::Vapi.WebhookCredentialProvider provider,
             string? name)
         {
+            this.Provider = provider;
             this.AuthenticationPlan = authenticationPlan;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.AuthenticationSession = authenticationSession ?? throw new global::System.ArgumentNullException(nameof(authenticationSession));
-            this.Provider = provider;
             this.Name = name;
         }
 

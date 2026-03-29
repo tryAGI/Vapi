@@ -43,10 +43,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="BearerAuthenticationPlan" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="token">
         /// This is the bearer token value.
         /// </param>
+        /// <param name="type"></param>
         /// <param name="headerName">
         /// This is the header name where the bearer token will be sent. Defaults to 'Authorization'.
         /// </param>
@@ -62,8 +62,8 @@ namespace Vapi
             string? headerName,
             bool? bearerPrefixEnabled)
         {
-            this.Token = token ?? throw new global::System.ArgumentNullException(nameof(token));
             this.Type = type;
+            this.Token = token ?? throw new global::System.ArgumentNullException(nameof(token));
             this.HeaderName = headerName;
             this.BearerPrefixEnabled = bearerPrefixEnabled;
         }

@@ -37,10 +37,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateGoogleCalendarOAuth2AuthorizationCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="authorizationId">
         /// The authorization ID for the OAuth2 authorization
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -52,8 +52,8 @@ namespace Vapi
             global::Vapi.CreateGoogleCalendarOAuth2AuthorizationCredentialDTOProvider provider,
             string? name)
         {
-            this.AuthorizationId = authorizationId ?? throw new global::System.ArgumentNullException(nameof(authorizationId));
             this.Provider = provider;
+            this.AuthorizationId = authorizationId ?? throw new global::System.ArgumentNullException(nameof(authorizationId));
             this.Name = name;
         }
 

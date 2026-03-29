@@ -35,14 +35,14 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatEvalToolResponseMessageMock" /> class.
         /// </summary>
+        /// <param name="content">
+        /// This is the content of the tool response message. JSON Objects should be stringified.
+        /// </param>
         /// <param name="role">
         /// This is the role of the message author.<br/>
         /// For a mock tool response message, the role is always 'tool'<br/>
         /// @default 'tool'<br/>
         /// Default Value: tool
-        /// </param>
-        /// <param name="content">
-        /// This is the content of the tool response message. JSON Objects should be stringified.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -51,8 +51,8 @@ namespace Vapi
             string content,
             global::Vapi.ChatEvalToolResponseMessageMockRole role = global::Vapi.ChatEvalToolResponseMessageMockRole.Tool)
         {
-            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.Role = role;
+            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
         }
 
         /// <summary>

@@ -53,11 +53,11 @@ namespace Vapi
         /// <param name="scorers">
         /// These are the scorers used to evaluate the test.
         /// </param>
-        /// <param name="type">
-        /// This is the type of the test, which must be chat.
-        /// </param>
         /// <param name="script">
         /// This is the script to be used for the chat test.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of the test, which must be chat.
         /// </param>
         /// <param name="numAttempts">
         /// This is the number of attempts allowed for the test.
@@ -76,8 +76,8 @@ namespace Vapi
             string? name)
         {
             this.Scorers = scorers ?? throw new global::System.ArgumentNullException(nameof(scorers));
-            this.Script = script ?? throw new global::System.ArgumentNullException(nameof(script));
             this.Type = type;
+            this.Script = script ?? throw new global::System.ArgumentNullException(nameof(script));
             this.NumAttempts = numAttempts;
             this.Name = name;
         }

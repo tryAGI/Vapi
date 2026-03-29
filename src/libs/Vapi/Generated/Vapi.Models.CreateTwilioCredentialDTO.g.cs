@@ -55,6 +55,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTwilioCredentialDTO" /> class.
         /// </summary>
+        /// <param name="accountSid"></param>
         /// <param name="provider"></param>
         /// <param name="authToken">
         /// This is not returned in the API.
@@ -65,7 +66,6 @@ namespace Vapi
         /// <param name="apiSecret">
         /// This is not returned in the API.
         /// </param>
-        /// <param name="accountSid"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -80,11 +80,11 @@ namespace Vapi
             string? apiSecret,
             string? name)
         {
-            this.AccountSid = accountSid ?? throw new global::System.ArgumentNullException(nameof(accountSid));
             this.Provider = provider;
             this.AuthToken = authToken;
             this.ApiKey = apiKey;
             this.ApiSecret = apiSecret;
+            this.AccountSid = accountSid ?? throw new global::System.ArgumentNullException(nameof(accountSid));
             this.Name = name;
         }
 

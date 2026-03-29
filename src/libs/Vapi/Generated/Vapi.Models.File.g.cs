@@ -131,6 +131,18 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="File" /> class.
         /// </summary>
+        /// <param name="id">
+        /// This is the unique identifier for the file.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the unique identifier for the org that this file belongs to.
+        /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the file was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the file was last updated.
+        /// </param>
         /// <param name="object"></param>
         /// <param name="status"></param>
         /// <param name="name">
@@ -147,18 +159,6 @@ namespace Vapi
         /// <param name="parsedTextUrl"></param>
         /// <param name="parsedTextBytes"></param>
         /// <param name="metadata"></param>
-        /// <param name="id">
-        /// This is the unique identifier for the file.
-        /// </param>
-        /// <param name="orgId">
-        /// This is the unique identifier for the org that this file belongs to.
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the file was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the file was last updated.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -182,10 +182,6 @@ namespace Vapi
             double? parsedTextBytes,
             object? metadata)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.Object = @object;
             this.Status = status;
             this.Name = name;
@@ -200,6 +196,10 @@ namespace Vapi
             this.ParsedTextUrl = parsedTextUrl;
             this.ParsedTextBytes = parsedTextBytes;
             this.Metadata = metadata;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>

@@ -13,11 +13,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        x__,
+        Neq,
         /// <summary>
         /// 
         /// </summary>
-        x_,
+        Eq,
         /// <summary>
         /// 
         /// </summary>
@@ -40,8 +40,8 @@ namespace Vapi
         {
             return value switch
             {
-                FilterStringTypeColumnOnCallTableOperator.x__ => "!=",
-                FilterStringTypeColumnOnCallTableOperator.x_ => "=",
+                FilterStringTypeColumnOnCallTableOperator.Neq => "!=",
+                FilterStringTypeColumnOnCallTableOperator.Eq => "=",
                 FilterStringTypeColumnOnCallTableOperator.Contains => "contains",
                 FilterStringTypeColumnOnCallTableOperator.NotContains => "not_contains",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -54,8 +54,8 @@ namespace Vapi
         {
             return value switch
             {
-                "!=" => FilterStringTypeColumnOnCallTableOperator.x__,
-                "=" => FilterStringTypeColumnOnCallTableOperator.x_,
+                "!=" => FilterStringTypeColumnOnCallTableOperator.Neq,
+                "=" => FilterStringTypeColumnOnCallTableOperator.Eq,
                 "contains" => FilterStringTypeColumnOnCallTableOperator.Contains,
                 "not_contains" => FilterStringTypeColumnOnCallTableOperator.NotContains,
                 _ => null,

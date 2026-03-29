@@ -42,11 +42,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientInboundMessageAddMessage" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of the message. Send "add-message" message to add a message to the conversation history.
-        /// </param>
         /// <param name="message">
         /// This is the message to add to the conversation.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of the message. Send "add-message" message to add a message to the conversation history.
         /// </param>
         /// <param name="triggerResponseEnabled">
         /// This is the flag to trigger a response, or to insert the message into the conversation history silently. Defaults to `true`.<br/>
@@ -64,8 +64,8 @@ namespace Vapi
             global::Vapi.ClientInboundMessageAddMessageType type,
             bool? triggerResponseEnabled)
         {
-            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
             this.Type = type;
+            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
             this.TriggerResponseEnabled = triggerResponseEnabled;
         }
 

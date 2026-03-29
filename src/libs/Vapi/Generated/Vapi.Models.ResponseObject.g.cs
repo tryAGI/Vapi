@@ -65,22 +65,22 @@ namespace Vapi
         /// <param name="id">
         /// Unique identifier for this Response
         /// </param>
-        /// <param name="object">
-        /// The object type<br/>
-        /// Default Value: response
-        /// </param>
         /// <param name="createdAt">
         /// Unix timestamp (in seconds) of when this Response was created
         /// </param>
         /// <param name="status">
         /// Status of the response
         /// </param>
+        /// <param name="output">
+        /// Output messages from the model
+        /// </param>
         /// <param name="error">
         /// Error message if the response failed<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
-        /// <param name="output">
-        /// Output messages from the model
+        /// <param name="object">
+        /// The object type<br/>
+        /// Default Value: response
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -94,11 +94,11 @@ namespace Vapi
             global::Vapi.ResponseObjectObject @object = global::Vapi.ResponseObjectObject.Response)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.Object = @object;
             this.CreatedAt = createdAt;
             this.Status = status;
-            this.Output = output ?? throw new global::System.ArgumentNullException(nameof(output));
-            this.Object = @object;
             this.Error = error;
+            this.Output = output ?? throw new global::System.ArgumentNullException(nameof(output));
         }
 
         /// <summary>

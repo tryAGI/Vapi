@@ -90,7 +90,6 @@ namespace Vapi
         /// <param name="vonageApplicationPrivateKey">
         /// This is not returned in the API.
         /// </param>
-        /// <param name="provider"></param>
         /// <param name="apiSecret">
         /// This is not returned in the API.
         /// </param>
@@ -110,10 +109,11 @@ namespace Vapi
         /// This is the Vonage Application ID for the credential.<br/>
         /// Only relevant for Vonage credentials.
         /// </param>
+        /// <param name="apiKey"></param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
-        /// <param name="apiKey"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -130,15 +130,15 @@ namespace Vapi
             string? name)
         {
             this.VonageApplicationPrivateKey = vonageApplicationPrivateKey ?? throw new global::System.ArgumentNullException(nameof(vonageApplicationPrivateKey));
+            this.Provider = provider;
             this.ApiSecret = apiSecret ?? throw new global::System.ArgumentNullException(nameof(apiSecret));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.VonageApplicationId = vonageApplicationId ?? throw new global::System.ArgumentNullException(nameof(vonageApplicationId));
-            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
-            this.Provider = provider;
             this.Name = name;
+            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
         }
 
         /// <summary>

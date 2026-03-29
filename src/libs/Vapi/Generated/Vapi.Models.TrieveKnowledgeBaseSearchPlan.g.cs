@@ -43,6 +43,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TrieveKnowledgeBaseSearchPlan" /> class.
         /// </summary>
+        /// <param name="searchType">
+        /// This is the search method used when searching for relevant chunks from the vector store.
+        /// </param>
         /// <param name="topK">
         /// Specifies the number of top chunks to return. This corresponds to the `page_size` parameter in Trieve.
         /// </param>
@@ -51,9 +54,6 @@ namespace Vapi
         /// </param>
         /// <param name="scoreThreshold">
         /// This is the score threshold to filter out chunks with a score below the threshold for cosine distance metric. For Manhattan Distance, Euclidean Distance, and Dot Product, it will filter out scores above the threshold distance. This threshold applies before weight and bias modifications. If not specified, this defaults to no threshold. A threshold of 0 will default to no threshold.
-        /// </param>
-        /// <param name="searchType">
-        /// This is the search method used when searching for relevant chunks from the vector store.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -64,10 +64,10 @@ namespace Vapi
             bool? removeStopWords,
             double? scoreThreshold)
         {
-            this.SearchType = searchType;
             this.TopK = topK;
             this.RemoveStopWords = removeStopWords;
             this.ScoreThreshold = scoreThreshold;
+            this.SearchType = searchType;
         }
 
         /// <summary>

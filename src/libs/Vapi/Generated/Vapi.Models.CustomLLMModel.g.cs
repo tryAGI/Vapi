@@ -125,6 +125,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomLLMModel" /> class.
         /// </summary>
+        /// <param name="url">
+        /// These is the URL we'll use for the OpenAI client's `baseURL`. Ex. https://openrouter.ai/api/v1
+        /// </param>
+        /// <param name="model">
+        /// This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b
+        /// </param>
         /// <param name="messages">
         /// This is the starting state for the conversation.
         /// </param>
@@ -154,18 +160,12 @@ namespace Vapi
         /// Custom headers to send with requests. These headers can override default OpenAI headers except for Authorization (which should be specified using a custom-llm credential).<br/>
         /// Example: {"X-Custom-Header":"value"}
         /// </param>
-        /// <param name="url">
-        /// These is the URL we'll use for the OpenAI client's `baseURL`. Ex. https://openrouter.ai/api/v1
-        /// </param>
         /// <param name="wordLevelConfidenceEnabled">
         /// This determines whether the transcriber's word level confidence is sent in requests to the custom provider. Default is false.<br/>
         /// This only works for Deepgram transcribers.
         /// </param>
         /// <param name="timeoutSeconds">
         /// This sets the timeout for the connection to the custom provider without needing to stream any tokens back. Default is 20 seconds.
-        /// </param>
-        /// <param name="model">
-        /// This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b
         /// </param>
         /// <param name="temperature">
         /// This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.
@@ -203,8 +203,6 @@ namespace Vapi
             bool? emotionRecognitionEnabled,
             double? numFastTurns)
         {
-            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
-            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Messages = messages;
             this.Tools = tools;
             this.ToolIds = toolIds;
@@ -212,8 +210,10 @@ namespace Vapi
             this.Provider = provider;
             this.MetadataSendMode = metadataSendMode;
             this.Headers = headers;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.WordLevelConfidenceEnabled = wordLevelConfidenceEnabled;
             this.TimeoutSeconds = timeoutSeconds;
+            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;
             this.EmotionRecognitionEnabled = emotionRecognitionEnabled;

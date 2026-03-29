@@ -95,6 +95,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenAIResponsesRequest" /> class.
         /// </summary>
+        /// <param name="input">
+        /// This is the input text for the chat.<br/>
+        /// Can be a string or an array of chat messages.<br/>
+        /// This field is REQUIRED for chat creation.
+        /// </param>
         /// <param name="assistantId">
         /// This is the assistant that will be used for the chat. To use an existing assistant, use `assistantId` instead.
         /// </param>
@@ -117,11 +122,6 @@ namespace Vapi
         /// <param name="sessionId">
         /// This is the ID of the session that will be used for the chat.<br/>
         /// Mutually exclusive with previousChatId.
-        /// </param>
-        /// <param name="input">
-        /// This is the input text for the chat.<br/>
-        /// Can be a string or an array of chat messages.<br/>
-        /// This field is REQUIRED for chat creation.
         /// </param>
         /// <param name="stream">
         /// Whether to stream the response or not.<br/>
@@ -154,7 +154,6 @@ namespace Vapi
             string? previousChatId,
             global::Vapi.TwilioSMSChatTransport? transport)
         {
-            this.Input = input;
             this.AssistantId = assistantId;
             this.Assistant = assistant;
             this.AssistantOverrides = assistantOverrides;
@@ -162,6 +161,7 @@ namespace Vapi
             this.Squad = squad;
             this.Name = name;
             this.SessionId = sessionId;
+            this.Input = input;
             this.Stream = stream;
             this.PreviousChatId = previousChatId;
             this.Transport = transport;

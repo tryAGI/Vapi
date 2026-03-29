@@ -145,6 +145,15 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="Org" /> class.
         /// </summary>
+        /// <param name="id">
+        /// This is the unique identifier for the org.
+        /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the org was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the org was last updated.
+        /// </param>
         /// <param name="hipaaEnabled">
         /// When this is enabled, logs, recordings, and transcriptions will be stored in HIPAA-compliant storage. Defaults to false.<br/>
         /// When HIPAA is enabled, only HIPAA-compliant providers will be available for LLM, Voice, and Transcriber respectively.<br/>
@@ -154,15 +163,6 @@ namespace Vapi
         /// <param name="subscription"></param>
         /// <param name="subscriptionId">
         /// This is the ID of the subscription the org belongs to.
-        /// </param>
-        /// <param name="id">
-        /// This is the unique identifier for the org.
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the org was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the org was last updated.
         /// </param>
         /// <param name="stripeSubscriptionId">
         /// This is the subscription for the org.
@@ -228,12 +228,12 @@ namespace Vapi
             global::Vapi.Server? server,
             global::Vapi.CompliancePlan? compliancePlan)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.HipaaEnabled = hipaaEnabled;
             this.Subscription = subscription;
             this.SubscriptionId = subscriptionId;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.StripeSubscriptionId = stripeSubscriptionId;
             this.StripeSubscriptionItemId = stripeSubscriptionItemId;
             this.StripeSubscriptionCurrentPeriodStart = stripeSubscriptionCurrentPeriodStart;

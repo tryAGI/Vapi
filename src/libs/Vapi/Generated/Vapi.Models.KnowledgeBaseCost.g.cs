@@ -52,9 +52,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeBaseCost" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of cost, always 'knowledge-base' for this class.
-        /// </param>
         /// <param name="model">
         /// This is the model that was used for processing the knowledge base.
         /// </param>
@@ -67,6 +64,9 @@ namespace Vapi
         /// <param name="cost">
         /// This is the cost of the component in USD.
         /// </param>
+        /// <param name="type">
+        /// This is the type of cost, always 'knowledge-base' for this class.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -77,11 +77,11 @@ namespace Vapi
             double cost,
             global::Vapi.KnowledgeBaseCostType type)
         {
+            this.Type = type;
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.PromptTokens = promptTokens;
             this.CompletionTokens = completionTokens;
             this.Cost = cost;
-            this.Type = type;
         }
 
         /// <summary>

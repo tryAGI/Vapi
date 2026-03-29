@@ -409,6 +409,18 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="HandoffTool" /> class.
         /// </summary>
+        /// <param name="id">
+        /// This is the unique identifier for the tool.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the unique identifier for the organization that this tool belongs to.
+        /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the tool was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the tool was last updated.
+        /// </param>
         /// <param name="messages">
         /// These are the messages that will be spoken to the user as the tool is running.<br/>
         /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
@@ -580,18 +592,6 @@ namespace Vapi
         /// }<br/>
         /// ```<br/>
         /// The properties `customerAreaCode`, `customerIntent`, and `customerSentiment` will be passed to the server in the webhook request body.
-        /// </param>
-        /// <param name="id">
-        /// This is the unique identifier for the tool.
-        /// </param>
-        /// <param name="orgId">
-        /// This is the unique identifier for the organization that this tool belongs to.
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the tool was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the tool was last updated.
         /// </param>
         /// <param name="rejectionPlan">
         /// This is the plan to reject a tool call based on the conversation state.<br/>
@@ -781,14 +781,14 @@ namespace Vapi
             global::Vapi.ToolRejectionPlan? rejectionPlan,
             global::Vapi.OpenAIFunction? function)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.Messages = messages;
             this.Type = type;
             this.DefaultResult = defaultResult;
             this.Destinations = destinations;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.RejectionPlan = rejectionPlan;
             this.Function = function;
         }

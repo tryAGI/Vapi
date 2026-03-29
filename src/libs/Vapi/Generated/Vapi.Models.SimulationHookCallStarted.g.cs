@@ -31,8 +31,8 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="SimulationHookCallStarted" /> class.
         /// </summary>
-        /// <param name="on"></param>
         /// <param name="do"></param>
+        /// <param name="on"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -40,8 +40,8 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.SimulationHookWebhookAction> @do,
             global::Vapi.SimulationHookCallStartedOn on)
         {
-            this.Do = @do ?? throw new global::System.ArgumentNullException(nameof(@do));
             this.On = on;
+            this.Do = @do ?? throw new global::System.ArgumentNullException(nameof(@do));
         }
 
         /// <summary>

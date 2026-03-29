@@ -60,6 +60,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TrieveKnowledgeBase" /> class.
         /// </summary>
+        /// <param name="id">
+        /// This is the id of the knowledge base.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the org id of the knowledge base.
+        /// </param>
         /// <param name="provider">
         /// This knowledge base is provided by Trieve.<br/>
         /// To learn more about Trieve, visit https://trieve.ai.
@@ -76,12 +82,6 @@ namespace Vapi
         /// <param name="createPlan">
         /// This is the plan if you want us to create/import a new vector store using Trieve.
         /// </param>
-        /// <param name="id">
-        /// This is the id of the knowledge base.
-        /// </param>
-        /// <param name="orgId">
-        /// This is the org id of the knowledge base.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -93,12 +93,12 @@ namespace Vapi
             global::Vapi.TrieveKnowledgeBaseSearchPlan? searchPlan,
             global::Vapi.TrieveKnowledgeBaseImport? createPlan)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.Provider = provider;
             this.Name = name;
             this.SearchPlan = searchPlan;
             this.CreatePlan = createPlan;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
         }
 
         /// <summary>

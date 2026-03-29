@@ -63,12 +63,12 @@ namespace Vapi
         /// <param name="content">
         /// Content of the output message
         /// </param>
+        /// <param name="status">
+        /// The status of the message
+        /// </param>
         /// <param name="role">
         /// The role of the output message<br/>
         /// Default Value: assistant
-        /// </param>
-        /// <param name="status">
-        /// The status of the message
         /// </param>
         /// <param name="type">
         /// The type of the output message<br/>
@@ -86,8 +86,8 @@ namespace Vapi
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
-            this.Status = status;
             this.Role = role;
+            this.Status = status;
             this.Type = type;
         }
 

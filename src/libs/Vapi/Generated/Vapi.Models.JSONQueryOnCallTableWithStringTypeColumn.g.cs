@@ -71,6 +71,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="JSONQueryOnCallTableWithStringTypeColumn" /> class.
         /// </summary>
+        /// <param name="column">
+        /// This is the column that will be queried in the selected table.<br/>
+        /// Available columns depend on the selected table.<br/>
+        /// String Type columns are columns where the rows store String data<br/>
+        /// Example: id
+        /// </param>
         /// <param name="type">
         /// This is the type of query. Only allowed type is "vapiql-json".<br/>
         /// Example: vapiql-json
@@ -81,12 +87,6 @@ namespace Vapi
         /// <param name="filters">
         /// This is the filters to apply to the insight.<br/>
         /// The discriminator automatically selects the correct filter type based on column and operator.
-        /// </param>
-        /// <param name="column">
-        /// This is the column that will be queried in the selected table.<br/>
-        /// Available columns depend on the selected table.<br/>
-        /// String Type columns are columns where the rows store String data<br/>
-        /// Example: id
         /// </param>
         /// <param name="operation">
         /// This is the aggregation operation to perform on the column.<br/>
@@ -109,10 +109,10 @@ namespace Vapi
             global::Vapi.JSONQueryOnCallTableWithStringTypeColumnOperation operation,
             string? name)
         {
-            this.Column = column;
             this.Type = type;
             this.Table = table;
             this.Filters = filters;
+            this.Column = column;
             this.Operation = operation;
             this.Name = name;
         }

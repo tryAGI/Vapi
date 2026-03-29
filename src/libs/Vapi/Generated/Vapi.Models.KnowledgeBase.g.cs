@@ -60,18 +60,18 @@ namespace Vapi
         /// The name of the knowledge base<br/>
         /// Example: My Knowledge Base
         /// </param>
+        /// <param name="description">
+        /// A description of the knowledge base
+        /// </param>
+        /// <param name="fileIds">
+        /// The file IDs associated with this knowledge base
+        /// </param>
         /// <param name="provider">
         /// The provider of the knowledge base<br/>
         /// Example: google
         /// </param>
         /// <param name="model">
         /// The model to use for the knowledge base
-        /// </param>
-        /// <param name="description">
-        /// A description of the knowledge base
-        /// </param>
-        /// <param name="fileIds">
-        /// The file IDs associated with this knowledge base
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -84,10 +84,10 @@ namespace Vapi
             global::Vapi.KnowledgeBaseModel? model)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
-            this.FileIds = fileIds ?? throw new global::System.ArgumentNullException(nameof(fileIds));
             this.Provider = provider;
             this.Model = model;
+            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
+            this.FileIds = fileIds ?? throw new global::System.ArgumentNullException(nameof(fileIds));
         }
 
         /// <summary>

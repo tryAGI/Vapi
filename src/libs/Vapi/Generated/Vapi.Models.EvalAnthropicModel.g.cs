@@ -65,11 +65,19 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="EvalAnthropicModel" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is the provider of the model (`anthropic`).
-        /// </param>
         /// <param name="model">
         /// This is the specific model that will be used.
+        /// </param>
+        /// <param name="messages">
+        /// These are the messages which will instruct the AI Judge on how to evaluate the assistant message.<br/>
+        /// The LLM-Judge must respond with "pass" or "fail" to indicate if the assistant message passes the eval.<br/>
+        /// To access the messages in the mock conversation, use the LiquidJS variable `{{messages}}`.<br/>
+        /// The assistant message to be evaluated will be passed as the last message in the `messages` array and can be accessed using `{{messages[-1]}}`.<br/>
+        /// It is recommended to use the system message to instruct the LLM how to evaluate the assistant message, and then use the first user message to pass the assistant message to be evaluated.<br/>
+        /// Example: {
+        /// </param>
+        /// <param name="provider">
+        /// This is the provider of the model (`anthropic`).
         /// </param>
         /// <param name="thinking">
         /// This is the optional configuration for Anthropic's thinking feature.<br/>
@@ -82,14 +90,6 @@ namespace Vapi
         /// This is the max tokens of the model.<br/>
         /// If your Judge instructions return `true` or `false` takes only 1 token (as per the OpenAI Tokenizer), and therefore is recommended to set it to a low number to force the model to return a short response.
         /// </param>
-        /// <param name="messages">
-        /// These are the messages which will instruct the AI Judge on how to evaluate the assistant message.<br/>
-        /// The LLM-Judge must respond with "pass" or "fail" to indicate if the assistant message passes the eval.<br/>
-        /// To access the messages in the mock conversation, use the LiquidJS variable `{{messages}}`.<br/>
-        /// The assistant message to be evaluated will be passed as the last message in the `messages` array and can be accessed using `{{messages[-1]}}`.<br/>
-        /// It is recommended to use the system message to instruct the LLM how to evaluate the assistant message, and then use the first user message to pass the assistant message to be evaluated.<br/>
-        /// Example: {
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -101,12 +101,12 @@ namespace Vapi
             double? temperature,
             double? maxTokens)
         {
-            this.Model = model;
-            this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));
             this.Provider = provider;
+            this.Model = model;
             this.Thinking = thinking;
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;
+            this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));
         }
 
         /// <summary>

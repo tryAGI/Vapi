@@ -139,6 +139,18 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="VapiPhoneNumber" /> class.
         /// </summary>
+        /// <param name="id">
+        /// This is the unique identifier for the phone number.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the unique identifier for the org that this phone number belongs to.
+        /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the phone number was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the phone number was last updated.
+        /// </param>
         /// <param name="fallbackDestination">
         /// This is the fallback destination an inbound call will be transferred to if:<br/>
         /// 1. `assistantId` is not set<br/>
@@ -151,18 +163,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is to create free SIP phone numbers on Vapi.
-        /// </param>
-        /// <param name="id">
-        /// This is the unique identifier for the phone number.
-        /// </param>
-        /// <param name="orgId">
-        /// This is the unique identifier for the org that this phone number belongs to.
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the phone number was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the phone number was last updated.
         /// </param>
         /// <param name="status">
         /// This is the status of the phone number.
@@ -225,13 +225,13 @@ namespace Vapi
             string? sipUri,
             global::Vapi.SipAuthentication? authentication)
         {
+            this.FallbackDestination = fallbackDestination;
+            this.Hooks = hooks;
+            this.Provider = provider;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.FallbackDestination = fallbackDestination;
-            this.Hooks = hooks;
-            this.Provider = provider;
             this.Status = status;
             this.Number = number;
             this.Name = name;

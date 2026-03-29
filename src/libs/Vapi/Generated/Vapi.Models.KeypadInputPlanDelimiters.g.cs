@@ -16,7 +16,7 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Any,
+        Multiply,
     }
 
     /// <summary>
@@ -32,7 +32,7 @@ namespace Vapi
             return value switch
             {
                 KeypadInputPlanDelimiters.x_ => "#",
-                KeypadInputPlanDelimiters.Any => "*",
+                KeypadInputPlanDelimiters.Multiply => "*",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,7 +44,7 @@ namespace Vapi
             return value switch
             {
                 "#" => KeypadInputPlanDelimiters.x_,
-                "*" => KeypadInputPlanDelimiters.Any,
+                "*" => KeypadInputPlanDelimiters.Multiply,
                 _ => null,
             };
         }

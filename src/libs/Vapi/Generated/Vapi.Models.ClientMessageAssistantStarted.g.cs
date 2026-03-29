@@ -62,6 +62,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientMessageAssistantStarted" /> class.
         /// </summary>
+        /// <param name="newAssistant">
+        /// This is the assistant that was updated.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
@@ -80,9 +83,6 @@ namespace Vapi
         /// <param name="assistant">
         /// This is the assistant that the message is associated with.
         /// </param>
-        /// <param name="newAssistant">
-        /// This is the assistant that was updated.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -95,13 +95,13 @@ namespace Vapi
             global::Vapi.CreateCustomerDTO? customer,
             global::Vapi.CreateAssistantDTO? assistant)
         {
-            this.NewAssistant = newAssistant ?? throw new global::System.ArgumentNullException(nameof(newAssistant));
             this.PhoneNumber = phoneNumber;
             this.Type = type;
             this.Timestamp = timestamp;
             this.Call = call;
             this.Customer = customer;
             this.Assistant = assistant;
+            this.NewAssistant = newAssistant ?? throw new global::System.ArgumentNullException(nameof(newAssistant));
         }
 
         /// <summary>

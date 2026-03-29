@@ -70,9 +70,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="Token" /> class.
         /// </summary>
-        /// <param name="tag">
-        /// This is the tag for the token. It represents its scope.
-        /// </param>
         /// <param name="id">
         /// This is the unique identifier for the token.
         /// </param>
@@ -84,6 +81,9 @@ namespace Vapi
         /// </param>
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the token was last updated.
+        /// </param>
+        /// <param name="tag">
+        /// This is the tag for the token. It represents its scope.
         /// </param>
         /// <param name="value">
         /// This is the token key.
@@ -107,11 +107,11 @@ namespace Vapi
             string? name,
             global::Vapi.TokenRestrictions? restrictions)
         {
+            this.Tag = tag;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Tag = tag;
             this.Value = value;
             this.Name = name;
             this.Restrictions = restrictions;

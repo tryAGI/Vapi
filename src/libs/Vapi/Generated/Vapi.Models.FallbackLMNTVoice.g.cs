@@ -46,8 +46,8 @@ namespace Vapi
         /// </summary>
         /// <example>en</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("language")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOf<FallbackLMNTVoiceLanguageIso6391LanguageCode?, FallbackLMNTVoiceLanguageAutoDetect?>JsonConverter))]
-        public global::Vapi.OneOf<global::Vapi.FallbackLMNTVoiceLanguageIso6391LanguageCode?, global::Vapi.FallbackLMNTVoiceLanguageAutoDetect?>? Language { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.FallbackLMNTVoiceLanguageJsonConverter))]
+        public global::Vapi.FallbackLMNTVoiceLanguage? Language { get; set; }
 
         /// <summary>
         /// This is the plan for chunking the model output before it is sent to the voice provider.
@@ -64,6 +64,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="FallbackLMNTVoice" /> class.
         /// </summary>
+        /// <param name="voiceId">
+        /// This is the provider-specific ID that will be used.
+        /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
         /// Default Value: true<br/>
@@ -71,9 +74,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is the voice provider that will be used.
-        /// </param>
-        /// <param name="voiceId">
-        /// This is the provider-specific ID that will be used.
         /// </param>
         /// <param name="speed">
         /// This is the speed multiplier that will be used.<br/>
@@ -94,12 +94,12 @@ namespace Vapi
             bool? cachingEnabled,
             global::Vapi.FallbackLMNTVoiceProvider provider,
             double? speed,
-            global::Vapi.OneOf<global::Vapi.FallbackLMNTVoiceLanguageIso6391LanguageCode?, global::Vapi.FallbackLMNTVoiceLanguageAutoDetect?>? language,
+            global::Vapi.FallbackLMNTVoiceLanguage? language,
             global::Vapi.ChunkPlan? chunkPlan)
         {
-            this.VoiceId = voiceId;
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
+            this.VoiceId = voiceId;
             this.Speed = speed;
             this.Language = language;
             this.ChunkPlan = chunkPlan;

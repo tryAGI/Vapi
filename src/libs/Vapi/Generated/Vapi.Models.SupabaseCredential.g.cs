@@ -70,12 +70,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="SupabaseCredential" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is for supabase storage.
-        /// </param>
-        /// <param name="fallbackIndex">
-        /// This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.
-        /// </param>
         /// <param name="id">
         /// This is the unique identifier for the credential.
         /// </param>
@@ -87,6 +81,12 @@ namespace Vapi
         /// </param>
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
+        /// </param>
+        /// <param name="provider">
+        /// This is for supabase storage.
+        /// </param>
+        /// <param name="fallbackIndex">
+        /// This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.
         /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
@@ -105,12 +105,12 @@ namespace Vapi
             string? name,
             global::Vapi.SupabaseBucketPlan? bucketPlan)
         {
+            this.Provider = provider;
+            this.FallbackIndex = fallbackIndex;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Provider = provider;
-            this.FallbackIndex = fallbackIndex;
             this.Name = name;
             this.BucketPlan = bucketPlan;
         }

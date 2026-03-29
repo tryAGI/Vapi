@@ -20,7 +20,7 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        TlsSrtp,
+        TlsDividesrtp,
         /// <summary>
         /// 
         /// </summary>
@@ -41,7 +41,7 @@ namespace Vapi
             {
                 SipTrunkGatewayOutboundProtocol.Tcp => "tcp",
                 SipTrunkGatewayOutboundProtocol.Tls => "tls",
-                SipTrunkGatewayOutboundProtocol.TlsSrtp => "tls/srtp",
+                SipTrunkGatewayOutboundProtocol.TlsDividesrtp => "tls/srtp",
                 SipTrunkGatewayOutboundProtocol.Udp => "udp",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -55,7 +55,7 @@ namespace Vapi
             {
                 "tcp" => SipTrunkGatewayOutboundProtocol.Tcp,
                 "tls" => SipTrunkGatewayOutboundProtocol.Tls,
-                "tls/srtp" => SipTrunkGatewayOutboundProtocol.TlsSrtp,
+                "tls/srtp" => SipTrunkGatewayOutboundProtocol.TlsDividesrtp,
                 "udp" => SipTrunkGatewayOutboundProtocol.Udp,
                 _ => null,
             };

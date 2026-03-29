@@ -156,33 +156,9 @@ namespace Vapi
         /// <param name="status">
         /// This is the status of the campaign.
         /// </param>
-        /// <param name="endedReason">
-        /// This is the explanation for how the campaign ended.
-        /// </param>
         /// <param name="name">
         /// This is the name of the campaign. This is just for your own reference.<br/>
         /// Example: Q2 Sales Campaign
-        /// </param>
-        /// <param name="assistantId">
-        /// This is the assistant ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
-        /// </param>
-        /// <param name="workflowId">
-        /// This is the workflow ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
-        /// </param>
-        /// <param name="squadId">
-        /// This is the squad ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
-        /// </param>
-        /// <param name="phoneNumberId">
-        /// This is the phone number ID that will be used for the campaign calls. Required if dialPlan is not provided. Note: phoneNumberId and dialPlan are mutually exclusive.
-        /// </param>
-        /// <param name="dialPlan">
-        /// This is a list of dial entries, each specifying a phone number and the customers to call using that number. Use this when you want different phone numbers to call different sets of customers. Note: phoneNumberId and dialPlan are mutually exclusive.
-        /// </param>
-        /// <param name="schedulePlan">
-        /// This is the schedule plan for the campaign. Calls will start at startedAt and continue until your organization’s concurrency limit is reached. Any remaining calls will be retried for up to one hour as capacity becomes available. After that hour or after latestAt, whichever comes first, any calls that couldn’t be placed won’t be retried.
-        /// </param>
-        /// <param name="customers">
-        /// These are the customers that will be called in the campaign. Required if dialPlan is not provided.
         /// </param>
         /// <param name="id">
         /// This is the unique identifier for the campaign.
@@ -214,6 +190,30 @@ namespace Vapi
         /// <param name="callsCounterEnded">
         /// This is the number of calls that have ended.
         /// </param>
+        /// <param name="endedReason">
+        /// This is the explanation for how the campaign ended.
+        /// </param>
+        /// <param name="assistantId">
+        /// This is the assistant ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
+        /// </param>
+        /// <param name="workflowId">
+        /// This is the workflow ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
+        /// </param>
+        /// <param name="squadId">
+        /// This is the squad ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
+        /// </param>
+        /// <param name="phoneNumberId">
+        /// This is the phone number ID that will be used for the campaign calls. Required if dialPlan is not provided. Note: phoneNumberId and dialPlan are mutually exclusive.
+        /// </param>
+        /// <param name="dialPlan">
+        /// This is a list of dial entries, each specifying a phone number and the customers to call using that number. Use this when you want different phone numbers to call different sets of customers. Note: phoneNumberId and dialPlan are mutually exclusive.
+        /// </param>
+        /// <param name="schedulePlan">
+        /// This is the schedule plan for the campaign. Calls will start at startedAt and continue until your organization’s concurrency limit is reached. Any remaining calls will be retried for up to one hour as capacity becomes available. After that hour or after latestAt, whichever comes first, any calls that couldn’t be placed won’t be retried.
+        /// </param>
+        /// <param name="customers">
+        /// These are the customers that will be called in the campaign. Required if dialPlan is not provided.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -240,7 +240,15 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers)
         {
             this.Status = status;
+            this.EndedReason = endedReason;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.AssistantId = assistantId;
+            this.WorkflowId = workflowId;
+            this.SquadId = squadId;
+            this.PhoneNumberId = phoneNumberId;
+            this.DialPlan = dialPlan;
+            this.SchedulePlan = schedulePlan;
+            this.Customers = customers;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
@@ -251,14 +259,6 @@ namespace Vapi
             this.CallsCounterInProgress = callsCounterInProgress;
             this.CallsCounterEndedVoicemail = callsCounterEndedVoicemail;
             this.CallsCounterEnded = callsCounterEnded;
-            this.EndedReason = endedReason;
-            this.AssistantId = assistantId;
-            this.WorkflowId = workflowId;
-            this.SquadId = squadId;
-            this.PhoneNumberId = phoneNumberId;
-            this.DialPlan = dialPlan;
-            this.SchedulePlan = schedulePlan;
-            this.Customers = customers;
         }
 
         /// <summary>

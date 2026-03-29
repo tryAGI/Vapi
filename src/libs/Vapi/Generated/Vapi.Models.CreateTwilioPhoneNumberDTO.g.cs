@@ -120,6 +120,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTwilioPhoneNumberDTO" /> class.
         /// </summary>
+        /// <param name="number">
+        /// These are the digits of the phone number you own on your Twilio.
+        /// </param>
+        /// <param name="twilioAccountSid">
+        /// This is the Twilio Account SID for the phone number.
+        /// </param>
         /// <param name="fallbackDestination">
         /// This is the fallback destination an inbound call will be transferred to if:<br/>
         /// 1. `assistantId` is not set<br/>
@@ -139,12 +145,6 @@ namespace Vapi
         /// If `true` or omitted (default), Vapi will configure both the voice and messaging URLs.<br/>
         /// @default true<br/>
         /// Default Value: true
-        /// </param>
-        /// <param name="number">
-        /// These are the digits of the phone number you own on your Twilio.
-        /// </param>
-        /// <param name="twilioAccountSid">
-        /// This is the Twilio Account SID for the phone number.
         /// </param>
         /// <param name="twilioAuthToken">
         /// This is the Twilio Auth Token for the phone number.
@@ -196,12 +196,12 @@ namespace Vapi
             string? squadId,
             global::Vapi.Server? server)
         {
-            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
-            this.TwilioAccountSid = twilioAccountSid ?? throw new global::System.ArgumentNullException(nameof(twilioAccountSid));
             this.FallbackDestination = fallbackDestination;
             this.Hooks = hooks;
             this.Provider = provider;
             this.SmsEnabled = smsEnabled;
+            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
+            this.TwilioAccountSid = twilioAccountSid ?? throw new global::System.ArgumentNullException(nameof(twilioAccountSid));
             this.TwilioAuthToken = twilioAuthToken;
             this.TwilioApiKey = twilioApiKey;
             this.TwilioApiSecret = twilioApiSecret;

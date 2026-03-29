@@ -31,11 +31,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TestSuitePhoneNumber" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is the provider of the phone number.
-        /// </param>
         /// <param name="number">
         /// This is the phone number that is being tested.
+        /// </param>
+        /// <param name="provider">
+        /// This is the provider of the phone number.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Vapi
             string number,
             global::Vapi.TestSuitePhoneNumberProvider provider)
         {
-            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
             this.Provider = provider;
+            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
         }
 
         /// <summary>

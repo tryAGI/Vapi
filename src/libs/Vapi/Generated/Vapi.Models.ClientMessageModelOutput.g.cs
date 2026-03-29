@@ -69,6 +69,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientMessageModelOutput" /> class.
         /// </summary>
+        /// <param name="output">
+        /// This is the output of the model. It can be a token or tool call.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
@@ -91,9 +94,6 @@ namespace Vapi
         /// <param name="assistant">
         /// This is the assistant that the message is associated with.
         /// </param>
-        /// <param name="output">
-        /// This is the output of the model. It can be a token or tool call.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -107,7 +107,6 @@ namespace Vapi
             global::Vapi.CreateCustomerDTO? customer,
             global::Vapi.CreateAssistantDTO? assistant)
         {
-            this.Output = output ?? throw new global::System.ArgumentNullException(nameof(output));
             this.PhoneNumber = phoneNumber;
             this.Type = type;
             this.TurnId = turnId;
@@ -115,6 +114,7 @@ namespace Vapi
             this.Call = call;
             this.Customer = customer;
             this.Assistant = assistant;
+            this.Output = output ?? throw new global::System.ArgumentNullException(nameof(output));
         }
 
         /// <summary>

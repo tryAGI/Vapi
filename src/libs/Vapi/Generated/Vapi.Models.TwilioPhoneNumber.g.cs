@@ -155,6 +155,24 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TwilioPhoneNumber" /> class.
         /// </summary>
+        /// <param name="id">
+        /// This is the unique identifier for the phone number.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the unique identifier for the org that this phone number belongs to.
+        /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the phone number was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the phone number was last updated.
+        /// </param>
+        /// <param name="number">
+        /// These are the digits of the phone number you own on your Twilio.
+        /// </param>
+        /// <param name="twilioAccountSid">
+        /// This is the Twilio Account SID for the phone number.
+        /// </param>
         /// <param name="fallbackDestination">
         /// This is the fallback destination an inbound call will be transferred to if:<br/>
         /// 1. `assistantId` is not set<br/>
@@ -174,18 +192,6 @@ namespace Vapi
         /// If `true` or omitted (default), Vapi will configure both the voice and messaging URLs.<br/>
         /// @default true<br/>
         /// Default Value: true
-        /// </param>
-        /// <param name="id">
-        /// This is the unique identifier for the phone number.
-        /// </param>
-        /// <param name="orgId">
-        /// This is the unique identifier for the org that this phone number belongs to.
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the phone number was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the phone number was last updated.
         /// </param>
         /// <param name="status">
         /// This is the status of the phone number.
@@ -221,12 +227,6 @@ namespace Vapi
         /// 2. phoneNumber.server<br/>
         /// 3. org.server
         /// </param>
-        /// <param name="number">
-        /// These are the digits of the phone number you own on your Twilio.
-        /// </param>
-        /// <param name="twilioAccountSid">
-        /// This is the Twilio Account SID for the phone number.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -251,16 +251,14 @@ namespace Vapi
             string? squadId,
             global::Vapi.Server? server)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
-            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
-            this.TwilioAccountSid = twilioAccountSid ?? throw new global::System.ArgumentNullException(nameof(twilioAccountSid));
             this.FallbackDestination = fallbackDestination;
             this.Hooks = hooks;
             this.Provider = provider;
             this.SmsEnabled = smsEnabled;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.Status = status;
             this.TwilioAuthToken = twilioAuthToken;
             this.TwilioApiKey = twilioApiKey;
@@ -270,6 +268,8 @@ namespace Vapi
             this.WorkflowId = workflowId;
             this.SquadId = squadId;
             this.Server = server;
+            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
+            this.TwilioAccountSid = twilioAccountSid ?? throw new global::System.ArgumentNullException(nameof(twilioAccountSid));
         }
 
         /// <summary>

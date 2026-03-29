@@ -33,12 +33,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="RegexSecurityFilter" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of security threat to filter.
-        /// </param>
         /// <param name="regex">
         /// The regex pattern to filter.<br/>
         /// Example: badword1|badword2
+        /// </param>
+        /// <param name="type">
+        /// The type of security threat to filter.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -47,8 +47,8 @@ namespace Vapi
             string regex,
             global::Vapi.RegexSecurityFilterType type)
         {
-            this.Regex = regex ?? throw new global::System.ArgumentNullException(nameof(regex));
             this.Type = type;
+            this.Regex = regex ?? throw new global::System.ArgumentNullException(nameof(regex));
         }
 
         /// <summary>

@@ -74,11 +74,11 @@ namespace Vapi
         /// <param name="availableToStart">
         /// Number of voice simulations that can start now (available call slots / 2)
         /// </param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
         /// <param name="isDefault">
         /// True if org is using platform default concurrency limit
         /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -95,9 +95,9 @@ namespace Vapi
             this.ConcurrencyLimit = concurrencyLimit;
             this.ActiveSimulations = activeSimulations;
             this.AvailableToStart = availableToStart;
-            this.IsDefault = isDefault;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
+            this.IsDefault = isDefault;
         }
 
         /// <summary>

@@ -43,10 +43,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateDeepgramCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="apiUrl">
         /// This can be used to point to an onprem Deepgram instance. Defaults to api.deepgram.com.
         /// </param>
@@ -62,8 +62,8 @@ namespace Vapi
             string? apiUrl,
             string? name)
         {
-            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Provider = provider;
+            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.ApiUrl = apiUrl;
             this.Name = name;
         }

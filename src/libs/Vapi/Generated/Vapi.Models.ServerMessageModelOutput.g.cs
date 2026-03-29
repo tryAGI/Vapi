@@ -82,6 +82,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerMessageModelOutput" /> class.
         /// </summary>
+        /// <param name="output">
+        /// This is the output of the model. It can be a token or tool call.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
@@ -111,9 +114,6 @@ namespace Vapi
         /// <param name="chat">
         /// This is the chat object.
         /// </param>
-        /// <param name="output">
-        /// This is the output of the model. It can be a token or tool call.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -129,7 +129,6 @@ namespace Vapi
             global::Vapi.Call? call,
             global::Vapi.Chat? chat)
         {
-            this.Output = output ?? throw new global::System.ArgumentNullException(nameof(output));
             this.PhoneNumber = phoneNumber;
             this.Type = type;
             this.TurnId = turnId;
@@ -139,6 +138,7 @@ namespace Vapi
             this.Customer = customer;
             this.Call = call;
             this.Chat = chat;
+            this.Output = output ?? throw new global::System.ArgumentNullException(nameof(output));
         }
 
         /// <summary>

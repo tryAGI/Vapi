@@ -55,6 +55,16 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="RegexReplacement" /> class.
         /// </summary>
+        /// <param name="regex">
+        /// This is the regex pattern to replace.<br/>
+        /// Note:<br/>
+        /// - This works by using the `string.replace` method in Node.JS. Eg. `"hello there".replace(/hello/g, "hi")` will return `"hi there"`.<br/>
+        /// Hot tip:<br/>
+        /// - In JavaScript, escape `\` when sending the regex pattern. Eg. `"hello\sthere"` will be sent over the wire as `"hellosthere"`. Send `"hello\\sthere"` instead.
+        /// </param>
+        /// <param name="value">
+        /// This is the value that will replace the match.
+        /// </param>
         /// <param name="type">
         /// This is the regex replacement type. You can use this to replace a word or phrase that matches a pattern.<br/>
         /// Usage:<br/>
@@ -64,19 +74,9 @@ namespace Vapi
         /// - Replace all instances of "color" or "colour" with "hue": { type: 'regex', regex: 'colou?r', value: 'hue' }<br/>
         /// - Capitalize the first letter of every sentence: { type: 'regex', regex: '(?&lt;=\\. |^)[a-z]', value: (match) =&gt; match.toUpperCase() }
         /// </param>
-        /// <param name="regex">
-        /// This is the regex pattern to replace.<br/>
-        /// Note:<br/>
-        /// - This works by using the `string.replace` method in Node.JS. Eg. `"hello there".replace(/hello/g, "hi")` will return `"hi there"`.<br/>
-        /// Hot tip:<br/>
-        /// - In JavaScript, escape `\` when sending the regex pattern. Eg. `"hello\sthere"` will be sent over the wire as `"hellosthere"`. Send `"hello\\sthere"` instead.
-        /// </param>
         /// <param name="options">
         /// These are the options for the regex replacement. Defaults to all disabled.<br/>
         /// @default []
-        /// </param>
-        /// <param name="value">
-        /// This is the value that will replace the match.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -87,10 +87,10 @@ namespace Vapi
             global::Vapi.RegexReplacementType type,
             global::System.Collections.Generic.IList<global::Vapi.RegexOption>? options)
         {
-            this.Regex = regex ?? throw new global::System.ArgumentNullException(nameof(regex));
-            this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
             this.Type = type;
+            this.Regex = regex ?? throw new global::System.ArgumentNullException(nameof(regex));
             this.Options = options;
+            this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
         }
 
         /// <summary>

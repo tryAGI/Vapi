@@ -102,14 +102,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="FallbackInworldVoice" /> class.
         /// </summary>
-        /// <param name="cachingEnabled">
-        /// This is the flag to toggle voice caching for the assistant.<br/>
-        /// Default Value: true<br/>
-        /// Example: true
-        /// </param>
-        /// <param name="provider">
-        /// This is the voice provider that will be used.
-        /// </param>
         /// <param name="voiceId">
         /// Available voices by language:<br/>
         /// • en: Alex, Ashley, Craig, Deborah, Dennis, Edward, Elizabeth, Hades, Julia, Pixie, Mark, Olivia, Priya, Ronald, Sarah, Shaun, Theodore, Timothy, Wendy, Dominus, Hana, Clive, Carter, Blake, Luna<br/>
@@ -128,6 +120,14 @@ namespace Vapi
         /// • he: Yael, Oren<br/>
         /// • ar: Nour, Omar<br/>
         /// Example: Alex
+        /// </param>
+        /// <param name="cachingEnabled">
+        /// This is the flag to toggle voice caching for the assistant.<br/>
+        /// Default Value: true<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="provider">
+        /// This is the voice provider that will be used.
         /// </param>
         /// <param name="model">
         /// This is the model that will be used.<br/>
@@ -167,9 +167,9 @@ namespace Vapi
             double? speakingRate,
             global::Vapi.ChunkPlan? chunkPlan)
         {
-            this.VoiceId = voiceId;
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
+            this.VoiceId = voiceId;
             this.Model = model;
             this.LanguageCode = languageCode;
             this.Temperature = temperature;

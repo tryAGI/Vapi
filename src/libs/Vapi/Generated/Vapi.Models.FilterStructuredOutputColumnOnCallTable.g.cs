@@ -49,11 +49,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="FilterStructuredOutputColumnOnCallTable" /> class.
         /// </summary>
-        /// <param name="column">
-        /// This is the column in the call table that will be filtered on.<br/>
-        /// Structured Output Type columns are only to filter on artifact.structuredOutputs[OutputID] column.<br/>
-        /// Example: artifact.structuredOutputs[OutputID]
-        /// </param>
         /// <param name="operator">
         /// This is the operator to use for the filter.<br/>
         /// The operator depends on the value type of the structured output.<br/>
@@ -66,6 +61,11 @@ namespace Vapi
         /// This is the value to filter on.<br/>
         /// The value type depends on the structured output type being filtered.
         /// </param>
+        /// <param name="column">
+        /// This is the column in the call table that will be filtered on.<br/>
+        /// Structured Output Type columns are only to filter on artifact.structuredOutputs[OutputID] column.<br/>
+        /// Example: artifact.structuredOutputs[OutputID]
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -74,9 +74,9 @@ namespace Vapi
             object value,
             global::Vapi.FilterStructuredOutputColumnOnCallTableColumn column)
         {
+            this.Column = column;
             this.Operator = @operator;
             this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
-            this.Column = column;
         }
 
         /// <summary>

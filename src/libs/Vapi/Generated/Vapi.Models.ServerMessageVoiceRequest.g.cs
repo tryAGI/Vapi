@@ -99,6 +99,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerMessageVoiceRequest" /> class.
         /// </summary>
+        /// <param name="text">
+        /// This is the text to be synthesized.
+        /// </param>
+        /// <param name="sampleRate">
+        /// This is the sample rate to be synthesized.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
@@ -141,12 +147,6 @@ namespace Vapi
         /// <param name="chat">
         /// This is the chat object.
         /// </param>
-        /// <param name="text">
-        /// This is the text to be synthesized.
-        /// </param>
-        /// <param name="sampleRate">
-        /// This is the sample rate to be synthesized.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -162,8 +162,6 @@ namespace Vapi
             global::Vapi.Call? call,
             global::Vapi.Chat? chat)
         {
-            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
-            this.SampleRate = sampleRate;
             this.PhoneNumber = phoneNumber;
             this.Type = type;
             this.Timestamp = timestamp;
@@ -172,6 +170,8 @@ namespace Vapi
             this.Customer = customer;
             this.Call = call;
             this.Chat = chat;
+            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
+            this.SampleRate = sampleRate;
         }
 
         /// <summary>

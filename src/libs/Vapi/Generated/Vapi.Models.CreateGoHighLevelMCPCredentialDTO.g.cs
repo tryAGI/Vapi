@@ -37,10 +37,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateGoHighLevelMCPCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="authenticationSession">
         /// This is the authentication session for the credential.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -52,8 +52,8 @@ namespace Vapi
             global::Vapi.CreateGoHighLevelMCPCredentialDTOProvider provider,
             string? name)
         {
-            this.AuthenticationSession = authenticationSession ?? throw new global::System.ArgumentNullException(nameof(authenticationSession));
             this.Provider = provider;
+            this.AuthenticationSession = authenticationSession ?? throw new global::System.ArgumentNullException(nameof(authenticationSession));
             this.Name = name;
         }
 

@@ -56,10 +56,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AssistantMessage" /> class.
         /// </summary>
-        /// <param name="role">
-        /// This is the role of the message author<br/>
-        /// Default Value: assistant
-        /// </param>
         /// <param name="content">
         /// This is the content of the assistant message
         /// </param>
@@ -74,6 +70,10 @@ namespace Vapi
         /// </param>
         /// <param name="metadata">
         /// This is an optional metadata for the message
+        /// </param>
+        /// <param name="role">
+        /// This is the role of the message author<br/>
+        /// Default Value: assistant
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

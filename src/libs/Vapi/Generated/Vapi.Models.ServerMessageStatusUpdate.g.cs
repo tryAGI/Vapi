@@ -121,14 +121,14 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerMessageStatusUpdate" /> class.
         /// </summary>
+        /// <param name="status">
+        /// This is the status of the call.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
         /// <param name="type">
         /// This is the type of the message. "status-update" is sent whenever the `call.status` changes.
-        /// </param>
-        /// <param name="status">
-        /// This is the status of the call.
         /// </param>
         /// <param name="endedReason">
         /// This is the reason the call ended. This is only sent if the status is "ended".
@@ -192,9 +192,9 @@ namespace Vapi
             string? summary,
             object? inboundPhoneCallDebuggingArtifacts)
         {
-            this.Status = status;
             this.PhoneNumber = phoneNumber;
             this.Type = type;
+            this.Status = status;
             this.EndedReason = endedReason;
             this.Messages = messages;
             this.MessagesOpenAIFormatted = messagesOpenAIFormatted;

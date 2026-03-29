@@ -179,6 +179,12 @@ namespace Vapi
         /// <param name="queuedAt">
         /// This is the ISO 8601 date-time string of when the run was queued.
         /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the run item was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the run item was last updated.
+        /// </param>
         /// <param name="startedAt">
         /// This is the ISO 8601 date-time string of when the run started.
         /// </param>
@@ -196,12 +202,6 @@ namespace Vapi
         /// </param>
         /// <param name="callId">
         /// This is the ID of the target Vapi call (the assistant being tested).
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the run item was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the run item was last updated.
         /// </param>
         /// <param name="runId">
         /// This is the ID of the parent run (batch/group).
@@ -267,14 +267,14 @@ namespace Vapi
             this.SimulationId = simulationId;
             this.Status = status;
             this.QueuedAt = queuedAt;
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.StartedAt = startedAt;
             this.CompletedAt = completedAt;
             this.FailedAt = failedAt;
             this.CanceledAt = canceledAt;
             this.FailureReason = failureReason;
             this.CallId = callId;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.RunId = runId;
             this.Hooks = hooks;
             this.IterationNumber = iterationNumber;

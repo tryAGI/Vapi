@@ -31,11 +31,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TrieveKnowledgeBaseCreate" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is to create a new dataset on Trieve.
-        /// </param>
         /// <param name="chunkPlans">
         /// These are the chunk plans used to create the dataset.
+        /// </param>
+        /// <param name="type">
+        /// This is to create a new dataset on Trieve.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.TrieveKnowledgeBaseChunkPlan> chunkPlans,
             global::Vapi.TrieveKnowledgeBaseCreateType type)
         {
-            this.ChunkPlans = chunkPlans ?? throw new global::System.ArgumentNullException(nameof(chunkPlans));
             this.Type = type;
+            this.ChunkPlans = chunkPlans ?? throw new global::System.ArgumentNullException(nameof(chunkPlans));
         }
 
         /// <summary>

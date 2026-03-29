@@ -43,10 +43,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="LiquidCondition" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type discriminator for liquid condition<br/>
-        /// Example: liquid
-        /// </param>
         /// <param name="liquid">
         /// This is the Liquid template that must return exactly "true" or "false" as a string.<br/>
         /// The template is evaluated and the entire output must be either "true" or "false" - nothing else.<br/>
@@ -60,6 +56,10 @@ namespace Vapi
         /// - `messages | where: 'role', 'user'` - Filter to only user messages<br/>
         /// - `messages | reverse` - Reverse the order of messages
         /// </param>
+        /// <param name="type">
+        /// This is the type discriminator for liquid condition<br/>
+        /// Example: liquid
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -67,8 +67,8 @@ namespace Vapi
             string liquid,
             global::Vapi.LiquidConditionType type)
         {
-            this.Liquid = liquid ?? throw new global::System.ArgumentNullException(nameof(liquid));
             this.Type = type;
+            this.Liquid = liquid ?? throw new global::System.ArgumentNullException(nameof(liquid));
         }
 
         /// <summary>

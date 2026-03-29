@@ -44,11 +44,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePlayHTCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
         /// <param name="userId"></param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -61,9 +61,9 @@ namespace Vapi
             global::Vapi.CreatePlayHTCredentialDTOProvider provider,
             string? name)
         {
+            this.Provider = provider;
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
-            this.Provider = provider;
             this.Name = name;
         }
 

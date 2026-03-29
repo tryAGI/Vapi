@@ -16,31 +16,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        x__,
-        /// <summary>
-        /// 
-        /// </summary>
-        x_3,
-        /// <summary>
-        /// 
-        /// </summary>
-        x__3,
-        /// <summary>
-        /// 
-        /// </summary>
-        x_,
-        /// <summary>
-        /// 
-        /// </summary>
-        x_2,
-        /// <summary>
-        /// 
-        /// </summary>
-        x__2,
-        /// <summary>
-        /// 
-        /// </summary>
         Contains,
+        /// <summary>
+        /// 
+        /// </summary>
+        Eq,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gt,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gte,
         /// <summary>
         /// 
         /// </summary>
@@ -53,6 +41,18 @@ namespace Vapi
         /// 
         /// </summary>
         IsNotEmpty,
+        /// <summary>
+        /// 
+        /// </summary>
+        Lt,
+        /// <summary>
+        /// 
+        /// </summary>
+        Lte,
+        /// <summary>
+        /// 
+        /// </summary>
+        Neq,
         /// <summary>
         /// 
         /// </summary>
@@ -75,16 +75,16 @@ namespace Vapi
         {
             return value switch
             {
-                FilterStructuredOutputColumnOnCallTableOperator.x__ => "!=",
-                FilterStructuredOutputColumnOnCallTableOperator.x_3 => "<",
-                FilterStructuredOutputColumnOnCallTableOperator.x__3 => "<=",
-                FilterStructuredOutputColumnOnCallTableOperator.x_ => "=",
-                FilterStructuredOutputColumnOnCallTableOperator.x_2 => ">",
-                FilterStructuredOutputColumnOnCallTableOperator.x__2 => ">=",
                 FilterStructuredOutputColumnOnCallTableOperator.Contains => "contains",
+                FilterStructuredOutputColumnOnCallTableOperator.Eq => "eq",
+                FilterStructuredOutputColumnOnCallTableOperator.Gt => "gt",
+                FilterStructuredOutputColumnOnCallTableOperator.Gte => "gte",
                 FilterStructuredOutputColumnOnCallTableOperator.In => "in",
                 FilterStructuredOutputColumnOnCallTableOperator.IsEmpty => "is_empty",
                 FilterStructuredOutputColumnOnCallTableOperator.IsNotEmpty => "is_not_empty",
+                FilterStructuredOutputColumnOnCallTableOperator.Lt => "lt",
+                FilterStructuredOutputColumnOnCallTableOperator.Lte => "lte",
+                FilterStructuredOutputColumnOnCallTableOperator.Neq => "neq",
                 FilterStructuredOutputColumnOnCallTableOperator.NotContains => "not_contains",
                 FilterStructuredOutputColumnOnCallTableOperator.NotIn => "not_in",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -97,16 +97,16 @@ namespace Vapi
         {
             return value switch
             {
-                "!=" => FilterStructuredOutputColumnOnCallTableOperator.x__,
-                "<" => FilterStructuredOutputColumnOnCallTableOperator.x_3,
-                "<=" => FilterStructuredOutputColumnOnCallTableOperator.x__3,
-                "=" => FilterStructuredOutputColumnOnCallTableOperator.x_,
-                ">" => FilterStructuredOutputColumnOnCallTableOperator.x_2,
-                ">=" => FilterStructuredOutputColumnOnCallTableOperator.x__2,
                 "contains" => FilterStructuredOutputColumnOnCallTableOperator.Contains,
+                "eq" => FilterStructuredOutputColumnOnCallTableOperator.Eq,
+                "gt" => FilterStructuredOutputColumnOnCallTableOperator.Gt,
+                "gte" => FilterStructuredOutputColumnOnCallTableOperator.Gte,
                 "in" => FilterStructuredOutputColumnOnCallTableOperator.In,
                 "is_empty" => FilterStructuredOutputColumnOnCallTableOperator.IsEmpty,
                 "is_not_empty" => FilterStructuredOutputColumnOnCallTableOperator.IsNotEmpty,
+                "lt" => FilterStructuredOutputColumnOnCallTableOperator.Lt,
+                "lte" => FilterStructuredOutputColumnOnCallTableOperator.Lte,
+                "neq" => FilterStructuredOutputColumnOnCallTableOperator.Neq,
                 "not_contains" => FilterStructuredOutputColumnOnCallTableOperator.NotContains,
                 "not_in" => FilterStructuredOutputColumnOnCallTableOperator.NotIn,
                 _ => null,

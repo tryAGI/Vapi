@@ -52,6 +52,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CloudflareR2BucketPlan" /> class.
         /// </summary>
+        /// <param name="name">
+        /// This is the name of the bucket.
+        /// </param>
         /// <param name="accessKeyId">
         /// Cloudflare R2 Access key ID.
         /// </param>
@@ -60,9 +63,6 @@ namespace Vapi
         /// </param>
         /// <param name="url">
         /// Cloudflare R2 base url.
-        /// </param>
-        /// <param name="name">
-        /// This is the name of the bucket.
         /// </param>
         /// <param name="path">
         /// This is the path where call artifacts will be stored.<br/>
@@ -81,10 +81,10 @@ namespace Vapi
             string? url,
             string? path)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.AccessKeyId = accessKeyId;
             this.SecretAccessKey = secretAccessKey;
             this.Url = url;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Path = path;
         }
 

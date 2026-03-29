@@ -989,13 +989,9 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.LMNTVoiceVoiceIdNullableJsonConverter),
 
-            typeof(global::Vapi.JsonConverters.LMNTVoiceLanguageIso6391LanguageCodeJsonConverter),
+            typeof(global::Vapi.JsonConverters.LMNTVoiceLanguageJsonConverter),
 
-            typeof(global::Vapi.JsonConverters.LMNTVoiceLanguageIso6391LanguageCodeNullableJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.LMNTVoiceLanguageAutoDetectJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.LMNTVoiceLanguageAutoDetectNullableJsonConverter),
+            typeof(global::Vapi.JsonConverters.LMNTVoiceLanguageNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.NeuphonicVoiceProviderJsonConverter),
 
@@ -1209,13 +1205,9 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.FallbackLMNTVoiceVoiceIdNullableJsonConverter),
 
-            typeof(global::Vapi.JsonConverters.FallbackLMNTVoiceLanguageIso6391LanguageCodeJsonConverter),
+            typeof(global::Vapi.JsonConverters.FallbackLMNTVoiceLanguageJsonConverter),
 
-            typeof(global::Vapi.JsonConverters.FallbackLMNTVoiceLanguageIso6391LanguageCodeNullableJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.FallbackLMNTVoiceLanguageAutoDetectJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.FallbackLMNTVoiceLanguageAutoDetectNullableJsonConverter),
+            typeof(global::Vapi.JsonConverters.FallbackLMNTVoiceLanguageNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.FallbackNeuphonicVoiceProviderJsonConverter),
 
@@ -4085,8 +4077,6 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.LMNTVoiceVoiceId?, string>),
 
-            typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.LMNTVoiceLanguageIso6391LanguageCode?, global::Vapi.LMNTVoiceLanguageAutoDetect?>),
-
             typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.OpenAIVoiceVoiceId?, string>),
 
             typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.PlayHTVoiceVoiceId?, string>),
@@ -4102,8 +4092,6 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.FallbackElevenLabsVoiceVoiceId?, string>),
 
             typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.FallbackLMNTVoiceVoiceId?, string>),
-
-            typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.FallbackLMNTVoiceLanguageIso6391LanguageCode?, global::Vapi.FallbackLMNTVoiceLanguageAutoDetect?>),
 
             typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.FallbackOpenAIVoiceVoiceId?, string>),
 
@@ -5366,9 +5354,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LMNTVoiceProvider), TypeInfoPropertyName = "LMNTVoiceProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.LMNTVoiceVoiceId?, string>), TypeInfoPropertyName = "OneOfLMNTVoiceVoiceIdString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LMNTVoiceVoiceId), TypeInfoPropertyName = "LMNTVoiceVoiceId2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.LMNTVoiceLanguageIso6391LanguageCode?, global::Vapi.LMNTVoiceLanguageAutoDetect?>), TypeInfoPropertyName = "OneOfLMNTVoiceLanguageIso6391LanguageCodeLMNTVoiceLanguageAutoDetect2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LMNTVoiceLanguageIso6391LanguageCode), TypeInfoPropertyName = "LMNTVoiceLanguageIso6391LanguageCode2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LMNTVoiceLanguageAutoDetect), TypeInfoPropertyName = "LMNTVoiceLanguageAutoDetect2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LMNTVoiceLanguage), TypeInfoPropertyName = "LMNTVoiceLanguage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.NeuphonicVoiceProvider), TypeInfoPropertyName = "NeuphonicVoiceProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.NeuphonicVoiceModel), TypeInfoPropertyName = "NeuphonicVoiceModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OpenAIVoiceProvider), TypeInfoPropertyName = "OpenAIVoiceProvider2")]
@@ -5434,9 +5420,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackLMNTVoiceProvider), TypeInfoPropertyName = "FallbackLMNTVoiceProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.FallbackLMNTVoiceVoiceId?, string>), TypeInfoPropertyName = "OneOfFallbackLMNTVoiceVoiceIdString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackLMNTVoiceVoiceId), TypeInfoPropertyName = "FallbackLMNTVoiceVoiceId2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.FallbackLMNTVoiceLanguageIso6391LanguageCode?, global::Vapi.FallbackLMNTVoiceLanguageAutoDetect?>), TypeInfoPropertyName = "OneOfFallbackLMNTVoiceLanguageIso6391LanguageCodeFallbackLMNTVoiceLanguageAutoDetect2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackLMNTVoiceLanguageIso6391LanguageCode), TypeInfoPropertyName = "FallbackLMNTVoiceLanguageIso6391LanguageCode2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackLMNTVoiceLanguageAutoDetect), TypeInfoPropertyName = "FallbackLMNTVoiceLanguageAutoDetect2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackLMNTVoiceLanguage), TypeInfoPropertyName = "FallbackLMNTVoiceLanguage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackNeuphonicVoiceProvider), TypeInfoPropertyName = "FallbackNeuphonicVoiceProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackNeuphonicVoiceModel), TypeInfoPropertyName = "FallbackNeuphonicVoiceModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackOpenAIVoiceProvider), TypeInfoPropertyName = "FallbackOpenAIVoiceProvider2")]

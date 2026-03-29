@@ -59,9 +59,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="Insight" /> class.
         /// </summary>
-        /// <param name="name">
-        /// This is the name of the Insight.
-        /// </param>
         /// <param name="type">
         /// This is the type of the Insight.
         /// </param>
@@ -77,6 +74,9 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the Insight was last updated.
         /// </param>
+        /// <param name="name">
+        /// This is the name of the Insight.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -88,12 +88,12 @@ namespace Vapi
             global::System.DateTime updatedAt,
             string? name)
         {
+            this.Name = name;
             this.Type = type;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Name = name;
         }
 
         /// <summary>

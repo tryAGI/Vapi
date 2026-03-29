@@ -43,9 +43,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CredentialEndUser" /> class.
         /// </summary>
-        /// <param name="endUserEmail"></param>
         /// <param name="endUserId"></param>
         /// <param name="organizationId"></param>
+        /// <param name="endUserEmail"></param>
         /// <param name="tags"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -56,9 +56,9 @@ namespace Vapi
             string? endUserEmail,
             object? tags)
         {
+            this.EndUserEmail = endUserEmail;
             this.EndUserId = endUserId ?? throw new global::System.ArgumentNullException(nameof(endUserId));
             this.OrganizationId = organizationId ?? throw new global::System.ArgumentNullException(nameof(organizationId));
-            this.EndUserEmail = endUserEmail;
             this.Tags = tags;
         }
 

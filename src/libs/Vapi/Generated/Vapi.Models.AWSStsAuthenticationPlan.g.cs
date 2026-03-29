@@ -37,11 +37,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AWSStsAuthenticationPlan" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of authentication plan
-        /// </param>
         /// <param name="roleArn">
         /// This is the role ARN for the AWS credential
+        /// </param>
+        /// <param name="type">
+        /// This is the type of authentication plan
         /// </param>
         /// <param name="externalId">
         /// Optional external ID for additional security in the role trust policy.
@@ -54,8 +54,8 @@ namespace Vapi
             global::Vapi.AWSStsAuthenticationPlanType type,
             string? externalId)
         {
-            this.RoleArn = roleArn ?? throw new global::System.ArgumentNullException(nameof(roleArn));
             this.Type = type;
+            this.RoleArn = roleArn ?? throw new global::System.ArgumentNullException(nameof(roleArn));
             this.ExternalId = externalId;
         }
 

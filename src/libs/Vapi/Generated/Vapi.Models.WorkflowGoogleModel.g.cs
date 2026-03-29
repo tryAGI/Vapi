@@ -44,11 +44,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkflowGoogleModel" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is the provider of the model (`google`).
-        /// </param>
         /// <param name="model">
         /// This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b
+        /// </param>
+        /// <param name="provider">
+        /// This is the provider of the model (`google`).
         /// </param>
         /// <param name="temperature">
         /// This is the temperature of the model.
@@ -65,8 +65,8 @@ namespace Vapi
             double? temperature,
             double? maxTokens)
         {
-            this.Model = model;
             this.Provider = provider;
+            this.Model = model;
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;
         }

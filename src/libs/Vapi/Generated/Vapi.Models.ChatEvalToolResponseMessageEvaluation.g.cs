@@ -36,15 +36,15 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatEvalToolResponseMessageEvaluation" /> class.
         /// </summary>
+        /// <param name="judgePlan">
+        /// This is the judge plan that instructs how to evaluate the tool response message.<br/>
+        /// The tool response message can be evaluated with an LLM-as-judge by defining the evaluation criteria in a prompt.
+        /// </param>
         /// <param name="role">
         /// This is the role of the message author.<br/>
         /// For a tool response message evaluation, the role is always 'tool'<br/>
         /// @default 'tool'<br/>
         /// Default Value: tool
-        /// </param>
-        /// <param name="judgePlan">
-        /// This is the judge plan that instructs how to evaluate the tool response message.<br/>
-        /// The tool response message can be evaluated with an LLM-as-judge by defining the evaluation criteria in a prompt.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -53,8 +53,8 @@ namespace Vapi
             global::Vapi.AssistantMessageJudgePlanAI judgePlan,
             global::Vapi.ChatEvalToolResponseMessageEvaluationRole role = global::Vapi.ChatEvalToolResponseMessageEvaluationRole.Tool)
         {
-            this.JudgePlan = judgePlan ?? throw new global::System.ArgumentNullException(nameof(judgePlan));
             this.Role = role;
+            this.JudgePlan = judgePlan ?? throw new global::System.ArgumentNullException(nameof(judgePlan));
         }
 
         /// <summary>

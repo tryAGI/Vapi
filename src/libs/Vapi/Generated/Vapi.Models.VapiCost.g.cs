@@ -46,9 +46,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="VapiCost" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of cost, always 'vapi' for this class.
-        /// </param>
         /// <param name="subType">
         /// This is the sub type of the cost.
         /// </param>
@@ -57,6 +54,9 @@ namespace Vapi
         /// </param>
         /// <param name="cost">
         /// This is the cost of the component in USD.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of cost, always 'vapi' for this class.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -67,10 +67,10 @@ namespace Vapi
             double cost,
             global::Vapi.VapiCostType type)
         {
+            this.Type = type;
             this.SubType = subType;
             this.Minutes = minutes;
             this.Cost = cost;
-            this.Type = type;
         }
 
         /// <summary>

@@ -43,9 +43,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="Edge" /> class.
         /// </summary>
-        /// <param name="condition"></param>
         /// <param name="from"></param>
         /// <param name="to"></param>
+        /// <param name="condition"></param>
         /// <param name="metadata">
         /// This is for metadata you want to store on the edge.
         /// </param>
@@ -58,9 +58,9 @@ namespace Vapi
             global::Vapi.AIEdgeCondition? condition,
             object? metadata)
         {
+            this.Condition = condition;
             this.From = from ?? throw new global::System.ArgumentNullException(nameof(from));
             this.To = to ?? throw new global::System.ArgumentNullException(nameof(to));
-            this.Condition = condition;
             this.Metadata = metadata;
         }
 

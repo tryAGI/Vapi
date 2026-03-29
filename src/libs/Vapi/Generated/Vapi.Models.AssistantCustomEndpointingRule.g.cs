@@ -59,6 +59,17 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AssistantCustomEndpointingRule" /> class.
         /// </summary>
+        /// <param name="regex">
+        /// This is the regex pattern to match.<br/>
+        /// Note:<br/>
+        /// - This works by using the `RegExp.test` method in Node.JS. Eg. `/hello/.test("hello there")` will return `true`.<br/>
+        /// Hot tip:<br/>
+        /// - In JavaScript, escape `\` when sending the regex pattern. Eg. `"hello\sthere"` will be sent over the wire as `"hellosthere"`. Send `"hello\\sthere"` instead.<br/>
+        /// - `RegExp.test` does substring matching, so `/cat/.test("I love cats")` will return `true`. To do full string matching, send "^cat$".
+        /// </param>
+        /// <param name="timeoutSeconds">
+        /// This is the endpointing timeout in seconds, if the rule is matched.
+        /// </param>
         /// <param name="type">
         /// This endpointing rule is based on the last assistant message before customer started speaking.<br/>
         /// Flow:<br/>
@@ -71,20 +82,9 @@ namespace Vapi
         /// - If you have yes/no questions in your use case like "are you interested in a loan?", you can set a shorter timeout.<br/>
         /// - If you have questions where the customer may pause to look up information like "what's my account number?", you can set a longer timeout.
         /// </param>
-        /// <param name="regex">
-        /// This is the regex pattern to match.<br/>
-        /// Note:<br/>
-        /// - This works by using the `RegExp.test` method in Node.JS. Eg. `/hello/.test("hello there")` will return `true`.<br/>
-        /// Hot tip:<br/>
-        /// - In JavaScript, escape `\` when sending the regex pattern. Eg. `"hello\sthere"` will be sent over the wire as `"hellosthere"`. Send `"hello\\sthere"` instead.<br/>
-        /// - `RegExp.test` does substring matching, so `/cat/.test("I love cats")` will return `true`. To do full string matching, send "^cat$".
-        /// </param>
         /// <param name="regexOptions">
         /// These are the options for the regex match. Defaults to all disabled.<br/>
         /// @default []
-        /// </param>
-        /// <param name="timeoutSeconds">
-        /// This is the endpointing timeout in seconds, if the rule is matched.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -95,10 +95,10 @@ namespace Vapi
             global::Vapi.AssistantCustomEndpointingRuleType type,
             global::System.Collections.Generic.IList<global::Vapi.RegexOption>? regexOptions)
         {
-            this.Regex = regex ?? throw new global::System.ArgumentNullException(nameof(regex));
-            this.TimeoutSeconds = timeoutSeconds;
             this.Type = type;
+            this.Regex = regex ?? throw new global::System.ArgumentNullException(nameof(regex));
             this.RegexOptions = regexOptions;
+            this.TimeoutSeconds = timeoutSeconds;
         }
 
         /// <summary>

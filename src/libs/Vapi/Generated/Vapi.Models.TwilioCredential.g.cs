@@ -83,16 +83,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TwilioCredential" /> class.
         /// </summary>
-        /// <param name="provider"></param>
-        /// <param name="authToken">
-        /// This is not returned in the API.
-        /// </param>
-        /// <param name="apiKey">
-        /// This is not returned in the API.
-        /// </param>
-        /// <param name="apiSecret">
-        /// This is not returned in the API.
-        /// </param>
         /// <param name="id">
         /// This is the unique identifier for the credential.
         /// </param>
@@ -105,10 +95,20 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
         /// </param>
+        /// <param name="accountSid"></param>
+        /// <param name="provider"></param>
+        /// <param name="authToken">
+        /// This is not returned in the API.
+        /// </param>
+        /// <param name="apiKey">
+        /// This is not returned in the API.
+        /// </param>
+        /// <param name="apiSecret">
+        /// This is not returned in the API.
+        /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
-        /// <param name="accountSid"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -124,16 +124,16 @@ namespace Vapi
             string? apiSecret,
             string? name)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
-            this.AccountSid = accountSid ?? throw new global::System.ArgumentNullException(nameof(accountSid));
             this.Provider = provider;
             this.AuthToken = authToken;
             this.ApiKey = apiKey;
             this.ApiSecret = apiSecret;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.Name = name;
+            this.AccountSid = accountSid ?? throw new global::System.ArgumentNullException(nameof(accountSid));
         }
 
         /// <summary>

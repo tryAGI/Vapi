@@ -37,6 +37,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientInboundMessageControl" /> class.
         /// </summary>
+        /// <param name="control">
+        /// This is the control action
+        /// </param>
         /// <param name="type">
         /// This is the type of the message. Send "control" message to control the assistant. `control` options are:<br/>
         /// - "mute-assistant" - mute the assistant<br/>
@@ -45,9 +48,6 @@ namespace Vapi
         /// - "unmute-customer" - unmute the user<br/>
         /// - "say-first-message" - say the first message (this is used when video recording is enabled and the conversation is only started once the client side kicks off the recording)
         /// </param>
-        /// <param name="control">
-        /// This is the control action
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -55,8 +55,8 @@ namespace Vapi
             global::Vapi.ClientInboundMessageControlControl control,
             global::Vapi.ClientInboundMessageControlType type)
         {
-            this.Control = control;
             this.Type = type;
+            this.Control = control;
         }
 
         /// <summary>

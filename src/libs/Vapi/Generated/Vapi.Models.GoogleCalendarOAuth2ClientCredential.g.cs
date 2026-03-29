@@ -58,7 +58,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCalendarOAuth2ClientCredential" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="id">
         /// This is the unique identifier for the credential.
         /// </param>
@@ -71,6 +70,7 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -85,11 +85,11 @@ namespace Vapi
             global::Vapi.GoogleCalendarOAuth2ClientCredentialProvider provider,
             string? name)
         {
+            this.Provider = provider;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Provider = provider;
             this.Name = name;
         }
 

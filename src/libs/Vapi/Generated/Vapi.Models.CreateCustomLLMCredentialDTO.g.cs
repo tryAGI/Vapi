@@ -43,10 +43,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCustomLLMCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="authenticationPlan">
         /// This is the authentication plan. Currently supports OAuth2 RFC 6749. To use Bearer authentication, use apiKey
         /// </param>
@@ -62,8 +62,8 @@ namespace Vapi
             global::Vapi.OAuth2AuthenticationPlan? authenticationPlan,
             string? name)
         {
-            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Provider = provider;
+            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.AuthenticationPlan = authenticationPlan;
             this.Name = name;
         }

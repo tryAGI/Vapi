@@ -158,6 +158,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="FunctionToolWithToolCall" /> class.
         /// </summary>
+        /// <param name="toolCall"></param>
         /// <param name="messages">
         /// These are the messages that will be spoken to the user as the tool is running.<br/>
         /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
@@ -187,7 +188,6 @@ namespace Vapi
         /// <param name="parameters">
         /// Static key-value pairs merged into the request body. Values support Liquid templates.
         /// </param>
-        /// <param name="toolCall"></param>
         /// <param name="function">
         /// This is the function definition of the tool.
         /// </param>
@@ -281,13 +281,13 @@ namespace Vapi
             global::Vapi.OpenAIFunction? function,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
-            this.ToolCall = toolCall ?? throw new global::System.ArgumentNullException(nameof(toolCall));
             this.Messages = messages;
             this.Type = type;
             this.Async = async;
             this.Server = server;
             this.VariableExtractionPlan = variableExtractionPlan;
             this.Parameters = parameters;
+            this.ToolCall = toolCall ?? throw new global::System.ArgumentNullException(nameof(toolCall));
             this.Function = function;
             this.RejectionPlan = rejectionPlan;
         }

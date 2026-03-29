@@ -157,10 +157,6 @@ namespace Vapi
         ///   - Webhook is sent to the first available URL in this order: {{tool.server.url}}, {{assistant.server.url}}, {{phoneNumber.server.url}}, {{org.server.url}}.<br/>
         ///   - Webhook expects a response with tool call result.
         /// </param>
-        /// <param name="name">
-        /// The name of the tool, fixed to 'bash'<br/>
-        /// Default Value: bash
-        /// </param>
         /// <param name="rejectionPlan">
         /// This is the plan to reject a tool call based on the conversation state.<br/>
         /// // Example 1: Reject endCall if user didn't say goodbye<br/>
@@ -236,6 +232,10 @@ namespace Vapi
         ///   }]<br/>
         /// }<br/>
         /// ```
+        /// </param>
+        /// <param name="name">
+        /// The name of the tool, fixed to 'bash'<br/>
+        /// Default Value: bash
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

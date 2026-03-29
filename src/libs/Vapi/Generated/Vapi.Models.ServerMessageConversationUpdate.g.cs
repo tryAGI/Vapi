@@ -81,6 +81,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerMessageConversationUpdate" /> class.
         /// </summary>
+        /// <param name="messagesOpenAIFormatted">
+        /// This is the most up-to-date conversation history at the time the message is sent, formatted for OpenAI.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
@@ -89,9 +92,6 @@ namespace Vapi
         /// </param>
         /// <param name="messages">
         /// This is the most up-to-date conversation history at the time the message is sent.
-        /// </param>
-        /// <param name="messagesOpenAIFormatted">
-        /// This is the most up-to-date conversation history at the time the message is sent, formatted for OpenAI.
         /// </param>
         /// <param name="timestamp">
         /// This is the timestamp of the message.
@@ -127,10 +127,10 @@ namespace Vapi
             global::Vapi.Call? call,
             global::Vapi.Chat? chat)
         {
-            this.MessagesOpenAIFormatted = messagesOpenAIFormatted ?? throw new global::System.ArgumentNullException(nameof(messagesOpenAIFormatted));
             this.PhoneNumber = phoneNumber;
             this.Type = type;
             this.Messages = messages;
+            this.MessagesOpenAIFormatted = messagesOpenAIFormatted ?? throw new global::System.ArgumentNullException(nameof(messagesOpenAIFormatted));
             this.Timestamp = timestamp;
             this.Artifact = artifact;
             this.Assistant = assistant;

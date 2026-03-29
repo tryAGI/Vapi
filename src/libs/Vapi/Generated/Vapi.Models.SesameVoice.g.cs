@@ -59,6 +59,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="SesameVoice" /> class.
         /// </summary>
+        /// <param name="voiceId">
+        /// This is the provider-specific ID that will be used.
+        /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
         /// Default Value: true<br/>
@@ -66,9 +69,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is the voice provider that will be used.
-        /// </param>
-        /// <param name="voiceId">
-        /// This is the provider-specific ID that will be used.
         /// </param>
         /// <param name="model">
         /// This is the model that will be used.
@@ -90,9 +90,9 @@ namespace Vapi
             global::Vapi.ChunkPlan? chunkPlan,
             global::Vapi.FallbackPlan? fallbackPlan)
         {
-            this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
+            this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.Model = model;
             this.ChunkPlan = chunkPlan;
             this.FallbackPlan = fallbackPlan;

@@ -138,13 +138,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCalendarCreateEventTool" /> class.
         /// </summary>
-        /// <param name="messages">
-        /// These are the messages that will be spoken to the user as the tool is running.<br/>
-        /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
-        /// </param>
-        /// <param name="type">
-        /// The type of tool. "google.calendar.event.create" for Google Calendar Create Event tool.
-        /// </param>
         /// <param name="id">
         /// This is the unique identifier for the tool.
         /// </param>
@@ -156,6 +149,13 @@ namespace Vapi
         /// </param>
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the tool was last updated.
+        /// </param>
+        /// <param name="messages">
+        /// These are the messages that will be spoken to the user as the tool is running.<br/>
+        /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
+        /// </param>
+        /// <param name="type">
+        /// The type of tool. "google.calendar.event.create" for Google Calendar Create Event tool.
         /// </param>
         /// <param name="rejectionPlan">
         /// This is the plan to reject a tool call based on the conversation state.<br/>
@@ -245,12 +245,12 @@ namespace Vapi
             global::Vapi.GoogleCalendarCreateEventToolType type,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
+            this.Messages = messages;
+            this.Type = type;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Messages = messages;
-            this.Type = type;
             this.RejectionPlan = rejectionPlan;
         }
 

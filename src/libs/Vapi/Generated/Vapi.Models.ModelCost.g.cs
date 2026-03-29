@@ -65,9 +65,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ModelCost" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of cost, always 'model' for this class.
-        /// </param>
         /// <param name="model">
         /// This is the model that was used during the call.<br/>
         /// This matches one of the following:<br/>
@@ -84,11 +81,14 @@ namespace Vapi
         /// <param name="completionTokens">
         /// This is the number of completion tokens generated in the call. These should be total completion tokens used in the call for single assistant calls, while squad calls will have multiple model costs one for each assistant that was used.
         /// </param>
-        /// <param name="cachedPromptTokens">
-        /// This is the number of cached prompt tokens used in the call. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate.
-        /// </param>
         /// <param name="cost">
         /// This is the cost of the component in USD.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of cost, always 'model' for this class.
+        /// </param>
+        /// <param name="cachedPromptTokens">
+        /// This is the number of cached prompt tokens used in the call. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -101,12 +101,12 @@ namespace Vapi
             global::Vapi.ModelCostType type,
             double? cachedPromptTokens)
         {
+            this.Type = type;
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.PromptTokens = promptTokens;
             this.CompletionTokens = completionTokens;
-            this.Cost = cost;
-            this.Type = type;
             this.CachedPromptTokens = cachedPromptTokens;
+            this.Cost = cost;
         }
 
         /// <summary>

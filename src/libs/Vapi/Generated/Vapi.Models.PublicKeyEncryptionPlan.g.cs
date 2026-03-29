@@ -38,14 +38,14 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="PublicKeyEncryptionPlan" /> class.
         /// </summary>
+        /// <param name="publicKey">
+        /// The public key configuration.
+        /// </param>
         /// <param name="type">
         /// The type of encryption plan.
         /// </param>
         /// <param name="algorithm">
         /// The encryption algorithm to use.
-        /// </param>
-        /// <param name="publicKey">
-        /// The public key configuration.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,9 +55,9 @@ namespace Vapi
             global::Vapi.PublicKeyEncryptionPlanType type,
             global::Vapi.PublicKeyEncryptionPlanAlgorithm algorithm)
         {
-            this.PublicKey = publicKey ?? throw new global::System.ArgumentNullException(nameof(publicKey));
             this.Type = type;
             this.Algorithm = algorithm;
+            this.PublicKey = publicKey ?? throw new global::System.ArgumentNullException(nameof(publicKey));
         }
 
         /// <summary>

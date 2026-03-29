@@ -66,16 +66,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="Squad" /> class.
         /// </summary>
-        /// <param name="name">
-        /// This is the name of the squad.
-        /// </param>
         /// <param name="members">
         /// This is the list of assistants that make up the squad.<br/>
         /// The call will start with the first assistant in the list.
-        /// </param>
-        /// <param name="membersOverrides">
-        /// This can be used to override all the assistants' settings and provide values for their template variables.<br/>
-        /// Both `membersOverrides` and `members[n].assistantOverrides` can be used together. First, `members[n].assistantOverrides` is applied. Then, `membersOverrides` is applied as a global override.
         /// </param>
         /// <param name="id">
         /// This is the unique identifier for the squad.
@@ -89,6 +82,13 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the squad was last updated.
         /// </param>
+        /// <param name="name">
+        /// This is the name of the squad.
+        /// </param>
+        /// <param name="membersOverrides">
+        /// This can be used to override all the assistants' settings and provide values for their template variables.<br/>
+        /// Both `membersOverrides` and `members[n].assistantOverrides` can be used together. First, `members[n].assistantOverrides` is applied. Then, `membersOverrides` is applied as a global override.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -101,13 +101,13 @@ namespace Vapi
             string? name,
             global::Vapi.AssistantOverrides? membersOverrides)
         {
+            this.Name = name;
             this.Members = members ?? throw new global::System.ArgumentNullException(nameof(members));
+            this.MembersOverrides = membersOverrides;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Name = name;
-            this.MembersOverrides = membersOverrides;
         }
 
         /// <summary>

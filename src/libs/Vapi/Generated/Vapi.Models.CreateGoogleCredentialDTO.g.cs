@@ -37,11 +37,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateGoogleCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is the key for Gemini in Google AI Studio. Get it from here: https://aistudio.google.com/app/apikey
-        /// </param>
         /// <param name="apiKey">
         /// This is not returned in the API.
+        /// </param>
+        /// <param name="provider">
+        /// This is the key for Gemini in Google AI Studio. Get it from here: https://aistudio.google.com/app/apikey
         /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
@@ -54,8 +54,8 @@ namespace Vapi
             global::Vapi.CreateGoogleCredentialDTOProvider provider,
             string? name)
         {
-            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Provider = provider;
+            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Name = name;
         }
 

@@ -32,11 +32,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientInboundMessageSendTransportMessage" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of the message. Send "send-transport-message" to send a transport-specific message during the call.
-        /// </param>
         /// <param name="message">
         /// This is the transport-specific message to send.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of the message. Send "send-transport-message" to send a transport-specific message during the call.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -45,8 +45,8 @@ namespace Vapi
             global::Vapi.OneOf<global::Vapi.VapiSipTransportMessage, global::Vapi.TwilioTransportMessage> message,
             global::Vapi.ClientInboundMessageSendTransportMessageType type)
         {
-            this.Message = message;
             this.Type = type;
+            this.Message = message;
         }
 
         /// <summary>

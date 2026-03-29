@@ -68,17 +68,17 @@ namespace Vapi
 
         /// <summary>
         /// These are the messages that will be sent to your Client SDKs. Default is conversation-update,function-call,hang,model-output,speech-update,status-update,transfer-update,transcript,tool-calls,user-interrupted,voice-input,workflow.node.started,assistant.started. You can check the shape of the messages in ClientMessage schema.<br/>
-        /// Example: [conversation-update, function-call, hang, model-output, speech-update, status-update, transfer-update, transcript, tool-calls, user-interrupted, voice-input, workflow.node.started, assistant.started]
+        /// Example: [assistant.started, conversation-update, function-call, hang, model-output, speech-update, status-update, tool-calls, transcript, transfer-update, user-interrupted, voice-input, workflow.node.started]
         /// </summary>
-        /// <example>[conversation-update, function-call, hang, model-output, speech-update, status-update, transfer-update, transcript, tool-calls, user-interrupted, voice-input, workflow.node.started, assistant.started]</example>
+        /// <example>[assistant.started, conversation-update, function-call, hang, model-output, speech-update, status-update, tool-calls, transcript, transfer-update, user-interrupted, voice-input, workflow.node.started]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("clientMessages")]
         public global::System.Collections.Generic.IList<global::Vapi.AssistantClientMessage>? ClientMessages { get; set; }
 
         /// <summary>
         /// These are the messages that will be sent to your Server URL. Default is conversation-update,end-of-call-report,function-call,hang,speech-update,status-update,tool-calls,transfer-destination-request,handoff-destination-request,user-interrupted,assistant.started. You can check the shape of the messages in ServerMessage schema.<br/>
-        /// Example: [conversation-update, end-of-call-report, function-call, hang, speech-update, status-update, tool-calls, transfer-destination-request, handoff-destination-request, user-interrupted, assistant.started]
+        /// Example: [assistant.started, conversation-update, end-of-call-report, function-call, handoff-destination-request, hang, speech-update, status-update, tool-calls, transfer-destination-request, user-interrupted]
         /// </summary>
-        /// <example>[conversation-update, end-of-call-report, function-call, hang, speech-update, status-update, tool-calls, transfer-destination-request, handoff-destination-request, user-interrupted, assistant.started]</example>
+        /// <example>[assistant.started, conversation-update, end-of-call-report, function-call, handoff-destination-request, hang, speech-update, status-update, tool-calls, transfer-destination-request, user-interrupted]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("serverMessages")]
         public global::System.Collections.Generic.IList<global::Vapi.AssistantServerMessage>? ServerMessages { get; set; }
 
@@ -288,6 +288,18 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="Assistant" /> class.
         /// </summary>
+        /// <param name="id">
+        /// This is the unique identifier for the assistant.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the unique identifier for the org that this assistant belongs to.
+        /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the assistant was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the assistant was last updated.
+        /// </param>
         /// <param name="transcriber">
         /// These are the options for the assistant's transcriber.
         /// </param>
@@ -320,11 +332,11 @@ namespace Vapi
         /// </param>
         /// <param name="clientMessages">
         /// These are the messages that will be sent to your Client SDKs. Default is conversation-update,function-call,hang,model-output,speech-update,status-update,transfer-update,transcript,tool-calls,user-interrupted,voice-input,workflow.node.started,assistant.started. You can check the shape of the messages in ClientMessage schema.<br/>
-        /// Example: [conversation-update, function-call, hang, model-output, speech-update, status-update, transfer-update, transcript, tool-calls, user-interrupted, voice-input, workflow.node.started, assistant.started]
+        /// Example: [assistant.started, conversation-update, function-call, hang, model-output, speech-update, status-update, tool-calls, transcript, transfer-update, user-interrupted, voice-input, workflow.node.started]
         /// </param>
         /// <param name="serverMessages">
         /// These are the messages that will be sent to your Server URL. Default is conversation-update,end-of-call-report,function-call,hang,speech-update,status-update,tool-calls,transfer-destination-request,handoff-destination-request,user-interrupted,assistant.started. You can check the shape of the messages in ServerMessage schema.<br/>
-        /// Example: [conversation-update, end-of-call-report, function-call, hang, speech-update, status-update, tool-calls, transfer-destination-request, handoff-destination-request, user-interrupted, assistant.started]
+        /// Example: [assistant.started, conversation-update, end-of-call-report, function-call, handoff-destination-request, hang, speech-update, status-update, tool-calls, transfer-destination-request, user-interrupted]
         /// </param>
         /// <param name="maxDurationSeconds">
         /// This is the maximum number of seconds that the call will last. When the call reaches this duration, it will be ended.<br/>
@@ -419,18 +431,6 @@ namespace Vapi
         /// 3. org.serverUrl
         /// </param>
         /// <param name="keypadInputPlan"></param>
-        /// <param name="id">
-        /// This is the unique identifier for the assistant.
-        /// </param>
-        /// <param name="orgId">
-        /// This is the unique identifier for the org that this assistant belongs to.
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the assistant was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the assistant was last updated.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -470,10 +470,6 @@ namespace Vapi
             global::Vapi.Server? server,
             global::Vapi.KeypadInputPlan? keypadInputPlan)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.Transcriber = transcriber;
             this.Model = model;
             this.Voice = voice;
@@ -504,6 +500,10 @@ namespace Vapi
             this.CredentialIds = credentialIds;
             this.Server = server;
             this.KeypadInputPlan = keypadInputPlan;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>

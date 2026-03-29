@@ -82,14 +82,17 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerMessageToolCalls" /> class.
         /// </summary>
+        /// <param name="toolWithToolCallList">
+        /// This is the list of tools calls that the model is requesting along with the original tool configuration.
+        /// </param>
+        /// <param name="toolCallList">
+        /// This is the list of tool calls that the model is requesting.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
         /// <param name="type">
         /// This is the type of the message. "tool-calls" is sent to call a tool.
-        /// </param>
-        /// <param name="toolWithToolCallList">
-        /// This is the list of tools calls that the model is requesting along with the original tool configuration.
         /// </param>
         /// <param name="timestamp">
         /// This is the timestamp of the message.
@@ -110,9 +113,6 @@ namespace Vapi
         /// <param name="chat">
         /// This is the chat object.
         /// </param>
-        /// <param name="toolCallList">
-        /// This is the list of tool calls that the model is requesting.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -128,16 +128,16 @@ namespace Vapi
             global::Vapi.Call? call,
             global::Vapi.Chat? chat)
         {
-            this.ToolWithToolCallList = toolWithToolCallList ?? throw new global::System.ArgumentNullException(nameof(toolWithToolCallList));
-            this.ToolCallList = toolCallList ?? throw new global::System.ArgumentNullException(nameof(toolCallList));
             this.PhoneNumber = phoneNumber;
             this.Type = type;
+            this.ToolWithToolCallList = toolWithToolCallList ?? throw new global::System.ArgumentNullException(nameof(toolWithToolCallList));
             this.Timestamp = timestamp;
             this.Artifact = artifact;
             this.Assistant = assistant;
             this.Customer = customer;
             this.Call = call;
             this.Chat = chat;
+            this.ToolCallList = toolCallList ?? throw new global::System.ArgumentNullException(nameof(toolCallList));
         }
 
         /// <summary>

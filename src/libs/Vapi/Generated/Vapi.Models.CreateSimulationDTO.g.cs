@@ -47,15 +47,15 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSimulationDTO" /> class.
         /// </summary>
-        /// <param name="name">
-        /// This is an optional friendly name for the simulation.<br/>
-        /// Example: Eligible Path with Confused User
-        /// </param>
         /// <param name="scenarioId">
         /// This is the ID of the scenario to use for this simulation.
         /// </param>
         /// <param name="personalityId">
         /// This is the ID of the personality to use for this simulation.
+        /// </param>
+        /// <param name="name">
+        /// This is an optional friendly name for the simulation.<br/>
+        /// Example: Eligible Path with Confused User
         /// </param>
         /// <param name="path">
         /// Optional folder path for organizing simulations.<br/>
@@ -71,9 +71,9 @@ namespace Vapi
             string? name,
             string? path)
         {
+            this.Name = name;
             this.ScenarioId = scenarioId;
             this.PersonalityId = personalityId;
-            this.Name = name;
             this.Path = path;
         }
 

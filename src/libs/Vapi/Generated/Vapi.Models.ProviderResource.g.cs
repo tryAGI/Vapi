@@ -89,14 +89,14 @@ namespace Vapi
         /// <param name="provider">
         /// This is the provider that manages this resource.
         /// </param>
-        /// <param name="resourceName">
-        /// This is the name/type of the resource.
-        /// </param>
         /// <param name="resourceId">
         /// This is the provider-specific identifier for the resource.
         /// </param>
         /// <param name="resource">
         /// This is the full resource data from the provider's API.
+        /// </param>
+        /// <param name="resourceName">
+        /// This is the name/type of the resource.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -116,9 +116,9 @@ namespace Vapi
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.Provider = provider;
+            this.ResourceName = resourceName;
             this.ResourceId = resourceId ?? throw new global::System.ArgumentNullException(nameof(resourceId));
             this.Resource = resource ?? throw new global::System.ArgumentNullException(nameof(resource));
-            this.ResourceName = resourceName;
         }
 
         /// <summary>

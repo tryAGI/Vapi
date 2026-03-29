@@ -120,6 +120,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="FallbackMinimaxVoice" /> class.
         /// </summary>
+        /// <param name="voiceId">
+        /// This is the provider-specific ID that will be used. Use a voice from MINIMAX_PREDEFINED_VOICES or a custom cloned voice ID.
+        /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
         /// Default Value: true<br/>
@@ -127,9 +130,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is the voice provider that will be used.
-        /// </param>
-        /// <param name="voiceId">
-        /// This is the provider-specific ID that will be used. Use a voice from MINIMAX_PREDEFINED_VOICES or a custom cloned voice ID.
         /// </param>
         /// <param name="model">
         /// This is the model that will be used. Options are 'speech-02-hd' and 'speech-02-turbo'.<br/>
@@ -193,9 +193,9 @@ namespace Vapi
             bool? textNormalizationEnabled,
             global::Vapi.ChunkPlan? chunkPlan)
         {
-            this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
+            this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.Model = model;
             this.Emotion = emotion;
             this.Pitch = pitch;

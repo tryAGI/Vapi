@@ -11,59 +11,63 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        x_3,
+        ArabicComma,
         /// <summary>
         /// 
         /// </summary>
-        x,
+        CjkComma,
         /// <summary>
         /// 
         /// </summary>
-        x_11,
+        CjkPeriod,
         /// <summary>
         /// 
         /// </summary>
-        x_12,
+        CloseParen,
         /// <summary>
         /// 
         /// </summary>
-        x_5,
+        Colon,
         /// <summary>
         /// 
         /// </summary>
-        x_4,
+        Comma,
         /// <summary>
         /// 
         /// </summary>
-        x_10,
+        DevanagariDanda,
         /// <summary>
         /// 
         /// </summary>
-        x__,
+        DevanagariDoubleDanda,
         /// <summary>
         /// 
         /// </summary>
-        x_6,
+        DoublePipe,
         /// <summary>
         /// 
         /// </summary>
-        x_7,
+        Exclamation,
         /// <summary>
         /// 
         /// </summary>
-        x_8,
+        Period,
         /// <summary>
         /// 
         /// </summary>
-        x_9,
+        Pipe,
         /// <summary>
         /// 
         /// </summary>
-        x_,
+        Question,
         /// <summary>
         /// 
         /// </summary>
-        x_2,
+        Semicolon,
+        /// <summary>
+        /// 
+        /// </summary>
+        UrduPeriod,
     }
 
     /// <summary>
@@ -78,20 +82,21 @@ namespace Vapi
         {
             return value switch
             {
-                ChunkPlanPunctuationBoundarie.x_3 => "!",
-                ChunkPlanPunctuationBoundarie.x => ")",
-                ChunkPlanPunctuationBoundarie.x_11 => ",",
-                ChunkPlanPunctuationBoundarie.x_12 => ":",
-                ChunkPlanPunctuationBoundarie.x_5 => ";",
-                ChunkPlanPunctuationBoundarie.x_4 => "?",
-                ChunkPlanPunctuationBoundarie.x_10 => "|",
-                ChunkPlanPunctuationBoundarie.x__ => "||",
-                ChunkPlanPunctuationBoundarie.x_6 => "،",
-                ChunkPlanPunctuationBoundarie.x_7 => "۔",
-                ChunkPlanPunctuationBoundarie.x_8 => "।",
-                ChunkPlanPunctuationBoundarie.x_9 => "॥",
-                ChunkPlanPunctuationBoundarie.x_ => "。",
-                ChunkPlanPunctuationBoundarie.x_2 => "，",
+                ChunkPlanPunctuationBoundarie.ArabicComma => "arabic-comma",
+                ChunkPlanPunctuationBoundarie.CjkComma => "cjk-comma",
+                ChunkPlanPunctuationBoundarie.CjkPeriod => "cjk-period",
+                ChunkPlanPunctuationBoundarie.CloseParen => "close-paren",
+                ChunkPlanPunctuationBoundarie.Colon => "colon",
+                ChunkPlanPunctuationBoundarie.Comma => "comma",
+                ChunkPlanPunctuationBoundarie.DevanagariDanda => "devanagari-danda",
+                ChunkPlanPunctuationBoundarie.DevanagariDoubleDanda => "devanagari-double-danda",
+                ChunkPlanPunctuationBoundarie.DoublePipe => "double-pipe",
+                ChunkPlanPunctuationBoundarie.Exclamation => "exclamation",
+                ChunkPlanPunctuationBoundarie.Period => "period",
+                ChunkPlanPunctuationBoundarie.Pipe => "pipe",
+                ChunkPlanPunctuationBoundarie.Question => "question",
+                ChunkPlanPunctuationBoundarie.Semicolon => "semicolon",
+                ChunkPlanPunctuationBoundarie.UrduPeriod => "urdu-period",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -102,20 +107,21 @@ namespace Vapi
         {
             return value switch
             {
-                "!" => ChunkPlanPunctuationBoundarie.x_3,
-                ")" => ChunkPlanPunctuationBoundarie.x,
-                "," => ChunkPlanPunctuationBoundarie.x_11,
-                ":" => ChunkPlanPunctuationBoundarie.x_12,
-                ";" => ChunkPlanPunctuationBoundarie.x_5,
-                "?" => ChunkPlanPunctuationBoundarie.x_4,
-                "|" => ChunkPlanPunctuationBoundarie.x_10,
-                "||" => ChunkPlanPunctuationBoundarie.x__,
-                "،" => ChunkPlanPunctuationBoundarie.x_6,
-                "۔" => ChunkPlanPunctuationBoundarie.x_7,
-                "।" => ChunkPlanPunctuationBoundarie.x_8,
-                "॥" => ChunkPlanPunctuationBoundarie.x_9,
-                "。" => ChunkPlanPunctuationBoundarie.x_,
-                "，" => ChunkPlanPunctuationBoundarie.x_2,
+                "arabic-comma" => ChunkPlanPunctuationBoundarie.ArabicComma,
+                "cjk-comma" => ChunkPlanPunctuationBoundarie.CjkComma,
+                "cjk-period" => ChunkPlanPunctuationBoundarie.CjkPeriod,
+                "close-paren" => ChunkPlanPunctuationBoundarie.CloseParen,
+                "colon" => ChunkPlanPunctuationBoundarie.Colon,
+                "comma" => ChunkPlanPunctuationBoundarie.Comma,
+                "devanagari-danda" => ChunkPlanPunctuationBoundarie.DevanagariDanda,
+                "devanagari-double-danda" => ChunkPlanPunctuationBoundarie.DevanagariDoubleDanda,
+                "double-pipe" => ChunkPlanPunctuationBoundarie.DoublePipe,
+                "exclamation" => ChunkPlanPunctuationBoundarie.Exclamation,
+                "period" => ChunkPlanPunctuationBoundarie.Period,
+                "pipe" => ChunkPlanPunctuationBoundarie.Pipe,
+                "question" => ChunkPlanPunctuationBoundarie.Question,
+                "semicolon" => ChunkPlanPunctuationBoundarie.Semicolon,
+                "urdu-period" => ChunkPlanPunctuationBoundarie.UrduPeriod,
                 _ => null,
             };
         }

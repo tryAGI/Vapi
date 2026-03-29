@@ -116,6 +116,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="PlayHTVoice" /> class.
         /// </summary>
+        /// <param name="voiceId">
+        /// This is the provider-specific ID that will be used.
+        /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
         /// Default Value: true<br/>
@@ -123,9 +126,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is the voice provider that will be used.
-        /// </param>
-        /// <param name="voiceId">
-        /// This is the provider-specific ID that will be used.
         /// </param>
         /// <param name="speed">
         /// This is the speed multiplier that will be used.<br/>
@@ -181,9 +181,9 @@ namespace Vapi
             global::Vapi.ChunkPlan? chunkPlan,
             global::Vapi.FallbackPlan? fallbackPlan)
         {
-            this.VoiceId = voiceId;
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
+            this.VoiceId = voiceId;
             this.Speed = speed;
             this.Temperature = temperature;
             this.Emotion = emotion;

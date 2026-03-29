@@ -79,12 +79,8 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCredential" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="authenticationPlan">
         /// This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.
-        /// </param>
-        /// <param name="encryptionPlan">
-        /// This is the encryption plan for encrypting sensitive data. Currently supports public-key encryption.
         /// </param>
         /// <param name="id">
         /// This is the unique identifier for the credential.
@@ -100,6 +96,10 @@ namespace Vapi
         /// </param>
         /// <param name="authenticationSession">
         /// This is the authentication session for the credential. Available for credentials that have an authentication plan.
+        /// </param>
+        /// <param name="provider"></param>
+        /// <param name="encryptionPlan">
+        /// This is the encryption plan for encrypting sensitive data. Currently supports public-key encryption.
         /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
@@ -118,14 +118,14 @@ namespace Vapi
             global::Vapi.PublicKeyEncryptionPlan? encryptionPlan,
             string? name)
         {
+            this.Provider = provider;
             this.AuthenticationPlan = authenticationPlan;
+            this.EncryptionPlan = encryptionPlan;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.AuthenticationSession = authenticationSession ?? throw new global::System.ArgumentNullException(nameof(authenticationSession));
-            this.Provider = provider;
-            this.EncryptionPlan = encryptionPlan;
             this.Name = name;
         }
 

@@ -97,6 +97,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="VapiModel" /> class.
         /// </summary>
+        /// <param name="model">
+        /// This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b
+        /// </param>
         /// <param name="messages">
         /// This is the starting state for the conversation.
         /// </param>
@@ -117,9 +120,6 @@ namespace Vapi
         /// </param>
         /// <param name="workflow">
         /// This is the workflow that will be used for the call. To use an existing workflow, use `workflowId` instead.
-        /// </param>
-        /// <param name="model">
-        /// This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b
         /// </param>
         /// <param name="temperature">
         /// This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.
@@ -154,7 +154,6 @@ namespace Vapi
             bool? emotionRecognitionEnabled,
             double? numFastTurns)
         {
-            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Messages = messages;
             this.Tools = tools;
             this.ToolIds = toolIds;
@@ -162,6 +161,7 @@ namespace Vapi
             this.Provider = provider;
             this.WorkflowId = workflowId;
             this.Workflow = workflow;
+            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;
             this.EmotionRecognitionEnabled = emotionRecognitionEnabled;

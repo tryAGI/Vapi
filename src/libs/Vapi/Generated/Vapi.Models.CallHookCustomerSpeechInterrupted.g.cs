@@ -31,11 +31,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CallHookCustomerSpeechInterrupted" /> class.
         /// </summary>
-        /// <param name="on">
-        /// This is the event that triggers this hook
-        /// </param>
         /// <param name="do">
         /// This is the set of actions to perform when the hook triggers
+        /// </param>
+        /// <param name="on">
+        /// This is the event that triggers this hook
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SayHookAction, global::Vapi.ToolCallHookAction, global::Vapi.MessageAddHookAction>> @do,
             global::Vapi.CallHookCustomerSpeechInterruptedOn on)
         {
-            this.Do = @do ?? throw new global::System.ArgumentNullException(nameof(@do));
             this.On = on;
+            this.Do = @do ?? throw new global::System.ArgumentNullException(nameof(@do));
         }
 
         /// <summary>

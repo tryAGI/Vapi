@@ -69,9 +69,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomTranscriber" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is the transcription provider that will be used. Use `custom-transcriber` for providers that are not natively supported.
-        /// </param>
         /// <param name="server">
         /// This is where the transcription request will be sent.<br/>
         /// Usage:<br/>
@@ -107,6 +104,9 @@ namespace Vapi
         ///  }<br/>
         /// ```
         /// </param>
+        /// <param name="provider">
+        /// This is the transcription provider that will be used. Use `custom-transcriber` for providers that are not natively supported.
+        /// </param>
         /// <param name="fallbackPlan">
         /// This is the plan for transcriber provider fallbacks in the event that the primary transcriber provider fails.
         /// </param>
@@ -118,8 +118,8 @@ namespace Vapi
             global::Vapi.CustomTranscriberProvider provider,
             global::Vapi.FallbackTranscriberPlan? fallbackPlan)
         {
-            this.Server = server ?? throw new global::System.ArgumentNullException(nameof(server));
             this.Provider = provider;
+            this.Server = server ?? throw new global::System.ArgumentNullException(nameof(server));
             this.FallbackPlan = fallbackPlan;
         }
 

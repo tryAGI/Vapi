@@ -36,11 +36,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerMessageResponseHandoffDestinationRequest" /> class.
         /// </summary>
-        /// <param name="result">
-        /// This is the local tool result message returned for the handoff tool call.
-        /// </param>
         /// <param name="destination">
         /// This is the destination you'd like the call to be transferred to.
+        /// </param>
+        /// <param name="result">
+        /// This is the local tool result message returned for the handoff tool call.
         /// </param>
         /// <param name="error">
         /// This is the error message if the handoff should not be made.
@@ -53,8 +53,8 @@ namespace Vapi
             string? result,
             string? error)
         {
-            this.Destination = destination ?? throw new global::System.ArgumentNullException(nameof(destination));
             this.Result = result;
+            this.Destination = destination ?? throw new global::System.ArgumentNullException(nameof(destination));
             this.Error = error;
         }
 

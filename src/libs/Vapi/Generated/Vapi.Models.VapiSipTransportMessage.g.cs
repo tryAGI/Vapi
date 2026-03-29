@@ -44,11 +44,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="VapiSipTransportMessage" /> class.
         /// </summary>
-        /// <param name="transport">
-        /// This is the transport type.
-        /// </param>
         /// <param name="sipVerb">
         /// This is the SIP verb to use. Must be one of INFO, MESSAGE, or NOTIFY.
+        /// </param>
+        /// <param name="transport">
+        /// This is the transport type.
         /// </param>
         /// <param name="headers">
         /// These are the headers to include with the SIP request.
@@ -65,8 +65,8 @@ namespace Vapi
             object? headers,
             string? body)
         {
-            this.SipVerb = sipVerb;
             this.Transport = transport;
+            this.SipVerb = sipVerb;
             this.Headers = headers;
             this.Body = body;
         }

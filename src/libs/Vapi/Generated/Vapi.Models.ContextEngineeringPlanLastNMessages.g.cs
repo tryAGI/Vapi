@@ -31,10 +31,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ContextEngineeringPlanLastNMessages" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="maxMessages">
         /// This is the maximum number of messages to include in the context engineering plan.
         /// </param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -42,8 +42,8 @@ namespace Vapi
             double maxMessages,
             global::Vapi.ContextEngineeringPlanLastNMessagesType type)
         {
-            this.MaxMessages = maxMessages;
             this.Type = type;
+            this.MaxMessages = maxMessages;
         }
 
         /// <summary>

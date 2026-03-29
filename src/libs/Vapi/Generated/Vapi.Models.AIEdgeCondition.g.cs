@@ -31,10 +31,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AIEdgeCondition" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="prompt">
         /// This is the prompt for the AI edge condition. It should evaluate to a boolean.
         /// </param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -42,8 +42,8 @@ namespace Vapi
             string prompt,
             global::Vapi.AIEdgeConditionType type)
         {
-            this.Prompt = prompt ?? throw new global::System.ArgumentNullException(nameof(prompt));
             this.Type = type;
+            this.Prompt = prompt ?? throw new global::System.ArgumentNullException(nameof(prompt));
         }
 
         /// <summary>

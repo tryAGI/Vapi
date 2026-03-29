@@ -65,9 +65,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCredential" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is the key for Gemini in Google AI Studio. Get it from here: https://aistudio.google.com/app/apikey
-        /// </param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
@@ -82,6 +79,9 @@ namespace Vapi
         /// </param>
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
+        /// </param>
+        /// <param name="provider">
+        /// This is the key for Gemini in Google AI Studio. Get it from here: https://aistudio.google.com/app/apikey
         /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
@@ -98,12 +98,12 @@ namespace Vapi
             global::Vapi.GoogleCredentialProvider provider,
             string? name)
         {
+            this.Provider = provider;
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Provider = provider;
             this.Name = name;
         }
 

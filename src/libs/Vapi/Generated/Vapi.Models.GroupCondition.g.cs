@@ -42,16 +42,16 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupCondition" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type discriminator for group condition<br/>
-        /// Example: group
-        /// </param>
         /// <param name="operator">
         /// This is the logical operator for combining conditions in this group
         /// </param>
         /// <param name="conditions">
         /// This is the list of nested conditions to evaluate.<br/>
         /// Supports recursive nesting of groups for complex logic.
+        /// </param>
+        /// <param name="type">
+        /// This is the type discriminator for group condition<br/>
+        /// Example: group
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -61,9 +61,9 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.RegexCondition, global::Vapi.LiquidCondition, global::Vapi.GroupCondition>> conditions,
             global::Vapi.GroupConditionType type)
         {
+            this.Type = type;
             this.Operator = @operator;
             this.Conditions = conditions ?? throw new global::System.ArgumentNullException(nameof(conditions));
-            this.Type = type;
         }
 
         /// <summary>

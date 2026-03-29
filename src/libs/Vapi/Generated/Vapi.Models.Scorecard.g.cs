@@ -84,15 +84,15 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the scorecard was last updated.
         /// </param>
+        /// <param name="metrics">
+        /// These are the metrics that will be used to evaluate the scorecard.<br/>
+        /// Each metric will have a set of conditions and points that will be used to generate the score.
+        /// </param>
         /// <param name="name">
         /// This is the name of the scorecard. It is only for user reference and will not be used for any evaluation.
         /// </param>
         /// <param name="description">
         /// This is the description of the scorecard. It is only for user reference and will not be used for any evaluation.
-        /// </param>
-        /// <param name="metrics">
-        /// These are the metrics that will be used to evaluate the scorecard.<br/>
-        /// Each metric will have a set of conditions and points that will be used to generate the score.
         /// </param>
         /// <param name="assistantIds">
         /// These are the assistant IDs that this scorecard is linked to.<br/>
@@ -115,9 +115,9 @@ namespace Vapi
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Metrics = metrics ?? throw new global::System.ArgumentNullException(nameof(metrics));
             this.Name = name;
             this.Description = description;
+            this.Metrics = metrics ?? throw new global::System.ArgumentNullException(nameof(metrics));
             this.AssistantIds = assistantIds;
         }
 

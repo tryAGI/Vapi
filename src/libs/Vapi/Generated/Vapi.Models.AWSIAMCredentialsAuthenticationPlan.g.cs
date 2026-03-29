@@ -38,13 +38,13 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AWSIAMCredentialsAuthenticationPlan" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="awsAccessKeyId">
         /// AWS Access Key ID. This is not returned in the API.
         /// </param>
         /// <param name="awsSecretAccessKey">
         /// AWS Secret Access Key. This is not returned in the API.
         /// </param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -53,9 +53,9 @@ namespace Vapi
             string awsSecretAccessKey,
             global::Vapi.AWSIAMCredentialsAuthenticationPlanType type)
         {
+            this.Type = type;
             this.AwsAccessKeyId = awsAccessKeyId ?? throw new global::System.ArgumentNullException(nameof(awsAccessKeyId));
             this.AwsSecretAccessKey = awsSecretAccessKey ?? throw new global::System.ArgumentNullException(nameof(awsSecretAccessKey));
-            this.Type = type;
         }
 
         /// <summary>

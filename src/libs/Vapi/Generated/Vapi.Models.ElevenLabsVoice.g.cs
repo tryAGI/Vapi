@@ -139,6 +139,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ElevenLabsVoice" /> class.
         /// </summary>
+        /// <param name="voiceId">
+        /// This is the provider-specific ID that will be used. Ensure the Voice is present in your 11Labs Voice Library.
+        /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
         /// Default Value: true<br/>
@@ -146,9 +149,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is the voice provider that will be used.
-        /// </param>
-        /// <param name="voiceId">
-        /// This is the provider-specific ID that will be used. Ensure the Voice is present in your 11Labs Voice Library.
         /// </param>
         /// <param name="stability">
         /// Defines the stability for voice settings.<br/>
@@ -220,9 +220,9 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.ElevenLabsPronunciationDictionaryLocator>? pronunciationDictionaryLocators,
             global::Vapi.FallbackPlan? fallbackPlan)
         {
-            this.VoiceId = voiceId;
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
+            this.VoiceId = voiceId;
             this.Stability = stability;
             this.SimilarityBoost = similarityBoost;
             this.Style = style;

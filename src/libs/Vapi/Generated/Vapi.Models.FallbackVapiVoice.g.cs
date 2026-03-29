@@ -61,6 +61,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="FallbackVapiVoice" /> class.
         /// </summary>
+        /// <param name="voiceId">
+        /// The voices provided by Vapi
+        /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
         /// Default Value: true<br/>
@@ -68,9 +71,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is the voice provider that will be used.
-        /// </param>
-        /// <param name="voiceId">
-        /// The voices provided by Vapi
         /// </param>
         /// <param name="speed">
         /// This is the speed multiplier that will be used.<br/>
@@ -94,9 +94,9 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.VapiPronunciationDictionaryLocator>? pronunciationDictionary,
             global::Vapi.ChunkPlan? chunkPlan)
         {
-            this.VoiceId = voiceId;
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
+            this.VoiceId = voiceId;
             this.Speed = speed;
             this.PronunciationDictionary = pronunciationDictionary;
             this.ChunkPlan = chunkPlan;

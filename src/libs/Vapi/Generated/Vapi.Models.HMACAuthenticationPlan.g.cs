@@ -88,13 +88,13 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="HMACAuthenticationPlan" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="secretKey">
         /// This is the HMAC secret key used to sign requests.
         /// </param>
         /// <param name="algorithm">
         /// This is the HMAC algorithm to use for signing.
         /// </param>
+        /// <param name="type"></param>
         /// <param name="signatureHeader">
         /// This is the header name where the signature will be sent. Defaults to 'x-signature'.
         /// </param>
@@ -135,9 +135,9 @@ namespace Vapi
             global::Vapi.HMACAuthenticationPlanSignatureEncoding? signatureEncoding,
             bool? secretIsBase64)
         {
+            this.Type = type;
             this.SecretKey = secretKey ?? throw new global::System.ArgumentNullException(nameof(secretKey));
             this.Algorithm = algorithm;
-            this.Type = type;
             this.SignatureHeader = signatureHeader;
             this.TimestampHeader = timestampHeader;
             this.SignaturePrefix = signaturePrefix;

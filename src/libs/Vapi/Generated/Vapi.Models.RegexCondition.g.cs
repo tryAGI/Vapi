@@ -59,10 +59,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="RegexCondition" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type discriminator for regex condition<br/>
-        /// Example: regex
-        /// </param>
         /// <param name="regex">
         /// This is the regular expression pattern to match against message content.<br/>
         /// Note:<br/>
@@ -72,6 +68,10 @@ namespace Vapi
         /// - RegExp.test does substring matching, so /cat/.test("I love cats") will return true. To do full string matching, use anchors: /^cat$/ will only match exactly "cat".<br/>
         /// - Word boundaries \b are useful for matching whole words: /\bcat\b/ matches "cat" but not "cats" or "category".<br/>
         /// - Use inline flags for portability: (?i) for case insensitive, (?m) for multiline
+        /// </param>
+        /// <param name="type">
+        /// This is the type discriminator for regex condition<br/>
+        /// Example: regex
         /// </param>
         /// <param name="target">
         /// This is the target for messages to check against.<br/>
@@ -94,8 +94,8 @@ namespace Vapi
             global::Vapi.MessageTarget? target,
             bool? negate)
         {
-            this.Regex = regex ?? throw new global::System.ArgumentNullException(nameof(regex));
             this.Type = type;
+            this.Regex = regex ?? throw new global::System.ArgumentNullException(nameof(regex));
             this.Target = target;
             this.Negate = negate;
         }

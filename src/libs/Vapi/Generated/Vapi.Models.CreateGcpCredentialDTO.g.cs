@@ -56,13 +56,13 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateGcpCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
-        /// <param name="fallbackIndex">
-        /// This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.
-        /// </param>
         /// <param name="gcpKey">
         /// This is the GCP key. This is the JSON that can be generated in the Google Cloud Console at https://console.cloud.google.com/iam-admin/serviceaccounts/details/&lt;service-account-id&gt;/keys.<br/>
         /// The schema is identical to the JSON that GCP outputs.
+        /// </param>
+        /// <param name="provider"></param>
+        /// <param name="fallbackIndex">
+        /// This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.
         /// </param>
         /// <param name="region">
         /// This is the region of the GCP resource.
@@ -82,9 +82,9 @@ namespace Vapi
             global::Vapi.BucketPlan? bucketPlan,
             string? name)
         {
-            this.GcpKey = gcpKey ?? throw new global::System.ArgumentNullException(nameof(gcpKey));
             this.Provider = provider;
             this.FallbackIndex = fallbackIndex;
+            this.GcpKey = gcpKey ?? throw new global::System.ArgumentNullException(nameof(gcpKey));
             this.Region = region;
             this.BucketPlan = bucketPlan;
             this.Name = name;

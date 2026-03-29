@@ -31,11 +31,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="RelayCommandSay" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of relay command
-        /// </param>
         /// <param name="content">
         /// The content for the assistant to speak
+        /// </param>
+        /// <param name="type">
+        /// The type of relay command
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Vapi
             string content,
             global::Vapi.RelayCommandSayType type)
         {
-            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.Type = type;
+            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
         }
 
         /// <summary>

@@ -232,6 +232,12 @@ namespace Vapi
         /// Initializes a new instance of the <see cref="Workflow" /> class.
         /// </summary>
         /// <param name="nodes"></param>
+        /// <param name="id"></param>
+        /// <param name="orgId"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="name"></param>
+        /// <param name="edges"></param>
         /// <param name="model">
         /// This is the model for the workflow.<br/>
         /// This can be overridden at node level using `nodes[n].model`.
@@ -267,12 +273,6 @@ namespace Vapi
         /// Default is 1800 (30 minutes), max is 43200 (12 hours), and min is 10 seconds.<br/>
         /// Example: 600
         /// </param>
-        /// <param name="id"></param>
-        /// <param name="orgId"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
-        /// <param name="name"></param>
-        /// <param name="edges"></param>
         /// <param name="globalPrompt"></param>
         /// <param name="server">
         /// This is where Vapi will send webhooks. You can find all webhooks available along with their shape in ServerMessage schema.<br/>
@@ -366,12 +366,6 @@ namespace Vapi
             string? voicemailMessage)
         {
             this.Nodes = nodes ?? throw new global::System.ArgumentNullException(nameof(nodes));
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Edges = edges ?? throw new global::System.ArgumentNullException(nameof(edges));
             this.Model = model;
             this.Transcriber = transcriber;
             this.Voice = voice;
@@ -381,6 +375,12 @@ namespace Vapi
             this.Credentials = credentials;
             this.VoicemailDetection = voicemailDetection;
             this.MaxDurationSeconds = maxDurationSeconds;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Edges = edges ?? throw new global::System.ArgumentNullException(nameof(edges));
             this.GlobalPrompt = globalPrompt;
             this.Server = server;
             this.CompliancePlan = compliancePlan;

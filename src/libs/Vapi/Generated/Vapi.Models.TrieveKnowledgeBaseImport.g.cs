@@ -31,11 +31,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TrieveKnowledgeBaseImport" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is to import an existing dataset from Trieve.
-        /// </param>
         /// <param name="providerId">
         /// This is the `datasetId` of the dataset on your Trieve account.
+        /// </param>
+        /// <param name="type">
+        /// This is to import an existing dataset from Trieve.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Vapi
             string providerId,
             global::Vapi.TrieveKnowledgeBaseImportType type)
         {
-            this.ProviderId = providerId ?? throw new global::System.ArgumentNullException(nameof(providerId));
             this.Type = type;
+            this.ProviderId = providerId ?? throw new global::System.ArgumentNullException(nameof(providerId));
         }
 
         /// <summary>

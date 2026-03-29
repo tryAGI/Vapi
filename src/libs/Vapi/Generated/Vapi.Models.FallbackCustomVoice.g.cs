@@ -69,17 +69,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="FallbackCustomVoice" /> class.
         /// </summary>
-        /// <param name="cachingEnabled">
-        /// This is the flag to toggle voice caching for the assistant.<br/>
-        /// Default Value: true<br/>
-        /// Example: true
-        /// </param>
-        /// <param name="provider">
-        /// This is the voice provider that will be used. Use `custom-voice` for providers that are not natively supported.
-        /// </param>
-        /// <param name="voiceId">
-        /// This is the provider-specific ID that will be used. This is passed in the voice request payload to identify the voice to use.
-        /// </param>
         /// <param name="server">
         /// This is where the voice request will be sent.<br/>
         /// Request Example:<br/>
@@ -100,6 +89,17 @@ namespace Vapi
         /// });<br/>
         /// ```
         /// </param>
+        /// <param name="cachingEnabled">
+        /// This is the flag to toggle voice caching for the assistant.<br/>
+        /// Default Value: true<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="provider">
+        /// This is the voice provider that will be used. Use `custom-voice` for providers that are not natively supported.
+        /// </param>
+        /// <param name="voiceId">
+        /// This is the provider-specific ID that will be used. This is passed in the voice request payload to identify the voice to use.
+        /// </param>
         /// <param name="chunkPlan">
         /// This is the plan for chunking the model output before it is sent to the voice provider.
         /// </param>
@@ -113,10 +113,10 @@ namespace Vapi
             string? voiceId,
             global::Vapi.ChunkPlan? chunkPlan)
         {
-            this.Server = server ?? throw new global::System.ArgumentNullException(nameof(server));
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
             this.VoiceId = voiceId;
+            this.Server = server ?? throw new global::System.ArgumentNullException(nameof(server));
             this.ChunkPlan = chunkPlan;
         }
 

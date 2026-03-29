@@ -71,9 +71,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateS3CredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// Credential provider. Only allowed value is s3
-        /// </param>
         /// <param name="awsAccessKeyId">
         /// AWS access key ID.
         /// </param>
@@ -88,6 +85,9 @@ namespace Vapi
         /// </param>
         /// <param name="s3PathPrefix">
         /// The path prefix for the uploaded recording. Ex. "recordings/"
+        /// </param>
+        /// <param name="provider">
+        /// Credential provider. Only allowed value is s3
         /// </param>
         /// <param name="fallbackIndex">
         /// This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.
@@ -108,12 +108,12 @@ namespace Vapi
             double? fallbackIndex,
             string? name)
         {
+            this.Provider = provider;
             this.AwsAccessKeyId = awsAccessKeyId ?? throw new global::System.ArgumentNullException(nameof(awsAccessKeyId));
             this.AwsSecretAccessKey = awsSecretAccessKey ?? throw new global::System.ArgumentNullException(nameof(awsSecretAccessKey));
             this.Region = region ?? throw new global::System.ArgumentNullException(nameof(region));
             this.S3BucketName = s3BucketName ?? throw new global::System.ArgumentNullException(nameof(s3BucketName));
             this.S3PathPrefix = s3PathPrefix ?? throw new global::System.ArgumentNullException(nameof(s3PathPrefix));
-            this.Provider = provider;
             this.FallbackIndex = fallbackIndex;
             this.Name = name;
         }

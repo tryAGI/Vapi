@@ -44,15 +44,15 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateScorecardDTO" /> class.
         /// </summary>
+        /// <param name="metrics">
+        /// These are the metrics that will be used to evaluate the scorecard.<br/>
+        /// Each metric will have a set of conditions and points that will be used to generate the score.
+        /// </param>
         /// <param name="name">
         /// This is the name of the scorecard. It is only for user reference and will not be used for any evaluation.
         /// </param>
         /// <param name="description">
         /// This is the description of the scorecard. It is only for user reference and will not be used for any evaluation.
-        /// </param>
-        /// <param name="metrics">
-        /// These are the metrics that will be used to evaluate the scorecard.<br/>
-        /// Each metric will have a set of conditions and points that will be used to generate the score.
         /// </param>
         /// <param name="assistantIds">
         /// These are the assistant IDs that this scorecard is linked to.<br/>
@@ -67,9 +67,9 @@ namespace Vapi
             string? description,
             global::System.Collections.Generic.IList<string>? assistantIds)
         {
-            this.Metrics = metrics ?? throw new global::System.ArgumentNullException(nameof(metrics));
             this.Name = name;
             this.Description = description;
+            this.Metrics = metrics ?? throw new global::System.ArgumentNullException(nameof(metrics));
             this.AssistantIds = assistantIds;
         }
 

@@ -91,6 +91,9 @@ namespace Vapi
         /// This is the name of the simulation suite.<br/>
         /// Example: Checkout Flow Tests
         /// </param>
+        /// <param name="simulationIds">
+        /// This is the list of simulation IDs in this suite.
+        /// </param>
         /// <param name="slackWebhookUrl">
         /// This is the Slack webhook URL for notifications.
         /// </param>
@@ -98,9 +101,6 @@ namespace Vapi
         /// Optional folder path for organizing simulation suites.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
         /// Maps to GitOps resource folder structure.
-        /// </param>
-        /// <param name="simulationIds">
-        /// This is the list of simulation IDs in this suite.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -120,9 +120,9 @@ namespace Vapi
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.SimulationIds = simulationIds ?? throw new global::System.ArgumentNullException(nameof(simulationIds));
             this.SlackWebhookUrl = slackWebhookUrl;
             this.Path = path;
+            this.SimulationIds = simulationIds ?? throw new global::System.ArgumentNullException(nameof(simulationIds));
         }
 
         /// <summary>

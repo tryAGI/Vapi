@@ -39,11 +39,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateInworldCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="apiKey">
         /// This is the Inworld Basic (Base64) authentication token. This is not returned in the API.<br/>
         /// Example: your-base64-token-here
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -55,8 +55,8 @@ namespace Vapi
             global::Vapi.CreateInworldCredentialDTOProvider provider,
             string? name)
         {
-            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Provider = provider;
+            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Name = name;
         }
 

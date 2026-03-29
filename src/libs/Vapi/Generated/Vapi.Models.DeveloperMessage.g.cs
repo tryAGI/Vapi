@@ -45,10 +45,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="DeveloperMessage" /> class.
         /// </summary>
-        /// <param name="role">
-        /// This is the role of the message author<br/>
-        /// Default Value: developer
-        /// </param>
         /// <param name="content">
         /// This is the content of the developer message
         /// </param>
@@ -57,6 +53,10 @@ namespace Vapi
         /// </param>
         /// <param name="metadata">
         /// This is an optional metadata for the message
+        /// </param>
+        /// <param name="role">
+        /// This is the role of the message author<br/>
+        /// Default Value: developer
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -67,8 +67,8 @@ namespace Vapi
             object? metadata,
             global::Vapi.DeveloperMessageRole role = global::Vapi.DeveloperMessageRole.Developer)
         {
-            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.Role = role;
+            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.Name = name;
             this.Metadata = metadata;
         }

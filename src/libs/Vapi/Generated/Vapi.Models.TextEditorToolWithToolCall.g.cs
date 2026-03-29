@@ -145,6 +145,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TextEditorToolWithToolCall" /> class.
         /// </summary>
+        /// <param name="toolCall"></param>
         /// <param name="messages">
         /// These are the messages that will be spoken to the user as the tool is running.<br/>
         /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
@@ -163,11 +164,6 @@ namespace Vapi
         ///   - Webhook contains the variables set on the assistant.<br/>
         ///   - Webhook is sent to the first available URL in this order: {{tool.server.url}}, {{assistant.server.url}}, {{phoneNumber.server.url}}, {{org.server.url}}.<br/>
         ///   - Webhook expects a response with tool call result.
-        /// </param>
-        /// <param name="toolCall"></param>
-        /// <param name="name">
-        /// The name of the tool, fixed to 'str_replace_editor'<br/>
-        /// Default Value: str_replace_editor
         /// </param>
         /// <param name="rejectionPlan">
         /// This is the plan to reject a tool call based on the conversation state.<br/>
@@ -245,6 +241,10 @@ namespace Vapi
         /// }<br/>
         /// ```
         /// </param>
+        /// <param name="name">
+        /// The name of the tool, fixed to 'str_replace_editor'<br/>
+        /// Default Value: str_replace_editor
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -257,11 +257,11 @@ namespace Vapi
             global::Vapi.ToolRejectionPlan? rejectionPlan,
             global::Vapi.TextEditorToolWithToolCallName name = global::Vapi.TextEditorToolWithToolCallName.StrReplaceEditor)
         {
-            this.ToolCall = toolCall ?? throw new global::System.ArgumentNullException(nameof(toolCall));
             this.Messages = messages;
             this.Type = type;
             this.SubType = subType;
             this.Server = server;
+            this.ToolCall = toolCall ?? throw new global::System.ArgumentNullException(nameof(toolCall));
             this.Name = name;
             this.RejectionPlan = rejectionPlan;
         }

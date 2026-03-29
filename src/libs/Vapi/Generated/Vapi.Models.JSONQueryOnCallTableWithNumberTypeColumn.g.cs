@@ -76,17 +76,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="JSONQueryOnCallTableWithNumberTypeColumn" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of query. Only allowed type is "vapiql-json".<br/>
-        /// Example: vapiql-json
-        /// </param>
-        /// <param name="table">
-        /// This is the table that will be queried.
-        /// </param>
-        /// <param name="filters">
-        /// This is the filters to apply to the insight.<br/>
-        /// The discriminator automatically selects the correct filter type based on column and operator.
-        /// </param>
         /// <param name="column">
         /// This is the column that will be queried in the selected table.<br/>
         /// Available columns depend on the selected table.<br/>
@@ -101,6 +90,17 @@ namespace Vapi
         /// - min<br/>
         /// - max<br/>
         /// Example: sum
+        /// </param>
+        /// <param name="type">
+        /// This is the type of query. Only allowed type is "vapiql-json".<br/>
+        /// Example: vapiql-json
+        /// </param>
+        /// <param name="table">
+        /// This is the table that will be queried.
+        /// </param>
+        /// <param name="filters">
+        /// This is the filters to apply to the insight.<br/>
+        /// The discriminator automatically selects the correct filter type based on column and operator.
         /// </param>
         /// <param name="name">
         /// This is the name of the query.<br/>
@@ -118,11 +118,11 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>? filters,
             string? name)
         {
-            this.Column = column;
-            this.Operation = operation;
             this.Type = type;
             this.Table = table;
             this.Filters = filters;
+            this.Column = column;
+            this.Operation = operation;
             this.Name = name;
         }
 

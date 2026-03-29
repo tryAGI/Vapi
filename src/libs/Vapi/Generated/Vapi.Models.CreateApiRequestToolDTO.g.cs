@@ -322,6 +322,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateApiRequestToolDTO" /> class.
         /// </summary>
+        /// <param name="method"></param>
+        /// <param name="url">
+        /// This is where the request will be sent.
+        /// </param>
         /// <param name="messages">
         /// These are the messages that will be spoken to the user as the tool is running.<br/>
         /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
@@ -329,7 +333,6 @@ namespace Vapi
         /// <param name="type">
         /// The type of tool. "apiRequest" for API request tool.
         /// </param>
-        /// <param name="method"></param>
         /// <param name="timeoutSeconds">
         /// This is the timeout in seconds for the request. Defaults to 20 seconds.<br/>
         /// @default 20<br/>
@@ -351,9 +354,6 @@ namespace Vapi
         /// </param>
         /// <param name="description">
         /// This is the description of the tool. This will be passed to the model.
-        /// </param>
-        /// <param name="url">
-        /// This is where the request will be sent.
         /// </param>
         /// <param name="body">
         /// This is the body of the request.
@@ -594,16 +594,16 @@ namespace Vapi
             global::Vapi.VariableExtractionPlan? variableExtractionPlan,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
-            this.Method = method;
-            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.Messages = messages;
             this.Type = type;
+            this.Method = method;
             this.TimeoutSeconds = timeoutSeconds;
             this.CredentialId = credentialId;
             this.EncryptedPaths = encryptedPaths;
             this.Parameters = parameters;
             this.Name = name;
             this.Description = description;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.Body = body;
             this.Headers = headers;
             this.BackoffPlan = backoffPlan;

@@ -3,10 +3,10 @@
 namespace Vapi.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class LMNTVoiceLanguageIso6391LanguageCodeNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.LMNTVoiceLanguageIso6391LanguageCode?>
+    public sealed class LMNTVoiceLanguageJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.LMNTVoiceLanguage>
     {
         /// <inheritdoc />
-        public override global::Vapi.LMNTVoiceLanguageIso6391LanguageCode? Read(
+        public override global::Vapi.LMNTVoiceLanguage Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Vapi.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Vapi.LMNTVoiceLanguageIso6391LanguageCodeExtensions.ToEnum(stringValue);
+                        return global::Vapi.LMNTVoiceLanguageExtensions.ToEnum(stringValue) ?? default;
                     }
                     
                     break;
@@ -26,11 +26,11 @@ namespace Vapi.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Vapi.LMNTVoiceLanguageIso6391LanguageCode)numValue;
+                    return (global::Vapi.LMNTVoiceLanguage)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Vapi.LMNTVoiceLanguageIso6391LanguageCode?);
+                    return default(global::Vapi.LMNTVoiceLanguage);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,19 +42,12 @@ namespace Vapi.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Vapi.LMNTVoiceLanguageIso6391LanguageCode? value,
+            global::Vapi.LMNTVoiceLanguage value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            if (value == null)
-            {
-                writer.WriteNullValue();
-            }
-            else
-            {
-                writer.WriteStringValue(global::Vapi.LMNTVoiceLanguageIso6391LanguageCodeExtensions.ToValueString(value.Value));
-            }
+            writer.WriteStringValue(global::Vapi.LMNTVoiceLanguageExtensions.ToValueString(value));
         }
     }
 }

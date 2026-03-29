@@ -99,9 +99,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="S3Credential" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// Credential provider. Only allowed value is s3
-        /// </param>
         /// <param name="awsAccessKeyId">
         /// AWS access key ID.
         /// </param>
@@ -117,9 +114,6 @@ namespace Vapi
         /// <param name="s3PathPrefix">
         /// The path prefix for the uploaded recording. Ex. "recordings/"
         /// </param>
-        /// <param name="fallbackIndex">
-        /// This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.
-        /// </param>
         /// <param name="id">
         /// This is the unique identifier for the credential.
         /// </param>
@@ -131,6 +125,12 @@ namespace Vapi
         /// </param>
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
+        /// </param>
+        /// <param name="provider">
+        /// Credential provider. Only allowed value is s3
+        /// </param>
+        /// <param name="fallbackIndex">
+        /// This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.
         /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
@@ -152,17 +152,17 @@ namespace Vapi
             double? fallbackIndex,
             string? name)
         {
+            this.Provider = provider;
             this.AwsAccessKeyId = awsAccessKeyId ?? throw new global::System.ArgumentNullException(nameof(awsAccessKeyId));
             this.AwsSecretAccessKey = awsSecretAccessKey ?? throw new global::System.ArgumentNullException(nameof(awsSecretAccessKey));
             this.Region = region ?? throw new global::System.ArgumentNullException(nameof(region));
             this.S3BucketName = s3BucketName ?? throw new global::System.ArgumentNullException(nameof(s3BucketName));
             this.S3PathPrefix = s3PathPrefix ?? throw new global::System.ArgumentNullException(nameof(s3PathPrefix));
+            this.FallbackIndex = fallbackIndex;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Provider = provider;
-            this.FallbackIndex = fallbackIndex;
             this.Name = name;
         }
 

@@ -31,11 +31,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="RelayCommandNote" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of relay command
-        /// </param>
         /// <param name="content">
         /// The note content to add to the conversation
+        /// </param>
+        /// <param name="type">
+        /// The type of relay command
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Vapi
             string content,
             global::Vapi.RelayCommandNoteType type)
         {
-            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.Type = type;
+            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
         }
 
         /// <summary>

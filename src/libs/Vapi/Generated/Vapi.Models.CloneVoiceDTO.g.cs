@@ -46,14 +46,14 @@ namespace Vapi
         /// <param name="name">
         /// This is the name of the cloned voice in the provider account.
         /// </param>
+        /// <param name="files">
+        /// These are the files you want to use to clone your voice. Only Audio files are supported.
+        /// </param>
         /// <param name="description">
         /// This is the description of your cloned voice.
         /// </param>
         /// <param name="labels">
         /// Serialized labels dictionary for the voice.
-        /// </param>
-        /// <param name="files">
-        /// These are the files you want to use to clone your voice. Only Audio files are supported.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -65,9 +65,9 @@ namespace Vapi
             string? labels)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
             this.Description = description;
             this.Labels = labels;
+            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
         }
 
         /// <summary>

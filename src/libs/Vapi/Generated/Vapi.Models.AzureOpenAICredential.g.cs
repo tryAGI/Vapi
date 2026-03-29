@@ -94,15 +94,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AzureOpenAICredential" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="region"></param>
         /// <param name="models">
         /// Example: [gpt-4-0125-preview, gpt-4-0613]
         /// </param>
         /// <param name="openAIKey">
-        /// This is not returned in the API.
-        /// </param>
-        /// <param name="ocpApimSubscriptionKey">
         /// This is not returned in the API.
         /// </param>
         /// <param name="id">
@@ -117,10 +113,14 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
         /// </param>
+        /// <param name="openAIEndpoint"></param>
+        /// <param name="provider"></param>
+        /// <param name="ocpApimSubscriptionKey">
+        /// This is not returned in the API.
+        /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
-        /// <param name="openAIEndpoint"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -137,17 +137,17 @@ namespace Vapi
             string? ocpApimSubscriptionKey,
             string? name)
         {
+            this.Provider = provider;
             this.Region = region;
             this.Models = models ?? throw new global::System.ArgumentNullException(nameof(models));
             this.OpenAIKey = openAIKey ?? throw new global::System.ArgumentNullException(nameof(openAIKey));
+            this.OcpApimSubscriptionKey = ocpApimSubscriptionKey;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.OpenAIEndpoint = openAIEndpoint ?? throw new global::System.ArgumentNullException(nameof(openAIEndpoint));
-            this.Provider = provider;
-            this.OcpApimSubscriptionKey = ocpApimSubscriptionKey;
             this.Name = name;
+            this.OpenAIEndpoint = openAIEndpoint ?? throw new global::System.ArgumentNullException(nameof(openAIEndpoint));
         }
 
         /// <summary>

@@ -125,6 +125,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TransferDestinationAssistant" /> class.
         /// </summary>
+        /// <param name="assistantName">
+        /// This is the assistant to transfer the call to.
+        /// </param>
         /// <param name="message">
         /// This is spoken to the customer before connecting them to the destination.<br/>
         /// Usage:<br/>
@@ -206,9 +209,6 @@ namespace Vapi
         ///     assistant: assistant2 first message (or model generated if firstMessageMode is set to `assistant-speaks-first-with-model-generated-message`)<br/>
         /// @default 'rolling-history'
         /// </param>
-        /// <param name="assistantName">
-        /// This is the assistant to transfer the call to.
-        /// </param>
         /// <param name="description">
         /// This is the description of the destination, used by the AI to choose when and how to transfer the call.
         /// </param>
@@ -222,10 +222,10 @@ namespace Vapi
             global::Vapi.TransferDestinationAssistantTransferMode? transferMode,
             string? description)
         {
-            this.AssistantName = assistantName ?? throw new global::System.ArgumentNullException(nameof(assistantName));
             this.Message = message;
             this.Type = type;
             this.TransferMode = transferMode;
+            this.AssistantName = assistantName ?? throw new global::System.ArgumentNullException(nameof(assistantName));
             this.Description = description;
         }
 

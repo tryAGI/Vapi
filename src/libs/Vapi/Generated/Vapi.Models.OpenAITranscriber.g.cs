@@ -45,11 +45,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenAITranscriber" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is the transcription provider that will be used.
-        /// </param>
         /// <param name="model">
         /// This is the model that will be used for the transcription.
+        /// </param>
+        /// <param name="provider">
+        /// This is the transcription provider that will be used.
         /// </param>
         /// <param name="language">
         /// This is the language that will be set for the transcription.
@@ -66,8 +66,8 @@ namespace Vapi
             global::Vapi.OpenAITranscriberLanguage? language,
             global::Vapi.FallbackTranscriberPlan? fallbackPlan)
         {
-            this.Model = model;
             this.Provider = provider;
+            this.Model = model;
             this.Language = language;
             this.FallbackPlan = fallbackPlan;
         }

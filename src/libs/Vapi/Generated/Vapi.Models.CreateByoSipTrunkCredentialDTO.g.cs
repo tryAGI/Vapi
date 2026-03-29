@@ -70,11 +70,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateByoSipTrunkCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This can be used to bring your own SIP trunks or to connect to a Carrier.
-        /// </param>
         /// <param name="gateways">
         /// This is the list of SIP trunk's gateways.
+        /// </param>
+        /// <param name="provider">
+        /// This can be used to bring your own SIP trunks or to connect to a Carrier.
         /// </param>
         /// <param name="outboundAuthenticationPlan">
         /// This can be used to configure the outbound authentication if required by the SIP trunk.
@@ -110,8 +110,8 @@ namespace Vapi
             global::Vapi.SbcConfiguration? sbcConfiguration,
             string? name)
         {
-            this.Gateways = gateways ?? throw new global::System.ArgumentNullException(nameof(gateways));
             this.Provider = provider;
+            this.Gateways = gateways ?? throw new global::System.ArgumentNullException(nameof(gateways));
             this.OutboundAuthenticationPlan = outboundAuthenticationPlan;
             this.OutboundLeadingPlusEnabled = outboundLeadingPlusEnabled;
             this.TechPrefix = techPrefix;

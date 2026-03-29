@@ -108,6 +108,19 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateStructuredOutputDTO" /> class.
         /// </summary>
+        /// <param name="name">
+        /// This is the name of the structured output.
+        /// </param>
+        /// <param name="schema">
+        /// This is the JSON Schema definition for the structured output.<br/>
+        /// This is required when creating a structured output. Defines the structure and validation rules for the data that will be extracted. Supports all JSON Schema features including:<br/>
+        /// - Objects and nested properties<br/>
+        /// - Arrays and array validation<br/>
+        /// - String, number, boolean, and null types<br/>
+        /// - Enums and const values<br/>
+        /// - Validation constraints (min/max, patterns, etc.)<br/>
+        /// - Composition with allOf, anyOf, oneOf
+        /// </param>
         /// <param name="type">
         /// This is the type of structured output.<br/>
         /// - 'ai': Uses an LLM to extract structured data from the conversation (default).<br/>
@@ -142,19 +155,6 @@ namespace Vapi
         /// Compliance configuration for this output. Only enable overrides if no sensitive data will be stored.<br/>
         /// Example: {"forceStoreOnHipaaEnabled":false}
         /// </param>
-        /// <param name="name">
-        /// This is the name of the structured output.
-        /// </param>
-        /// <param name="schema">
-        /// This is the JSON Schema definition for the structured output.<br/>
-        /// This is required when creating a structured output. Defines the structure and validation rules for the data that will be extracted. Supports all JSON Schema features including:<br/>
-        /// - Objects and nested properties<br/>
-        /// - Arrays and array validation<br/>
-        /// - String, number, boolean, and null types<br/>
-        /// - Enums and const values<br/>
-        /// - Validation constraints (min/max, patterns, etc.)<br/>
-        /// - Composition with allOf, anyOf, oneOf
-        /// </param>
         /// <param name="description">
         /// This is the description of what the structured output extracts.<br/>
         /// Use this to provide context about what data will be extracted and how it will be used.
@@ -181,12 +181,12 @@ namespace Vapi
             global::System.Collections.Generic.IList<string>? assistantIds,
             global::System.Collections.Generic.IList<string>? workflowIds)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Schema = schema ?? throw new global::System.ArgumentNullException(nameof(schema));
             this.Type = type;
             this.Regex = regex;
             this.Model = model;
             this.CompliancePlan = compliancePlan;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Schema = schema ?? throw new global::System.ArgumentNullException(nameof(schema));
             this.Description = description;
             this.AssistantIds = assistantIds;
             this.WorkflowIds = workflowIds;

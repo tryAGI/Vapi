@@ -77,6 +77,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="HumeVoice" /> class.
         /// </summary>
+        /// <param name="voiceId">
+        /// The ID of the particular voice you want to use.
+        /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
         /// Default Value: true<br/>
@@ -88,9 +91,6 @@ namespace Vapi
         /// <param name="model">
         /// This is the model that will be used.<br/>
         /// Example: octave2
-        /// </param>
-        /// <param name="voiceId">
-        /// The ID of the particular voice you want to use.
         /// </param>
         /// <param name="isCustomHumeVoice">
         /// Indicates whether the chosen voice is a preset Hume AI voice or a custom voice.<br/>
@@ -120,10 +120,10 @@ namespace Vapi
             string? description,
             global::Vapi.FallbackPlan? fallbackPlan)
         {
-            this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
             this.Model = model;
+            this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.IsCustomHumeVoice = isCustomHumeVoice;
             this.ChunkPlan = chunkPlan;
             this.Description = description;

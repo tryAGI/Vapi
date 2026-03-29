@@ -37,14 +37,14 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="SpkiPemPublicKeyConfig" /> class.
         /// </summary>
+        /// <param name="pem">
+        /// The PEM-encoded public key.
+        /// </param>
         /// <param name="name">
         /// Optional name of the key for identification purposes.
         /// </param>
         /// <param name="format">
         /// The format of the public key.
-        /// </param>
-        /// <param name="pem">
-        /// The PEM-encoded public key.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -54,9 +54,9 @@ namespace Vapi
             string? name,
             global::Vapi.SpkiPemPublicKeyConfigFormat format)
         {
-            this.Pem = pem ?? throw new global::System.ArgumentNullException(nameof(pem));
             this.Name = name;
             this.Format = format;
+            this.Pem = pem ?? throw new global::System.ArgumentNullException(nameof(pem));
         }
 
         /// <summary>

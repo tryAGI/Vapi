@@ -115,6 +115,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportTwilioPhoneNumberDTO" /> class.
         /// </summary>
+        /// <param name="twilioPhoneNumber">
+        /// These are the digits of the phone number you own on your Twilio.
+        /// </param>
+        /// <param name="twilioAccountSid">
+        /// This is your Twilio Account SID that will be used to handle this phone number.
+        /// </param>
         /// <param name="fallbackDestination">
         /// This is the fallback destination an inbound call will be transferred to if:<br/>
         /// 1. `assistantId` is not set<br/>
@@ -131,12 +137,6 @@ namespace Vapi
         /// If `true` or omitted (default), Vapi will configure both the voice and messaging URLs.<br/>
         /// @default true<br/>
         /// Default Value: true
-        /// </param>
-        /// <param name="twilioPhoneNumber">
-        /// These are the digits of the phone number you own on your Twilio.
-        /// </param>
-        /// <param name="twilioAccountSid">
-        /// This is your Twilio Account SID that will be used to handle this phone number.
         /// </param>
         /// <param name="twilioAuthToken">
         /// This is the Twilio Auth Token that will be used to handle this phone number.
@@ -187,11 +187,11 @@ namespace Vapi
             string? squadId,
             global::Vapi.Server? server)
         {
-            this.TwilioPhoneNumber = twilioPhoneNumber ?? throw new global::System.ArgumentNullException(nameof(twilioPhoneNumber));
-            this.TwilioAccountSid = twilioAccountSid ?? throw new global::System.ArgumentNullException(nameof(twilioAccountSid));
             this.FallbackDestination = fallbackDestination;
             this.Hooks = hooks;
             this.SmsEnabled = smsEnabled;
+            this.TwilioPhoneNumber = twilioPhoneNumber ?? throw new global::System.ArgumentNullException(nameof(twilioPhoneNumber));
+            this.TwilioAccountSid = twilioAccountSid ?? throw new global::System.ArgumentNullException(nameof(twilioAccountSid));
             this.TwilioAuthToken = twilioAuthToken;
             this.TwilioApiKey = twilioApiKey;
             this.TwilioApiSecret = twilioApiSecret;

@@ -39,11 +39,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionCreatedHook" /> class.
         /// </summary>
-        /// <param name="on">
-        /// This is the event that triggers this hook
-        /// </param>
         /// <param name="do">
         /// This is the set of actions to perform when the hook triggers.
+        /// </param>
+        /// <param name="on">
+        /// This is the event that triggers this hook
         /// </param>
         /// <param name="name">
         /// Optional name for this hook instance.<br/>
@@ -58,8 +58,8 @@ namespace Vapi
             global::Vapi.SessionCreatedHookOn on,
             string? name)
         {
-            this.Do = @do ?? throw new global::System.ArgumentNullException(nameof(@do));
             this.On = on;
+            this.Do = @do ?? throw new global::System.ArgumentNullException(nameof(@do));
             this.Name = name;
         }
 

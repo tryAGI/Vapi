@@ -60,20 +60,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="EvalOpenAIModel" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is the provider of the model (`openai`).
-        /// </param>
         /// <param name="model">
         /// This is the OpenAI model that will be used.<br/>
         /// When using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.<br/>
         /// This is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.
-        /// </param>
-        /// <param name="temperature">
-        /// This is the temperature of the model. For LLM-as-a-judge, it's recommended to set it between 0 - 0.3 to avoid hallucinations and ensure the model judges the output correctly based on the instructions.
-        /// </param>
-        /// <param name="maxTokens">
-        /// This is the max tokens of the model.<br/>
-        /// If your Judge instructions return `true` or `false` takes only 1 token (as per the OpenAI Tokenizer), and therefore is recommended to set it to a low number to force the model to return a short response.
         /// </param>
         /// <param name="messages">
         /// These are the messages which will instruct the AI Judge on how to evaluate the assistant message.<br/>
@@ -82,6 +72,16 @@ namespace Vapi
         /// The assistant message to be evaluated will be passed as the last message in the `messages` array and can be accessed using `{{messages[-1]}}`.<br/>
         /// It is recommended to use the system message to instruct the LLM how to evaluate the assistant message, and then use the first user message to pass the assistant message to be evaluated.<br/>
         /// Example: {
+        /// </param>
+        /// <param name="provider">
+        /// This is the provider of the model (`openai`).
+        /// </param>
+        /// <param name="temperature">
+        /// This is the temperature of the model. For LLM-as-a-judge, it's recommended to set it between 0 - 0.3 to avoid hallucinations and ensure the model judges the output correctly based on the instructions.
+        /// </param>
+        /// <param name="maxTokens">
+        /// This is the max tokens of the model.<br/>
+        /// If your Judge instructions return `true` or `false` takes only 1 token (as per the OpenAI Tokenizer), and therefore is recommended to set it to a low number to force the model to return a short response.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -93,11 +93,11 @@ namespace Vapi
             double? temperature,
             double? maxTokens)
         {
-            this.Model = model;
-            this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));
             this.Provider = provider;
+            this.Model = model;
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;
+            this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));
         }
 
         /// <summary>

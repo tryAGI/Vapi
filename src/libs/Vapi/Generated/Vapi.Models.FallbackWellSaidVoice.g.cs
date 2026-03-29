@@ -65,6 +65,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="FallbackWellSaidVoice" /> class.
         /// </summary>
+        /// <param name="voiceId">
+        /// The WellSaid speaker ID to synthesize.
+        /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
         /// Default Value: true<br/>
@@ -72,9 +75,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is the voice provider that will be used.
-        /// </param>
-        /// <param name="voiceId">
-        /// The WellSaid speaker ID to synthesize.
         /// </param>
         /// <param name="model">
         /// This is the model that will be used.
@@ -100,9 +100,9 @@ namespace Vapi
             global::System.Collections.Generic.IList<string>? libraryIds,
             global::Vapi.ChunkPlan? chunkPlan)
         {
-            this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
+            this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.Model = model;
             this.EnableSsml = enableSsml;
             this.LibraryIds = libraryIds;

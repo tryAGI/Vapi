@@ -79,7 +79,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="LangfuseCredential" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="publicKey">
         /// The public key for Langfuse project. Eg: pk-lf-...
         /// </param>
@@ -101,6 +100,7 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -118,6 +118,7 @@ namespace Vapi
             global::Vapi.LangfuseCredentialProvider provider,
             string? name)
         {
+            this.Provider = provider;
             this.PublicKey = publicKey ?? throw new global::System.ArgumentNullException(nameof(publicKey));
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.ApiUrl = apiUrl ?? throw new global::System.ArgumentNullException(nameof(apiUrl));
@@ -125,7 +126,6 @@ namespace Vapi
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Provider = provider;
             this.Name = name;
         }
 

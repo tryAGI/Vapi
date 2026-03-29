@@ -84,10 +84,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="GcpCredential" /> class.
         /// </summary>
-        /// <param name="provider"></param>
-        /// <param name="fallbackIndex">
-        /// This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.
-        /// </param>
         /// <param name="id">
         /// This is the unique identifier for the credential.
         /// </param>
@@ -100,12 +96,16 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
         /// </param>
-        /// <param name="name">
-        /// This is the name of credential. This is just for your reference.
-        /// </param>
         /// <param name="gcpKey">
         /// This is the GCP key. This is the JSON that can be generated in the Google Cloud Console at https://console.cloud.google.com/iam-admin/serviceaccounts/details/&lt;service-account-id&gt;/keys.<br/>
         /// The schema is identical to the JSON that GCP outputs.
+        /// </param>
+        /// <param name="provider"></param>
+        /// <param name="fallbackIndex">
+        /// This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.
+        /// </param>
+        /// <param name="name">
+        /// This is the name of credential. This is just for your reference.
         /// </param>
         /// <param name="region">
         /// This is the region of the GCP resource.
@@ -126,14 +126,14 @@ namespace Vapi
             string? region,
             global::Vapi.BucketPlan? bucketPlan)
         {
+            this.Provider = provider;
+            this.FallbackIndex = fallbackIndex;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.GcpKey = gcpKey ?? throw new global::System.ArgumentNullException(nameof(gcpKey));
-            this.Provider = provider;
-            this.FallbackIndex = fallbackIndex;
             this.Name = name;
+            this.GcpKey = gcpKey ?? throw new global::System.ArgumentNullException(nameof(gcpKey));
             this.Region = region;
             this.BucketPlan = bucketPlan;
         }

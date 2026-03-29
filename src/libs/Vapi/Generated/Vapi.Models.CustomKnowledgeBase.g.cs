@@ -79,9 +79,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomKnowledgeBase" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This knowledge base is bring your own knowledge base implementation.
-        /// </param>
         /// <param name="server">
         /// This is where the knowledge base request will be sent.<br/>
         /// Request Example:<br/>
@@ -125,6 +122,9 @@ namespace Vapi
         /// <param name="orgId">
         /// This is the org id of the knowledge base.
         /// </param>
+        /// <param name="provider">
+        /// This knowledge base is bring your own knowledge base implementation.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -134,10 +134,10 @@ namespace Vapi
             string orgId,
             global::Vapi.CustomKnowledgeBaseProvider provider)
         {
+            this.Provider = provider;
             this.Server = server ?? throw new global::System.ArgumentNullException(nameof(server));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.Provider = provider;
         }
 
         /// <summary>

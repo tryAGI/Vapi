@@ -117,6 +117,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCalendarCreateEventToolWithToolCall" /> class.
         /// </summary>
+        /// <param name="toolCall"></param>
         /// <param name="messages">
         /// These are the messages that will be spoken to the user as the tool is running.<br/>
         /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
@@ -124,7 +125,6 @@ namespace Vapi
         /// <param name="type">
         /// The type of tool. "google.calendar.event.create" for Google Calendar Create Event tool.
         /// </param>
-        /// <param name="toolCall"></param>
         /// <param name="rejectionPlan">
         /// This is the plan to reject a tool call based on the conversation state.<br/>
         /// // Example 1: Reject endCall if user didn't say goodbye<br/>
@@ -210,9 +210,9 @@ namespace Vapi
             global::Vapi.GoogleCalendarCreateEventToolWithToolCallType type,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
-            this.ToolCall = toolCall ?? throw new global::System.ArgumentNullException(nameof(toolCall));
             this.Messages = messages;
             this.Type = type;
+            this.ToolCall = toolCall ?? throw new global::System.ArgumentNullException(nameof(toolCall));
             this.RejectionPlan = rejectionPlan;
         }
 

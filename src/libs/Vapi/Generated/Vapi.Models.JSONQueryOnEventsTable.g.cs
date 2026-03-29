@@ -72,14 +72,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="JSONQueryOnEventsTable" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of query. Only allowed type is "vapiql-json".<br/>
-        /// Example: vapiql-json
-        /// </param>
-        /// <param name="table">
-        /// This is the table that will be queried.<br/>
-        /// Must be "events" for event-based insights.
-        /// </param>
         /// <param name="on">
         /// The event type to query<br/>
         /// Example: assistant.model.requestFailed
@@ -89,6 +81,14 @@ namespace Vapi
         /// - "count": Returns the raw count of matching events<br/>
         /// - "percentage": Returns (count of matching events / total calls) * 100<br/>
         /// Example: count
+        /// </param>
+        /// <param name="type">
+        /// This is the type of query. Only allowed type is "vapiql-json".<br/>
+        /// Example: vapiql-json
+        /// </param>
+        /// <param name="table">
+        /// This is the table that will be queried.<br/>
+        /// Must be "events" for event-based insights.
         /// </param>
         /// <param name="filters">
         /// These are the filters to apply to the events query.<br/>
@@ -110,10 +110,10 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.EventsTableStringCondition, global::Vapi.EventsTableNumberCondition, global::Vapi.EventsTableBooleanCondition>>? filters,
             string? name)
         {
-            this.On = on;
-            this.Operation = operation;
             this.Type = type;
             this.Table = table;
+            this.On = on;
+            this.Operation = operation;
             this.Filters = filters;
             this.Name = name;
         }

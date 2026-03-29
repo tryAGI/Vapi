@@ -88,9 +88,6 @@ namespace Vapi
         /// <param name="scorers">
         /// These are the scorers used to evaluate the test.
         /// </param>
-        /// <param name="type">
-        /// This is the type of the test, which must be voice.
-        /// </param>
         /// <param name="id">
         /// This is the unique identifier for the test.
         /// </param>
@@ -106,11 +103,14 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the test was last updated.
         /// </param>
-        /// <param name="name">
-        /// This is the name of the test.
-        /// </param>
         /// <param name="script">
         /// This is the script to be used for the voice test.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of the test, which must be voice.
+        /// </param>
+        /// <param name="name">
+        /// This is the name of the test.
         /// </param>
         /// <param name="numAttempts">
         /// This is the number of attempts allowed for the test.
@@ -131,14 +131,14 @@ namespace Vapi
             double? numAttempts)
         {
             this.Scorers = scorers ?? throw new global::System.ArgumentNullException(nameof(scorers));
+            this.Type = type;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.TestSuiteId = testSuiteId ?? throw new global::System.ArgumentNullException(nameof(testSuiteId));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Script = script ?? throw new global::System.ArgumentNullException(nameof(script));
-            this.Type = type;
             this.Name = name;
+            this.Script = script ?? throw new global::System.ArgumentNullException(nameof(script));
             this.NumAttempts = numAttempts;
         }
 

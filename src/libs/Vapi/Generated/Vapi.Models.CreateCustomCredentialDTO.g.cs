@@ -44,10 +44,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCustomCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="authenticationPlan">
         /// This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="encryptionPlan">
         /// This is the encryption plan for encrypting sensitive data. Currently supports public-key encryption.
         /// </param>
@@ -63,8 +63,8 @@ namespace Vapi
             global::Vapi.PublicKeyEncryptionPlan? encryptionPlan,
             string? name)
         {
-            this.AuthenticationPlan = authenticationPlan;
             this.Provider = provider;
+            this.AuthenticationPlan = authenticationPlan;
             this.EncryptionPlan = encryptionPlan;
             this.Name = name;
         }

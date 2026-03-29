@@ -55,6 +55,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ExactReplacement" /> class.
         /// </summary>
+        /// <param name="key">
+        /// This is the key to replace.
+        /// </param>
+        /// <param name="value">
+        /// This is the value that will replace the match.
+        /// </param>
         /// <param name="type">
         /// This is the exact replacement type. You can use this to replace a specific word or phrase with a different word or phrase.<br/>
         /// Usage:<br/>
@@ -72,12 +78,6 @@ namespace Vapi
         /// @default false<br/>
         /// Default Value: false
         /// </param>
-        /// <param name="key">
-        /// This is the key to replace.
-        /// </param>
-        /// <param name="value">
-        /// This is the value that will replace the match.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -87,10 +87,10 @@ namespace Vapi
             global::Vapi.ExactReplacementType type,
             bool? replaceAllEnabled)
         {
-            this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
-            this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
             this.Type = type;
             this.ReplaceAllEnabled = replaceAllEnabled;
+            this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
+            this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
         }
 
         /// <summary>

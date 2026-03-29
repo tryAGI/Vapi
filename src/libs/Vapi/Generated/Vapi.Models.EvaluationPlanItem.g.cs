@@ -63,15 +63,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationPlanItem" /> class.
         /// </summary>
-        /// <param name="structuredOutputId">
-        /// This is the ID of an existing structured output to use for evaluation.<br/>
-        /// Mutually exclusive with structuredOutput.
-        /// </param>
-        /// <param name="structuredOutput">
-        /// This is an inline structured output definition for evaluation.<br/>
-        /// Mutually exclusive with structuredOutputId.<br/>
-        /// Only primitive schema types (string, number, integer, boolean) are allowed.
-        /// </param>
         /// <param name="comparator">
         /// This is the comparison operator to use when evaluating the extracted value against the expected value.<br/>
         /// Available operators depend on the structured output's schema type:<br/>
@@ -83,6 +74,15 @@ namespace Vapi
         /// <param name="value">
         /// This is the expected value to compare against the extracted structured output result.<br/>
         /// Type should match the structured output's schema type.
+        /// </param>
+        /// <param name="structuredOutputId">
+        /// This is the ID of an existing structured output to use for evaluation.<br/>
+        /// Mutually exclusive with structuredOutput.
+        /// </param>
+        /// <param name="structuredOutput">
+        /// This is an inline structured output definition for evaluation.<br/>
+        /// Mutually exclusive with structuredOutputId.<br/>
+        /// Only primitive schema types (string, number, integer, boolean) are allowed.
         /// </param>
         /// <param name="required">
         /// This is whether this evaluation must pass for the simulation to pass.<br/>
@@ -99,10 +99,10 @@ namespace Vapi
             global::Vapi.CreateStructuredOutputDTO? structuredOutput,
             bool? required)
         {
-            this.Comparator = comparator;
-            this.Value = value;
             this.StructuredOutputId = structuredOutputId;
             this.StructuredOutput = structuredOutput;
+            this.Comparator = comparator;
+            this.Value = value;
             this.Required = required;
         }
 

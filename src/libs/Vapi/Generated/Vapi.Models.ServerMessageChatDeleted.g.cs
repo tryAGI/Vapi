@@ -69,6 +69,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerMessageChatDeleted" /> class.
         /// </summary>
+        /// <param name="chat">
+        /// This is the chat that was deleted.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
@@ -91,9 +94,6 @@ namespace Vapi
         /// <param name="call">
         /// This is the call that the message is associated with.
         /// </param>
-        /// <param name="chat">
-        /// This is the chat that was deleted.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -107,7 +107,6 @@ namespace Vapi
             global::Vapi.CreateCustomerDTO? customer,
             global::Vapi.Call? call)
         {
-            this.Chat = chat ?? throw new global::System.ArgumentNullException(nameof(chat));
             this.PhoneNumber = phoneNumber;
             this.Type = type;
             this.Timestamp = timestamp;
@@ -115,6 +114,7 @@ namespace Vapi
             this.Assistant = assistant;
             this.Customer = customer;
             this.Call = call;
+            this.Chat = chat ?? throw new global::System.ArgumentNullException(nameof(chat));
         }
 
         /// <summary>

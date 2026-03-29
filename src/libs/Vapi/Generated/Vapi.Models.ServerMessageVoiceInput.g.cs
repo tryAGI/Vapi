@@ -75,6 +75,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerMessageVoiceInput" /> class.
         /// </summary>
+        /// <param name="input">
+        /// This is the voice input content
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
@@ -100,9 +103,6 @@ namespace Vapi
         /// <param name="chat">
         /// This is the chat object.
         /// </param>
-        /// <param name="input">
-        /// This is the voice input content
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -117,7 +117,6 @@ namespace Vapi
             global::Vapi.Call? call,
             global::Vapi.Chat? chat)
         {
-            this.Input = input ?? throw new global::System.ArgumentNullException(nameof(input));
             this.PhoneNumber = phoneNumber;
             this.Type = type;
             this.Timestamp = timestamp;
@@ -126,6 +125,7 @@ namespace Vapi
             this.Customer = customer;
             this.Call = call;
             this.Chat = chat;
+            this.Input = input ?? throw new global::System.ArgumentNullException(nameof(input));
         }
 
         /// <summary>

@@ -87,7 +87,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AnthropicBedrockCredential" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="region">
         /// AWS region where Bedrock is configured.
         /// </param>
@@ -106,6 +105,7 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="authenticationArtifact">
         /// Stores the external ID (generated or user-provided) for future AssumeRole calls.
         /// </param>
@@ -131,13 +131,13 @@ namespace Vapi
             global::Vapi.AWSStsAuthenticationSession? authenticationSession,
             string? name)
         {
+            this.Provider = provider;
             this.Region = region;
             this.AuthenticationPlan = authenticationPlan;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Provider = provider;
             this.AuthenticationArtifact = authenticationArtifact;
             this.AuthenticationSession = authenticationSession;
             this.Name = name;

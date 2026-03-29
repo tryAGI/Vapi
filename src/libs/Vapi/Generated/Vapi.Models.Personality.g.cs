@@ -71,10 +71,6 @@ namespace Vapi
         /// <param name="id">
         /// This is the unique identifier for the personality.
         /// </param>
-        /// <param name="orgId">
-        /// This is the unique identifier for the organization this personality belongs to.<br/>
-        /// If null, this is a Vapi-provided default personality available to all organizations.
-        /// </param>
         /// <param name="createdAt">
         /// This is the ISO 8601 date-time string of when the personality was created.
         /// </param>
@@ -87,6 +83,10 @@ namespace Vapi
         /// <param name="assistant">
         /// This is the full assistant configuration for this personality.<br/>
         /// It defines the tester's voice, model, behavior via system prompt, and other settings.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the unique identifier for the organization this personality belongs to.<br/>
+        /// If null, this is a Vapi-provided default personality available to all organizations.
         /// </param>
         /// <param name="path">
         /// Optional folder path for organizing personalities.<br/>
@@ -106,11 +106,11 @@ namespace Vapi
             string? path)
         {
             this.Id = id;
+            this.OrgId = orgId;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Assistant = assistant ?? throw new global::System.ArgumentNullException(nameof(assistant));
-            this.OrgId = orgId;
             this.Path = path;
         }
 

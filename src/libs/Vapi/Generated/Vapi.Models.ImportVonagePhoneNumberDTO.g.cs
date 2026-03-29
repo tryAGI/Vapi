@@ -87,6 +87,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportVonagePhoneNumberDTO" /> class.
         /// </summary>
+        /// <param name="vonagePhoneNumber">
+        /// These are the digits of the phone number you own on your Vonage.
+        /// </param>
+        /// <param name="credentialId">
+        /// This is the credential you added in dashboard.vapi.ai/keys. This is used to configure the number to send inbound calls to Vapi, make outbound calls and do live call updates like transfers and hangups.
+        /// </param>
         /// <param name="fallbackDestination">
         /// This is the fallback destination an inbound call will be transferred to if:<br/>
         /// 1. `assistantId` is not set<br/>
@@ -96,12 +102,6 @@ namespace Vapi
         /// </param>
         /// <param name="hooks">
         /// This is the hooks that will be used for incoming calls to this phone number.
-        /// </param>
-        /// <param name="vonagePhoneNumber">
-        /// These are the digits of the phone number you own on your Vonage.
-        /// </param>
-        /// <param name="credentialId">
-        /// This is the credential you added in dashboard.vapi.ai/keys. This is used to configure the number to send inbound calls to Vapi, make outbound calls and do live call updates like transfers and hangups.
         /// </param>
         /// <param name="name">
         /// This is the name of the phone number. This is just for your own reference.
@@ -139,10 +139,10 @@ namespace Vapi
             string? squadId,
             global::Vapi.Server? server)
         {
-            this.VonagePhoneNumber = vonagePhoneNumber ?? throw new global::System.ArgumentNullException(nameof(vonagePhoneNumber));
-            this.CredentialId = credentialId ?? throw new global::System.ArgumentNullException(nameof(credentialId));
             this.FallbackDestination = fallbackDestination;
             this.Hooks = hooks;
+            this.VonagePhoneNumber = vonagePhoneNumber ?? throw new global::System.ArgumentNullException(nameof(vonagePhoneNumber));
+            this.CredentialId = credentialId ?? throw new global::System.ArgumentNullException(nameof(credentialId));
             this.Name = name;
             this.AssistantId = assistantId;
             this.WorkflowId = workflowId;

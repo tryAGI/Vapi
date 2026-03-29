@@ -145,17 +145,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="DtmfTool" /> class.
         /// </summary>
-        /// <param name="messages">
-        /// These are the messages that will be spoken to the user as the tool is running.<br/>
-        /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
-        /// </param>
-        /// <param name="type">
-        /// The type of tool. "dtmf" for DTMF tool.
-        /// </param>
-        /// <param name="sipInfoDtmfEnabled">
-        /// This enables sending DTMF tones via SIP INFO messages instead of RFC 2833 (RTP events). When enabled, DTMF digits will be sent using the SIP INFO method, which can be more reliable in some network configurations. Only relevant when using the `vapi.sip` transport.<br/>
-        /// Default Value: false
-        /// </param>
         /// <param name="id">
         /// This is the unique identifier for the tool.
         /// </param>
@@ -167,6 +156,17 @@ namespace Vapi
         /// </param>
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the tool was last updated.
+        /// </param>
+        /// <param name="messages">
+        /// These are the messages that will be spoken to the user as the tool is running.<br/>
+        /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
+        /// </param>
+        /// <param name="type">
+        /// The type of tool. "dtmf" for DTMF tool.
+        /// </param>
+        /// <param name="sipInfoDtmfEnabled">
+        /// This enables sending DTMF tones via SIP INFO messages instead of RFC 2833 (RTP events). When enabled, DTMF digits will be sent using the SIP INFO method, which can be more reliable in some network configurations. Only relevant when using the `vapi.sip` transport.<br/>
+        /// Default Value: false
         /// </param>
         /// <param name="rejectionPlan">
         /// This is the plan to reject a tool call based on the conversation state.<br/>
@@ -257,13 +257,13 @@ namespace Vapi
             bool? sipInfoDtmfEnabled,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
+            this.Messages = messages;
+            this.Type = type;
+            this.SipInfoDtmfEnabled = sipInfoDtmfEnabled;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Messages = messages;
-            this.Type = type;
-            this.SipInfoDtmfEnabled = sipInfoDtmfEnabled;
             this.RejectionPlan = rejectionPlan;
         }
 

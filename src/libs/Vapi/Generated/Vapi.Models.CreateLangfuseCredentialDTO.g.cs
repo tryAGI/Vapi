@@ -51,7 +51,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateLangfuseCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="publicKey">
         /// The public key for Langfuse project. Eg: pk-lf-...
         /// </param>
@@ -61,6 +60,7 @@ namespace Vapi
         /// <param name="apiUrl">
         /// The host URL for Langfuse project. Eg: https://cloud.langfuse.com
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -74,10 +74,10 @@ namespace Vapi
             global::Vapi.CreateLangfuseCredentialDTOProvider provider,
             string? name)
         {
+            this.Provider = provider;
             this.PublicKey = publicKey ?? throw new global::System.ArgumentNullException(nameof(publicKey));
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.ApiUrl = apiUrl ?? throw new global::System.ArgumentNullException(nameof(apiUrl));
-            this.Provider = provider;
             this.Name = name;
         }
 

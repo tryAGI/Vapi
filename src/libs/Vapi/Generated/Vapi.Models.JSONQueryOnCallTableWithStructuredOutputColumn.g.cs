@@ -72,6 +72,13 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="JSONQueryOnCallTableWithStructuredOutputColumn" /> class.
         /// </summary>
+        /// <param name="operation">
+        /// This is the aggregation operation to perform on the column.<br/>
+        /// When the column is a structured output type, the operation depends on the value of the structured output.<br/>
+        /// If the structured output is a string or boolean, the operation must be "count".<br/>
+        /// If the structured output is a number, the operation can be "average", "sum", "min", or "max".<br/>
+        /// Example: count
+        /// </param>
         /// <param name="type">
         /// This is the type of query. Only allowed type is "vapiql-json".<br/>
         /// Example: vapiql-json
@@ -87,13 +94,6 @@ namespace Vapi
         /// This is the column that will be queried in the call table.<br/>
         /// Structured Output Type columns are only to query on artifact.structuredOutputs[OutputID] column.<br/>
         /// Example: artifact.structuredOutputs[OutputID]
-        /// </param>
-        /// <param name="operation">
-        /// This is the aggregation operation to perform on the column.<br/>
-        /// When the column is a structured output type, the operation depends on the value of the structured output.<br/>
-        /// If the structured output is a string or boolean, the operation must be "count".<br/>
-        /// If the structured output is a number, the operation can be "average", "sum", "min", or "max".<br/>
-        /// Example: count
         /// </param>
         /// <param name="name">
         /// This is the name of the query.<br/>
@@ -111,11 +111,11 @@ namespace Vapi
             global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumnColumn column,
             string? name)
         {
-            this.Operation = operation;
             this.Type = type;
             this.Table = table;
             this.Filters = filters;
             this.Column = column;
+            this.Operation = operation;
             this.Name = name;
         }
 

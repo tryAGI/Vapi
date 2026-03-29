@@ -74,9 +74,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailDetectionCost" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of cost, always 'voicemail-detection' for this class.
-        /// </param>
         /// <param name="model">
         /// This is the model that was used to perform the analysis.
         /// </param>
@@ -98,6 +95,9 @@ namespace Vapi
         /// <param name="cost">
         /// This is the cost of the component in USD.
         /// </param>
+        /// <param name="type">
+        /// This is the type of cost, always 'voicemail-detection' for this class.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -111,6 +111,7 @@ namespace Vapi
             double cost,
             global::Vapi.VoicemailDetectionCostType type)
         {
+            this.Type = type;
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Provider = provider;
             this.PromptTextTokens = promptTextTokens;
@@ -118,7 +119,6 @@ namespace Vapi
             this.CompletionTextTokens = completionTextTokens;
             this.CompletionAudioTokens = completionAudioTokens;
             this.Cost = cost;
-            this.Type = type;
         }
 
         /// <summary>

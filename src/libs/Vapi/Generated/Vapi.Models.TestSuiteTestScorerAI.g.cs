@@ -31,11 +31,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TestSuiteTestScorerAI" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of the scorer, which must be AI.
-        /// </param>
         /// <param name="rubric">
         /// This is the rubric used by the AI scorer.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of the scorer, which must be AI.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Vapi
             string rubric,
             global::Vapi.TestSuiteTestScorerAIType type)
         {
-            this.Rubric = rubric ?? throw new global::System.ArgumentNullException(nameof(rubric));
             this.Type = type;
+            this.Rubric = rubric ?? throw new global::System.ArgumentNullException(nameof(rubric));
         }
 
         /// <summary>

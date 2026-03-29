@@ -59,10 +59,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseErrorEvent" /> class.
         /// </summary>
-        /// <param name="type">
-        /// Event type<br/>
-        /// Default Value: error
-        /// </param>
         /// <param name="code">
         /// Error code<br/>
         /// Example: ERR_SOMETHING
@@ -71,12 +67,16 @@ namespace Vapi
         /// Error message<br/>
         /// Example: Something went wrong
         /// </param>
-        /// <param name="param">
-        /// Parameter that caused the error
-        /// </param>
         /// <param name="sequenceNumber">
         /// Sequence number of the event<br/>
         /// Example: 1
+        /// </param>
+        /// <param name="param">
+        /// Parameter that caused the error
+        /// </param>
+        /// <param name="type">
+        /// Event type<br/>
+        /// Default Value: error
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -88,11 +88,11 @@ namespace Vapi
             string? param,
             global::Vapi.ResponseErrorEventType type = global::Vapi.ResponseErrorEventType.Error)
         {
+            this.Type = type;
             this.Code = code ?? throw new global::System.ArgumentNullException(nameof(code));
             this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
-            this.SequenceNumber = sequenceNumber;
-            this.Type = type;
             this.Param = param;
+            this.SequenceNumber = sequenceNumber;
         }
 
         /// <summary>

@@ -38,16 +38,16 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatEvalSystemMessageMock" /> class.
         /// </summary>
+        /// <param name="content">
+        /// This is the content of the system message that would have been added in the middle of the conversation.<br/>
+        /// Do not include the assistant prompt as a part of this message. It will automatically be fetched during runtime.<br/>
+        /// Example: You are a helpful assistant.
+        /// </param>
         /// <param name="role">
         /// This is the role of the message author.<br/>
         /// For a mock system message, the role is always 'system'<br/>
         /// @default 'system'<br/>
         /// Default Value: system
-        /// </param>
-        /// <param name="content">
-        /// This is the content of the system message that would have been added in the middle of the conversation.<br/>
-        /// Do not include the assistant prompt as a part of this message. It will automatically be fetched during runtime.<br/>
-        /// Example: You are a helpful assistant.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -56,8 +56,8 @@ namespace Vapi
             string content,
             global::Vapi.ChatEvalSystemMessageMockRole role = global::Vapi.ChatEvalSystemMessageMockRole.System)
         {
-            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.Role = role;
+            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
         }
 
         /// <summary>

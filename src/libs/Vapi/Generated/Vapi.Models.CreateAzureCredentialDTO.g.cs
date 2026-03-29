@@ -65,11 +65,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAzureCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="service">
         /// This is the service being used in Azure.<br/>
         /// Default Value: speech
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="region">
         /// This is the region of the Azure resource.
         /// </param>
@@ -97,8 +97,8 @@ namespace Vapi
             global::Vapi.AzureBlobStorageBucketPlan? bucketPlan,
             string? name)
         {
-            this.Service = service;
             this.Provider = provider;
+            this.Service = service;
             this.Region = region;
             this.ApiKey = apiKey;
             this.FallbackIndex = fallbackIndex;

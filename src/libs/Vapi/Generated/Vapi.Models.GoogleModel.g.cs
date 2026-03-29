@@ -93,6 +93,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleModel" /> class.
         /// </summary>
+        /// <param name="model">
+        /// This is the Google model that will be used.
+        /// </param>
         /// <param name="messages">
         /// This is the starting state for the conversation.
         /// </param>
@@ -106,9 +109,6 @@ namespace Vapi
         /// </param>
         /// <param name="knowledgeBase">
         /// These are the options for the knowledge base.
-        /// </param>
-        /// <param name="model">
-        /// This is the Google model that will be used.
         /// </param>
         /// <param name="provider"></param>
         /// <param name="realtimeConfig">
@@ -147,11 +147,11 @@ namespace Vapi
             bool? emotionRecognitionEnabled,
             double? numFastTurns)
         {
-            this.Model = model;
             this.Messages = messages;
             this.Tools = tools;
             this.ToolIds = toolIds;
             this.KnowledgeBase = knowledgeBase;
+            this.Model = model;
             this.Provider = provider;
             this.RealtimeConfig = realtimeConfig;
             this.Temperature = temperature;

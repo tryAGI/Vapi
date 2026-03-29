@@ -51,10 +51,6 @@ namespace Vapi
         /// <param name="id">
         /// This is the unique identifier for the streaming response.
         /// </param>
-        /// <param name="sessionId">
-        /// This is the ID of the session that will be used for the chat.<br/>
-        /// Helps track conversation context across multiple messages.
-        /// </param>
         /// <param name="path">
         /// This is the path to the content being updated.<br/>
         /// Format: `chat.output[{contentIndex}].content` where contentIndex identifies the specific content item.<br/>
@@ -62,6 +58,10 @@ namespace Vapi
         /// </param>
         /// <param name="delta">
         /// This is the incremental content chunk being streamed.
+        /// </param>
+        /// <param name="sessionId">
+        /// This is the ID of the session that will be used for the chat.<br/>
+        /// Helps track conversation context across multiple messages.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -73,9 +73,9 @@ namespace Vapi
             string? sessionId)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.SessionId = sessionId;
             this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
             this.Delta = delta ?? throw new global::System.ArgumentNullException(nameof(delta));
-            this.SessionId = sessionId;
         }
 
         /// <summary>

@@ -79,6 +79,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateLineInsightFromCallTableDTO" /> class.
         /// </summary>
+        /// <param name="queries">
+        /// These are the queries to run to generate the insight.
+        /// </param>
         /// <param name="name">
         /// This is the name of the Insight.
         /// </param>
@@ -111,9 +114,6 @@ namespace Vapi
         /// All results are grouped by the time range step by default.<br/>
         /// Example: [assistant_id]
         /// </param>
-        /// <param name="queries">
-        /// These are the queries to run to generate the insight.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -126,13 +126,13 @@ namespace Vapi
             global::Vapi.InsightTimeRangeWithStep? timeRange,
             global::Vapi.CreateLineInsightFromCallTableDTOGroupBy? groupBy)
         {
-            this.Queries = queries ?? throw new global::System.ArgumentNullException(nameof(queries));
             this.Name = name;
             this.Type = type;
             this.Formulas = formulas;
             this.Metadata = metadata;
             this.TimeRange = timeRange;
             this.GroupBy = groupBy;
+            this.Queries = queries ?? throw new global::System.ArgumentNullException(nameof(queries));
         }
 
         /// <summary>

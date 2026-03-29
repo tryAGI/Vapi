@@ -158,9 +158,6 @@ namespace Vapi
         /// When the eval run is cancelled by Vapi for any reason, the status is 'aborted'.<br/>
         /// Example: mockConversation.done
         /// </param>
-        /// <param name="eval">
-        /// This is the transient eval that will be run
-        /// </param>
         /// <param name="target">
         /// This is the target that will be run against the eval
         /// </param>
@@ -169,10 +166,6 @@ namespace Vapi
         /// <param name="createdAt"></param>
         /// <param name="startedAt"></param>
         /// <param name="endedAt"></param>
-        /// <param name="endedMessage">
-        /// This is the ended message when the eval run ended for any reason apart from mockConversation.done<br/>
-        /// Example: The Assistant returned an error
-        /// </param>
         /// <param name="results">
         /// This is the results of the eval or suite run.<br/>
         /// The array will have a single item for an eval run, and multiple items each corresponding to the an eval in a suite run in the same order as the evals in the suite.
@@ -184,6 +177,13 @@ namespace Vapi
         /// <param name="costs">
         /// This is the break up of costs of the eval or suite run.<br/>
         /// Example: [{ type: "model", model: "gpt-4o", cost: 0.01 }]
+        /// </param>
+        /// <param name="eval">
+        /// This is the transient eval that will be run
+        /// </param>
+        /// <param name="endedMessage">
+        /// This is the ended message when the eval run ended for any reason apart from mockConversation.done<br/>
+        /// Example: The Assistant returned an error
         /// </param>
         /// <param name="type">
         /// This is the type of the run.<br/>
@@ -216,17 +216,17 @@ namespace Vapi
         {
             this.Status = status;
             this.EndedReason = endedReason;
+            this.Eval = eval;
             this.Target = target;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.StartedAt = startedAt;
             this.EndedAt = endedAt;
+            this.EndedMessage = endedMessage;
             this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
             this.Cost = cost;
             this.Costs = costs ?? throw new global::System.ArgumentNullException(nameof(costs));
-            this.Eval = eval;
-            this.EndedMessage = endedMessage;
             this.Type = type;
             this.EvalId = evalId;
         }

@@ -72,7 +72,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="PlayHTCredential" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
@@ -88,10 +87,11 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
         /// </param>
+        /// <param name="userId"></param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
-        /// <param name="userId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -105,14 +105,14 @@ namespace Vapi
             global::Vapi.PlayHTCredentialProvider provider,
             string? name)
         {
+            this.Provider = provider;
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
-            this.Provider = provider;
             this.Name = name;
+            this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
         }
 
         /// <summary>

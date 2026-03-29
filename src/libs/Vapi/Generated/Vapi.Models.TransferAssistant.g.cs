@@ -117,13 +117,13 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TransferAssistant" /> class.
         /// </summary>
+        /// <param name="model">
+        /// Model configuration for the transfer assistant
+        /// </param>
         /// <param name="name">
         /// Optional name for the transfer assistant<br/>
         /// Default Value: transfer-assistant<br/>
         /// Example: Sales Transfer Assistant
-        /// </param>
-        /// <param name="model">
-        /// Model configuration for the transfer assistant
         /// </param>
         /// <param name="voice">
         /// These are the options for the transfer assistant's voice.
@@ -191,8 +191,8 @@ namespace Vapi
             global::Vapi.BackgroundSpeechDenoisingPlan? backgroundSpeechDenoisingPlan,
             double? silenceTimeoutSeconds)
         {
-            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Name = name;
+            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Voice = voice;
             this.Transcriber = transcriber;
             this.FirstMessage = firstMessage;

@@ -63,6 +63,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TextInsightFromCallTable" /> class.
         /// </summary>
+        /// <param name="queries">
+        /// These are the queries to run to generate the insight.<br/>
+        /// For Text Insights, we only allow a single query, or require a formula if multiple queries are provided
+        /// </param>
         /// <param name="name">
         /// This is the name of the Insight.
         /// </param>
@@ -86,10 +90,6 @@ namespace Vapi
         /// You can also use the query names as the variable in the formula.
         /// </param>
         /// <param name="timeRange"></param>
-        /// <param name="queries">
-        /// These are the queries to run to generate the insight.<br/>
-        /// For Text Insights, we only allow a single query, or require a formula if multiple queries are provided
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -100,11 +100,11 @@ namespace Vapi
             object? formula,
             global::Vapi.InsightTimeRange? timeRange)
         {
-            this.Queries = queries ?? throw new global::System.ArgumentNullException(nameof(queries));
             this.Name = name;
             this.Type = type;
             this.Formula = formula;
             this.TimeRange = timeRange;
+            this.Queries = queries ?? throw new global::System.ArgumentNullException(nameof(queries));
         }
 
         /// <summary>

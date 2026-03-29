@@ -51,11 +51,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkflowAnthropicBedrockModel" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is the provider of the model (`anthropic-bedrock`).
-        /// </param>
         /// <param name="model">
         /// This is the specific model that will be used.
+        /// </param>
+        /// <param name="provider">
+        /// This is the provider of the model (`anthropic-bedrock`).
         /// </param>
         /// <param name="thinking">
         /// This is the optional configuration for Anthropic's thinking feature.<br/>
@@ -77,8 +77,8 @@ namespace Vapi
             double? temperature,
             double? maxTokens)
         {
-            this.Model = model;
             this.Provider = provider;
+            this.Model = model;
             this.Thinking = thinking;
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;

@@ -46,9 +46,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TestSuiteRunScorerAI" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of the scorer, which must be AI.
-        /// </param>
         /// <param name="result">
         /// This is the result of the test suite.
         /// </param>
@@ -57,6 +54,9 @@ namespace Vapi
         /// </param>
         /// <param name="rubric">
         /// This is the rubric used by the AI scorer.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of the scorer, which must be AI.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -67,10 +67,10 @@ namespace Vapi
             string rubric,
             global::Vapi.TestSuiteRunScorerAIType type)
         {
+            this.Type = type;
             this.Result = result;
             this.Reasoning = reasoning ?? throw new global::System.ArgumentNullException(nameof(reasoning));
             this.Rubric = rubric ?? throw new global::System.ArgumentNullException(nameof(rubric));
-            this.Type = type;
         }
 
         /// <summary>

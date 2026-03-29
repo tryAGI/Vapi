@@ -53,16 +53,16 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AssistantMessageJudgePlanRegex" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of the judge plan.<br/>
-        /// Use 'regex' for a regex match on the content and tool calls - without using LLM-as-a-judge.<br/>
-        /// @default 'regex'
-        /// </param>
         /// <param name="content">
         /// This is what that will be used to evaluate the model's message content.<br/>
         /// The content will be evaluated against the regex pattern provided in the Judge Plan content field.<br/>
         /// Evaluation is considered successful if the regex pattern matches any part of the assistant message content.<br/>
         /// Example: /sunny/i
+        /// </param>
+        /// <param name="type">
+        /// This is the type of the judge plan.<br/>
+        /// Use 'regex' for a regex match on the content and tool calls - without using LLM-as-a-judge.<br/>
+        /// @default 'regex'
         /// </param>
         /// <param name="toolCalls">
         /// This is the tool calls that will be used to evaluate the model's message content.<br/>
@@ -84,8 +84,8 @@ namespace Vapi
             global::Vapi.AssistantMessageJudgePlanRegexType type,
             global::System.Collections.Generic.IList<global::Vapi.ChatEvalAssistantMessageMockToolCall>? toolCalls)
         {
-            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.Type = type;
+            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.ToolCalls = toolCalls;
         }
 

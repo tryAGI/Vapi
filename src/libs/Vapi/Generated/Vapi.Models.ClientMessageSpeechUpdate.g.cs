@@ -77,17 +77,17 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientMessageSpeechUpdate" /> class.
         /// </summary>
-        /// <param name="phoneNumber">
-        /// This is the phone number that the message is associated with.
-        /// </param>
-        /// <param name="type">
-        /// This is the type of the message. "speech-update" is sent whenever assistant or user start or stop speaking.
-        /// </param>
         /// <param name="status">
         /// This is the status of the speech update.
         /// </param>
         /// <param name="role">
         /// This is the role which the speech update is for.
+        /// </param>
+        /// <param name="phoneNumber">
+        /// This is the phone number that the message is associated with.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of the message. "speech-update" is sent whenever assistant or user start or stop speaking.
         /// </param>
         /// <param name="turn">
         /// This is the turn number of the speech update (0-indexed).
@@ -118,10 +118,10 @@ namespace Vapi
             global::Vapi.CreateCustomerDTO? customer,
             global::Vapi.CreateAssistantDTO? assistant)
         {
-            this.Status = status;
-            this.Role = role;
             this.PhoneNumber = phoneNumber;
             this.Type = type;
+            this.Status = status;
+            this.Role = role;
             this.Turn = turn;
             this.Timestamp = timestamp;
             this.Call = call;

@@ -145,6 +145,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNode" /> class.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="type">
         /// This is the Conversation node. This can be used to start a conversation with the customer.<br/>
         /// The flow is:<br/>
@@ -221,7 +222,6 @@ namespace Vapi
         /// This will be extracted as `{{ userAge }}` and `{{ userName }}` respectively.<br/>
         /// Note: The `schema` field is required for Conversation nodes if you want to extract variables from the user's responses. `aliases` is just a convenience.
         /// </param>
-        /// <param name="name"></param>
         /// <param name="isStart">
         /// This is whether or not the node is the start of the workflow.
         /// </param>
@@ -245,7 +245,6 @@ namespace Vapi
             bool? isStart,
             object? metadata)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Type = type;
             this.Model = model;
             this.Transcriber = transcriber;
@@ -255,6 +254,7 @@ namespace Vapi
             this.Prompt = prompt;
             this.GlobalNodePlan = globalNodePlan;
             this.VariableExtractionPlan = variableExtractionPlan;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.IsStart = isStart;
             this.Metadata = metadata;
         }

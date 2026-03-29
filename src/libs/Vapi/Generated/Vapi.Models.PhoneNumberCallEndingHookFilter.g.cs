@@ -38,14 +38,14 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumberCallEndingHookFilter" /> class.
         /// </summary>
+        /// <param name="oneOf">
+        /// This is the array of assistant-request related ended reasons to match against
+        /// </param>
         /// <param name="type">
         /// This is the type of filter - currently only "oneOf" is supported
         /// </param>
         /// <param name="key">
         /// This is the key to filter on - only "call.endedReason" is allowed for phone number call ending hooks
-        /// </param>
-        /// <param name="oneOf">
-        /// This is the array of assistant-request related ended reasons to match against
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,9 +55,9 @@ namespace Vapi
             global::Vapi.PhoneNumberCallEndingHookFilterType type,
             global::Vapi.PhoneNumberCallEndingHookFilterKey key)
         {
-            this.OneOf = oneOf ?? throw new global::System.ArgumentNullException(nameof(oneOf));
             this.Type = type;
             this.Key = key;
+            this.OneOf = oneOf ?? throw new global::System.ArgumentNullException(nameof(oneOf));
         }
 
         /// <summary>

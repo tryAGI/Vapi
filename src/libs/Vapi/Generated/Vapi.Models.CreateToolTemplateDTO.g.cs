@@ -71,13 +71,13 @@ namespace Vapi
         /// <param name="visibility">
         /// Default Value: private
         /// </param>
-        /// <param name="type">
-        /// Default Value: tool
-        /// </param>
         /// <param name="name">
         /// The name of the template. This is just for your own reference.
         /// </param>
         /// <param name="provider"></param>
+        /// <param name="type">
+        /// Default Value: tool
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif

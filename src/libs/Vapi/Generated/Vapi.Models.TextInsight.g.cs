@@ -91,6 +91,22 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TextInsight" /> class.
         /// </summary>
+        /// <param name="queries">
+        /// These are the queries to run to generate the insight.<br/>
+        /// For Text Insights, we only allow a single query, or require a formula if multiple queries are provided
+        /// </param>
+        /// <param name="id">
+        /// This is the unique identifier for the Insight.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the unique identifier for the org that this Insight belongs to.
+        /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the Insight was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the Insight was last updated.
+        /// </param>
         /// <param name="name">
         /// This is the name of the Insight.
         /// </param>
@@ -114,22 +130,6 @@ namespace Vapi
         /// You can also use the query names as the variable in the formula.
         /// </param>
         /// <param name="timeRange"></param>
-        /// <param name="queries">
-        /// These are the queries to run to generate the insight.<br/>
-        /// For Text Insights, we only allow a single query, or require a formula if multiple queries are provided
-        /// </param>
-        /// <param name="id">
-        /// This is the unique identifier for the Insight.
-        /// </param>
-        /// <param name="orgId">
-        /// This is the unique identifier for the org that this Insight belongs to.
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the Insight was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the Insight was last updated.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -144,15 +144,15 @@ namespace Vapi
             object? formula,
             global::Vapi.InsightTimeRange? timeRange)
         {
+            this.Name = name;
+            this.Type = type;
+            this.Formula = formula;
+            this.TimeRange = timeRange;
             this.Queries = queries ?? throw new global::System.ArgumentNullException(nameof(queries));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Name = name;
-            this.Type = type;
-            this.Formula = formula;
-            this.TimeRange = timeRange;
         }
 
         /// <summary>

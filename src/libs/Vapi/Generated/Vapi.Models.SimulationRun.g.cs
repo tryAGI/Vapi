@@ -124,6 +124,18 @@ namespace Vapi
         /// <param name="queuedAt">
         /// When the run was queued
         /// </param>
+        /// <param name="createdAt">
+        /// ISO 8601 date-time when created
+        /// </param>
+        /// <param name="updatedAt">
+        /// ISO 8601 date-time when last updated
+        /// </param>
+        /// <param name="simulations">
+        /// Array of simulations and/or suites to run
+        /// </param>
+        /// <param name="target">
+        /// Target to test against
+        /// </param>
         /// <param name="startedAt">
         /// When the run started
         /// </param>
@@ -133,20 +145,8 @@ namespace Vapi
         /// <param name="endedReason">
         /// Reason the run ended
         /// </param>
-        /// <param name="createdAt">
-        /// ISO 8601 date-time when created
-        /// </param>
-        /// <param name="updatedAt">
-        /// ISO 8601 date-time when last updated
-        /// </param>
         /// <param name="itemCounts">
         /// Aggregate counts of run items by status
-        /// </param>
-        /// <param name="simulations">
-        /// Array of simulations and/or suites to run
-        /// </param>
-        /// <param name="target">
-        /// Target to test against
         /// </param>
         /// <param name="iterations">
         /// Number of times to run each simulation (default: 1)<br/>
@@ -178,14 +178,14 @@ namespace Vapi
             this.OrgId = orgId;
             this.Status = status;
             this.QueuedAt = queuedAt;
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
-            this.Simulations = simulations ?? throw new global::System.ArgumentNullException(nameof(simulations));
-            this.Target = target;
             this.StartedAt = startedAt;
             this.EndedAt = endedAt;
             this.EndedReason = endedReason;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.ItemCounts = itemCounts;
+            this.Simulations = simulations ?? throw new global::System.ArgumentNullException(nameof(simulations));
+            this.Target = target;
             this.Iterations = iterations;
             this.Transport = transport;
         }

@@ -60,20 +60,20 @@ namespace Vapi
         /// <param name="table">
         /// This is the table you want to query.
         /// </param>
+        /// <param name="name">
+        /// This is the name of the query. This will be used to identify the query in the response.
+        /// </param>
+        /// <param name="operations">
+        /// This is the list of operations you want to perform.
+        /// </param>
         /// <param name="groupBy">
         /// This is the list of columns you want to group by.
         /// </param>
         /// <param name="groupByVariableValue">
         /// This is the list of variable value keys you want to group by.
         /// </param>
-        /// <param name="name">
-        /// This is the name of the query. This will be used to identify the query in the response.
-        /// </param>
         /// <param name="timeRange">
         /// This is the time range for the query.
-        /// </param>
-        /// <param name="operations">
-        /// This is the list of operations you want to perform.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -87,11 +87,11 @@ namespace Vapi
             global::Vapi.TimeRange? timeRange)
         {
             this.Table = table;
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Operations = operations ?? throw new global::System.ArgumentNullException(nameof(operations));
             this.GroupBy = groupBy;
             this.GroupByVariableValue = groupByVariableValue;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.TimeRange = timeRange;
+            this.Operations = operations ?? throw new global::System.ArgumentNullException(nameof(operations));
         }
 
         /// <summary>

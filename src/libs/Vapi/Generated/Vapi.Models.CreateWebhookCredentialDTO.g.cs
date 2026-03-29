@@ -38,10 +38,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWebhookCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="authenticationPlan">
         /// This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -53,8 +53,8 @@ namespace Vapi
             global::Vapi.CreateWebhookCredentialDTOProvider provider,
             string? name)
         {
-            this.AuthenticationPlan = authenticationPlan;
             this.Provider = provider;
+            this.AuthenticationPlan = authenticationPlan;
             this.Name = name;
         }
 

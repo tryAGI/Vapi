@@ -38,14 +38,14 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CallHookFilter" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of filter - currently only "oneOf" is supported
-        /// </param>
         /// <param name="key">
         /// This is the key to filter on (e.g. "call.endedReason")
         /// </param>
         /// <param name="oneOf">
         /// This is the array of possible values to match against
+        /// </param>
+        /// <param name="type">
+        /// This is the type of filter - currently only "oneOf" is supported
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,9 +55,9 @@ namespace Vapi
             global::System.Collections.Generic.IList<string> oneOf,
             global::Vapi.CallHookFilterType type)
         {
+            this.Type = type;
             this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
             this.OneOf = oneOf ?? throw new global::System.ArgumentNullException(nameof(oneOf));
-            this.Type = type;
         }
 
         /// <summary>

@@ -37,10 +37,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateHumeCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -52,8 +52,8 @@ namespace Vapi
             global::Vapi.CreateHumeCredentialDTOProvider provider,
             string? name)
         {
-            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Provider = provider;
+            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Name = name;
         }
 

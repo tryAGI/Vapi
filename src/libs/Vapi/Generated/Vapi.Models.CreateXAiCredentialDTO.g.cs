@@ -37,11 +37,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateXAiCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is the api key for Grok in XAi's console. Get it from here: https://console.x.ai
-        /// </param>
         /// <param name="apiKey">
         /// This is not returned in the API.
+        /// </param>
+        /// <param name="provider">
+        /// This is the api key for Grok in XAi's console. Get it from here: https://console.x.ai
         /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
@@ -54,8 +54,8 @@ namespace Vapi
             global::Vapi.CreateXAiCredentialDTOProvider provider,
             string? name)
         {
-            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Provider = provider;
+            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Name = name;
         }
 

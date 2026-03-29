@@ -121,14 +121,20 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerMessageEndOfCallReport" /> class.
         /// </summary>
+        /// <param name="endedReason">
+        /// This is the reason the call ended. This can also be found at `call.endedReason` on GET /call/:id.
+        /// </param>
+        /// <param name="artifact">
+        /// These are the artifacts from the call. This can also be found at `call.artifact` on GET /call/:id.
+        /// </param>
+        /// <param name="analysis">
+        /// This is the analysis of the call. This can also be found at `call.analysis` on GET /call/:id.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
         /// <param name="type">
         /// This is the type of the message. "end-of-call-report" is sent when the call ends and post-processing is complete.
-        /// </param>
-        /// <param name="endedReason">
-        /// This is the reason the call ended. This can also be found at `call.endedReason` on GET /call/:id.
         /// </param>
         /// <param name="cost">
         /// This is the cost of the call in USD. This can also be found at `call.cost` on GET /call/:id.
@@ -143,9 +149,6 @@ namespace Vapi
         /// <param name="timestamp">
         /// This is the timestamp of the message.
         /// </param>
-        /// <param name="artifact">
-        /// These are the artifacts from the call. This can also be found at `call.artifact` on GET /call/:id.
-        /// </param>
         /// <param name="assistant">
         /// This is the assistant that the message is associated with.
         /// </param>
@@ -157,9 +160,6 @@ namespace Vapi
         /// </param>
         /// <param name="chat">
         /// This is the chat object.
-        /// </param>
-        /// <param name="analysis">
-        /// This is the analysis of the call. This can also be found at `call.analysis` on GET /call/:id.
         /// </param>
         /// <param name="startedAt">
         /// This is the ISO 8601 date-time string of when the call started. This can also be found at `call.startedAt` on GET /call/:id.
@@ -191,19 +191,19 @@ namespace Vapi
             global::System.DateTime? endedAt,
             global::Vapi.Compliance? compliance)
         {
-            this.EndedReason = endedReason;
-            this.Artifact = artifact ?? throw new global::System.ArgumentNullException(nameof(artifact));
-            this.Analysis = analysis ?? throw new global::System.ArgumentNullException(nameof(analysis));
             this.PhoneNumber = phoneNumber;
             this.Type = type;
+            this.EndedReason = endedReason;
             this.Cost = cost;
             this.Costs = costs;
             this.Destination = destination;
             this.Timestamp = timestamp;
+            this.Artifact = artifact ?? throw new global::System.ArgumentNullException(nameof(artifact));
             this.Assistant = assistant;
             this.Customer = customer;
             this.Call = call;
             this.Chat = chat;
+            this.Analysis = analysis ?? throw new global::System.ArgumentNullException(nameof(analysis));
             this.StartedAt = startedAt;
             this.EndedAt = endedAt;
             this.Compliance = compliance;

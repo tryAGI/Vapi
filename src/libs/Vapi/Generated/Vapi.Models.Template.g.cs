@@ -93,19 +93,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="Template" /> class.
         /// </summary>
-        /// <param name="details"></param>
-        /// <param name="providerDetails"></param>
-        /// <param name="metadata"></param>
-        /// <param name="visibility">
-        /// Default Value: private
-        /// </param>
-        /// <param name="type">
-        /// Default Value: tool
-        /// </param>
-        /// <param name="name">
-        /// The name of the template. This is just for your own reference.
-        /// </param>
-        /// <param name="provider"></param>
         /// <param name="id">
         /// The unique identifier for the template.
         /// </param>
@@ -117,6 +104,19 @@ namespace Vapi
         /// </param>
         /// <param name="updatedAt">
         /// The ISO 8601 date-time string of when the template was last updated.
+        /// </param>
+        /// <param name="details"></param>
+        /// <param name="providerDetails"></param>
+        /// <param name="metadata"></param>
+        /// <param name="visibility">
+        /// Default Value: private
+        /// </param>
+        /// <param name="name">
+        /// The name of the template. This is just for your own reference.
+        /// </param>
+        /// <param name="provider"></param>
+        /// <param name="type">
+        /// Default Value: tool
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -134,10 +134,6 @@ namespace Vapi
             global::Vapi.TemplateProvider? provider,
             global::Vapi.TemplateType type = global::Vapi.TemplateType.Tool)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.Details = details;
             this.ProviderDetails = providerDetails;
             this.Metadata = metadata;
@@ -145,6 +141,10 @@ namespace Vapi
             this.Type = type;
             this.Name = name;
             this.Provider = provider;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>

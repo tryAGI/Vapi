@@ -24,9 +24,9 @@ namespace Vapi
 
         /// <summary>
         /// Array of prefixes to match. Do not include the + prefix. Inbound calls from numbers starting with any of these prefixes will trigger the hook actions.<br/>
-        /// Example: [91, 86, 7]
+        /// Example: [7, 86, 91]
         /// </summary>
-        /// <example>[91, 86, 7]</example>
+        /// <example>[7, 86, 91]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("startsWith")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> StartsWith { get; set; }
@@ -40,15 +40,15 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumberCallRingingHookFilter" /> class.
         /// </summary>
+        /// <param name="startsWith">
+        /// Array of prefixes to match. Do not include the + prefix. Inbound calls from numbers starting with any of these prefixes will trigger the hook actions.<br/>
+        /// Example: [7, 86, 91]
+        /// </param>
         /// <param name="type">
         /// This is the type of filter - matches when the specified field starts with any of the given prefixes
         /// </param>
         /// <param name="key">
         /// The field to check. Currently only "number" (the caller's phone number) is supported.
-        /// </param>
-        /// <param name="startsWith">
-        /// Array of prefixes to match. Do not include the + prefix. Inbound calls from numbers starting with any of these prefixes will trigger the hook actions.<br/>
-        /// Example: [91, 86, 7]
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -58,9 +58,9 @@ namespace Vapi
             global::Vapi.PhoneNumberCallRingingHookFilterType type,
             global::Vapi.PhoneNumberCallRingingHookFilterKey key)
         {
-            this.StartsWith = startsWith ?? throw new global::System.ArgumentNullException(nameof(startsWith));
             this.Type = type;
             this.Key = key;
+            this.StartsWith = startsWith ?? throw new global::System.ArgumentNullException(nameof(startsWith));
         }
 
         /// <summary>

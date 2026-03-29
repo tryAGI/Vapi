@@ -53,6 +53,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="FallbackAzureVoice" /> class.
         /// </summary>
+        /// <param name="voiceId">
+        /// This is the provider-specific ID that will be used.
+        /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
         /// Default Value: true<br/>
@@ -60,9 +63,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is the voice provider that will be used.
-        /// </param>
-        /// <param name="voiceId">
-        /// This is the provider-specific ID that will be used.
         /// </param>
         /// <param name="speed">
         /// This is the speed multiplier that will be used.
@@ -80,9 +80,9 @@ namespace Vapi
             double? speed,
             global::Vapi.ChunkPlan? chunkPlan)
         {
-            this.VoiceId = voiceId;
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
+            this.VoiceId = voiceId;
             this.Speed = speed;
             this.ChunkPlan = chunkPlan;
         }

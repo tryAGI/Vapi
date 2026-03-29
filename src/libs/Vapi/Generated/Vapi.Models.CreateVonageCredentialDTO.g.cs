@@ -44,11 +44,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateVonageCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="apiSecret">
         /// This is not returned in the API.
         /// </param>
         /// <param name="apiKey"></param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -61,9 +61,9 @@ namespace Vapi
             global::Vapi.CreateVonageCredentialDTOProvider provider,
             string? name)
         {
+            this.Provider = provider;
             this.ApiSecret = apiSecret ?? throw new global::System.ArgumentNullException(nameof(apiSecret));
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
-            this.Provider = provider;
             this.Name = name;
         }
 

@@ -38,16 +38,16 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatEvalUserMessageMock" /> class.
         /// </summary>
+        /// <param name="content">
+        /// This is the content of the user message.<br/>
+        /// This is the message that the user would have sent.<br/>
+        /// Example: Hello, how are you?
+        /// </param>
         /// <param name="role">
         /// This is the role of the message author.<br/>
         /// For a mock user message, the role is always 'user'<br/>
         /// @default 'user'<br/>
         /// Default Value: user
-        /// </param>
-        /// <param name="content">
-        /// This is the content of the user message.<br/>
-        /// This is the message that the user would have sent.<br/>
-        /// Example: Hello, how are you?
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -56,8 +56,8 @@ namespace Vapi
             string content,
             global::Vapi.ChatEvalUserMessageMockRole role = global::Vapi.ChatEvalUserMessageMockRole.User)
         {
-            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.Role = role;
+            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
         }
 
         /// <summary>

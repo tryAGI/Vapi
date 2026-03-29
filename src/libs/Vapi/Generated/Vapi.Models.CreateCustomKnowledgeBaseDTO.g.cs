@@ -65,9 +65,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCustomKnowledgeBaseDTO" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This knowledge base is bring your own knowledge base implementation.
-        /// </param>
         /// <param name="server">
         /// This is where the knowledge base request will be sent.<br/>
         /// Request Example:<br/>
@@ -105,6 +102,9 @@ namespace Vapi
         /// }<br/>
         /// ```
         /// </param>
+        /// <param name="provider">
+        /// This knowledge base is bring your own knowledge base implementation.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -112,8 +112,8 @@ namespace Vapi
             global::Vapi.Server server,
             global::Vapi.CreateCustomKnowledgeBaseDTOProvider provider)
         {
-            this.Server = server ?? throw new global::System.ArgumentNullException(nameof(server));
             this.Provider = provider;
+            this.Server = server ?? throw new global::System.ArgumentNullException(nameof(server));
         }
 
         /// <summary>

@@ -44,13 +44,13 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateMinimaxCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
         /// <param name="groupId">
         /// This is the Minimax Group ID.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -63,9 +63,9 @@ namespace Vapi
             global::Vapi.CreateMinimaxCredentialDTOProvider provider,
             string? name)
         {
+            this.Provider = provider;
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.GroupId = groupId ?? throw new global::System.ArgumentNullException(nameof(groupId));
-            this.Provider = provider;
             this.Name = name;
         }
 

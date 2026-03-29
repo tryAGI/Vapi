@@ -321,14 +321,14 @@ namespace Vapi
         /// <param name="concurrencyLimitIncluded">
         /// This is the default concurrency limit for the subscription.
         /// </param>
+        /// <param name="concurrencyLimitPurchased">
+        /// This is the purchased add-on concurrency limit for the subscription.
+        /// </param>
         /// <param name="phoneNumbersCounter">
         /// This is the number of free phone numbers the subscription has
         /// </param>
         /// <param name="phoneNumbersIncluded">
         /// This is the maximum number of free phone numbers the subscription can have
-        /// </param>
-        /// <param name="concurrencyLimitPurchased">
-        /// This is the purchased add-on concurrency limit for the subscription.
         /// </param>
         /// <param name="monthlyChargeScheduleId">
         /// This is the ID of the monthly job that charges for subscription add ons and phone numbers.
@@ -488,9 +488,9 @@ namespace Vapi
             this.Credits = credits ?? throw new global::System.ArgumentNullException(nameof(credits));
             this.ConcurrencyCounter = concurrencyCounter;
             this.ConcurrencyLimitIncluded = concurrencyLimitIncluded;
-            this.ConcurrencyLimitPurchased = concurrencyLimitPurchased;
             this.PhoneNumbersCounter = phoneNumbersCounter;
             this.PhoneNumbersIncluded = phoneNumbersIncluded;
+            this.ConcurrencyLimitPurchased = concurrencyLimitPurchased;
             this.MonthlyChargeScheduleId = monthlyChargeScheduleId;
             this.MonthlyCreditCheckScheduleId = monthlyCreditCheckScheduleId;
             this.StripeCustomerId = stripeCustomerId;

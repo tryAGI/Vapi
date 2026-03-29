@@ -37,11 +37,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CallHookCallEnding" /> class.
         /// </summary>
-        /// <param name="on">
-        /// This is the event that triggers this hook
-        /// </param>
         /// <param name="do">
         /// This is the set of actions to perform when the hook triggers
+        /// </param>
+        /// <param name="on">
+        /// This is the event that triggers this hook
         /// </param>
         /// <param name="filters">
         /// This is the set of filters that must match for the hook to trigger
@@ -54,8 +54,8 @@ namespace Vapi
             global::Vapi.CallHookCallEndingOn on,
             global::System.Collections.Generic.IList<global::Vapi.CallHookFilter>? filters)
         {
-            this.Do = @do ?? throw new global::System.ArgumentNullException(nameof(@do));
             this.On = on;
+            this.Do = @do ?? throw new global::System.ArgumentNullException(nameof(@do));
             this.Filters = filters;
         }
 

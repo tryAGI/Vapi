@@ -49,11 +49,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateEvalRunDTO" /> class.
         /// </summary>
-        /// <param name="eval">
-        /// This is the transient eval that will be run
-        /// </param>
         /// <param name="target">
         /// This is the target that will be run against the eval
+        /// </param>
+        /// <param name="eval">
+        /// This is the transient eval that will be run
         /// </param>
         /// <param name="type">
         /// This is the type of the run.<br/>
@@ -73,8 +73,8 @@ namespace Vapi
             global::Vapi.CreateEvalRunDTOType type,
             string? evalId)
         {
-            this.Target = target;
             this.Eval = eval;
+            this.Target = target;
             this.Type = type;
             this.EvalId = evalId;
         }

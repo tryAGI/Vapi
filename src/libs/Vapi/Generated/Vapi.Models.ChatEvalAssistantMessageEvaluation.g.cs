@@ -44,12 +44,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatEvalAssistantMessageEvaluation" /> class.
         /// </summary>
-        /// <param name="role">
-        /// This is the role of the message author.<br/>
-        /// For an assistant message evaluation, the role is always 'assistant'<br/>
-        /// @default 'assistant'<br/>
-        /// Default Value: assistant
-        /// </param>
         /// <param name="judgePlan">
         /// This is the judge plan that instructs how to evaluate the assistant message.<br/>
         /// The assistant message can be evaluated against fixed content (exact match or RegEx) or with an LLM-as-judge by defining the evaluation criteria in a prompt.
@@ -57,6 +51,12 @@ namespace Vapi
         /// <param name="continuePlan">
         /// This is the plan for how the overall evaluation will proceed after the assistant message is evaluated.<br/>
         /// This lets you configure whether to stop the evaluation if this message fails, and whether to override any content for future turns
+        /// </param>
+        /// <param name="role">
+        /// This is the role of the message author.<br/>
+        /// For an assistant message evaluation, the role is always 'assistant'<br/>
+        /// @default 'assistant'<br/>
+        /// Default Value: assistant
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -66,8 +66,8 @@ namespace Vapi
             global::Vapi.AssistantMessageEvaluationContinuePlan? continuePlan,
             global::Vapi.ChatEvalAssistantMessageEvaluationRole role = global::Vapi.ChatEvalAssistantMessageEvaluationRole.Assistant)
         {
-            this.JudgePlan = judgePlan;
             this.Role = role;
+            this.JudgePlan = judgePlan;
             this.ContinuePlan = continuePlan;
         }
 

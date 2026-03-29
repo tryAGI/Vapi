@@ -73,6 +73,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TransferDestinationSip" /> class.
         /// </summary>
+        /// <param name="sipUri">
+        /// This is the SIP URI to transfer the call to.
+        /// </param>
         /// <param name="message">
         /// This is spoken to the customer before connecting them to the destination.<br/>
         /// Usage:<br/>
@@ -81,9 +84,6 @@ namespace Vapi
         /// This accepts a string or a ToolMessageStart class. Latter is useful if you want to specify multiple messages for different languages through the `contents` field.
         /// </param>
         /// <param name="type"></param>
-        /// <param name="sipUri">
-        /// This is the SIP URI to transfer the call to.
-        /// </param>
         /// <param name="callerId">
         /// This is the caller ID to use when transferring the call to the `sipUri`.<br/>
         /// Usage:<br/>
@@ -115,9 +115,9 @@ namespace Vapi
             object? sipHeaders,
             string? description)
         {
-            this.SipUri = sipUri ?? throw new global::System.ArgumentNullException(nameof(sipUri));
             this.Message = message;
             this.Type = type;
+            this.SipUri = sipUri ?? throw new global::System.ArgumentNullException(nameof(sipUri));
             this.CallerId = callerId;
             this.TransferPlan = transferPlan;
             this.SipHeaders = sipHeaders;

@@ -19,6 +19,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Code,
+        /// <summary>
+        /// 
+        /// </summary>
         Computer,
         /// <summary>
         /// 
@@ -112,6 +116,7 @@ namespace Vapi
             {
                 ToolControllerUpdateRequestDiscriminatorType.ApiRequest => "apiRequest",
                 ToolControllerUpdateRequestDiscriminatorType.Bash => "bash",
+                ToolControllerUpdateRequestDiscriminatorType.Code => "code",
                 ToolControllerUpdateRequestDiscriminatorType.Computer => "computer",
                 ToolControllerUpdateRequestDiscriminatorType.Dtmf => "dtmf",
                 ToolControllerUpdateRequestDiscriminatorType.EndCall => "endCall",
@@ -144,6 +149,7 @@ namespace Vapi
             {
                 "apiRequest" => ToolControllerUpdateRequestDiscriminatorType.ApiRequest,
                 "bash" => ToolControllerUpdateRequestDiscriminatorType.Bash,
+                "code" => ToolControllerUpdateRequestDiscriminatorType.Code,
                 "computer" => ToolControllerUpdateRequestDiscriminatorType.Computer,
                 "dtmf" => ToolControllerUpdateRequestDiscriminatorType.Dtmf,
                 "endCall" => ToolControllerUpdateRequestDiscriminatorType.EndCall,

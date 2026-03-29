@@ -62,6 +62,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ToolNode" /> class.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="type">
         /// This is the Tool node. This can be used to call a tool in your workflow.<br/>
         /// The flow is:<br/>
@@ -77,7 +78,6 @@ namespace Vapi
         /// <param name="toolId">
         /// This is the tool to call. To use a transient tool, send `tool` instead.
         /// </param>
-        /// <param name="name"></param>
         /// <param name="isStart">
         /// This is whether or not the node is the start of the workflow.
         /// </param>
@@ -95,10 +95,10 @@ namespace Vapi
             bool? isStart,
             object? metadata)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Type = type;
             this.Tool = tool;
             this.ToolId = toolId;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.IsStart = isStart;
             this.Metadata = metadata;
         }

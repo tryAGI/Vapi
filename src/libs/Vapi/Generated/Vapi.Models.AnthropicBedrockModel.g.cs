@@ -94,6 +94,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AnthropicBedrockModel" /> class.
         /// </summary>
+        /// <param name="model">
+        /// The specific Anthropic/Claude model that will be used via Bedrock.
+        /// </param>
         /// <param name="messages">
         /// This is the starting state for the conversation.
         /// </param>
@@ -110,9 +113,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// The provider identifier for Anthropic via AWS Bedrock.
-        /// </param>
-        /// <param name="model">
-        /// The specific Anthropic/Claude model that will be used via Bedrock.
         /// </param>
         /// <param name="thinking">
         /// Optional configuration for Anthropic's thinking feature.<br/>
@@ -151,12 +151,12 @@ namespace Vapi
             bool? emotionRecognitionEnabled,
             double? numFastTurns)
         {
-            this.Model = model;
             this.Messages = messages;
             this.Tools = tools;
             this.ToolIds = toolIds;
             this.KnowledgeBase = knowledgeBase;
             this.Provider = provider;
+            this.Model = model;
             this.Thinking = thinking;
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;

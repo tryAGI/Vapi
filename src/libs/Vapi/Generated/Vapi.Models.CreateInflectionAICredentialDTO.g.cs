@@ -37,11 +37,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateInflectionAICredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This is the api key for Pi in InflectionAI's console. Get it from here: https://developers.inflection.ai/keys, billing will need to be setup
-        /// </param>
         /// <param name="apiKey">
         /// This is not returned in the API.
+        /// </param>
+        /// <param name="provider">
+        /// This is the api key for Pi in InflectionAI's console. Get it from here: https://developers.inflection.ai/keys, billing will need to be setup
         /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
@@ -54,8 +54,8 @@ namespace Vapi
             global::Vapi.CreateInflectionAICredentialDTOProvider provider,
             string? name)
         {
-            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Provider = provider;
+            this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.Name = name;
         }
 

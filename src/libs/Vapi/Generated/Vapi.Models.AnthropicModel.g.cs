@@ -94,6 +94,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AnthropicModel" /> class.
         /// </summary>
+        /// <param name="model">
+        /// The specific Anthropic/Claude model that will be used.
+        /// </param>
         /// <param name="messages">
         /// This is the starting state for the conversation.
         /// </param>
@@ -107,9 +110,6 @@ namespace Vapi
         /// </param>
         /// <param name="knowledgeBase">
         /// These are the options for the knowledge base.
-        /// </param>
-        /// <param name="model">
-        /// The specific Anthropic/Claude model that will be used.
         /// </param>
         /// <param name="provider">
         /// The provider identifier for Anthropic.
@@ -151,11 +151,11 @@ namespace Vapi
             bool? emotionRecognitionEnabled,
             double? numFastTurns)
         {
-            this.Model = model;
             this.Messages = messages;
             this.Tools = tools;
             this.ToolIds = toolIds;
             this.KnowledgeBase = knowledgeBase;
+            this.Model = model;
             this.Provider = provider;
             this.Thinking = thinking;
             this.Temperature = temperature;

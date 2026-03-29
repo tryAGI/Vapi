@@ -45,16 +45,16 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TransportCost" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of cost, always 'transport' for this class.
-        /// </param>
-        /// <param name="provider"></param>
         /// <param name="minutes">
         /// This is the minutes of `transport` usage. This should match `call.endedAt` - `call.startedAt`.
         /// </param>
         /// <param name="cost">
         /// This is the cost of the component in USD.
         /// </param>
+        /// <param name="type">
+        /// This is the type of cost, always 'transport' for this class.
+        /// </param>
+        /// <param name="provider"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -64,10 +64,10 @@ namespace Vapi
             global::Vapi.TransportCostType type,
             global::Vapi.TransportCostProvider? provider)
         {
-            this.Minutes = minutes;
-            this.Cost = cost;
             this.Type = type;
             this.Provider = provider;
+            this.Minutes = minutes;
+            this.Cost = cost;
         }
 
         /// <summary>

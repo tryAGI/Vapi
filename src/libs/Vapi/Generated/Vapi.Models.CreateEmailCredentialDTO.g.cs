@@ -37,10 +37,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateEmailCredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="email">
         /// The recipient email address for alerts
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -52,8 +52,8 @@ namespace Vapi
             global::Vapi.CreateEmailCredentialDTOProvider provider,
             string? name)
         {
-            this.Email = email ?? throw new global::System.ArgumentNullException(nameof(email));
             this.Provider = provider;
+            this.Email = email ?? throw new global::System.ArgumentNullException(nameof(email));
             this.Name = name;
         }
 

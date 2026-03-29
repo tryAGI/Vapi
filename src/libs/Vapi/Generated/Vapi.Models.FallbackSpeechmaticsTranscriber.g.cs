@@ -130,6 +130,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="FallbackSpeechmaticsTranscriber" /> class.
         /// </summary>
+        /// <param name="customVocabulary">
+        /// Example: [{"content":"Speechmatics","soundsLike":["speech mattix"]}]
+        /// </param>
         /// <param name="provider">
         /// This is the transcription provider that will be used.
         /// </param>
@@ -160,9 +163,6 @@ namespace Vapi
         /// @default 3000<br/>
         /// Default Value: 3000<br/>
         /// Example: 1500
-        /// </param>
-        /// <param name="customVocabulary">
-        /// Example: [{"content":"Speechmatics","soundsLike":["speech mattix"]}]
         /// </param>
         /// <param name="numeralStyle">
         /// This controls how numbers, dates, currencies, and other entities are formatted in the transcription output.<br/>
@@ -206,7 +206,6 @@ namespace Vapi
             bool? removeDisfluencies,
             double? minimumSpeechDuration)
         {
-            this.CustomVocabulary = customVocabulary ?? throw new global::System.ArgumentNullException(nameof(customVocabulary));
             this.Provider = provider;
             this.Model = model;
             this.Language = language;
@@ -214,6 +213,7 @@ namespace Vapi
             this.Region = region;
             this.EnableDiarization = enableDiarization;
             this.MaxDelay = maxDelay;
+            this.CustomVocabulary = customVocabulary ?? throw new global::System.ArgumentNullException(nameof(customVocabulary));
             this.NumeralStyle = numeralStyle;
             this.EndOfTurnSensitivity = endOfTurnSensitivity;
             this.RemoveDisfluencies = removeDisfluencies;

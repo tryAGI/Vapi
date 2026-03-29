@@ -101,6 +101,21 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="PieInsight" /> class.
         /// </summary>
+        /// <param name="queries">
+        /// These are the queries to run to generate the insight.
+        /// </param>
+        /// <param name="id">
+        /// This is the unique identifier for the Insight.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the unique identifier for the org that this Insight belongs to.
+        /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the Insight was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the Insight was last updated.
+        /// </param>
         /// <param name="name">
         /// This is the name of the Insight.
         /// </param>
@@ -130,21 +145,6 @@ namespace Vapi
         /// All results are grouped by the time range step by default.<br/>
         /// Example: [assistant_id]
         /// </param>
-        /// <param name="queries">
-        /// These are the queries to run to generate the insight.
-        /// </param>
-        /// <param name="id">
-        /// This is the unique identifier for the Insight.
-        /// </param>
-        /// <param name="orgId">
-        /// This is the unique identifier for the org that this Insight belongs to.
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the Insight was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the Insight was last updated.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -160,16 +160,16 @@ namespace Vapi
             global::Vapi.InsightTimeRange? timeRange,
             global::Vapi.PieInsightGroupBy? groupBy)
         {
-            this.Queries = queries ?? throw new global::System.ArgumentNullException(nameof(queries));
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.Name = name;
             this.Type = type;
             this.Formulas = formulas;
             this.TimeRange = timeRange;
             this.GroupBy = groupBy;
+            this.Queries = queries ?? throw new global::System.ArgumentNullException(nameof(queries));
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>

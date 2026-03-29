@@ -47,11 +47,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        MetaLlamaLlama4Maverick17b128eInstruct,
+        MetaLlamaDividellama4Maverick17b128eInstruct,
         /// <summary>
         /// 
         /// </summary>
-        MetaLlamaLlama4Scout17b16eInstruct,
+        MetaLlamaDividellama4Scout17b16eInstruct,
         /// <summary>
         /// 
         /// </summary>
@@ -59,15 +59,15 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        MoonshotaiKimiK2Instruct0905,
+        MoonshotaiDividekimiK2Instruct0905,
         /// <summary>
         /// 
         /// </summary>
-        OpenaiGptOss120b,
+        OpenaiDividegptOss120b,
         /// <summary>
         /// 
         /// </summary>
-        OpenaiGptOss20b,
+        OpenaiDividegptOss20b,
     }
 
     /// <summary>
@@ -91,12 +91,12 @@ namespace Vapi
                 GroqModelModel.Llama3370bVersatile => "llama-3.3-70b-versatile",
                 GroqModelModel.Llama370b8192 => "llama3-70b-8192",
                 GroqModelModel.Llama38b8192 => "llama3-8b-8192",
-                GroqModelModel.MetaLlamaLlama4Maverick17b128eInstruct => "meta-llama/llama-4-maverick-17b-128e-instruct",
-                GroqModelModel.MetaLlamaLlama4Scout17b16eInstruct => "meta-llama/llama-4-scout-17b-16e-instruct",
+                GroqModelModel.MetaLlamaDividellama4Maverick17b128eInstruct => "meta-llama/llama-4-maverick-17b-128e-instruct",
+                GroqModelModel.MetaLlamaDividellama4Scout17b16eInstruct => "meta-llama/llama-4-scout-17b-16e-instruct",
                 GroqModelModel.MistralSaba24b => "mistral-saba-24b",
-                GroqModelModel.MoonshotaiKimiK2Instruct0905 => "moonshotai/kimi-k2-instruct-0905",
-                GroqModelModel.OpenaiGptOss120b => "openai/gpt-oss-120b",
-                GroqModelModel.OpenaiGptOss20b => "openai/gpt-oss-20b",
+                GroqModelModel.MoonshotaiDividekimiK2Instruct0905 => "moonshotai/kimi-k2-instruct-0905",
+                GroqModelModel.OpenaiDividegptOss120b => "openai/gpt-oss-120b",
+                GroqModelModel.OpenaiDividegptOss20b => "openai/gpt-oss-20b",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -116,12 +116,12 @@ namespace Vapi
                 "llama-3.3-70b-versatile" => GroqModelModel.Llama3370bVersatile,
                 "llama3-70b-8192" => GroqModelModel.Llama370b8192,
                 "llama3-8b-8192" => GroqModelModel.Llama38b8192,
-                "meta-llama/llama-4-maverick-17b-128e-instruct" => GroqModelModel.MetaLlamaLlama4Maverick17b128eInstruct,
-                "meta-llama/llama-4-scout-17b-16e-instruct" => GroqModelModel.MetaLlamaLlama4Scout17b16eInstruct,
+                "meta-llama/llama-4-maverick-17b-128e-instruct" => GroqModelModel.MetaLlamaDividellama4Maverick17b128eInstruct,
+                "meta-llama/llama-4-scout-17b-16e-instruct" => GroqModelModel.MetaLlamaDividellama4Scout17b16eInstruct,
                 "mistral-saba-24b" => GroqModelModel.MistralSaba24b,
-                "moonshotai/kimi-k2-instruct-0905" => GroqModelModel.MoonshotaiKimiK2Instruct0905,
-                "openai/gpt-oss-120b" => GroqModelModel.OpenaiGptOss120b,
-                "openai/gpt-oss-20b" => GroqModelModel.OpenaiGptOss20b,
+                "moonshotai/kimi-k2-instruct-0905" => GroqModelModel.MoonshotaiDividekimiK2Instruct0905,
+                "openai/gpt-oss-120b" => GroqModelModel.OpenaiDividegptOss120b,
+                "openai/gpt-oss-20b" => GroqModelModel.OpenaiDividegptOss20b,
                 _ => null,
             };
         }

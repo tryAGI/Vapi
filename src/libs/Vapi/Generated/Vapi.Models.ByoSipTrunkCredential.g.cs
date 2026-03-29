@@ -98,9 +98,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ByoSipTrunkCredential" /> class.
         /// </summary>
-        /// <param name="provider">
-        /// This can be used to bring your own SIP trunks or to connect to a Carrier.
-        /// </param>
         /// <param name="id">
         /// This is the unique identifier for the credential.
         /// </param>
@@ -113,11 +110,14 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
         /// </param>
-        /// <param name="name">
-        /// This is the name of credential. This is just for your reference.
-        /// </param>
         /// <param name="gateways">
         /// This is the list of SIP trunk's gateways.
+        /// </param>
+        /// <param name="provider">
+        /// This can be used to bring your own SIP trunks or to connect to a Carrier.
+        /// </param>
+        /// <param name="name">
+        /// This is the name of credential. This is just for your reference.
         /// </param>
         /// <param name="outboundAuthenticationPlan">
         /// This can be used to configure the outbound authentication if required by the SIP trunk.
@@ -154,13 +154,13 @@ namespace Vapi
             string? sipDiversionHeader,
             global::Vapi.SbcConfiguration? sbcConfiguration)
         {
+            this.Provider = provider;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Gateways = gateways ?? throw new global::System.ArgumentNullException(nameof(gateways));
-            this.Provider = provider;
             this.Name = name;
+            this.Gateways = gateways ?? throw new global::System.ArgumentNullException(nameof(gateways));
             this.OutboundAuthenticationPlan = outboundAuthenticationPlan;
             this.OutboundLeadingPlusEnabled = outboundLeadingPlusEnabled;
             this.TechPrefix = techPrefix;

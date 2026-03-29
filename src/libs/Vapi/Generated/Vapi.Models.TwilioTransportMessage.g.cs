@@ -31,11 +31,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TwilioTransportMessage" /> class.
         /// </summary>
-        /// <param name="transport">
-        /// This is the transport type.
-        /// </param>
         /// <param name="twiml">
         /// This is the TwiML to send to the Twilio call.
+        /// </param>
+        /// <param name="transport">
+        /// This is the transport type.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Vapi
             string twiml,
             global::Vapi.TwilioTransportMessageTransport transport)
         {
-            this.Twiml = twiml ?? throw new global::System.ArgumentNullException(nameof(twiml));
             this.Transport = transport;
+            this.Twiml = twiml ?? throw new global::System.ArgumentNullException(nameof(twiml));
         }
 
         /// <summary>

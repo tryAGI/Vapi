@@ -62,6 +62,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientMessageSessionDeleted" /> class.
         /// </summary>
+        /// <param name="session">
+        /// This is the session that was deleted.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
@@ -80,9 +83,6 @@ namespace Vapi
         /// <param name="assistant">
         /// This is the assistant that the message is associated with.
         /// </param>
-        /// <param name="session">
-        /// This is the session that was deleted.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -95,13 +95,13 @@ namespace Vapi
             global::Vapi.CreateCustomerDTO? customer,
             global::Vapi.CreateAssistantDTO? assistant)
         {
-            this.Session = session ?? throw new global::System.ArgumentNullException(nameof(session));
             this.PhoneNumber = phoneNumber;
             this.Type = type;
             this.Timestamp = timestamp;
             this.Call = call;
             this.Customer = customer;
             this.Assistant = assistant;
+            this.Session = session ?? throw new global::System.ArgumentNullException(nameof(session));
         }
 
         /// <summary>

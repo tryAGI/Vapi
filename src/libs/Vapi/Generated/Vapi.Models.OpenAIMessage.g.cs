@@ -31,8 +31,8 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenAIMessage" /> class.
         /// </summary>
-        /// <param name="content"></param>
         /// <param name="role"></param>
+        /// <param name="content"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -40,8 +40,8 @@ namespace Vapi
             global::Vapi.OpenAIMessageRole role,
             string? content)
         {
-            this.Role = role;
             this.Content = content;
+            this.Role = role;
         }
 
         /// <summary>

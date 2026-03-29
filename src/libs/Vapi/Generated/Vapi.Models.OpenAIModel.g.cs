@@ -126,6 +126,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenAIModel" /> class.
         /// </summary>
+        /// <param name="model">
+        /// This is the OpenAI model that will be used.<br/>
+        /// When using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.<br/>
+        /// This is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.<br/>
+        /// @default undefined
+        /// </param>
         /// <param name="messages">
         /// This is the starting state for the conversation.
         /// </param>
@@ -142,12 +148,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is the provider that will be used for the model.
-        /// </param>
-        /// <param name="model">
-        /// This is the OpenAI model that will be used.<br/>
-        /// When using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.<br/>
-        /// This is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.<br/>
-        /// @default undefined
         /// </param>
         /// <param name="fallbackModels">
         /// These are the fallback models that will be used if the primary model fails. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest fallbacks that make sense.<br/>
@@ -206,12 +206,12 @@ namespace Vapi
             bool? emotionRecognitionEnabled,
             double? numFastTurns)
         {
-            this.Model = model;
             this.Messages = messages;
             this.Tools = tools;
             this.ToolIds = toolIds;
             this.KnowledgeBase = knowledgeBase;
             this.Provider = provider;
+            this.Model = model;
             this.FallbackModels = fallbackModels;
             this.ToolStrictCompatibilityMode = toolStrictCompatibilityMode;
             this.PromptCacheRetention = promptCacheRetention;

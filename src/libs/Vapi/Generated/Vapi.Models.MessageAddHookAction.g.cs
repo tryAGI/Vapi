@@ -40,12 +40,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageAddHookAction" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of action - must be "message.add"
-        /// </param>
         /// <param name="message">
         /// The message to add to the conversation in OpenAI format<br/>
         /// Example: {"role":"system","content":"Context update from hook"}
+        /// </param>
+        /// <param name="type">
+        /// This is the type of action - must be "message.add"
         /// </param>
         /// <param name="triggerResponseEnabled">
         /// Whether to trigger an assistant response after adding the message<br/>
@@ -59,8 +59,8 @@ namespace Vapi
             global::Vapi.MessageAddHookActionType type,
             bool? triggerResponseEnabled)
         {
-            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
             this.Type = type;
+            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
             this.TriggerResponseEnabled = triggerResponseEnabled;
         }
 

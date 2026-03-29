@@ -13,27 +13,27 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        x__,
+        Eq,
         /// <summary>
         /// 
         /// </summary>
-        x_3,
+        Gt,
         /// <summary>
         /// 
         /// </summary>
-        x__3,
+        Gte,
         /// <summary>
         /// 
         /// </summary>
-        x_,
+        Lt,
         /// <summary>
         /// 
         /// </summary>
-        x_2,
+        Lte,
         /// <summary>
         /// 
         /// </summary>
-        x__2,
+        Neq,
     }
 
     /// <summary>
@@ -48,12 +48,12 @@ namespace Vapi
         {
             return value switch
             {
-                FilterDateTypeColumnOnCallTableOperator.x__ => "!=",
-                FilterDateTypeColumnOnCallTableOperator.x_3 => "<",
-                FilterDateTypeColumnOnCallTableOperator.x__3 => "<=",
-                FilterDateTypeColumnOnCallTableOperator.x_ => "=",
-                FilterDateTypeColumnOnCallTableOperator.x_2 => ">",
-                FilterDateTypeColumnOnCallTableOperator.x__2 => ">=",
+                FilterDateTypeColumnOnCallTableOperator.Eq => "eq",
+                FilterDateTypeColumnOnCallTableOperator.Gt => "gt",
+                FilterDateTypeColumnOnCallTableOperator.Gte => "gte",
+                FilterDateTypeColumnOnCallTableOperator.Lt => "lt",
+                FilterDateTypeColumnOnCallTableOperator.Lte => "lte",
+                FilterDateTypeColumnOnCallTableOperator.Neq => "neq",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -64,12 +64,12 @@ namespace Vapi
         {
             return value switch
             {
-                "!=" => FilterDateTypeColumnOnCallTableOperator.x__,
-                "<" => FilterDateTypeColumnOnCallTableOperator.x_3,
-                "<=" => FilterDateTypeColumnOnCallTableOperator.x__3,
-                "=" => FilterDateTypeColumnOnCallTableOperator.x_,
-                ">" => FilterDateTypeColumnOnCallTableOperator.x_2,
-                ">=" => FilterDateTypeColumnOnCallTableOperator.x__2,
+                "eq" => FilterDateTypeColumnOnCallTableOperator.Eq,
+                "gt" => FilterDateTypeColumnOnCallTableOperator.Gt,
+                "gte" => FilterDateTypeColumnOnCallTableOperator.Gte,
+                "lt" => FilterDateTypeColumnOnCallTableOperator.Lt,
+                "lte" => FilterDateTypeColumnOnCallTableOperator.Lte,
+                "neq" => FilterDateTypeColumnOnCallTableOperator.Neq,
                 _ => null,
             };
         }

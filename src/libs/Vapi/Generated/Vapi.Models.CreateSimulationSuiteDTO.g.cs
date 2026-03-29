@@ -51,11 +51,11 @@ namespace Vapi
         /// This is the name of the simulation suite.<br/>
         /// Example: Checkout Flow Tests
         /// </param>
-        /// <param name="slackWebhookUrl">
-        /// This is the Slack webhook URL for notifications.
-        /// </param>
         /// <param name="simulationIds">
         /// This is the list of simulation IDs to include in the suite.
+        /// </param>
+        /// <param name="slackWebhookUrl">
+        /// This is the Slack webhook URL for notifications.
         /// </param>
         /// <param name="path">
         /// Optional folder path for organizing simulation suites.<br/>
@@ -72,8 +72,8 @@ namespace Vapi
             string? path)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.SimulationIds = simulationIds ?? throw new global::System.ArgumentNullException(nameof(simulationIds));
             this.SlackWebhookUrl = slackWebhookUrl;
+            this.SimulationIds = simulationIds ?? throw new global::System.ArgumentNullException(nameof(simulationIds));
             this.Path = path;
         }
 

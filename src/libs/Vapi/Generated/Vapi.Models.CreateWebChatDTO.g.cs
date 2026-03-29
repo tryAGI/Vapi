@@ -84,6 +84,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWebChatDTO" /> class.
         /// </summary>
+        /// <param name="input">
+        /// This is the input text for the chat.<br/>
+        /// Can be a string or an array of chat messages.
+        /// </param>
         /// <param name="assistantId">
         /// This is the assistant ID to use for this chat. To use a transient assistant, use `assistant` instead.
         /// </param>
@@ -106,10 +110,6 @@ namespace Vapi
         /// <param name="customer">
         /// This is the customer information for the chat.<br/>
         /// Used to automatically manage sessions for repeat customers.
-        /// </param>
-        /// <param name="input">
-        /// This is the input text for the chat.<br/>
-        /// Can be a string or an array of chat messages.
         /// </param>
         /// <param name="stream">
         /// This is a flag that determines whether the response should be streamed.<br/>
@@ -136,13 +136,13 @@ namespace Vapi
             bool? stream,
             bool? sessionEnd)
         {
-            this.Input = input;
             this.AssistantId = assistantId;
             this.Assistant = assistant;
             this.SessionId = sessionId;
             this.SessionExpirationSeconds = sessionExpirationSeconds;
             this.AssistantOverrides = assistantOverrides;
             this.Customer = customer;
+            this.Input = input;
             this.Stream = stream;
             this.SessionEnd = sessionEnd;
         }

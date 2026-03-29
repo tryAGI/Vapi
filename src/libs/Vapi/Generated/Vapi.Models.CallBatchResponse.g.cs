@@ -37,14 +37,14 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CallBatchResponse" /> class.
         /// </summary>
-        /// <param name="subscriptionLimits">
-        /// Subscription limits at the end of this batch
-        /// </param>
         /// <param name="results">
         /// This is the list of calls that were created.
         /// </param>
         /// <param name="errors">
         /// This is the list of calls that failed to be created.
+        /// </param>
+        /// <param name="subscriptionLimits">
+        /// Subscription limits at the end of this batch
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -54,9 +54,9 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.CallBatchError> errors,
             global::Vapi.SubscriptionLimits? subscriptionLimits)
         {
+            this.SubscriptionLimits = subscriptionLimits;
             this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
             this.Errors = errors ?? throw new global::System.ArgumentNullException(nameof(errors));
-            this.SubscriptionLimits = subscriptionLimits;
         }
 
         /// <summary>

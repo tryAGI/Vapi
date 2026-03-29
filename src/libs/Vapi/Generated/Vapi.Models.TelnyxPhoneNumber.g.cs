@@ -127,6 +127,24 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="TelnyxPhoneNumber" /> class.
         /// </summary>
+        /// <param name="id">
+        /// This is the unique identifier for the phone number.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the unique identifier for the org that this phone number belongs to.
+        /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the phone number was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the phone number was last updated.
+        /// </param>
+        /// <param name="number">
+        /// These are the digits of the phone number you own on your Telnyx.
+        /// </param>
+        /// <param name="credentialId">
+        /// This is the credential you added in dashboard.vapi.ai/keys. This is used to configure the number to send inbound calls to Vapi, make outbound calls and do live call updates like transfers and hangups.
+        /// </param>
         /// <param name="fallbackDestination">
         /// This is the fallback destination an inbound call will be transferred to if:<br/>
         /// 1. `assistantId` is not set<br/>
@@ -139,18 +157,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is to use numbers bought on Telnyx.
-        /// </param>
-        /// <param name="id">
-        /// This is the unique identifier for the phone number.
-        /// </param>
-        /// <param name="orgId">
-        /// This is the unique identifier for the org that this phone number belongs to.
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the phone number was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the phone number was last updated.
         /// </param>
         /// <param name="status">
         /// This is the status of the phone number.
@@ -177,12 +183,6 @@ namespace Vapi
         /// 2. phoneNumber.server<br/>
         /// 3. org.server
         /// </param>
-        /// <param name="number">
-        /// These are the digits of the phone number you own on your Telnyx.
-        /// </param>
-        /// <param name="credentialId">
-        /// This is the credential you added in dashboard.vapi.ai/keys. This is used to configure the number to send inbound calls to Vapi, make outbound calls and do live call updates like transfers and hangups.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -203,21 +203,21 @@ namespace Vapi
             string? squadId,
             global::Vapi.Server? server)
         {
+            this.FallbackDestination = fallbackDestination;
+            this.Hooks = hooks;
+            this.Provider = provider;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
-            this.CredentialId = credentialId ?? throw new global::System.ArgumentNullException(nameof(credentialId));
-            this.FallbackDestination = fallbackDestination;
-            this.Hooks = hooks;
-            this.Provider = provider;
             this.Status = status;
             this.Name = name;
             this.AssistantId = assistantId;
             this.WorkflowId = workflowId;
             this.SquadId = squadId;
             this.Server = server;
+            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
+            this.CredentialId = credentialId ?? throw new global::System.ArgumentNullException(nameof(credentialId));
         }
 
         /// <summary>

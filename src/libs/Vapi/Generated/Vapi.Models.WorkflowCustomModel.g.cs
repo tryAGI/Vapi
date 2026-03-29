@@ -74,6 +74,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkflowCustomModel" /> class.
         /// </summary>
+        /// <param name="url">
+        /// These is the URL we'll use for the OpenAI client's `baseURL`. Ex. https://openrouter.ai/api/v1
+        /// </param>
+        /// <param name="model">
+        /// This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b
+        /// </param>
         /// <param name="provider">
         /// This is the provider of the model (`custom-llm`).
         /// </param>
@@ -85,17 +91,11 @@ namespace Vapi
         /// Further, `variable` and `destructured` will send `call`, `phoneNumber`, and `customer` objects in the payload.<br/>
         /// Default is `variable`.
         /// </param>
-        /// <param name="url">
-        /// These is the URL we'll use for the OpenAI client's `baseURL`. Ex. https://openrouter.ai/api/v1
-        /// </param>
         /// <param name="headers">
         /// These are the headers we'll use for the OpenAI client's `headers`.
         /// </param>
         /// <param name="timeoutSeconds">
         /// This sets the timeout for the connection to the custom provider without needing to stream any tokens back. Default is 20 seconds.
-        /// </param>
-        /// <param name="model">
-        /// This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b
         /// </param>
         /// <param name="temperature">
         /// This is the temperature of the model.
@@ -116,12 +116,12 @@ namespace Vapi
             double? temperature,
             double? maxTokens)
         {
-            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
-            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Provider = provider;
             this.MetadataSendMode = metadataSendMode;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.Headers = headers;
             this.TimeoutSeconds = timeoutSeconds;
+            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;
         }

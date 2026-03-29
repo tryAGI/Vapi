@@ -139,6 +139,22 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ByoPhoneNumber" /> class.
         /// </summary>
+        /// <param name="id">
+        /// This is the unique identifier for the phone number.
+        /// </param>
+        /// <param name="orgId">
+        /// This is the unique identifier for the org that this phone number belongs to.
+        /// </param>
+        /// <param name="createdAt">
+        /// This is the ISO 8601 date-time string of when the phone number was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// This is the ISO 8601 date-time string of when the phone number was last updated.
+        /// </param>
+        /// <param name="credentialId">
+        /// This is the credential of your own SIP trunk or Carrier (type `byo-sip-trunk`) which can be used to make calls to this phone number.<br/>
+        /// You can add the SIP trunk or Carrier credential in the Provider Credentials page on the Dashboard to get the credentialId.
+        /// </param>
         /// <param name="fallbackDestination">
         /// This is the fallback destination an inbound call will be transferred to if:<br/>
         /// 1. `assistantId` is not set<br/>
@@ -160,18 +176,6 @@ namespace Vapi
         /// If `false`, the `number` is still required to only contain alphanumeric characters (regex: `/^\+?[a-zA-Z0-9]+$/`).<br/>
         /// @default true (E164 check is enabled)<br/>
         /// Default Value: true
-        /// </param>
-        /// <param name="id">
-        /// This is the unique identifier for the phone number.
-        /// </param>
-        /// <param name="orgId">
-        /// This is the unique identifier for the org that this phone number belongs to.
-        /// </param>
-        /// <param name="createdAt">
-        /// This is the ISO 8601 date-time string of when the phone number was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// This is the ISO 8601 date-time string of when the phone number was last updated.
         /// </param>
         /// <param name="status">
         /// This is the status of the phone number.
@@ -201,10 +205,6 @@ namespace Vapi
         /// <param name="number">
         /// This is the number of the customer.
         /// </param>
-        /// <param name="credentialId">
-        /// This is the credential of your own SIP trunk or Carrier (type `byo-sip-trunk`) which can be used to make calls to this phone number.<br/>
-        /// You can add the SIP trunk or Carrier credential in the Provider Credentials page on the Dashboard to get the credentialId.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -226,15 +226,14 @@ namespace Vapi
             global::Vapi.Server? server,
             string? number)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
-            this.CredentialId = credentialId ?? throw new global::System.ArgumentNullException(nameof(credentialId));
             this.FallbackDestination = fallbackDestination;
             this.Hooks = hooks;
             this.Provider = provider;
             this.NumberE164CheckEnabled = numberE164CheckEnabled;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.Status = status;
             this.Name = name;
             this.AssistantId = assistantId;
@@ -242,6 +241,7 @@ namespace Vapi
             this.SquadId = squadId;
             this.Server = server;
             this.Number = number;
+            this.CredentialId = credentialId ?? throw new global::System.ArgumentNullException(nameof(credentialId));
         }
 
         /// <summary>

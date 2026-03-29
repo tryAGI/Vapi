@@ -50,15 +50,15 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AssistantMessageJudgePlanExact" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of the judge plan.<br/>
-        /// Use 'exact' for an exact match on the content and tool calls - without using LLM-as-a-judge.<br/>
-        /// @default 'exact'
-        /// </param>
         /// <param name="content">
         /// This is what that will be used to evaluate the model's message content.<br/>
         /// If you provide a string, the assistant message content will be evaluated against it as an exact match, case-insensitive.<br/>
         /// Example: The weather in San Francisco is sunny.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of the judge plan.<br/>
+        /// Use 'exact' for an exact match on the content and tool calls - without using LLM-as-a-judge.<br/>
+        /// @default 'exact'
         /// </param>
         /// <param name="toolCalls">
         /// This is the tool calls that will be used to evaluate the model's message content.<br/>
@@ -78,8 +78,8 @@ namespace Vapi
             global::Vapi.AssistantMessageJudgePlanExactType type,
             global::System.Collections.Generic.IList<global::Vapi.ChatEvalAssistantMessageMockToolCall>? toolCalls)
         {
-            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.Type = type;
+            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.ToolCalls = toolCalls;
         }
 

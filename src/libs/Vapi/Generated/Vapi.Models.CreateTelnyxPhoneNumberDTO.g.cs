@@ -92,6 +92,12 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTelnyxPhoneNumberDTO" /> class.
         /// </summary>
+        /// <param name="number">
+        /// These are the digits of the phone number you own on your Telnyx.
+        /// </param>
+        /// <param name="credentialId">
+        /// This is the credential you added in dashboard.vapi.ai/keys. This is used to configure the number to send inbound calls to Vapi, make outbound calls and do live call updates like transfers and hangups.
+        /// </param>
         /// <param name="fallbackDestination">
         /// This is the fallback destination an inbound call will be transferred to if:<br/>
         /// 1. `assistantId` is not set<br/>
@@ -104,12 +110,6 @@ namespace Vapi
         /// </param>
         /// <param name="provider">
         /// This is to use numbers bought on Telnyx.
-        /// </param>
-        /// <param name="number">
-        /// These are the digits of the phone number you own on your Telnyx.
-        /// </param>
-        /// <param name="credentialId">
-        /// This is the credential you added in dashboard.vapi.ai/keys. This is used to configure the number to send inbound calls to Vapi, make outbound calls and do live call updates like transfers and hangups.
         /// </param>
         /// <param name="name">
         /// This is the name of the phone number. This is just for your own reference.
@@ -148,11 +148,11 @@ namespace Vapi
             string? squadId,
             global::Vapi.Server? server)
         {
-            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
-            this.CredentialId = credentialId ?? throw new global::System.ArgumentNullException(nameof(credentialId));
             this.FallbackDestination = fallbackDestination;
             this.Hooks = hooks;
             this.Provider = provider;
+            this.Number = number ?? throw new global::System.ArgumentNullException(nameof(number));
+            this.CredentialId = credentialId ?? throw new global::System.ArgumentNullException(nameof(credentialId));
             this.Name = name;
             this.AssistantId = assistantId;
             this.WorkflowId = workflowId;

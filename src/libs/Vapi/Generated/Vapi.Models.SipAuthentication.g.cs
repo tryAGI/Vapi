@@ -37,14 +37,14 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="SipAuthentication" /> class.
         /// </summary>
-        /// <param name="realm">
-        /// This will be expected in the `realm` field of the `authorization` header of the SIP INVITE. Defaults to sip.vapi.ai.
-        /// </param>
         /// <param name="username">
         /// This will be expected in the `username` field of the `authorization` header of the SIP INVITE.
         /// </param>
         /// <param name="password">
         /// This will be expected to generate the `response` field of the `authorization` header of the SIP INVITE, through digest authentication.
+        /// </param>
+        /// <param name="realm">
+        /// This will be expected in the `realm` field of the `authorization` header of the SIP INVITE. Defaults to sip.vapi.ai.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -54,9 +54,9 @@ namespace Vapi
             string password,
             string? realm)
         {
+            this.Realm = realm;
             this.Username = username ?? throw new global::System.ArgumentNullException(nameof(username));
             this.Password = password ?? throw new global::System.ArgumentNullException(nameof(password));
-            this.Realm = realm;
         }
 
         /// <summary>

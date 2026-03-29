@@ -45,12 +45,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatEvalAssistantMessageMock" /> class.
         /// </summary>
-        /// <param name="role">
-        /// This is the role of the message author.<br/>
-        /// For a mock assistant message, the role is always 'assistant'<br/>
-        /// @default 'assistant'<br/>
-        /// Default Value: assistant
-        /// </param>
         /// <param name="content">
         /// This is the content of the assistant message.<br/>
         /// This is the message that the assistant would have sent.<br/>
@@ -59,6 +53,12 @@ namespace Vapi
         /// <param name="toolCalls">
         /// This is the tool calls that will be made by the assistant.<br/>
         /// Example: [{ name: "get_weather", arguments: { city: "San Francisco" } }]
+        /// </param>
+        /// <param name="role">
+        /// This is the role of the message author.<br/>
+        /// For a mock assistant message, the role is always 'assistant'<br/>
+        /// @default 'assistant'<br/>
+        /// Default Value: assistant
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

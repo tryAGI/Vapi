@@ -119,12 +119,12 @@ namespace Vapi.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateDeepSeekCredentialDTO)}");
                 deepSeek = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-            global::Vapi.CreateElevenLabsCredentialDTO? x11labs = default;
-            if (discriminator?.Provider == global::Vapi.CreateWorkflowDTOCredentialDiscriminatorProvider.x11labs)
+            global::Vapi.CreateElevenLabsCredentialDTO? elevenlabs = default;
+            if (discriminator?.Provider == global::Vapi.CreateWorkflowDTOCredentialDiscriminatorProvider.Elevenlabs)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateElevenLabsCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateElevenLabsCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateElevenLabsCredentialDTO)}");
-                x11labs = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+                elevenlabs = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateGcpCredentialDTO? gcp = default;
             if (discriminator?.Provider == global::Vapi.CreateWorkflowDTOCredentialDiscriminatorProvider.Gcp)
@@ -444,7 +444,7 @@ namespace Vapi.JsonConverters
 
                 deepSeek,
 
-                x11labs,
+                elevenlabs,
 
                 gcp,
 
@@ -625,11 +625,11 @@ namespace Vapi.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateDeepSeekCredentialDTO).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.DeepSeek, typeInfo);
             }
-            else if (value.Isx11labs)
+            else if (value.IsElevenlabs)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateElevenLabsCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateElevenLabsCredentialDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateElevenLabsCredentialDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.x11labs, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Elevenlabs, typeInfo);
             }
             else if (value.IsGcp)
             {

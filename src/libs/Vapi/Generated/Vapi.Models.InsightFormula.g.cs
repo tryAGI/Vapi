@@ -37,17 +37,17 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="InsightFormula" /> class.
         /// </summary>
-        /// <param name="name">
-        /// This is the name of the formula.<br/>
-        /// It will be used to label the formula in the insight board on the UI.<br/>
-        /// Example: Booking Rate
-        /// </param>
         /// <param name="formula">
         /// This is the formula to calculate the insight from the queries.<br/>
         /// The formula needs to be a valid mathematical expression.<br/>
         /// The formula must contain at least one query name in the LiquidJS format {{query_name}} or {{['query name']}} which will be substituted with the query result.<br/>
         /// Any MathJS formula is allowed - https://mathjs.org/docs/expressions/syntax.html<br/>
         /// Common valid math operations are +, -, *, /, %
+        /// </param>
+        /// <param name="name">
+        /// This is the name of the formula.<br/>
+        /// It will be used to label the formula in the insight board on the UI.<br/>
+        /// Example: Booking Rate
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -56,8 +56,8 @@ namespace Vapi
             string formula,
             string? name)
         {
-            this.Formula = formula ?? throw new global::System.ArgumentNullException(nameof(formula));
             this.Name = name;
+            this.Formula = formula ?? throw new global::System.ArgumentNullException(nameof(formula));
         }
 
         /// <summary>

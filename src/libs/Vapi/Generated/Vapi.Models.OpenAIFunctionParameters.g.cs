@@ -39,13 +39,13 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenAIFunctionParameters" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This must be set to 'object'. It instructs the model to return a JSON object containing the function call properties.
-        /// </param>
         /// <param name="properties">
         /// This provides a description of the properties required by the function.<br/>
         /// JSON Schema can be used to specify expectations for each property.<br/>
         /// Refer to [this doc](https://ajv.js.org/json-schema.html#json-data-type) for a comprehensive guide on JSON Schema.
+        /// </param>
+        /// <param name="type">
+        /// This must be set to 'object'. It instructs the model to return a JSON object containing the function call properties.
         /// </param>
         /// <param name="required">
         /// This specifies the properties that are required by the function.
@@ -58,8 +58,8 @@ namespace Vapi
             global::Vapi.OpenAIFunctionParametersType type,
             global::System.Collections.Generic.IList<string>? required)
         {
-            this.Properties = properties ?? throw new global::System.ArgumentNullException(nameof(properties));
             this.Type = type;
+            this.Properties = properties ?? throw new global::System.ArgumentNullException(nameof(properties));
             this.Required = required;
         }
 

@@ -32,11 +32,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AnthropicThinkingConfig" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="budgetTokens">
         /// The maximum number of tokens to allocate for thinking.<br/>
         /// Must be between 1024 and 100000 tokens.
         /// </param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -44,8 +44,8 @@ namespace Vapi
             double budgetTokens,
             global::Vapi.AnthropicThinkingConfigType type)
         {
-            this.BudgetTokens = budgetTokens;
             this.Type = type;
+            this.BudgetTokens = budgetTokens;
         }
 
         /// <summary>

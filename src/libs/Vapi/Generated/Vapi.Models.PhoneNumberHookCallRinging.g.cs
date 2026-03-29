@@ -37,14 +37,14 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumberHookCallRinging" /> class.
         /// </summary>
+        /// <param name="do">
+        /// Only the first action will be executed. Additional actions will be ignored.
+        /// </param>
         /// <param name="on">
         /// This is the event to trigger the hook on
         /// </param>
         /// <param name="filters">
         /// Optional filters to decide when to trigger the hook. Currently supports filtering by caller country code.
-        /// </param>
-        /// <param name="do">
-        /// Only the first action will be executed. Additional actions will be ignored.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -54,9 +54,9 @@ namespace Vapi
             global::Vapi.PhoneNumberHookCallRingingOn on,
             global::System.Collections.Generic.IList<global::Vapi.PhoneNumberCallRingingHookFilter>? filters)
         {
-            this.Do = @do ?? throw new global::System.ArgumentNullException(nameof(@do));
             this.On = on;
             this.Filters = filters;
+            this.Do = @do ?? throw new global::System.ArgumentNullException(nameof(@do));
         }
 
         /// <summary>

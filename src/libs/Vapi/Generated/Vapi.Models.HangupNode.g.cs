@@ -43,8 +43,8 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="HangupNode" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="name"></param>
+        /// <param name="type"></param>
         /// <param name="isStart">
         /// This is whether or not the node is the start of the workflow.
         /// </param>
@@ -60,8 +60,8 @@ namespace Vapi
             bool? isStart,
             object? metadata)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Type = type;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.IsStart = isStart;
             this.Metadata = metadata;
         }

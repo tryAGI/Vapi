@@ -86,6 +86,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="XaiModel" /> class.
         /// </summary>
+        /// <param name="model">
+        /// This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b
+        /// </param>
         /// <param name="messages">
         /// This is the starting state for the conversation.
         /// </param>
@@ -99,9 +102,6 @@ namespace Vapi
         /// </param>
         /// <param name="knowledgeBase">
         /// These are the options for the knowledge base.
-        /// </param>
-        /// <param name="model">
-        /// This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b
         /// </param>
         /// <param name="provider"></param>
         /// <param name="temperature">
@@ -135,11 +135,11 @@ namespace Vapi
             bool? emotionRecognitionEnabled,
             double? numFastTurns)
         {
-            this.Model = model;
             this.Messages = messages;
             this.Tools = tools;
             this.ToolIds = toolIds;
             this.KnowledgeBase = knowledgeBase;
+            this.Model = model;
             this.Provider = provider;
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;

@@ -12,11 +12,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        x__,
+        Neq,
         /// <summary>
         /// 
         /// </summary>
-        x_,
+        Eq,
         /// <summary>
         /// 
         /// </summary>
@@ -39,8 +39,8 @@ namespace Vapi
         {
             return value switch
             {
-                EventsTableStringConditionOperator.x__ => "!=",
-                EventsTableStringConditionOperator.x_ => "=",
+                EventsTableStringConditionOperator.Neq => "!=",
+                EventsTableStringConditionOperator.Eq => "=",
                 EventsTableStringConditionOperator.Contains => "contains",
                 EventsTableStringConditionOperator.NotContains => "notContains",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -53,8 +53,8 @@ namespace Vapi
         {
             return value switch
             {
-                "!=" => EventsTableStringConditionOperator.x__,
-                "=" => EventsTableStringConditionOperator.x_,
+                "!=" => EventsTableStringConditionOperator.Neq,
+                "=" => EventsTableStringConditionOperator.Eq,
                 "contains" => EventsTableStringConditionOperator.Contains,
                 "notContains" => EventsTableStringConditionOperator.NotContains,
                 _ => null,

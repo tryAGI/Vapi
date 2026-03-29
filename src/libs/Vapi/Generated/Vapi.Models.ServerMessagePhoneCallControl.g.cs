@@ -84,15 +84,15 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerMessagePhoneCallControl" /> class.
         /// </summary>
+        /// <param name="request">
+        /// This is the request to control the phone call.
+        /// </param>
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
         /// <param name="type">
         /// This is the type of the message. "phone-call-control" is an advanced type of message.<br/>
         /// When it is requested in `assistant.serverMessages`, the hangup and forwarding responsibilities are delegated to your server. Vapi will no longer do the actual transfer and hangup.
-        /// </param>
-        /// <param name="request">
-        /// This is the request to control the phone call.
         /// </param>
         /// <param name="destination">
         /// This is the destination to forward the call to if the request is "forward".
@@ -131,9 +131,9 @@ namespace Vapi
             global::Vapi.Call? call,
             global::Vapi.Chat? chat)
         {
-            this.Request = request;
             this.PhoneNumber = phoneNumber;
             this.Type = type;
+            this.Request = request;
             this.Destination = destination;
             this.Timestamp = timestamp;
             this.Artifact = artifact;

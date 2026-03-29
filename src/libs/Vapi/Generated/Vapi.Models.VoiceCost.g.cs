@@ -52,9 +52,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="VoiceCost" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of cost, always 'voice' for this class.
-        /// </param>
         /// <param name="voice">
         /// This is the voice that was used during the call.<br/>
         /// This matches one of the following:<br/>
@@ -71,6 +68,9 @@ namespace Vapi
         /// <param name="cost">
         /// This is the cost of the component in USD.
         /// </param>
+        /// <param name="type">
+        /// This is the type of cost, always 'voice' for this class.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -80,10 +80,10 @@ namespace Vapi
             double cost,
             global::Vapi.VoiceCostType type)
         {
+            this.Type = type;
             this.Voice = voice ?? throw new global::System.ArgumentNullException(nameof(voice));
             this.Characters = characters;
             this.Cost = cost;
-            this.Type = type;
         }
 
         /// <summary>

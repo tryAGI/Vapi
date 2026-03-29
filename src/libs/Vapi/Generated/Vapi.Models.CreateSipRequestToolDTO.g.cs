@@ -131,15 +131,15 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSipRequestToolDTO" /> class.
         /// </summary>
+        /// <param name="verb">
+        /// The SIP method to send.
+        /// </param>
         /// <param name="messages">
         /// These are the messages that will be spoken to the user as the tool is running.<br/>
         /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
         /// </param>
         /// <param name="type">
         /// The type of tool. "sipRequest" for SIP request tool.
-        /// </param>
-        /// <param name="verb">
-        /// The SIP method to send.
         /// </param>
         /// <param name="headers">
         /// JSON schema for headers the model should populate when sending the SIP request.
@@ -234,9 +234,9 @@ namespace Vapi
             global::Vapi.OneOf<string, global::Vapi.JsonSchema>? body,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
-            this.Verb = verb;
             this.Messages = messages;
             this.Type = type;
+            this.Verb = verb;
             this.Headers = headers;
             this.Body = body;
             this.RejectionPlan = rejectionPlan;

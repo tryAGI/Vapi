@@ -66,7 +66,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAzureOpenAICredentialDTO" /> class.
         /// </summary>
-        /// <param name="provider"></param>
         /// <param name="region"></param>
         /// <param name="models">
         /// Example: [gpt-4-0125-preview, gpt-4-0613]
@@ -74,10 +73,11 @@ namespace Vapi
         /// <param name="openAIKey">
         /// This is not returned in the API.
         /// </param>
+        /// <param name="openAIEndpoint"></param>
+        /// <param name="provider"></param>
         /// <param name="ocpApimSubscriptionKey">
         /// This is not returned in the API.
         /// </param>
-        /// <param name="openAIEndpoint"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -93,12 +93,12 @@ namespace Vapi
             string? ocpApimSubscriptionKey,
             string? name)
         {
+            this.Provider = provider;
             this.Region = region;
             this.Models = models ?? throw new global::System.ArgumentNullException(nameof(models));
             this.OpenAIKey = openAIKey ?? throw new global::System.ArgumentNullException(nameof(openAIKey));
-            this.OpenAIEndpoint = openAIEndpoint ?? throw new global::System.ArgumentNullException(nameof(openAIEndpoint));
-            this.Provider = provider;
             this.OcpApimSubscriptionKey = ocpApimSubscriptionKey;
+            this.OpenAIEndpoint = openAIEndpoint ?? throw new global::System.ArgumentNullException(nameof(openAIEndpoint));
             this.Name = name;
         }
 

@@ -66,9 +66,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalysisCost" /> class.
         /// </summary>
-        /// <param name="type">
-        /// This is the type of cost, always 'analysis' for this class.
-        /// </param>
         /// <param name="analysisType">
         /// This is the type of analysis performed.
         /// </param>
@@ -81,11 +78,14 @@ namespace Vapi
         /// <param name="completionTokens">
         /// This is the number of completion tokens generated in the analysis.
         /// </param>
-        /// <param name="cachedPromptTokens">
-        /// This is the number of cached prompt tokens used in the analysis. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate.
-        /// </param>
         /// <param name="cost">
         /// This is the cost of the component in USD.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of cost, always 'analysis' for this class.
+        /// </param>
+        /// <param name="cachedPromptTokens">
+        /// This is the number of cached prompt tokens used in the analysis. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -99,13 +99,13 @@ namespace Vapi
             global::Vapi.AnalysisCostType type,
             double? cachedPromptTokens)
         {
+            this.Type = type;
             this.AnalysisType = analysisType;
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.PromptTokens = promptTokens;
             this.CompletionTokens = completionTokens;
-            this.Cost = cost;
-            this.Type = type;
             this.CachedPromptTokens = cachedPromptTokens;
+            this.Cost = cost;
         }
 
         /// <summary>

@@ -51,7 +51,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuth2AuthenticationPlan" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="url">
         /// This is the OAuth2 URL.
         /// </param>
@@ -61,6 +60,7 @@ namespace Vapi
         /// <param name="clientSecret">
         /// This is the OAuth2 client secret.
         /// </param>
+        /// <param name="type"></param>
         /// <param name="scope">
         /// This is the scope of the OAuth2 token.
         /// </param>
@@ -74,10 +74,10 @@ namespace Vapi
             global::Vapi.OAuth2AuthenticationPlanType type,
             string? scope)
         {
+            this.Type = type;
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.ClientId = clientId ?? throw new global::System.ArgumentNullException(nameof(clientId));
             this.ClientSecret = clientSecret ?? throw new global::System.ArgumentNullException(nameof(clientSecret));
-            this.Type = type;
             this.Scope = scope;
         }
 
