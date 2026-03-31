@@ -23,6 +23,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Centralus,
+        /// <summary>
+        /// 
+        /// </summary>
         Eastus,
         /// <summary>
         /// 
@@ -113,6 +117,7 @@ namespace Vapi
                 UpdateAzureOpenAICredentialDTORegion.Australiaeast => "australiaeast",
                 UpdateAzureOpenAICredentialDTORegion.Canadacentral => "canadacentral",
                 UpdateAzureOpenAICredentialDTORegion.Canadaeast => "canadaeast",
+                UpdateAzureOpenAICredentialDTORegion.Centralus => "centralus",
                 UpdateAzureOpenAICredentialDTORegion.Eastus => "eastus",
                 UpdateAzureOpenAICredentialDTORegion.Eastus2 => "eastus2",
                 UpdateAzureOpenAICredentialDTORegion.France => "france",
@@ -145,6 +150,7 @@ namespace Vapi
                 "australiaeast" => UpdateAzureOpenAICredentialDTORegion.Australiaeast,
                 "canadacentral" => UpdateAzureOpenAICredentialDTORegion.Canadacentral,
                 "canadaeast" => UpdateAzureOpenAICredentialDTORegion.Canadaeast,
+                "centralus" => UpdateAzureOpenAICredentialDTORegion.Centralus,
                 "eastus" => UpdateAzureOpenAICredentialDTORegion.Eastus,
                 "eastus2" => UpdateAzureOpenAICredentialDTORegion.Eastus2,
                 "france" => UpdateAzureOpenAICredentialDTORegion.France,

@@ -54,6 +54,17 @@ namespace Vapi
         public string? Emotion { get; set; }
 
         /// <summary>
+        /// Controls the granularity of subtitle/timing data returned by Minimax<br/>
+        /// during synthesis. Set to 'word' to receive per-word timestamps in<br/>
+        /// assistant.speechStarted events for karaoke-style caption rendering.<br/>
+        /// @default "sentence"<br/>
+        /// Default Value: sentence
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subtitleType")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.MinimaxVoiceSubtitleTypeJsonConverter))]
+        public global::Vapi.MinimaxVoiceSubtitleType? SubtitleType { get; set; }
+
+        /// <summary>
         /// Voice pitch adjustment. Range from -12 to 12 semitones.<br/>
         /// @default 0<br/>
         /// Default Value: 0<br/>
@@ -150,6 +161,13 @@ namespace Vapi
         /// Options include: 'happy', 'sad', 'angry', 'fearful', 'surprised', 'disgusted', 'neutral'<br/>
         /// Example: happy
         /// </param>
+        /// <param name="subtitleType">
+        /// Controls the granularity of subtitle/timing data returned by Minimax<br/>
+        /// during synthesis. Set to 'word' to receive per-word timestamps in<br/>
+        /// assistant.speechStarted events for karaoke-style caption rendering.<br/>
+        /// @default "sentence"<br/>
+        /// Default Value: sentence
+        /// </param>
         /// <param name="pitch">
         /// Voice pitch adjustment. Range from -12 to 12 semitones.<br/>
         /// @default 0<br/>
@@ -194,6 +212,7 @@ namespace Vapi
             global::Vapi.MinimaxVoiceProvider provider,
             global::Vapi.MinimaxVoiceModel? model,
             string? emotion,
+            global::Vapi.MinimaxVoiceSubtitleType? subtitleType,
             double? pitch,
             double? speed,
             double? volume,
@@ -208,6 +227,7 @@ namespace Vapi
             this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.Model = model;
             this.Emotion = emotion;
+            this.SubtitleType = subtitleType;
             this.Pitch = pitch;
             this.Speed = speed;
             this.Volume = volume;

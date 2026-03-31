@@ -433,6 +433,18 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt54,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54Mini,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54Nano,
+        /// <summary>
+        /// 
+        /// </summary>
         O1Mini,
         /// <summary>
         /// 
@@ -569,6 +581,9 @@ namespace Vapi
                 EvalOpenAIModelModel.Gpt51ChatLatest => "gpt-5.1-chat-latest",
                 EvalOpenAIModelModel.Gpt52 => "gpt-5.2",
                 EvalOpenAIModelModel.Gpt52ChatLatest => "gpt-5.2-chat-latest",
+                EvalOpenAIModelModel.Gpt54 => "gpt-5.4",
+                EvalOpenAIModelModel.Gpt54Mini => "gpt-5.4-mini",
+                EvalOpenAIModelModel.Gpt54Nano => "gpt-5.4-nano",
                 EvalOpenAIModelModel.O1Mini => "o1-mini",
                 EvalOpenAIModelModel.O1Mini20240912 => "o1-mini-2024-09-12",
                 EvalOpenAIModelModel.O3 => "o3",
@@ -689,6 +704,9 @@ namespace Vapi
                 "gpt-5.1-chat-latest" => EvalOpenAIModelModel.Gpt51ChatLatest,
                 "gpt-5.2" => EvalOpenAIModelModel.Gpt52,
                 "gpt-5.2-chat-latest" => EvalOpenAIModelModel.Gpt52ChatLatest,
+                "gpt-5.4" => EvalOpenAIModelModel.Gpt54,
+                "gpt-5.4-mini" => EvalOpenAIModelModel.Gpt54Mini,
+                "gpt-5.4-nano" => EvalOpenAIModelModel.Gpt54Nano,
                 "o1-mini" => EvalOpenAIModelModel.O1Mini,
                 "o1-mini-2024-09-12" => EvalOpenAIModelModel.O1Mini20240912,
                 "o3" => EvalOpenAIModelModel.O3,

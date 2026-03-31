@@ -23,6 +23,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Centralus,
+        /// <summary>
+        /// 
+        /// </summary>
         Eastus,
         /// <summary>
         /// 
@@ -113,6 +117,7 @@ namespace Vapi
                 AzureOpenAICredentialRegion.Australiaeast => "australiaeast",
                 AzureOpenAICredentialRegion.Canadacentral => "canadacentral",
                 AzureOpenAICredentialRegion.Canadaeast => "canadaeast",
+                AzureOpenAICredentialRegion.Centralus => "centralus",
                 AzureOpenAICredentialRegion.Eastus => "eastus",
                 AzureOpenAICredentialRegion.Eastus2 => "eastus2",
                 AzureOpenAICredentialRegion.France => "france",
@@ -145,6 +150,7 @@ namespace Vapi
                 "australiaeast" => AzureOpenAICredentialRegion.Australiaeast,
                 "canadacentral" => AzureOpenAICredentialRegion.Canadacentral,
                 "canadaeast" => AzureOpenAICredentialRegion.Canadaeast,
+                "centralus" => AzureOpenAICredentialRegion.Centralus,
                 "eastus" => AzureOpenAICredentialRegion.Eastus,
                 "eastus2" => AzureOpenAICredentialRegion.Eastus2,
                 "france" => AzureOpenAICredentialRegion.France,

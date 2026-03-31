@@ -11,6 +11,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        AssistantSpeechStarted,
+        /// <summary>
+        /// 
+        /// </summary>
         AssistantStarted,
         /// <summary>
         /// 
@@ -94,6 +98,7 @@ namespace Vapi
         {
             return value switch
             {
+                UpdateAssistantDTOClientMessage.AssistantSpeechStarted => "assistant.speechStarted",
                 UpdateAssistantDTOClientMessage.AssistantStarted => "assistant.started",
                 UpdateAssistantDTOClientMessage.ConversationUpdate => "conversation-update",
                 UpdateAssistantDTOClientMessage.FunctionCall => "function-call",
@@ -122,6 +127,7 @@ namespace Vapi
         {
             return value switch
             {
+                "assistant.speechStarted" => UpdateAssistantDTOClientMessage.AssistantSpeechStarted,
                 "assistant.started" => UpdateAssistantDTOClientMessage.AssistantStarted,
                 "conversation-update" => UpdateAssistantDTOClientMessage.ConversationUpdate,
                 "function-call" => UpdateAssistantDTOClientMessage.FunctionCall,

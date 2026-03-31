@@ -15,6 +15,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        ArEn,
+        /// <summary>
+        /// 
+        /// </summary>
         Auto,
         /// <summary>
         /// 
@@ -267,6 +271,7 @@ namespace Vapi
             return value switch
             {
                 FallbackSpeechmaticsTranscriberLanguage.Ar => "ar",
+                FallbackSpeechmaticsTranscriberLanguage.ArEn => "ar_en",
                 FallbackSpeechmaticsTranscriberLanguage.Auto => "auto",
                 FallbackSpeechmaticsTranscriberLanguage.Ba => "ba",
                 FallbackSpeechmaticsTranscriberLanguage.Be => "be",
@@ -338,6 +343,7 @@ namespace Vapi
             return value switch
             {
                 "ar" => FallbackSpeechmaticsTranscriberLanguage.Ar,
+                "ar_en" => FallbackSpeechmaticsTranscriberLanguage.ArEn,
                 "auto" => FallbackSpeechmaticsTranscriberLanguage.Auto,
                 "ba" => FallbackSpeechmaticsTranscriberLanguage.Ba,
                 "be" => FallbackSpeechmaticsTranscriberLanguage.Be,

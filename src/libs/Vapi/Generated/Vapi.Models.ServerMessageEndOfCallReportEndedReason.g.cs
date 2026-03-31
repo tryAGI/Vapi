@@ -291,6 +291,18 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallInProgressErrorProviderfaultMinimax500ServerError,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorProviderfaultMinimax503ServerOverloadedError,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorProviderfaultMinimaxLlmFailed,
+        /// <summary>
+        /// 
+        /// </summary>
         CallInProgressErrorProviderfaultMistral500ServerError,
         /// <summary>
         /// 
@@ -824,6 +836,22 @@ namespace Vapi
         /// 
         /// </summary>
         CallInProgressErrorVapifaultLmntVoiceFailed,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorVapifaultMinimax400BadRequestValidationFailed,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorVapifaultMinimax401Unauthorized,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorVapifaultMinimax403ModelAccessDenied,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorVapifaultMinimax429ExceededQuota,
         /// <summary>
         /// 
         /// </summary>
@@ -1843,6 +1871,34 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        PipelineErrorMinimax400BadRequestValidationFailed,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorMinimax401Unauthorized,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorMinimax403ModelAccessDenied,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorMinimax429ExceededQuota,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorMinimax500ServerError,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorMinimax503ServerOverloadedError,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorMinimaxLlmFailed,
+        /// <summary>
+        /// 
+        /// </summary>
         PipelineErrorMinimaxVoiceFailed,
         /// <summary>
         /// 
@@ -2320,6 +2376,9 @@ namespace Vapi
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultInflectionAi500ServerError => "call.in-progress.error-providerfault-inflection-ai-500-server-error",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultInflectionAi503ServerOverloadedError => "call.in-progress.error-providerfault-inflection-ai-503-server-overloaded-error",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultInflectionAiLlmFailed => "call.in-progress.error-providerfault-inflection-ai-llm-failed",
+                ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMinimax500ServerError => "call.in-progress.error-providerfault-minimax-500-server-error",
+                ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMinimax503ServerOverloadedError => "call.in-progress.error-providerfault-minimax-503-server-overloaded-error",
+                ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMinimaxLlmFailed => "call.in-progress.error-providerfault-minimax-llm-failed",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMistral500ServerError => "call.in-progress.error-providerfault-mistral-500-server-error",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMistral503ServerOverloadedError => "call.in-progress.error-providerfault-mistral-503-server-overloaded-error",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMistralLlmFailed => "call.in-progress.error-providerfault-mistral-llm-failed",
@@ -2454,6 +2513,10 @@ namespace Vapi
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultInflectionAi429ExceededQuota => "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultInworldVoiceFailed => "call.in-progress.error-vapifault-inworld-voice-failed",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultLmntVoiceFailed => "call.in-progress.error-vapifault-lmnt-voice-failed",
+                ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax400BadRequestValidationFailed => "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed",
+                ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax401Unauthorized => "call.in-progress.error-vapifault-minimax-401-unauthorized",
+                ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax403ModelAccessDenied => "call.in-progress.error-vapifault-minimax-403-model-access-denied",
+                ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax429ExceededQuota => "call.in-progress.error-vapifault-minimax-429-exceeded-quota",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimaxVoiceFailed => "call.in-progress.error-vapifault-minimax-voice-failed",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMistral400BadRequestValidationFailed => "call.in-progress.error-vapifault-mistral-400-bad-request-validation-failed",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMistral401Unauthorized => "call.in-progress.error-vapifault-mistral-401-unauthorized",
@@ -2708,6 +2771,13 @@ namespace Vapi
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorInflectionAiLlmFailed => "pipeline-error-inflection-ai-llm-failed",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorInworldVoiceFailed => "pipeline-error-inworld-voice-failed",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorLmntVoiceFailed => "pipeline-error-lmnt-voice-failed",
+                ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax400BadRequestValidationFailed => "pipeline-error-minimax-400-bad-request-validation-failed",
+                ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax401Unauthorized => "pipeline-error-minimax-401-unauthorized",
+                ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax403ModelAccessDenied => "pipeline-error-minimax-403-model-access-denied",
+                ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax429ExceededQuota => "pipeline-error-minimax-429-exceeded-quota",
+                ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax500ServerError => "pipeline-error-minimax-500-server-error",
+                ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax503ServerOverloadedError => "pipeline-error-minimax-503-server-overloaded-error",
+                ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimaxLlmFailed => "pipeline-error-minimax-llm-failed",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimaxVoiceFailed => "pipeline-error-minimax-voice-failed",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorMistral400BadRequestValidationFailed => "pipeline-error-mistral-400-bad-request-validation-failed",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorMistral401Unauthorized => "pipeline-error-mistral-401-unauthorized",
@@ -2887,6 +2957,9 @@ namespace Vapi
                 "call.in-progress.error-providerfault-inflection-ai-500-server-error" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultInflectionAi500ServerError,
                 "call.in-progress.error-providerfault-inflection-ai-503-server-overloaded-error" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultInflectionAi503ServerOverloadedError,
                 "call.in-progress.error-providerfault-inflection-ai-llm-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultInflectionAiLlmFailed,
+                "call.in-progress.error-providerfault-minimax-500-server-error" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMinimax500ServerError,
+                "call.in-progress.error-providerfault-minimax-503-server-overloaded-error" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMinimax503ServerOverloadedError,
+                "call.in-progress.error-providerfault-minimax-llm-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMinimaxLlmFailed,
                 "call.in-progress.error-providerfault-mistral-500-server-error" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMistral500ServerError,
                 "call.in-progress.error-providerfault-mistral-503-server-overloaded-error" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMistral503ServerOverloadedError,
                 "call.in-progress.error-providerfault-mistral-llm-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultMistralLlmFailed,
@@ -3021,6 +3094,10 @@ namespace Vapi
                 "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultInflectionAi429ExceededQuota,
                 "call.in-progress.error-vapifault-inworld-voice-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultInworldVoiceFailed,
                 "call.in-progress.error-vapifault-lmnt-voice-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultLmntVoiceFailed,
+                "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax400BadRequestValidationFailed,
+                "call.in-progress.error-vapifault-minimax-401-unauthorized" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax401Unauthorized,
+                "call.in-progress.error-vapifault-minimax-403-model-access-denied" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax403ModelAccessDenied,
+                "call.in-progress.error-vapifault-minimax-429-exceeded-quota" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax429ExceededQuota,
                 "call.in-progress.error-vapifault-minimax-voice-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimaxVoiceFailed,
                 "call.in-progress.error-vapifault-mistral-400-bad-request-validation-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMistral400BadRequestValidationFailed,
                 "call.in-progress.error-vapifault-mistral-401-unauthorized" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMistral401Unauthorized,
@@ -3275,6 +3352,13 @@ namespace Vapi
                 "pipeline-error-inflection-ai-llm-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorInflectionAiLlmFailed,
                 "pipeline-error-inworld-voice-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorInworldVoiceFailed,
                 "pipeline-error-lmnt-voice-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorLmntVoiceFailed,
+                "pipeline-error-minimax-400-bad-request-validation-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax400BadRequestValidationFailed,
+                "pipeline-error-minimax-401-unauthorized" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax401Unauthorized,
+                "pipeline-error-minimax-403-model-access-denied" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax403ModelAccessDenied,
+                "pipeline-error-minimax-429-exceeded-quota" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax429ExceededQuota,
+                "pipeline-error-minimax-500-server-error" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax500ServerError,
+                "pipeline-error-minimax-503-server-overloaded-error" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax503ServerOverloadedError,
+                "pipeline-error-minimax-llm-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimaxLlmFailed,
                 "pipeline-error-minimax-voice-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimaxVoiceFailed,
                 "pipeline-error-mistral-400-bad-request-validation-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMistral400BadRequestValidationFailed,
                 "pipeline-error-mistral-401-unauthorized" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMistral401Unauthorized,

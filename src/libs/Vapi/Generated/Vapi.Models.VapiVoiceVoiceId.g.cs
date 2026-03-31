@@ -35,6 +35,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gustavo,
+        /// <summary>
+        /// 
+        /// </summary>
         Hana,
         /// <summary>
         /// 
@@ -52,6 +56,10 @@ namespace Vapi
         /// 
         /// </summary>
         Kylie,
+        /// <summary>
+        /// 
+        /// </summary>
+        Layla,
         /// <summary>
         /// 
         /// </summary>
@@ -103,6 +111,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Sid,
+        /// <summary>
+        /// 
+        /// </summary>
         Spencer,
         /// <summary>
         /// 
@@ -136,11 +148,13 @@ namespace Vapi
                 VapiVoiceVoiceId.Elliot => "Elliot",
                 VapiVoiceVoiceId.Emma => "Emma",
                 VapiVoiceVoiceId.Godfrey => "Godfrey",
+                VapiVoiceVoiceId.Gustavo => "Gustavo",
                 VapiVoiceVoiceId.Hana => "Hana",
                 VapiVoiceVoiceId.Harry => "Harry",
                 VapiVoiceVoiceId.Jess => "Jess",
                 VapiVoiceVoiceId.Kai => "Kai",
                 VapiVoiceVoiceId.Kylie => "Kylie",
+                VapiVoiceVoiceId.Layla => "Layla",
                 VapiVoiceVoiceId.Leah => "Leah",
                 VapiVoiceVoiceId.Leo => "Leo",
                 VapiVoiceVoiceId.Lily => "Lily",
@@ -153,6 +167,7 @@ namespace Vapi
                 VapiVoiceVoiceId.Rohan => "Rohan",
                 VapiVoiceVoiceId.Sagar => "Sagar",
                 VapiVoiceVoiceId.Savannah => "Savannah",
+                VapiVoiceVoiceId.Sid => "Sid",
                 VapiVoiceVoiceId.Spencer => "Spencer",
                 VapiVoiceVoiceId.Tara => "Tara",
                 VapiVoiceVoiceId.Zac => "Zac",
@@ -173,11 +188,13 @@ namespace Vapi
                 "Elliot" => VapiVoiceVoiceId.Elliot,
                 "Emma" => VapiVoiceVoiceId.Emma,
                 "Godfrey" => VapiVoiceVoiceId.Godfrey,
+                "Gustavo" => VapiVoiceVoiceId.Gustavo,
                 "Hana" => VapiVoiceVoiceId.Hana,
                 "Harry" => VapiVoiceVoiceId.Harry,
                 "Jess" => VapiVoiceVoiceId.Jess,
                 "Kai" => VapiVoiceVoiceId.Kai,
                 "Kylie" => VapiVoiceVoiceId.Kylie,
+                "Layla" => VapiVoiceVoiceId.Layla,
                 "Leah" => VapiVoiceVoiceId.Leah,
                 "Leo" => VapiVoiceVoiceId.Leo,
                 "Lily" => VapiVoiceVoiceId.Lily,
@@ -190,6 +207,7 @@ namespace Vapi
                 "Rohan" => VapiVoiceVoiceId.Rohan,
                 "Sagar" => VapiVoiceVoiceId.Sagar,
                 "Savannah" => VapiVoiceVoiceId.Savannah,
+                "Sid" => VapiVoiceVoiceId.Sid,
                 "Spencer" => VapiVoiceVoiceId.Spencer,
                 "Tara" => VapiVoiceVoiceId.Tara,
                 "Zac" => VapiVoiceVoiceId.Zac,

@@ -35,6 +35,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gustavo,
+        /// <summary>
+        /// 
+        /// </summary>
         Hana,
         /// <summary>
         /// 
@@ -52,6 +56,10 @@ namespace Vapi
         /// 
         /// </summary>
         Kylie,
+        /// <summary>
+        /// 
+        /// </summary>
+        Layla,
         /// <summary>
         /// 
         /// </summary>
@@ -103,6 +111,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Sid,
+        /// <summary>
+        /// 
+        /// </summary>
         Spencer,
         /// <summary>
         /// 
@@ -136,11 +148,13 @@ namespace Vapi
                 FallbackVapiVoiceVoiceId.Elliot => "Elliot",
                 FallbackVapiVoiceVoiceId.Emma => "Emma",
                 FallbackVapiVoiceVoiceId.Godfrey => "Godfrey",
+                FallbackVapiVoiceVoiceId.Gustavo => "Gustavo",
                 FallbackVapiVoiceVoiceId.Hana => "Hana",
                 FallbackVapiVoiceVoiceId.Harry => "Harry",
                 FallbackVapiVoiceVoiceId.Jess => "Jess",
                 FallbackVapiVoiceVoiceId.Kai => "Kai",
                 FallbackVapiVoiceVoiceId.Kylie => "Kylie",
+                FallbackVapiVoiceVoiceId.Layla => "Layla",
                 FallbackVapiVoiceVoiceId.Leah => "Leah",
                 FallbackVapiVoiceVoiceId.Leo => "Leo",
                 FallbackVapiVoiceVoiceId.Lily => "Lily",
@@ -153,6 +167,7 @@ namespace Vapi
                 FallbackVapiVoiceVoiceId.Rohan => "Rohan",
                 FallbackVapiVoiceVoiceId.Sagar => "Sagar",
                 FallbackVapiVoiceVoiceId.Savannah => "Savannah",
+                FallbackVapiVoiceVoiceId.Sid => "Sid",
                 FallbackVapiVoiceVoiceId.Spencer => "Spencer",
                 FallbackVapiVoiceVoiceId.Tara => "Tara",
                 FallbackVapiVoiceVoiceId.Zac => "Zac",
@@ -173,11 +188,13 @@ namespace Vapi
                 "Elliot" => FallbackVapiVoiceVoiceId.Elliot,
                 "Emma" => FallbackVapiVoiceVoiceId.Emma,
                 "Godfrey" => FallbackVapiVoiceVoiceId.Godfrey,
+                "Gustavo" => FallbackVapiVoiceVoiceId.Gustavo,
                 "Hana" => FallbackVapiVoiceVoiceId.Hana,
                 "Harry" => FallbackVapiVoiceVoiceId.Harry,
                 "Jess" => FallbackVapiVoiceVoiceId.Jess,
                 "Kai" => FallbackVapiVoiceVoiceId.Kai,
                 "Kylie" => FallbackVapiVoiceVoiceId.Kylie,
+                "Layla" => FallbackVapiVoiceVoiceId.Layla,
                 "Leah" => FallbackVapiVoiceVoiceId.Leah,
                 "Leo" => FallbackVapiVoiceVoiceId.Leo,
                 "Lily" => FallbackVapiVoiceVoiceId.Lily,
@@ -190,6 +207,7 @@ namespace Vapi
                 "Rohan" => FallbackVapiVoiceVoiceId.Rohan,
                 "Sagar" => FallbackVapiVoiceVoiceId.Sagar,
                 "Savannah" => FallbackVapiVoiceVoiceId.Savannah,
+                "Sid" => FallbackVapiVoiceVoiceId.Sid,
                 "Spencer" => FallbackVapiVoiceVoiceId.Spencer,
                 "Tara" => FallbackVapiVoiceVoiceId.Tara,
                 "Zac" => FallbackVapiVoiceVoiceId.Zac,

@@ -15,6 +15,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        ArEn,
+        /// <summary>
+        /// 
+        /// </summary>
         Auto,
         /// <summary>
         /// 
@@ -267,6 +271,7 @@ namespace Vapi
             return value switch
             {
                 SpeechmaticsTranscriberLanguage.Ar => "ar",
+                SpeechmaticsTranscriberLanguage.ArEn => "ar_en",
                 SpeechmaticsTranscriberLanguage.Auto => "auto",
                 SpeechmaticsTranscriberLanguage.Ba => "ba",
                 SpeechmaticsTranscriberLanguage.Be => "be",
@@ -338,6 +343,7 @@ namespace Vapi
             return value switch
             {
                 "ar" => SpeechmaticsTranscriberLanguage.Ar,
+                "ar_en" => SpeechmaticsTranscriberLanguage.ArEn,
                 "auto" => SpeechmaticsTranscriberLanguage.Auto,
                 "ba" => SpeechmaticsTranscriberLanguage.Ba,
                 "be" => SpeechmaticsTranscriberLanguage.Be,
