@@ -8081,6 +8081,7 @@
             "type": "string",
             "enum": [
               "ar",
+              "ar_en",
               "auto",
               "ba",
               "be",
@@ -10135,6 +10136,7 @@
             "type": "string",
             "enum": [
               "ar",
+              "ar_en",
               "auto",
               "ba",
               "be",
@@ -15797,6 +15799,172 @@
           "provider"
         ]
       },
+      "MinimaxLLMModel": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "description": "This is the starting state for the conversation.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OpenAIMessage"
+            }
+          },
+          "tools": {
+            "type": "array",
+            "description": "These are the tools that the assistant can use during the call. To use existing tools, use `toolIds`.\n\nBoth `tools` and `toolIds` can be used together.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/CreateApiRequestToolDTO",
+                  "title": "ApiRequestTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateBashToolDTO",
+                  "title": "BashTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateCodeToolDTO",
+                  "title": "CodeTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateComputerToolDTO",
+                  "title": "ComputerTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateDtmfToolDTO",
+                  "title": "DtmfTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateEndCallToolDTO",
+                  "title": "EndCallTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateFunctionToolDTO",
+                  "title": "FunctionTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateGoHighLevelCalendarAvailabilityToolDTO",
+                  "title": "GoHighLevelCalendarAvailabilityTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateGoHighLevelCalendarEventCreateToolDTO",
+                  "title": "GoHighLevelCalendarEventCreateTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateGoHighLevelContactCreateToolDTO",
+                  "title": "GoHighLevelContactCreateTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateGoHighLevelContactGetToolDTO",
+                  "title": "GoHighLevelContactGetTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateGoogleCalendarCheckAvailabilityToolDTO",
+                  "title": "GoogleCalendarCheckAvailabilityTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateGoogleCalendarCreateEventToolDTO",
+                  "title": "GoogleCalendarCreateEventTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateGoogleSheetsRowAppendToolDTO",
+                  "title": "GoogleSheetsRowAppendTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateHandoffToolDTO",
+                  "title": "HandoffTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateMcpToolDTO",
+                  "title": "McpTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateQueryToolDTO",
+                  "title": "QueryTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateSlackSendMessageToolDTO",
+                  "title": "SlackSendMessageTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateSmsToolDTO",
+                  "title": "SmsTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateTextEditorToolDTO",
+                  "title": "TextEditorTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateTransferCallToolDTO",
+                  "title": "TransferCallTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateSipRequestToolDTO",
+                  "title": "SipRequestTool"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateVoicemailToolDTO",
+                  "title": "VoicemailTool"
+                }
+              ]
+            }
+          },
+          "toolIds": {
+            "description": "These are the tools that the assistant can use during the call. To use transient tools, use `tools`.\n\nBoth `tools` and `toolIds` can be used together.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "knowledgeBase": {
+            "description": "These are the options for the knowledge base.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CreateCustomKnowledgeBaseDTO",
+                "title": "Custom"
+              }
+            ]
+          },
+          "provider": {
+            "type": "string",
+            "enum": [
+              "minimax"
+            ]
+          },
+          "model": {
+            "type": "string",
+            "description": "This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b",
+            "enum": [
+              "MiniMax-M2.7"
+            ]
+          },
+          "temperature": {
+            "type": "number",
+            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "maxTokens": {
+            "type": "number",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250.",
+            "minimum": 50,
+            "maximum": 10000
+          },
+          "emotionRecognitionEnabled": {
+            "type": "boolean",
+            "description": "This determines whether we detect user's emotion while they speak and send it as an additional info to model.\n\nDefault `false` because the model is usually are good at understanding the user's emotion from text.\n\n@default false"
+          },
+          "numFastTurns": {
+            "type": "number",
+            "description": "This sets how many turns at the start of the conversation to use a smaller, faster model from the same provider before switching to the primary model. Example, gpt-3.5-turbo if provider is openai.\n\nDefault is 0.\n\n@default 0",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "model",
+          "provider"
+        ]
+      },
       "OpenAIModel": {
         "type": "object",
         "properties": {
@@ -16042,6 +16210,9 @@
               "gpt-5.1-chat-latest",
               "gpt-5.2",
               "gpt-5.2-chat-latest",
+              "gpt-5.4",
+              "gpt-5.4-mini",
+              "gpt-5.4-nano",
               "gpt-realtime-2025-08-28",
               "gpt-realtime-mini-2025-12-15",
               "o1-mini",
@@ -16169,6 +16340,9 @@
                 "gpt-5.1-chat-latest",
                 "gpt-5.2",
                 "gpt-5.2-chat-latest",
+                "gpt-5.4",
+                "gpt-5.4-mini",
+                "gpt-5.4-nano",
                 "gpt-realtime-2025-08-28",
                 "gpt-realtime-mini-2025-12-15",
                 "o1-mini",
@@ -16189,7 +16363,7 @@
           },
           "promptCacheRetention": {
             "type": "string",
-            "description": "This controls the prompt cache retention policy for models that support extended caching (GPT-4.1, GPT-5 series).\n\n- `in_memory`: Default behavior, cache retained in GPU memory only\n- `24h`: Extended caching, keeps cached prefixes active for up to 24 hours by offloading to GPU-local storage\n\nOnly applies to models: gpt-5.2, gpt-5.1, gpt-5.1-codex, gpt-5.1-codex-mini, gpt-5.1-chat-latest, gpt-5, gpt-5-codex, gpt-4.1\n\n@default undefined (uses API default which is 'in_memory')",
+            "description": "This controls the prompt cache retention policy for models that support extended caching (GPT-4.1, GPT-5 series).\n\n- `in_memory`: Default behavior, cache retained in GPU memory only\n- `24h`: Extended caching, keeps cached prefixes active for up to 24 hours by offloading to GPU-local storage\n\nOnly applies to models: gpt-5.4, gpt-5.4-mini, gpt-5.4-nano, gpt-5.2, gpt-5.1, gpt-5.1-codex, gpt-5.1-codex-mini, gpt-5.1-chat-latest, gpt-5, gpt-5-codex, gpt-4.1\n\n@default undefined (uses API default which is 'in_memory')",
             "enum": [
               "24h",
               "in_memory"
@@ -16863,6 +17037,9 @@
               "gpt-5.1-chat-latest",
               "gpt-5.2",
               "gpt-5.2-chat-latest",
+              "gpt-5.4",
+              "gpt-5.4-mini",
+              "gpt-5.4-nano",
               "o1-mini",
               "o1-mini-2024-09-12",
               "o3",
@@ -22454,11 +22631,13 @@
               "Elliot",
               "Emma",
               "Godfrey",
+              "Gustavo",
               "Hana",
               "Harry",
               "Jess",
               "Kai",
               "Kylie",
+              "Layla",
               "Leah",
               "Leo",
               "Lily",
@@ -22471,6 +22650,7 @@
               "Rohan",
               "Sagar",
               "Savannah",
+              "Sid",
               "Spencer",
               "Tara",
               "Zac",
@@ -22708,6 +22888,15 @@
             "description": "The emotion to use for the voice. If not provided, will use auto-detect mode.\nOptions include: 'happy', 'sad', 'angry', 'fearful', 'surprised', 'disgusted', 'neutral'",
             "example": "happy"
           },
+          "subtitleType": {
+            "type": "string",
+            "description": "Controls the granularity of subtitle/timing data returned by Minimax\nduring synthesis. Set to 'word' to receive per-word timestamps in\nassistant.speechStarted events for karaoke-style caption rendering.\n\n@default \"sentence\"",
+            "enum": [
+              "sentence",
+              "word"
+            ],
+            "default": "sentence"
+          },
           "pitch": {
             "type": "number",
             "description": "Voice pitch adjustment. Range from -12 to 12 semitones.\n@default 0",
@@ -22851,6 +23040,15 @@
             "type": "string",
             "description": "The emotion to use for the voice. If not provided, will use auto-detect mode.\nOptions include: 'happy', 'sad', 'angry', 'fearful', 'surprised', 'disgusted', 'neutral'",
             "example": "happy"
+          },
+          "subtitleType": {
+            "type": "string",
+            "description": "Controls the granularity of subtitle/timing data returned by Minimax\nduring synthesis. Set to 'word' to receive per-word timestamps in\nassistant.speechStarted events for karaoke-style caption rendering.\n\n@default \"sentence\"",
+            "enum": [
+              "sentence",
+              "word"
+            ],
+            "default": "sentence"
           },
           "pitch": {
             "type": "number",
@@ -24479,11 +24677,13 @@
               "Elliot",
               "Emma",
               "Godfrey",
+              "Gustavo",
               "Hana",
               "Harry",
               "Jess",
               "Kai",
               "Kylie",
+              "Layla",
               "Leah",
               "Leo",
               "Lily",
@@ -24496,6 +24696,7 @@
               "Rohan",
               "Sagar",
               "Savannah",
+              "Sid",
               "Spencer",
               "Tara",
               "Zac",
@@ -24883,6 +25084,7 @@
               "australiaeast",
               "canadacentral",
               "canadaeast",
+              "centralus",
               "eastus",
               "eastus2",
               "france",
@@ -24949,6 +25151,7 @@
               "australiaeast",
               "canadacentral",
               "canadaeast",
+              "centralus",
               "eastus",
               "eastus2",
               "france",
@@ -24992,7 +25195,10 @@
               "gpt-5.1",
               "gpt-5.1-chat",
               "gpt-5.2",
-              "gpt-5.2-chat"
+              "gpt-5.2-chat",
+              "gpt-5.4",
+              "gpt-5.4-mini",
+              "gpt-5.4-nano"
             ],
             "example": [
               "gpt-4-0125-preview",
@@ -25020,7 +25226,10 @@
                 "gpt-5.1",
                 "gpt-5.1-chat",
                 "gpt-5.2",
-                "gpt-5.2-chat"
+                "gpt-5.2-chat",
+                "gpt-5.4",
+                "gpt-5.4-mini",
+                "gpt-5.4-nano"
               ]
             }
           },
@@ -26680,6 +26889,10 @@
                 "title": "InflectionAI"
               },
               {
+                "$ref": "#/components/schemas/MinimaxLLMModel",
+                "title": "MiniMaxLLM"
+              },
+              {
                 "$ref": "#/components/schemas/OpenAIModel",
                 "title": "OpenAI"
               },
@@ -26827,6 +27040,7 @@
           "clientMessages": {
             "type": "array",
             "enum": [
+              "assistant.speechStarted",
               "assistant.started",
               "conversation-update",
               "function-call",
@@ -26865,6 +27079,7 @@
             "items": {
               "type": "string",
               "enum": [
+                "assistant.speechStarted",
                 "assistant.started",
                 "conversation-update",
                 "function-call",
@@ -26889,6 +27104,7 @@
           "serverMessages": {
             "type": "array",
             "enum": [
+              "assistant.speechStarted",
               "assistant.started",
               "call.delete.failed",
               "call.deleted",
@@ -26933,6 +27149,7 @@
             "items": {
               "type": "string",
               "enum": [
+                "assistant.speechStarted",
                 "assistant.started",
                 "call.delete.failed",
                 "call.deleted",
@@ -27642,6 +27859,10 @@
                 "title": "InflectionAI"
               },
               {
+                "$ref": "#/components/schemas/MinimaxLLMModel",
+                "title": "MiniMaxLLM"
+              },
+              {
                 "$ref": "#/components/schemas/OpenAIModel",
                 "title": "OpenAI"
               },
@@ -27789,6 +28010,7 @@
           "clientMessages": {
             "type": "array",
             "enum": [
+              "assistant.speechStarted",
               "assistant.started",
               "conversation-update",
               "function-call",
@@ -27827,6 +28049,7 @@
             "items": {
               "type": "string",
               "enum": [
+                "assistant.speechStarted",
                 "assistant.started",
                 "conversation-update",
                 "function-call",
@@ -27851,6 +28074,7 @@
           "serverMessages": {
             "type": "array",
             "enum": [
+              "assistant.speechStarted",
               "assistant.started",
               "call.delete.failed",
               "call.deleted",
@@ -27895,6 +28119,7 @@
             "items": {
               "type": "string",
               "enum": [
+                "assistant.speechStarted",
                 "assistant.started",
                 "call.delete.failed",
                 "call.deleted",
@@ -28501,6 +28726,10 @@
                 "title": "InflectionAI"
               },
               {
+                "$ref": "#/components/schemas/MinimaxLLMModel",
+                "title": "MiniMaxLLM"
+              },
+              {
                 "$ref": "#/components/schemas/OpenAIModel",
                 "title": "OpenAI"
               },
@@ -28648,6 +28877,7 @@
           "clientMessages": {
             "type": "array",
             "enum": [
+              "assistant.speechStarted",
               "assistant.started",
               "conversation-update",
               "function-call",
@@ -28686,6 +28916,7 @@
             "items": {
               "type": "string",
               "enum": [
+                "assistant.speechStarted",
                 "assistant.started",
                 "conversation-update",
                 "function-call",
@@ -28710,6 +28941,7 @@
           "serverMessages": {
             "type": "array",
             "enum": [
+              "assistant.speechStarted",
               "assistant.started",
               "call.delete.failed",
               "call.deleted",
@@ -28754,6 +28986,7 @@
             "items": {
               "type": "string",
               "enum": [
+                "assistant.speechStarted",
                 "assistant.started",
                 "call.delete.failed",
                 "call.deleted",
@@ -29450,6 +29683,10 @@
                 "title": "InflectionAI"
               },
               {
+                "$ref": "#/components/schemas/MinimaxLLMModel",
+                "title": "MiniMaxLLM"
+              },
+              {
                 "$ref": "#/components/schemas/OpenAIModel",
                 "title": "OpenAI"
               },
@@ -29597,6 +29834,7 @@
           "clientMessages": {
             "type": "array",
             "enum": [
+              "assistant.speechStarted",
               "assistant.started",
               "conversation-update",
               "function-call",
@@ -29635,6 +29873,7 @@
             "items": {
               "type": "string",
               "enum": [
+                "assistant.speechStarted",
                 "assistant.started",
                 "conversation-update",
                 "function-call",
@@ -29659,6 +29898,7 @@
           "serverMessages": {
             "type": "array",
             "enum": [
+              "assistant.speechStarted",
               "assistant.started",
               "call.delete.failed",
               "call.deleted",
@@ -29703,6 +29943,7 @@
             "items": {
               "type": "string",
               "enum": [
+                "assistant.speechStarted",
                 "assistant.started",
                 "call.delete.failed",
                 "call.deleted",
@@ -33389,6 +33630,9 @@
               "call.in-progress.error-providerfault-inflection-ai-500-server-error",
               "call.in-progress.error-providerfault-inflection-ai-503-server-overloaded-error",
               "call.in-progress.error-providerfault-inflection-ai-llm-failed",
+              "call.in-progress.error-providerfault-minimax-500-server-error",
+              "call.in-progress.error-providerfault-minimax-503-server-overloaded-error",
+              "call.in-progress.error-providerfault-minimax-llm-failed",
               "call.in-progress.error-providerfault-mistral-500-server-error",
               "call.in-progress.error-providerfault-mistral-503-server-overloaded-error",
               "call.in-progress.error-providerfault-mistral-llm-failed",
@@ -33523,6 +33767,10 @@
               "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota",
               "call.in-progress.error-vapifault-inworld-voice-failed",
               "call.in-progress.error-vapifault-lmnt-voice-failed",
+              "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed",
+              "call.in-progress.error-vapifault-minimax-401-unauthorized",
+              "call.in-progress.error-vapifault-minimax-403-model-access-denied",
+              "call.in-progress.error-vapifault-minimax-429-exceeded-quota",
               "call.in-progress.error-vapifault-minimax-voice-failed",
               "call.in-progress.error-vapifault-mistral-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-mistral-401-unauthorized",
@@ -33777,6 +34025,13 @@
               "pipeline-error-inflection-ai-llm-failed",
               "pipeline-error-inworld-voice-failed",
               "pipeline-error-lmnt-voice-failed",
+              "pipeline-error-minimax-400-bad-request-validation-failed",
+              "pipeline-error-minimax-401-unauthorized",
+              "pipeline-error-minimax-403-model-access-denied",
+              "pipeline-error-minimax-429-exceeded-quota",
+              "pipeline-error-minimax-500-server-error",
+              "pipeline-error-minimax-503-server-overloaded-error",
+              "pipeline-error-minimax-llm-failed",
               "pipeline-error-minimax-voice-failed",
               "pipeline-error-mistral-400-bad-request-validation-failed",
               "pipeline-error-mistral-401-unauthorized",
@@ -34137,6 +34392,107 @@
         "required": [
           "errors",
           "results"
+        ]
+      },
+      "AssistantSpeechWordAlignmentTiming": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Discriminator for exact per-word timing (e.g. ElevenLabs alignment).",
+            "enum": [
+              "word-alignment"
+            ]
+          },
+          "words": {
+            "description": "The individual words in this audio segment.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "wordsStartTimesMs": {
+            "description": "Start time in milliseconds for each word (parallel to `words`).",
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "wordsEndTimesMs": {
+            "description": "End time in milliseconds for each word (parallel to `words`).",
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "required": [
+          "type",
+          "words",
+          "wordsEndTimesMs",
+          "wordsStartTimesMs"
+        ]
+      },
+      "AssistantSpeechWordTimestamp": {
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string",
+            "description": "The full word text (syllables aggregated into complete words)."
+          },
+          "startMs": {
+            "type": "number",
+            "description": "Start time in milliseconds relative to the segment start."
+          },
+          "endMs": {
+            "type": "number",
+            "description": "End time in milliseconds relative to the segment start."
+          }
+        },
+        "required": [
+          "endMs",
+          "startMs",
+          "word"
+        ]
+      },
+      "AssistantSpeechWordProgressTiming": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Discriminator for cursor-based word progress (e.g. Minimax subtitle data).",
+            "enum": [
+              "word-progress"
+            ]
+          },
+          "wordsSpoken": {
+            "type": "number",
+            "description": "Number of words spoken so far in this turn."
+          },
+          "totalWords": {
+            "type": "number",
+            "description": "Total number of words sent to the TTS provider for this turn.\n\n**Important**: this value grows across events within a single turn because\nMinimax synthesizes audio incrementally as the LLM streams tokens. Treat\nit as \"best known total so far\" — it will stabilize once synthesis is\ncomplete.\n\nA value of `0` is a valid sentinel meaning \"not yet known\". This can occur\non the very first `assistant-speech` event of a turn if audio begins\nplaying before the TTS provider has confirmed word-count data. Clients\n**must** guard against divide-by-zero when computing a progress fraction:\n\n```ts\nconst pct = totalWords > 0 ? wordsSpoken / totalWords : 0;\n```"
+          },
+          "segment": {
+            "type": "string",
+            "description": "The text of the latest spoken segment (sentence or clause). Use this\nfor caption display — it corresponds to the chunk just confirmed by\nthe TTS provider, unlike `text` on the parent message which carries\nthe full turn text."
+          },
+          "segmentDurationMs": {
+            "type": "number",
+            "description": "Audio duration in milliseconds for the latest spoken segment. Pair\nwith `segment` to animate karaoke-style word reveals — divide the\nsegment text across this duration for approximate per-word timing."
+          },
+          "words": {
+            "description": "Per-word timestamps for the latest spoken segment. Available when the\nTTS provider supports word-level timing (e.g. Minimax with\nsubtitle_type: \"word\"). Syllables from the provider are aggregated\ninto whole words with start/end times relative to the segment start.\n\nUse these for precise karaoke-style highlighting instead of\ninterpolating from segmentDurationMs.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssistantSpeechWordTimestamp"
+            }
+          }
+        },
+        "required": [
+          "totalWords",
+          "type",
+          "wordsSpoken"
         ]
       },
       "CreateCallDTO": {
@@ -48625,6 +48981,9 @@
               "gpt-5.1-chat-latest",
               "gpt-5.2",
               "gpt-5.2-chat-latest",
+              "gpt-5.4",
+              "gpt-5.4-mini",
+              "gpt-5.4-nano",
               "o1-mini",
               "o1-mini-2024-09-12",
               "o3",
@@ -50740,6 +51099,7 @@
               "australiaeast",
               "canadacentral",
               "canadaeast",
+              "centralus",
               "eastus",
               "eastus2",
               "france",
@@ -50828,6 +51188,7 @@
               "australiaeast",
               "canadacentral",
               "canadaeast",
+              "centralus",
               "eastus",
               "eastus2",
               "france",
@@ -50871,7 +51232,10 @@
               "gpt-5.1",
               "gpt-5.1-chat",
               "gpt-5.2",
-              "gpt-5.2-chat"
+              "gpt-5.2-chat",
+              "gpt-5.4",
+              "gpt-5.4-mini",
+              "gpt-5.4-nano"
             ],
             "example": [
               "gpt-4-0125-preview",
@@ -50899,7 +51263,10 @@
                 "gpt-5.1",
                 "gpt-5.1-chat",
                 "gpt-5.2",
-                "gpt-5.2-chat"
+                "gpt-5.2-chat",
+                "gpt-5.4",
+                "gpt-5.4-mini",
+                "gpt-5.4-nano"
               ]
             }
           },
@@ -54124,6 +54491,7 @@
               "australiaeast",
               "canadacentral",
               "canadaeast",
+              "centralus",
               "eastus",
               "eastus2",
               "france",
@@ -54180,6 +54548,7 @@
               "australiaeast",
               "canadacentral",
               "canadaeast",
+              "centralus",
               "eastus",
               "eastus2",
               "france",
@@ -54223,7 +54592,10 @@
               "gpt-5.1",
               "gpt-5.1-chat",
               "gpt-5.2",
-              "gpt-5.2-chat"
+              "gpt-5.2-chat",
+              "gpt-5.4",
+              "gpt-5.4-mini",
+              "gpt-5.4-nano"
             ],
             "example": [
               "gpt-4-0125-preview",
@@ -54251,7 +54623,10 @@
                 "gpt-5.1",
                 "gpt-5.1-chat",
                 "gpt-5.2",
-                "gpt-5.2-chat"
+                "gpt-5.2-chat",
+                "gpt-5.4",
+                "gpt-5.4-mini",
+                "gpt-5.4-nano"
               ]
             }
           },
@@ -58111,6 +58486,108 @@
           "type"
         ]
       },
+      "ClientMessageAssistantSpeech": {
+        "type": "object",
+        "properties": {
+          "phoneNumber": {
+            "description": "This is the phone number that the message is associated with.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CreateByoPhoneNumberDTO",
+                "title": "ByoPhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateTwilioPhoneNumberDTO",
+                "title": "TwilioPhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateVonagePhoneNumberDTO",
+                "title": "VonagePhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateVapiPhoneNumberDTO",
+                "title": "VapiPhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateTelnyxPhoneNumberDTO",
+                "title": "TelnyxPhoneNumber"
+              }
+            ]
+          },
+          "type": {
+            "type": "string",
+            "description": "This is the type of the message. \"assistant-speech\" is sent as assistant audio is being played.",
+            "enum": [
+              "assistant.speechStarted"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "description": "The full assistant text for the current turn. This is the complete text,\nnot an incremental delta — consumers should use `timing` metadata (e.g.\n`wordsSpoken`) to determine which portion has been spoken so far."
+          },
+          "turn": {
+            "type": "number",
+            "description": "This is the turn number of the assistant speech event (0-indexed)."
+          },
+          "source": {
+            "type": "string",
+            "description": "Indicates how the text was sourced.",
+            "enum": [
+              "custom-voice",
+              "force-say",
+              "model"
+            ]
+          },
+          "timing": {
+            "description": "Optional timing metadata. Shape depends on `timing.type`:\n\n- `word-alignment` (ElevenLabs): per-character timing at playback\n  cadence. words[] includes space entries. Best consumed by tracking\n  a running character count: join timing.words, add to a char cursor,\n  and highlight text up to that position. No interpolation needed.\n\n- `word-progress` (Minimax with voice.subtitleType: 'word'): cursor-\n  based word count per TTS segment. Use wordsSpoken as the anchor,\n  interpolate forward using segmentDurationMs or timing.words until\n  the next event arrives.\n\nWhen absent, the event is a text-only fallback for providers without\nword-level timing (e.g. Cartesia, Deepgram, Azure). Text emits once\nper TTS chunk when audio is playing. Optionally interpolate a word\ncursor at ~3.5 words/sec between events for approximate tracking.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AssistantSpeechWordAlignmentTiming",
+                "title": "WordAlignmentTiming"
+              },
+              {
+                "$ref": "#/components/schemas/AssistantSpeechWordProgressTiming",
+                "title": "WordProgressTiming"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "type"
+            }
+          },
+          "timestamp": {
+            "type": "number",
+            "description": "This is the timestamp of the message."
+          },
+          "call": {
+            "description": "This is the call that the message is associated with.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Call"
+              }
+            ]
+          },
+          "customer": {
+            "description": "This is the customer that the message is associated with.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreateCustomerDTO"
+              }
+            ]
+          },
+          "assistant": {
+            "description": "This is the assistant that the message is associated with.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreateAssistantDTO"
+              }
+            ]
+          }
+        },
+        "required": [
+          "text",
+          "type"
+        ]
+      },
       "ClientMessageChatCreated": {
         "type": "object",
         "properties": {
@@ -58695,6 +59172,10 @@
                 "title": "VoiceInput"
               },
               {
+                "$ref": "#/components/schemas/ClientMessageAssistantSpeech",
+                "title": "AssistantSpeech"
+              },
+              {
                 "$ref": "#/components/schemas/ClientMessageChatCreated",
                 "title": "ChatCreated"
               },
@@ -59042,6 +59523,9 @@
               "call.in-progress.error-providerfault-inflection-ai-500-server-error",
               "call.in-progress.error-providerfault-inflection-ai-503-server-overloaded-error",
               "call.in-progress.error-providerfault-inflection-ai-llm-failed",
+              "call.in-progress.error-providerfault-minimax-500-server-error",
+              "call.in-progress.error-providerfault-minimax-503-server-overloaded-error",
+              "call.in-progress.error-providerfault-minimax-llm-failed",
               "call.in-progress.error-providerfault-mistral-500-server-error",
               "call.in-progress.error-providerfault-mistral-503-server-overloaded-error",
               "call.in-progress.error-providerfault-mistral-llm-failed",
@@ -59176,6 +59660,10 @@
               "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota",
               "call.in-progress.error-vapifault-inworld-voice-failed",
               "call.in-progress.error-vapifault-lmnt-voice-failed",
+              "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed",
+              "call.in-progress.error-vapifault-minimax-401-unauthorized",
+              "call.in-progress.error-vapifault-minimax-403-model-access-denied",
+              "call.in-progress.error-vapifault-minimax-429-exceeded-quota",
               "call.in-progress.error-vapifault-minimax-voice-failed",
               "call.in-progress.error-vapifault-mistral-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-mistral-401-unauthorized",
@@ -59430,6 +59918,13 @@
               "pipeline-error-inflection-ai-llm-failed",
               "pipeline-error-inworld-voice-failed",
               "pipeline-error-lmnt-voice-failed",
+              "pipeline-error-minimax-400-bad-request-validation-failed",
+              "pipeline-error-minimax-401-unauthorized",
+              "pipeline-error-minimax-403-model-access-denied",
+              "pipeline-error-minimax-429-exceeded-quota",
+              "pipeline-error-minimax-500-server-error",
+              "pipeline-error-minimax-503-server-overloaded-error",
+              "pipeline-error-minimax-llm-failed",
               "pipeline-error-minimax-voice-failed",
               "pipeline-error-mistral-400-bad-request-validation-failed",
               "pipeline-error-mistral-401-unauthorized",
@@ -60387,6 +60882,9 @@
               "call.in-progress.error-providerfault-inflection-ai-500-server-error",
               "call.in-progress.error-providerfault-inflection-ai-503-server-overloaded-error",
               "call.in-progress.error-providerfault-inflection-ai-llm-failed",
+              "call.in-progress.error-providerfault-minimax-500-server-error",
+              "call.in-progress.error-providerfault-minimax-503-server-overloaded-error",
+              "call.in-progress.error-providerfault-minimax-llm-failed",
               "call.in-progress.error-providerfault-mistral-500-server-error",
               "call.in-progress.error-providerfault-mistral-503-server-overloaded-error",
               "call.in-progress.error-providerfault-mistral-llm-failed",
@@ -60521,6 +61019,10 @@
               "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota",
               "call.in-progress.error-vapifault-inworld-voice-failed",
               "call.in-progress.error-vapifault-lmnt-voice-failed",
+              "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed",
+              "call.in-progress.error-vapifault-minimax-401-unauthorized",
+              "call.in-progress.error-vapifault-minimax-403-model-access-denied",
+              "call.in-progress.error-vapifault-minimax-429-exceeded-quota",
               "call.in-progress.error-vapifault-minimax-voice-failed",
               "call.in-progress.error-vapifault-mistral-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-mistral-401-unauthorized",
@@ -60775,6 +61277,13 @@
               "pipeline-error-inflection-ai-llm-failed",
               "pipeline-error-inworld-voice-failed",
               "pipeline-error-lmnt-voice-failed",
+              "pipeline-error-minimax-400-bad-request-validation-failed",
+              "pipeline-error-minimax-401-unauthorized",
+              "pipeline-error-minimax-403-model-access-denied",
+              "pipeline-error-minimax-429-exceeded-quota",
+              "pipeline-error-minimax-500-server-error",
+              "pipeline-error-minimax-503-server-overloaded-error",
+              "pipeline-error-minimax-llm-failed",
               "pipeline-error-minimax-voice-failed",
               "pipeline-error-mistral-400-bad-request-validation-failed",
               "pipeline-error-mistral-401-unauthorized",
@@ -61712,6 +62221,124 @@
           "type"
         ]
       },
+      "ServerMessageAssistantSpeech": {
+        "type": "object",
+        "properties": {
+          "phoneNumber": {
+            "description": "This is the phone number that the message is associated with.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CreateByoPhoneNumberDTO",
+                "title": "ByoPhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateTwilioPhoneNumberDTO",
+                "title": "TwilioPhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateVonagePhoneNumberDTO",
+                "title": "VonagePhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateVapiPhoneNumberDTO",
+                "title": "VapiPhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateTelnyxPhoneNumberDTO",
+                "title": "TelnyxPhoneNumber"
+              }
+            ]
+          },
+          "type": {
+            "type": "string",
+            "description": "This is the type of the message. \"assistant-speech\" is sent as assistant audio is being played.",
+            "enum": [
+              "assistant.speechStarted"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "description": "The full assistant text for the current turn. This is the complete text,\nnot an incremental delta — consumers should use `timing` metadata (e.g.\n`wordsSpoken`) to determine which portion has been spoken so far."
+          },
+          "turn": {
+            "type": "number",
+            "description": "This is the turn number of the assistant speech event (0-indexed)."
+          },
+          "source": {
+            "type": "string",
+            "description": "Indicates how the text was sourced.",
+            "enum": [
+              "custom-voice",
+              "force-say",
+              "model"
+            ]
+          },
+          "timing": {
+            "description": "Optional timing metadata. Shape depends on `timing.type`:\n\n- `word-alignment` (ElevenLabs): per-character timing at playback\n  cadence. words[] includes space entries. Best consumed by tracking\n  a running character count: join timing.words, add to a char cursor,\n  and highlight text up to that position. No interpolation needed.\n\n- `word-progress` (Minimax with voice.subtitleType: 'word'): cursor-\n  based word count per TTS segment. Use wordsSpoken as the anchor,\n  interpolate forward using segmentDurationMs or timing.words until\n  the next event arrives.\n\nWhen absent, the event is a text-only fallback for providers without\nword-level timing (e.g. Cartesia, Deepgram, Azure). Text emits once\nper TTS chunk when audio is playing. Optionally interpolate a word\ncursor at ~3.5 words/sec between events for approximate tracking.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AssistantSpeechWordAlignmentTiming",
+                "title": "WordAlignmentTiming"
+              },
+              {
+                "$ref": "#/components/schemas/AssistantSpeechWordProgressTiming",
+                "title": "WordProgressTiming"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "type"
+            }
+          },
+          "timestamp": {
+            "type": "number",
+            "description": "This is the timestamp of the message."
+          },
+          "artifact": {
+            "description": "This is a live version of the `call.artifact`.\n\nThis matches what is stored on `call.artifact` after the call.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Artifact"
+              }
+            ]
+          },
+          "assistant": {
+            "description": "This is the assistant that the message is associated with.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreateAssistantDTO"
+              }
+            ]
+          },
+          "customer": {
+            "description": "This is the customer that the message is associated with.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreateCustomerDTO"
+              }
+            ]
+          },
+          "call": {
+            "description": "This is the call that the message is associated with.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Call"
+              }
+            ]
+          },
+          "chat": {
+            "description": "This is the chat object.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Chat"
+              }
+            ]
+          }
+        },
+        "required": [
+          "text",
+          "type"
+        ]
+      },
       "ServerMessageVoiceRequest": {
         "type": "object",
         "properties": {
@@ -62616,6 +63243,10 @@
               {
                 "$ref": "#/components/schemas/ServerMessageVoiceInput",
                 "title": "VoiceInput"
+              },
+              {
+                "$ref": "#/components/schemas/ServerMessageAssistantSpeech",
+                "title": "AssistantSpeech"
               },
               {
                 "$ref": "#/components/schemas/ServerMessageVoiceRequest",

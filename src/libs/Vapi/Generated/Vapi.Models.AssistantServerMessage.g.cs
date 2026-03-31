@@ -11,6 +11,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        AssistantSpeechStarted,
+        /// <summary>
+        /// 
+        /// </summary>
         AssistantStarted,
         /// <summary>
         /// 
@@ -126,6 +130,7 @@ namespace Vapi
         {
             return value switch
             {
+                AssistantServerMessage.AssistantSpeechStarted => "assistant.speechStarted",
                 AssistantServerMessage.AssistantStarted => "assistant.started",
                 AssistantServerMessage.CallDeleteFailed => "call.delete.failed",
                 AssistantServerMessage.CallDeleted => "call.deleted",
@@ -162,6 +167,7 @@ namespace Vapi
         {
             return value switch
             {
+                "assistant.speechStarted" => AssistantServerMessage.AssistantSpeechStarted,
                 "assistant.started" => AssistantServerMessage.AssistantStarted,
                 "call.delete.failed" => AssistantServerMessage.CallDeleteFailed,
                 "call.deleted" => AssistantServerMessage.CallDeleted,

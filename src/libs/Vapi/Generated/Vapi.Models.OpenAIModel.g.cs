@@ -74,7 +74,7 @@ namespace Vapi
         /// This controls the prompt cache retention policy for models that support extended caching (GPT-4.1, GPT-5 series).<br/>
         /// - `in_memory`: Default behavior, cache retained in GPU memory only<br/>
         /// - `24h`: Extended caching, keeps cached prefixes active for up to 24 hours by offloading to GPU-local storage<br/>
-        /// Only applies to models: gpt-5.2, gpt-5.1, gpt-5.1-codex, gpt-5.1-codex-mini, gpt-5.1-chat-latest, gpt-5, gpt-5-codex, gpt-4.1<br/>
+        /// Only applies to models: gpt-5.4, gpt-5.4-mini, gpt-5.4-nano, gpt-5.2, gpt-5.1, gpt-5.1-codex, gpt-5.1-codex-mini, gpt-5.1-chat-latest, gpt-5, gpt-5-codex, gpt-4.1<br/>
         /// @default undefined (uses API default which is 'in_memory')
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("promptCacheRetention")]
@@ -163,7 +163,7 @@ namespace Vapi
         /// This controls the prompt cache retention policy for models that support extended caching (GPT-4.1, GPT-5 series).<br/>
         /// - `in_memory`: Default behavior, cache retained in GPU memory only<br/>
         /// - `24h`: Extended caching, keeps cached prefixes active for up to 24 hours by offloading to GPU-local storage<br/>
-        /// Only applies to models: gpt-5.2, gpt-5.1, gpt-5.1-codex, gpt-5.1-codex-mini, gpt-5.1-chat-latest, gpt-5, gpt-5-codex, gpt-4.1<br/>
+        /// Only applies to models: gpt-5.4, gpt-5.4-mini, gpt-5.4-nano, gpt-5.2, gpt-5.1, gpt-5.1-codex, gpt-5.1-codex-mini, gpt-5.1-chat-latest, gpt-5, gpt-5-codex, gpt-4.1<br/>
         /// @default undefined (uses API default which is 'in_memory')
         /// </param>
         /// <param name="promptCacheKey">

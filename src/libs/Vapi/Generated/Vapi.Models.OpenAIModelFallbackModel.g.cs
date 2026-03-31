@@ -443,6 +443,18 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt54,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54Mini,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54Nano,
+        /// <summary>
+        /// 
+        /// </summary>
         GptRealtime20250828,
         /// <summary>
         /// 
@@ -590,6 +602,9 @@ namespace Vapi
                 OpenAIModelFallbackModel.Gpt51ChatLatest => "gpt-5.1-chat-latest",
                 OpenAIModelFallbackModel.Gpt52 => "gpt-5.2",
                 OpenAIModelFallbackModel.Gpt52ChatLatest => "gpt-5.2-chat-latest",
+                OpenAIModelFallbackModel.Gpt54 => "gpt-5.4",
+                OpenAIModelFallbackModel.Gpt54Mini => "gpt-5.4-mini",
+                OpenAIModelFallbackModel.Gpt54Nano => "gpt-5.4-nano",
                 OpenAIModelFallbackModel.GptRealtime20250828 => "gpt-realtime-2025-08-28",
                 OpenAIModelFallbackModel.GptRealtimeMini20251215 => "gpt-realtime-mini-2025-12-15",
                 OpenAIModelFallbackModel.O1Mini => "o1-mini",
@@ -715,6 +730,9 @@ namespace Vapi
                 "gpt-5.1-chat-latest" => OpenAIModelFallbackModel.Gpt51ChatLatest,
                 "gpt-5.2" => OpenAIModelFallbackModel.Gpt52,
                 "gpt-5.2-chat-latest" => OpenAIModelFallbackModel.Gpt52ChatLatest,
+                "gpt-5.4" => OpenAIModelFallbackModel.Gpt54,
+                "gpt-5.4-mini" => OpenAIModelFallbackModel.Gpt54Mini,
+                "gpt-5.4-nano" => OpenAIModelFallbackModel.Gpt54Nano,
                 "gpt-realtime-2025-08-28" => OpenAIModelFallbackModel.GptRealtime20250828,
                 "gpt-realtime-mini-2025-12-15" => OpenAIModelFallbackModel.GptRealtimeMini20251215,
                 "o1-mini" => OpenAIModelFallbackModel.O1Mini,

@@ -88,6 +88,18 @@ namespace Vapi
         /// 
         /// </summary>
         Gpt52Chat,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54Mini,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54Nano,
     }
 
     /// <summary>
@@ -122,6 +134,9 @@ namespace Vapi
                 CreateAzureOpenAICredentialDTOModel.Gpt51Chat => "gpt-5.1-chat",
                 CreateAzureOpenAICredentialDTOModel.Gpt52 => "gpt-5.2",
                 CreateAzureOpenAICredentialDTOModel.Gpt52Chat => "gpt-5.2-chat",
+                CreateAzureOpenAICredentialDTOModel.Gpt54 => "gpt-5.4",
+                CreateAzureOpenAICredentialDTOModel.Gpt54Mini => "gpt-5.4-mini",
+                CreateAzureOpenAICredentialDTOModel.Gpt54Nano => "gpt-5.4-nano",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -152,6 +167,9 @@ namespace Vapi
                 "gpt-5.1-chat" => CreateAzureOpenAICredentialDTOModel.Gpt51Chat,
                 "gpt-5.2" => CreateAzureOpenAICredentialDTOModel.Gpt52,
                 "gpt-5.2-chat" => CreateAzureOpenAICredentialDTOModel.Gpt52Chat,
+                "gpt-5.4" => CreateAzureOpenAICredentialDTOModel.Gpt54,
+                "gpt-5.4-mini" => CreateAzureOpenAICredentialDTOModel.Gpt54Mini,
+                "gpt-5.4-nano" => CreateAzureOpenAICredentialDTOModel.Gpt54Nano,
                 _ => null,
             };
         }
