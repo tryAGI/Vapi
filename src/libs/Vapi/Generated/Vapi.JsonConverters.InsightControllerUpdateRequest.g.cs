@@ -77,25 +77,25 @@ namespace Vapi.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateBarInsightFromCallTableDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateBarInsightFromCallTableDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateBarInsightFromCallTableDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Bar, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Bar!, typeInfo);
             }
             else if (value.IsPie)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdatePieInsightFromCallTableDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdatePieInsightFromCallTableDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdatePieInsightFromCallTableDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Pie, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Pie!, typeInfo);
             }
             else if (value.IsLine)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateLineInsightFromCallTableDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateLineInsightFromCallTableDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateLineInsightFromCallTableDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Line, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Line!, typeInfo);
             }
             else if (value.IsText)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateTextInsightFromCallTableDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateTextInsightFromCallTableDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateTextInsightFromCallTableDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text!, typeInfo);
             }
         }
     }

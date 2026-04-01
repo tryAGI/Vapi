@@ -130,13 +130,13 @@ namespace Vapi.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.AssistantSpeechWordAlignmentTiming), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.AssistantSpeechWordAlignmentTiming?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.AssistantSpeechWordAlignmentTiming).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.WordAlignment, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.WordAlignment!, typeInfo);
             }
             else if (value.IsWordProgress)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.AssistantSpeechWordProgressTiming), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.AssistantSpeechWordProgressTiming?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.AssistantSpeechWordProgressTiming).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.WordProgress, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.WordProgress!, typeInfo);
             }
         }
     }
