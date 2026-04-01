@@ -248,139 +248,139 @@ namespace Vapi.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateApiRequestToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateApiRequestToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateApiRequestToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ApiRequest, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ApiRequest!, typeInfo);
             }
             else if (value.IsCode)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateCodeToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateCodeToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateCodeToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Code, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Code!, typeInfo);
             }
             else if (value.IsDtmf)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateDtmfToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateDtmfToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateDtmfToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Dtmf, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Dtmf!, typeInfo);
             }
             else if (value.IsEndCall)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateEndCallToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateEndCallToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateEndCallToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.EndCall, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.EndCall!, typeInfo);
             }
             else if (value.IsFunction)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateFunctionToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateFunctionToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateFunctionToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Function, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Function!, typeInfo);
             }
             else if (value.IsTransferCall)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateTransferCallToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateTransferCallToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateTransferCallToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TransferCall, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TransferCall!, typeInfo);
             }
             else if (value.IsHandoff)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateHandoffToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateHandoffToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateHandoffToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Handoff, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Handoff!, typeInfo);
             }
             else if (value.IsBash)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateBashToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateBashToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateBashToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Bash, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Bash!, typeInfo);
             }
             else if (value.IsComputer)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateComputerToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateComputerToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateComputerToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Computer, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Computer!, typeInfo);
             }
             else if (value.IsTextEditor)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateTextEditorToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateTextEditorToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateTextEditorToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextEditor, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextEditor!, typeInfo);
             }
             else if (value.IsQuery)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateQueryToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateQueryToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateQueryToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Query, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Query!, typeInfo);
             }
             else if (value.IsGoogleCalendarEventCreate)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateGoogleCalendarCreateEventToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateGoogleCalendarCreateEventToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateGoogleCalendarCreateEventToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GoogleCalendarEventCreate, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GoogleCalendarEventCreate!, typeInfo);
             }
             else if (value.IsGoogleSheetsRowAppend)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateGoogleSheetsRowAppendToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateGoogleSheetsRowAppendToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateGoogleSheetsRowAppendToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GoogleSheetsRowAppend, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GoogleSheetsRowAppend!, typeInfo);
             }
             else if (value.IsGoogleCalendarAvailabilityCheck)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateGoogleCalendarCheckAvailabilityToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateGoogleCalendarCheckAvailabilityToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateGoogleCalendarCheckAvailabilityToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GoogleCalendarAvailabilityCheck, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GoogleCalendarAvailabilityCheck!, typeInfo);
             }
             else if (value.IsSlackMessageSend)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateSlackSendMessageToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateSlackSendMessageToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateSlackSendMessageToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SlackMessageSend, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SlackMessageSend!, typeInfo);
             }
             else if (value.IsSms)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateSmsToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateSmsToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateSmsToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Sms, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Sms!, typeInfo);
             }
             else if (value.IsMcp)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateMcpToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateMcpToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateMcpToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Mcp, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Mcp!, typeInfo);
             }
             else if (value.IsGohighlevelCalendarAvailabilityCheck)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateGoHighLevelCalendarAvailabilityToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateGoHighLevelCalendarAvailabilityToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateGoHighLevelCalendarAvailabilityToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GohighlevelCalendarAvailabilityCheck, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GohighlevelCalendarAvailabilityCheck!, typeInfo);
             }
             else if (value.IsGohighlevelCalendarEventCreate)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateGoHighLevelCalendarEventCreateToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateGoHighLevelCalendarEventCreateToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateGoHighLevelCalendarEventCreateToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GohighlevelCalendarEventCreate, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GohighlevelCalendarEventCreate!, typeInfo);
             }
             else if (value.IsGohighlevelContactCreate)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateGoHighLevelContactCreateToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateGoHighLevelContactCreateToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateGoHighLevelContactCreateToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GohighlevelContactCreate, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GohighlevelContactCreate!, typeInfo);
             }
             else if (value.IsGohighlevelContactGet)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateGoHighLevelContactGetToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateGoHighLevelContactGetToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateGoHighLevelContactGetToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GohighlevelContactGet, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GohighlevelContactGet!, typeInfo);
             }
             else if (value.IsSipRequest)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateSipRequestToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateSipRequestToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateSipRequestToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SipRequest, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SipRequest!, typeInfo);
             }
             else if (value.IsVoicemail)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateVoicemailToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateVoicemailToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateVoicemailToolDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Voicemail, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Voicemail!, typeInfo);
             }
         }
     }

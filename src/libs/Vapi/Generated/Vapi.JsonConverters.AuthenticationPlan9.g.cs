@@ -68,19 +68,19 @@ namespace Vapi.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.OAuth2AuthenticationPlan), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.OAuth2AuthenticationPlan?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.OAuth2AuthenticationPlan).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Oauth2, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Oauth2!, typeInfo);
             }
             else if (value.IsHmac)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.HMACAuthenticationPlan), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.HMACAuthenticationPlan?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.HMACAuthenticationPlan).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Hmac, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Hmac!, typeInfo);
             }
             else if (value.IsBearer)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.BearerAuthenticationPlan), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.BearerAuthenticationPlan?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.BearerAuthenticationPlan).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Bearer, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Bearer!, typeInfo);
             }
         }
     }
