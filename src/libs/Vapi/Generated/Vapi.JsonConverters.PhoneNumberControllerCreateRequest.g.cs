@@ -12,49 +12,36 @@ namespace Vapi.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
 
             var readerCopy = reader;
-            var discriminatorTypeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.PhoneNumberControllerCreateRequestDiscriminator), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.PhoneNumberControllerCreateRequestDiscriminator> ??
-                            throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.PhoneNumberControllerCreateRequestDiscriminator)}");
-            var discriminator = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, discriminatorTypeInfo);
+            var discriminator = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.PhoneNumberControllerCreateRequestDiscriminator>(ref readerCopy, options);
 
             global::Vapi.CreateByoPhoneNumberDTO? byoPhoneNumber = default;
             if (discriminator?.Provider == global::Vapi.PhoneNumberControllerCreateRequestDiscriminatorProvider.ByoPhoneNumber)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateByoPhoneNumberDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateByoPhoneNumberDTO> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateByoPhoneNumberDTO)}");
-                byoPhoneNumber = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+                byoPhoneNumber = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.CreateByoPhoneNumberDTO>(ref reader, options);
             }
             global::Vapi.CreateTwilioPhoneNumberDTO? twilio = default;
             if (discriminator?.Provider == global::Vapi.PhoneNumberControllerCreateRequestDiscriminatorProvider.Twilio)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateTwilioPhoneNumberDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateTwilioPhoneNumberDTO> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateTwilioPhoneNumberDTO)}");
-                twilio = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+                twilio = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.CreateTwilioPhoneNumberDTO>(ref reader, options);
             }
             global::Vapi.CreateVonagePhoneNumberDTO? vonage = default;
             if (discriminator?.Provider == global::Vapi.PhoneNumberControllerCreateRequestDiscriminatorProvider.Vonage)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateVonagePhoneNumberDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateVonagePhoneNumberDTO> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateVonagePhoneNumberDTO)}");
-                vonage = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+                vonage = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.CreateVonagePhoneNumberDTO>(ref reader, options);
             }
             global::Vapi.CreateVapiPhoneNumberDTO? vapi = default;
             if (discriminator?.Provider == global::Vapi.PhoneNumberControllerCreateRequestDiscriminatorProvider.Vapi)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateVapiPhoneNumberDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateVapiPhoneNumberDTO> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateVapiPhoneNumberDTO)}");
-                vapi = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+                vapi = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.CreateVapiPhoneNumberDTO>(ref reader, options);
             }
             global::Vapi.CreateTelnyxPhoneNumberDTO? telnyx = default;
             if (discriminator?.Provider == global::Vapi.PhoneNumberControllerCreateRequestDiscriminatorProvider.Telnyx)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateTelnyxPhoneNumberDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateTelnyxPhoneNumberDTO> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateTelnyxPhoneNumberDTO)}");
-                telnyx = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+                telnyx = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.CreateTelnyxPhoneNumberDTO>(ref reader, options);
             }
 
             var __value = new global::Vapi.PhoneNumberControllerCreateRequest(
@@ -79,38 +66,27 @@ namespace Vapi.JsonConverters
             global::Vapi.PhoneNumberControllerCreateRequest value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsByoPhoneNumber)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateByoPhoneNumberDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateByoPhoneNumberDTO?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateByoPhoneNumberDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ByoPhoneNumber!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ByoPhoneNumber, typeof(global::Vapi.CreateByoPhoneNumberDTO), options);
             }
             else if (value.IsTwilio)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateTwilioPhoneNumberDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateTwilioPhoneNumberDTO?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateTwilioPhoneNumberDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Twilio!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Twilio, typeof(global::Vapi.CreateTwilioPhoneNumberDTO), options);
             }
             else if (value.IsVonage)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateVonagePhoneNumberDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateVonagePhoneNumberDTO?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateVonagePhoneNumberDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Vonage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Vonage, typeof(global::Vapi.CreateVonagePhoneNumberDTO), options);
             }
             else if (value.IsVapi)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateVapiPhoneNumberDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateVapiPhoneNumberDTO?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateVapiPhoneNumberDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Vapi!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Vapi, typeof(global::Vapi.CreateVapiPhoneNumberDTO), options);
             }
             else if (value.IsTelnyx)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateTelnyxPhoneNumberDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateTelnyxPhoneNumberDTO?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateTelnyxPhoneNumberDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Telnyx!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Telnyx, typeof(global::Vapi.CreateTelnyxPhoneNumberDTO), options);
             }
         }
     }

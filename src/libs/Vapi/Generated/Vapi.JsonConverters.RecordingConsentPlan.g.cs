@@ -12,28 +12,21 @@ namespace Vapi.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
 
             var readerCopy = reader;
-            var discriminatorTypeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CompliancePlanRecordingConsentPlanDiscriminator), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CompliancePlanRecordingConsentPlanDiscriminator> ??
-                            throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CompliancePlanRecordingConsentPlanDiscriminator)}");
-            var discriminator = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, discriminatorTypeInfo);
+            var discriminator = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.CompliancePlanRecordingConsentPlanDiscriminator>(ref readerCopy, options);
 
             global::Vapi.RecordingConsentPlanStayOnLine? stayOnLine = default;
             if (discriminator?.Type == global::Vapi.CompliancePlanRecordingConsentPlanDiscriminatorType.StayOnLine)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.RecordingConsentPlanStayOnLine), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.RecordingConsentPlanStayOnLine> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.RecordingConsentPlanStayOnLine)}");
-                stayOnLine = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+                stayOnLine = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.RecordingConsentPlanStayOnLine>(ref reader, options);
             }
             global::Vapi.RecordingConsentPlanVerbal? verbal = default;
             if (discriminator?.Type == global::Vapi.CompliancePlanRecordingConsentPlanDiscriminatorType.Verbal)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.RecordingConsentPlanVerbal), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.RecordingConsentPlanVerbal> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.RecordingConsentPlanVerbal)}");
-                verbal = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+                verbal = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.RecordingConsentPlanVerbal>(ref reader, options);
             }
 
             var __value = new global::Vapi.RecordingConsentPlan(
@@ -52,20 +45,15 @@ namespace Vapi.JsonConverters
             global::Vapi.RecordingConsentPlan value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsStayOnLine)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.RecordingConsentPlanStayOnLine), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.RecordingConsentPlanStayOnLine?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.RecordingConsentPlanStayOnLine).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.StayOnLine!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.StayOnLine, typeof(global::Vapi.RecordingConsentPlanStayOnLine), options);
             }
             else if (value.IsVerbal)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.RecordingConsentPlanVerbal), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.RecordingConsentPlanVerbal?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.RecordingConsentPlanVerbal).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Verbal!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Verbal, typeof(global::Vapi.RecordingConsentPlanVerbal), options);
             }
         }
     }
