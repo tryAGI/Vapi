@@ -12,8 +12,7 @@ namespace Vapi.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -51,9 +50,7 @@ namespace Vapi.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.AssistantSpeechWordAlignmentTiming), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.AssistantSpeechWordAlignmentTiming> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.AssistantSpeechWordAlignmentTiming).Name}");
-                        wordAlignment = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        wordAlignment = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.AssistantSpeechWordAlignmentTiming>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -66,9 +63,7 @@ namespace Vapi.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.AssistantSpeechWordProgressTiming), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.AssistantSpeechWordProgressTiming> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.AssistantSpeechWordProgressTiming).Name}");
-                        wordProgress = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        wordProgress = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.AssistantSpeechWordProgressTiming>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -83,9 +78,7 @@ namespace Vapi.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.AssistantSpeechWordAlignmentTiming), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.AssistantSpeechWordAlignmentTiming> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.AssistantSpeechWordAlignmentTiming).Name}");
-                    wordAlignment = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    wordAlignment = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.AssistantSpeechWordAlignmentTiming>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -96,9 +89,7 @@ namespace Vapi.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.AssistantSpeechWordProgressTiming), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.AssistantSpeechWordProgressTiming> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.AssistantSpeechWordProgressTiming).Name}");
-                    wordProgress = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    wordProgress = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.AssistantSpeechWordProgressTiming>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -123,20 +114,15 @@ namespace Vapi.JsonConverters
             global::Vapi.Timing2 value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsWordAlignment)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.AssistantSpeechWordAlignmentTiming), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.AssistantSpeechWordAlignmentTiming?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.AssistantSpeechWordAlignmentTiming).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.WordAlignment!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.WordAlignment, typeof(global::Vapi.AssistantSpeechWordAlignmentTiming), options);
             }
             else if (value.IsWordProgress)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.AssistantSpeechWordProgressTiming), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.AssistantSpeechWordProgressTiming?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.AssistantSpeechWordProgressTiming).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.WordProgress!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.WordProgress, typeof(global::Vapi.AssistantSpeechWordProgressTiming), options);
             }
         }
     }
