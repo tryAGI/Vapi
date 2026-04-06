@@ -187,7 +187,7 @@ namespace Vapi
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Vapi.InsightPaginatedResponse.FromJson(__content, JsonSerializerOptions) ??
+                        global::Vapi.InsightPaginatedResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -217,7 +217,7 @@ namespace Vapi
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Vapi.InsightPaginatedResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                        await global::Vapi.InsightPaginatedResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

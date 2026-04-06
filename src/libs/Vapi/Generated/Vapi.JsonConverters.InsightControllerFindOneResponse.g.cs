@@ -12,31 +12,42 @@ namespace Vapi.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
 
             var readerCopy = reader;
-            var discriminator = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.InsightControllerFindOneResponseDiscriminator>(ref readerCopy, options);
+            var discriminatorTypeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.InsightControllerFindOneResponseDiscriminator), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.InsightControllerFindOneResponseDiscriminator> ??
+                            throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.InsightControllerFindOneResponseDiscriminator)}");
+            var discriminator = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, discriminatorTypeInfo);
 
             global::Vapi.BarInsight? bar = default;
             if (discriminator?.Type == global::Vapi.InsightControllerFindOneResponseDiscriminatorType.Bar)
             {
-                bar = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.BarInsight>(ref reader, options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.BarInsight), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.BarInsight> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.BarInsight)}");
+                bar = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.PieInsight? pie = default;
             if (discriminator?.Type == global::Vapi.InsightControllerFindOneResponseDiscriminatorType.Pie)
             {
-                pie = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.PieInsight>(ref reader, options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.PieInsight), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.PieInsight> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.PieInsight)}");
+                pie = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.LineInsight? line = default;
             if (discriminator?.Type == global::Vapi.InsightControllerFindOneResponseDiscriminatorType.Line)
             {
-                line = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.LineInsight>(ref reader, options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.LineInsight), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.LineInsight> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.LineInsight)}");
+                line = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.TextInsight? text = default;
             if (discriminator?.Type == global::Vapi.InsightControllerFindOneResponseDiscriminatorType.Text)
             {
-                text = global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.TextInsight>(ref reader, options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.TextInsight), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.TextInsight> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.TextInsight)}");
+                text = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
 
             var __value = new global::Vapi.InsightControllerFindOneResponse(
@@ -59,23 +70,32 @@ namespace Vapi.JsonConverters
             global::Vapi.InsightControllerFindOneResponse value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsBar)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Bar, typeof(global::Vapi.BarInsight), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.BarInsight), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.BarInsight?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.BarInsight).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Bar!, typeInfo);
             }
             else if (value.IsPie)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Pie, typeof(global::Vapi.PieInsight), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.PieInsight), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.PieInsight?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.PieInsight).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Pie!, typeInfo);
             }
             else if (value.IsLine)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Line, typeof(global::Vapi.LineInsight), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.LineInsight), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.LineInsight?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.LineInsight).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Line!, typeInfo);
             }
             else if (value.IsText)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text, typeof(global::Vapi.TextInsight), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.TextInsight), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.TextInsight?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.TextInsight).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text!, typeInfo);
             }
         }
     }
