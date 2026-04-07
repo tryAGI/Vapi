@@ -21,13 +21,25 @@ namespace Vapi
         /// </summary>
         Ba,
         /// <summary>
+        /// https://developers.deepgram.com/docs/models-languages-overview
+        /// </summary>
+        Be,
+        /// <summary>
         /// 
         /// </summary>
         Bg,
         /// <summary>
         /// 
         /// </summary>
+        Bn,
+        /// <summary>
+        /// 
+        /// </summary>
         Br,
+        /// <summary>
+        /// 
+        /// </summary>
+        Bs,
         /// <summary>
         /// https://developers.deepgram.com/docs/models-languages-overview
         /// </summary>
@@ -147,6 +159,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Hr,
+        /// <summary>
+        /// 
+        /// </summary>
         Hu,
         /// <summary>
         /// 
@@ -196,6 +212,10 @@ namespace Vapi
         /// 
         /// </summary>
         Mk,
+        /// <summary>
+        /// 
+        /// </summary>
+        Mr,
         /// <summary>
         /// 
         /// </summary>
@@ -281,6 +301,10 @@ namespace Vapi
         /// </summary>
         Taq,
         /// <summary>
+        /// 
+        /// </summary>
+        Te,
+        /// <summary>
         /// https://developers.deepgram.com/docs/models-languages-overview
         /// </summary>
         Th,
@@ -288,6 +312,10 @@ namespace Vapi
         /// 
         /// </summary>
         ThTh,
+        /// <summary>
+        /// 
+        /// </summary>
+        Tl,
         /// <summary>
         /// https://developers.deepgram.com/docs/models-languages-overview
         /// </summary>
@@ -353,8 +381,11 @@ namespace Vapi
                 FallbackDeepgramTranscriberLanguage.Ar => "ar",
                 FallbackDeepgramTranscriberLanguage.Az => "az",
                 FallbackDeepgramTranscriberLanguage.Ba => "ba",
+                FallbackDeepgramTranscriberLanguage.Be => "be",
                 FallbackDeepgramTranscriberLanguage.Bg => "bg",
+                FallbackDeepgramTranscriberLanguage.Bn => "bn",
                 FallbackDeepgramTranscriberLanguage.Br => "br",
+                FallbackDeepgramTranscriberLanguage.Bs => "bs",
                 FallbackDeepgramTranscriberLanguage.Ca => "ca",
                 FallbackDeepgramTranscriberLanguage.Cs => "cs",
                 FallbackDeepgramTranscriberLanguage.Da => "da",
@@ -384,6 +415,7 @@ namespace Vapi
                 FallbackDeepgramTranscriberLanguage.He => "he",
                 FallbackDeepgramTranscriberLanguage.Hi => "hi",
                 FallbackDeepgramTranscriberLanguage.HiLatn => "hi-Latn",
+                FallbackDeepgramTranscriberLanguage.Hr => "hr",
                 FallbackDeepgramTranscriberLanguage.Hu => "hu",
                 FallbackDeepgramTranscriberLanguage.Id => "id",
                 FallbackDeepgramTranscriberLanguage.Is => "is",
@@ -397,6 +429,7 @@ namespace Vapi
                 FallbackDeepgramTranscriberLanguage.Lt => "lt",
                 FallbackDeepgramTranscriberLanguage.Lv => "lv",
                 FallbackDeepgramTranscriberLanguage.Mk => "mk",
+                FallbackDeepgramTranscriberLanguage.Mr => "mr",
                 FallbackDeepgramTranscriberLanguage.Ms => "ms",
                 FallbackDeepgramTranscriberLanguage.Multi => "multi",
                 FallbackDeepgramTranscriberLanguage.Nl => "nl",
@@ -418,8 +451,10 @@ namespace Vapi
                 FallbackDeepgramTranscriberLanguage.SvSe => "sv-SE",
                 FallbackDeepgramTranscriberLanguage.Ta => "ta",
                 FallbackDeepgramTranscriberLanguage.Taq => "taq",
+                FallbackDeepgramTranscriberLanguage.Te => "te",
                 FallbackDeepgramTranscriberLanguage.Th => "th",
                 FallbackDeepgramTranscriberLanguage.ThTh => "th-TH",
+                FallbackDeepgramTranscriberLanguage.Tl => "tl",
                 FallbackDeepgramTranscriberLanguage.Tr => "tr",
                 FallbackDeepgramTranscriberLanguage.Tt => "tt",
                 FallbackDeepgramTranscriberLanguage.Uk => "uk",
@@ -445,8 +480,11 @@ namespace Vapi
                 "ar" => FallbackDeepgramTranscriberLanguage.Ar,
                 "az" => FallbackDeepgramTranscriberLanguage.Az,
                 "ba" => FallbackDeepgramTranscriberLanguage.Ba,
+                "be" => FallbackDeepgramTranscriberLanguage.Be,
                 "bg" => FallbackDeepgramTranscriberLanguage.Bg,
+                "bn" => FallbackDeepgramTranscriberLanguage.Bn,
                 "br" => FallbackDeepgramTranscriberLanguage.Br,
+                "bs" => FallbackDeepgramTranscriberLanguage.Bs,
                 "ca" => FallbackDeepgramTranscriberLanguage.Ca,
                 "cs" => FallbackDeepgramTranscriberLanguage.Cs,
                 "da" => FallbackDeepgramTranscriberLanguage.Da,
@@ -476,6 +514,7 @@ namespace Vapi
                 "he" => FallbackDeepgramTranscriberLanguage.He,
                 "hi" => FallbackDeepgramTranscriberLanguage.Hi,
                 "hi-Latn" => FallbackDeepgramTranscriberLanguage.HiLatn,
+                "hr" => FallbackDeepgramTranscriberLanguage.Hr,
                 "hu" => FallbackDeepgramTranscriberLanguage.Hu,
                 "id" => FallbackDeepgramTranscriberLanguage.Id,
                 "is" => FallbackDeepgramTranscriberLanguage.Is,
@@ -489,6 +528,7 @@ namespace Vapi
                 "lt" => FallbackDeepgramTranscriberLanguage.Lt,
                 "lv" => FallbackDeepgramTranscriberLanguage.Lv,
                 "mk" => FallbackDeepgramTranscriberLanguage.Mk,
+                "mr" => FallbackDeepgramTranscriberLanguage.Mr,
                 "ms" => FallbackDeepgramTranscriberLanguage.Ms,
                 "multi" => FallbackDeepgramTranscriberLanguage.Multi,
                 "nl" => FallbackDeepgramTranscriberLanguage.Nl,
@@ -510,8 +550,10 @@ namespace Vapi
                 "sv-SE" => FallbackDeepgramTranscriberLanguage.SvSe,
                 "ta" => FallbackDeepgramTranscriberLanguage.Ta,
                 "taq" => FallbackDeepgramTranscriberLanguage.Taq,
+                "te" => FallbackDeepgramTranscriberLanguage.Te,
                 "th" => FallbackDeepgramTranscriberLanguage.Th,
                 "th-TH" => FallbackDeepgramTranscriberLanguage.ThTh,
+                "tl" => FallbackDeepgramTranscriberLanguage.Tl,
                 "tr" => FallbackDeepgramTranscriberLanguage.Tr,
                 "tt" => FallbackDeepgramTranscriberLanguage.Tt,
                 "uk" => FallbackDeepgramTranscriberLanguage.Uk,

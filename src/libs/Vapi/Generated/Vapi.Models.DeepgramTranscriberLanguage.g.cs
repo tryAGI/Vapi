@@ -21,13 +21,25 @@ namespace Vapi
         /// </summary>
         Ba,
         /// <summary>
+        /// https://developers.deepgram.com/docs/models-languages-overview
+        /// </summary>
+        Be,
+        /// <summary>
         /// 
         /// </summary>
         Bg,
         /// <summary>
         /// 
         /// </summary>
+        Bn,
+        /// <summary>
+        /// 
+        /// </summary>
         Br,
+        /// <summary>
+        /// 
+        /// </summary>
+        Bs,
         /// <summary>
         /// https://developers.deepgram.com/docs/models-languages-overview
         /// </summary>
@@ -147,6 +159,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Hr,
+        /// <summary>
+        /// 
+        /// </summary>
         Hu,
         /// <summary>
         /// 
@@ -196,6 +212,10 @@ namespace Vapi
         /// 
         /// </summary>
         Mk,
+        /// <summary>
+        /// 
+        /// </summary>
+        Mr,
         /// <summary>
         /// 
         /// </summary>
@@ -281,6 +301,10 @@ namespace Vapi
         /// </summary>
         Taq,
         /// <summary>
+        /// 
+        /// </summary>
+        Te,
+        /// <summary>
         /// https://developers.deepgram.com/docs/models-languages-overview
         /// </summary>
         Th,
@@ -288,6 +312,10 @@ namespace Vapi
         /// 
         /// </summary>
         ThTh,
+        /// <summary>
+        /// 
+        /// </summary>
+        Tl,
         /// <summary>
         /// https://developers.deepgram.com/docs/models-languages-overview
         /// </summary>
@@ -353,8 +381,11 @@ namespace Vapi
                 DeepgramTranscriberLanguage.Ar => "ar",
                 DeepgramTranscriberLanguage.Az => "az",
                 DeepgramTranscriberLanguage.Ba => "ba",
+                DeepgramTranscriberLanguage.Be => "be",
                 DeepgramTranscriberLanguage.Bg => "bg",
+                DeepgramTranscriberLanguage.Bn => "bn",
                 DeepgramTranscriberLanguage.Br => "br",
+                DeepgramTranscriberLanguage.Bs => "bs",
                 DeepgramTranscriberLanguage.Ca => "ca",
                 DeepgramTranscriberLanguage.Cs => "cs",
                 DeepgramTranscriberLanguage.Da => "da",
@@ -384,6 +415,7 @@ namespace Vapi
                 DeepgramTranscriberLanguage.He => "he",
                 DeepgramTranscriberLanguage.Hi => "hi",
                 DeepgramTranscriberLanguage.HiLatn => "hi-Latn",
+                DeepgramTranscriberLanguage.Hr => "hr",
                 DeepgramTranscriberLanguage.Hu => "hu",
                 DeepgramTranscriberLanguage.Id => "id",
                 DeepgramTranscriberLanguage.Is => "is",
@@ -397,6 +429,7 @@ namespace Vapi
                 DeepgramTranscriberLanguage.Lt => "lt",
                 DeepgramTranscriberLanguage.Lv => "lv",
                 DeepgramTranscriberLanguage.Mk => "mk",
+                DeepgramTranscriberLanguage.Mr => "mr",
                 DeepgramTranscriberLanguage.Ms => "ms",
                 DeepgramTranscriberLanguage.Multi => "multi",
                 DeepgramTranscriberLanguage.Nl => "nl",
@@ -418,8 +451,10 @@ namespace Vapi
                 DeepgramTranscriberLanguage.SvSe => "sv-SE",
                 DeepgramTranscriberLanguage.Ta => "ta",
                 DeepgramTranscriberLanguage.Taq => "taq",
+                DeepgramTranscriberLanguage.Te => "te",
                 DeepgramTranscriberLanguage.Th => "th",
                 DeepgramTranscriberLanguage.ThTh => "th-TH",
+                DeepgramTranscriberLanguage.Tl => "tl",
                 DeepgramTranscriberLanguage.Tr => "tr",
                 DeepgramTranscriberLanguage.Tt => "tt",
                 DeepgramTranscriberLanguage.Uk => "uk",
@@ -445,8 +480,11 @@ namespace Vapi
                 "ar" => DeepgramTranscriberLanguage.Ar,
                 "az" => DeepgramTranscriberLanguage.Az,
                 "ba" => DeepgramTranscriberLanguage.Ba,
+                "be" => DeepgramTranscriberLanguage.Be,
                 "bg" => DeepgramTranscriberLanguage.Bg,
+                "bn" => DeepgramTranscriberLanguage.Bn,
                 "br" => DeepgramTranscriberLanguage.Br,
+                "bs" => DeepgramTranscriberLanguage.Bs,
                 "ca" => DeepgramTranscriberLanguage.Ca,
                 "cs" => DeepgramTranscriberLanguage.Cs,
                 "da" => DeepgramTranscriberLanguage.Da,
@@ -476,6 +514,7 @@ namespace Vapi
                 "he" => DeepgramTranscriberLanguage.He,
                 "hi" => DeepgramTranscriberLanguage.Hi,
                 "hi-Latn" => DeepgramTranscriberLanguage.HiLatn,
+                "hr" => DeepgramTranscriberLanguage.Hr,
                 "hu" => DeepgramTranscriberLanguage.Hu,
                 "id" => DeepgramTranscriberLanguage.Id,
                 "is" => DeepgramTranscriberLanguage.Is,
@@ -489,6 +528,7 @@ namespace Vapi
                 "lt" => DeepgramTranscriberLanguage.Lt,
                 "lv" => DeepgramTranscriberLanguage.Lv,
                 "mk" => DeepgramTranscriberLanguage.Mk,
+                "mr" => DeepgramTranscriberLanguage.Mr,
                 "ms" => DeepgramTranscriberLanguage.Ms,
                 "multi" => DeepgramTranscriberLanguage.Multi,
                 "nl" => DeepgramTranscriberLanguage.Nl,
@@ -510,8 +550,10 @@ namespace Vapi
                 "sv-SE" => DeepgramTranscriberLanguage.SvSe,
                 "ta" => DeepgramTranscriberLanguage.Ta,
                 "taq" => DeepgramTranscriberLanguage.Taq,
+                "te" => DeepgramTranscriberLanguage.Te,
                 "th" => DeepgramTranscriberLanguage.Th,
                 "th-TH" => DeepgramTranscriberLanguage.ThTh,
+                "tl" => DeepgramTranscriberLanguage.Tl,
                 "tr" => DeepgramTranscriberLanguage.Tr,
                 "tt" => DeepgramTranscriberLanguage.Tt,
                 "uk" => DeepgramTranscriberLanguage.Uk,
