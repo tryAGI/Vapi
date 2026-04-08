@@ -67,6 +67,22 @@ namespace Vapi
         public bool? ProfanityFilter { get; set; }
 
         /// <summary>
+        /// Enables redaction of sensitive information from transcripts.<br/>
+        /// Options include:<br/>
+        /// - "pci": Redacts credit card numbers, expiration dates, and CVV.<br/>
+        /// - "pii": Redacts personally identifiable information (names, locations, identifying numbers, etc.).<br/>
+        /// - "phi": Redacts protected health information (medical conditions, drugs, injuries, etc.).<br/>
+        /// - "numbers": Redacts numerical and identifying entities (dates, account numbers, SSNs, etc.).<br/>
+        /// Multiple values can be provided to redact different categories simultaneously.<br/>
+        /// Redacted content is replaced with entity labels like [CREDIT_CARD_1], [SSN_1], etc.<br/>
+        /// See https://developers.deepgram.com/docs/redaction for details.<br/>
+        /// Example: [pci, phi]
+        /// </summary>
+        /// <example>[pci, phi]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("redaction")]
+        public global::System.Collections.Generic.IList<global::Vapi.FallbackDeepgramTranscriberRedactionItem>? Redaction { get; set; }
+
+        /// <summary>
         /// Transcripts below this confidence threshold will be discarded.<br/>
         /// @default 0.4<br/>
         /// Example: 0.4F
@@ -163,6 +179,18 @@ namespace Vapi
         /// @default false<br/>
         /// Example: false
         /// </param>
+        /// <param name="redaction">
+        /// Enables redaction of sensitive information from transcripts.<br/>
+        /// Options include:<br/>
+        /// - "pci": Redacts credit card numbers, expiration dates, and CVV.<br/>
+        /// - "pii": Redacts personally identifiable information (names, locations, identifying numbers, etc.).<br/>
+        /// - "phi": Redacts protected health information (medical conditions, drugs, injuries, etc.).<br/>
+        /// - "numbers": Redacts numerical and identifying entities (dates, account numbers, SSNs, etc.).<br/>
+        /// Multiple values can be provided to redact different categories simultaneously.<br/>
+        /// Redacted content is replaced with entity labels like [CREDIT_CARD_1], [SSN_1], etc.<br/>
+        /// See https://developers.deepgram.com/docs/redaction for details.<br/>
+        /// Example: [pci, phi]
+        /// </param>
         /// <param name="confidenceThreshold">
         /// Transcripts below this confidence threshold will be discarded.<br/>
         /// @default 0.4<br/>
@@ -207,6 +235,7 @@ namespace Vapi
             bool? mipOptOut,
             bool? numerals,
             bool? profanityFilter,
+            global::System.Collections.Generic.IList<global::Vapi.FallbackDeepgramTranscriberRedactionItem>? redaction,
             double? confidenceThreshold,
             double? eagerEotThreshold,
             double? eotThreshold,
@@ -222,6 +251,7 @@ namespace Vapi
             this.MipOptOut = mipOptOut;
             this.Numerals = numerals;
             this.ProfanityFilter = profanityFilter;
+            this.Redaction = redaction;
             this.ConfidenceThreshold = confidenceThreshold;
             this.EagerEotThreshold = eagerEotThreshold;
             this.EotThreshold = eotThreshold;
