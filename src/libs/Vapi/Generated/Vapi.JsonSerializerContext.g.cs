@@ -65,6 +65,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.DeepgramTranscriberLanguageNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.DeepgramTranscriberRedactionItemJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.DeepgramTranscriberRedactionItemNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.ElevenLabsTranscriberProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ElevenLabsTranscriberProviderNullableJsonConverter),
@@ -224,6 +228,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.FallbackDeepgramTranscriberLanguageJsonConverter),
 
             typeof(global::Vapi.JsonConverters.FallbackDeepgramTranscriberLanguageNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.FallbackDeepgramTranscriberRedactionItemJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.FallbackDeepgramTranscriberRedactionItemNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.FallbackElevenLabsTranscriberProviderJsonConverter),
 
@@ -4826,6 +4834,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.DeepgramTranscriberModel?, string>), TypeInfoPropertyName = "OneOfDeepgramTranscriberModelString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeepgramTranscriberModel), TypeInfoPropertyName = "DeepgramTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeepgramTranscriberLanguage), TypeInfoPropertyName = "DeepgramTranscriberLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.DeepgramTranscriberRedactionItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeepgramTranscriberRedactionItem), TypeInfoPropertyName = "DeepgramTranscriberRedactionItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsTranscriber))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsTranscriberProvider), TypeInfoPropertyName = "ElevenLabsTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsTranscriberModel), TypeInfoPropertyName = "ElevenLabsTranscriberModel2")]
@@ -4880,6 +4890,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.FallbackDeepgramTranscriberModel?, string>), TypeInfoPropertyName = "OneOfFallbackDeepgramTranscriberModelString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackDeepgramTranscriberModel), TypeInfoPropertyName = "FallbackDeepgramTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackDeepgramTranscriberLanguage), TypeInfoPropertyName = "FallbackDeepgramTranscriberLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.FallbackDeepgramTranscriberRedactionItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackDeepgramTranscriberRedactionItem), TypeInfoPropertyName = "FallbackDeepgramTranscriberRedactionItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackElevenLabsTranscriberProvider), TypeInfoPropertyName = "FallbackElevenLabsTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackElevenLabsTranscriberModel), TypeInfoPropertyName = "FallbackElevenLabsTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackElevenLabsTranscriberLanguage), TypeInfoPropertyName = "FallbackElevenLabsTranscriberLanguage2")]
@@ -6969,8 +6981,10 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FallbackAssemblyAITranscriber, global::Vapi.FallbackAzureSpeechTranscriber, global::Vapi.FallbackCustomTranscriber, global::Vapi.FallbackDeepgramTranscriber, global::Vapi.FallbackElevenLabsTranscriber, global::Vapi.FallbackGladiaTranscriber, global::Vapi.FallbackGoogleTranscriber, global::Vapi.FallbackTalkscriberTranscriber, global::Vapi.FallbackSpeechmaticsTranscriber, global::Vapi.FallbackOpenAITranscriber, global::Vapi.FallbackCartesiaTranscriber, global::Vapi.FallbackSonioxTranscriber>>), TypeInfoPropertyName = "FallbackSonioxTranscriber_a4fb477f863abd5e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.DeepgramTranscriberRedactionItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<string, global::Vapi.GladiaVocabularyItemDTO>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SpeechmaticsCustomVocabularyItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.FallbackDeepgramTranscriberRedactionItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TextContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Condition>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.RegexCondition, global::Vapi.LiquidCondition, global::Vapi.GroupCondition>>))]
