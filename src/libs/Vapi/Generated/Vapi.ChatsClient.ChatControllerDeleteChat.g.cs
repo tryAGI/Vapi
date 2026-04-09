@@ -5,6 +5,25 @@ namespace Vapi
 {
     public partial class ChatsClient
     {
+
+
+        private static readonly global::Vapi.EndPointSecurityRequirement s_ChatControllerDeleteChatSecurityRequirement0 =
+            new global::Vapi.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Vapi.EndPointAuthorizationRequirement[]
+                {                    new global::Vapi.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Vapi.EndPointSecurityRequirement[] s_ChatControllerDeleteChatSecurityRequirements =
+            new global::Vapi.EndPointSecurityRequirement[]
+            {                s_ChatControllerDeleteChatSecurityRequirement0,
+            };
         partial void PrepareChatControllerDeleteChatArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id);
@@ -37,9 +56,15 @@ namespace Vapi
                 httpClient: HttpClient,
                 id: ref id);
 
+
+            var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ChatControllerDeleteChatSecurityRequirements,
+                operationName: "ChatControllerDeleteChatAsync");
+
             var __pathBuilder = new global::Vapi.PathBuilder(
                 path: $"/chat/{id}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -49,7 +74,7 @@ namespace Vapi
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
