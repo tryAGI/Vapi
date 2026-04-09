@@ -5,6 +5,25 @@ namespace Vapi
 {
     public partial class StructuredOutputsClient
     {
+
+
+        private static readonly global::Vapi.EndPointSecurityRequirement s_StructuredOutputControllerUpdateSecurityRequirement0 =
+            new global::Vapi.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Vapi.EndPointAuthorizationRequirement[]
+                {                    new global::Vapi.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Vapi.EndPointSecurityRequirement[] s_StructuredOutputControllerUpdateSecurityRequirements =
+            new global::Vapi.EndPointSecurityRequirement[]
+            {                s_StructuredOutputControllerUpdateSecurityRequirement0,
+            };
         partial void PrepareStructuredOutputControllerUpdateArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -50,12 +69,18 @@ namespace Vapi
                 schemaOverride: ref schemaOverride,
                 request: request);
 
+
+            var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_StructuredOutputControllerUpdateSecurityRequirements,
+                operationName: "StructuredOutputControllerUpdateAsync");
+
             var __pathBuilder = new global::Vapi.PathBuilder(
                 path: $"/structured-output/{id}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddRequiredParameter("schemaOverride", schemaOverride) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: new global::System.Net.Http.HttpMethod("PATCH"),
@@ -65,7 +90,7 @@ namespace Vapi
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

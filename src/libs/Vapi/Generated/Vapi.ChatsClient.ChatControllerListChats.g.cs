@@ -5,6 +5,25 @@ namespace Vapi
 {
     public partial class ChatsClient
     {
+
+
+        private static readonly global::Vapi.EndPointSecurityRequirement s_ChatControllerListChatsSecurityRequirement0 =
+            new global::Vapi.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Vapi.EndPointAuthorizationRequirement[]
+                {                    new global::Vapi.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Vapi.EndPointSecurityRequirement[] s_ChatControllerListChatsSecurityRequirements =
+            new global::Vapi.EndPointSecurityRequirement[]
+            {                s_ChatControllerListChatsSecurityRequirement0,
+            };
         partial void PrepareChatControllerListChatsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? id,
@@ -119,6 +138,12 @@ namespace Vapi
                 updatedAtGe: ref updatedAtGe,
                 updatedAtLe: ref updatedAtLe);
 
+
+            var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ChatControllerListChatsSecurityRequirements,
+                operationName: "ChatControllerListChatsAsync");
+
             var __pathBuilder = new global::Vapi.PathBuilder(
                 path: "/chat",
                 baseUri: HttpClient.BaseAddress); 
@@ -140,7 +165,7 @@ namespace Vapi
                 .AddOptionalParameter("updatedAtLt", updatedAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                 .AddOptionalParameter("updatedAtGe", updatedAtGe?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                 .AddOptionalParameter("updatedAtLe", updatedAtLe?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -150,7 +175,7 @@ namespace Vapi
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace Vapi
 {
     public partial class InsightClient
     {
+
+
+        private static readonly global::Vapi.EndPointSecurityRequirement s_InsightControllerUpdateSecurityRequirement0 =
+            new global::Vapi.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Vapi.EndPointAuthorizationRequirement[]
+                {                    new global::Vapi.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Vapi.EndPointSecurityRequirement[] s_InsightControllerUpdateSecurityRequirements =
+            new global::Vapi.EndPointSecurityRequirement[]
+            {                s_InsightControllerUpdateSecurityRequirement0,
+            };
         partial void PrepareInsightControllerUpdateArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id,
@@ -43,9 +62,15 @@ namespace Vapi
                 id: ref id,
                 request: request);
 
+
+            var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_InsightControllerUpdateSecurityRequirements,
+                operationName: "InsightControllerUpdateAsync");
+
             var __pathBuilder = new global::Vapi.PathBuilder(
                 path: $"/reporting/insight/{id}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: new global::System.Net.Http.HttpMethod("PATCH"),
@@ -55,7 +80,7 @@ namespace Vapi
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
