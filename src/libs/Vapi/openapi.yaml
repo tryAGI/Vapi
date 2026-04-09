@@ -8035,7 +8035,7 @@
           },
           "languageHintsStrict": {
             "type": "boolean",
-            "description": "When enabled, restricts transcription to the language specified in the language field. When disabled, the model can detect and transcribe any of 60+ supported languages. Defaults to true."
+            "description": "When enabled, the model strongly prefers transcription in the language specified in the language field. When disabled, the model can detect and transcribe any of 60+ supported languages. Defaults to true."
           },
           "maxEndpointDelayMs": {
             "type": "number",
@@ -10152,7 +10152,7 @@
           },
           "languageHintsStrict": {
             "type": "boolean",
-            "description": "When enabled, restricts transcription to the language specified in the language field. When disabled, the model can detect and transcribe any of 60+ supported languages. Defaults to true."
+            "description": "When enabled, the model strongly prefers transcription in the language specified in the language field. When disabled, the model can detect and transcribe any of 60+ supported languages. Defaults to true."
           },
           "maxEndpointDelayMs": {
             "type": "number",
