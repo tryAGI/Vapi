@@ -30,7 +30,7 @@ namespace Vapi
         public global::Vapi.SonioxTranscriberLanguage? Language { get; set; }
 
         /// <summary>
-        /// When enabled, restricts transcription to the language specified in the language field. When disabled, the model can detect and transcribe any of 60+ supported languages. Defaults to true.
+        /// When enabled, the model strongly prefers transcription in the language specified in the language field. When disabled, the model can detect and transcribe any of 60+ supported languages. Defaults to true.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("languageHintsStrict")]
         public bool? LanguageHintsStrict { get; set; }
@@ -70,7 +70,7 @@ namespace Vapi
         /// The language for transcription. Uses ISO 639-1 codes. Soniox supports 60+ languages with a single universal model.
         /// </param>
         /// <param name="languageHintsStrict">
-        /// When enabled, restricts transcription to the language specified in the language field. When disabled, the model can detect and transcribe any of 60+ supported languages. Defaults to true.
+        /// When enabled, the model strongly prefers transcription in the language specified in the language field. When disabled, the model can detect and transcribe any of 60+ supported languages. Defaults to true.
         /// </param>
         /// <param name="maxEndpointDelayMs">
         /// Maximum delay in milliseconds between when the speaker stops and when the endpoint is detected. Lower values mean faster turn-taking but more false endpoints. Range: 500-3000. Default: 500.
