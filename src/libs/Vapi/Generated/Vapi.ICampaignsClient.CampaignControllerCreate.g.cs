@@ -8,11 +8,13 @@ namespace Vapi
         /// Create Campaign
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateAsync(
 
             global::Vapi.CreateCampaignDTO request,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Campaign
@@ -42,6 +44,7 @@ namespace Vapi
         /// <param name="customers">
         /// These are the customers that will be called in the campaign. Required if dialPlan is not provided.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateAsync(
@@ -53,6 +56,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.DialPlanEntry>? dialPlan = default,
             global::Vapi.SchedulePlan? schedulePlan = default,
             global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -16,6 +16,7 @@ namespace Vapi
         /// <param name="updatedAtLt"></param>
         /// <param name="updatedAtGe"></param>
         /// <param name="updatedAtLe"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Vapi.ToolControllerFindAllResponseItem>> ToolControllerFindAllAsync(
@@ -28,6 +29,7 @@ namespace Vapi
             global::System.DateTime? updatedAtLt = default,
             global::System.DateTime? updatedAtGe = default,
             global::System.DateTime? updatedAtLe = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

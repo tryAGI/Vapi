@@ -8,11 +8,13 @@ namespace Vapi
         /// Create Scorecard
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Scorecard> ScorecardControllerCreateAsync(
 
             global::Vapi.CreateScorecardDTO request,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Scorecard
@@ -31,6 +33,7 @@ namespace Vapi
         /// These are the assistant IDs that this scorecard is linked to.<br/>
         /// When linked to assistants, this scorecard will be available for evaluation during those assistants' calls.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Scorecard> ScorecardControllerCreateAsync(
@@ -38,6 +41,7 @@ namespace Vapi
             string? name = default,
             string? description = default,
             global::System.Collections.Generic.IList<string>? assistantIds = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
