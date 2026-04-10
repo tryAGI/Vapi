@@ -8,11 +8,13 @@ namespace Vapi
         /// Create Chat (OpenAI Compatible)
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::Vapi.ResponseObject, global::Vapi.ResponseTextDeltaEvent, global::Vapi.ResponseTextDoneEvent, global::Vapi.ResponseCompletedEvent, global::Vapi.ResponseErrorEvent>> ChatControllerCreateOpenAIChatAsync(
 
             global::Vapi.OpenAIResponsesRequest request,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Chat (OpenAI Compatible)
@@ -60,6 +62,7 @@ namespace Vapi
         /// If sessionId is provided without transport fields, uses existing session data.<br/>
         /// Cannot specify both sessionId and transport fields (phoneNumberId/customer) together.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::Vapi.ResponseObject, global::Vapi.ResponseTextDeltaEvent, global::Vapi.ResponseTextDoneEvent, global::Vapi.ResponseCompletedEvent, global::Vapi.ResponseErrorEvent>> ChatControllerCreateOpenAIChatAsync(
@@ -74,6 +77,7 @@ namespace Vapi
             bool? stream = default,
             string? previousChatId = default,
             global::Vapi.TwilioSMSChatTransport? transport = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

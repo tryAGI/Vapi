@@ -9,12 +9,14 @@ namespace Vapi
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Assistant> AssistantControllerUpdateAsync(
             string id,
 
             global::Vapi.UpdateAssistantDTO request,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update Assistant
@@ -151,6 +153,7 @@ namespace Vapi
         /// 3. org.serverUrl
         /// </param>
         /// <param name="keypadInputPlan"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Assistant> AssistantControllerUpdateAsync(
@@ -185,6 +188,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<string>? credentialIds = default,
             global::Vapi.Server? server = default,
             global::Vapi.KeypadInputPlan? keypadInputPlan = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

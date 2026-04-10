@@ -8,11 +8,13 @@ namespace Vapi
         /// Create Session
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Session> SessionControllerCreateAsync(
 
             global::Vapi.CreateSessionDTO request,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Session
@@ -61,6 +63,7 @@ namespace Vapi
         /// <param name="phoneNumber">
         /// This is the phone number configuration for this session.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Session> SessionControllerCreateAsync(
@@ -77,6 +80,7 @@ namespace Vapi
             string? customerId = default,
             string? phoneNumberId = default,
             global::Vapi.ImportTwilioPhoneNumberDTO? phoneNumber = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

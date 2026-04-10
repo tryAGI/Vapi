@@ -8,11 +8,13 @@ namespace Vapi
         /// Create Call
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::Vapi.Call, global::Vapi.CallBatchResponse>> CallControllerCreateAsync(
 
             global::Vapi.CreateCallDTO request,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Call
@@ -98,6 +100,7 @@ namespace Vapi
         /// This is the customer that will be called. To call an existing customer, use `customerId` instead.<br/>
         /// Only relevant for `outboundPhoneCall` and `inboundPhoneCall` type.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::Vapi.Call, global::Vapi.CallBatchResponse>> CallControllerCreateAsync(
@@ -118,6 +121,7 @@ namespace Vapi
             global::Vapi.ImportTwilioPhoneNumberDTO? phoneNumber = default,
             string? customerId = default,
             global::Vapi.CreateCustomerDTO? customer = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

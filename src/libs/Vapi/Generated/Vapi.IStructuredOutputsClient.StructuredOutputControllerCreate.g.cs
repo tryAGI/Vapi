@@ -8,11 +8,13 @@ namespace Vapi
         /// Create Structured Output
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.StructuredOutput> StructuredOutputControllerCreateAsync(
 
             global::Vapi.CreateStructuredOutputDTO request,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Structured Output
@@ -76,6 +78,7 @@ namespace Vapi
         /// These are the workflow IDs that this structured output is linked to.<br/>
         /// When linked to workflows, this structured output will be available for extraction during those workflow's execution.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.StructuredOutput> StructuredOutputControllerCreateAsync(
@@ -88,6 +91,7 @@ namespace Vapi
             string? description = default,
             global::System.Collections.Generic.IList<string>? assistantIds = default,
             global::System.Collections.Generic.IList<string>? workflowIds = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

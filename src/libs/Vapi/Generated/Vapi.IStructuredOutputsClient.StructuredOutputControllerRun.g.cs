@@ -8,11 +8,13 @@ namespace Vapi
         /// Run Structured Output
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.StructuredOutput> StructuredOutputControllerRunAsync(
 
             global::Vapi.StructuredOutputRunDTO request,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Run Structured Output
@@ -34,6 +36,7 @@ namespace Vapi
         /// This is the array of callIds that will be updated with the new structured output value. If preview is true, this array must be provided and contain exactly 1 callId.<br/>
         /// If preview is false, up to 100 callIds may be provided.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.StructuredOutput> StructuredOutputControllerRunAsync(
@@ -41,6 +44,7 @@ namespace Vapi
             bool? previewEnabled = default,
             string? structuredOutputId = default,
             global::Vapi.CreateStructuredOutputDTO? structuredOutput = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
