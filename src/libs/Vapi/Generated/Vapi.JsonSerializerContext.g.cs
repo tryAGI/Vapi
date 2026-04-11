@@ -529,6 +529,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ContextEngineeringPlanUserAndAssistantMessagesTypeNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ContextEngineeringPlanPreviousAssistantMessagesTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ContextEngineeringPlanPreviousAssistantMessagesTypeNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.HandoffDestinationAssistantTypeJsonConverter),
 
             typeof(global::Vapi.JsonConverters.HandoffDestinationAssistantTypeNullableJsonConverter),
@@ -4003,11 +4007,11 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationAssistant, global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>),
 
-            typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages>),
+            typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages, global::Vapi.ContextEngineeringPlanPreviousAssistantMessages>),
 
             typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationAssistant, global::Vapi.HandoffDestinationAssistant>),
 
-            typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages>),
+            typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages, global::Vapi.ContextEngineeringPlanPreviousAssistantMessages>),
 
             typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>),
 
@@ -5061,9 +5065,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ContextEngineeringPlanAllType), TypeInfoPropertyName = "ContextEngineeringPlanAllType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ContextEngineeringPlanUserAndAssistantMessages))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ContextEngineeringPlanUserAndAssistantMessagesType), TypeInfoPropertyName = "ContextEngineeringPlanUserAndAssistantMessagesType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ContextEngineeringPlanPreviousAssistantMessages))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ContextEngineeringPlanPreviousAssistantMessagesType), TypeInfoPropertyName = "ContextEngineeringPlanPreviousAssistantMessagesType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.HandoffDestinationAssistant))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.HandoffDestinationAssistantType), TypeInfoPropertyName = "HandoffDestinationAssistantType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages>), TypeInfoPropertyName = "ContextEngineeringPlanUserAndAssistantMessages_7c4c116b4cbad406")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages, global::Vapi.ContextEngineeringPlanPreviousAssistantMessages>), TypeInfoPropertyName = "ContextEngineeringPlanPreviousAssistantMessages_125e53ec9b202456")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantOverrides))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.HandoffDestinationDynamic))]

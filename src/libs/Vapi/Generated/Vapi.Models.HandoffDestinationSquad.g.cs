@@ -19,8 +19,8 @@ namespace Vapi
         /// This is the plan for manipulating the message context before handing off the call to the squad.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("contextEngineeringPlan")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages>))]
-        public global::Vapi.OneOf<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages>? ContextEngineeringPlan { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages, global::Vapi.ContextEngineeringPlanPreviousAssistantMessages>))]
+        public global::Vapi.OneOf<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages, global::Vapi.ContextEngineeringPlanPreviousAssistantMessages>? ContextEngineeringPlan { get; set; }
 
         /// <summary>
         /// This is the squad id to transfer the call to.
@@ -98,7 +98,7 @@ namespace Vapi
 #endif
         public HandoffDestinationSquad(
             global::Vapi.HandoffDestinationSquadType type,
-            global::Vapi.OneOf<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages>? contextEngineeringPlan,
+            global::Vapi.OneOf<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages, global::Vapi.ContextEngineeringPlanPreviousAssistantMessages>? contextEngineeringPlan,
             string? squadId,
             global::Vapi.CreateSquadDTO? squad,
             string? entryAssistantName,

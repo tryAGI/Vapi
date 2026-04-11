@@ -19,8 +19,8 @@ namespace Vapi
         /// This is the plan for manipulating the message context before handing off the call to the next assistant.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("contextEngineeringPlan")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages>))]
-        public global::Vapi.OneOf<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages>? ContextEngineeringPlan { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages, global::Vapi.ContextEngineeringPlanPreviousAssistantMessages>))]
+        public global::Vapi.OneOf<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages, global::Vapi.ContextEngineeringPlanPreviousAssistantMessages>? ContextEngineeringPlan { get; set; }
 
         /// <summary>
         /// This is the assistant to transfer the call to. You must provide either assistantName or assistantId.
@@ -94,7 +94,7 @@ namespace Vapi
 #endif
         public HandoffDestinationAssistant(
             global::Vapi.HandoffDestinationAssistantType type,
-            global::Vapi.OneOf<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages>? contextEngineeringPlan,
+            global::Vapi.OneOf<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages, global::Vapi.ContextEngineeringPlanPreviousAssistantMessages>? contextEngineeringPlan,
             string? assistantName,
             string? assistantId,
             global::Vapi.CreateAssistantDTO? assistant,
