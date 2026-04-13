@@ -11,6 +11,7 @@ namespace Vapi
         /// <param name="name"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -28,6 +29,7 @@ namespace Vapi
             string? name = default,
             double? page = default,
             global::Vapi.StructuredOutputControllerFindAllSortOrder? sortOrder = default,
+            global::Vapi.StructuredOutputControllerFindAllSortBy? sortBy = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,

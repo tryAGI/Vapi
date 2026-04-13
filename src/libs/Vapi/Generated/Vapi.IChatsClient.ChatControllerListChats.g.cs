@@ -17,6 +17,7 @@ namespace Vapi
         /// <param name="previousChatId"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -38,6 +39,7 @@ namespace Vapi
             string? previousChatId = default,
             double? page = default,
             global::Vapi.ChatControllerListChatsSortOrder? sortOrder = default,
+            global::Vapi.ChatControllerListChatsSortBy? sortBy = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,

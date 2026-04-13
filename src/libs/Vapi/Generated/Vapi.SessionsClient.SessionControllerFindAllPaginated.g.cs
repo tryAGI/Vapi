@@ -46,6 +46,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<string>? phoneNumberIdAny,
             ref double? page,
             ref global::Vapi.SessionControllerFindAllPaginatedSortOrder? sortOrder,
+            ref global::Vapi.SessionControllerFindAllPaginatedSortBy? sortBy,
             ref double? limit,
             ref global::System.DateTime? createdAtGt,
             ref global::System.DateTime? createdAtLt,
@@ -77,6 +78,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<string>? phoneNumberIdAny,
             double? page,
             global::Vapi.SessionControllerFindAllPaginatedSortOrder? sortOrder,
+            global::Vapi.SessionControllerFindAllPaginatedSortBy? sortBy,
             double? limit,
             global::System.DateTime? createdAtGt,
             global::System.DateTime? createdAtLt,
@@ -125,6 +127,7 @@ namespace Vapi
         /// <param name="phoneNumberIdAny"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -157,6 +160,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<string>? phoneNumberIdAny = default,
             double? page = default,
             global::Vapi.SessionControllerFindAllPaginatedSortOrder? sortOrder = default,
+            global::Vapi.SessionControllerFindAllPaginatedSortBy? sortBy = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -192,6 +196,7 @@ namespace Vapi
                 phoneNumberIdAny: phoneNumberIdAny,
                 page: ref page,
                 sortOrder: ref sortOrder,
+                sortBy: ref sortBy,
                 limit: ref limit,
                 createdAtGt: ref createdAtGt,
                 createdAtLt: ref createdAtLt,
@@ -247,6 +252,7 @@ namespace Vapi
                                 .AddOptionalParameter("phoneNumberIdAny", phoneNumberIdAny, delimiter: ",", explode: true)
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("sortOrder", sortOrder?.ToValueString())
+                                .AddOptionalParameter("sortBy", sortBy?.ToValueString())
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("createdAtGt", createdAtGt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("createdAtLt", createdAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
@@ -316,6 +322,7 @@ namespace Vapi
                     phoneNumberIdAny: phoneNumberIdAny,
                     page: page,
                     sortOrder: sortOrder,
+                    sortBy: sortBy,
                     limit: limit,
                     createdAtGt: createdAtGt,
                     createdAtLt: createdAtLt,

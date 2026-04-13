@@ -30,6 +30,7 @@ namespace Vapi
             ref string? id,
             ref double? page,
             ref global::Vapi.ScorecardControllerGetPaginatedSortOrder? sortOrder,
+            ref global::Vapi.ScorecardControllerGetPaginatedSortBy? sortBy,
             ref double? limit,
             ref global::System.DateTime? createdAtGt,
             ref global::System.DateTime? createdAtLt,
@@ -45,6 +46,7 @@ namespace Vapi
             string? id,
             double? page,
             global::Vapi.ScorecardControllerGetPaginatedSortOrder? sortOrder,
+            global::Vapi.ScorecardControllerGetPaginatedSortBy? sortBy,
             double? limit,
             global::System.DateTime? createdAtGt,
             global::System.DateTime? createdAtLt,
@@ -69,6 +71,7 @@ namespace Vapi
         /// <param name="id"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -85,6 +88,7 @@ namespace Vapi
             string? id = default,
             double? page = default,
             global::Vapi.ScorecardControllerGetPaginatedSortOrder? sortOrder = default,
+            global::Vapi.ScorecardControllerGetPaginatedSortBy? sortBy = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -104,6 +108,7 @@ namespace Vapi
                 id: ref id,
                 page: ref page,
                 sortOrder: ref sortOrder,
+                sortBy: ref sortBy,
                 limit: ref limit,
                 createdAtGt: ref createdAtGt,
                 createdAtLt: ref createdAtLt,
@@ -143,6 +148,7 @@ namespace Vapi
                                 .AddOptionalParameter("id", id)
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("sortOrder", sortOrder?.ToValueString())
+                                .AddOptionalParameter("sortBy", sortBy?.ToValueString())
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("createdAtGt", createdAtGt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("createdAtLt", createdAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
@@ -196,6 +202,7 @@ namespace Vapi
                     id: id,
                     page: page,
                     sortOrder: sortOrder,
+                    sortBy: sortBy,
                     limit: limit,
                     createdAtGt: createdAtGt,
                     createdAtLt: createdAtLt,

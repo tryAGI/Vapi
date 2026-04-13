@@ -1801,6 +1801,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.GetChatPaginatedDTOSortOrderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.GetChatPaginatedDTOSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.GetChatPaginatedDTOSortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.ExportChatDTOColumnsJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ExportChatDTOColumnsNullableJsonConverter),
@@ -1812,6 +1816,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.ExportChatDTOSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ExportChatDTOSortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ExportChatDTOSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ExportChatDTOSortByNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ResponseOutputTextTypeJsonConverter),
 
@@ -1909,6 +1917,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.GetSessionPaginatedDTOSortOrderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.GetSessionPaginatedDTOSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.GetSessionPaginatedDTOSortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.ExportSessionDTOColumnsJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ExportSessionDTOColumnsNullableJsonConverter),
@@ -1920,6 +1932,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.ExportSessionDTOSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ExportSessionDTOSortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ExportSessionDTOSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ExportSessionDTOSortByNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ByoPhoneNumberProviderJsonConverter),
 
@@ -2689,6 +2705,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.GetEvalPaginatedDTOSortOrderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.GetEvalPaginatedDTOSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.GetEvalPaginatedDTOSortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.UpdateEvalDTOTypeJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateEvalDTOTypeNullableJsonConverter),
@@ -2716,6 +2736,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.GetEvalRunPaginatedDTOSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.GetEvalRunPaginatedDTOSortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.GetEvalRunPaginatedDTOSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.GetEvalRunPaginatedDTOSortByNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.EvalRunTargetAssistantTypeJsonConverter),
 
@@ -3737,6 +3761,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ChatControllerListChatsSortOrderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ChatControllerListChatsSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ChatControllerListChatsSortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.CampaignControllerFindAllStatusJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CampaignControllerFindAllStatusNullableJsonConverter),
@@ -3745,33 +3773,65 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.CampaignControllerFindAllSortOrderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllSortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortByNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.PhoneNumberControllerFindAllPaginatedSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.PhoneNumberControllerFindAllPaginatedSortOrderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.PhoneNumberControllerFindAllPaginatedSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.PhoneNumberControllerFindAllPaginatedSortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.StructuredOutputControllerFindAllSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.StructuredOutputControllerFindAllSortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.StructuredOutputControllerFindAllSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.StructuredOutputControllerFindAllSortByNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.InsightControllerFindAllSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.InsightControllerFindAllSortOrderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.InsightControllerFindAllSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.InsightControllerFindAllSortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.EvalControllerGetPaginatedSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.EvalControllerGetPaginatedSortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.EvalControllerGetPaginatedSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.EvalControllerGetPaginatedSortByNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.EvalControllerGetRunsPaginatedSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.EvalControllerGetRunsPaginatedSortOrderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.EvalControllerGetRunsPaginatedSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.EvalControllerGetRunsPaginatedSortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.ScorecardControllerGetPaginatedSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ScorecardControllerGetPaginatedSortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ScorecardControllerGetPaginatedSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ScorecardControllerGetPaginatedSortByNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ProviderResourceControllerCreateProviderResourceProviderJsonConverter),
 
@@ -3792,6 +3852,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.ProviderResourceControllerGetProviderResourcesPaginatedSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ProviderResourceControllerGetProviderResourcesPaginatedSortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ProviderResourceControllerGetProviderResourcesPaginatedSortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ProviderResourceControllerGetProviderResourcesPaginatedSortByNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ProviderResourceControllerGetProviderResourceProviderJsonConverter),
 
@@ -5809,6 +5873,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateChatDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetChatPaginatedDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetChatPaginatedDTOSortOrder), TypeInfoPropertyName = "GetChatPaginatedDTOSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetChatPaginatedDTOSortBy), TypeInfoPropertyName = "GetChatPaginatedDTOSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ChatPaginatedResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.Chat>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateChatStreamResponse))]
@@ -5822,6 +5887,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOColumns), TypeInfoPropertyName = "ExportChatDTOColumns2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOFormat), TypeInfoPropertyName = "ExportChatDTOFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOSortOrder), TypeInfoPropertyName = "ExportChatDTOSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOSortBy), TypeInfoPropertyName = "ExportChatDTOSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ResponseOutputText))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ResponseOutputTextType), TypeInfoPropertyName = "ResponseOutputTextType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ResponseOutputMessage))]
@@ -5880,12 +5946,14 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateSessionDTOStatus), TypeInfoPropertyName = "UpdateSessionDTOStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetSessionPaginatedDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetSessionPaginatedDTOSortOrder), TypeInfoPropertyName = "GetSessionPaginatedDTOSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetSessionPaginatedDTOSortBy), TypeInfoPropertyName = "GetSessionPaginatedDTOSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SessionPaginatedResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.Session>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportSessionDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportSessionDTOColumns), TypeInfoPropertyName = "ExportSessionDTOColumns2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportSessionDTOFormat), TypeInfoPropertyName = "ExportSessionDTOFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportSessionDTOSortOrder), TypeInfoPropertyName = "ExportSessionDTOSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportSessionDTOSortBy), TypeInfoPropertyName = "ExportSessionDTOSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ByoPhoneNumber))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ByoPhoneNumberProvider), TypeInfoPropertyName = "ByoPhoneNumberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ByoPhoneNumberStatus), TypeInfoPropertyName = "ByoPhoneNumberStatus2")]
@@ -6333,6 +6401,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantMessageJudgePlanRegexType), TypeInfoPropertyName = "AssistantMessageJudgePlanRegexType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetEvalPaginatedDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetEvalPaginatedDTOSortOrder), TypeInfoPropertyName = "GetEvalPaginatedDTOSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetEvalPaginatedDTOSortBy), TypeInfoPropertyName = "GetEvalPaginatedDTOSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.EvalPaginatedResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.Eval>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateEvalDTO))]
@@ -6355,6 +6424,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.EvalRun>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetEvalRunPaginatedDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetEvalRunPaginatedDTOSortOrder), TypeInfoPropertyName = "GetEvalRunPaginatedDTOSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GetEvalRunPaginatedDTOSortBy), TypeInfoPropertyName = "GetEvalRunPaginatedDTOSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.EvalRunTargetAssistantType), TypeInfoPropertyName = "EvalRunTargetAssistantType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.EvalRunTargetSquadType), TypeInfoPropertyName = "EvalRunTargetSquadType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.Scorecard))]
@@ -6914,20 +6984,30 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.InsightControllerPreviewRequestDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.InsightControllerPreviewRequestDiscriminatorType), TypeInfoPropertyName = "InsightControllerPreviewRequestDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ChatControllerListChatsSortOrder), TypeInfoPropertyName = "ChatControllerListChatsSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ChatControllerListChatsSortBy), TypeInfoPropertyName = "ChatControllerListChatsSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CampaignControllerFindAllStatus), TypeInfoPropertyName = "CampaignControllerFindAllStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CampaignControllerFindAllSortOrder), TypeInfoPropertyName = "CampaignControllerFindAllSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CampaignControllerFindAllSortBy), TypeInfoPropertyName = "CampaignControllerFindAllSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SessionControllerFindAllPaginatedSortOrder), TypeInfoPropertyName = "SessionControllerFindAllPaginatedSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SessionControllerFindAllPaginatedSortBy), TypeInfoPropertyName = "SessionControllerFindAllPaginatedSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberControllerFindAllPaginatedSortOrder), TypeInfoPropertyName = "PhoneNumberControllerFindAllPaginatedSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberControllerFindAllPaginatedSortBy), TypeInfoPropertyName = "PhoneNumberControllerFindAllPaginatedSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutputControllerFindAllSortOrder), TypeInfoPropertyName = "StructuredOutputControllerFindAllSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutputControllerFindAllSortBy), TypeInfoPropertyName = "StructuredOutputControllerFindAllSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.InsightControllerFindAllSortOrder), TypeInfoPropertyName = "InsightControllerFindAllSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.InsightControllerFindAllSortBy), TypeInfoPropertyName = "InsightControllerFindAllSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.EvalControllerGetPaginatedSortOrder), TypeInfoPropertyName = "EvalControllerGetPaginatedSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.EvalControllerGetPaginatedSortBy), TypeInfoPropertyName = "EvalControllerGetPaginatedSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.EvalControllerGetRunsPaginatedSortOrder), TypeInfoPropertyName = "EvalControllerGetRunsPaginatedSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.EvalControllerGetRunsPaginatedSortBy), TypeInfoPropertyName = "EvalControllerGetRunsPaginatedSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ScorecardControllerGetPaginatedSortOrder), TypeInfoPropertyName = "ScorecardControllerGetPaginatedSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ScorecardControllerGetPaginatedSortBy), TypeInfoPropertyName = "ScorecardControllerGetPaginatedSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ProviderResourceControllerCreateProviderResourceProvider), TypeInfoPropertyName = "ProviderResourceControllerCreateProviderResourceProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ProviderResourceControllerCreateProviderResourceResourceName), TypeInfoPropertyName = "ProviderResourceControllerCreateProviderResourceResourceName2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedProvider), TypeInfoPropertyName = "ProviderResourceControllerGetProviderResourcesPaginatedProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedResourceName), TypeInfoPropertyName = "ProviderResourceControllerGetProviderResourcesPaginatedResourceName2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedSortOrder), TypeInfoPropertyName = "ProviderResourceControllerGetProviderResourcesPaginatedSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedSortBy), TypeInfoPropertyName = "ProviderResourceControllerGetProviderResourcesPaginatedSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ProviderResourceControllerGetProviderResourceProvider), TypeInfoPropertyName = "ProviderResourceControllerGetProviderResourceProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ProviderResourceControllerGetProviderResourceResourceName), TypeInfoPropertyName = "ProviderResourceControllerGetProviderResourceResourceName2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ProviderResourceControllerDeleteProviderResourceProvider), TypeInfoPropertyName = "ProviderResourceControllerDeleteProviderResourceProvider2")]

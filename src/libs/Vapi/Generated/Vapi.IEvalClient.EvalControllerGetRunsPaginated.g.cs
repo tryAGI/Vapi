@@ -10,6 +10,7 @@ namespace Vapi
         /// <param name="id"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -26,6 +27,7 @@ namespace Vapi
             string? id = default,
             double? page = default,
             global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder = default,
+            global::Vapi.EvalControllerGetRunsPaginatedSortBy? sortBy = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,

@@ -27,6 +27,14 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Grok4200309NonReasoning,
+        /// <summary>
+        /// 
+        /// </summary>
+        Grok4200309Reasoning,
+        /// <summary>
+        /// 
+        /// </summary>
         GrokBeta,
     }
 
@@ -46,6 +54,8 @@ namespace Vapi
                 XaiModelModel.Grok3 => "grok-3",
                 XaiModelModel.Grok4FastNonReasoning => "grok-4-fast-non-reasoning",
                 XaiModelModel.Grok4FastReasoning => "grok-4-fast-reasoning",
+                XaiModelModel.Grok4200309NonReasoning => "grok-4.20-0309-non-reasoning",
+                XaiModelModel.Grok4200309Reasoning => "grok-4.20-0309-reasoning",
                 XaiModelModel.GrokBeta => "grok-beta",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -61,6 +71,8 @@ namespace Vapi
                 "grok-3" => XaiModelModel.Grok3,
                 "grok-4-fast-non-reasoning" => XaiModelModel.Grok4FastNonReasoning,
                 "grok-4-fast-reasoning" => XaiModelModel.Grok4FastReasoning,
+                "grok-4.20-0309-non-reasoning" => XaiModelModel.Grok4200309NonReasoning,
+                "grok-4.20-0309-reasoning" => XaiModelModel.Grok4200309Reasoning,
                 "grok-beta" => XaiModelModel.GrokBeta,
                 _ => null,
             };
