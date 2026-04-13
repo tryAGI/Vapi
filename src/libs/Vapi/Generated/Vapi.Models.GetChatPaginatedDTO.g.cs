@@ -60,6 +60,13 @@ namespace Vapi
         public global::Vapi.GetChatPaginatedDTOSortOrder? SortOrder { get; set; }
 
         /// <summary>
+        /// This is the column to sort by. Defaults to 'createdAt'.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sortBy")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.GetChatPaginatedDTOSortByJsonConverter))]
+        public global::Vapi.GetChatPaginatedDTOSortBy? SortBy { get; set; }
+
+        /// <summary>
         /// This is the maximum number of items to return. Defaults to 100.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("limit")]
@@ -147,6 +154,9 @@ namespace Vapi
         /// <param name="sortOrder">
         /// This is the sort order for pagination. Defaults to 'DESC'.
         /// </param>
+        /// <param name="sortBy">
+        /// This is the column to sort by. Defaults to 'createdAt'.
+        /// </param>
         /// <param name="limit">
         /// This is the maximum number of items to return. Defaults to 100.
         /// </param>
@@ -186,6 +196,7 @@ namespace Vapi
             string? previousChatId,
             double? page,
             global::Vapi.GetChatPaginatedDTOSortOrder? sortOrder,
+            global::Vapi.GetChatPaginatedDTOSortBy? sortBy,
             double? limit,
             global::System.DateTime? createdAtGt,
             global::System.DateTime? createdAtLt,
@@ -204,6 +215,7 @@ namespace Vapi
             this.PreviousChatId = previousChatId;
             this.Page = page;
             this.SortOrder = sortOrder;
+            this.SortBy = sortBy;
             this.Limit = limit;
             this.CreatedAtGt = createdAtGt;
             this.CreatedAtLt = createdAtLt;

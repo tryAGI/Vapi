@@ -933,6 +933,20 @@
             }
           },
           {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "schema": {
+              "enum": [
+                "cost",
+                "createdAt",
+                "duration"
+              ],
+              "type": "string"
+            }
+          },
+          {
             "name": "limit",
             "required": false,
             "in": "query",
@@ -1312,6 +1326,20 @@
               "enum": [
                 "ASC",
                 "DESC"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "schema": {
+              "enum": [
+                "cost",
+                "createdAt",
+                "duration"
               ],
               "type": "string"
             }
@@ -1772,6 +1800,20 @@
               "enum": [
                 "ASC",
                 "DESC"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "schema": {
+              "enum": [
+                "cost",
+                "createdAt",
+                "duration"
               ],
               "type": "string"
             }
@@ -2290,6 +2332,20 @@
               "enum": [
                 "ASC",
                 "DESC"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "schema": {
+              "enum": [
+                "cost",
+                "createdAt",
+                "duration"
               ],
               "type": "string"
             }
@@ -4021,6 +4077,20 @@
             }
           },
           {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "schema": {
+              "enum": [
+                "cost",
+                "createdAt",
+                "duration"
+              ],
+              "type": "string"
+            }
+          },
+          {
             "name": "limit",
             "required": false,
             "in": "query",
@@ -4453,6 +4523,20 @@
               "enum": [
                 "ASC",
                 "DESC"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "schema": {
+              "enum": [
+                "cost",
+                "createdAt",
+                "duration"
               ],
               "type": "string"
             }
@@ -4978,6 +5062,20 @@
             }
           },
           {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "schema": {
+              "enum": [
+                "cost",
+                "createdAt",
+                "duration"
+              ],
+              "type": "string"
+            }
+          },
+          {
             "name": "limit",
             "required": false,
             "in": "query",
@@ -5350,6 +5448,20 @@
             }
           },
           {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "schema": {
+              "enum": [
+                "cost",
+                "createdAt",
+                "duration"
+              ],
+              "type": "string"
+            }
+          },
+          {
             "name": "limit",
             "required": false,
             "in": "query",
@@ -5609,6 +5721,20 @@
               "enum": [
                 "ASC",
                 "DESC"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "schema": {
+              "enum": [
+                "cost",
+                "createdAt",
+                "duration"
               ],
               "type": "string"
             }
@@ -5886,6 +6012,20 @@
               "enum": [
                 "ASC",
                 "DESC"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "schema": {
+              "enum": [
+                "cost",
+                "createdAt",
+                "duration"
               ],
               "type": "string"
             }
@@ -20541,6 +20681,8 @@
               "grok-3",
               "grok-4-fast-non-reasoning",
               "grok-4-fast-reasoning",
+              "grok-4.20-0309-non-reasoning",
+              "grok-4.20-0309-reasoning",
               "grok-beta"
             ]
           },
@@ -35601,6 +35743,15 @@
               "DESC"
             ]
           },
+          "sortBy": {
+            "type": "string",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "enum": [
+              "cost",
+              "createdAt",
+              "duration"
+            ]
+          },
           "limit": {
             "type": "number",
             "description": "This is the maximum number of items to return. Defaults to 100.",
@@ -36197,6 +36348,15 @@
             "enum": [
               "ASC",
               "DESC"
+            ]
+          },
+          "sortBy": {
+            "type": "string",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "enum": [
+              "cost",
+              "createdAt",
+              "duration"
             ]
           },
           "limit": {
@@ -37350,6 +37510,15 @@
               "DESC"
             ]
           },
+          "sortBy": {
+            "type": "string",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "enum": [
+              "cost",
+              "createdAt",
+              "duration"
+            ]
+          },
           "limit": {
             "type": "number",
             "description": "This is the maximum number of items to return. Defaults to 100.",
@@ -37524,6 +37693,15 @@
             "enum": [
               "ASC",
               "DESC"
+            ]
+          },
+          "sortBy": {
+            "type": "string",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "enum": [
+              "cost",
+              "createdAt",
+              "duration"
             ]
           },
           "limit": {
@@ -49490,6 +49668,15 @@
               "DESC"
             ]
           },
+          "sortBy": {
+            "type": "string",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "enum": [
+              "cost",
+              "createdAt",
+              "duration"
+            ]
+          },
           "limit": {
             "type": "number",
             "description": "This is the maximum number of items to return. Defaults to 100.",
@@ -49879,6 +50066,15 @@
             "enum": [
               "ASC",
               "DESC"
+            ]
+          },
+          "sortBy": {
+            "type": "string",
+            "description": "This is the column to sort by. Defaults to 'createdAt'.",
+            "enum": [
+              "cost",
+              "createdAt",
+              "duration"
             ]
           },
           "limit": {

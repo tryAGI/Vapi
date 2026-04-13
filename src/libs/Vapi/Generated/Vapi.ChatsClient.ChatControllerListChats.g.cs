@@ -35,6 +35,7 @@ namespace Vapi
             ref string? previousChatId,
             ref double? page,
             ref global::Vapi.ChatControllerListChatsSortOrder? sortOrder,
+            ref global::Vapi.ChatControllerListChatsSortBy? sortBy,
             ref double? limit,
             ref global::System.DateTime? createdAtGt,
             ref global::System.DateTime? createdAtLt,
@@ -55,6 +56,7 @@ namespace Vapi
             string? previousChatId,
             double? page,
             global::Vapi.ChatControllerListChatsSortOrder? sortOrder,
+            global::Vapi.ChatControllerListChatsSortBy? sortBy,
             double? limit,
             global::System.DateTime? createdAtGt,
             global::System.DateTime? createdAtLt,
@@ -86,6 +88,7 @@ namespace Vapi
         /// <param name="previousChatId"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -107,6 +110,7 @@ namespace Vapi
             string? previousChatId = default,
             double? page = default,
             global::Vapi.ChatControllerListChatsSortOrder? sortOrder = default,
+            global::Vapi.ChatControllerListChatsSortBy? sortBy = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -131,6 +135,7 @@ namespace Vapi
                 previousChatId: ref previousChatId,
                 page: ref page,
                 sortOrder: ref sortOrder,
+                sortBy: ref sortBy,
                 limit: ref limit,
                 createdAtGt: ref createdAtGt,
                 createdAtLt: ref createdAtLt,
@@ -175,6 +180,7 @@ namespace Vapi
                                 .AddOptionalParameter("previousChatId", previousChatId)
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("sortOrder", sortOrder?.ToValueString())
+                                .AddOptionalParameter("sortBy", sortBy?.ToValueString())
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("createdAtGt", createdAtGt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("createdAtLt", createdAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
@@ -233,6 +239,7 @@ namespace Vapi
                     previousChatId: previousChatId,
                     page: page,
                     sortOrder: sortOrder,
+                    sortBy: sortBy,
                     limit: limit,
                     createdAtGt: createdAtGt,
                     createdAtLt: createdAtLt,

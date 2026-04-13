@@ -30,6 +30,7 @@ namespace Vapi
             ref string? search,
             ref double? page,
             ref global::Vapi.PhoneNumberControllerFindAllPaginatedSortOrder? sortOrder,
+            ref global::Vapi.PhoneNumberControllerFindAllPaginatedSortBy? sortBy,
             ref double? limit,
             ref global::System.DateTime? createdAtGt,
             ref global::System.DateTime? createdAtLt,
@@ -45,6 +46,7 @@ namespace Vapi
             string? search,
             double? page,
             global::Vapi.PhoneNumberControllerFindAllPaginatedSortOrder? sortOrder,
+            global::Vapi.PhoneNumberControllerFindAllPaginatedSortBy? sortBy,
             double? limit,
             global::System.DateTime? createdAtGt,
             global::System.DateTime? createdAtLt,
@@ -69,6 +71,7 @@ namespace Vapi
         /// <param name="search"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -85,6 +88,7 @@ namespace Vapi
             string? search = default,
             double? page = default,
             global::Vapi.PhoneNumberControllerFindAllPaginatedSortOrder? sortOrder = default,
+            global::Vapi.PhoneNumberControllerFindAllPaginatedSortBy? sortBy = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -104,6 +108,7 @@ namespace Vapi
                 search: ref search,
                 page: ref page,
                 sortOrder: ref sortOrder,
+                sortBy: ref sortBy,
                 limit: ref limit,
                 createdAtGt: ref createdAtGt,
                 createdAtLt: ref createdAtLt,
@@ -143,6 +148,7 @@ namespace Vapi
                                 .AddOptionalParameter("search", search)
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("sortOrder", sortOrder?.ToValueString())
+                                .AddOptionalParameter("sortBy", sortBy?.ToValueString())
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("createdAtGt", createdAtGt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("createdAtLt", createdAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
@@ -196,6 +202,7 @@ namespace Vapi
                     search: search,
                     page: page,
                     sortOrder: sortOrder,
+                    sortBy: sortBy,
                     limit: limit,
                     createdAtGt: createdAtGt,
                     createdAtLt: createdAtLt,

@@ -31,6 +31,7 @@ namespace Vapi
             ref global::Vapi.CampaignControllerFindAllStatus? status,
             ref double? page,
             ref global::Vapi.CampaignControllerFindAllSortOrder? sortOrder,
+            ref global::Vapi.CampaignControllerFindAllSortBy? sortBy,
             ref double? limit,
             ref global::System.DateTime? createdAtGt,
             ref global::System.DateTime? createdAtLt,
@@ -47,6 +48,7 @@ namespace Vapi
             global::Vapi.CampaignControllerFindAllStatus? status,
             double? page,
             global::Vapi.CampaignControllerFindAllSortOrder? sortOrder,
+            global::Vapi.CampaignControllerFindAllSortBy? sortBy,
             double? limit,
             global::System.DateTime? createdAtGt,
             global::System.DateTime? createdAtLt,
@@ -72,6 +74,7 @@ namespace Vapi
         /// <param name="status"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -89,6 +92,7 @@ namespace Vapi
             global::Vapi.CampaignControllerFindAllStatus? status = default,
             double? page = default,
             global::Vapi.CampaignControllerFindAllSortOrder? sortOrder = default,
+            global::Vapi.CampaignControllerFindAllSortBy? sortBy = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -109,6 +113,7 @@ namespace Vapi
                 status: ref status,
                 page: ref page,
                 sortOrder: ref sortOrder,
+                sortBy: ref sortBy,
                 limit: ref limit,
                 createdAtGt: ref createdAtGt,
                 createdAtLt: ref createdAtLt,
@@ -149,6 +154,7 @@ namespace Vapi
                                 .AddOptionalParameter("status", status?.ToValueString())
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("sortOrder", sortOrder?.ToValueString())
+                                .AddOptionalParameter("sortBy", sortBy?.ToValueString())
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("createdAtGt", createdAtGt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("createdAtLt", createdAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
@@ -203,6 +209,7 @@ namespace Vapi
                     status: status,
                     page: page,
                     sortOrder: sortOrder,
+                    sortBy: sortBy,
                     limit: limit,
                     createdAtGt: createdAtGt,
                     createdAtLt: createdAtLt,

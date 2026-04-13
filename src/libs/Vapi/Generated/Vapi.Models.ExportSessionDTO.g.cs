@@ -110,6 +110,13 @@ namespace Vapi
         public global::Vapi.ExportSessionDTOSortOrder? SortOrder { get; set; }
 
         /// <summary>
+        /// This is the column to sort by. Defaults to 'createdAt'.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sortBy")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.ExportSessionDTOSortByJsonConverter))]
+        public global::Vapi.ExportSessionDTOSortBy? SortBy { get; set; }
+
+        /// <summary>
         /// This is the maximum number of items to return. Defaults to 100.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("limit")]
@@ -223,6 +230,9 @@ namespace Vapi
         /// <param name="sortOrder">
         /// This is the sort order for pagination. Defaults to 'DESC'.
         /// </param>
+        /// <param name="sortBy">
+        /// This is the column to sort by. Defaults to 'createdAt'.
+        /// </param>
         /// <param name="limit">
         /// This is the maximum number of items to return. Defaults to 100.
         /// </param>
@@ -269,6 +279,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<string>? phoneNumberIdAny,
             double? page,
             global::Vapi.ExportSessionDTOSortOrder? sortOrder,
+            global::Vapi.ExportSessionDTOSortBy? sortBy,
             double? limit,
             global::System.DateTime? createdAtGt,
             global::System.DateTime? createdAtLt,
@@ -294,6 +305,7 @@ namespace Vapi
             this.PhoneNumberIdAny = phoneNumberIdAny;
             this.Page = page;
             this.SortOrder = sortOrder;
+            this.SortBy = sortBy;
             this.Limit = limit;
             this.CreatedAtGt = createdAtGt;
             this.CreatedAtLt = createdAtLt;

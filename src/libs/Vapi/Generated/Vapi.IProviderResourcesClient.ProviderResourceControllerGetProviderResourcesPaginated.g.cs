@@ -13,6 +13,7 @@ namespace Vapi
         /// <param name="resourceId"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -32,6 +33,7 @@ namespace Vapi
             string? resourceId = default,
             double? page = default,
             global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedSortOrder? sortOrder = default,
+            global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedSortBy? sortBy = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,

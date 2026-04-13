@@ -11,6 +11,7 @@ namespace Vapi
         /// <param name="status"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -28,6 +29,7 @@ namespace Vapi
             global::Vapi.CampaignControllerFindAllStatus? status = default,
             double? page = default,
             global::Vapi.CampaignControllerFindAllSortOrder? sortOrder = default,
+            global::Vapi.CampaignControllerFindAllSortBy? sortBy = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
