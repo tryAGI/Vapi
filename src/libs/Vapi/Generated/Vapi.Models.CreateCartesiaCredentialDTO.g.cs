@@ -23,6 +23,12 @@ namespace Vapi
         public required string ApiKey { get; set; }
 
         /// <summary>
+        /// This can be used to point to an onprem Cartesia instance. Defaults to api.cartesia.ai.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("apiUrl")]
+        public string? ApiUrl { get; set; }
+
+        /// <summary>
         /// This is the name of credential. This is just for your reference.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
@@ -41,6 +47,9 @@ namespace Vapi
         /// This is not returned in the API.
         /// </param>
         /// <param name="provider"></param>
+        /// <param name="apiUrl">
+        /// This can be used to point to an onprem Cartesia instance. Defaults to api.cartesia.ai.
+        /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -50,10 +59,12 @@ namespace Vapi
         public CreateCartesiaCredentialDTO(
             string apiKey,
             global::Vapi.CreateCartesiaCredentialDTOProvider provider,
+            string? apiUrl,
             string? name)
         {
             this.Provider = provider;
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
+            this.ApiUrl = apiUrl;
             this.Name = name;
         }
 
