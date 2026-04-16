@@ -118,16 +118,6 @@ namespace Vapi
         public double? EotTimeoutMs { get; set; }
 
         /// <summary>
-        /// Language hints to bias Flux Multilingual (`flux-general-multi`) toward specific languages.<br/>
-        /// Provide BCP-47 language codes (e.g. "en", "es", "fr"). Multiple hints can be given for<br/>
-        /// multilingual or code-switching scenarios. Omit for auto-detection. Only used with `flux-general-multi`.<br/>
-        /// Example: [en, es]
-        /// </summary>
-        /// <example>[en, es]</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("languageHint")]
-        public global::System.Collections.Generic.IList<string>? LanguageHint { get; set; }
-
-        /// <summary>
         /// These keywords are passed to the transcription model to help it pick up use-case specific words. Anything that may not be a common word, like your company name, should be added here.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("keywords")]
@@ -226,12 +216,6 @@ namespace Vapi
         /// @default 5000<br/>
         /// Example: 5000
         /// </param>
-        /// <param name="languageHint">
-        /// Language hints to bias Flux Multilingual (`flux-general-multi`) toward specific languages.<br/>
-        /// Provide BCP-47 language codes (e.g. "en", "es", "fr"). Multiple hints can be given for<br/>
-        /// multilingual or code-switching scenarios. Omit for auto-detection. Only used with `flux-general-multi`.<br/>
-        /// Example: [en, es]
-        /// </param>
         /// <param name="keywords">
         /// These keywords are passed to the transcription model to help it pick up use-case specific words. Anything that may not be a common word, like your company name, should be added here.
         /// </param>
@@ -265,7 +249,6 @@ namespace Vapi
             double? eagerEotThreshold,
             double? eotThreshold,
             double? eotTimeoutMs,
-            global::System.Collections.Generic.IList<string>? languageHint,
             global::System.Collections.Generic.IList<string>? keywords,
             global::System.Collections.Generic.IList<string>? keyterm,
             double? endpointing,
@@ -283,7 +266,6 @@ namespace Vapi
             this.EagerEotThreshold = eagerEotThreshold;
             this.EotThreshold = eotThreshold;
             this.EotTimeoutMs = eotTimeoutMs;
-            this.LanguageHint = languageHint;
             this.Keywords = keywords;
             this.Keyterm = keyterm;
             this.Endpointing = endpointing;
