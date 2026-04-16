@@ -67,10 +67,6 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        FluxGeneralMulti,
-        /// <summary>
-        /// 
-        /// </summary>
         Nova,
         /// <summary>
         /// 
@@ -172,7 +168,6 @@ namespace Vapi
                 DeepgramTranscriberModel.EnhancedMeeting => "enhanced-meeting",
                 DeepgramTranscriberModel.EnhancedPhonecall => "enhanced-phonecall",
                 DeepgramTranscriberModel.FluxGeneralEn => "flux-general-en",
-                DeepgramTranscriberModel.FluxGeneralMulti => "flux-general-multi",
                 DeepgramTranscriberModel.Nova => "nova",
                 DeepgramTranscriberModel.Nova2 => "nova-2",
                 DeepgramTranscriberModel.Nova2Automotive => "nova-2-automotive",
@@ -216,7 +211,6 @@ namespace Vapi
                 "enhanced-meeting" => DeepgramTranscriberModel.EnhancedMeeting,
                 "enhanced-phonecall" => DeepgramTranscriberModel.EnhancedPhonecall,
                 "flux-general-en" => DeepgramTranscriberModel.FluxGeneralEn,
-                "flux-general-multi" => DeepgramTranscriberModel.FluxGeneralMulti,
                 "nova" => DeepgramTranscriberModel.Nova,
                 "nova-2" => DeepgramTranscriberModel.Nova2,
                 "nova-2-automotive" => DeepgramTranscriberModel.Nova2Automotive,
