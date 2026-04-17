@@ -57,6 +57,12 @@ namespace Vapi
         public string? Name { get; set; }
 
         /// <summary>
+        /// This can be used to point to an onprem Cartesia instance. Defaults to api.cartesia.ai.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("apiUrl")]
+        public string? ApiUrl { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -84,6 +90,9 @@ namespace Vapi
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
+        /// <param name="apiUrl">
+        /// This can be used to point to an onprem Cartesia instance. Defaults to api.cartesia.ai.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -94,7 +103,8 @@ namespace Vapi
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             global::Vapi.CartesiaCredentialProvider provider,
-            string? name)
+            string? name,
+            string? apiUrl)
         {
             this.Provider = provider;
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
@@ -103,6 +113,7 @@ namespace Vapi
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.Name = name;
+            this.ApiUrl = apiUrl;
         }
 
         /// <summary>
