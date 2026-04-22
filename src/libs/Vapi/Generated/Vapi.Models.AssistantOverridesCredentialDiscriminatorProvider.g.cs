@@ -211,10 +211,6 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Trieve,
-        /// <summary>
-        /// 
-        /// </summary>
         Twilio,
         /// <summary>
         /// 
@@ -296,7 +292,6 @@ namespace Vapi
                 AssistantOverridesCredentialDiscriminatorProvider.Supabase => "supabase",
                 AssistantOverridesCredentialDiscriminatorProvider.Tavus => "tavus",
                 AssistantOverridesCredentialDiscriminatorProvider.TogetherAi => "together-ai",
-                AssistantOverridesCredentialDiscriminatorProvider.Trieve => "trieve",
                 AssistantOverridesCredentialDiscriminatorProvider.Twilio => "twilio",
                 AssistantOverridesCredentialDiscriminatorProvider.Vonage => "vonage",
                 AssistantOverridesCredentialDiscriminatorProvider.Webhook => "webhook",
@@ -362,7 +357,6 @@ namespace Vapi
                 "supabase" => AssistantOverridesCredentialDiscriminatorProvider.Supabase,
                 "tavus" => AssistantOverridesCredentialDiscriminatorProvider.Tavus,
                 "together-ai" => AssistantOverridesCredentialDiscriminatorProvider.TogetherAi,
-                "trieve" => AssistantOverridesCredentialDiscriminatorProvider.Trieve,
                 "twilio" => AssistantOverridesCredentialDiscriminatorProvider.Twilio,
                 "vonage" => AssistantOverridesCredentialDiscriminatorProvider.Vonage,
                 "webhook" => AssistantOverridesCredentialDiscriminatorProvider.Webhook,

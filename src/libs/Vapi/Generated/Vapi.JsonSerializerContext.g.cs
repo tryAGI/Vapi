@@ -2237,29 +2237,9 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.FileStatusNullableJsonConverter),
 
-            typeof(global::Vapi.JsonConverters.TrieveKnowledgeBaseSearchPlanSearchTypeJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.TrieveKnowledgeBaseSearchPlanSearchTypeNullableJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.TrieveKnowledgeBaseProviderJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.TrieveKnowledgeBaseProviderNullableJsonConverter),
-
             typeof(global::Vapi.JsonConverters.CustomKnowledgeBaseProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CustomKnowledgeBaseProviderNullableJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.CreateTrieveKnowledgeBaseDTOProviderJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.CreateTrieveKnowledgeBaseDTOProviderNullableJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.TrieveKnowledgeBaseCreateTypeJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.TrieveKnowledgeBaseCreateTypeNullableJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.TrieveKnowledgeBaseImportTypeJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.TrieveKnowledgeBaseImportTypeNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.StructuredOutputTypeJsonConverter),
 
@@ -2977,10 +2957,6 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.TogetherAICredentialProviderNullableJsonConverter),
 
-            typeof(global::Vapi.JsonConverters.TrieveCredentialProviderJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.TrieveCredentialProviderNullableJsonConverter),
-
             typeof(global::Vapi.JsonConverters.TwilioCredentialProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.TwilioCredentialProviderNullableJsonConverter),
@@ -3096,10 +3072,6 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.CreateSpeechmaticsCredentialDTOProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CreateSpeechmaticsCredentialDTOProviderNullableJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.CreateTrieveCredentialDTOProviderJsonConverter),
-
-            typeof(global::Vapi.JsonConverters.CreateTrieveCredentialDTOProviderNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CreateCustomCredentialDTOProviderJsonConverter),
 
@@ -5401,7 +5373,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateSupabaseCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTavusCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTogetherAICredentialDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTrieveCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTwilioCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateVonageCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWebhookCredentialDTO))]
@@ -6108,22 +6079,9 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FileObject), TypeInfoPropertyName = "FileObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FileStatus), TypeInfoPropertyName = "FileStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateFileDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrieveKnowledgeBaseSearchPlan))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrieveKnowledgeBaseSearchPlanSearchType), TypeInfoPropertyName = "TrieveKnowledgeBaseSearchPlanSearchType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrieveKnowledgeBase))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrieveKnowledgeBaseProvider), TypeInfoPropertyName = "TrieveKnowledgeBaseProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrieveKnowledgeBaseImport))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomKnowledgeBase))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomKnowledgeBaseProvider), TypeInfoPropertyName = "CustomKnowledgeBaseProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTrieveKnowledgeBaseDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTrieveKnowledgeBaseDTOProvider), TypeInfoPropertyName = "CreateTrieveKnowledgeBaseDTOProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateTrieveKnowledgeBaseDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomKnowledgeBaseDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrieveKnowledgeBaseChunkPlan))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrieveKnowledgeBaseCreate))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrieveKnowledgeBaseCreateType), TypeInfoPropertyName = "TrieveKnowledgeBaseCreateType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TrieveKnowledgeBaseChunkPlan>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrieveKnowledgeBaseImportType), TypeInfoPropertyName = "TrieveKnowledgeBaseImportType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutput))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutputType), TypeInfoPropertyName = "StructuredOutputType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutputPaginatedResponse))]
@@ -6549,8 +6507,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TavusCredentialProvider), TypeInfoPropertyName = "TavusCredentialProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TogetherAICredential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TogetherAICredentialProvider), TypeInfoPropertyName = "TogetherAICredentialProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrieveCredential))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrieveCredentialProvider), TypeInfoPropertyName = "TrieveCredentialProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TwilioCredential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TwilioCredentialProvider), TypeInfoPropertyName = "TwilioCredentialProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VonageCredential))]
@@ -6601,7 +6557,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWellSaidCredentialDTOProvider), TypeInfoPropertyName = "CreateWellSaidCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateSonioxCredentialDTOProvider), TypeInfoPropertyName = "CreateSonioxCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateSpeechmaticsCredentialDTOProvider), TypeInfoPropertyName = "CreateSpeechmaticsCredentialDTOProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTrieveCredentialDTOProvider), TypeInfoPropertyName = "CreateTrieveCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOProvider), TypeInfoPropertyName = "CreateCustomCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan6), TypeInfoPropertyName = "AuthenticationPlan62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminator))]
@@ -6654,7 +6609,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWellSaidCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateS3CredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateTogetherAICredentialDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateTrieveCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateTwilioCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateVonageCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWebhookCredentialDTO))]
@@ -7158,7 +7112,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Session>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ByoPhoneNumber, global::Vapi.TwilioPhoneNumber, global::Vapi.VonagePhoneNumber, global::Vapi.VapiPhoneNumber, global::Vapi.TelnyxPhoneNumber>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CodeToolEnvironmentVariable>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrieveKnowledgeBaseChunkPlan>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.StructuredOutput>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TestSuite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TestSuiteTestScorerAI>))]
