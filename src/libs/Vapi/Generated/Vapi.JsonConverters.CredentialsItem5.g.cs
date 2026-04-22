@@ -301,13 +301,6 @@ namespace Vapi.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateTogetherAICredentialDTO)}");
                 togetherAi = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-            global::Vapi.CreateTrieveCredentialDTO? trieve = default;
-            if (discriminator?.Provider == global::Vapi.UpdateAssistantDTOCredentialDiscriminatorProvider.Trieve)
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateTrieveCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateTrieveCredentialDTO> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateTrieveCredentialDTO)}");
-                trieve = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
-            }
             global::Vapi.CreateTwilioCredentialDTO? twilio = default;
             if (discriminator?.Provider == global::Vapi.UpdateAssistantDTOCredentialDiscriminatorProvider.Twilio)
             {
@@ -495,8 +488,6 @@ namespace Vapi.JsonConverters
                 tavus,
 
                 togetherAi,
-
-                trieve,
 
                 twilio,
 
@@ -780,12 +771,6 @@ namespace Vapi.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateTogetherAICredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateTogetherAICredentialDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateTogetherAICredentialDTO).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.TogetherAi!, typeInfo);
-            }
-            else if (value.IsTrieve)
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateTrieveCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateTrieveCredentialDTO?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateTrieveCredentialDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Trieve!, typeInfo);
             }
             else if (value.IsTwilio)
             {

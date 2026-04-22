@@ -211,10 +211,6 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Trieve,
-        /// <summary>
-        /// 
-        /// </summary>
         Twilio,
         /// <summary>
         /// 
@@ -296,7 +292,6 @@ namespace Vapi
                 WorkflowCredentialDiscriminatorProvider.Supabase => "supabase",
                 WorkflowCredentialDiscriminatorProvider.Tavus => "tavus",
                 WorkflowCredentialDiscriminatorProvider.TogetherAi => "together-ai",
-                WorkflowCredentialDiscriminatorProvider.Trieve => "trieve",
                 WorkflowCredentialDiscriminatorProvider.Twilio => "twilio",
                 WorkflowCredentialDiscriminatorProvider.Vonage => "vonage",
                 WorkflowCredentialDiscriminatorProvider.Webhook => "webhook",
@@ -362,7 +357,6 @@ namespace Vapi
                 "supabase" => WorkflowCredentialDiscriminatorProvider.Supabase,
                 "tavus" => WorkflowCredentialDiscriminatorProvider.Tavus,
                 "together-ai" => WorkflowCredentialDiscriminatorProvider.TogetherAi,
-                "trieve" => WorkflowCredentialDiscriminatorProvider.Trieve,
                 "twilio" => WorkflowCredentialDiscriminatorProvider.Twilio,
                 "vonage" => WorkflowCredentialDiscriminatorProvider.Vonage,
                 "webhook" => WorkflowCredentialDiscriminatorProvider.Webhook,
