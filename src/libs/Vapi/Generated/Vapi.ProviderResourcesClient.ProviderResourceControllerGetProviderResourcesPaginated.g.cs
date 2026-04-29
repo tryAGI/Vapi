@@ -215,8 +215,8 @@ namespace Vapi
                 PrepareProviderResourceControllerGetProviderResourcesPaginatedRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    provider: provider,
-                    resourceName: resourceName,
+                    provider: provider!,
+                    resourceName: resourceName!,
                     id: id,
                     resourceId: resourceId,
                     page: page,

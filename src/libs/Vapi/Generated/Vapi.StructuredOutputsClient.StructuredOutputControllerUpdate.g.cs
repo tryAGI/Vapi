@@ -146,8 +146,8 @@ namespace Vapi
                 PrepareStructuredOutputControllerUpdateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    schemaOverride: schemaOverride,
+                    id: id!,
+                    schemaOverride: schemaOverride!,
                     request: request);
 
                 return __httpRequest;
