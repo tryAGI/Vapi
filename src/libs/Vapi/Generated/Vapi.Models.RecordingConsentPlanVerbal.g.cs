@@ -26,6 +26,22 @@ namespace Vapi
         public global::Vapi.OneOf<global::Vapi.AzureVoice, global::Vapi.CartesiaVoice, global::Vapi.CustomVoice, global::Vapi.DeepgramVoice, global::Vapi.ElevenLabsVoice, global::Vapi.HumeVoice, global::Vapi.LMNTVoice, global::Vapi.NeuphonicVoice, global::Vapi.OpenAIVoice, global::Vapi.PlayHTVoice, global::Vapi.WellSaidVoice, global::Vapi.RimeAIVoice, global::Vapi.SmallestAIVoice, global::Vapi.TavusVoice, global::Vapi.VapiVoice, global::Vapi.SesameVoice, global::Vapi.InworldVoice, global::Vapi.MinimaxVoice>? Voice { get; set; }
 
         /// <summary>
+        /// This controls whether the consent assistant speaks first or waits for the caller to speak first.<br/>
+        /// Use:<br/>
+        /// - `assistant-speaks-first` (default) to have the consent assistant play the consent message as soon as the call is answered.<br/>
+        /// - `assistant-waits-for-user` to have the consent assistant wait for the caller to speak before playing the consent message.<br/>
+        /// We strongly recommend `assistant-waits-for-user` for outbound calls. Some telephony providers signal "answered" while the line is still ringing, which can cause the consent message to play into a ringing line and be missed by the caller. Waiting for the caller to speak first guarantees they hear the full consent message.<br/>
+        /// Note: when combined with `type: 'stay-on-line'`, silence only counts toward consent after the caller has spoken at least once.<br/>
+        /// @default 'assistant-speaks-first'<br/>
+        /// Default Value: assistant-speaks-first<br/>
+        /// Example: assistant-speaks-first
+        /// </summary>
+        /// <example>assistant-speaks-first</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("firstMessageMode")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.RecordingConsentPlanVerbalFirstMessageModeJsonConverter))]
+        public global::Vapi.RecordingConsentPlanVerbalFirstMessageMode? FirstMessageMode { get; set; }
+
+        /// <summary>
         /// This is the type of recording consent plan. This type assumes consent is granted if the user verbally consents or declines.<br/>
         /// Example: verbal
         /// </summary>
@@ -64,6 +80,17 @@ namespace Vapi
         /// This is the voice to use for the consent message. If not specified, inherits from the assistant's voice.<br/>
         /// Use a different voice for the consent message for a better user experience.
         /// </param>
+        /// <param name="firstMessageMode">
+        /// This controls whether the consent assistant speaks first or waits for the caller to speak first.<br/>
+        /// Use:<br/>
+        /// - `assistant-speaks-first` (default) to have the consent assistant play the consent message as soon as the call is answered.<br/>
+        /// - `assistant-waits-for-user` to have the consent assistant wait for the caller to speak before playing the consent message.<br/>
+        /// We strongly recommend `assistant-waits-for-user` for outbound calls. Some telephony providers signal "answered" while the line is still ringing, which can cause the consent message to play into a ringing line and be missed by the caller. Waiting for the caller to speak first guarantees they hear the full consent message.<br/>
+        /// Note: when combined with `type: 'stay-on-line'`, silence only counts toward consent after the caller has spoken at least once.<br/>
+        /// @default 'assistant-speaks-first'<br/>
+        /// Default Value: assistant-speaks-first<br/>
+        /// Example: assistant-speaks-first
+        /// </param>
         /// <param name="type">
         /// This is the type of recording consent plan. This type assumes consent is granted if the user verbally consents or declines.<br/>
         /// Example: verbal
@@ -80,12 +107,14 @@ namespace Vapi
         public RecordingConsentPlanVerbal(
             string message,
             global::Vapi.OneOf<global::Vapi.AzureVoice, global::Vapi.CartesiaVoice, global::Vapi.CustomVoice, global::Vapi.DeepgramVoice, global::Vapi.ElevenLabsVoice, global::Vapi.HumeVoice, global::Vapi.LMNTVoice, global::Vapi.NeuphonicVoice, global::Vapi.OpenAIVoice, global::Vapi.PlayHTVoice, global::Vapi.WellSaidVoice, global::Vapi.RimeAIVoice, global::Vapi.SmallestAIVoice, global::Vapi.TavusVoice, global::Vapi.VapiVoice, global::Vapi.SesameVoice, global::Vapi.InworldVoice, global::Vapi.MinimaxVoice>? voice,
+            global::Vapi.RecordingConsentPlanVerbalFirstMessageMode? firstMessageMode,
             global::Vapi.RecordingConsentPlanVerbalType type,
             object? declineTool,
             string? declineToolId)
         {
             this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
             this.Voice = voice;
+            this.FirstMessageMode = firstMessageMode;
             this.Type = type;
             this.DeclineTool = declineTool;
             this.DeclineToolId = declineToolId;
