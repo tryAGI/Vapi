@@ -857,9 +857,17 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.AIEdgeConditionTypeNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.RecordingConsentPlanStayOnLineFirstMessageModeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.RecordingConsentPlanStayOnLineFirstMessageModeNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.RecordingConsentPlanStayOnLineTypeJsonConverter),
 
             typeof(global::Vapi.JsonConverters.RecordingConsentPlanStayOnLineTypeNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.RecordingConsentPlanVerbalFirstMessageModeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.RecordingConsentPlanVerbalFirstMessageModeNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.RecordingConsentPlanVerbalTypeJsonConverter),
 
@@ -5292,8 +5300,10 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AIEdgeConditionType), TypeInfoPropertyName = "AIEdgeConditionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.Edge))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.RecordingConsentPlanStayOnLine))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.RecordingConsentPlanStayOnLineFirstMessageMode), TypeInfoPropertyName = "RecordingConsentPlanStayOnLineFirstMessageMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.RecordingConsentPlanStayOnLineType), TypeInfoPropertyName = "RecordingConsentPlanStayOnLineType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.RecordingConsentPlanVerbal))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.RecordingConsentPlanVerbalFirstMessageMode), TypeInfoPropertyName = "RecordingConsentPlanVerbalFirstMessageMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.RecordingConsentPlanVerbalType), TypeInfoPropertyName = "RecordingConsentPlanVerbalType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SecurityFilterBase))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SecurityFilterPlan))]
