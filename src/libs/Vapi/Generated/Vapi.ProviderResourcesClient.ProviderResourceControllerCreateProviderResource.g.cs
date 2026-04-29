@@ -137,9 +137,9 @@ namespace Vapi
                 PrepareProviderResourceControllerCreateProviderResourceRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    contentType: contentType,
-                    provider: provider,
-                    resourceName: resourceName);
+                    contentType: contentType!,
+                    provider: provider!,
+                    resourceName: resourceName!);
 
                 return __httpRequest;
             }
