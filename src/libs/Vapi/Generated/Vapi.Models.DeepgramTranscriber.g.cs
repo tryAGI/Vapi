@@ -92,14 +92,6 @@ namespace Vapi
         public double? ConfidenceThreshold { get; set; }
 
         /// <summary>
-        /// Eager end-of-turn confidence required to fire a eager end-of-turn event. Setting a value here will enable EagerEndOfTurn and SpeechResumed events. It is disabled by default. Only used with Flux models.<br/>
-        /// Example: 0.3F
-        /// </summary>
-        /// <example>0.3F</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("eagerEotThreshold")]
-        public double? EagerEotThreshold { get; set; }
-
-        /// <summary>
         /// End-of-turn confidence required to finish a turn. Only used with Flux models.<br/>
         /// @default 0.7<br/>
         /// Example: 0.7F
@@ -124,8 +116,8 @@ namespace Vapi
         /// Example: [en, es]
         /// </summary>
         /// <example>[en, es]</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("languageHint")]
-        public global::System.Collections.Generic.IList<string>? LanguageHint { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("languages")]
+        public global::System.Collections.Generic.IList<string>? Languages { get; set; }
 
         /// <summary>
         /// These keywords are passed to the transcription model to help it pick up use-case specific words. Anything that may not be a common word, like your company name, should be added here.
@@ -212,10 +204,6 @@ namespace Vapi
         /// @default 0.4<br/>
         /// Example: 0.4F
         /// </param>
-        /// <param name="eagerEotThreshold">
-        /// Eager end-of-turn confidence required to fire a eager end-of-turn event. Setting a value here will enable EagerEndOfTurn and SpeechResumed events. It is disabled by default. Only used with Flux models.<br/>
-        /// Example: 0.3F
-        /// </param>
         /// <param name="eotThreshold">
         /// End-of-turn confidence required to finish a turn. Only used with Flux models.<br/>
         /// @default 0.7<br/>
@@ -226,7 +214,7 @@ namespace Vapi
         /// @default 5000<br/>
         /// Example: 5000
         /// </param>
-        /// <param name="languageHint">
+        /// <param name="languages">
         /// Language hints to bias Flux Multilingual (`flux-general-multi`) toward specific languages.<br/>
         /// Provide BCP-47 language codes (e.g. "en", "es", "fr"). Multiple hints can be given for<br/>
         /// multilingual or code-switching scenarios. Omit for auto-detection. Only used with `flux-general-multi`.<br/>
@@ -262,10 +250,9 @@ namespace Vapi
             bool? profanityFilter,
             global::System.Collections.Generic.IList<global::Vapi.DeepgramTranscriberRedactionItem>? redaction,
             double? confidenceThreshold,
-            double? eagerEotThreshold,
             double? eotThreshold,
             double? eotTimeoutMs,
-            global::System.Collections.Generic.IList<string>? languageHint,
+            global::System.Collections.Generic.IList<string>? languages,
             global::System.Collections.Generic.IList<string>? keywords,
             global::System.Collections.Generic.IList<string>? keyterm,
             double? endpointing,
@@ -280,10 +267,9 @@ namespace Vapi
             this.ProfanityFilter = profanityFilter;
             this.Redaction = redaction;
             this.ConfidenceThreshold = confidenceThreshold;
-            this.EagerEotThreshold = eagerEotThreshold;
             this.EotThreshold = eotThreshold;
             this.EotTimeoutMs = eotTimeoutMs;
-            this.LanguageHint = languageHint;
+            this.Languages = languages;
             this.Keywords = keywords;
             this.Keyterm = keyterm;
             this.Endpointing = endpointing;
