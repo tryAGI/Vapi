@@ -11,7 +11,9 @@ namespace Vapi
         /// <summary>
         /// This is the timeout in seconds before action is triggered.<br/>
         /// The clock starts when the assistant finishes speaking and remains active until the user speaks.<br/>
-        /// @default 7.5
+        /// @default 7.5<br/>
+        /// @minimum 2<br/>
+        /// @maximum 1000
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("timeoutSeconds")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -43,7 +45,9 @@ namespace Vapi
         /// <param name="timeoutSeconds">
         /// This is the timeout in seconds before action is triggered.<br/>
         /// The clock starts when the assistant finishes speaking and remains active until the user speaks.<br/>
-        /// @default 7.5
+        /// @default 7.5<br/>
+        /// @minimum 2<br/>
+        /// @maximum 1000
         /// </param>
         /// <param name="triggerMaxCount">
         /// This is the maximum number of times the hook will trigger in a call.<br/>

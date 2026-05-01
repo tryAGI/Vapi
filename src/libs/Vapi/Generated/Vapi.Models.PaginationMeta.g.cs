@@ -32,6 +32,25 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("totalPages")]
+        public double? TotalPages { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hasNextPage")]
+        public bool? HasNextPage { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sortOrder")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.PaginationMetaSortOrderJsonConverter))]
+        public global::Vapi.PaginationMetaSortOrder? SortOrder { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("itemsBeyondRetention")]
         public bool? ItemsBeyondRetention { get; set; }
 
@@ -59,6 +78,9 @@ namespace Vapi
         /// <param name="itemsPerPage"></param>
         /// <param name="totalItems"></param>
         /// <param name="currentPage"></param>
+        /// <param name="totalPages"></param>
+        /// <param name="hasNextPage"></param>
+        /// <param name="sortOrder"></param>
         /// <param name="itemsBeyondRetention"></param>
         /// <param name="createdAtLe"></param>
         /// <param name="createdAtGe"></param>
@@ -69,6 +91,9 @@ namespace Vapi
             double itemsPerPage,
             double totalItems,
             double currentPage,
+            double? totalPages,
+            bool? hasNextPage,
+            global::Vapi.PaginationMetaSortOrder? sortOrder,
             bool? itemsBeyondRetention,
             global::System.DateTime? createdAtLe,
             global::System.DateTime? createdAtGe)
@@ -76,6 +101,9 @@ namespace Vapi
             this.ItemsPerPage = itemsPerPage;
             this.TotalItems = totalItems;
             this.CurrentPage = currentPage;
+            this.TotalPages = totalPages;
+            this.HasNextPage = hasNextPage;
+            this.SortOrder = sortOrder;
             this.ItemsBeyondRetention = itemsBeyondRetention;
             this.CreatedAtLe = createdAtLe;
             this.CreatedAtGe = createdAtGe;

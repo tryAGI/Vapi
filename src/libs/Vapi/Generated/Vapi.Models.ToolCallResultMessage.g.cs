@@ -57,6 +57,13 @@ namespace Vapi
         public object? Metadata { get; set; }
 
         /// <summary>
+        /// Warnings raised for this tool call result, e.g. when the response is<br/>
+        /// larger than recommended for voice AI context windows.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("warnings")]
+        public global::System.Collections.Generic.IList<global::Vapi.ToolCallResultMessageWarning>? Warnings { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -86,6 +93,10 @@ namespace Vapi
         /// <param name="metadata">
         /// The metadata for the tool call result.
         /// </param>
+        /// <param name="warnings">
+        /// Warnings raised for this tool call result, e.g. when the response is<br/>
+        /// larger than recommended for voice AI context windows.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -96,7 +107,8 @@ namespace Vapi
             string result,
             double time,
             double secondsFromStart,
-            object? metadata)
+            object? metadata,
+            global::System.Collections.Generic.IList<global::Vapi.ToolCallResultMessageWarning>? warnings)
         {
             this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
             this.ToolCallId = toolCallId ?? throw new global::System.ArgumentNullException(nameof(toolCallId));
@@ -105,6 +117,7 @@ namespace Vapi
             this.Time = time;
             this.SecondsFromStart = secondsFromStart;
             this.Metadata = metadata;
+            this.Warnings = warnings;
         }
 
         /// <summary>
