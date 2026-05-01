@@ -1661,6 +1661,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.AssistantCredentialDiscriminatorProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.PaginationMetaSortOrderJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.PaginationMetaSortOrderNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.UpdateAssistantDTOFirstMessageModeJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateAssistantDTOFirstMessageModeNullableJsonConverter),
@@ -3568,6 +3572,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.ClientInboundMessageSendTransportMessageTypeJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ClientInboundMessageSendTransportMessageTypeNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ToolCallResultMessageWarningTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ToolCallResultMessageWarningTypeNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.TransportCostTypeJsonConverter),
 
@@ -5706,6 +5714,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantCredentialDiscriminatorProvider), TypeInfoPropertyName = "AssistantCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMeta))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMetaSortOrder), TypeInfoPropertyName = "PaginationMetaSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantPaginatedResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.Assistant>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantVersionPaginatedResponse))]
@@ -6886,6 +6895,9 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TwilioTransportMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientInboundMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.ClientInboundMessageAddMessage, global::Vapi.ClientInboundMessageControl, global::Vapi.ClientInboundMessageSay, global::Vapi.ClientInboundMessageEndCall, global::Vapi.ClientInboundMessageTransfer, global::Vapi.ClientInboundMessageSendTransportMessage>), TypeInfoPropertyName = "ClientInboundMessageSendTransportMessage_b60833b95aa0836f")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ToolCallResultMessageWarning))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ToolCallResultMessageWarningType), TypeInfoPropertyName = "ToolCallResultMessageWarningType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.ToolCallResultMessageWarning>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransportCostType), TypeInfoPropertyName = "TransportCostType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransportCostProvider), TypeInfoPropertyName = "TransportCostProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TranscriberCostType), TypeInfoPropertyName = "TranscriberCostType2")]
@@ -7165,6 +7177,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.KnowledgeBaseResponseDocument>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ToolCallResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ToolCallResultMessageWarning>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Squad>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberControllerFindAllResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ToolControllerFindAllResponseItem>))]
