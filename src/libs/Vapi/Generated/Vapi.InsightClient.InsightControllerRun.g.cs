@@ -407,6 +407,10 @@ namespace Vapi
         /// For Pie and Text Insights, step will be ignored even if provided.<br/>
         /// Example: { start: "2025-01-01", end: "2025-01-07", step: "day" }
         /// </param>
+        /// <param name="assistantId">
+        /// Optional runtime assistant scope for dashboards.<br/>
+        /// This is applied to call-table queries without mutating the saved insight.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -414,6 +418,7 @@ namespace Vapi
             string id,
             global::Vapi.InsightRunFormatPlan? formatPlan = default,
             global::Vapi.InsightTimeRangeWithStep? timeRangeOverride = default,
+            string? assistantId = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -421,6 +426,7 @@ namespace Vapi
             {
                 FormatPlan = formatPlan,
                 TimeRangeOverride = timeRangeOverride,
+                AssistantId = assistantId,
             };
 
             return await InsightControllerRunAsync(

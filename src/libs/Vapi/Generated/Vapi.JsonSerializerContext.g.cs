@@ -117,6 +117,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.SonioxTranscriberLanguageNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.SonioxTranscriberLanguagesJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.SonioxTranscriberLanguagesNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.SpeechmaticsTranscriberProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.SpeechmaticsTranscriberProviderNullableJsonConverter),
@@ -280,6 +284,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.FallbackSonioxTranscriberLanguageJsonConverter),
 
             typeof(global::Vapi.JsonConverters.FallbackSonioxTranscriberLanguageNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.FallbackSonioxTranscriberLanguagesJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.FallbackSonioxTranscriberLanguagesNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.FallbackSpeechmaticsTranscriberProviderJsonConverter),
 
@@ -4907,10 +4915,13 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberLanguage), TypeInfoPropertyName = "GladiaTranscriberLanguage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberLanguages), TypeInfoPropertyName = "GladiaTranscriberLanguages2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberRegion), TypeInfoPropertyName = "GladiaTranscriberRegion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxContextGeneralItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriber))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberProvider), TypeInfoPropertyName = "SonioxTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberModel), TypeInfoPropertyName = "SonioxTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberLanguage), TypeInfoPropertyName = "SonioxTranscriberLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberLanguages), TypeInfoPropertyName = "SonioxTranscriberLanguages2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SonioxContextGeneralItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SpeechmaticsCustomVocabularyItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SpeechmaticsTranscriber))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SpeechmaticsTranscriberProvider), TypeInfoPropertyName = "SpeechmaticsTranscriberProvider2")]
@@ -4960,6 +4971,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberProvider), TypeInfoPropertyName = "FallbackSonioxTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberModel), TypeInfoPropertyName = "FallbackSonioxTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberLanguage), TypeInfoPropertyName = "FallbackSonioxTranscriberLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberLanguages), TypeInfoPropertyName = "FallbackSonioxTranscriberLanguages2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSpeechmaticsTranscriberProvider), TypeInfoPropertyName = "FallbackSpeechmaticsTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSpeechmaticsTranscriberModel), TypeInfoPropertyName = "FallbackSpeechmaticsTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSpeechmaticsTranscriberLanguage), TypeInfoPropertyName = "FallbackSpeechmaticsTranscriberLanguage2")]
@@ -7045,6 +7057,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.DeepgramTranscriberRedactionItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<string, global::Vapi.GladiaVocabularyItemDTO>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SonioxContextGeneralItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SpeechmaticsCustomVocabularyItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.FallbackDeepgramTranscriberRedactionItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TextContent>))]

@@ -29,6 +29,13 @@ namespace Vapi
         public global::Vapi.InsightTimeRangeWithStep? TimeRangeOverride { get; set; }
 
         /// <summary>
+        /// Optional runtime assistant scope for dashboards.<br/>
+        /// This is applied to call-table queries without mutating the saved insight.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantId")]
+        public string? AssistantId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -48,15 +55,21 @@ namespace Vapi
         /// For Pie and Text Insights, step will be ignored even if provided.<br/>
         /// Example: { start: "2025-01-01", end: "2025-01-07", step: "day" }
         /// </param>
+        /// <param name="assistantId">
+        /// Optional runtime assistant scope for dashboards.<br/>
+        /// This is applied to call-table queries without mutating the saved insight.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public InsightRunDTO(
             global::Vapi.InsightRunFormatPlan? formatPlan,
-            global::Vapi.InsightTimeRangeWithStep? timeRangeOverride)
+            global::Vapi.InsightTimeRangeWithStep? timeRangeOverride,
+            string? assistantId)
         {
             this.FormatPlan = formatPlan;
             this.TimeRangeOverride = timeRangeOverride;
+            this.AssistantId = assistantId;
         }
 
         /// <summary>
