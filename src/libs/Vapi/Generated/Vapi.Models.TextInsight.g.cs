@@ -83,6 +83,12 @@ namespace Vapi
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
+        /// Stable server-owned identifier for system-created insights.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("systemKey")]
+        public string? SystemKey { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -130,6 +136,9 @@ namespace Vapi
         /// You can also use the query names as the variable in the formula.
         /// </param>
         /// <param name="timeRange"></param>
+        /// <param name="systemKey">
+        /// Stable server-owned identifier for system-created insights.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -142,7 +151,8 @@ namespace Vapi
             string? name,
             global::Vapi.TextInsightType type,
             object? formula,
-            global::Vapi.InsightTimeRange? timeRange)
+            global::Vapi.InsightTimeRange? timeRange,
+            string? systemKey)
         {
             this.Name = name;
             this.Type = type;
@@ -153,6 +163,7 @@ namespace Vapi
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
+            this.SystemKey = systemKey;
         }
 
         /// <summary>

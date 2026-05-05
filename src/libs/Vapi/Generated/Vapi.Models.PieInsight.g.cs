@@ -93,6 +93,12 @@ namespace Vapi
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
+        /// Stable server-owned identifier for system-created insights.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("systemKey")]
+        public string? SystemKey { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -145,6 +151,9 @@ namespace Vapi
         /// All results are grouped by the time range step by default.<br/>
         /// Example: [assistant_id]
         /// </param>
+        /// <param name="systemKey">
+        /// Stable server-owned identifier for system-created insights.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -158,7 +167,8 @@ namespace Vapi
             global::Vapi.PieInsightType type,
             global::System.Collections.Generic.IList<global::Vapi.InsightFormula>? formulas,
             global::Vapi.InsightTimeRange? timeRange,
-            global::Vapi.PieInsightGroupBy? groupBy)
+            global::Vapi.PieInsightGroupBy? groupBy,
+            string? systemKey)
         {
             this.Name = name;
             this.Type = type;
@@ -170,6 +180,7 @@ namespace Vapi
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
+            this.SystemKey = systemKey;
         }
 
         /// <summary>

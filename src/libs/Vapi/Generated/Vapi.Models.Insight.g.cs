@@ -51,6 +51,12 @@ namespace Vapi
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
+        /// Stable server-owned identifier for system-created insights.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("systemKey")]
+        public string? SystemKey { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -77,6 +83,9 @@ namespace Vapi
         /// <param name="name">
         /// This is the name of the Insight.
         /// </param>
+        /// <param name="systemKey">
+        /// Stable server-owned identifier for system-created insights.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -86,7 +95,8 @@ namespace Vapi
             string orgId,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
-            string? name)
+            string? name,
+            string? systemKey)
         {
             this.Name = name;
             this.Type = type;
@@ -94,6 +104,7 @@ namespace Vapi
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
+            this.SystemKey = systemKey;
         }
 
         /// <summary>
