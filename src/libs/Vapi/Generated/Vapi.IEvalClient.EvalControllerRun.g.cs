@@ -19,6 +19,18 @@ namespace Vapi
         /// <summary>
         /// Create Eval Run
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Vapi.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<string>> EvalControllerRunAsResponseAsync(
+
+            global::Vapi.CreateEvalRunDTO request,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create Eval Run
+        /// </summary>
         /// <param name="eval">
         /// This is the transient eval that will be run
         /// </param>

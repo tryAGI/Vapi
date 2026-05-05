@@ -19,6 +19,18 @@ namespace Vapi
         /// <summary>
         /// Run Structured Output
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Vapi.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.StructuredOutput>> StructuredOutputControllerRunAsResponseAsync(
+
+            global::Vapi.StructuredOutputRunDTO request,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Run Structured Output
+        /// </summary>
         /// <param name="previewEnabled">
         /// This is the preview flag for the re-run. If true, the re-run will be executed and the response will be returned immediately and the call artifact will NOT be updated.<br/>
         /// If false (default), the re-run will be executed and the response will be updated in the call artifact.<br/>
