@@ -22,6 +22,20 @@ namespace Vapi
         /// Update Scorecard
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Vapi.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Scorecard>> ScorecardControllerUpdateAsResponseAsync(
+            string id,
+
+            global::Vapi.UpdateScorecardDTO request,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Update Scorecard
+        /// </summary>
+        /// <param name="id"></param>
         /// <param name="name">
         /// This is the name of the scorecard. It is only for user reference and will not be used for any evaluation.
         /// </param>

@@ -173,6 +173,118 @@ namespace Vapi
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await SessionControllerFindAllPaginatedAsResponseAsync(
+                id: id,
+                name: name,
+                assistantId: assistantId,
+                assistantIdAny: assistantIdAny,
+                squadId: squadId,
+                workflowId: workflowId,
+                numberE164CheckEnabled: numberE164CheckEnabled,
+                extension: extension,
+                assistantOverrides: assistantOverrides,
+                number: number,
+                sipUri: sipUri,
+                customerName: customerName,
+                email: email,
+                externalId: externalId,
+                customerNumberAny: customerNumberAny,
+                phoneNumberId: phoneNumberId,
+                phoneNumberIdAny: phoneNumberIdAny,
+                page: page,
+                sortOrder: sortOrder,
+                sortBy: sortBy,
+                limit: limit,
+                createdAtGt: createdAtGt,
+                createdAtLt: createdAtLt,
+                createdAtGe: createdAtGe,
+                createdAtLe: createdAtLe,
+                updatedAtGt: updatedAtGt,
+                updatedAtLt: updatedAtLt,
+                updatedAtGe: updatedAtGe,
+                updatedAtLe: updatedAtLe,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// List Sessions
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="assistantId"></param>
+        /// <param name="assistantIdAny">
+        /// Example: assistant-1,assistant-2,assistant-3
+        /// </param>
+        /// <param name="squadId"></param>
+        /// <param name="workflowId"></param>
+        /// <param name="numberE164CheckEnabled">
+        /// Default Value: true
+        /// </param>
+        /// <param name="extension">
+        /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
+        /// </param>
+        /// <param name="assistantOverrides"></param>
+        /// <param name="number"></param>
+        /// <param name="sipUri"></param>
+        /// <param name="customerName"></param>
+        /// <param name="email"></param>
+        /// <param name="externalId"></param>
+        /// <param name="customerNumberAny">
+        /// Example: +1234567890,+0987654321
+        /// </param>
+        /// <param name="phoneNumberId"></param>
+        /// <param name="phoneNumberIdAny"></param>
+        /// <param name="page"></param>
+        /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
+        /// <param name="limit"></param>
+        /// <param name="createdAtGt"></param>
+        /// <param name="createdAtLt"></param>
+        /// <param name="createdAtGe"></param>
+        /// <param name="createdAtLe"></param>
+        /// <param name="updatedAtGt"></param>
+        /// <param name="updatedAtLt"></param>
+        /// <param name="updatedAtGe"></param>
+        /// <param name="updatedAtLe"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Vapi.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.SessionPaginatedResponse>> SessionControllerFindAllPaginatedAsResponseAsync(
+            string? id = default,
+            string? name = default,
+            string? assistantId = default,
+            string? assistantIdAny = default,
+            string? squadId = default,
+            string? workflowId = default,
+            bool? numberE164CheckEnabled = default,
+            string? extension = default,
+            object? assistantOverrides = default,
+            string? number = default,
+            string? sipUri = default,
+            string? customerName = default,
+            string? email = default,
+            string? externalId = default,
+            string? customerNumberAny = default,
+            string? phoneNumberId = default,
+            global::System.Collections.Generic.IList<string>? phoneNumberIdAny = default,
+            double? page = default,
+            global::Vapi.SessionControllerFindAllPaginatedSortOrder? sortOrder = default,
+            global::Vapi.SessionControllerFindAllPaginatedSortBy? sortBy = default,
+            double? limit = default,
+            global::System.DateTime? createdAtGt = default,
+            global::System.DateTime? createdAtLt = default,
+            global::System.DateTime? createdAtGe = default,
+            global::System.DateTime? createdAtLe = default,
+            global::System.DateTime? updatedAtGt = default,
+            global::System.DateTime? updatedAtLt = default,
+            global::System.DateTime? updatedAtGe = default,
+            global::System.DateTime? updatedAtLe = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareSessionControllerFindAllPaginatedArguments(
@@ -229,9 +341,10 @@ namespace Vapi
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Vapi.PathBuilder(
                                 path: "/session",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("id", id)
                                 .AddOptionalParameter("name", name)
@@ -261,7 +374,7 @@ namespace Vapi
                                 .AddOptionalParameter("updatedAtGt", updatedAtGt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("updatedAtLt", updatedAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("updatedAtGe", updatedAtGe?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("updatedAtLe", updatedAtLe?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
+                                .AddOptionalParameter("updatedAtLe", updatedAtLe?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Vapi.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -361,6 +474,8 @@ namespace Vapi
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -371,6 +486,11 @@ namespace Vapi
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Vapi.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -388,6 +508,8 @@ namespace Vapi
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -397,8 +519,7 @@ namespace Vapi
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Vapi.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -407,6 +528,11 @@ namespace Vapi
                         __attempt < __maxAttempts &&
                         global::Vapi.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Vapi.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -423,14 +549,15 @@ namespace Vapi
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Vapi.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -470,6 +597,8 @@ namespace Vapi
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -490,6 +619,8 @@ namespace Vapi
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 
@@ -514,9 +645,13 @@ namespace Vapi
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Vapi.SessionPaginatedResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Vapi.SessionPaginatedResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.SessionPaginatedResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -544,9 +679,13 @@ namespace Vapi
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Vapi.SessionPaginatedResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Vapi.SessionPaginatedResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.SessionPaginatedResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
