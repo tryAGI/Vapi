@@ -23,6 +23,12 @@ namespace Vapi
         public required string ApiKey { get; set; }
 
         /// <summary>
+        /// Custom Soniox WebSocket endpoint (e.g. EU server wss://stt-rt.eu.soniox.com/transcribe-websocket). Defaults to the region-appropriate endpoint when omitted.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("apiUrl")]
+        public string? ApiUrl { get; set; }
+
+        /// <summary>
         /// This is the unique identifier for the credential.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
@@ -81,6 +87,9 @@ namespace Vapi
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
         /// </param>
         /// <param name="provider"></param>
+        /// <param name="apiUrl">
+        /// Custom Soniox WebSocket endpoint (e.g. EU server wss://stt-rt.eu.soniox.com/transcribe-websocket). Defaults to the region-appropriate endpoint when omitted.
+        /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -94,10 +103,12 @@ namespace Vapi
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             global::Vapi.SonioxCredentialProvider provider,
+            string? apiUrl,
             string? name)
         {
             this.Provider = provider;
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
+            this.ApiUrl = apiUrl;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
