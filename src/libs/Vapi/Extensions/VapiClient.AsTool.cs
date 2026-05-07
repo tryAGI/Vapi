@@ -1,5 +1,4 @@
 #pragma warning disable CS3002 // Return type is not CLS-compliant
-using System.Text.Json;
 using Microsoft.Extensions.AI;
 
 namespace Vapi;
@@ -28,14 +27,14 @@ public static class VapiToolExtensions
                     limit: limit,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(assistants.Select(a => new
+                return assistants.Select(a => new
                 {
                     id = a.Id,
                     name = a.Name,
                     firstMessage = a.FirstMessage,
                     createdAt = a.CreatedAt,
                     updatedAt = a.UpdatedAt,
-                }));
+                });
             },
             name: "ListVapiAssistants",
             description: "Lists all Vapi voice AI assistants. Returns assistant IDs, names, first messages, and timestamps.");
@@ -60,14 +59,14 @@ public static class VapiToolExtensions
                     id: id,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(new
+                return new
                 {
                     id = assistant.Id,
                     name = assistant.Name,
                     firstMessage = assistant.FirstMessage,
                     createdAt = assistant.CreatedAt,
                     updatedAt = assistant.UpdatedAt,
-                });
+                };
             },
             name: "GetVapiAssistant",
             description: "Gets details of a specific Vapi voice AI assistant by its ID. Returns the assistant's name, first message, and configuration.");
@@ -95,13 +94,13 @@ public static class VapiToolExtensions
                     firstMessage: firstMessage,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(new
+                return new
                 {
                     id = assistant.Id,
                     name = assistant.Name,
                     firstMessage = assistant.FirstMessage,
                     createdAt = assistant.CreatedAt,
-                });
+                };
             },
             name: "CreateVapiAssistant",
             description: "Creates a new Vapi voice AI assistant with a given name and optional first message. Returns the created assistant's ID and details.");
@@ -130,7 +129,7 @@ public static class VapiToolExtensions
                     limit: limit,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(calls.Select(c => new
+                return calls.Select(c => new
                 {
                     id = c.Id,
                     status = c.Status?.ToString(),
@@ -141,7 +140,7 @@ public static class VapiToolExtensions
                     endedAt = c.EndedAt,
                     endedReason = c.EndedReason?.ToString(),
                     cost = c.Cost,
-                }));
+                });
             },
             name: "ListVapiCalls",
             description: "Lists Vapi voice AI calls with optional filtering by assistant ID. Returns call IDs, statuses, types, timestamps, and costs.");
@@ -166,7 +165,7 @@ public static class VapiToolExtensions
                     id: id,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(new
+                return new
                 {
                     id = call.Id,
                     status = call.Status?.ToString(),
@@ -179,7 +178,7 @@ public static class VapiToolExtensions
                     cost = call.Cost,
                     transcript = call.Artifact?.Transcript,
                     summary = call.Analysis?.Summary,
-                });
+                };
             },
             name: "GetVapiCall",
             description: "Gets details of a specific Vapi voice AI call by its ID. Returns call status, type, timestamps, cost, transcript, and summary.");
@@ -204,10 +203,10 @@ public static class VapiToolExtensions
                     limit: limit,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(phoneNumbers.Select(p => new
+                return phoneNumbers.Select(p => new
                 {
                     value = p.ToString(),
-                }));
+                });
             },
             name: "ListVapiPhoneNumbers",
             description: "Lists Vapi phone numbers configured for voice AI calls. Returns phone number details including IDs and associated configurations.");
