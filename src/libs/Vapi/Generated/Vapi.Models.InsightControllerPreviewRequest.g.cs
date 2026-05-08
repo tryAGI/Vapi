@@ -34,6 +34,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickBar(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.CreateBarInsightFromCallTableDTO? value)
+        {
+            value = Bar;
+            return IsBar;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreatePieInsightFromCallTableDTO? Pie { get; init; }
 #else
@@ -47,6 +60,19 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Pie))]
 #endif
         public bool IsPie => Pie != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPie(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.CreatePieInsightFromCallTableDTO? value)
+        {
+            value = Pie;
+            return IsPie;
+        }
 
         /// <summary>
         /// 
@@ -68,6 +94,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickLine(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.CreateLineInsightFromCallTableDTO? value)
+        {
+            value = Line;
+            return IsLine;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateTextInsightFromCallTableDTO? Text { get; init; }
 #else
@@ -81,6 +120,19 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Text))]
 #endif
         public bool IsText => Text != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickText(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.CreateTextInsightFromCallTableDTO? value)
+        {
+            value = Text;
+            return IsText;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -204,10 +256,10 @@ namespace Vapi
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Vapi.CreateBarInsightFromCallTableDTO?, TResult>? bar = null,
-            global::System.Func<global::Vapi.CreatePieInsightFromCallTableDTO?, TResult>? pie = null,
-            global::System.Func<global::Vapi.CreateLineInsightFromCallTableDTO?, TResult>? line = null,
-            global::System.Func<global::Vapi.CreateTextInsightFromCallTableDTO?, TResult>? text = null,
+            global::System.Func<global::Vapi.CreateBarInsightFromCallTableDTO, TResult>? bar = null,
+            global::System.Func<global::Vapi.CreatePieInsightFromCallTableDTO, TResult>? pie = null,
+            global::System.Func<global::Vapi.CreateLineInsightFromCallTableDTO, TResult>? line = null,
+            global::System.Func<global::Vapi.CreateTextInsightFromCallTableDTO, TResult>? text = null,
             bool validate = true)
         {
             if (validate)
@@ -239,10 +291,46 @@ namespace Vapi
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Vapi.CreateBarInsightFromCallTableDTO?>? bar = null,
-            global::System.Action<global::Vapi.CreatePieInsightFromCallTableDTO?>? pie = null,
-            global::System.Action<global::Vapi.CreateLineInsightFromCallTableDTO?>? line = null,
-            global::System.Action<global::Vapi.CreateTextInsightFromCallTableDTO?>? text = null,
+            global::System.Action<global::Vapi.CreateBarInsightFromCallTableDTO>? bar = null,
+
+            global::System.Action<global::Vapi.CreatePieInsightFromCallTableDTO>? pie = null,
+
+            global::System.Action<global::Vapi.CreateLineInsightFromCallTableDTO>? line = null,
+
+            global::System.Action<global::Vapi.CreateTextInsightFromCallTableDTO>? text = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsBar)
+            {
+                bar?.Invoke(Bar!);
+            }
+            else if (IsPie)
+            {
+                pie?.Invoke(Pie!);
+            }
+            else if (IsLine)
+            {
+                line?.Invoke(Line!);
+            }
+            else if (IsText)
+            {
+                text?.Invoke(Text!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Vapi.CreateBarInsightFromCallTableDTO>? bar = null,
+            global::System.Action<global::Vapi.CreatePieInsightFromCallTableDTO>? pie = null,
+            global::System.Action<global::Vapi.CreateLineInsightFromCallTableDTO>? line = null,
+            global::System.Action<global::Vapi.CreateTextInsightFromCallTableDTO>? text = null,
             bool validate = true)
         {
             if (validate)

@@ -34,6 +34,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickOauth2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.OAuth2AuthenticationPlan? value)
+        {
+            value = Oauth2;
+            return IsOauth2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.HMACAuthenticationPlan? Hmac { get; init; }
 #else
@@ -51,6 +64,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickHmac(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.HMACAuthenticationPlan? value)
+        {
+            value = Hmac;
+            return IsHmac;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.BearerAuthenticationPlan? Bearer { get; init; }
 #else
@@ -64,6 +90,19 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Bearer))]
 #endif
         public bool IsBearer => Bearer != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickBearer(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.BearerAuthenticationPlan? value)
+        {
+            value = Bearer;
+            return IsBearer;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -165,9 +204,9 @@ namespace Vapi
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Vapi.OAuth2AuthenticationPlan?, TResult>? oauth2 = null,
-            global::System.Func<global::Vapi.HMACAuthenticationPlan?, TResult>? hmac = null,
-            global::System.Func<global::Vapi.BearerAuthenticationPlan?, TResult>? bearer = null,
+            global::System.Func<global::Vapi.OAuth2AuthenticationPlan, TResult>? oauth2 = null,
+            global::System.Func<global::Vapi.HMACAuthenticationPlan, TResult>? hmac = null,
+            global::System.Func<global::Vapi.BearerAuthenticationPlan, TResult>? bearer = null,
             bool validate = true)
         {
             if (validate)
@@ -195,9 +234,39 @@ namespace Vapi
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Vapi.OAuth2AuthenticationPlan?>? oauth2 = null,
-            global::System.Action<global::Vapi.HMACAuthenticationPlan?>? hmac = null,
-            global::System.Action<global::Vapi.BearerAuthenticationPlan?>? bearer = null,
+            global::System.Action<global::Vapi.OAuth2AuthenticationPlan>? oauth2 = null,
+
+            global::System.Action<global::Vapi.HMACAuthenticationPlan>? hmac = null,
+
+            global::System.Action<global::Vapi.BearerAuthenticationPlan>? bearer = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsOauth2)
+            {
+                oauth2?.Invoke(Oauth2!);
+            }
+            else if (IsHmac)
+            {
+                hmac?.Invoke(Hmac!);
+            }
+            else if (IsBearer)
+            {
+                bearer?.Invoke(Bearer!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Vapi.OAuth2AuthenticationPlan>? oauth2 = null,
+            global::System.Action<global::Vapi.HMACAuthenticationPlan>? hmac = null,
+            global::System.Action<global::Vapi.BearerAuthenticationPlan>? bearer = null,
             bool validate = true)
         {
             if (validate)

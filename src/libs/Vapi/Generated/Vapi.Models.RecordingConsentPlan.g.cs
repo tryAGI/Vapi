@@ -34,6 +34,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickStayOnLine(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.RecordingConsentPlanStayOnLine? value)
+        {
+            value = StayOnLine;
+            return IsStayOnLine;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.RecordingConsentPlanVerbal? Verbal { get; init; }
 #else
@@ -47,6 +60,19 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Verbal))]
 #endif
         public bool IsVerbal => Verbal != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickVerbal(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.RecordingConsentPlanVerbal? value)
+        {
+            value = Verbal;
+            return IsVerbal;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -126,8 +152,8 @@ namespace Vapi
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Vapi.RecordingConsentPlanStayOnLine?, TResult>? stayOnLine = null,
-            global::System.Func<global::Vapi.RecordingConsentPlanVerbal?, TResult>? verbal = null,
+            global::System.Func<global::Vapi.RecordingConsentPlanStayOnLine, TResult>? stayOnLine = null,
+            global::System.Func<global::Vapi.RecordingConsentPlanVerbal, TResult>? verbal = null,
             bool validate = true)
         {
             if (validate)
@@ -151,8 +177,32 @@ namespace Vapi
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Vapi.RecordingConsentPlanStayOnLine?>? stayOnLine = null,
-            global::System.Action<global::Vapi.RecordingConsentPlanVerbal?>? verbal = null,
+            global::System.Action<global::Vapi.RecordingConsentPlanStayOnLine>? stayOnLine = null,
+
+            global::System.Action<global::Vapi.RecordingConsentPlanVerbal>? verbal = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsStayOnLine)
+            {
+                stayOnLine?.Invoke(StayOnLine!);
+            }
+            else if (IsVerbal)
+            {
+                verbal?.Invoke(Verbal!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Vapi.RecordingConsentPlanStayOnLine>? stayOnLine = null,
+            global::System.Action<global::Vapi.RecordingConsentPlanVerbal>? verbal = null,
             bool validate = true)
         {
             if (validate)
