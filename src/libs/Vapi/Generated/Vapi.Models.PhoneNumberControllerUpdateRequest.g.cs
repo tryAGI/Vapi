@@ -34,6 +34,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickByoPhoneNumber(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.UpdateByoPhoneNumberDTO? value)
+        {
+            value = ByoPhoneNumber;
+            return IsByoPhoneNumber;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.UpdateTwilioPhoneNumberDTO? Twilio { get; init; }
 #else
@@ -47,6 +60,19 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Twilio))]
 #endif
         public bool IsTwilio => Twilio != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickTwilio(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.UpdateTwilioPhoneNumberDTO? value)
+        {
+            value = Twilio;
+            return IsTwilio;
+        }
 
         /// <summary>
         /// 
@@ -68,6 +94,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickVonage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.UpdateVonagePhoneNumberDTO? value)
+        {
+            value = Vonage;
+            return IsVonage;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.UpdateVapiPhoneNumberDTO? Vapi { get; init; }
 #else
@@ -85,6 +124,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickVapi(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.UpdateVapiPhoneNumberDTO? value)
+        {
+            value = Vapi;
+            return IsVapi;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.UpdateTelnyxPhoneNumberDTO? Telnyx { get; init; }
 #else
@@ -98,6 +150,19 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Telnyx))]
 #endif
         public bool IsTelnyx => Telnyx != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickTelnyx(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.UpdateTelnyxPhoneNumberDTO? value)
+        {
+            value = Telnyx;
+            return IsTelnyx;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -243,11 +308,11 @@ namespace Vapi
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Vapi.UpdateByoPhoneNumberDTO?, TResult>? byoPhoneNumber = null,
-            global::System.Func<global::Vapi.UpdateTwilioPhoneNumberDTO?, TResult>? twilio = null,
-            global::System.Func<global::Vapi.UpdateVonagePhoneNumberDTO?, TResult>? vonage = null,
-            global::System.Func<global::Vapi.UpdateVapiPhoneNumberDTO?, TResult>? vapi = null,
-            global::System.Func<global::Vapi.UpdateTelnyxPhoneNumberDTO?, TResult>? telnyx = null,
+            global::System.Func<global::Vapi.UpdateByoPhoneNumberDTO, TResult>? byoPhoneNumber = null,
+            global::System.Func<global::Vapi.UpdateTwilioPhoneNumberDTO, TResult>? twilio = null,
+            global::System.Func<global::Vapi.UpdateVonagePhoneNumberDTO, TResult>? vonage = null,
+            global::System.Func<global::Vapi.UpdateVapiPhoneNumberDTO, TResult>? vapi = null,
+            global::System.Func<global::Vapi.UpdateTelnyxPhoneNumberDTO, TResult>? telnyx = null,
             bool validate = true)
         {
             if (validate)
@@ -283,11 +348,53 @@ namespace Vapi
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Vapi.UpdateByoPhoneNumberDTO?>? byoPhoneNumber = null,
-            global::System.Action<global::Vapi.UpdateTwilioPhoneNumberDTO?>? twilio = null,
-            global::System.Action<global::Vapi.UpdateVonagePhoneNumberDTO?>? vonage = null,
-            global::System.Action<global::Vapi.UpdateVapiPhoneNumberDTO?>? vapi = null,
-            global::System.Action<global::Vapi.UpdateTelnyxPhoneNumberDTO?>? telnyx = null,
+            global::System.Action<global::Vapi.UpdateByoPhoneNumberDTO>? byoPhoneNumber = null,
+
+            global::System.Action<global::Vapi.UpdateTwilioPhoneNumberDTO>? twilio = null,
+
+            global::System.Action<global::Vapi.UpdateVonagePhoneNumberDTO>? vonage = null,
+
+            global::System.Action<global::Vapi.UpdateVapiPhoneNumberDTO>? vapi = null,
+
+            global::System.Action<global::Vapi.UpdateTelnyxPhoneNumberDTO>? telnyx = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsByoPhoneNumber)
+            {
+                byoPhoneNumber?.Invoke(ByoPhoneNumber!);
+            }
+            else if (IsTwilio)
+            {
+                twilio?.Invoke(Twilio!);
+            }
+            else if (IsVonage)
+            {
+                vonage?.Invoke(Vonage!);
+            }
+            else if (IsVapi)
+            {
+                vapi?.Invoke(Vapi!);
+            }
+            else if (IsTelnyx)
+            {
+                telnyx?.Invoke(Telnyx!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Vapi.UpdateByoPhoneNumberDTO>? byoPhoneNumber = null,
+            global::System.Action<global::Vapi.UpdateTwilioPhoneNumberDTO>? twilio = null,
+            global::System.Action<global::Vapi.UpdateVonagePhoneNumberDTO>? vonage = null,
+            global::System.Action<global::Vapi.UpdateVapiPhoneNumberDTO>? vapi = null,
+            global::System.Action<global::Vapi.UpdateTelnyxPhoneNumberDTO>? telnyx = null,
             bool validate = true)
         {
             if (validate)

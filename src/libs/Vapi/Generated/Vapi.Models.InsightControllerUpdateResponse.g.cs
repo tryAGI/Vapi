@@ -34,6 +34,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickBar(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.BarInsight? value)
+        {
+            value = Bar;
+            return IsBar;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.PieInsight? Pie { get; init; }
 #else
@@ -47,6 +60,19 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Pie))]
 #endif
         public bool IsPie => Pie != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPie(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.PieInsight? value)
+        {
+            value = Pie;
+            return IsPie;
+        }
 
         /// <summary>
         /// 
@@ -68,6 +94,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickLine(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.LineInsight? value)
+        {
+            value = Line;
+            return IsLine;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.TextInsight? Text { get; init; }
 #else
@@ -81,6 +120,19 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Text))]
 #endif
         public bool IsText => Text != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickText(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.TextInsight? value)
+        {
+            value = Text;
+            return IsText;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -204,10 +256,10 @@ namespace Vapi
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Vapi.BarInsight?, TResult>? bar = null,
-            global::System.Func<global::Vapi.PieInsight?, TResult>? pie = null,
-            global::System.Func<global::Vapi.LineInsight?, TResult>? line = null,
-            global::System.Func<global::Vapi.TextInsight?, TResult>? text = null,
+            global::System.Func<global::Vapi.BarInsight, TResult>? bar = null,
+            global::System.Func<global::Vapi.PieInsight, TResult>? pie = null,
+            global::System.Func<global::Vapi.LineInsight, TResult>? line = null,
+            global::System.Func<global::Vapi.TextInsight, TResult>? text = null,
             bool validate = true)
         {
             if (validate)
@@ -239,10 +291,46 @@ namespace Vapi
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Vapi.BarInsight?>? bar = null,
-            global::System.Action<global::Vapi.PieInsight?>? pie = null,
-            global::System.Action<global::Vapi.LineInsight?>? line = null,
-            global::System.Action<global::Vapi.TextInsight?>? text = null,
+            global::System.Action<global::Vapi.BarInsight>? bar = null,
+
+            global::System.Action<global::Vapi.PieInsight>? pie = null,
+
+            global::System.Action<global::Vapi.LineInsight>? line = null,
+
+            global::System.Action<global::Vapi.TextInsight>? text = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsBar)
+            {
+                bar?.Invoke(Bar!);
+            }
+            else if (IsPie)
+            {
+                pie?.Invoke(Pie!);
+            }
+            else if (IsLine)
+            {
+                line?.Invoke(Line!);
+            }
+            else if (IsText)
+            {
+                text?.Invoke(Text!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Vapi.BarInsight>? bar = null,
+            global::System.Action<global::Vapi.PieInsight>? pie = null,
+            global::System.Action<global::Vapi.LineInsight>? line = null,
+            global::System.Action<global::Vapi.TextInsight>? text = null,
             bool validate = true)
         {
             if (validate)
