@@ -26,10 +26,12 @@ namespace Vapi
             {                s_FileControllerFindAllSecurityRequirement0,
             };
         partial void PrepareFileControllerFindAllArguments(
-            global::System.Net.Http.HttpClient httpClient);
+            global::System.Net.Http.HttpClient httpClient,
+            ref string purpose);
         partial void PrepareFileControllerFindAllRequest(
             global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpRequestMessage httpRequestMessage);
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string purpose);
         partial void ProcessFileControllerFindAllResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -42,14 +44,17 @@ namespace Vapi
         /// <summary>
         /// List Files
         /// </summary>
+        /// <param name="purpose"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Vapi.File>> FileControllerFindAllAsync(
+            string purpose,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await FileControllerFindAllAsResponseAsync(
+                purpose: purpose,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -59,17 +64,20 @@ namespace Vapi
         /// <summary>
         /// List Files
         /// </summary>
+        /// <param name="purpose"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.File>>> FileControllerFindAllAsResponseAsync(
+            string purpose,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
             PrepareFileControllerFindAllArguments(
-                httpClient: HttpClient);
+                httpClient: HttpClient,
+                purpose: ref purpose);
 
 
             var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
@@ -97,6 +105,9 @@ namespace Vapi
                             var __pathBuilder = new global::Vapi.PathBuilder(
                                 path: "/file",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddRequiredParameter("purpose", purpose)
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Vapi.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -136,7 +147,8 @@ namespace Vapi
                     request: __httpRequest);
                 PrepareFileControllerFindAllRequest(
                     httpClient: HttpClient,
-                    httpRequestMessage: __httpRequest);
+                    httpRequestMessage: __httpRequest,
+                    purpose: purpose!);
 
                 return __httpRequest;
             }

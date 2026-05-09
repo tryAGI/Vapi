@@ -3890,7 +3890,16 @@
       "get": {
         "operationId": "FileController_findAll",
         "summary": "List Files",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "purpose",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "",
@@ -21676,6 +21685,8 @@
               "sonic-3",
               "sonic-3-2025-10-27",
               "sonic-3-2026-01-12",
+              "sonic-3.5",
+              "sonic-3.5-2026-05-04",
               "sonic-english",
               "sonic-multilingual",
               "sonic-preview"
@@ -23969,6 +23980,8 @@
               "sonic-3",
               "sonic-3-2025-10-27",
               "sonic-3-2026-01-12",
+              "sonic-3.5",
+              "sonic-3.5-2026-05-04",
               "sonic-english",
               "sonic-multilingual",
               "sonic-preview"
