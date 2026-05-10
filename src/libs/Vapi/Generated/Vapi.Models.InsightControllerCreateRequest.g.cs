@@ -47,6 +47,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateBarInsightFromCallTableDTO PickBar() => IsBar
+            ? Bar!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Bar' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreatePieInsightFromCallTableDTO? Pie { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace Vapi
             value = Pie;
             return IsPie;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreatePieInsightFromCallTableDTO PickPie() => IsPie
+            ? Pie!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Pie' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -107,6 +121,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateLineInsightFromCallTableDTO PickLine() => IsLine
+            ? Line!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Line' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateTextInsightFromCallTableDTO? Text { get; init; }
 #else
@@ -133,6 +154,13 @@ namespace Vapi
             value = Text;
             return IsText;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateTextInsightFromCallTableDTO PickText() => IsText
+            ? Text!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -150,6 +178,11 @@ namespace Vapi
         {
             Bar = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InsightControllerCreateRequest FromBar(global::Vapi.CreateBarInsightFromCallTableDTO? value) => new InsightControllerCreateRequest(value);
 
         /// <summary>
         /// 
@@ -172,6 +205,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static InsightControllerCreateRequest FromPie(global::Vapi.CreatePieInsightFromCallTableDTO? value) => new InsightControllerCreateRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InsightControllerCreateRequest(global::Vapi.CreateLineInsightFromCallTableDTO value) => new InsightControllerCreateRequest((global::Vapi.CreateLineInsightFromCallTableDTO?)value);
 
         /// <summary>
@@ -190,6 +228,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static InsightControllerCreateRequest FromLine(global::Vapi.CreateLineInsightFromCallTableDTO? value) => new InsightControllerCreateRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InsightControllerCreateRequest(global::Vapi.CreateTextInsightFromCallTableDTO value) => new InsightControllerCreateRequest((global::Vapi.CreateTextInsightFromCallTableDTO?)value);
 
         /// <summary>
@@ -204,6 +247,11 @@ namespace Vapi
         {
             Text = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InsightControllerCreateRequest FromText(global::Vapi.CreateTextInsightFromCallTableDTO? value) => new InsightControllerCreateRequest(value);
 
         /// <summary>
         /// 

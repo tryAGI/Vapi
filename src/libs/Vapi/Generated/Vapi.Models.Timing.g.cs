@@ -59,6 +59,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.AssistantSpeechWordAlignmentTiming PickWordAlignment() => IsWordAlignment
+            ? WordAlignment!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'WordAlignment' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.AssistantSpeechWordProgressTiming? WordProgress { get; init; }
 #else
@@ -85,6 +92,13 @@ namespace Vapi
             value = WordProgress;
             return IsWordProgress;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.AssistantSpeechWordProgressTiming PickWordProgress() => IsWordProgress
+            ? WordProgress!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'WordProgress' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -106,6 +120,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static Timing FromWordAlignment(global::Vapi.AssistantSpeechWordAlignmentTiming? value) => new Timing(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Timing(global::Vapi.AssistantSpeechWordProgressTiming value) => new Timing((global::Vapi.AssistantSpeechWordProgressTiming?)value);
 
         /// <summary>
@@ -120,6 +139,11 @@ namespace Vapi
         {
             WordProgress = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Timing FromWordProgress(global::Vapi.AssistantSpeechWordProgressTiming? value) => new Timing(value);
 
         /// <summary>
         /// 

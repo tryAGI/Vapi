@@ -47,6 +47,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.ApiRequestTool PickApiRequest() => IsApiRequest
+            ? ApiRequest!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ApiRequest' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CodeTool? Code { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace Vapi
             value = Code;
             return IsCode;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CodeTool PickCode() => IsCode
+            ? Code!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Code' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -107,6 +121,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.DtmfTool PickDtmf() => IsDtmf
+            ? Dtmf!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Dtmf' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.EndCallTool? EndCall { get; init; }
 #else
@@ -133,6 +154,13 @@ namespace Vapi
             value = EndCall;
             return IsEndCall;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.EndCallTool PickEndCall() => IsEndCall
+            ? EndCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'EndCall' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -167,6 +195,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.FunctionTool PickFunction() => IsFunction
+            ? Function!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Function' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GhlTool? Ghl { get; init; }
 #else
@@ -193,6 +228,13 @@ namespace Vapi
             value = Ghl;
             return IsGhl;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.GhlTool PickGhl() => IsGhl
+            ? Ghl!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Ghl' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -227,6 +269,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.TransferCallTool PickTransferCall() => IsTransferCall
+            ? TransferCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TransferCall' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.HandoffTool? Handoff { get; init; }
 #else
@@ -253,6 +302,13 @@ namespace Vapi
             value = Handoff;
             return IsHandoff;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.HandoffTool PickHandoff() => IsHandoff
+            ? Handoff!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Handoff' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -287,6 +343,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.BashTool PickBash() => IsBash
+            ? Bash!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Bash' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.ComputerTool? Computer { get; init; }
 #else
@@ -313,6 +376,13 @@ namespace Vapi
             value = Computer;
             return IsComputer;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.ComputerTool PickComputer() => IsComputer
+            ? Computer!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Computer' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -347,6 +417,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.TextEditorTool PickTextEditor() => IsTextEditor
+            ? TextEditor!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TextEditor' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.QueryTool? Query { get; init; }
 #else
@@ -373,6 +450,13 @@ namespace Vapi
             value = Query;
             return IsQuery;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.QueryTool PickQuery() => IsQuery
+            ? Query!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Query' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -407,6 +491,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.GoogleCalendarCreateEventTool PickGoogleCalendarEventCreate() => IsGoogleCalendarEventCreate
+            ? GoogleCalendarEventCreate!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleCalendarEventCreate' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GoogleSheetsRowAppendTool? GoogleSheetsRowAppend { get; init; }
 #else
@@ -433,6 +524,13 @@ namespace Vapi
             value = GoogleSheetsRowAppend;
             return IsGoogleSheetsRowAppend;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.GoogleSheetsRowAppendTool PickGoogleSheetsRowAppend() => IsGoogleSheetsRowAppend
+            ? GoogleSheetsRowAppend!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleSheetsRowAppend' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -467,6 +565,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.GoogleCalendarCheckAvailabilityTool PickGoogleCalendarAvailabilityCheck() => IsGoogleCalendarAvailabilityCheck
+            ? GoogleCalendarAvailabilityCheck!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleCalendarAvailabilityCheck' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.SlackSendMessageTool? SlackMessageSend { get; init; }
 #else
@@ -493,6 +598,13 @@ namespace Vapi
             value = SlackMessageSend;
             return IsSlackMessageSend;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.SlackSendMessageTool PickSlackMessageSend() => IsSlackMessageSend
+            ? SlackMessageSend!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SlackMessageSend' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -527,6 +639,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.SmsTool PickSms() => IsSms
+            ? Sms!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Sms' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.McpTool? Mcp { get; init; }
 #else
@@ -553,6 +672,13 @@ namespace Vapi
             value = Mcp;
             return IsMcp;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.McpTool PickMcp() => IsMcp
+            ? Mcp!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Mcp' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -587,6 +713,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.GoHighLevelCalendarAvailabilityTool PickGohighlevelCalendarAvailabilityCheck() => IsGohighlevelCalendarAvailabilityCheck
+            ? GohighlevelCalendarAvailabilityCheck!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelCalendarAvailabilityCheck' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GoHighLevelCalendarEventCreateTool? GohighlevelCalendarEventCreate { get; init; }
 #else
@@ -613,6 +746,13 @@ namespace Vapi
             value = GohighlevelCalendarEventCreate;
             return IsGohighlevelCalendarEventCreate;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.GoHighLevelCalendarEventCreateTool PickGohighlevelCalendarEventCreate() => IsGohighlevelCalendarEventCreate
+            ? GohighlevelCalendarEventCreate!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelCalendarEventCreate' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -647,6 +787,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.GoHighLevelContactCreateTool PickGohighlevelContactCreate() => IsGohighlevelContactCreate
+            ? GohighlevelContactCreate!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelContactCreate' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GoHighLevelContactGetTool? GohighlevelContactGet { get; init; }
 #else
@@ -673,6 +820,13 @@ namespace Vapi
             value = GohighlevelContactGet;
             return IsGohighlevelContactGet;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.GoHighLevelContactGetTool PickGohighlevelContactGet() => IsGohighlevelContactGet
+            ? GohighlevelContactGet!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelContactGet' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -707,6 +861,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.SipRequestTool PickSipRequest() => IsSipRequest
+            ? SipRequest!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SipRequest' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.VoicemailTool? Voicemail { get; init; }
 #else
@@ -733,6 +894,13 @@ namespace Vapi
             value = Voicemail;
             return IsVoicemail;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.VoicemailTool PickVoicemail() => IsVoicemail
+            ? Voicemail!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Voicemail' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -750,6 +918,11 @@ namespace Vapi
         {
             ApiRequest = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromApiRequest(global::Vapi.ApiRequestTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -772,6 +945,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromCode(global::Vapi.CodeTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.DtmfTool value) => new ToolControllerUpdateResponse((global::Vapi.DtmfTool?)value);
 
         /// <summary>
@@ -786,6 +964,11 @@ namespace Vapi
         {
             Dtmf = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromDtmf(global::Vapi.DtmfTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -808,6 +991,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromEndCall(global::Vapi.EndCallTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.FunctionTool value) => new ToolControllerUpdateResponse((global::Vapi.FunctionTool?)value);
 
         /// <summary>
@@ -822,6 +1010,11 @@ namespace Vapi
         {
             Function = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromFunction(global::Vapi.FunctionTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -844,6 +1037,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromGhl(global::Vapi.GhlTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.TransferCallTool value) => new ToolControllerUpdateResponse((global::Vapi.TransferCallTool?)value);
 
         /// <summary>
@@ -858,6 +1056,11 @@ namespace Vapi
         {
             TransferCall = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromTransferCall(global::Vapi.TransferCallTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -880,6 +1083,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromHandoff(global::Vapi.HandoffTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.BashTool value) => new ToolControllerUpdateResponse((global::Vapi.BashTool?)value);
 
         /// <summary>
@@ -894,6 +1102,11 @@ namespace Vapi
         {
             Bash = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromBash(global::Vapi.BashTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -916,6 +1129,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromComputer(global::Vapi.ComputerTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.TextEditorTool value) => new ToolControllerUpdateResponse((global::Vapi.TextEditorTool?)value);
 
         /// <summary>
@@ -930,6 +1148,11 @@ namespace Vapi
         {
             TextEditor = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromTextEditor(global::Vapi.TextEditorTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -952,6 +1175,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromQuery(global::Vapi.QueryTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.GoogleCalendarCreateEventTool value) => new ToolControllerUpdateResponse((global::Vapi.GoogleCalendarCreateEventTool?)value);
 
         /// <summary>
@@ -966,6 +1194,11 @@ namespace Vapi
         {
             GoogleCalendarEventCreate = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromGoogleCalendarEventCreate(global::Vapi.GoogleCalendarCreateEventTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -988,6 +1221,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromGoogleSheetsRowAppend(global::Vapi.GoogleSheetsRowAppendTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.GoogleCalendarCheckAvailabilityTool value) => new ToolControllerUpdateResponse((global::Vapi.GoogleCalendarCheckAvailabilityTool?)value);
 
         /// <summary>
@@ -1002,6 +1240,11 @@ namespace Vapi
         {
             GoogleCalendarAvailabilityCheck = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromGoogleCalendarAvailabilityCheck(global::Vapi.GoogleCalendarCheckAvailabilityTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -1024,6 +1267,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromSlackMessageSend(global::Vapi.SlackSendMessageTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.SmsTool value) => new ToolControllerUpdateResponse((global::Vapi.SmsTool?)value);
 
         /// <summary>
@@ -1038,6 +1286,11 @@ namespace Vapi
         {
             Sms = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromSms(global::Vapi.SmsTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -1060,6 +1313,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromMcp(global::Vapi.McpTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.GoHighLevelCalendarAvailabilityTool value) => new ToolControllerUpdateResponse((global::Vapi.GoHighLevelCalendarAvailabilityTool?)value);
 
         /// <summary>
@@ -1074,6 +1332,11 @@ namespace Vapi
         {
             GohighlevelCalendarAvailabilityCheck = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromGohighlevelCalendarAvailabilityCheck(global::Vapi.GoHighLevelCalendarAvailabilityTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -1096,6 +1359,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromGohighlevelCalendarEventCreate(global::Vapi.GoHighLevelCalendarEventCreateTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.GoHighLevelContactCreateTool value) => new ToolControllerUpdateResponse((global::Vapi.GoHighLevelContactCreateTool?)value);
 
         /// <summary>
@@ -1110,6 +1378,11 @@ namespace Vapi
         {
             GohighlevelContactCreate = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromGohighlevelContactCreate(global::Vapi.GoHighLevelContactCreateTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -1132,6 +1405,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromGohighlevelContactGet(global::Vapi.GoHighLevelContactGetTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.SipRequestTool value) => new ToolControllerUpdateResponse((global::Vapi.SipRequestTool?)value);
 
         /// <summary>
@@ -1150,6 +1428,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static ToolControllerUpdateResponse FromSipRequest(global::Vapi.SipRequestTool? value) => new ToolControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolControllerUpdateResponse(global::Vapi.VoicemailTool value) => new ToolControllerUpdateResponse((global::Vapi.VoicemailTool?)value);
 
         /// <summary>
@@ -1164,6 +1447,11 @@ namespace Vapi
         {
             Voicemail = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolControllerUpdateResponse FromVoicemail(global::Vapi.VoicemailTool? value) => new ToolControllerUpdateResponse(value);
 
         /// <summary>
         /// 

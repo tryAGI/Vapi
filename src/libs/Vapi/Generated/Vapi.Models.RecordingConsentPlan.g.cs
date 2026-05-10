@@ -47,6 +47,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.RecordingConsentPlanStayOnLine PickStayOnLine() => IsStayOnLine
+            ? StayOnLine!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'StayOnLine' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.RecordingConsentPlanVerbal? Verbal { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace Vapi
             value = Verbal;
             return IsVerbal;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.RecordingConsentPlanVerbal PickVerbal() => IsVerbal
+            ? Verbal!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Verbal' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -94,6 +108,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static RecordingConsentPlan FromStayOnLine(global::Vapi.RecordingConsentPlanStayOnLine? value) => new RecordingConsentPlan(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RecordingConsentPlan(global::Vapi.RecordingConsentPlanVerbal value) => new RecordingConsentPlan((global::Vapi.RecordingConsentPlanVerbal?)value);
 
         /// <summary>
@@ -108,6 +127,11 @@ namespace Vapi
         {
             Verbal = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RecordingConsentPlan FromVerbal(global::Vapi.RecordingConsentPlanVerbal? value) => new RecordingConsentPlan(value);
 
         /// <summary>
         /// 

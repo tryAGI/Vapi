@@ -47,6 +47,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.UpdateByoPhoneNumberDTO PickByoPhoneNumber() => IsByoPhoneNumber
+            ? ByoPhoneNumber!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ByoPhoneNumber' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.UpdateTwilioPhoneNumberDTO? Twilio { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace Vapi
             value = Twilio;
             return IsTwilio;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.UpdateTwilioPhoneNumberDTO PickTwilio() => IsTwilio
+            ? Twilio!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Twilio' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -107,6 +121,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.UpdateVonagePhoneNumberDTO PickVonage() => IsVonage
+            ? Vonage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Vonage' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.UpdateVapiPhoneNumberDTO? Vapi { get; init; }
 #else
@@ -137,6 +158,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.UpdateVapiPhoneNumberDTO PickVapi() => IsVapi
+            ? Vapi!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Vapi' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.UpdateTelnyxPhoneNumberDTO? Telnyx { get; init; }
 #else
@@ -163,6 +191,13 @@ namespace Vapi
             value = Telnyx;
             return IsTelnyx;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.UpdateTelnyxPhoneNumberDTO PickTelnyx() => IsTelnyx
+            ? Telnyx!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Telnyx' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -180,6 +215,11 @@ namespace Vapi
         {
             ByoPhoneNumber = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PhoneNumberControllerUpdateRequest FromByoPhoneNumber(global::Vapi.UpdateByoPhoneNumberDTO? value) => new PhoneNumberControllerUpdateRequest(value);
 
         /// <summary>
         /// 
@@ -202,6 +242,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static PhoneNumberControllerUpdateRequest FromTwilio(global::Vapi.UpdateTwilioPhoneNumberDTO? value) => new PhoneNumberControllerUpdateRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PhoneNumberControllerUpdateRequest(global::Vapi.UpdateVonagePhoneNumberDTO value) => new PhoneNumberControllerUpdateRequest((global::Vapi.UpdateVonagePhoneNumberDTO?)value);
 
         /// <summary>
@@ -216,6 +261,11 @@ namespace Vapi
         {
             Vonage = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PhoneNumberControllerUpdateRequest FromVonage(global::Vapi.UpdateVonagePhoneNumberDTO? value) => new PhoneNumberControllerUpdateRequest(value);
 
         /// <summary>
         /// 
@@ -238,6 +288,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static PhoneNumberControllerUpdateRequest FromVapi(global::Vapi.UpdateVapiPhoneNumberDTO? value) => new PhoneNumberControllerUpdateRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PhoneNumberControllerUpdateRequest(global::Vapi.UpdateTelnyxPhoneNumberDTO value) => new PhoneNumberControllerUpdateRequest((global::Vapi.UpdateTelnyxPhoneNumberDTO?)value);
 
         /// <summary>
@@ -252,6 +307,11 @@ namespace Vapi
         {
             Telnyx = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PhoneNumberControllerUpdateRequest FromTelnyx(global::Vapi.UpdateTelnyxPhoneNumberDTO? value) => new PhoneNumberControllerUpdateRequest(value);
 
         /// <summary>
         /// 
