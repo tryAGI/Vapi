@@ -24,6 +24,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.ServerMessageAssistantSpeechTimingDiscriminatorType? Type { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.AssistantSpeechWordAlignmentTiming? WordAlignment { get; init; }
 #else
@@ -120,10 +125,13 @@ namespace Vapi
         /// 
         /// </summary>
         public Timing2(
+            global::Vapi.ServerMessageAssistantSpeechTimingDiscriminatorType? type,
             global::Vapi.AssistantSpeechWordAlignmentTiming? wordAlignment,
             global::Vapi.AssistantSpeechWordProgressTiming? wordProgress
             )
         {
+            Type = type;
+
             WordAlignment = wordAlignment;
             WordProgress = wordProgress;
         }
