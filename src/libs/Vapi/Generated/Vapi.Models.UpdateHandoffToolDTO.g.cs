@@ -725,5 +725,6 @@ namespace Vapi
         public UpdateHandoffToolDTO()
         {
         }
+
     }
 }

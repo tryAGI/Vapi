@@ -79,5 +79,18 @@ namespace Vapi
         public DeveloperMessage()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="DeveloperMessage"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static DeveloperMessage FromContent(string content)
+        {
+            return new DeveloperMessage
+            {
+                Content = content,
+            };
+        }
+
     }
 }

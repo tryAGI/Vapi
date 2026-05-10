@@ -55,5 +55,6 @@ namespace Vapi
         public ClientInboundMessageSendTransportMessage()
         {
         }
+
     }
 }

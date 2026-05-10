@@ -193,5 +193,6 @@ namespace Vapi
         public RimeAIVoice()
         {
         }
+
     }
 }

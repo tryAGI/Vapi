@@ -40,5 +40,6 @@ namespace Vapi
         public PhoneNumberControllerCreateRequestDiscriminator()
         {
         }
+
     }
 }

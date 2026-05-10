@@ -63,5 +63,6 @@ namespace Vapi
         public CreateAssemblyAICredentialDTO()
         {
         }
+
     }
 }

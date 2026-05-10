@@ -67,5 +67,6 @@ namespace Vapi
         public ToolTemplateSetup()
         {
         }
+
     }
 }

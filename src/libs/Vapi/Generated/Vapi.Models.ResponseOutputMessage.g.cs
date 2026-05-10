@@ -97,5 +97,6 @@ namespace Vapi
         public ResponseOutputMessage()
         {
         }
+
     }
 }

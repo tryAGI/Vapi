@@ -123,5 +123,6 @@ namespace Vapi
         public ClientMessageModelOutput()
         {
         }
+
     }
 }

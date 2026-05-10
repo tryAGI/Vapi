@@ -113,5 +113,6 @@ namespace Vapi
         public CreateTextInsightFromCallTableDTO()
         {
         }
+
     }
 }

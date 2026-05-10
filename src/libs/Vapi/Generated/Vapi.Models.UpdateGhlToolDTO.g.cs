@@ -209,5 +209,6 @@ namespace Vapi
         public UpdateGhlToolDTO()
         {
         }
+
     }
 }

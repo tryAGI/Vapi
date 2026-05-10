@@ -180,5 +180,6 @@ namespace Vapi
         public ServerMessageVoiceRequest()
         {
         }
+
     }
 }

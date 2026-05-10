@@ -121,5 +121,6 @@ namespace Vapi
         public InsightTimeRangeWithStep()
         {
         }
+
     }
 }

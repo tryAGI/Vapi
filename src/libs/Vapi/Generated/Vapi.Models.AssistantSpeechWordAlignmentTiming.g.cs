@@ -78,5 +78,6 @@ namespace Vapi
         public AssistantSpeechWordAlignmentTiming()
         {
         }
+
     }
 }

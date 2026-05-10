@@ -65,5 +65,6 @@ namespace Vapi
         public ToolCallHookAction()
         {
         }
+
     }
 }

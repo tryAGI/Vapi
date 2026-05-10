@@ -122,5 +122,6 @@ namespace Vapi
         public ServerMessageAssistantRequest()
         {
         }
+
     }
 }

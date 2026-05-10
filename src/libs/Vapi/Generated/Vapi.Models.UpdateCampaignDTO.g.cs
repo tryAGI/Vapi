@@ -135,5 +135,6 @@ namespace Vapi
         public UpdateCampaignDTO()
         {
         }
+
     }
 }

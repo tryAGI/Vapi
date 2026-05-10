@@ -73,5 +73,6 @@ namespace Vapi
         public AzureBlobStorageBucketPlan()
         {
         }
+
     }
 }

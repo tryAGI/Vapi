@@ -63,5 +63,6 @@ namespace Vapi
         public CreateGoogleCalendarOAuth2AuthorizationCredentialDTO()
         {
         }
+
     }
 }

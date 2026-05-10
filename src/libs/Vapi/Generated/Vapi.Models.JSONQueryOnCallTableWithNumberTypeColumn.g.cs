@@ -132,5 +132,6 @@ namespace Vapi
         public JSONQueryOnCallTableWithNumberTypeColumn()
         {
         }
+
     }
 }

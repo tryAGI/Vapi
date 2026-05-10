@@ -59,5 +59,6 @@ namespace Vapi
         public SpeechmaticsCustomVocabularyItem()
         {
         }
+
     }
 }

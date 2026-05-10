@@ -170,5 +170,6 @@ namespace Vapi
         public ClientMessageTranscript()
         {
         }
+
     }
 }

@@ -265,5 +265,6 @@ namespace Vapi
         public ConversationNode()
         {
         }
+
     }
 }

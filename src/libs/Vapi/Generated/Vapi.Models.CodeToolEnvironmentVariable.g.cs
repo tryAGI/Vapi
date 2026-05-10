@@ -60,5 +60,6 @@ namespace Vapi
         public CodeToolEnvironmentVariable()
         {
         }
+
     }
 }

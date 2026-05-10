@@ -110,5 +110,6 @@ namespace Vapi
         public ClientMessageAssistantStarted()
         {
         }
+
     }
 }

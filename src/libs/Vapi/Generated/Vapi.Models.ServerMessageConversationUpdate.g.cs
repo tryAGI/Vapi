@@ -145,5 +145,6 @@ namespace Vapi
         public ServerMessageConversationUpdate()
         {
         }
+
     }
 }

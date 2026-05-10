@@ -149,5 +149,6 @@ namespace Vapi
         public AnthropicBedrockCredential()
         {
         }
+
     }
 }

@@ -82,5 +82,6 @@ namespace Vapi
         public TokenRestrictions()
         {
         }
+
     }
 }

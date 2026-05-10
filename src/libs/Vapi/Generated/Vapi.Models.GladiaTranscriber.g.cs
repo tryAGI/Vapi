@@ -243,5 +243,6 @@ namespace Vapi
         public GladiaTranscriber()
         {
         }
+
     }
 }

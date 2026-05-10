@@ -93,5 +93,6 @@ namespace Vapi
         public ResponseTextDeltaEvent()
         {
         }
+
     }
 }

@@ -271,5 +271,6 @@ namespace Vapi
         public FallbackDeepgramTranscriber()
         {
         }
+
     }
 }

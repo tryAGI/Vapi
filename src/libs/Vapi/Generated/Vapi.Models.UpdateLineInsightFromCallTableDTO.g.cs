@@ -140,5 +140,6 @@ namespace Vapi
         public UpdateLineInsightFromCallTableDTO()
         {
         }
+
     }
 }

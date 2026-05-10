@@ -96,5 +96,6 @@ namespace Vapi
         public UpdateCloudflareCredentialDTO()
         {
         }
+
     }
 }

@@ -254,5 +254,6 @@ namespace Vapi
         public VariableExtractionPlan()
         {
         }
+
     }
 }

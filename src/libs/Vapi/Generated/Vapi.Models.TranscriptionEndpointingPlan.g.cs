@@ -84,5 +84,6 @@ namespace Vapi
         public TranscriptionEndpointingPlan()
         {
         }
+
     }
 }

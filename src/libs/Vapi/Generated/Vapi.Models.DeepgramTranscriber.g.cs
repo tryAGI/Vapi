@@ -282,5 +282,6 @@ namespace Vapi
         public DeepgramTranscriber()
         {
         }
+
     }
 }

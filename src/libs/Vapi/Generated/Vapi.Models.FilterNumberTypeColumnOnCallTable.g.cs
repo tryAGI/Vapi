@@ -80,5 +80,6 @@ namespace Vapi
         public FilterNumberTypeColumnOnCallTable()
         {
         }
+
     }
 }

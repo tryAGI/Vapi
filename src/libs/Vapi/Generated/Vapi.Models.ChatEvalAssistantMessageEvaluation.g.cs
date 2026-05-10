@@ -77,5 +77,6 @@ namespace Vapi
         public ChatEvalAssistantMessageEvaluation()
         {
         }
+
     }
 }

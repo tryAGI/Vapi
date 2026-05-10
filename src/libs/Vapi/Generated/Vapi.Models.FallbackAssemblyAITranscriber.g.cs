@@ -253,5 +253,6 @@ namespace Vapi
         public FallbackAssemblyAITranscriber()
         {
         }
+
     }
 }

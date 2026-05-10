@@ -223,5 +223,6 @@ namespace Vapi
         public CreateQueryToolDTO()
         {
         }
+
     }
 }

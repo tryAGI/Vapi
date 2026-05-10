@@ -197,5 +197,6 @@ namespace Vapi
         public ServerMessageAssistantSpeech()
         {
         }
+
     }
 }
