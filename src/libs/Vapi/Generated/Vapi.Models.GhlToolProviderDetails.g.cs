@@ -107,5 +107,6 @@ namespace Vapi
         public GhlToolProviderDetails()
         {
         }
+
     }
 }

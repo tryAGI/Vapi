@@ -151,5 +151,6 @@ namespace Vapi
         public OpenAIWebChatRequest()
         {
         }
+
     }
 }

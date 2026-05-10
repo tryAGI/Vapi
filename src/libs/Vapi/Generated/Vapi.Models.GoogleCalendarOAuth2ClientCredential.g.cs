@@ -99,5 +99,6 @@ namespace Vapi
         public GoogleCalendarOAuth2ClientCredential()
         {
         }
+
     }
 }

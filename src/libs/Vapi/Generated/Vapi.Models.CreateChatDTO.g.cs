@@ -175,5 +175,6 @@ namespace Vapi
         public CreateChatDTO()
         {
         }
+
     }
 }

@@ -45,5 +45,6 @@ namespace Vapi
         public ServerMessageResponse()
         {
         }
+
     }
 }

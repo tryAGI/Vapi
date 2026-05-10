@@ -64,5 +64,6 @@ namespace Vapi
         public UpdateCustomCredentialDTO()
         {
         }
+
     }
 }

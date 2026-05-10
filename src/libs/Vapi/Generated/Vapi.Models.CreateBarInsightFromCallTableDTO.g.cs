@@ -141,5 +141,6 @@ namespace Vapi
         public CreateBarInsightFromCallTableDTO()
         {
         }
+
     }
 }

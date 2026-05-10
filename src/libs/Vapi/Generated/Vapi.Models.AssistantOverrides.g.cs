@@ -494,5 +494,6 @@ namespace Vapi
         public AssistantOverrides()
         {
         }
+
     }
 }

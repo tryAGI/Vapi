@@ -464,5 +464,6 @@ namespace Vapi
         public UpdateAssistantDTO()
         {
         }
+
     }
 }

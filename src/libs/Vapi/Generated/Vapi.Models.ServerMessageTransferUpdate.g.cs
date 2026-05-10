@@ -178,5 +178,6 @@ namespace Vapi
         public ServerMessageTransferUpdate()
         {
         }
+
     }
 }

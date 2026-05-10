@@ -111,5 +111,6 @@ namespace Vapi
         public HumeCredential()
         {
         }
+
     }
 }

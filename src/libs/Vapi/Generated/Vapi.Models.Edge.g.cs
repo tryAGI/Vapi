@@ -70,5 +70,6 @@ namespace Vapi
         public Edge()
         {
         }
+
     }
 }

@@ -79,5 +79,6 @@ namespace Vapi
         public CreateScorecardDTO()
         {
         }
+
     }
 }

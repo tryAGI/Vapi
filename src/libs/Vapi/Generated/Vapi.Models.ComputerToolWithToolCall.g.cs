@@ -307,5 +307,6 @@ namespace Vapi
         public ComputerToolWithToolCall()
         {
         }
+
     }
 }

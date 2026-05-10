@@ -298,5 +298,6 @@ namespace Vapi
         public FunctionToolWithToolCall()
         {
         }
+
     }
 }

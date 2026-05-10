@@ -50,5 +50,6 @@ namespace Vapi
         public TestSuitesPaginatedResponse()
         {
         }
+
     }
 }

@@ -361,5 +361,6 @@ namespace Vapi
         public WorkflowUserEditable()
         {
         }
+
     }
 }

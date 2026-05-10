@@ -105,5 +105,6 @@ namespace Vapi
         public UpdateToolTemplateDTO()
         {
         }
+
     }
 }

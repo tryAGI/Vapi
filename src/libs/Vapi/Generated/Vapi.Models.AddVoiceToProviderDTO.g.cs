@@ -66,5 +66,6 @@ namespace Vapi
         public AddVoiceToProviderDTO()
         {
         }
+
     }
 }

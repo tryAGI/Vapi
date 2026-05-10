@@ -152,5 +152,6 @@ namespace Vapi
         public MinimaxLLMModel()
         {
         }
+
     }
 }

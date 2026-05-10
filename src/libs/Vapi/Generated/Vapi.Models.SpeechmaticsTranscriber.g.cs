@@ -237,5 +237,6 @@ namespace Vapi
         public SpeechmaticsTranscriber()
         {
         }
+
     }
 }

@@ -198,5 +198,6 @@ namespace Vapi
         public CreateStructuredOutputDTO()
         {
         }
+
     }
 }

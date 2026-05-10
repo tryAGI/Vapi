@@ -85,5 +85,6 @@ namespace Vapi
         public FilterStructuredOutputColumnOnCallTable()
         {
         }
+
     }
 }

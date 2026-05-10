@@ -46,5 +46,6 @@ namespace Vapi
         public VapiSmartEndpointingPlan()
         {
         }
+
     }
 }

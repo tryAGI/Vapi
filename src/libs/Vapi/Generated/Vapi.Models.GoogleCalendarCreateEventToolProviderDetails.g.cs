@@ -62,5 +62,6 @@ namespace Vapi
         public GoogleCalendarCreateEventToolProviderDetails()
         {
         }
+
     }
 }

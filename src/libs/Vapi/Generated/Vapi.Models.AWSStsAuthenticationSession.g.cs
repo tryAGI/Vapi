@@ -74,5 +74,6 @@ namespace Vapi
         public AWSStsAuthenticationSession()
         {
         }
+
     }
 }

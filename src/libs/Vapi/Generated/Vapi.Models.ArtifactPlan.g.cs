@@ -337,5 +337,6 @@ namespace Vapi
         public ArtifactPlan()
         {
         }
+
     }
 }

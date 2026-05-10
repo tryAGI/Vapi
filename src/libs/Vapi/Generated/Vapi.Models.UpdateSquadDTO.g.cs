@@ -68,5 +68,6 @@ namespace Vapi
         public UpdateSquadDTO()
         {
         }
+
     }
 }

@@ -57,5 +57,6 @@ namespace Vapi
         public RegexSecurityFilter()
         {
         }
+
     }
 }

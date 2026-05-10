@@ -100,5 +100,6 @@ namespace Vapi
         public AnalyticsQuery()
         {
         }
+
     }
 }

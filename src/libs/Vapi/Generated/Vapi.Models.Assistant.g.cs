@@ -512,5 +512,6 @@ namespace Vapi
         public Assistant()
         {
         }
+
     }
 }

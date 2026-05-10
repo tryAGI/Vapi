@@ -87,5 +87,6 @@ namespace Vapi
         public CreateLangfuseCredentialDTO()
         {
         }
+
     }
 }

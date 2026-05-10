@@ -90,5 +90,6 @@ namespace Vapi
         public KnowledgeBaseCost()
         {
         }
+
     }
 }
