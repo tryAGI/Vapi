@@ -47,6 +47,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.BarInsight PickBar() => IsBar
+            ? Bar!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Bar' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.PieInsight? Pie { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace Vapi
             value = Pie;
             return IsPie;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.PieInsight PickPie() => IsPie
+            ? Pie!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Pie' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -107,6 +121,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.LineInsight PickLine() => IsLine
+            ? Line!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Line' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.TextInsight? Text { get; init; }
 #else
@@ -133,6 +154,13 @@ namespace Vapi
             value = Text;
             return IsText;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.TextInsight PickText() => IsText
+            ? Text!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -150,6 +178,11 @@ namespace Vapi
         {
             Bar = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InsightControllerCreateResponse FromBar(global::Vapi.BarInsight? value) => new InsightControllerCreateResponse(value);
 
         /// <summary>
         /// 
@@ -172,6 +205,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static InsightControllerCreateResponse FromPie(global::Vapi.PieInsight? value) => new InsightControllerCreateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InsightControllerCreateResponse(global::Vapi.LineInsight value) => new InsightControllerCreateResponse((global::Vapi.LineInsight?)value);
 
         /// <summary>
@@ -190,6 +228,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static InsightControllerCreateResponse FromLine(global::Vapi.LineInsight? value) => new InsightControllerCreateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InsightControllerCreateResponse(global::Vapi.TextInsight value) => new InsightControllerCreateResponse((global::Vapi.TextInsight?)value);
 
         /// <summary>
@@ -204,6 +247,11 @@ namespace Vapi
         {
             Text = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InsightControllerCreateResponse FromText(global::Vapi.TextInsight? value) => new InsightControllerCreateResponse(value);
 
         /// <summary>
         /// 

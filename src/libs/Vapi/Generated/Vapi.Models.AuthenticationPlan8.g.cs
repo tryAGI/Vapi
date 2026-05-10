@@ -47,6 +47,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.OAuth2AuthenticationPlan PickOauth2() => IsOauth2
+            ? Oauth2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Oauth2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.HMACAuthenticationPlan? Hmac { get; init; }
 #else
@@ -77,6 +84,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.HMACAuthenticationPlan PickHmac() => IsHmac
+            ? Hmac!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Hmac' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.BearerAuthenticationPlan? Bearer { get; init; }
 #else
@@ -103,6 +117,13 @@ namespace Vapi
             value = Bearer;
             return IsBearer;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.BearerAuthenticationPlan PickBearer() => IsBearer
+            ? Bearer!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Bearer' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -120,6 +141,11 @@ namespace Vapi
         {
             Oauth2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AuthenticationPlan8 FromOauth2(global::Vapi.OAuth2AuthenticationPlan? value) => new AuthenticationPlan8(value);
 
         /// <summary>
         /// 
@@ -142,6 +168,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static AuthenticationPlan8 FromHmac(global::Vapi.HMACAuthenticationPlan? value) => new AuthenticationPlan8(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AuthenticationPlan8(global::Vapi.BearerAuthenticationPlan value) => new AuthenticationPlan8((global::Vapi.BearerAuthenticationPlan?)value);
 
         /// <summary>
@@ -156,6 +187,11 @@ namespace Vapi
         {
             Bearer = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AuthenticationPlan8 FromBearer(global::Vapi.BearerAuthenticationPlan? value) => new AuthenticationPlan8(value);
 
         /// <summary>
         /// 

@@ -47,6 +47,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateAnthropicCredentialDTO PickAnthropic() => IsAnthropic
+            ? Anthropic!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Anthropic' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateAnthropicBedrockCredentialDTO? AnthropicBedrock { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace Vapi
             value = AnthropicBedrock;
             return IsAnthropicBedrock;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateAnthropicBedrockCredentialDTO PickAnthropicBedrock() => IsAnthropicBedrock
+            ? AnthropicBedrock!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AnthropicBedrock' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -107,6 +121,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateAnyscaleCredentialDTO PickAnyscale() => IsAnyscale
+            ? Anyscale!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Anyscale' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateAssemblyAICredentialDTO? AssemblyAi { get; init; }
 #else
@@ -133,6 +154,13 @@ namespace Vapi
             value = AssemblyAi;
             return IsAssemblyAi;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateAssemblyAICredentialDTO PickAssemblyAi() => IsAssemblyAi
+            ? AssemblyAi!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AssemblyAi' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -167,6 +195,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateAzureCredentialDTO PickAzure() => IsAzure
+            ? Azure!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Azure' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateAzureOpenAICredentialDTO? AzureOpenai { get; init; }
 #else
@@ -193,6 +228,13 @@ namespace Vapi
             value = AzureOpenai;
             return IsAzureOpenai;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateAzureOpenAICredentialDTO PickAzureOpenai() => IsAzureOpenai
+            ? AzureOpenai!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AzureOpenai' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -227,6 +269,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateByoSipTrunkCredentialDTO PickByoSipTrunk() => IsByoSipTrunk
+            ? ByoSipTrunk!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ByoSipTrunk' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateCartesiaCredentialDTO? Cartesia { get; init; }
 #else
@@ -253,6 +302,13 @@ namespace Vapi
             value = Cartesia;
             return IsCartesia;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateCartesiaCredentialDTO PickCartesia() => IsCartesia
+            ? Cartesia!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Cartesia' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -287,6 +343,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateCerebrasCredentialDTO PickCerebras() => IsCerebras
+            ? Cerebras!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Cerebras' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateCloudflareCredentialDTO? Cloudflare { get; init; }
 #else
@@ -313,6 +376,13 @@ namespace Vapi
             value = Cloudflare;
             return IsCloudflare;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateCloudflareCredentialDTO PickCloudflare() => IsCloudflare
+            ? Cloudflare!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Cloudflare' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -347,6 +417,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateCustomLLMCredentialDTO PickCustomLlm() => IsCustomLlm
+            ? CustomLlm!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CustomLlm' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateDeepgramCredentialDTO? Deepgram { get; init; }
 #else
@@ -373,6 +450,13 @@ namespace Vapi
             value = Deepgram;
             return IsDeepgram;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateDeepgramCredentialDTO PickDeepgram() => IsDeepgram
+            ? Deepgram!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Deepgram' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -407,6 +491,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateDeepInfraCredentialDTO PickDeepinfra() => IsDeepinfra
+            ? Deepinfra!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Deepinfra' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateDeepSeekCredentialDTO? DeepSeek { get; init; }
 #else
@@ -433,6 +524,13 @@ namespace Vapi
             value = DeepSeek;
             return IsDeepSeek;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateDeepSeekCredentialDTO PickDeepSeek() => IsDeepSeek
+            ? DeepSeek!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'DeepSeek' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -467,6 +565,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateElevenLabsCredentialDTO PickElevenlabs() => IsElevenlabs
+            ? Elevenlabs!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Elevenlabs' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGcpCredentialDTO? Gcp { get; init; }
 #else
@@ -493,6 +598,13 @@ namespace Vapi
             value = Gcp;
             return IsGcp;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateGcpCredentialDTO PickGcp() => IsGcp
+            ? Gcp!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Gcp' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -527,6 +639,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateGladiaCredentialDTO PickGladia() => IsGladia
+            ? Gladia!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Gladia' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGoHighLevelCredentialDTO? Gohighlevel { get; init; }
 #else
@@ -553,6 +672,13 @@ namespace Vapi
             value = Gohighlevel;
             return IsGohighlevel;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateGoHighLevelCredentialDTO PickGohighlevel() => IsGohighlevel
+            ? Gohighlevel!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Gohighlevel' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -587,6 +713,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateGoogleCredentialDTO PickGoogle() => IsGoogle
+            ? Google!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Google' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGroqCredentialDTO? Groq { get; init; }
 #else
@@ -613,6 +746,13 @@ namespace Vapi
             value = Groq;
             return IsGroq;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateGroqCredentialDTO PickGroq() => IsGroq
+            ? Groq!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Groq' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -647,6 +787,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateHumeCredentialDTO PickHume() => IsHume
+            ? Hume!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Hume' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateInflectionAICredentialDTO? InflectionAi { get; init; }
 #else
@@ -673,6 +820,13 @@ namespace Vapi
             value = InflectionAi;
             return IsInflectionAi;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateInflectionAICredentialDTO PickInflectionAi() => IsInflectionAi
+            ? InflectionAi!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'InflectionAi' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -707,6 +861,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateLangfuseCredentialDTO PickLangfuse() => IsLangfuse
+            ? Langfuse!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Langfuse' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateLmntCredentialDTO? Lmnt { get; init; }
 #else
@@ -733,6 +894,13 @@ namespace Vapi
             value = Lmnt;
             return IsLmnt;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateLmntCredentialDTO PickLmnt() => IsLmnt
+            ? Lmnt!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Lmnt' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -767,6 +935,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateMakeCredentialDTO PickMake() => IsMake
+            ? Make!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Make' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateMistralCredentialDTO? Mistral { get; init; }
 #else
@@ -793,6 +968,13 @@ namespace Vapi
             value = Mistral;
             return IsMistral;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateMistralCredentialDTO PickMistral() => IsMistral
+            ? Mistral!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Mistral' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -827,6 +1009,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateNeuphonicCredentialDTO PickNeuphonic() => IsNeuphonic
+            ? Neuphonic!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Neuphonic' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateOpenAICredentialDTO? Openai { get; init; }
 #else
@@ -853,6 +1042,13 @@ namespace Vapi
             value = Openai;
             return IsOpenai;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateOpenAICredentialDTO PickOpenai() => IsOpenai
+            ? Openai!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Openai' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -887,6 +1083,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateOpenRouterCredentialDTO PickOpenrouter() => IsOpenrouter
+            ? Openrouter!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Openrouter' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreatePerplexityAICredentialDTO? PerplexityAi { get; init; }
 #else
@@ -913,6 +1116,13 @@ namespace Vapi
             value = PerplexityAi;
             return IsPerplexityAi;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreatePerplexityAICredentialDTO PickPerplexityAi() => IsPerplexityAi
+            ? PerplexityAi!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PerplexityAi' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -947,6 +1157,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreatePlayHTCredentialDTO PickPlayht() => IsPlayht
+            ? Playht!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Playht' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateRimeAICredentialDTO? RimeAi { get; init; }
 #else
@@ -973,6 +1190,13 @@ namespace Vapi
             value = RimeAi;
             return IsRimeAi;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateRimeAICredentialDTO PickRimeAi() => IsRimeAi
+            ? RimeAi!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'RimeAi' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -1007,6 +1231,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateRunpodCredentialDTO PickRunpod() => IsRunpod
+            ? Runpod!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Runpod' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateS3CredentialDTO? S3 { get; init; }
 #else
@@ -1033,6 +1264,13 @@ namespace Vapi
             value = S3;
             return IsS3;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateS3CredentialDTO PickS3() => IsS3
+            ? S3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'S3' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -1067,6 +1305,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateSmallestAICredentialDTO PickSmallestAi() => IsSmallestAi
+            ? SmallestAi!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SmallestAi' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateSpeechmaticsCredentialDTO? Speechmatics { get; init; }
 #else
@@ -1093,6 +1338,13 @@ namespace Vapi
             value = Speechmatics;
             return IsSpeechmatics;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateSpeechmaticsCredentialDTO PickSpeechmatics() => IsSpeechmatics
+            ? Speechmatics!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Speechmatics' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -1127,6 +1379,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateSonioxCredentialDTO PickSoniox() => IsSoniox
+            ? Soniox!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Soniox' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateSupabaseCredentialDTO? Supabase { get; init; }
 #else
@@ -1153,6 +1412,13 @@ namespace Vapi
             value = Supabase;
             return IsSupabase;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateSupabaseCredentialDTO PickSupabase() => IsSupabase
+            ? Supabase!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Supabase' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -1187,6 +1453,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateTavusCredentialDTO PickTavus() => IsTavus
+            ? Tavus!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Tavus' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateTogetherAICredentialDTO? TogetherAi { get; init; }
 #else
@@ -1213,6 +1486,13 @@ namespace Vapi
             value = TogetherAi;
             return IsTogetherAi;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateTogetherAICredentialDTO PickTogetherAi() => IsTogetherAi
+            ? TogetherAi!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TogetherAi' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -1247,6 +1527,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateTwilioCredentialDTO PickTwilio() => IsTwilio
+            ? Twilio!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Twilio' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateVonageCredentialDTO? Vonage { get; init; }
 #else
@@ -1273,6 +1560,13 @@ namespace Vapi
             value = Vonage;
             return IsVonage;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateVonageCredentialDTO PickVonage() => IsVonage
+            ? Vonage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Vonage' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -1307,6 +1601,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateWebhookCredentialDTO PickWebhook() => IsWebhook
+            ? Webhook!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Webhook' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateCustomCredentialDTO? CustomCredential { get; init; }
 #else
@@ -1333,6 +1634,13 @@ namespace Vapi
             value = CustomCredential;
             return IsCustomCredential;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateCustomCredentialDTO PickCustomCredential() => IsCustomCredential
+            ? CustomCredential!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CustomCredential' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -1367,6 +1675,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateXAiCredentialDTO PickXai() => IsXai
+            ? Xai!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Xai' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGoogleCalendarOAuth2ClientCredentialDTO? GoogleCalendarOauth2Client { get; init; }
 #else
@@ -1393,6 +1708,13 @@ namespace Vapi
             value = GoogleCalendarOauth2Client;
             return IsGoogleCalendarOauth2Client;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateGoogleCalendarOAuth2ClientCredentialDTO PickGoogleCalendarOauth2Client() => IsGoogleCalendarOauth2Client
+            ? GoogleCalendarOauth2Client!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleCalendarOauth2Client' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -1427,6 +1749,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateGoogleCalendarOAuth2AuthorizationCredentialDTO PickGoogleCalendarOauth2Authorization() => IsGoogleCalendarOauth2Authorization
+            ? GoogleCalendarOauth2Authorization!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleCalendarOauth2Authorization' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGoogleSheetsOAuth2AuthorizationCredentialDTO? GoogleSheetsOauth2Authorization { get; init; }
 #else
@@ -1453,6 +1782,13 @@ namespace Vapi
             value = GoogleSheetsOauth2Authorization;
             return IsGoogleSheetsOauth2Authorization;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateGoogleSheetsOAuth2AuthorizationCredentialDTO PickGoogleSheetsOauth2Authorization() => IsGoogleSheetsOauth2Authorization
+            ? GoogleSheetsOauth2Authorization!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleSheetsOauth2Authorization' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -1487,6 +1823,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateSlackOAuth2AuthorizationCredentialDTO PickSlackOauth2Authorization() => IsSlackOauth2Authorization
+            ? SlackOauth2Authorization!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SlackOauth2Authorization' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGoHighLevelMCPCredentialDTO? GhlOauth2Authorization { get; init; }
 #else
@@ -1513,6 +1856,13 @@ namespace Vapi
             value = GhlOauth2Authorization;
             return IsGhlOauth2Authorization;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateGoHighLevelMCPCredentialDTO PickGhlOauth2Authorization() => IsGhlOauth2Authorization
+            ? GhlOauth2Authorization!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GhlOauth2Authorization' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -1547,6 +1897,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateInworldCredentialDTO PickInworld() => IsInworld
+            ? Inworld!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Inworld' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateMinimaxCredentialDTO? Minimax { get; init; }
 #else
@@ -1573,6 +1930,13 @@ namespace Vapi
             value = Minimax;
             return IsMinimax;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateMinimaxCredentialDTO PickMinimax() => IsMinimax
+            ? Minimax!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Minimax' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -1607,6 +1971,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateWellSaidCredentialDTO PickWellsaid() => IsWellsaid
+            ? Wellsaid!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Wellsaid' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateEmailCredentialDTO? Email { get; init; }
 #else
@@ -1637,6 +2008,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.CreateEmailCredentialDTO PickEmail() => IsEmail
+            ? Email!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Email' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateSlackWebhookCredentialDTO? SlackWebhook { get; init; }
 #else
@@ -1663,6 +2041,13 @@ namespace Vapi
             value = SlackWebhook;
             return IsSlackWebhook;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.CreateSlackWebhookCredentialDTO PickSlackWebhook() => IsSlackWebhook
+            ? SlackWebhook!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SlackWebhook' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -1680,6 +2065,11 @@ namespace Vapi
         {
             Anthropic = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromAnthropic(global::Vapi.CreateAnthropicCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -1702,6 +2092,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromAnthropicBedrock(global::Vapi.CreateAnthropicBedrockCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateAnyscaleCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateAnyscaleCredentialDTO?)value);
 
         /// <summary>
@@ -1716,6 +2111,11 @@ namespace Vapi
         {
             Anyscale = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromAnyscale(global::Vapi.CreateAnyscaleCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -1738,6 +2138,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromAssemblyAi(global::Vapi.CreateAssemblyAICredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateAzureCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateAzureCredentialDTO?)value);
 
         /// <summary>
@@ -1752,6 +2157,11 @@ namespace Vapi
         {
             Azure = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromAzure(global::Vapi.CreateAzureCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -1774,6 +2184,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromAzureOpenai(global::Vapi.CreateAzureOpenAICredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateByoSipTrunkCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateByoSipTrunkCredentialDTO?)value);
 
         /// <summary>
@@ -1788,6 +2203,11 @@ namespace Vapi
         {
             ByoSipTrunk = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromByoSipTrunk(global::Vapi.CreateByoSipTrunkCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -1810,6 +2230,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromCartesia(global::Vapi.CreateCartesiaCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateCerebrasCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateCerebrasCredentialDTO?)value);
 
         /// <summary>
@@ -1824,6 +2249,11 @@ namespace Vapi
         {
             Cerebras = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromCerebras(global::Vapi.CreateCerebrasCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -1846,6 +2276,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromCloudflare(global::Vapi.CreateCloudflareCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateCustomLLMCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateCustomLLMCredentialDTO?)value);
 
         /// <summary>
@@ -1860,6 +2295,11 @@ namespace Vapi
         {
             CustomLlm = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromCustomLlm(global::Vapi.CreateCustomLLMCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -1882,6 +2322,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromDeepgram(global::Vapi.CreateDeepgramCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateDeepInfraCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateDeepInfraCredentialDTO?)value);
 
         /// <summary>
@@ -1896,6 +2341,11 @@ namespace Vapi
         {
             Deepinfra = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromDeepinfra(global::Vapi.CreateDeepInfraCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -1918,6 +2368,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromDeepSeek(global::Vapi.CreateDeepSeekCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateElevenLabsCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateElevenLabsCredentialDTO?)value);
 
         /// <summary>
@@ -1932,6 +2387,11 @@ namespace Vapi
         {
             Elevenlabs = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromElevenlabs(global::Vapi.CreateElevenLabsCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -1954,6 +2414,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromGcp(global::Vapi.CreateGcpCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateGladiaCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateGladiaCredentialDTO?)value);
 
         /// <summary>
@@ -1968,6 +2433,11 @@ namespace Vapi
         {
             Gladia = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromGladia(global::Vapi.CreateGladiaCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -1990,6 +2460,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromGohighlevel(global::Vapi.CreateGoHighLevelCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateGoogleCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateGoogleCredentialDTO?)value);
 
         /// <summary>
@@ -2004,6 +2479,11 @@ namespace Vapi
         {
             Google = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromGoogle(global::Vapi.CreateGoogleCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2026,6 +2506,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromGroq(global::Vapi.CreateGroqCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateHumeCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateHumeCredentialDTO?)value);
 
         /// <summary>
@@ -2040,6 +2525,11 @@ namespace Vapi
         {
             Hume = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromHume(global::Vapi.CreateHumeCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2062,6 +2552,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromInflectionAi(global::Vapi.CreateInflectionAICredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateLangfuseCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateLangfuseCredentialDTO?)value);
 
         /// <summary>
@@ -2076,6 +2571,11 @@ namespace Vapi
         {
             Langfuse = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromLangfuse(global::Vapi.CreateLangfuseCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2098,6 +2598,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromLmnt(global::Vapi.CreateLmntCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateMakeCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateMakeCredentialDTO?)value);
 
         /// <summary>
@@ -2112,6 +2617,11 @@ namespace Vapi
         {
             Make = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromMake(global::Vapi.CreateMakeCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2134,6 +2644,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromMistral(global::Vapi.CreateMistralCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateNeuphonicCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateNeuphonicCredentialDTO?)value);
 
         /// <summary>
@@ -2148,6 +2663,11 @@ namespace Vapi
         {
             Neuphonic = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromNeuphonic(global::Vapi.CreateNeuphonicCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2170,6 +2690,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromOpenai(global::Vapi.CreateOpenAICredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateOpenRouterCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateOpenRouterCredentialDTO?)value);
 
         /// <summary>
@@ -2184,6 +2709,11 @@ namespace Vapi
         {
             Openrouter = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromOpenrouter(global::Vapi.CreateOpenRouterCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2206,6 +2736,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromPerplexityAi(global::Vapi.CreatePerplexityAICredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreatePlayHTCredentialDTO value) => new CredentialsItem6((global::Vapi.CreatePlayHTCredentialDTO?)value);
 
         /// <summary>
@@ -2220,6 +2755,11 @@ namespace Vapi
         {
             Playht = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromPlayht(global::Vapi.CreatePlayHTCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2242,6 +2782,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromRimeAi(global::Vapi.CreateRimeAICredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateRunpodCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateRunpodCredentialDTO?)value);
 
         /// <summary>
@@ -2256,6 +2801,11 @@ namespace Vapi
         {
             Runpod = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromRunpod(global::Vapi.CreateRunpodCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2278,6 +2828,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromS3(global::Vapi.CreateS3CredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateSmallestAICredentialDTO value) => new CredentialsItem6((global::Vapi.CreateSmallestAICredentialDTO?)value);
 
         /// <summary>
@@ -2292,6 +2847,11 @@ namespace Vapi
         {
             SmallestAi = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromSmallestAi(global::Vapi.CreateSmallestAICredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2314,6 +2874,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromSpeechmatics(global::Vapi.CreateSpeechmaticsCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateSonioxCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateSonioxCredentialDTO?)value);
 
         /// <summary>
@@ -2328,6 +2893,11 @@ namespace Vapi
         {
             Soniox = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromSoniox(global::Vapi.CreateSonioxCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2350,6 +2920,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromSupabase(global::Vapi.CreateSupabaseCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateTavusCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateTavusCredentialDTO?)value);
 
         /// <summary>
@@ -2364,6 +2939,11 @@ namespace Vapi
         {
             Tavus = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromTavus(global::Vapi.CreateTavusCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2386,6 +2966,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromTogetherAi(global::Vapi.CreateTogetherAICredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateTwilioCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateTwilioCredentialDTO?)value);
 
         /// <summary>
@@ -2400,6 +2985,11 @@ namespace Vapi
         {
             Twilio = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromTwilio(global::Vapi.CreateTwilioCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2422,6 +3012,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromVonage(global::Vapi.CreateVonageCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateWebhookCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateWebhookCredentialDTO?)value);
 
         /// <summary>
@@ -2436,6 +3031,11 @@ namespace Vapi
         {
             Webhook = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromWebhook(global::Vapi.CreateWebhookCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2458,6 +3058,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromCustomCredential(global::Vapi.CreateCustomCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateXAiCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateXAiCredentialDTO?)value);
 
         /// <summary>
@@ -2472,6 +3077,11 @@ namespace Vapi
         {
             Xai = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromXai(global::Vapi.CreateXAiCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2494,6 +3104,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromGoogleCalendarOauth2Client(global::Vapi.CreateGoogleCalendarOAuth2ClientCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateGoogleCalendarOAuth2AuthorizationCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateGoogleCalendarOAuth2AuthorizationCredentialDTO?)value);
 
         /// <summary>
@@ -2508,6 +3123,11 @@ namespace Vapi
         {
             GoogleCalendarOauth2Authorization = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromGoogleCalendarOauth2Authorization(global::Vapi.CreateGoogleCalendarOAuth2AuthorizationCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2530,6 +3150,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromGoogleSheetsOauth2Authorization(global::Vapi.CreateGoogleSheetsOAuth2AuthorizationCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateSlackOAuth2AuthorizationCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateSlackOAuth2AuthorizationCredentialDTO?)value);
 
         /// <summary>
@@ -2544,6 +3169,11 @@ namespace Vapi
         {
             SlackOauth2Authorization = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromSlackOauth2Authorization(global::Vapi.CreateSlackOAuth2AuthorizationCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2566,6 +3196,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromGhlOauth2Authorization(global::Vapi.CreateGoHighLevelMCPCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateInworldCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateInworldCredentialDTO?)value);
 
         /// <summary>
@@ -2580,6 +3215,11 @@ namespace Vapi
         {
             Inworld = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromInworld(global::Vapi.CreateInworldCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2602,6 +3242,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromMinimax(global::Vapi.CreateMinimaxCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateWellSaidCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateWellSaidCredentialDTO?)value);
 
         /// <summary>
@@ -2616,6 +3261,11 @@ namespace Vapi
         {
             Wellsaid = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromWellsaid(global::Vapi.CreateWellSaidCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
@@ -2638,6 +3288,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static CredentialsItem6 FromEmail(global::Vapi.CreateEmailCredentialDTO? value) => new CredentialsItem6(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CredentialsItem6(global::Vapi.CreateSlackWebhookCredentialDTO value) => new CredentialsItem6((global::Vapi.CreateSlackWebhookCredentialDTO?)value);
 
         /// <summary>
@@ -2652,6 +3307,11 @@ namespace Vapi
         {
             SlackWebhook = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CredentialsItem6 FromSlackWebhook(global::Vapi.CreateSlackWebhookCredentialDTO? value) => new CredentialsItem6(value);
 
         /// <summary>
         /// 
