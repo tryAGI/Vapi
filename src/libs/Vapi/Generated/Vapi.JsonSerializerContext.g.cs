@@ -3381,6 +3381,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechSourceNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeNullableJsonConverter),
@@ -3516,6 +3520,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageVoiceRequestTypeJsonConverter),
 
@@ -8734,6 +8742,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechSourceNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeNullableJsonConverter),
@@ -8869,6 +8881,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageVoiceRequestTypeJsonConverter),
 
@@ -14087,6 +14103,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechSourceNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeNullableJsonConverter),
@@ -14222,6 +14242,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageVoiceRequestTypeJsonConverter),
 
@@ -19440,6 +19464,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechSourceNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeNullableJsonConverter),
@@ -19575,6 +19603,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageVoiceRequestTypeJsonConverter),
 
@@ -24793,6 +24825,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechSourceNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeNullableJsonConverter),
@@ -24928,6 +24964,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageVoiceRequestTypeJsonConverter),
 
@@ -26555,6 +26595,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientMessageAssistantSpeechSource), TypeInfoPropertyName = "ClientMessageAssistantSpeechSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.Timing), TypeInfoPropertyName = "Timing2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientMessageAssistantSpeechTimingDiscriminator))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientMessageAssistantSpeechTimingDiscriminatorType), TypeInfoPropertyName = "ClientMessageAssistantSpeechTimingDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientMessageChatCreated))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientMessageChatCreatedType), TypeInfoPropertyName = "ClientMessageChatCreatedType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientMessageChatDeleted))]
@@ -26617,6 +26658,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageAssistantSpeechSource), TypeInfoPropertyName = "ServerMessageAssistantSpeechSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.Timing2), TypeInfoPropertyName = "Timing22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageAssistantSpeechTimingDiscriminator))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageAssistantSpeechTimingDiscriminatorType), TypeInfoPropertyName = "ServerMessageAssistantSpeechTimingDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageVoiceRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageVoiceRequestType), TypeInfoPropertyName = "ServerMessageVoiceRequestType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageCallEndpointingRequest))]
@@ -26765,8 +26807,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.Call, global::Vapi.CallBatchResponse>), TypeInfoPropertyName = "OneOfCallCallBatchResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.Chat, global::Vapi.CreateChatStreamResponse>), TypeInfoPropertyName = "OneOfChatCreateChatStreamResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.ResponseObject, global::Vapi.ResponseTextDeltaEvent, global::Vapi.ResponseTextDoneEvent, global::Vapi.ResponseCompletedEvent, global::Vapi.ResponseErrorEvent>), TypeInfoPropertyName = "OneOfResponseObjectResponseTextDeltaEventResponseTextDoneEventResponseCompletedEventResponseErrorEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberControllerCreateResponse), TypeInfoPropertyName = "PhoneNumberControllerCreateResponse2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberControllerCreateResponseDiscriminator))]
     internal sealed partial class SourceGenerationContextChunk4 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -30146,6 +30186,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechSourceNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ClientMessageChatCreatedTypeNullableJsonConverter),
@@ -30281,6 +30325,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.ServerMessageVoiceRequestTypeJsonConverter),
 
@@ -31697,6 +31745,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberControllerCreateResponse), TypeInfoPropertyName = "PhoneNumberControllerCreateResponse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberControllerCreateResponseDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberControllerCreateResponseDiscriminatorProvider), TypeInfoPropertyName = "PhoneNumberControllerCreateResponseDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.PhoneNumberControllerFindAllResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberControllerFindAllResponseItem), TypeInfoPropertyName = "PhoneNumberControllerFindAllResponseItem2")]
@@ -33609,6 +33659,8 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.ClientMessageAssistantSpeechTypeNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ClientMessageAssistantSpeechSourceJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ClientMessageAssistantSpeechSourceNullableJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.ClientMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ClientMessageChatCreatedTypeJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ClientMessageChatCreatedTypeNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ClientMessageChatDeletedTypeJsonConverter());
@@ -33677,6 +33729,8 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.ServerMessageAssistantSpeechTypeNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ServerMessageAssistantSpeechSourceNullableJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ServerMessageVoiceRequestTypeJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ServerMessageVoiceRequestTypeNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ServerMessageCallEndpointingRequestTypeJsonConverter());
