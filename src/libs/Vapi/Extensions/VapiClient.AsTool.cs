@@ -55,8 +55,13 @@ public static class VapiToolExtensions
                 string id,
                 CancellationToken cancellationToken) =>
             {
+                if (!Guid.TryParse(id, out var assistantId))
+                {
+                    throw new ArgumentException("Assistant ID must be a valid GUID.", nameof(id));
+                }
+
                 var assistant = await client.Assistants.AssistantControllerFindOneAsync(
-                    id: id,
+                    id: assistantId,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
                 return new
@@ -161,8 +166,13 @@ public static class VapiToolExtensions
                 string id,
                 CancellationToken cancellationToken) =>
             {
+                if (!Guid.TryParse(id, out var callId))
+                {
+                    throw new ArgumentException("Call ID must be a valid GUID.", nameof(id));
+                }
+
                 var call = await client.Calls.CallControllerFindOneAsync(
-                    id: id,
+                    id: callId,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
                 return new
