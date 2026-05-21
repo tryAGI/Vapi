@@ -27,12 +27,12 @@ namespace Vapi
             };
         partial void PrepareInsightControllerRunArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string id,
+            ref global::System.Guid id,
             global::Vapi.InsightRunDTO request);
         partial void PrepareInsightControllerRunRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string id,
+            global::System.Guid id,
             global::Vapi.InsightRunDTO request);
         partial void ProcessInsightControllerRunResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -52,7 +52,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.InsightRunResponse> InsightControllerRunAsync(
-            string id,
+            global::System.Guid id,
 
             global::Vapi.InsightRunDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -77,7 +77,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.InsightRunResponse>> InsightControllerRunAsResponseAsync(
-            string id,
+            global::System.Guid id,
 
             global::Vapi.InsightRunDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -467,7 +467,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.InsightRunResponse> InsightControllerRunAsync(
-            string id,
+            global::System.Guid id,
             global::Vapi.InsightRunFormatPlan? formatPlan = default,
             global::Vapi.InsightTimeRangeWithStep? timeRangeOverride = default,
             string? assistantId = default,
