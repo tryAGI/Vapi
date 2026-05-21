@@ -27,12 +27,12 @@ namespace Vapi
             };
         partial void PreparePhoneNumberControllerUpdateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string id,
+            ref global::System.Guid id,
             global::Vapi.PhoneNumberControllerUpdateRequest request);
         partial void PreparePhoneNumberControllerUpdateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string id,
+            global::System.Guid id,
             global::Vapi.PhoneNumberControllerUpdateRequest request);
         partial void ProcessPhoneNumberControllerUpdateResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -52,7 +52,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.PhoneNumberControllerUpdateResponse> PhoneNumberControllerUpdateAsync(
-            string id,
+            global::System.Guid id,
 
             global::Vapi.PhoneNumberControllerUpdateRequest request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -77,7 +77,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.PhoneNumberControllerUpdateResponse>> PhoneNumberControllerUpdateAsResponseAsync(
-            string id,
+            global::System.Guid id,
 
             global::Vapi.PhoneNumberControllerUpdateRequest request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -450,7 +450,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.PhoneNumberControllerUpdateResponse> PhoneNumberControllerUpdateAsync(
-            string id,
+            global::System.Guid id,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

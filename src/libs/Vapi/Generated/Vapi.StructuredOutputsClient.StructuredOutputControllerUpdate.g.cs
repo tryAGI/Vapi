@@ -27,13 +27,13 @@ namespace Vapi
             };
         partial void PrepareStructuredOutputControllerUpdateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string id,
+            ref global::System.Guid id,
             ref string schemaOverride,
             global::Vapi.UpdateStructuredOutputDTO request);
         partial void PrepareStructuredOutputControllerUpdateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string id,
+            global::System.Guid id,
             string schemaOverride,
             global::Vapi.UpdateStructuredOutputDTO request);
         partial void ProcessStructuredOutputControllerUpdateResponse(
@@ -55,7 +55,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.StructuredOutput> StructuredOutputControllerUpdateAsync(
-            string id,
+            global::System.Guid id,
             string schemaOverride,
 
             global::Vapi.UpdateStructuredOutputDTO request,
@@ -83,7 +83,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.StructuredOutput>> StructuredOutputControllerUpdateAsResponseAsync(
-            string id,
+            global::System.Guid id,
             string schemaOverride,
 
             global::Vapi.UpdateStructuredOutputDTO request,
@@ -522,7 +522,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.StructuredOutput> StructuredOutputControllerUpdateAsync(
-            string id,
+            global::System.Guid id,
             string schemaOverride,
             global::Vapi.UpdateStructuredOutputDTOType? type = default,
             string? regex = default,
