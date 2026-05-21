@@ -48,5 +48,6 @@ namespace Vapi
         public GhlToolMetadata()
         {
         }
+
     }
 }

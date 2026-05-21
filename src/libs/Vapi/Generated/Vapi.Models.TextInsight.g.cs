@@ -172,5 +172,6 @@ namespace Vapi
         public TextInsight()
         {
         }
+
     }
 }

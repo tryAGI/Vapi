@@ -211,5 +211,6 @@ namespace Vapi
         public UpdateQueryToolDTO()
         {
         }
+
     }
 }

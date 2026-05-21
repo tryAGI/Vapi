@@ -192,5 +192,6 @@ namespace Vapi
         public UpdateStructuredOutputDTO()
         {
         }
+
     }
 }

@@ -124,5 +124,6 @@ namespace Vapi
         public JSONQueryOnEventsTable()
         {
         }
+
     }
 }

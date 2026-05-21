@@ -154,5 +154,6 @@ namespace Vapi
         public ClientMessageTransferUpdate()
         {
         }
+
     }
 }

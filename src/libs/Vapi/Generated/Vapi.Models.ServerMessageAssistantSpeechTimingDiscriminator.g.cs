@@ -12,7 +12,8 @@ namespace Vapi
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        public string? Type { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.ServerMessageAssistantSpeechTimingDiscriminatorTypeJsonConverter))]
+        public global::Vapi.ServerMessageAssistantSpeechTimingDiscriminatorType? Type { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -28,7 +29,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ServerMessageAssistantSpeechTimingDiscriminator(
-            string? type)
+            global::Vapi.ServerMessageAssistantSpeechTimingDiscriminatorType? type)
         {
             this.Type = type;
         }
@@ -39,5 +40,6 @@ namespace Vapi
         public ServerMessageAssistantSpeechTimingDiscriminator()
         {
         }
+
     }
 }

@@ -133,5 +133,6 @@ namespace Vapi
         public FourierDenoisingPlan()
         {
         }
+
     }
 }

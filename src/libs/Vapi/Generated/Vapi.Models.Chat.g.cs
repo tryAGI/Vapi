@@ -249,5 +249,6 @@ namespace Vapi
         public Chat()
         {
         }
+
     }
 }

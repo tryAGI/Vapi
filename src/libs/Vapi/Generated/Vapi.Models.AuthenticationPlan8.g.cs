@@ -34,6 +34,26 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickOauth2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.OAuth2AuthenticationPlan? value)
+        {
+            value = Oauth2;
+            return IsOauth2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.OAuth2AuthenticationPlan PickOauth2() => IsOauth2
+            ? Oauth2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Oauth2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.HMACAuthenticationPlan? Hmac { get; init; }
 #else
@@ -51,6 +71,26 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickHmac(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.HMACAuthenticationPlan? value)
+        {
+            value = Hmac;
+            return IsHmac;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.HMACAuthenticationPlan PickHmac() => IsHmac
+            ? Hmac!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Hmac' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.BearerAuthenticationPlan? Bearer { get; init; }
 #else
@@ -64,6 +104,26 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Bearer))]
 #endif
         public bool IsBearer => Bearer != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickBearer(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.BearerAuthenticationPlan? value)
+        {
+            value = Bearer;
+            return IsBearer;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.BearerAuthenticationPlan PickBearer() => IsBearer
+            ? Bearer!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Bearer' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -81,6 +141,11 @@ namespace Vapi
         {
             Oauth2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AuthenticationPlan8 FromOauth2(global::Vapi.OAuth2AuthenticationPlan? value) => new AuthenticationPlan8(value);
 
         /// <summary>
         /// 
@@ -103,6 +168,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static AuthenticationPlan8 FromHmac(global::Vapi.HMACAuthenticationPlan? value) => new AuthenticationPlan8(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AuthenticationPlan8(global::Vapi.BearerAuthenticationPlan value) => new AuthenticationPlan8((global::Vapi.BearerAuthenticationPlan?)value);
 
         /// <summary>
@@ -117,6 +187,11 @@ namespace Vapi
         {
             Bearer = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AuthenticationPlan8 FromBearer(global::Vapi.BearerAuthenticationPlan? value) => new AuthenticationPlan8(value);
 
         /// <summary>
         /// 
@@ -165,9 +240,9 @@ namespace Vapi
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Vapi.OAuth2AuthenticationPlan?, TResult>? oauth2 = null,
-            global::System.Func<global::Vapi.HMACAuthenticationPlan?, TResult>? hmac = null,
-            global::System.Func<global::Vapi.BearerAuthenticationPlan?, TResult>? bearer = null,
+            global::System.Func<global::Vapi.OAuth2AuthenticationPlan, TResult>? oauth2 = null,
+            global::System.Func<global::Vapi.HMACAuthenticationPlan, TResult>? hmac = null,
+            global::System.Func<global::Vapi.BearerAuthenticationPlan, TResult>? bearer = null,
             bool validate = true)
         {
             if (validate)
@@ -195,9 +270,39 @@ namespace Vapi
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Vapi.OAuth2AuthenticationPlan?>? oauth2 = null,
-            global::System.Action<global::Vapi.HMACAuthenticationPlan?>? hmac = null,
-            global::System.Action<global::Vapi.BearerAuthenticationPlan?>? bearer = null,
+            global::System.Action<global::Vapi.OAuth2AuthenticationPlan>? oauth2 = null,
+
+            global::System.Action<global::Vapi.HMACAuthenticationPlan>? hmac = null,
+
+            global::System.Action<global::Vapi.BearerAuthenticationPlan>? bearer = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsOauth2)
+            {
+                oauth2?.Invoke(Oauth2!);
+            }
+            else if (IsHmac)
+            {
+                hmac?.Invoke(Hmac!);
+            }
+            else if (IsBearer)
+            {
+                bearer?.Invoke(Bearer!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Vapi.OAuth2AuthenticationPlan>? oauth2 = null,
+            global::System.Action<global::Vapi.HMACAuthenticationPlan>? hmac = null,
+            global::System.Action<global::Vapi.BearerAuthenticationPlan>? bearer = null,
             bool validate = true)
         {
             if (validate)

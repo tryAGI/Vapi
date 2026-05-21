@@ -34,6 +34,26 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickByoPhoneNumber(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.ByoPhoneNumber? value)
+        {
+            value = ByoPhoneNumber;
+            return IsByoPhoneNumber;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.ByoPhoneNumber PickByoPhoneNumber() => IsByoPhoneNumber
+            ? ByoPhoneNumber!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ByoPhoneNumber' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.TwilioPhoneNumber? Twilio { get; init; }
 #else
@@ -47,6 +67,26 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Twilio))]
 #endif
         public bool IsTwilio => Twilio != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickTwilio(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.TwilioPhoneNumber? value)
+        {
+            value = Twilio;
+            return IsTwilio;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.TwilioPhoneNumber PickTwilio() => IsTwilio
+            ? Twilio!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Twilio' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -68,6 +108,26 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickVonage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.VonagePhoneNumber? value)
+        {
+            value = Vonage;
+            return IsVonage;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.VonagePhoneNumber PickVonage() => IsVonage
+            ? Vonage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Vonage' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.VapiPhoneNumber? Vapi { get; init; }
 #else
@@ -85,6 +145,26 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickVapi(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.VapiPhoneNumber? value)
+        {
+            value = Vapi;
+            return IsVapi;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.VapiPhoneNumber PickVapi() => IsVapi
+            ? Vapi!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Vapi' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.TelnyxPhoneNumber? Telnyx { get; init; }
 #else
@@ -98,6 +178,26 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Telnyx))]
 #endif
         public bool IsTelnyx => Telnyx != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickTelnyx(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.TelnyxPhoneNumber? value)
+        {
+            value = Telnyx;
+            return IsTelnyx;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.TelnyxPhoneNumber PickTelnyx() => IsTelnyx
+            ? Telnyx!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Telnyx' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -115,6 +215,11 @@ namespace Vapi
         {
             ByoPhoneNumber = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PhoneNumberControllerUpdateResponse FromByoPhoneNumber(global::Vapi.ByoPhoneNumber? value) => new PhoneNumberControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -137,6 +242,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static PhoneNumberControllerUpdateResponse FromTwilio(global::Vapi.TwilioPhoneNumber? value) => new PhoneNumberControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PhoneNumberControllerUpdateResponse(global::Vapi.VonagePhoneNumber value) => new PhoneNumberControllerUpdateResponse((global::Vapi.VonagePhoneNumber?)value);
 
         /// <summary>
@@ -151,6 +261,11 @@ namespace Vapi
         {
             Vonage = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PhoneNumberControllerUpdateResponse FromVonage(global::Vapi.VonagePhoneNumber? value) => new PhoneNumberControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -173,6 +288,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static PhoneNumberControllerUpdateResponse FromVapi(global::Vapi.VapiPhoneNumber? value) => new PhoneNumberControllerUpdateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PhoneNumberControllerUpdateResponse(global::Vapi.TelnyxPhoneNumber value) => new PhoneNumberControllerUpdateResponse((global::Vapi.TelnyxPhoneNumber?)value);
 
         /// <summary>
@@ -187,6 +307,11 @@ namespace Vapi
         {
             Telnyx = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PhoneNumberControllerUpdateResponse FromTelnyx(global::Vapi.TelnyxPhoneNumber? value) => new PhoneNumberControllerUpdateResponse(value);
 
         /// <summary>
         /// 
@@ -243,11 +368,11 @@ namespace Vapi
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Vapi.ByoPhoneNumber?, TResult>? byoPhoneNumber = null,
-            global::System.Func<global::Vapi.TwilioPhoneNumber?, TResult>? twilio = null,
-            global::System.Func<global::Vapi.VonagePhoneNumber?, TResult>? vonage = null,
-            global::System.Func<global::Vapi.VapiPhoneNumber?, TResult>? vapi = null,
-            global::System.Func<global::Vapi.TelnyxPhoneNumber?, TResult>? telnyx = null,
+            global::System.Func<global::Vapi.ByoPhoneNumber, TResult>? byoPhoneNumber = null,
+            global::System.Func<global::Vapi.TwilioPhoneNumber, TResult>? twilio = null,
+            global::System.Func<global::Vapi.VonagePhoneNumber, TResult>? vonage = null,
+            global::System.Func<global::Vapi.VapiPhoneNumber, TResult>? vapi = null,
+            global::System.Func<global::Vapi.TelnyxPhoneNumber, TResult>? telnyx = null,
             bool validate = true)
         {
             if (validate)
@@ -283,11 +408,53 @@ namespace Vapi
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Vapi.ByoPhoneNumber?>? byoPhoneNumber = null,
-            global::System.Action<global::Vapi.TwilioPhoneNumber?>? twilio = null,
-            global::System.Action<global::Vapi.VonagePhoneNumber?>? vonage = null,
-            global::System.Action<global::Vapi.VapiPhoneNumber?>? vapi = null,
-            global::System.Action<global::Vapi.TelnyxPhoneNumber?>? telnyx = null,
+            global::System.Action<global::Vapi.ByoPhoneNumber>? byoPhoneNumber = null,
+
+            global::System.Action<global::Vapi.TwilioPhoneNumber>? twilio = null,
+
+            global::System.Action<global::Vapi.VonagePhoneNumber>? vonage = null,
+
+            global::System.Action<global::Vapi.VapiPhoneNumber>? vapi = null,
+
+            global::System.Action<global::Vapi.TelnyxPhoneNumber>? telnyx = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsByoPhoneNumber)
+            {
+                byoPhoneNumber?.Invoke(ByoPhoneNumber!);
+            }
+            else if (IsTwilio)
+            {
+                twilio?.Invoke(Twilio!);
+            }
+            else if (IsVonage)
+            {
+                vonage?.Invoke(Vonage!);
+            }
+            else if (IsVapi)
+            {
+                vapi?.Invoke(Vapi!);
+            }
+            else if (IsTelnyx)
+            {
+                telnyx?.Invoke(Telnyx!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Vapi.ByoPhoneNumber>? byoPhoneNumber = null,
+            global::System.Action<global::Vapi.TwilioPhoneNumber>? twilio = null,
+            global::System.Action<global::Vapi.VonagePhoneNumber>? vonage = null,
+            global::System.Action<global::Vapi.VapiPhoneNumber>? vapi = null,
+            global::System.Action<global::Vapi.TelnyxPhoneNumber>? telnyx = null,
             bool validate = true)
         {
             if (validate)

@@ -24,6 +24,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public global::Vapi.ServerMessageAssistantSpeechTimingDiscriminatorType? Type { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.AssistantSpeechWordAlignmentTiming? WordAlignment { get; init; }
 #else
@@ -41,6 +46,26 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickWordAlignment(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.AssistantSpeechWordAlignmentTiming? value)
+        {
+            value = WordAlignment;
+            return IsWordAlignment;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.AssistantSpeechWordAlignmentTiming PickWordAlignment() => IsWordAlignment
+            ? WordAlignment!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'WordAlignment' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.AssistantSpeechWordProgressTiming? WordProgress { get; init; }
 #else
@@ -54,6 +79,26 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(WordProgress))]
 #endif
         public bool IsWordProgress => WordProgress != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickWordProgress(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.AssistantSpeechWordProgressTiming? value)
+        {
+            value = WordProgress;
+            return IsWordProgress;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.AssistantSpeechWordProgressTiming PickWordProgress() => IsWordProgress
+            ? WordProgress!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'WordProgress' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -71,6 +116,11 @@ namespace Vapi
         {
             WordAlignment = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Timing2 FromWordAlignment(global::Vapi.AssistantSpeechWordAlignmentTiming? value) => new Timing2(value);
 
         /// <summary>
         /// 
@@ -93,11 +143,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static Timing2 FromWordProgress(global::Vapi.AssistantSpeechWordProgressTiming? value) => new Timing2(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public Timing2(
+            global::Vapi.ServerMessageAssistantSpeechTimingDiscriminatorType? type,
             global::Vapi.AssistantSpeechWordAlignmentTiming? wordAlignment,
             global::Vapi.AssistantSpeechWordProgressTiming? wordProgress
             )
         {
+            Type = type;
+
             WordAlignment = wordAlignment;
             WordProgress = wordProgress;
         }
@@ -130,8 +188,8 @@ namespace Vapi
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Vapi.AssistantSpeechWordAlignmentTiming?, TResult>? wordAlignment = null,
-            global::System.Func<global::Vapi.AssistantSpeechWordProgressTiming?, TResult>? wordProgress = null,
+            global::System.Func<global::Vapi.AssistantSpeechWordAlignmentTiming, TResult>? wordAlignment = null,
+            global::System.Func<global::Vapi.AssistantSpeechWordProgressTiming, TResult>? wordProgress = null,
             bool validate = true)
         {
             if (validate)
@@ -155,8 +213,32 @@ namespace Vapi
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Vapi.AssistantSpeechWordAlignmentTiming?>? wordAlignment = null,
-            global::System.Action<global::Vapi.AssistantSpeechWordProgressTiming?>? wordProgress = null,
+            global::System.Action<global::Vapi.AssistantSpeechWordAlignmentTiming>? wordAlignment = null,
+
+            global::System.Action<global::Vapi.AssistantSpeechWordProgressTiming>? wordProgress = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsWordAlignment)
+            {
+                wordAlignment?.Invoke(WordAlignment!);
+            }
+            else if (IsWordProgress)
+            {
+                wordProgress?.Invoke(WordProgress!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Vapi.AssistantSpeechWordAlignmentTiming>? wordAlignment = null,
+            global::System.Action<global::Vapi.AssistantSpeechWordProgressTiming>? wordProgress = null,
             bool validate = true)
         {
             if (validate)

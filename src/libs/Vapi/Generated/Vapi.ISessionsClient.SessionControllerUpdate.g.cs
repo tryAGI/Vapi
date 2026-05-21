@@ -13,7 +13,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Session> SessionControllerUpdateAsync(
-            string id,
+            global::System.Guid id,
 
             global::Vapi.UpdateSessionDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -27,7 +27,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Session>> SessionControllerUpdateAsResponseAsync(
-            string id,
+            global::System.Guid id,
 
             global::Vapi.UpdateSessionDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -53,7 +53,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Session> SessionControllerUpdateAsync(
-            string id,
+            global::System.Guid id,
             string? name = default,
             global::Vapi.UpdateSessionDTOStatus? status = default,
             double? expirationSeconds = default,

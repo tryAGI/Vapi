@@ -115,5 +115,6 @@ namespace Vapi
         public ModelCost()
         {
         }
+
     }
 }

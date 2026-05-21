@@ -222,5 +222,6 @@ namespace Vapi
         public GoHighLevelCalendarAvailabilityToolWithToolCall()
         {
         }
+
     }
 }

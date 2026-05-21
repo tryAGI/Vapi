@@ -33,8 +33,7 @@ namespace Vapi
         /// Language hints sent to Soniox as `language_hints`. Provide `[lang1, lang2, ...]` (ISO 639-1 codes) to bias recognition toward specific languages, or provide an explicit empty array `[]` to enable Soniox auto-detect across all 60+ supported languages. When set (including the empty array), this field takes precedence over the singular `language` field. When omitted, falls back to the singular `language` (which defaults to `en` if also unset). Best accuracy is achieved with a single language.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("languages")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.FallbackSonioxTranscriberLanguagesJsonConverter))]
-        public global::Vapi.FallbackSonioxTranscriberLanguages? Languages { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.FallbackSonioxTranscriberLanguage2>? Languages { get; set; }
 
         /// <summary>
         /// When `true`, Soniox strictly restricts transcription to the languages in `languages` (or the singular `language` if `languages` is unset). When `false`, Soniox biases toward those languages but still allows transcription in other languages. Has no effect when no language hints are sent (e.g., `languages: []` for auto-detect). Defaults to `true` (strict mode).
@@ -101,7 +100,7 @@ namespace Vapi
             global::Vapi.FallbackSonioxTranscriberProvider provider,
             global::Vapi.FallbackSonioxTranscriberModel? model,
             global::Vapi.FallbackSonioxTranscriberLanguage? language,
-            global::Vapi.FallbackSonioxTranscriberLanguages? languages,
+            global::System.Collections.Generic.IList<global::Vapi.FallbackSonioxTranscriberLanguage2>? languages,
             bool? languageHintsStrict,
             double? maxEndpointDelayMs,
             global::System.Collections.Generic.IList<string>? customVocabulary,
@@ -123,5 +122,6 @@ namespace Vapi
         public FallbackSonioxTranscriber()
         {
         }
+
     }
 }

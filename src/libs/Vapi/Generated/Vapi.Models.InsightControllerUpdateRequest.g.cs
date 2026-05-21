@@ -34,6 +34,26 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickBar(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.UpdateBarInsightFromCallTableDTO? value)
+        {
+            value = Bar;
+            return IsBar;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.UpdateBarInsightFromCallTableDTO PickBar() => IsBar
+            ? Bar!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Bar' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.UpdatePieInsightFromCallTableDTO? Pie { get; init; }
 #else
@@ -47,6 +67,26 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Pie))]
 #endif
         public bool IsPie => Pie != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPie(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.UpdatePieInsightFromCallTableDTO? value)
+        {
+            value = Pie;
+            return IsPie;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.UpdatePieInsightFromCallTableDTO PickPie() => IsPie
+            ? Pie!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Pie' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -68,6 +108,26 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickLine(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.UpdateLineInsightFromCallTableDTO? value)
+        {
+            value = Line;
+            return IsLine;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.UpdateLineInsightFromCallTableDTO PickLine() => IsLine
+            ? Line!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Line' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.UpdateTextInsightFromCallTableDTO? Text { get; init; }
 #else
@@ -81,6 +141,26 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Text))]
 #endif
         public bool IsText => Text != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickText(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Vapi.UpdateTextInsightFromCallTableDTO? value)
+        {
+            value = Text;
+            return IsText;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.UpdateTextInsightFromCallTableDTO PickText() => IsText
+            ? Text!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -98,6 +178,11 @@ namespace Vapi
         {
             Bar = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InsightControllerUpdateRequest FromBar(global::Vapi.UpdateBarInsightFromCallTableDTO? value) => new InsightControllerUpdateRequest(value);
 
         /// <summary>
         /// 
@@ -120,6 +205,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static InsightControllerUpdateRequest FromPie(global::Vapi.UpdatePieInsightFromCallTableDTO? value) => new InsightControllerUpdateRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InsightControllerUpdateRequest(global::Vapi.UpdateLineInsightFromCallTableDTO value) => new InsightControllerUpdateRequest((global::Vapi.UpdateLineInsightFromCallTableDTO?)value);
 
         /// <summary>
@@ -138,6 +228,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public static InsightControllerUpdateRequest FromLine(global::Vapi.UpdateLineInsightFromCallTableDTO? value) => new InsightControllerUpdateRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InsightControllerUpdateRequest(global::Vapi.UpdateTextInsightFromCallTableDTO value) => new InsightControllerUpdateRequest((global::Vapi.UpdateTextInsightFromCallTableDTO?)value);
 
         /// <summary>
@@ -152,6 +247,11 @@ namespace Vapi
         {
             Text = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InsightControllerUpdateRequest FromText(global::Vapi.UpdateTextInsightFromCallTableDTO? value) => new InsightControllerUpdateRequest(value);
 
         /// <summary>
         /// 
@@ -204,10 +304,10 @@ namespace Vapi
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Vapi.UpdateBarInsightFromCallTableDTO?, TResult>? bar = null,
-            global::System.Func<global::Vapi.UpdatePieInsightFromCallTableDTO?, TResult>? pie = null,
-            global::System.Func<global::Vapi.UpdateLineInsightFromCallTableDTO?, TResult>? line = null,
-            global::System.Func<global::Vapi.UpdateTextInsightFromCallTableDTO?, TResult>? text = null,
+            global::System.Func<global::Vapi.UpdateBarInsightFromCallTableDTO, TResult>? bar = null,
+            global::System.Func<global::Vapi.UpdatePieInsightFromCallTableDTO, TResult>? pie = null,
+            global::System.Func<global::Vapi.UpdateLineInsightFromCallTableDTO, TResult>? line = null,
+            global::System.Func<global::Vapi.UpdateTextInsightFromCallTableDTO, TResult>? text = null,
             bool validate = true)
         {
             if (validate)
@@ -239,10 +339,46 @@ namespace Vapi
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Vapi.UpdateBarInsightFromCallTableDTO?>? bar = null,
-            global::System.Action<global::Vapi.UpdatePieInsightFromCallTableDTO?>? pie = null,
-            global::System.Action<global::Vapi.UpdateLineInsightFromCallTableDTO?>? line = null,
-            global::System.Action<global::Vapi.UpdateTextInsightFromCallTableDTO?>? text = null,
+            global::System.Action<global::Vapi.UpdateBarInsightFromCallTableDTO>? bar = null,
+
+            global::System.Action<global::Vapi.UpdatePieInsightFromCallTableDTO>? pie = null,
+
+            global::System.Action<global::Vapi.UpdateLineInsightFromCallTableDTO>? line = null,
+
+            global::System.Action<global::Vapi.UpdateTextInsightFromCallTableDTO>? text = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsBar)
+            {
+                bar?.Invoke(Bar!);
+            }
+            else if (IsPie)
+            {
+                pie?.Invoke(Pie!);
+            }
+            else if (IsLine)
+            {
+                line?.Invoke(Line!);
+            }
+            else if (IsText)
+            {
+                text?.Invoke(Text!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Vapi.UpdateBarInsightFromCallTableDTO>? bar = null,
+            global::System.Action<global::Vapi.UpdatePieInsightFromCallTableDTO>? pie = null,
+            global::System.Action<global::Vapi.UpdateLineInsightFromCallTableDTO>? line = null,
+            global::System.Action<global::Vapi.UpdateTextInsightFromCallTableDTO>? text = null,
             bool validate = true)
         {
             if (validate)

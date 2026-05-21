@@ -173,5 +173,6 @@ namespace Vapi
         public OpenAIResponsesRequest()
         {
         }
+
     }
 }

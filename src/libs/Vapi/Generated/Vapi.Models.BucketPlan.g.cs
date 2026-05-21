@@ -116,5 +116,6 @@ namespace Vapi
         public BucketPlan()
         {
         }
+
     }
 }

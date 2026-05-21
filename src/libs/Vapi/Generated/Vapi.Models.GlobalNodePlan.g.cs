@@ -58,5 +58,6 @@ namespace Vapi
         public GlobalNodePlan()
         {
         }
+
     }
 }

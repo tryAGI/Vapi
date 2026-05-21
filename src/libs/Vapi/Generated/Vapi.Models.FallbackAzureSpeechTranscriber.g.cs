@@ -88,5 +88,6 @@ namespace Vapi
         public FallbackAzureSpeechTranscriber()
         {
         }
+
     }
 }

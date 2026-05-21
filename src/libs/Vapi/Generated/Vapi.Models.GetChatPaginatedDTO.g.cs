@@ -233,5 +233,6 @@ namespace Vapi
         public GetChatPaginatedDTO()
         {
         }
+
     }
 }

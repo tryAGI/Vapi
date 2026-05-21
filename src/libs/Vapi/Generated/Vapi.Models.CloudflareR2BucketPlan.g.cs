@@ -94,5 +94,6 @@ namespace Vapi
         public CloudflareR2BucketPlan()
         {
         }
+
     }
 }

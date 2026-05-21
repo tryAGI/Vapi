@@ -63,5 +63,6 @@ namespace Vapi
         public CreateSlackOAuth2AuthorizationCredentialDTO()
         {
         }
+
     }
 }

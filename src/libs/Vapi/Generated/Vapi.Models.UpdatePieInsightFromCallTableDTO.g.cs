@@ -129,5 +129,6 @@ namespace Vapi
         public UpdatePieInsightFromCallTableDTO()
         {
         }
+
     }
 }

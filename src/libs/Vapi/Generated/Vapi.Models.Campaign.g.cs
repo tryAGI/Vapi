@@ -267,5 +267,6 @@ namespace Vapi
         public Campaign()
         {
         }
+
     }
 }

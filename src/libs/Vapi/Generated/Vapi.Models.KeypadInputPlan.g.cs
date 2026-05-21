@@ -76,5 +76,6 @@ namespace Vapi
         public KeypadInputPlan()
         {
         }
+
     }
 }
