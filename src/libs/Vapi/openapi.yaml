@@ -865,6 +865,286 @@
         ]
       }
     },
+    "/call/{id}/mono-recording": {
+      "get": {
+        "operationId": "CallArtifactController_monoRecordingDownload",
+        "summary": "Download Call Mono Recording",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Call ID",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "302": {
+            "description": "Redirect to a short-lived presigned URL for the recording."
+          },
+          "401": {
+            "description": "Unauthorized — missing or invalid API token."
+          },
+          "404": {
+            "description": "Artifact not found."
+          }
+        },
+        "tags": [
+          "Calls"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/call/{id}/stereo-recording": {
+      "get": {
+        "operationId": "CallArtifactController_stereoRecordingDownload",
+        "summary": "Download Call Stereo Recording",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Call ID",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "302": {
+            "description": "Redirect to a short-lived presigned URL for the recording."
+          },
+          "401": {
+            "description": "Unauthorized — missing or invalid API token."
+          },
+          "404": {
+            "description": "Artifact not found."
+          }
+        },
+        "tags": [
+          "Calls"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/call/{id}/video-recording": {
+      "get": {
+        "operationId": "CallArtifactController_videoRecordingDownload",
+        "summary": "Download Call Video Recording",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Call ID",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "302": {
+            "description": "Redirect to a short-lived presigned URL for the video."
+          },
+          "401": {
+            "description": "Unauthorized — missing or invalid API token."
+          },
+          "404": {
+            "description": "Artifact not found."
+          }
+        },
+        "tags": [
+          "Calls"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/call/{id}/customer-recording": {
+      "get": {
+        "operationId": "CallArtifactController_customerRecordingDownload",
+        "summary": "Download Call Customer Recording",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Call ID",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "302": {
+            "description": "Redirect to a short-lived presigned URL for the recording."
+          },
+          "401": {
+            "description": "Unauthorized — missing or invalid API token."
+          },
+          "404": {
+            "description": "Artifact not found."
+          }
+        },
+        "tags": [
+          "Calls"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/call/{id}/assistant-recording": {
+      "get": {
+        "operationId": "CallArtifactController_assistantRecordingDownload",
+        "summary": "Download Call Assistant Recording",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Call ID",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "302": {
+            "description": "Redirect to a short-lived presigned URL for the recording."
+          },
+          "401": {
+            "description": "Unauthorized — missing or invalid API token."
+          },
+          "404": {
+            "description": "Artifact not found."
+          }
+        },
+        "tags": [
+          "Calls"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/call/{id}/pcap": {
+      "get": {
+        "operationId": "CallArtifactController_pcapDownload",
+        "summary": "Download Call Packet Capture (pcap)",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Call ID",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "302": {
+            "description": "Redirect to a short-lived presigned URL for the pcap file."
+          },
+          "401": {
+            "description": "Unauthorized — missing or invalid API token."
+          },
+          "404": {
+            "description": "Artifact not found."
+          }
+        },
+        "tags": [
+          "Calls"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/call/{id}/call-logs": {
+      "get": {
+        "operationId": "CallArtifactController_callLogsDownload",
+        "summary": "Download Call Logs",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Call ID",
+            "schema": {
+              "format": "uuid",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "302": {
+            "description": "Redirect to a short-lived presigned URL for the log file."
+          },
+          "401": {
+            "description": "Unauthorized — missing or invalid API token."
+          },
+          "404": {
+            "description": "Artifact not found."
+          }
+        },
+        "tags": [
+          "Calls"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
     "/chat": {
       "get": {
         "operationId": "ChatController_listChats",
