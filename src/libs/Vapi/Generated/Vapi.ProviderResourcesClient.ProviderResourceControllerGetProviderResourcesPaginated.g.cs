@@ -223,7 +223,7 @@ namespace Vapi
             {
 
                             var __pathBuilder = new global::Vapi.PathBuilder(
-                                path: $"/provider/{provider}/{resourceName}",
+                                path: $"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("id", id)
@@ -315,7 +315,7 @@ namespace Vapi
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ProviderResourceControllerGetProviderResourcesPaginated",
                                 methodName: "ProviderResourceControllerGetProviderResourcesPaginatedAsync",
-                                pathTemplate: "$\"/provider/{provider}/{resourceName}\"",
+                                pathTemplate: "$\"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -349,7 +349,7 @@ namespace Vapi
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ProviderResourceControllerGetProviderResourcesPaginated",
                                 methodName: "ProviderResourceControllerGetProviderResourcesPaginatedAsync",
-                                pathTemplate: "$\"/provider/{provider}/{resourceName}\"",
+                                pathTemplate: "$\"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -390,7 +390,7 @@ namespace Vapi
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ProviderResourceControllerGetProviderResourcesPaginated",
                                 methodName: "ProviderResourceControllerGetProviderResourcesPaginatedAsync",
-                                pathTemplate: "$\"/provider/{provider}/{resourceName}\"",
+                                pathTemplate: "$\"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -438,7 +438,7 @@ namespace Vapi
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ProviderResourceControllerGetProviderResourcesPaginated",
                                 methodName: "ProviderResourceControllerGetProviderResourcesPaginatedAsync",
-                                pathTemplate: "$\"/provider/{provider}/{resourceName}\"",
+                                pathTemplate: "$\"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -460,7 +460,7 @@ namespace Vapi
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ProviderResourceControllerGetProviderResourcesPaginated",
                                 methodName: "ProviderResourceControllerGetProviderResourcesPaginatedAsync",
-                                pathTemplate: "$\"/provider/{provider}/{resourceName}\"",
+                                pathTemplate: "$\"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,

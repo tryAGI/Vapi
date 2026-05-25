@@ -119,7 +119,7 @@ namespace Vapi
             {
 
                             var __pathBuilder = new global::Vapi.PathBuilder(
-                                path: $"/provider/{provider}/{resourceName}/{id}",
+                                path: $"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}/{id}",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Vapi.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -182,7 +182,7 @@ namespace Vapi
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ProviderResourceControllerGetProviderResource",
                                 methodName: "ProviderResourceControllerGetProviderResourceAsync",
-                                pathTemplate: "$\"/provider/{provider}/{resourceName}/{id}\"",
+                                pathTemplate: "$\"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}/{id}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -216,7 +216,7 @@ namespace Vapi
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ProviderResourceControllerGetProviderResource",
                                 methodName: "ProviderResourceControllerGetProviderResourceAsync",
-                                pathTemplate: "$\"/provider/{provider}/{resourceName}/{id}\"",
+                                pathTemplate: "$\"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}/{id}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -257,7 +257,7 @@ namespace Vapi
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ProviderResourceControllerGetProviderResource",
                                 methodName: "ProviderResourceControllerGetProviderResourceAsync",
-                                pathTemplate: "$\"/provider/{provider}/{resourceName}/{id}\"",
+                                pathTemplate: "$\"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}/{id}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -305,7 +305,7 @@ namespace Vapi
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ProviderResourceControllerGetProviderResource",
                                 methodName: "ProviderResourceControllerGetProviderResourceAsync",
-                                pathTemplate: "$\"/provider/{provider}/{resourceName}/{id}\"",
+                                pathTemplate: "$\"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}/{id}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -327,7 +327,7 @@ namespace Vapi
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ProviderResourceControllerGetProviderResource",
                                 methodName: "ProviderResourceControllerGetProviderResourceAsync",
-                                pathTemplate: "$\"/provider/{provider}/{resourceName}/{id}\"",
+                                pathTemplate: "$\"/provider/{(global::System.Uri.EscapeDataString(provider.ToValueString()))}/{(global::System.Uri.EscapeDataString(resourceName.ToValueString()))}/{id}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
