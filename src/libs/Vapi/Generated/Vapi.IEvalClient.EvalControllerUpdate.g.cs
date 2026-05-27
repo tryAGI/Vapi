@@ -13,7 +13,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Eval> EvalControllerUpdateAsync(
-            global::System.Guid id,
+            string id,
 
             global::Vapi.UpdateEvalDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -27,7 +27,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Eval>> EvalControllerUpdateAsResponseAsync(
-            global::System.Guid id,
+            string id,
 
             global::Vapi.UpdateEvalDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -61,7 +61,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.Eval> EvalControllerUpdateAsync(
-            global::System.Guid id,
+            string id,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>? messages = default,
             string? name = default,
             string? description = default,

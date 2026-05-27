@@ -27,12 +27,12 @@ namespace Vapi
             };
         partial void PrepareInsightControllerUpdateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::System.Guid id,
+            ref string id,
             global::Vapi.InsightControllerUpdateRequest request);
         partial void PrepareInsightControllerUpdateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.Guid id,
+            string id,
             global::Vapi.InsightControllerUpdateRequest request);
         partial void ProcessInsightControllerUpdateResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -52,7 +52,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.InsightControllerUpdateResponse> InsightControllerUpdateAsync(
-            global::System.Guid id,
+            string id,
 
             global::Vapi.InsightControllerUpdateRequest request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -77,7 +77,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.InsightControllerUpdateResponse>> InsightControllerUpdateAsResponseAsync(
-            global::System.Guid id,
+            string id,
 
             global::Vapi.InsightControllerUpdateRequest request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -446,7 +446,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.InsightControllerUpdateResponse> InsightControllerUpdateAsync(
-            global::System.Guid id,
+            string id,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

@@ -9,7 +9,7 @@ namespace Vapi
     public sealed partial class SipAuthentication
     {
         /// <summary>
-        /// This will be expected in the `realm` field of the `authorization` header of the SIP INVITE. Defaults to the SIP realm of the Vapi region serving the request (e.g. `sip.vapi.ai` for US, `sip.eu.vapi.ai` for EU).
+        /// This will be expected in the `realm` field of the `authorization` header of the SIP INVITE. Defaults to sip.vapi.ai.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("realm")]
         public string? Realm { get; set; }
@@ -44,7 +44,7 @@ namespace Vapi
         /// This will be expected to generate the `response` field of the `authorization` header of the SIP INVITE, through digest authentication.
         /// </param>
         /// <param name="realm">
-        /// This will be expected in the `realm` field of the `authorization` header of the SIP INVITE. Defaults to the SIP realm of the Vapi region serving the request (e.g. `sip.vapi.ai` for US, `sip.eu.vapi.ai` for EU).
+        /// This will be expected in the `realm` field of the `authorization` header of the SIP INVITE. Defaults to sip.vapi.ai.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
