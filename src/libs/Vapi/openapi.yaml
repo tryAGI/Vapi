@@ -167,9 +167,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -203,9 +201,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -249,9 +245,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -444,9 +438,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -480,9 +472,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -526,9 +516,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -755,9 +743,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -791,9 +777,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -853,286 +837,6 @@
                 }
               }
             }
-          }
-        },
-        "tags": [
-          "Calls"
-        ],
-        "security": [
-          {
-            "bearer": []
-          }
-        ]
-      }
-    },
-    "/call/{id}/mono-recording": {
-      "get": {
-        "operationId": "CallArtifactController_monoRecordingDownload",
-        "summary": "Download Call Mono Recording",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Call ID",
-            "schema": {
-              "format": "uuid",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          },
-          "302": {
-            "description": "Redirect to a short-lived presigned URL for the recording."
-          },
-          "401": {
-            "description": "Unauthorized — missing or invalid API token."
-          },
-          "404": {
-            "description": "Artifact not found."
-          }
-        },
-        "tags": [
-          "Calls"
-        ],
-        "security": [
-          {
-            "bearer": []
-          }
-        ]
-      }
-    },
-    "/call/{id}/stereo-recording": {
-      "get": {
-        "operationId": "CallArtifactController_stereoRecordingDownload",
-        "summary": "Download Call Stereo Recording",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Call ID",
-            "schema": {
-              "format": "uuid",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          },
-          "302": {
-            "description": "Redirect to a short-lived presigned URL for the recording."
-          },
-          "401": {
-            "description": "Unauthorized — missing or invalid API token."
-          },
-          "404": {
-            "description": "Artifact not found."
-          }
-        },
-        "tags": [
-          "Calls"
-        ],
-        "security": [
-          {
-            "bearer": []
-          }
-        ]
-      }
-    },
-    "/call/{id}/video-recording": {
-      "get": {
-        "operationId": "CallArtifactController_videoRecordingDownload",
-        "summary": "Download Call Video Recording",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Call ID",
-            "schema": {
-              "format": "uuid",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          },
-          "302": {
-            "description": "Redirect to a short-lived presigned URL for the video."
-          },
-          "401": {
-            "description": "Unauthorized — missing or invalid API token."
-          },
-          "404": {
-            "description": "Artifact not found."
-          }
-        },
-        "tags": [
-          "Calls"
-        ],
-        "security": [
-          {
-            "bearer": []
-          }
-        ]
-      }
-    },
-    "/call/{id}/customer-recording": {
-      "get": {
-        "operationId": "CallArtifactController_customerRecordingDownload",
-        "summary": "Download Call Customer Recording",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Call ID",
-            "schema": {
-              "format": "uuid",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          },
-          "302": {
-            "description": "Redirect to a short-lived presigned URL for the recording."
-          },
-          "401": {
-            "description": "Unauthorized — missing or invalid API token."
-          },
-          "404": {
-            "description": "Artifact not found."
-          }
-        },
-        "tags": [
-          "Calls"
-        ],
-        "security": [
-          {
-            "bearer": []
-          }
-        ]
-      }
-    },
-    "/call/{id}/assistant-recording": {
-      "get": {
-        "operationId": "CallArtifactController_assistantRecordingDownload",
-        "summary": "Download Call Assistant Recording",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Call ID",
-            "schema": {
-              "format": "uuid",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          },
-          "302": {
-            "description": "Redirect to a short-lived presigned URL for the recording."
-          },
-          "401": {
-            "description": "Unauthorized — missing or invalid API token."
-          },
-          "404": {
-            "description": "Artifact not found."
-          }
-        },
-        "tags": [
-          "Calls"
-        ],
-        "security": [
-          {
-            "bearer": []
-          }
-        ]
-      }
-    },
-    "/call/{id}/pcap": {
-      "get": {
-        "operationId": "CallArtifactController_pcapDownload",
-        "summary": "Download Call Packet Capture (pcap)",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Call ID",
-            "schema": {
-              "format": "uuid",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          },
-          "302": {
-            "description": "Redirect to a short-lived presigned URL for the pcap file."
-          },
-          "401": {
-            "description": "Unauthorized — missing or invalid API token."
-          },
-          "404": {
-            "description": "Artifact not found."
-          }
-        },
-        "tags": [
-          "Calls"
-        ],
-        "security": [
-          {
-            "bearer": []
-          }
-        ]
-      }
-    },
-    "/call/{id}/call-logs": {
-      "get": {
-        "operationId": "CallArtifactController_callLogsDownload",
-        "summary": "Download Call Logs",
-        "parameters": [
-          {
-            "name": "id",
-            "required": true,
-            "in": "path",
-            "description": "Call ID",
-            "schema": {
-              "format": "uuid",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          },
-          "302": {
-            "description": "Redirect to a short-lived presigned URL for the log file."
-          },
-          "401": {
-            "description": "Unauthorized — missing or invalid API token."
-          },
-          "404": {
-            "description": "Artifact not found."
           }
         },
         "tags": [
@@ -1763,9 +1467,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -1799,9 +1501,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -1845,9 +1545,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -2243,9 +1941,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -2279,9 +1975,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -2325,9 +2019,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -2781,9 +2473,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -2849,9 +2539,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -2958,9 +2646,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -3558,9 +3244,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -3720,9 +3404,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -4013,9 +3695,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -4254,9 +3934,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -4290,9 +3968,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -4336,9 +4012,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -4583,9 +4257,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -4619,9 +4291,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           },
@@ -4673,9 +4343,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -5005,9 +4673,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -5099,9 +4765,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -5157,9 +4821,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -5217,9 +4879,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -5547,9 +5207,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -5593,9 +5251,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -5629,9 +5285,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -5667,9 +5321,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -5703,9 +5355,7 @@
             "name": "id",
             "required": true,
             "in": "path",
-            "description": "The unique identifier for the resource.",
             "schema": {
-              "format": "uuid",
               "type": "string"
             }
           }
@@ -6814,10 +6464,6 @@
                 {
                   "$ref": "#/components/schemas/FallbackSonioxTranscriber",
                   "title": "Soniox"
-                },
-                {
-                  "$ref": "#/components/schemas/FallbackXaiTranscriber",
-                  "title": "xAI"
                 }
               ]
             }
@@ -7743,7 +7389,6 @@
             "description": "This is the model that will be used for the transcription.",
             "oneOf": [
               {
-                "type": "string",
                 "enum": [
                   "scribe_v1",
                   "scribe_v2",
@@ -8027,7 +7672,6 @@
             "description": "This is the Gladia model that will be used. Default is 'fast'",
             "oneOf": [
               {
-                "type": "string",
                 "enum": [
                   "accurate",
                   "fast",
@@ -8155,112 +7799,109 @@
             ]
           },
           "languages": {
-            "type": "array",
+            "type": "string",
             "description": "Defines the languages to use for the transcription. Required when languageBehaviour is 'manual'.",
-            "items": {
-              "type": "string",
-              "enum": [
-                "af",
-                "am",
-                "ar",
-                "as",
-                "az",
-                "ba",
-                "be",
-                "bg",
-                "bn",
-                "bo",
-                "br",
-                "bs",
-                "ca",
-                "cs",
-                "cy",
-                "da",
-                "de",
-                "el",
-                "en",
-                "es",
-                "et",
-                "eu",
-                "fa",
-                "fi",
-                "fo",
-                "fr",
-                "gl",
-                "gu",
-                "ha",
-                "haw",
-                "he",
-                "hi",
-                "hr",
-                "ht",
-                "hu",
-                "hy",
-                "id",
-                "is",
-                "it",
-                "ja",
-                "jv",
-                "ka",
-                "kk",
-                "km",
-                "kn",
-                "ko",
-                "la",
-                "lb",
-                "ln",
-                "lo",
-                "lt",
-                "lv",
-                "mg",
-                "mi",
-                "mk",
-                "ml",
-                "mn",
-                "mr",
-                "ms",
-                "mt",
-                "my",
-                "ne",
-                "nl",
-                "nn",
-                "no",
-                "oc",
-                "pa",
-                "pl",
-                "ps",
-                "pt",
-                "ro",
-                "ru",
-                "sa",
-                "sd",
-                "si",
-                "sk",
-                "sl",
-                "sn",
-                "so",
-                "sq",
-                "sr",
-                "su",
-                "sv",
-                "sw",
-                "ta",
-                "te",
-                "tg",
-                "th",
-                "tk",
-                "tl",
-                "tr",
-                "tt",
-                "uk",
-                "ur",
-                "uz",
-                "vi",
-                "yi",
-                "yo",
-                "zh"
-              ]
-            }
+            "enum": [
+              "af",
+              "am",
+              "ar",
+              "as",
+              "az",
+              "ba",
+              "be",
+              "bg",
+              "bn",
+              "bo",
+              "br",
+              "bs",
+              "ca",
+              "cs",
+              "cy",
+              "da",
+              "de",
+              "el",
+              "en",
+              "es",
+              "et",
+              "eu",
+              "fa",
+              "fi",
+              "fo",
+              "fr",
+              "gl",
+              "gu",
+              "ha",
+              "haw",
+              "he",
+              "hi",
+              "hr",
+              "ht",
+              "hu",
+              "hy",
+              "id",
+              "is",
+              "it",
+              "ja",
+              "jv",
+              "ka",
+              "kk",
+              "km",
+              "kn",
+              "ko",
+              "la",
+              "lb",
+              "ln",
+              "lo",
+              "lt",
+              "lv",
+              "mg",
+              "mi",
+              "mk",
+              "ml",
+              "mn",
+              "mr",
+              "ms",
+              "mt",
+              "my",
+              "ne",
+              "nl",
+              "nn",
+              "no",
+              "oc",
+              "pa",
+              "pl",
+              "ps",
+              "pt",
+              "ro",
+              "ru",
+              "sa",
+              "sd",
+              "si",
+              "sk",
+              "sl",
+              "sn",
+              "so",
+              "sq",
+              "sr",
+              "su",
+              "sv",
+              "sw",
+              "ta",
+              "te",
+              "tg",
+              "th",
+              "tk",
+              "tl",
+              "tr",
+              "tt",
+              "uk",
+              "ur",
+              "uz",
+              "vi",
+              "yi",
+              "yo",
+              "zh"
+            ]
           },
           "transcriptionHint": {
             "type": "string",
@@ -8568,198 +8209,195 @@
             "description": "Single language for transcription as an ISO 639-1 code (e.g., `en`, `es`). For multi-language hints or to enable Soniox auto-detect, use `languages` instead — when `languages` is set (including to an empty array), this field is ignored when building the Soniox request. Defaults to `en` if neither this nor `languages` is set."
           },
           "languages": {
-            "type": "array",
-            "description": "Language hints sent to Soniox as `language_hints`. Provide `[lang1, lang2, ...]` (ISO 639-1 codes) to bias recognition toward specific languages, or provide an explicit empty array `[]` to enable Soniox auto-detect across all 60+ supported languages. When set (including the empty array), this field takes precedence over the singular `language` field. When omitted, falls back to the singular `language` (which defaults to `en` if also unset). Best accuracy is achieved with a single language.",
-            "items": {
-              "type": "string",
-              "enum": [
-                "aa",
-                "ab",
-                "ae",
-                "af",
-                "ak",
-                "am",
-                "an",
-                "ar",
-                "as",
-                "av",
-                "ay",
-                "az",
-                "ba",
-                "be",
-                "bg",
-                "bh",
-                "bi",
-                "bm",
-                "bn",
-                "bo",
-                "br",
-                "bs",
-                "ca",
-                "ce",
-                "ch",
-                "co",
-                "cr",
-                "cs",
-                "cu",
-                "cv",
-                "cy",
-                "da",
-                "de",
-                "dv",
-                "dz",
-                "ee",
-                "el",
-                "en",
-                "eo",
-                "es",
-                "et",
-                "eu",
-                "fa",
-                "ff",
-                "fi",
-                "fj",
-                "fo",
-                "fr",
-                "fy",
-                "ga",
-                "gd",
-                "gl",
-                "gn",
-                "gu",
-                "gv",
-                "ha",
-                "he",
-                "hi",
-                "ho",
-                "hr",
-                "ht",
-                "hu",
-                "hy",
-                "hz",
-                "ia",
-                "id",
-                "ie",
-                "ig",
-                "ii",
-                "ik",
-                "io",
-                "is",
-                "it",
-                "iu",
-                "ja",
-                "jv",
-                "ka",
-                "kg",
-                "ki",
-                "kj",
-                "kk",
-                "kl",
-                "km",
-                "kn",
-                "ko",
-                "kr",
-                "ks",
-                "ku",
-                "kv",
-                "kw",
-                "ky",
-                "la",
-                "lb",
-                "lg",
-                "li",
-                "ln",
-                "lo",
-                "lt",
-                "lu",
-                "lv",
-                "mg",
-                "mh",
-                "mi",
-                "mk",
-                "ml",
-                "mn",
-                "mr",
-                "ms",
-                "mt",
-                "my",
-                "na",
-                "nb",
-                "nd",
-                "ne",
-                "ng",
-                "nl",
-                "nn",
-                "no",
-                "nr",
-                "nv",
-                "ny",
-                "oc",
-                "oj",
-                "om",
-                "or",
-                "os",
-                "pa",
-                "pi",
-                "pl",
-                "ps",
-                "pt",
-                "qu",
-                "rm",
-                "rn",
-                "ro",
-                "ru",
-                "rw",
-                "sa",
-                "sc",
-                "sd",
-                "se",
-                "sg",
-                "si",
-                "sk",
-                "sl",
-                "sm",
-                "sn",
-                "so",
-                "sq",
-                "sr",
-                "ss",
-                "st",
-                "su",
-                "sv",
-                "sw",
-                "ta",
-                "te",
-                "tg",
-                "th",
-                "ti",
-                "tk",
-                "tl",
-                "tn",
-                "to",
-                "tr",
-                "ts",
-                "tt",
-                "tw",
-                "ty",
-                "ug",
-                "uk",
-                "ur",
-                "uz",
-                "ve",
-                "vi",
-                "vo",
-                "wa",
-                "wo",
-                "xh",
-                "yi",
-                "yo",
-                "yue",
-                "za",
-                "zh",
-                "zu"
-              ]
-            }
+            "type": "string",
+            "enum": [
+              "aa",
+              "ab",
+              "ae",
+              "af",
+              "ak",
+              "am",
+              "an",
+              "ar",
+              "as",
+              "av",
+              "ay",
+              "az",
+              "ba",
+              "be",
+              "bg",
+              "bh",
+              "bi",
+              "bm",
+              "bn",
+              "bo",
+              "br",
+              "bs",
+              "ca",
+              "ce",
+              "ch",
+              "co",
+              "cr",
+              "cs",
+              "cu",
+              "cv",
+              "cy",
+              "da",
+              "de",
+              "dv",
+              "dz",
+              "ee",
+              "el",
+              "en",
+              "eo",
+              "es",
+              "et",
+              "eu",
+              "fa",
+              "ff",
+              "fi",
+              "fj",
+              "fo",
+              "fr",
+              "fy",
+              "ga",
+              "gd",
+              "gl",
+              "gn",
+              "gu",
+              "gv",
+              "ha",
+              "he",
+              "hi",
+              "ho",
+              "hr",
+              "ht",
+              "hu",
+              "hy",
+              "hz",
+              "ia",
+              "id",
+              "ie",
+              "ig",
+              "ii",
+              "ik",
+              "io",
+              "is",
+              "it",
+              "iu",
+              "ja",
+              "jv",
+              "ka",
+              "kg",
+              "ki",
+              "kj",
+              "kk",
+              "kl",
+              "km",
+              "kn",
+              "ko",
+              "kr",
+              "ks",
+              "ku",
+              "kv",
+              "kw",
+              "ky",
+              "la",
+              "lb",
+              "lg",
+              "li",
+              "ln",
+              "lo",
+              "lt",
+              "lu",
+              "lv",
+              "mg",
+              "mh",
+              "mi",
+              "mk",
+              "ml",
+              "mn",
+              "mr",
+              "ms",
+              "mt",
+              "my",
+              "na",
+              "nb",
+              "nd",
+              "ne",
+              "ng",
+              "nl",
+              "nn",
+              "no",
+              "nr",
+              "nv",
+              "ny",
+              "oc",
+              "oj",
+              "om",
+              "or",
+              "os",
+              "pa",
+              "pi",
+              "pl",
+              "ps",
+              "pt",
+              "qu",
+              "rm",
+              "rn",
+              "ro",
+              "ru",
+              "rw",
+              "sa",
+              "sc",
+              "sd",
+              "se",
+              "sg",
+              "si",
+              "sk",
+              "sl",
+              "sm",
+              "sn",
+              "so",
+              "sq",
+              "sr",
+              "ss",
+              "st",
+              "su",
+              "sv",
+              "sw",
+              "ta",
+              "te",
+              "tg",
+              "th",
+              "ti",
+              "tk",
+              "tl",
+              "tn",
+              "to",
+              "tr",
+              "ts",
+              "tt",
+              "tw",
+              "ty",
+              "ug",
+              "uk",
+              "ur",
+              "uz",
+              "ve",
+              "vi",
+              "vo",
+              "wa",
+              "wo",
+              "xh",
+              "yi",
+              "yo",
+              "yue",
+              "za",
+              "zh",
+              "zu"
+            ],
+            "description": "Language hints sent to Soniox as `language_hints`. Provide `[lang1, lang2, ...]` (ISO 639-1 codes) to bias recognition toward specific languages, or provide an explicit empty array `[]` to enable Soniox auto-detect across all 60+ supported languages. When set (including the empty array), this field takes precedence over the singular `language` field. When omitted, falls back to the singular `language` (which defaults to `en` if also unset). Best accuracy is achieved with a single language."
           },
           "languageHintsStrict": {
             "type": "boolean",
@@ -9327,66 +8965,6 @@
         },
         "required": [
           "model",
-          "provider"
-        ]
-      },
-      "XaiTranscriber": {
-        "type": "object",
-        "properties": {
-          "provider": {
-            "type": "string",
-            "enum": [
-              "xai"
-            ]
-          },
-          "model": {
-            "type": "string",
-            "description": "The xAI speech-to-text model to use. xAI currently exposes a single STT model — placeholder for future model selection.",
-            "enum": [
-              "default"
-            ]
-          },
-          "language": {
-            "type": "string",
-            "description": "Single language for transcription as an ISO 639-1 code (e.g., `en`, `es`). Defaults to `en` if not set. xAI auto-detects when omitted via the API but Vapi defaults to English for deterministic behavior.",
-            "enum": [
-              "ar",
-              "cs",
-              "da",
-              "de",
-              "en",
-              "es",
-              "fa",
-              "fil",
-              "fr",
-              "hi",
-              "id",
-              "it",
-              "ja",
-              "ko",
-              "mk",
-              "ms",
-              "nl",
-              "pl",
-              "pt",
-              "ro",
-              "ru",
-              "sv",
-              "th",
-              "tr",
-              "vi"
-            ]
-          },
-          "fallbackPlan": {
-            "description": "This is the plan for transcriber provider fallbacks in the event that the primary transcriber provider fails.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/FallbackTranscriberPlan"
-              }
-            ]
-          }
-        },
-        "required": [
           "provider"
         ]
       },
@@ -10178,7 +9756,6 @@
             "description": "This is the model that will be used for the transcription.",
             "oneOf": [
               {
-                "type": "string",
                 "enum": [
                   "scribe_v1",
                   "scribe_v2",
@@ -10454,7 +10031,6 @@
             "description": "This is the Gladia model that will be used. Default is 'fast'",
             "oneOf": [
               {
-                "type": "string",
                 "enum": [
                   "accurate",
                   "fast",
@@ -10582,112 +10158,109 @@
             ]
           },
           "languages": {
-            "type": "array",
+            "type": "string",
             "description": "Defines the languages to use for the transcription. Required when languageBehaviour is 'manual'.",
-            "items": {
-              "type": "string",
-              "enum": [
-                "af",
-                "am",
-                "ar",
-                "as",
-                "az",
-                "ba",
-                "be",
-                "bg",
-                "bn",
-                "bo",
-                "br",
-                "bs",
-                "ca",
-                "cs",
-                "cy",
-                "da",
-                "de",
-                "el",
-                "en",
-                "es",
-                "et",
-                "eu",
-                "fa",
-                "fi",
-                "fo",
-                "fr",
-                "gl",
-                "gu",
-                "ha",
-                "haw",
-                "he",
-                "hi",
-                "hr",
-                "ht",
-                "hu",
-                "hy",
-                "id",
-                "is",
-                "it",
-                "ja",
-                "jv",
-                "ka",
-                "kk",
-                "km",
-                "kn",
-                "ko",
-                "la",
-                "lb",
-                "ln",
-                "lo",
-                "lt",
-                "lv",
-                "mg",
-                "mi",
-                "mk",
-                "ml",
-                "mn",
-                "mr",
-                "ms",
-                "mt",
-                "my",
-                "ne",
-                "nl",
-                "nn",
-                "no",
-                "oc",
-                "pa",
-                "pl",
-                "ps",
-                "pt",
-                "ro",
-                "ru",
-                "sa",
-                "sd",
-                "si",
-                "sk",
-                "sl",
-                "sn",
-                "so",
-                "sq",
-                "sr",
-                "su",
-                "sv",
-                "sw",
-                "ta",
-                "te",
-                "tg",
-                "th",
-                "tk",
-                "tl",
-                "tr",
-                "tt",
-                "uk",
-                "ur",
-                "uz",
-                "vi",
-                "yi",
-                "yo",
-                "zh"
-              ]
-            }
+            "enum": [
+              "af",
+              "am",
+              "ar",
+              "as",
+              "az",
+              "ba",
+              "be",
+              "bg",
+              "bn",
+              "bo",
+              "br",
+              "bs",
+              "ca",
+              "cs",
+              "cy",
+              "da",
+              "de",
+              "el",
+              "en",
+              "es",
+              "et",
+              "eu",
+              "fa",
+              "fi",
+              "fo",
+              "fr",
+              "gl",
+              "gu",
+              "ha",
+              "haw",
+              "he",
+              "hi",
+              "hr",
+              "ht",
+              "hu",
+              "hy",
+              "id",
+              "is",
+              "it",
+              "ja",
+              "jv",
+              "ka",
+              "kk",
+              "km",
+              "kn",
+              "ko",
+              "la",
+              "lb",
+              "ln",
+              "lo",
+              "lt",
+              "lv",
+              "mg",
+              "mi",
+              "mk",
+              "ml",
+              "mn",
+              "mr",
+              "ms",
+              "mt",
+              "my",
+              "ne",
+              "nl",
+              "nn",
+              "no",
+              "oc",
+              "pa",
+              "pl",
+              "ps",
+              "pt",
+              "ro",
+              "ru",
+              "sa",
+              "sd",
+              "si",
+              "sk",
+              "sl",
+              "sn",
+              "so",
+              "sq",
+              "sr",
+              "su",
+              "sv",
+              "sw",
+              "ta",
+              "te",
+              "tg",
+              "th",
+              "tk",
+              "tl",
+              "tr",
+              "tt",
+              "uk",
+              "ur",
+              "uz",
+              "vi",
+              "yi",
+              "yo",
+              "zh"
+            ]
           },
           "transcriptionHint": {
             "type": "string",
@@ -10966,198 +10539,195 @@
             "description": "Single language for transcription as an ISO 639-1 code (e.g., `en`, `es`). For multi-language hints or to enable Soniox auto-detect, use `languages` instead — when `languages` is set (including to an empty array), this field is ignored when building the Soniox request. Defaults to `en` if neither this nor `languages` is set."
           },
           "languages": {
-            "type": "array",
-            "description": "Language hints sent to Soniox as `language_hints`. Provide `[lang1, lang2, ...]` (ISO 639-1 codes) to bias recognition toward specific languages, or provide an explicit empty array `[]` to enable Soniox auto-detect across all 60+ supported languages. When set (including the empty array), this field takes precedence over the singular `language` field. When omitted, falls back to the singular `language` (which defaults to `en` if also unset). Best accuracy is achieved with a single language.",
-            "items": {
-              "type": "string",
-              "enum": [
-                "aa",
-                "ab",
-                "ae",
-                "af",
-                "ak",
-                "am",
-                "an",
-                "ar",
-                "as",
-                "av",
-                "ay",
-                "az",
-                "ba",
-                "be",
-                "bg",
-                "bh",
-                "bi",
-                "bm",
-                "bn",
-                "bo",
-                "br",
-                "bs",
-                "ca",
-                "ce",
-                "ch",
-                "co",
-                "cr",
-                "cs",
-                "cu",
-                "cv",
-                "cy",
-                "da",
-                "de",
-                "dv",
-                "dz",
-                "ee",
-                "el",
-                "en",
-                "eo",
-                "es",
-                "et",
-                "eu",
-                "fa",
-                "ff",
-                "fi",
-                "fj",
-                "fo",
-                "fr",
-                "fy",
-                "ga",
-                "gd",
-                "gl",
-                "gn",
-                "gu",
-                "gv",
-                "ha",
-                "he",
-                "hi",
-                "ho",
-                "hr",
-                "ht",
-                "hu",
-                "hy",
-                "hz",
-                "ia",
-                "id",
-                "ie",
-                "ig",
-                "ii",
-                "ik",
-                "io",
-                "is",
-                "it",
-                "iu",
-                "ja",
-                "jv",
-                "ka",
-                "kg",
-                "ki",
-                "kj",
-                "kk",
-                "kl",
-                "km",
-                "kn",
-                "ko",
-                "kr",
-                "ks",
-                "ku",
-                "kv",
-                "kw",
-                "ky",
-                "la",
-                "lb",
-                "lg",
-                "li",
-                "ln",
-                "lo",
-                "lt",
-                "lu",
-                "lv",
-                "mg",
-                "mh",
-                "mi",
-                "mk",
-                "ml",
-                "mn",
-                "mr",
-                "ms",
-                "mt",
-                "my",
-                "na",
-                "nb",
-                "nd",
-                "ne",
-                "ng",
-                "nl",
-                "nn",
-                "no",
-                "nr",
-                "nv",
-                "ny",
-                "oc",
-                "oj",
-                "om",
-                "or",
-                "os",
-                "pa",
-                "pi",
-                "pl",
-                "ps",
-                "pt",
-                "qu",
-                "rm",
-                "rn",
-                "ro",
-                "ru",
-                "rw",
-                "sa",
-                "sc",
-                "sd",
-                "se",
-                "sg",
-                "si",
-                "sk",
-                "sl",
-                "sm",
-                "sn",
-                "so",
-                "sq",
-                "sr",
-                "ss",
-                "st",
-                "su",
-                "sv",
-                "sw",
-                "ta",
-                "te",
-                "tg",
-                "th",
-                "ti",
-                "tk",
-                "tl",
-                "tn",
-                "to",
-                "tr",
-                "ts",
-                "tt",
-                "tw",
-                "ty",
-                "ug",
-                "uk",
-                "ur",
-                "uz",
-                "ve",
-                "vi",
-                "vo",
-                "wa",
-                "wo",
-                "xh",
-                "yi",
-                "yo",
-                "yue",
-                "za",
-                "zh",
-                "zu"
-              ]
-            }
+            "type": "string",
+            "enum": [
+              "aa",
+              "ab",
+              "ae",
+              "af",
+              "ak",
+              "am",
+              "an",
+              "ar",
+              "as",
+              "av",
+              "ay",
+              "az",
+              "ba",
+              "be",
+              "bg",
+              "bh",
+              "bi",
+              "bm",
+              "bn",
+              "bo",
+              "br",
+              "bs",
+              "ca",
+              "ce",
+              "ch",
+              "co",
+              "cr",
+              "cs",
+              "cu",
+              "cv",
+              "cy",
+              "da",
+              "de",
+              "dv",
+              "dz",
+              "ee",
+              "el",
+              "en",
+              "eo",
+              "es",
+              "et",
+              "eu",
+              "fa",
+              "ff",
+              "fi",
+              "fj",
+              "fo",
+              "fr",
+              "fy",
+              "ga",
+              "gd",
+              "gl",
+              "gn",
+              "gu",
+              "gv",
+              "ha",
+              "he",
+              "hi",
+              "ho",
+              "hr",
+              "ht",
+              "hu",
+              "hy",
+              "hz",
+              "ia",
+              "id",
+              "ie",
+              "ig",
+              "ii",
+              "ik",
+              "io",
+              "is",
+              "it",
+              "iu",
+              "ja",
+              "jv",
+              "ka",
+              "kg",
+              "ki",
+              "kj",
+              "kk",
+              "kl",
+              "km",
+              "kn",
+              "ko",
+              "kr",
+              "ks",
+              "ku",
+              "kv",
+              "kw",
+              "ky",
+              "la",
+              "lb",
+              "lg",
+              "li",
+              "ln",
+              "lo",
+              "lt",
+              "lu",
+              "lv",
+              "mg",
+              "mh",
+              "mi",
+              "mk",
+              "ml",
+              "mn",
+              "mr",
+              "ms",
+              "mt",
+              "my",
+              "na",
+              "nb",
+              "nd",
+              "ne",
+              "ng",
+              "nl",
+              "nn",
+              "no",
+              "nr",
+              "nv",
+              "ny",
+              "oc",
+              "oj",
+              "om",
+              "or",
+              "os",
+              "pa",
+              "pi",
+              "pl",
+              "ps",
+              "pt",
+              "qu",
+              "rm",
+              "rn",
+              "ro",
+              "ru",
+              "rw",
+              "sa",
+              "sc",
+              "sd",
+              "se",
+              "sg",
+              "si",
+              "sk",
+              "sl",
+              "sm",
+              "sn",
+              "so",
+              "sq",
+              "sr",
+              "ss",
+              "st",
+              "su",
+              "sv",
+              "sw",
+              "ta",
+              "te",
+              "tg",
+              "th",
+              "ti",
+              "tk",
+              "tl",
+              "tn",
+              "to",
+              "tr",
+              "ts",
+              "tt",
+              "tw",
+              "ty",
+              "ug",
+              "uk",
+              "ur",
+              "uz",
+              "ve",
+              "vi",
+              "vo",
+              "wa",
+              "wo",
+              "xh",
+              "yi",
+              "yo",
+              "yue",
+              "za",
+              "zh",
+              "zu"
+            ],
+            "description": "Language hints sent to Soniox as `language_hints`. Provide `[lang1, lang2, ...]` (ISO 639-1 codes) to bias recognition toward specific languages, or provide an explicit empty array `[]` to enable Soniox auto-detect across all 60+ supported languages. When set (including the empty array), this field takes precedence over the singular `language` field. When omitted, falls back to the singular `language` (which defaults to `en` if also unset). Best accuracy is achieved with a single language."
           },
           "languageHintsStrict": {
             "type": "boolean",
@@ -11661,58 +11231,6 @@
         },
         "required": [
           "model",
-          "provider"
-        ]
-      },
-      "FallbackXaiTranscriber": {
-        "type": "object",
-        "properties": {
-          "provider": {
-            "type": "string",
-            "enum": [
-              "xai"
-            ]
-          },
-          "model": {
-            "type": "string",
-            "description": "The xAI speech-to-text model to use. xAI currently exposes a single STT model — placeholder for future model selection.",
-            "enum": [
-              "default"
-            ]
-          },
-          "language": {
-            "type": "string",
-            "description": "Single language for transcription as an ISO 639-1 code (e.g., `en`, `es`). Defaults to `en` if not set. xAI auto-detects when omitted via the API but Vapi defaults to English for deterministic behavior.",
-            "enum": [
-              "ar",
-              "cs",
-              "da",
-              "de",
-              "en",
-              "es",
-              "fa",
-              "fil",
-              "fr",
-              "hi",
-              "id",
-              "it",
-              "ja",
-              "ko",
-              "mk",
-              "ms",
-              "nl",
-              "pl",
-              "pt",
-              "ro",
-              "ru",
-              "sv",
-              "th",
-              "tr",
-              "vi"
-            ]
-          }
-        },
-        "required": [
           "provider"
         ]
       },
@@ -13528,10 +13046,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -13585,10 +13099,6 @@
               {
                 "$ref": "#/components/schemas/SonioxTranscriber",
                 "title": "SonioxTranscriber"
-              },
-              {
-                "$ref": "#/components/schemas/XaiTranscriber",
-                "title": "XaiTranscriber"
               }
             ]
           },
@@ -18552,10 +18062,6 @@
               {
                 "$ref": "#/components/schemas/SonioxTranscriber",
                 "title": "SonioxTranscriber"
-              },
-              {
-                "$ref": "#/components/schemas/XaiTranscriber",
-                "title": "XaiTranscriber"
               }
             ]
           },
@@ -18633,10 +18139,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -19837,10 +19339,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -19962,10 +19460,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -20782,10 +20276,6 @@
               {
                 "$ref": "#/components/schemas/SonioxTranscriber",
                 "title": "SonioxTranscriber"
-              },
-              {
-                "$ref": "#/components/schemas/XaiTranscriber",
-                "title": "XaiTranscriber"
               }
             ]
           },
@@ -20863,10 +20353,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -20888,7 +20374,7 @@
             "description": "This is the background sound in the call. Default for phone calls is 'office' and default for web calls is 'off'.\nYou can also provide a custom sound by providing a URL to an audio file.",
             "oneOf": [
               {
-                "type": "string",
+                "type": "enum",
                 "enum": [
                   "off",
                   "office"
@@ -22002,10 +21488,6 @@
                 {
                   "$ref": "#/components/schemas/FallbackInworldVoice",
                   "title": "Inworld"
-                },
-                {
-                  "$ref": "#/components/schemas/FallbackXaiVoice",
-                  "title": "xAI"
                 }
               ]
             }
@@ -24414,86 +23896,6 @@
           "voiceId"
         ]
       },
-      "XaiVoice": {
-        "type": "object",
-        "properties": {
-          "cachingEnabled": {
-            "type": "boolean",
-            "description": "This is the flag to toggle voice caching for the assistant.",
-            "example": true,
-            "default": true
-          },
-          "provider": {
-            "type": "string",
-            "description": "This is the voice provider that will be used.",
-            "enum": [
-              "xai"
-            ]
-          },
-          "voiceId": {
-            "type": "string",
-            "description": "Built-in voices: eve, ara, rex, sal, leo. Cloned voice IDs are also accepted.",
-            "maxLength": 120,
-            "title": "xAI Voice ID",
-            "enum": [
-              "ara",
-              "eve",
-              "leo",
-              "rex",
-              "sal"
-            ],
-            "example": "eve"
-          },
-          "language": {
-            "type": "string",
-            "description": "BCP-47 language code for xAI TTS synthesis.",
-            "enum": [
-              "ar-AE",
-              "ar-EG",
-              "ar-SA",
-              "auto",
-              "bn",
-              "de",
-              "en",
-              "es-ES",
-              "es-MX",
-              "fr",
-              "hi",
-              "id",
-              "it",
-              "ja",
-              "ko",
-              "pt-BR",
-              "pt-PT",
-              "ru",
-              "tr",
-              "vi",
-              "zh"
-            ],
-            "default": "en"
-          },
-          "chunkPlan": {
-            "description": "This is the plan for chunking the model output before it is sent to the voice provider.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ChunkPlan"
-              }
-            ]
-          },
-          "fallbackPlan": {
-            "description": "This is the plan for voice provider fallbacks in the event that the primary voice provider fails.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/FallbackPlan"
-              }
-            ]
-          }
-        },
-        "required": [
-          "provider",
-          "voiceId"
-        ]
-      },
       "FallbackAzureVoice": {
         "type": "object",
         "properties": {
@@ -26160,78 +25562,6 @@
             "maximum": 1.5,
             "default": 1,
             "example": null
-          },
-          "chunkPlan": {
-            "description": "This is the plan for chunking the model output before it is sent to the voice provider.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ChunkPlan"
-              }
-            ]
-          }
-        },
-        "required": [
-          "provider",
-          "voiceId"
-        ]
-      },
-      "FallbackXaiVoice": {
-        "type": "object",
-        "properties": {
-          "cachingEnabled": {
-            "type": "boolean",
-            "description": "This is the flag to toggle voice caching for the assistant.",
-            "example": true,
-            "default": true
-          },
-          "provider": {
-            "type": "string",
-            "description": "This is the voice provider that will be used.",
-            "enum": [
-              "xai"
-            ]
-          },
-          "voiceId": {
-            "type": "string",
-            "description": "Built-in voices: eve, ara, rex, sal, leo. Cloned voice IDs are also accepted.",
-            "maxLength": 120,
-            "title": "xAI Voice ID",
-            "enum": [
-              "ara",
-              "eve",
-              "leo",
-              "rex",
-              "sal"
-            ],
-            "example": "eve"
-          },
-          "language": {
-            "type": "string",
-            "description": "BCP-47 language code for xAI TTS synthesis.",
-            "enum": [
-              "ar-AE",
-              "ar-EG",
-              "ar-SA",
-              "auto",
-              "bn",
-              "de",
-              "en",
-              "es-ES",
-              "es-MX",
-              "fr",
-              "hi",
-              "id",
-              "it",
-              "ja",
-              "ko",
-              "pt-BR",
-              "pt-PT",
-              "ru",
-              "tr",
-              "vi",
-              "zh"
-            ],
-            "default": "en"
           },
           "chunkPlan": {
             "description": "This is the plan for chunking the model output before it is sent to the voice provider.",
@@ -28212,10 +27542,6 @@
               {
                 "$ref": "#/components/schemas/SonioxTranscriber",
                 "title": "SonioxTranscriber"
-              },
-              {
-                "$ref": "#/components/schemas/XaiTranscriber",
-                "title": "XaiTranscriber"
               }
             ]
           },
@@ -28362,10 +27688,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -29185,10 +28507,6 @@
               {
                 "$ref": "#/components/schemas/SonioxTranscriber",
                 "title": "SonioxTranscriber"
-              },
-              {
-                "$ref": "#/components/schemas/XaiTranscriber",
-                "title": "XaiTranscriber"
               }
             ]
           },
@@ -29335,10 +28653,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -30055,10 +29369,6 @@
               {
                 "$ref": "#/components/schemas/SonioxTranscriber",
                 "title": "SonioxTranscriber"
-              },
-              {
-                "$ref": "#/components/schemas/XaiTranscriber",
-                "title": "XaiTranscriber"
               }
             ]
           },
@@ -30205,10 +29515,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -31028,10 +30334,6 @@
               {
                 "$ref": "#/components/schemas/SonioxTranscriber",
                 "title": "SonioxTranscriber"
-              },
-              {
-                "$ref": "#/components/schemas/XaiTranscriber",
-                "title": "XaiTranscriber"
               }
             ]
           },
@@ -31178,10 +30480,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -32014,10 +31312,6 @@
               {
                 "$ref": "#/components/schemas/SonioxTranscriber",
                 "title": "SonioxTranscriber"
-              },
-              {
-                "$ref": "#/components/schemas/XaiTranscriber",
-                "title": "XaiTranscriber"
               }
             ]
           },
@@ -32095,10 +31389,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -32120,7 +31410,7 @@
             "description": "This is the background sound in the call. Default for phone calls is 'office' and default for web calls is 'off'.\nYou can also provide a custom sound by providing a URL to an audio file.",
             "oneOf": [
               {
-                "type": "string",
+                "type": "enum",
                 "enum": [
                   "off",
                   "office"
@@ -32700,10 +31990,6 @@
               {
                 "$ref": "#/components/schemas/SonioxTranscriber",
                 "title": "SonioxTranscriber"
-              },
-              {
-                "$ref": "#/components/schemas/XaiTranscriber",
-                "title": "XaiTranscriber"
               }
             ]
           },
@@ -32781,10 +32067,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -32806,7 +32088,7 @@
             "description": "This is the background sound in the call. Default for phone calls is 'office' and default for web calls is 'off'.\nYou can also provide a custom sound by providing a URL to an audio file.",
             "oneOf": [
               {
-                "type": "string",
+                "type": "enum",
                 "enum": [
                   "off",
                   "office"
@@ -33368,10 +32650,6 @@
               {
                 "$ref": "#/components/schemas/SonioxTranscriber",
                 "title": "SonioxTranscriber"
-              },
-              {
-                "$ref": "#/components/schemas/XaiTranscriber",
-                "title": "XaiTranscriber"
               }
             ]
           },
@@ -33449,10 +32727,6 @@
               {
                 "$ref": "#/components/schemas/MinimaxVoice",
                 "title": "MinimaxVoice"
-              },
-              {
-                "$ref": "#/components/schemas/XaiVoice",
-                "title": "XaiVoice"
               }
             ]
           },
@@ -33474,7 +32748,7 @@
             "description": "This is the background sound in the call. Default for phone calls is 'office' and default for web calls is 'off'.\nYou can also provide a custom sound by providing a URL to an audio file.",
             "oneOf": [
               {
-                "type": "string",
+                "type": "enum",
                 "enum": [
                   "off",
                   "office"
@@ -35242,11 +34516,6 @@
               "call.in-progress.error-vapifault-xai-401-unauthorized",
               "call.in-progress.error-vapifault-xai-403-model-access-denied",
               "call.in-progress.error-vapifault-xai-429-exceeded-quota",
-              "call.in-progress.error-vapifault-xai-transcriber-auth-failed",
-              "call.in-progress.error-vapifault-xai-transcriber-failed",
-              "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
-              "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
-              "call.in-progress.error-vapifault-xai-transcriber-server-error",
               "call.in-progress.error-warm-transfer-assistant-cancelled",
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -35530,12 +34799,6 @@
               "pipeline-error-xai-500-server-error",
               "pipeline-error-xai-503-server-overloaded-error",
               "pipeline-error-xai-llm-failed",
-              "pipeline-error-xai-transcriber-auth-failed",
-              "pipeline-error-xai-transcriber-failed",
-              "pipeline-error-xai-transcriber-invalid-config",
-              "pipeline-error-xai-transcriber-rate-limited",
-              "pipeline-error-xai-transcriber-server-error",
-              "pipeline-error-xai-voice-failed",
               "scheduled-call-deleted",
               "silence-timed-out",
               "twilio-failed-to-connect-call",
@@ -39304,7 +38567,7 @@
         "properties": {
           "realm": {
             "type": "string",
-            "description": "This will be expected in the `realm` field of the `authorization` header of the SIP INVITE. Defaults to the SIP realm of the Vapi region serving the request (e.g. `sip.vapi.ai` for US, `sip.eu.vapi.ai` for EU)."
+            "description": "This will be expected in the `realm` field of the `authorization` header of the SIP INVITE. Defaults to sip.vapi.ai."
           },
           "username": {
             "type": "string",
@@ -57871,8 +57134,7 @@
               "smallest-ai",
               "tavus",
               "vapi",
-              "wellsaid",
-              "xai"
+              "wellsaid"
             ]
           },
           "providerId": {
@@ -57992,8 +57254,7 @@
               "smallest-ai",
               "tavus",
               "vapi",
-              "wellsaid",
-              "xai"
+              "wellsaid"
             ],
             "items": {
               "type": "string",
@@ -58016,8 +57277,7 @@
                 "smallest-ai",
                 "tavus",
                 "vapi",
-                "wellsaid",
-                "xai"
+                "wellsaid"
               ]
             }
           }
@@ -60945,11 +60205,6 @@
               "call.in-progress.error-vapifault-xai-401-unauthorized",
               "call.in-progress.error-vapifault-xai-403-model-access-denied",
               "call.in-progress.error-vapifault-xai-429-exceeded-quota",
-              "call.in-progress.error-vapifault-xai-transcriber-auth-failed",
-              "call.in-progress.error-vapifault-xai-transcriber-failed",
-              "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
-              "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
-              "call.in-progress.error-vapifault-xai-transcriber-server-error",
               "call.in-progress.error-warm-transfer-assistant-cancelled",
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -61233,12 +60488,6 @@
               "pipeline-error-xai-500-server-error",
               "pipeline-error-xai-503-server-overloaded-error",
               "pipeline-error-xai-llm-failed",
-              "pipeline-error-xai-transcriber-auth-failed",
-              "pipeline-error-xai-transcriber-failed",
-              "pipeline-error-xai-transcriber-invalid-config",
-              "pipeline-error-xai-transcriber-rate-limited",
-              "pipeline-error-xai-transcriber-server-error",
-              "pipeline-error-xai-voice-failed",
               "scheduled-call-deleted",
               "silence-timed-out",
               "twilio-failed-to-connect-call",
@@ -62315,11 +61564,6 @@
               "call.in-progress.error-vapifault-xai-401-unauthorized",
               "call.in-progress.error-vapifault-xai-403-model-access-denied",
               "call.in-progress.error-vapifault-xai-429-exceeded-quota",
-              "call.in-progress.error-vapifault-xai-transcriber-auth-failed",
-              "call.in-progress.error-vapifault-xai-transcriber-failed",
-              "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
-              "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
-              "call.in-progress.error-vapifault-xai-transcriber-server-error",
               "call.in-progress.error-warm-transfer-assistant-cancelled",
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -62603,12 +61847,6 @@
               "pipeline-error-xai-500-server-error",
               "pipeline-error-xai-503-server-overloaded-error",
               "pipeline-error-xai-llm-failed",
-              "pipeline-error-xai-transcriber-auth-failed",
-              "pipeline-error-xai-transcriber-failed",
-              "pipeline-error-xai-transcriber-invalid-config",
-              "pipeline-error-xai-transcriber-rate-limited",
-              "pipeline-error-xai-transcriber-server-error",
-              "pipeline-error-xai-voice-failed",
               "scheduled-call-deleted",
               "silence-timed-out",
               "twilio-failed-to-connect-call",

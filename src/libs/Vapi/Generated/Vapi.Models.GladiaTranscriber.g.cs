@@ -40,7 +40,8 @@ namespace Vapi
         /// Defines the languages to use for the transcription. Required when languageBehaviour is 'manual'.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("languages")]
-        public global::System.Collections.Generic.IList<global::Vapi.GladiaTranscriberLanguage2>? Languages { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.GladiaTranscriberLanguagesJsonConverter))]
+        public global::Vapi.GladiaTranscriberLanguages? Languages { get; set; }
 
         /// <summary>
         /// Provides a custom vocabulary to the model to improve accuracy of transcribing context specific words, technical terms, names, etc. If empty, this argument is ignored.<br/>
@@ -205,7 +206,7 @@ namespace Vapi
             global::Vapi.GladiaTranscriberModel? model,
             global::Vapi.GladiaTranscriberLanguageBehaviour? languageBehaviour,
             global::Vapi.GladiaTranscriberLanguage? language,
-            global::System.Collections.Generic.IList<global::Vapi.GladiaTranscriberLanguage2>? languages,
+            global::Vapi.GladiaTranscriberLanguages? languages,
             string? transcriptionHint,
             bool? prosody,
             bool? audioEnhancer,

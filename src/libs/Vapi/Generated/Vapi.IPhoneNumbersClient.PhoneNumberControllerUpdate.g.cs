@@ -13,7 +13,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.PhoneNumberControllerUpdateResponse> PhoneNumberControllerUpdateAsync(
-            global::System.Guid id,
+            string id,
 
             global::Vapi.PhoneNumberControllerUpdateRequest request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -27,7 +27,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.PhoneNumberControllerUpdateResponse>> PhoneNumberControllerUpdateAsResponseAsync(
-            global::System.Guid id,
+            string id,
 
             global::Vapi.PhoneNumberControllerUpdateRequest request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -40,7 +40,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.PhoneNumberControllerUpdateResponse> PhoneNumberControllerUpdateAsync(
-            global::System.Guid id,
+            string id,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

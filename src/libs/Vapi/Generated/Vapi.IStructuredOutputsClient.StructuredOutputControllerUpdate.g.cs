@@ -14,7 +14,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.StructuredOutput> StructuredOutputControllerUpdateAsync(
-            global::System.Guid id,
+            string id,
             string schemaOverride,
 
             global::Vapi.UpdateStructuredOutputDTO request,
@@ -30,7 +30,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.StructuredOutput>> StructuredOutputControllerUpdateAsResponseAsync(
-            global::System.Guid id,
+            string id,
             string schemaOverride,
 
             global::Vapi.UpdateStructuredOutputDTO request,
@@ -102,7 +102,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.StructuredOutput> StructuredOutputControllerUpdateAsync(
-            global::System.Guid id,
+            string id,
             string schemaOverride,
             global::Vapi.UpdateStructuredOutputDTOType? type = default,
             string? regex = default,

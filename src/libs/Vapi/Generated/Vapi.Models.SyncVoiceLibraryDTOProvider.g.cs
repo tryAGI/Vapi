@@ -84,10 +84,6 @@ namespace Vapi
         /// 
         /// </summary>
         Wellsaid,
-        /// <summary>
-        /// 
-        /// </summary>
-        Xai,
     }
 
     /// <summary>
@@ -121,7 +117,6 @@ namespace Vapi
                 SyncVoiceLibraryDTOProvider.Tavus => "tavus",
                 SyncVoiceLibraryDTOProvider.Vapi => "vapi",
                 SyncVoiceLibraryDTOProvider.Wellsaid => "wellsaid",
-                SyncVoiceLibraryDTOProvider.Xai => "xai",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -151,7 +146,6 @@ namespace Vapi
                 "tavus" => SyncVoiceLibraryDTOProvider.Tavus,
                 "vapi" => SyncVoiceLibraryDTOProvider.Vapi,
                 "wellsaid" => SyncVoiceLibraryDTOProvider.Wellsaid,
-                "xai" => SyncVoiceLibraryDTOProvider.Xai,
                 _ => null,
             };
         }
