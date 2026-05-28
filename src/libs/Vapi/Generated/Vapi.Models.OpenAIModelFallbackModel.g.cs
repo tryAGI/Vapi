@@ -263,6 +263,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt41_australiaeast,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt4o,
         /// <summary>
         /// 
@@ -411,6 +415,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt4o_australiaeast,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt5,
         /// <summary>
         /// 
@@ -448,6 +456,10 @@ namespace Vapi
         /// 
         /// </summary>
         Gpt54Mini,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54Mini_australiaeast,
         /// <summary>
         /// 
         /// </summary>
@@ -557,6 +569,7 @@ namespace Vapi
                 OpenAIModelFallbackModel.Gpt41Nano20250414_southcentralus => "gpt-4.1-nano-2025-04-14:southcentralus",
                 OpenAIModelFallbackModel.Gpt41Nano20250414_westus => "gpt-4.1-nano-2025-04-14:westus",
                 OpenAIModelFallbackModel.Gpt41Nano20250414_westus3 => "gpt-4.1-nano-2025-04-14:westus3",
+                OpenAIModelFallbackModel.Gpt41_australiaeast => "gpt-4.1:australiaeast",
                 OpenAIModelFallbackModel.Gpt4o => "gpt-4o",
                 OpenAIModelFallbackModel.Gpt4o20240513 => "gpt-4o-2024-05-13",
                 OpenAIModelFallbackModel.Gpt4o20240513_eastus => "gpt-4o-2024-05-13:eastus",
@@ -594,6 +607,7 @@ namespace Vapi
                 OpenAIModelFallbackModel.Gpt4oMiniRealtimePreview20241217 => "gpt-4o-mini-realtime-preview-2024-12-17",
                 OpenAIModelFallbackModel.Gpt4oRealtimePreview20241001 => "gpt-4o-realtime-preview-2024-10-01",
                 OpenAIModelFallbackModel.Gpt4oRealtimePreview20241217 => "gpt-4o-realtime-preview-2024-12-17",
+                OpenAIModelFallbackModel.Gpt4o_australiaeast => "gpt-4o:australiaeast",
                 OpenAIModelFallbackModel.Gpt5 => "gpt-5",
                 OpenAIModelFallbackModel.Gpt5ChatLatest => "gpt-5-chat-latest",
                 OpenAIModelFallbackModel.Gpt5Mini => "gpt-5-mini",
@@ -604,6 +618,7 @@ namespace Vapi
                 OpenAIModelFallbackModel.Gpt52ChatLatest => "gpt-5.2-chat-latest",
                 OpenAIModelFallbackModel.Gpt54 => "gpt-5.4",
                 OpenAIModelFallbackModel.Gpt54Mini => "gpt-5.4-mini",
+                OpenAIModelFallbackModel.Gpt54Mini_australiaeast => "gpt-5.4-mini:australiaeast",
                 OpenAIModelFallbackModel.Gpt54Nano => "gpt-5.4-nano",
                 OpenAIModelFallbackModel.GptRealtime20250828 => "gpt-realtime-2025-08-28",
                 OpenAIModelFallbackModel.GptRealtimeMini20251215 => "gpt-realtime-mini-2025-12-15",
@@ -685,6 +700,7 @@ namespace Vapi
                 "gpt-4.1-nano-2025-04-14:southcentralus" => OpenAIModelFallbackModel.Gpt41Nano20250414_southcentralus,
                 "gpt-4.1-nano-2025-04-14:westus" => OpenAIModelFallbackModel.Gpt41Nano20250414_westus,
                 "gpt-4.1-nano-2025-04-14:westus3" => OpenAIModelFallbackModel.Gpt41Nano20250414_westus3,
+                "gpt-4.1:australiaeast" => OpenAIModelFallbackModel.Gpt41_australiaeast,
                 "gpt-4o" => OpenAIModelFallbackModel.Gpt4o,
                 "gpt-4o-2024-05-13" => OpenAIModelFallbackModel.Gpt4o20240513,
                 "gpt-4o-2024-05-13:eastus" => OpenAIModelFallbackModel.Gpt4o20240513_eastus,
@@ -722,6 +738,7 @@ namespace Vapi
                 "gpt-4o-mini-realtime-preview-2024-12-17" => OpenAIModelFallbackModel.Gpt4oMiniRealtimePreview20241217,
                 "gpt-4o-realtime-preview-2024-10-01" => OpenAIModelFallbackModel.Gpt4oRealtimePreview20241001,
                 "gpt-4o-realtime-preview-2024-12-17" => OpenAIModelFallbackModel.Gpt4oRealtimePreview20241217,
+                "gpt-4o:australiaeast" => OpenAIModelFallbackModel.Gpt4o_australiaeast,
                 "gpt-5" => OpenAIModelFallbackModel.Gpt5,
                 "gpt-5-chat-latest" => OpenAIModelFallbackModel.Gpt5ChatLatest,
                 "gpt-5-mini" => OpenAIModelFallbackModel.Gpt5Mini,
@@ -732,6 +749,7 @@ namespace Vapi
                 "gpt-5.2-chat-latest" => OpenAIModelFallbackModel.Gpt52ChatLatest,
                 "gpt-5.4" => OpenAIModelFallbackModel.Gpt54,
                 "gpt-5.4-mini" => OpenAIModelFallbackModel.Gpt54Mini,
+                "gpt-5.4-mini:australiaeast" => OpenAIModelFallbackModel.Gpt54Mini_australiaeast,
                 "gpt-5.4-nano" => OpenAIModelFallbackModel.Gpt54Nano,
                 "gpt-realtime-2025-08-28" => OpenAIModelFallbackModel.GptRealtime20250828,
                 "gpt-realtime-mini-2025-12-15" => OpenAIModelFallbackModel.GptRealtimeMini20251215,

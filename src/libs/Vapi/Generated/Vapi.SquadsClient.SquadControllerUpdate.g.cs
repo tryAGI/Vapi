@@ -27,12 +27,12 @@ namespace Vapi
             };
         partial void PrepareSquadControllerUpdateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string id,
+            ref global::System.Guid id,
             global::Vapi.UpdateSquadDTO request);
         partial void PrepareSquadControllerUpdateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string id,
+            global::System.Guid id,
             global::Vapi.UpdateSquadDTO request);
         partial void ProcessSquadControllerUpdateResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -52,7 +52,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.Squad> SquadControllerUpdateAsync(
-            string id,
+            global::System.Guid id,
 
             global::Vapi.UpdateSquadDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -77,7 +77,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Squad>> SquadControllerUpdateAsResponseAsync(
-            string id,
+            global::System.Guid id,
 
             global::Vapi.UpdateSquadDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -459,7 +459,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.Squad> SquadControllerUpdateAsync(
-            string id,
+            global::System.Guid id,
             global::System.Collections.Generic.IList<global::Vapi.SquadMemberDTO> members,
             string? name = default,
             global::Vapi.AssistantOverrides? membersOverrides = default,

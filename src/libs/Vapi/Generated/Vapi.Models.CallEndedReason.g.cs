@@ -1123,6 +1123,26 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallInProgressErrorVapifaultXaiTranscriberAuthFailed,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorVapifaultXaiTranscriberFailed,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorVapifaultXaiTranscriberInvalidConfig,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorVapifaultXaiTranscriberRateLimited,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorVapifaultXaiTranscriberServerError,
+        /// <summary>
+        /// 
+        /// </summary>
         CallInProgressErrorWarmTransferAssistantCancelled,
         /// <summary>
         /// 
@@ -2255,6 +2275,30 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        PipelineErrorXaiTranscriberAuthFailed,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorXaiTranscriberFailed,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorXaiTranscriberInvalidConfig,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorXaiTranscriberRateLimited,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorXaiTranscriberServerError,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorXaiVoiceFailed,
+        /// <summary>
+        /// 
+        /// </summary>
         ScheduledCallDeleted,
         /// <summary>
         /// 
@@ -2584,6 +2628,11 @@ namespace Vapi
                 CallEndedReason.CallInProgressErrorVapifaultXai401Unauthorized => "call.in-progress.error-vapifault-xai-401-unauthorized",
                 CallEndedReason.CallInProgressErrorVapifaultXai403ModelAccessDenied => "call.in-progress.error-vapifault-xai-403-model-access-denied",
                 CallEndedReason.CallInProgressErrorVapifaultXai429ExceededQuota => "call.in-progress.error-vapifault-xai-429-exceeded-quota",
+                CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberAuthFailed => "call.in-progress.error-vapifault-xai-transcriber-auth-failed",
+                CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberFailed => "call.in-progress.error-vapifault-xai-transcriber-failed",
+                CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberInvalidConfig => "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
+                CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberRateLimited => "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
+                CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberServerError => "call.in-progress.error-vapifault-xai-transcriber-server-error",
                 CallEndedReason.CallInProgressErrorWarmTransferAssistantCancelled => "call.in-progress.error-warm-transfer-assistant-cancelled",
                 CallEndedReason.CallInProgressErrorWarmTransferMaxDuration => "call.in-progress.error-warm-transfer-max-duration",
                 CallEndedReason.CallInProgressErrorWarmTransferMicrophoneTimeout => "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -2867,6 +2916,12 @@ namespace Vapi
                 CallEndedReason.PipelineErrorXai500ServerError => "pipeline-error-xai-500-server-error",
                 CallEndedReason.PipelineErrorXai503ServerOverloadedError => "pipeline-error-xai-503-server-overloaded-error",
                 CallEndedReason.PipelineErrorXaiLlmFailed => "pipeline-error-xai-llm-failed",
+                CallEndedReason.PipelineErrorXaiTranscriberAuthFailed => "pipeline-error-xai-transcriber-auth-failed",
+                CallEndedReason.PipelineErrorXaiTranscriberFailed => "pipeline-error-xai-transcriber-failed",
+                CallEndedReason.PipelineErrorXaiTranscriberInvalidConfig => "pipeline-error-xai-transcriber-invalid-config",
+                CallEndedReason.PipelineErrorXaiTranscriberRateLimited => "pipeline-error-xai-transcriber-rate-limited",
+                CallEndedReason.PipelineErrorXaiTranscriberServerError => "pipeline-error-xai-transcriber-server-error",
+                CallEndedReason.PipelineErrorXaiVoiceFailed => "pipeline-error-xai-voice-failed",
                 CallEndedReason.ScheduledCallDeleted => "scheduled-call-deleted",
                 CallEndedReason.SilenceTimedOut => "silence-timed-out",
                 CallEndedReason.TwilioFailedToConnectCall => "twilio-failed-to-connect-call",
@@ -3165,6 +3220,11 @@ namespace Vapi
                 "call.in-progress.error-vapifault-xai-401-unauthorized" => CallEndedReason.CallInProgressErrorVapifaultXai401Unauthorized,
                 "call.in-progress.error-vapifault-xai-403-model-access-denied" => CallEndedReason.CallInProgressErrorVapifaultXai403ModelAccessDenied,
                 "call.in-progress.error-vapifault-xai-429-exceeded-quota" => CallEndedReason.CallInProgressErrorVapifaultXai429ExceededQuota,
+                "call.in-progress.error-vapifault-xai-transcriber-auth-failed" => CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberAuthFailed,
+                "call.in-progress.error-vapifault-xai-transcriber-failed" => CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberFailed,
+                "call.in-progress.error-vapifault-xai-transcriber-invalid-config" => CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberInvalidConfig,
+                "call.in-progress.error-vapifault-xai-transcriber-rate-limited" => CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberRateLimited,
+                "call.in-progress.error-vapifault-xai-transcriber-server-error" => CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberServerError,
                 "call.in-progress.error-warm-transfer-assistant-cancelled" => CallEndedReason.CallInProgressErrorWarmTransferAssistantCancelled,
                 "call.in-progress.error-warm-transfer-max-duration" => CallEndedReason.CallInProgressErrorWarmTransferMaxDuration,
                 "call.in-progress.error-warm-transfer-microphone-timeout" => CallEndedReason.CallInProgressErrorWarmTransferMicrophoneTimeout,
@@ -3448,6 +3508,12 @@ namespace Vapi
                 "pipeline-error-xai-500-server-error" => CallEndedReason.PipelineErrorXai500ServerError,
                 "pipeline-error-xai-503-server-overloaded-error" => CallEndedReason.PipelineErrorXai503ServerOverloadedError,
                 "pipeline-error-xai-llm-failed" => CallEndedReason.PipelineErrorXaiLlmFailed,
+                "pipeline-error-xai-transcriber-auth-failed" => CallEndedReason.PipelineErrorXaiTranscriberAuthFailed,
+                "pipeline-error-xai-transcriber-failed" => CallEndedReason.PipelineErrorXaiTranscriberFailed,
+                "pipeline-error-xai-transcriber-invalid-config" => CallEndedReason.PipelineErrorXaiTranscriberInvalidConfig,
+                "pipeline-error-xai-transcriber-rate-limited" => CallEndedReason.PipelineErrorXaiTranscriberRateLimited,
+                "pipeline-error-xai-transcriber-server-error" => CallEndedReason.PipelineErrorXaiTranscriberServerError,
+                "pipeline-error-xai-voice-failed" => CallEndedReason.PipelineErrorXaiVoiceFailed,
                 "scheduled-call-deleted" => CallEndedReason.ScheduledCallDeleted,
                 "silence-timed-out" => CallEndedReason.SilenceTimedOut,
                 "twilio-failed-to-connect-call" => CallEndedReason.TwilioFailedToConnectCall,
