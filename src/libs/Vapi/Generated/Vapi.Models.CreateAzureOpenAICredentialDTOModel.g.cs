@@ -35,6 +35,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt41,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt4120250414,
         /// <summary>
         /// 
@@ -44,6 +48,10 @@ namespace Vapi
         /// 
         /// </summary>
         Gpt41Nano20250414,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt4o,
         /// <summary>
         /// 
         /// </summary>
@@ -99,6 +107,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt54Mini20260317,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt54Nano,
     }
 
@@ -120,9 +132,11 @@ namespace Vapi
                 CreateAzureOpenAICredentialDTOModel.Gpt40613 => "gpt-4-0613",
                 CreateAzureOpenAICredentialDTOModel.Gpt41106Preview => "gpt-4-1106-preview",
                 CreateAzureOpenAICredentialDTOModel.Gpt4Turbo20240409 => "gpt-4-turbo-2024-04-09",
+                CreateAzureOpenAICredentialDTOModel.Gpt41 => "gpt-4.1",
                 CreateAzureOpenAICredentialDTOModel.Gpt4120250414 => "gpt-4.1-2025-04-14",
                 CreateAzureOpenAICredentialDTOModel.Gpt41Mini20250414 => "gpt-4.1-mini-2025-04-14",
                 CreateAzureOpenAICredentialDTOModel.Gpt41Nano20250414 => "gpt-4.1-nano-2025-04-14",
+                CreateAzureOpenAICredentialDTOModel.Gpt4o => "gpt-4o",
                 CreateAzureOpenAICredentialDTOModel.Gpt4o20240513 => "gpt-4o-2024-05-13",
                 CreateAzureOpenAICredentialDTOModel.Gpt4o20240806 => "gpt-4o-2024-08-06",
                 CreateAzureOpenAICredentialDTOModel.Gpt4o20241120 => "gpt-4o-2024-11-20",
@@ -136,6 +150,7 @@ namespace Vapi
                 CreateAzureOpenAICredentialDTOModel.Gpt52Chat => "gpt-5.2-chat",
                 CreateAzureOpenAICredentialDTOModel.Gpt54 => "gpt-5.4",
                 CreateAzureOpenAICredentialDTOModel.Gpt54Mini => "gpt-5.4-mini",
+                CreateAzureOpenAICredentialDTOModel.Gpt54Mini20260317 => "gpt-5.4-mini-2026-03-17",
                 CreateAzureOpenAICredentialDTOModel.Gpt54Nano => "gpt-5.4-nano",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -153,9 +168,11 @@ namespace Vapi
                 "gpt-4-0613" => CreateAzureOpenAICredentialDTOModel.Gpt40613,
                 "gpt-4-1106-preview" => CreateAzureOpenAICredentialDTOModel.Gpt41106Preview,
                 "gpt-4-turbo-2024-04-09" => CreateAzureOpenAICredentialDTOModel.Gpt4Turbo20240409,
+                "gpt-4.1" => CreateAzureOpenAICredentialDTOModel.Gpt41,
                 "gpt-4.1-2025-04-14" => CreateAzureOpenAICredentialDTOModel.Gpt4120250414,
                 "gpt-4.1-mini-2025-04-14" => CreateAzureOpenAICredentialDTOModel.Gpt41Mini20250414,
                 "gpt-4.1-nano-2025-04-14" => CreateAzureOpenAICredentialDTOModel.Gpt41Nano20250414,
+                "gpt-4o" => CreateAzureOpenAICredentialDTOModel.Gpt4o,
                 "gpt-4o-2024-05-13" => CreateAzureOpenAICredentialDTOModel.Gpt4o20240513,
                 "gpt-4o-2024-08-06" => CreateAzureOpenAICredentialDTOModel.Gpt4o20240806,
                 "gpt-4o-2024-11-20" => CreateAzureOpenAICredentialDTOModel.Gpt4o20241120,
@@ -169,6 +186,7 @@ namespace Vapi
                 "gpt-5.2-chat" => CreateAzureOpenAICredentialDTOModel.Gpt52Chat,
                 "gpt-5.4" => CreateAzureOpenAICredentialDTOModel.Gpt54,
                 "gpt-5.4-mini" => CreateAzureOpenAICredentialDTOModel.Gpt54Mini,
+                "gpt-5.4-mini-2026-03-17" => CreateAzureOpenAICredentialDTOModel.Gpt54Mini20260317,
                 "gpt-5.4-nano" => CreateAzureOpenAICredentialDTOModel.Gpt54Nano,
                 _ => null,
             };

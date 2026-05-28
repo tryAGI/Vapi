@@ -35,6 +35,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt41,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt4120250414,
         /// <summary>
         /// 
@@ -44,6 +48,10 @@ namespace Vapi
         /// 
         /// </summary>
         Gpt41Nano20250414,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt4o,
         /// <summary>
         /// 
         /// </summary>
@@ -99,6 +107,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt54Mini20260317,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt54Nano,
     }
 
@@ -120,9 +132,11 @@ namespace Vapi
                 AzureOpenAICredentialModel.Gpt40613 => "gpt-4-0613",
                 AzureOpenAICredentialModel.Gpt41106Preview => "gpt-4-1106-preview",
                 AzureOpenAICredentialModel.Gpt4Turbo20240409 => "gpt-4-turbo-2024-04-09",
+                AzureOpenAICredentialModel.Gpt41 => "gpt-4.1",
                 AzureOpenAICredentialModel.Gpt4120250414 => "gpt-4.1-2025-04-14",
                 AzureOpenAICredentialModel.Gpt41Mini20250414 => "gpt-4.1-mini-2025-04-14",
                 AzureOpenAICredentialModel.Gpt41Nano20250414 => "gpt-4.1-nano-2025-04-14",
+                AzureOpenAICredentialModel.Gpt4o => "gpt-4o",
                 AzureOpenAICredentialModel.Gpt4o20240513 => "gpt-4o-2024-05-13",
                 AzureOpenAICredentialModel.Gpt4o20240806 => "gpt-4o-2024-08-06",
                 AzureOpenAICredentialModel.Gpt4o20241120 => "gpt-4o-2024-11-20",
@@ -136,6 +150,7 @@ namespace Vapi
                 AzureOpenAICredentialModel.Gpt52Chat => "gpt-5.2-chat",
                 AzureOpenAICredentialModel.Gpt54 => "gpt-5.4",
                 AzureOpenAICredentialModel.Gpt54Mini => "gpt-5.4-mini",
+                AzureOpenAICredentialModel.Gpt54Mini20260317 => "gpt-5.4-mini-2026-03-17",
                 AzureOpenAICredentialModel.Gpt54Nano => "gpt-5.4-nano",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -153,9 +168,11 @@ namespace Vapi
                 "gpt-4-0613" => AzureOpenAICredentialModel.Gpt40613,
                 "gpt-4-1106-preview" => AzureOpenAICredentialModel.Gpt41106Preview,
                 "gpt-4-turbo-2024-04-09" => AzureOpenAICredentialModel.Gpt4Turbo20240409,
+                "gpt-4.1" => AzureOpenAICredentialModel.Gpt41,
                 "gpt-4.1-2025-04-14" => AzureOpenAICredentialModel.Gpt4120250414,
                 "gpt-4.1-mini-2025-04-14" => AzureOpenAICredentialModel.Gpt41Mini20250414,
                 "gpt-4.1-nano-2025-04-14" => AzureOpenAICredentialModel.Gpt41Nano20250414,
+                "gpt-4o" => AzureOpenAICredentialModel.Gpt4o,
                 "gpt-4o-2024-05-13" => AzureOpenAICredentialModel.Gpt4o20240513,
                 "gpt-4o-2024-08-06" => AzureOpenAICredentialModel.Gpt4o20240806,
                 "gpt-4o-2024-11-20" => AzureOpenAICredentialModel.Gpt4o20241120,
@@ -169,6 +186,7 @@ namespace Vapi
                 "gpt-5.2-chat" => AzureOpenAICredentialModel.Gpt52Chat,
                 "gpt-5.4" => AzureOpenAICredentialModel.Gpt54,
                 "gpt-5.4-mini" => AzureOpenAICredentialModel.Gpt54Mini,
+                "gpt-5.4-mini-2026-03-17" => AzureOpenAICredentialModel.Gpt54Mini20260317,
                 "gpt-5.4-nano" => AzureOpenAICredentialModel.Gpt54Nano,
                 _ => null,
             };

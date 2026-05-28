@@ -27,11 +27,11 @@ namespace Vapi
             };
         partial void PreparePhoneNumberControllerFindOneArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string id);
+            ref global::System.Guid id);
         partial void PreparePhoneNumberControllerFindOneRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string id);
+            global::System.Guid id);
         partial void ProcessPhoneNumberControllerFindOneResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -49,7 +49,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.PhoneNumberControllerFindOneResponse> PhoneNumberControllerFindOneAsync(
-            string id,
+            global::System.Guid id,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -69,7 +69,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.PhoneNumberControllerFindOneResponse>> PhoneNumberControllerFindOneAsResponseAsync(
-            string id,
+            global::System.Guid id,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

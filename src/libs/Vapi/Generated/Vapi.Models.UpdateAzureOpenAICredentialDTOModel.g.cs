@@ -35,6 +35,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt41,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt4120250414,
         /// <summary>
         /// 
@@ -44,6 +48,10 @@ namespace Vapi
         /// 
         /// </summary>
         Gpt41Nano20250414,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt4o,
         /// <summary>
         /// 
         /// </summary>
@@ -99,6 +107,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt54Mini20260317,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt54Nano,
     }
 
@@ -120,9 +132,11 @@ namespace Vapi
                 UpdateAzureOpenAICredentialDTOModel.Gpt40613 => "gpt-4-0613",
                 UpdateAzureOpenAICredentialDTOModel.Gpt41106Preview => "gpt-4-1106-preview",
                 UpdateAzureOpenAICredentialDTOModel.Gpt4Turbo20240409 => "gpt-4-turbo-2024-04-09",
+                UpdateAzureOpenAICredentialDTOModel.Gpt41 => "gpt-4.1",
                 UpdateAzureOpenAICredentialDTOModel.Gpt4120250414 => "gpt-4.1-2025-04-14",
                 UpdateAzureOpenAICredentialDTOModel.Gpt41Mini20250414 => "gpt-4.1-mini-2025-04-14",
                 UpdateAzureOpenAICredentialDTOModel.Gpt41Nano20250414 => "gpt-4.1-nano-2025-04-14",
+                UpdateAzureOpenAICredentialDTOModel.Gpt4o => "gpt-4o",
                 UpdateAzureOpenAICredentialDTOModel.Gpt4o20240513 => "gpt-4o-2024-05-13",
                 UpdateAzureOpenAICredentialDTOModel.Gpt4o20240806 => "gpt-4o-2024-08-06",
                 UpdateAzureOpenAICredentialDTOModel.Gpt4o20241120 => "gpt-4o-2024-11-20",
@@ -136,6 +150,7 @@ namespace Vapi
                 UpdateAzureOpenAICredentialDTOModel.Gpt52Chat => "gpt-5.2-chat",
                 UpdateAzureOpenAICredentialDTOModel.Gpt54 => "gpt-5.4",
                 UpdateAzureOpenAICredentialDTOModel.Gpt54Mini => "gpt-5.4-mini",
+                UpdateAzureOpenAICredentialDTOModel.Gpt54Mini20260317 => "gpt-5.4-mini-2026-03-17",
                 UpdateAzureOpenAICredentialDTOModel.Gpt54Nano => "gpt-5.4-nano",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -153,9 +168,11 @@ namespace Vapi
                 "gpt-4-0613" => UpdateAzureOpenAICredentialDTOModel.Gpt40613,
                 "gpt-4-1106-preview" => UpdateAzureOpenAICredentialDTOModel.Gpt41106Preview,
                 "gpt-4-turbo-2024-04-09" => UpdateAzureOpenAICredentialDTOModel.Gpt4Turbo20240409,
+                "gpt-4.1" => UpdateAzureOpenAICredentialDTOModel.Gpt41,
                 "gpt-4.1-2025-04-14" => UpdateAzureOpenAICredentialDTOModel.Gpt4120250414,
                 "gpt-4.1-mini-2025-04-14" => UpdateAzureOpenAICredentialDTOModel.Gpt41Mini20250414,
                 "gpt-4.1-nano-2025-04-14" => UpdateAzureOpenAICredentialDTOModel.Gpt41Nano20250414,
+                "gpt-4o" => UpdateAzureOpenAICredentialDTOModel.Gpt4o,
                 "gpt-4o-2024-05-13" => UpdateAzureOpenAICredentialDTOModel.Gpt4o20240513,
                 "gpt-4o-2024-08-06" => UpdateAzureOpenAICredentialDTOModel.Gpt4o20240806,
                 "gpt-4o-2024-11-20" => UpdateAzureOpenAICredentialDTOModel.Gpt4o20241120,
@@ -169,6 +186,7 @@ namespace Vapi
                 "gpt-5.2-chat" => UpdateAzureOpenAICredentialDTOModel.Gpt52Chat,
                 "gpt-5.4" => UpdateAzureOpenAICredentialDTOModel.Gpt54,
                 "gpt-5.4-mini" => UpdateAzureOpenAICredentialDTOModel.Gpt54Mini,
+                "gpt-5.4-mini-2026-03-17" => UpdateAzureOpenAICredentialDTOModel.Gpt54Mini20260317,
                 "gpt-5.4-nano" => UpdateAzureOpenAICredentialDTOModel.Gpt54Nano,
                 _ => null,
             };
