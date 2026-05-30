@@ -23878,12 +23878,83 @@
               "Zoe"
             ]
           },
+          "version": {
+            "type": "number",
+            "description": "The Vapi voice routing generation. Version 1 uses legacy mappings; version 2 can use xAI-backed voices when available. When omitted, Version 1 is used.",
+            "enum": [
+              1,
+              2
+            ]
+          },
           "speed": {
             "type": "number",
             "description": "This is the speed multiplier that will be used.\n\n@default 1",
             "minimum": 0.25,
             "maximum": 2,
             "default": 1
+          },
+          "language": {
+            "type": "string",
+            "description": "Language for Vapi voice synthesis. For Version 2, omit this field or set `auto` for automatic language detection. Version 1 supports legacy Vapi language values.",
+            "enum": [
+              "ar",
+              "ar-AE",
+              "ar-EG",
+              "ar-SA",
+              "auto",
+              "bg",
+              "bn",
+              "cs",
+              "da",
+              "de",
+              "el",
+              "en",
+              "en-AU",
+              "en-CA",
+              "en-GB",
+              "en-US",
+              "es",
+              "es-ES",
+              "es-MX",
+              "fi",
+              "fil",
+              "fr",
+              "fr-CA",
+              "fr-FR",
+              "gu",
+              "he",
+              "hi",
+              "hr",
+              "hu",
+              "id",
+              "it",
+              "ja",
+              "ka",
+              "kn",
+              "ko",
+              "ml",
+              "mr",
+              "ms",
+              "nl",
+              "no",
+              "pa",
+              "pl",
+              "pt",
+              "pt-BR",
+              "pt-PT",
+              "ro",
+              "ru",
+              "sk",
+              "sv",
+              "ta",
+              "te",
+              "th",
+              "tl",
+              "tr",
+              "uk",
+              "vi",
+              "zh"
+            ]
           },
           "pronunciationDictionary": {
             "description": "List of pronunciation dictionary locators for custom word pronunciations.",
@@ -24480,6 +24551,13 @@
               "zh"
             ],
             "default": "en"
+          },
+          "speed": {
+            "type": "number",
+            "description": "Speed multiplier for xAI TTS synthesis.",
+            "minimum": 0.7,
+            "maximum": 1.5,
+            "default": 1.1
           },
           "chunkPlan": {
             "description": "This is the plan for chunking the model output before it is sent to the voice provider.",
@@ -26006,12 +26084,83 @@
               "Zoe"
             ]
           },
+          "version": {
+            "type": "number",
+            "description": "The Vapi voice routing generation. Version 1 uses legacy mappings; version 2 can use xAI-backed voices when available. When omitted, Version 1 is used.",
+            "enum": [
+              1,
+              2
+            ]
+          },
           "speed": {
             "type": "number",
             "description": "This is the speed multiplier that will be used.\n\n@default 1",
             "minimum": 0.25,
             "maximum": 2,
             "default": 1
+          },
+          "language": {
+            "type": "string",
+            "description": "Language for Vapi voice synthesis. For Version 2, omit this field or set `auto` for automatic language detection. Version 1 supports legacy Vapi language values.",
+            "enum": [
+              "ar",
+              "ar-AE",
+              "ar-EG",
+              "ar-SA",
+              "auto",
+              "bg",
+              "bn",
+              "cs",
+              "da",
+              "de",
+              "el",
+              "en",
+              "en-AU",
+              "en-CA",
+              "en-GB",
+              "en-US",
+              "es",
+              "es-ES",
+              "es-MX",
+              "fi",
+              "fil",
+              "fr",
+              "fr-CA",
+              "fr-FR",
+              "gu",
+              "he",
+              "hi",
+              "hr",
+              "hu",
+              "id",
+              "it",
+              "ja",
+              "ka",
+              "kn",
+              "ko",
+              "ml",
+              "mr",
+              "ms",
+              "nl",
+              "no",
+              "pa",
+              "pl",
+              "pt",
+              "pt-BR",
+              "pt-PT",
+              "ro",
+              "ru",
+              "sk",
+              "sv",
+              "ta",
+              "te",
+              "th",
+              "tl",
+              "tr",
+              "uk",
+              "vi",
+              "zh"
+            ]
           },
           "pronunciationDictionary": {
             "description": "List of pronunciation dictionary locators for custom word pronunciations.",
@@ -26241,6 +26390,13 @@
               "zh"
             ],
             "default": "en"
+          },
+          "speed": {
+            "type": "number",
+            "description": "Speed multiplier for xAI TTS synthesis.",
+            "minimum": 0.7,
+            "maximum": 1.5,
+            "default": 1.1
           },
           "chunkPlan": {
             "description": "This is the plan for chunking the model output before it is sent to the voice provider.",
@@ -35262,6 +35418,7 @@
               "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
               "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
               "call.in-progress.error-vapifault-xai-transcriber-server-error",
+              "call.in-progress.error-vapifault-xai-voice-failed",
               "call.in-progress.error-warm-transfer-assistant-cancelled",
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -51884,12 +52041,21 @@
             }
           },
           "role": {
-            "enum": [
-              "admin",
-              "editor",
-              "viewer"
-            ],
-            "type": "string"
+            "pattern": "ORG_ROLE_OR_CUSTOM_ROLE_PATTERN",
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "admin",
+                  "editor",
+                  "viewer"
+                ]
+              },
+              {
+                "type": "string",
+                "pattern": "^org-[a-z0-9-]+$"
+              }
+            ]
           },
           "redirectTo": {
             "type": "string"
@@ -51907,12 +52073,21 @@
             "type": "string"
           },
           "role": {
-            "enum": [
-              "admin",
-              "editor",
-              "viewer"
-            ],
-            "type": "string"
+            "pattern": "ORG_ROLE_OR_CUSTOM_ROLE_PATTERN",
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "admin",
+                  "editor",
+                  "viewer"
+                ]
+              },
+              {
+                "type": "string",
+                "pattern": "^org-[a-z0-9-]+$"
+              }
+            ]
           }
         },
         "required": [
@@ -60980,6 +61155,7 @@
               "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
               "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
               "call.in-progress.error-vapifault-xai-transcriber-server-error",
+              "call.in-progress.error-vapifault-xai-voice-failed",
               "call.in-progress.error-warm-transfer-assistant-cancelled",
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -62350,6 +62526,7 @@
               "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
               "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
               "call.in-progress.error-vapifault-xai-transcriber-server-error",
+              "call.in-progress.error-vapifault-xai-voice-failed",
               "call.in-progress.error-warm-transfer-assistant-cancelled",
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",

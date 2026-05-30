@@ -19,9 +19,9 @@ namespace Vapi
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.InviteUserDTORoleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.InviteUserDTORole?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Vapi.InviteUserDTORole Role { get; set; }
+        public required global::Vapi.OneOf<global::Vapi.InviteUserDTORole?, string> Role { get; set; }
 
         /// <summary>
         /// 
@@ -46,7 +46,7 @@ namespace Vapi
 #endif
         public InviteUserDTO(
             global::System.Collections.Generic.IList<string> emails,
-            global::Vapi.InviteUserDTORole role,
+            global::Vapi.OneOf<global::Vapi.InviteUserDTORole?, string> role,
             string? redirectTo)
         {
             this.Emails = emails ?? throw new global::System.ArgumentNullException(nameof(emails));

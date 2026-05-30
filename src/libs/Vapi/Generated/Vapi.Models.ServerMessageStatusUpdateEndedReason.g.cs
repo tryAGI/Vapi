@@ -1143,6 +1143,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallInProgressErrorVapifaultXaiVoiceFailed,
+        /// <summary>
+        /// 
+        /// </summary>
         CallInProgressErrorWarmTransferAssistantCancelled,
         /// <summary>
         /// 
@@ -2633,6 +2637,7 @@ namespace Vapi
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberInvalidConfig => "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberRateLimited => "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberServerError => "call.in-progress.error-vapifault-xai-transcriber-server-error",
+                ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiVoiceFailed => "call.in-progress.error-vapifault-xai-voice-failed",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferAssistantCancelled => "call.in-progress.error-warm-transfer-assistant-cancelled",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferMaxDuration => "call.in-progress.error-warm-transfer-max-duration",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferMicrophoneTimeout => "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -3225,6 +3230,7 @@ namespace Vapi
                 "call.in-progress.error-vapifault-xai-transcriber-invalid-config" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberInvalidConfig,
                 "call.in-progress.error-vapifault-xai-transcriber-rate-limited" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberRateLimited,
                 "call.in-progress.error-vapifault-xai-transcriber-server-error" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberServerError,
+                "call.in-progress.error-vapifault-xai-voice-failed" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiVoiceFailed,
                 "call.in-progress.error-warm-transfer-assistant-cancelled" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferAssistantCancelled,
                 "call.in-progress.error-warm-transfer-max-duration" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferMaxDuration,
                 "call.in-progress.error-warm-transfer-microphone-timeout" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferMicrophoneTimeout,

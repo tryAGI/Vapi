@@ -1143,6 +1143,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallInProgressErrorVapifaultXaiVoiceFailed,
+        /// <summary>
+        /// 
+        /// </summary>
         CallInProgressErrorWarmTransferAssistantCancelled,
         /// <summary>
         /// 
@@ -2633,6 +2637,7 @@ namespace Vapi
                 CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberInvalidConfig => "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
                 CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberRateLimited => "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
                 CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberServerError => "call.in-progress.error-vapifault-xai-transcriber-server-error",
+                CallEndedReason.CallInProgressErrorVapifaultXaiVoiceFailed => "call.in-progress.error-vapifault-xai-voice-failed",
                 CallEndedReason.CallInProgressErrorWarmTransferAssistantCancelled => "call.in-progress.error-warm-transfer-assistant-cancelled",
                 CallEndedReason.CallInProgressErrorWarmTransferMaxDuration => "call.in-progress.error-warm-transfer-max-duration",
                 CallEndedReason.CallInProgressErrorWarmTransferMicrophoneTimeout => "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -3225,6 +3230,7 @@ namespace Vapi
                 "call.in-progress.error-vapifault-xai-transcriber-invalid-config" => CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberInvalidConfig,
                 "call.in-progress.error-vapifault-xai-transcriber-rate-limited" => CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberRateLimited,
                 "call.in-progress.error-vapifault-xai-transcriber-server-error" => CallEndedReason.CallInProgressErrorVapifaultXaiTranscriberServerError,
+                "call.in-progress.error-vapifault-xai-voice-failed" => CallEndedReason.CallInProgressErrorVapifaultXaiVoiceFailed,
                 "call.in-progress.error-warm-transfer-assistant-cancelled" => CallEndedReason.CallInProgressErrorWarmTransferAssistantCancelled,
                 "call.in-progress.error-warm-transfer-max-duration" => CallEndedReason.CallInProgressErrorWarmTransferMaxDuration,
                 "call.in-progress.error-warm-transfer-microphone-timeout" => CallEndedReason.CallInProgressErrorWarmTransferMicrophoneTimeout,
