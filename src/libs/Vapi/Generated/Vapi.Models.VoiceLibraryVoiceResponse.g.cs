@@ -11,6 +11,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("age")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<string, double?>))]
+        public global::Vapi.OneOf<string, double?>? Age { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("voiceId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string VoiceId { get; set; }
@@ -43,12 +50,6 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("age")]
-        public object? Age { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accent")]
         public string? Accent { get; set; }
 
@@ -63,10 +64,10 @@ namespace Vapi
         /// </summary>
         /// <param name="voiceId"></param>
         /// <param name="name"></param>
+        /// <param name="age"></param>
         /// <param name="publicOwnerId"></param>
         /// <param name="description"></param>
         /// <param name="gender"></param>
-        /// <param name="age"></param>
         /// <param name="accent"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -74,18 +75,18 @@ namespace Vapi
         public VoiceLibraryVoiceResponse(
             string voiceId,
             string name,
+            global::Vapi.OneOf<string, double?>? age,
             string? publicOwnerId,
             string? description,
             string? gender,
-            object? age,
             string? accent)
         {
+            this.Age = age;
             this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.PublicOwnerId = publicOwnerId;
             this.Description = description;
             this.Gender = gender;
-            this.Age = age;
             this.Accent = accent;
         }
 

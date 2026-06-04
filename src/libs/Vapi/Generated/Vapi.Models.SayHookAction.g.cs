@@ -16,18 +16,19 @@ namespace Vapi
         public global::Vapi.SayHookActionType Type { get; set; }
 
         /// <summary>
+        /// This is the message to say
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>))]
+        public global::Vapi.OneOf<string, global::System.Collections.Generic.IList<string>>? Exact { get; set; }
+
+        /// <summary>
         /// This is the prompt for the assistant to generate a response based on existing conversation.<br/>
         /// Can be a string or an array of chat messages.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SystemMessage, global::Vapi.UserMessage, global::Vapi.AssistantMessage, global::Vapi.ToolMessage, global::Vapi.DeveloperMessage>>>))]
         public global::Vapi.OneOf<string, global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SystemMessage, global::Vapi.UserMessage, global::Vapi.AssistantMessage, global::Vapi.ToolMessage, global::Vapi.DeveloperMessage>>>? Prompt { get; set; }
-
-        /// <summary>
-        /// This is the message to say
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("exact")]
-        public object? Exact { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -41,24 +42,24 @@ namespace Vapi
         /// <param name="type">
         /// This is the type of action - must be "say"
         /// </param>
+        /// <param name="exact">
+        /// This is the message to say
+        /// </param>
         /// <param name="prompt">
         /// This is the prompt for the assistant to generate a response based on existing conversation.<br/>
         /// Can be a string or an array of chat messages.
-        /// </param>
-        /// <param name="exact">
-        /// This is the message to say
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public SayHookAction(
             global::Vapi.SayHookActionType type,
-            global::Vapi.OneOf<string, global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SystemMessage, global::Vapi.UserMessage, global::Vapi.AssistantMessage, global::Vapi.ToolMessage, global::Vapi.DeveloperMessage>>>? prompt,
-            object? exact)
+            global::Vapi.OneOf<string, global::System.Collections.Generic.IList<string>>? exact,
+            global::Vapi.OneOf<string, global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SystemMessage, global::Vapi.UserMessage, global::Vapi.AssistantMessage, global::Vapi.ToolMessage, global::Vapi.DeveloperMessage>>>? prompt)
         {
             this.Type = type;
-            this.Prompt = prompt;
             this.Exact = exact;
+            this.Prompt = prompt;
         }
 
         /// <summary>

@@ -12,8 +12,9 @@ namespace Vapi
         /// This is the type of recording consent.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.RecordingConsentTypeJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Type { get; set; }
+        public required global::Vapi.RecordingConsentType Type { get; set; }
 
         /// <summary>
         /// This is the date and time the recording consent was granted.<br/>
@@ -42,10 +43,10 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public RecordingConsent(
-            object type,
+            global::Vapi.RecordingConsentType type,
             global::System.DateTime? grantedAt)
         {
-            this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
+            this.Type = type;
             this.GrantedAt = grantedAt;
         }
 

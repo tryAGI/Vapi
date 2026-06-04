@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class CreateCallDTO
     {
         /// <summary>
+        /// This is the transport of the call.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transport")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>))]
+        public global::Vapi.OneOf<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>? Transport { get; set; }
+
+        /// <summary>
         /// This is used to issue batch calls to multiple customers.<br/>
         /// Only relevant for `outboundPhoneCall`. To call a single customer, use `customer` instead.
         /// </summary>
@@ -26,12 +33,6 @@ namespace Vapi
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("schedulePlan")]
         public global::Vapi.SchedulePlan? SchedulePlan { get; set; }
-
-        /// <summary>
-        /// This is the transport of the call.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("transport")]
-        public object? Transport { get; set; }
 
         /// <summary>
         /// This is the assistant ID that will be used for the call. To use a transient assistant, use `assistant` instead.<br/>
@@ -149,6 +150,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallDTO" /> class.
         /// </summary>
+        /// <param name="transport">
+        /// This is the transport of the call.
+        /// </param>
         /// <param name="customers">
         /// This is used to issue batch calls to multiple customers.<br/>
         /// Only relevant for `outboundPhoneCall`. To call a single customer, use `customer` instead.
@@ -158,9 +162,6 @@ namespace Vapi
         /// </param>
         /// <param name="schedulePlan">
         /// This is the schedule plan of the call.
-        /// </param>
-        /// <param name="transport">
-        /// This is the transport of the call.
         /// </param>
         /// <param name="assistantId">
         /// This is the assistant ID that will be used for the call. To use a transient assistant, use `assistant` instead.<br/>
@@ -234,10 +235,10 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateCallDTO(
+            global::Vapi.OneOf<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>? transport,
             global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers,
             string? name,
             global::Vapi.SchedulePlan? schedulePlan,
-            object? transport,
             string? assistantId,
             global::Vapi.CreateAssistantDTO? assistant,
             global::Vapi.AssistantOverrides? assistantOverrides,
@@ -252,10 +253,10 @@ namespace Vapi
             string? customerId,
             global::Vapi.CreateCustomerDTO? customer)
         {
+            this.Transport = transport;
             this.Customers = customers;
             this.Name = name;
             this.SchedulePlan = schedulePlan;
-            this.Transport = transport;
             this.AssistantId = assistantId;
             this.Assistant = assistant;
             this.AssistantOverrides = assistantOverrides;
