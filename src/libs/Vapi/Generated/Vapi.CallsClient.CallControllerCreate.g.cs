@@ -434,6 +434,9 @@ namespace Vapi
         /// <summary>
         /// Create Call
         /// </summary>
+        /// <param name="transport">
+        /// This is the transport of the call.
+        /// </param>
         /// <param name="customers">
         /// This is used to issue batch calls to multiple customers.<br/>
         /// Only relevant for `outboundPhoneCall`. To call a single customer, use `customer` instead.
@@ -443,9 +446,6 @@ namespace Vapi
         /// </param>
         /// <param name="schedulePlan">
         /// This is the schedule plan of the call.
-        /// </param>
-        /// <param name="transport">
-        /// This is the transport of the call.
         /// </param>
         /// <param name="assistantId">
         /// This is the assistant ID that will be used for the call. To use a transient assistant, use `assistant` instead.<br/>
@@ -519,10 +519,10 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::Vapi.Call, global::Vapi.CallBatchResponse>> CallControllerCreateAsync(
+            global::Vapi.OneOf<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>? transport = default,
             global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers = default,
             string? name = default,
             global::Vapi.SchedulePlan? schedulePlan = default,
-            object? transport = default,
             string? assistantId = default,
             global::Vapi.CreateAssistantDTO? assistant = default,
             global::Vapi.AssistantOverrides? assistantOverrides = default,
@@ -541,10 +541,10 @@ namespace Vapi
         {
             var __request = new global::Vapi.CreateCallDTO
             {
+                Transport = transport,
                 Customers = customers,
                 Name = name,
                 SchedulePlan = schedulePlan,
-                Transport = transport,
                 AssistantId = assistantId,
                 Assistant = assistant,
                 AssistantOverrides = assistantOverrides,
