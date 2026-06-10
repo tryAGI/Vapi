@@ -21,6 +21,7 @@ namespace Vapi
         /// <summary>
         /// This message is triggered when the tool call starts.<br/>
         /// This message is never triggered for async tools.<br/>
+        /// Multiple request-start messages are variants. One eligible variant is selected each time the tool starts.<br/>
         /// If this message is not provided, one of the default filler messages "Hold on a sec", "One moment", "Just a sec", "Give me a moment" or "This'll just take a sec" will be used.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
@@ -68,6 +69,7 @@ namespace Vapi
         /// <param name="type">
         /// This message is triggered when the tool call starts.<br/>
         /// This message is never triggered for async tools.<br/>
+        /// Multiple request-start messages are variants. One eligible variant is selected each time the tool starts.<br/>
         /// If this message is not provided, one of the default filler messages "Hold on a sec", "One moment", "Just a sec", "Give me a moment" or "This'll just take a sec" will be used.
         /// </param>
         /// <param name="blocking">

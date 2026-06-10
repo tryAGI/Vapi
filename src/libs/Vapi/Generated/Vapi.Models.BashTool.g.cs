@@ -9,8 +9,7 @@ namespace Vapi
     public sealed partial class BashTool
     {
         /// <summary>
-        /// These are the messages that will be spoken to the user as the tool is running.<br/>
-        /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
+        /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
@@ -179,8 +178,7 @@ namespace Vapi
         /// This is the ISO 8601 date-time string of when the tool was last updated.
         /// </param>
         /// <param name="messages">
-        /// These are the messages that will be spoken to the user as the tool is running.<br/>
-        /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
+        /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
         /// <param name="type">
         /// The type of tool. "bash" for Bash tool.

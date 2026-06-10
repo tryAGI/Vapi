@@ -9,8 +9,7 @@ namespace Vapi
     public sealed partial class UpdateGoogleCalendarCreateEventToolDTO
     {
         /// <summary>
-        /// These are the messages that will be spoken to the user as the tool is running.<br/>
-        /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
+        /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
@@ -104,8 +103,7 @@ namespace Vapi
         /// Initializes a new instance of the <see cref="UpdateGoogleCalendarCreateEventToolDTO" /> class.
         /// </summary>
         /// <param name="messages">
-        /// These are the messages that will be spoken to the user as the tool is running.<br/>
-        /// For some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.
+        /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
         /// <param name="rejectionPlan">
         /// This is the plan to reject a tool call based on the conversation state.<br/>

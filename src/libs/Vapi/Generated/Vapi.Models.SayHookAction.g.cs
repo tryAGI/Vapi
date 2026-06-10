@@ -16,7 +16,7 @@ namespace Vapi
         public global::Vapi.SayHookActionType Type { get; set; }
 
         /// <summary>
-        /// This is the message to say
+        /// This is the exact message to say. When a string array is provided, one is randomly selected.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exact")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>))]
@@ -43,7 +43,7 @@ namespace Vapi
         /// This is the type of action - must be "say"
         /// </param>
         /// <param name="exact">
-        /// This is the message to say
+        /// This is the exact message to say. When a string array is provided, one is randomly selected.
         /// </param>
         /// <param name="prompt">
         /// This is the prompt for the assistant to generate a response based on existing conversation.<br/>

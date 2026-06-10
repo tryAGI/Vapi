@@ -19,18 +19,14 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.TextContent>? Contents { get; set; }
 
         /// <summary>
-        /// This message is triggered when the tool call is delayed.<br/>
-        /// There are the two things that can trigger this message:<br/>
-        /// 1. The user talks with the assistant while your server is processing the request. Default is "Sorry, a few more seconds."<br/>
-        /// 2. The server doesn't respond within `timingMilliseconds`.<br/>
-        /// This message is never triggered for async tool calls.
+        /// This message is triggered when the tool call is delayed. Same timing means variants; different timings mean staged updates.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.ToolMessageDelayedTypeJsonConverter))]
         public global::Vapi.ToolMessageDelayedType Type { get; set; }
 
         /// <summary>
-        /// The number of milliseconds to wait for the server response before saying this message.<br/>
+        /// The number of milliseconds to wait for the server response before saying this delayed message.<br/>
         /// Example: 1000
         /// </summary>
         /// <example>1000</example>
@@ -66,14 +62,10 @@ namespace Vapi
         /// This will override the `content` property.
         /// </param>
         /// <param name="type">
-        /// This message is triggered when the tool call is delayed.<br/>
-        /// There are the two things that can trigger this message:<br/>
-        /// 1. The user talks with the assistant while your server is processing the request. Default is "Sorry, a few more seconds."<br/>
-        /// 2. The server doesn't respond within `timingMilliseconds`.<br/>
-        /// This message is never triggered for async tool calls.
+        /// This message is triggered when the tool call is delayed. Same timing means variants; different timings mean staged updates.
         /// </param>
         /// <param name="timingMilliseconds">
-        /// The number of milliseconds to wait for the server response before saying this message.<br/>
+        /// The number of milliseconds to wait for the server response before saying this delayed message.<br/>
         /// Example: 1000
         /// </param>
         /// <param name="content">
