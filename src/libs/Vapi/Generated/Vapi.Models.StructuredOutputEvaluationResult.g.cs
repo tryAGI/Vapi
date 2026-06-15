@@ -24,6 +24,24 @@ namespace Vapi
         public required string Name { get; set; }
 
         /// <summary>
+        /// This is the optional dot-notation path evaluated within an object structured output.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("path")]
+        public string? Path { get; set; }
+
+        /// <summary>
+        /// This is the structured output description captured when the evaluation ran.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? Description { get; set; }
+
+        /// <summary>
+        /// This is the structured output schema captured when the evaluation ran.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("schema")]
+        public global::Vapi.JsonSchema? Schema { get; set; }
+
+        /// <summary>
         /// This is the value extracted from the call by the structured output.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("extractedValue")]
@@ -110,6 +128,15 @@ namespace Vapi
         /// <param name="required">
         /// This indicates whether this evaluation was required for the simulation to pass.
         /// </param>
+        /// <param name="path">
+        /// This is the optional dot-notation path evaluated within an object structured output.
+        /// </param>
+        /// <param name="description">
+        /// This is the structured output description captured when the evaluation ran.
+        /// </param>
+        /// <param name="schema">
+        /// This is the structured output schema captured when the evaluation ran.
+        /// </param>
         /// <param name="error">
         /// This contains any error that occurred during extraction.
         /// </param>
@@ -130,12 +157,18 @@ namespace Vapi
             global::Vapi.StructuredOutputEvaluationResultComparator comparator,
             bool passed,
             bool required,
+            string? path,
+            string? description,
+            global::Vapi.JsonSchema? schema,
             string? error,
             bool? isSkipped,
             string? skipReason)
         {
             this.StructuredOutputId = structuredOutputId ?? throw new global::System.ArgumentNullException(nameof(structuredOutputId));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Path = path;
+            this.Description = description;
+            this.Schema = schema;
             this.ExtractedValue = extractedValue;
             this.ExpectedValue = expectedValue;
             this.Comparator = comparator;

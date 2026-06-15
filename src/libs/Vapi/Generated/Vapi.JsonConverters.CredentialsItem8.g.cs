@@ -336,6 +336,13 @@ namespace Vapi.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateXAiCredentialDTO)}");
                 xai = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+            global::Vapi.CreateMicrosoftCredentialDTO? microsoft = default;
+            if (discriminator?.Provider == global::Vapi.UpdateWorkflowDTOCredentialDiscriminatorProvider.Microsoft)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateMicrosoftCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateMicrosoftCredentialDTO> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateMicrosoftCredentialDTO)}");
+                microsoft = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
             global::Vapi.CreateGoogleCalendarOAuth2ClientCredentialDTO? googleCalendarOauth2Client = default;
             if (discriminator?.Provider == global::Vapi.UpdateWorkflowDTOCredentialDiscriminatorProvider.GoogleCalendarOauth2Client)
             {
@@ -498,6 +505,8 @@ namespace Vapi.JsonConverters
                 customCredential,
 
                 xai,
+
+                microsoft,
 
                 googleCalendarOauth2Client,
 
@@ -801,6 +810,12 @@ namespace Vapi.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateXAiCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateXAiCredentialDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateXAiCredentialDTO).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.Xai!, typeInfo);
+            }
+            else if (value.IsMicrosoft)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateMicrosoftCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateMicrosoftCredentialDTO?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateMicrosoftCredentialDTO).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Microsoft!, typeInfo);
             }
             else if (value.IsGoogleCalendarOauth2Client)
             {

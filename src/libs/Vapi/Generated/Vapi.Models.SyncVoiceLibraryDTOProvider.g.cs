@@ -43,6 +43,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Microsoft,
+        /// <summary>
+        /// 
+        /// </summary>
         Minimax,
         /// <summary>
         /// 
@@ -110,6 +114,7 @@ namespace Vapi
                 SyncVoiceLibraryDTOProvider.Hume => "hume",
                 SyncVoiceLibraryDTOProvider.Inworld => "inworld",
                 SyncVoiceLibraryDTOProvider.Lmnt => "lmnt",
+                SyncVoiceLibraryDTOProvider.Microsoft => "microsoft",
                 SyncVoiceLibraryDTOProvider.Minimax => "minimax",
                 SyncVoiceLibraryDTOProvider.Neuphonic => "neuphonic",
                 SyncVoiceLibraryDTOProvider.Openai => "openai",
@@ -140,6 +145,7 @@ namespace Vapi
                 "hume" => SyncVoiceLibraryDTOProvider.Hume,
                 "inworld" => SyncVoiceLibraryDTOProvider.Inworld,
                 "lmnt" => SyncVoiceLibraryDTOProvider.Lmnt,
+                "microsoft" => SyncVoiceLibraryDTOProvider.Microsoft,
                 "minimax" => SyncVoiceLibraryDTOProvider.Minimax,
                 "neuphonic" => SyncVoiceLibraryDTOProvider.Neuphonic,
                 "openai" => SyncVoiceLibraryDTOProvider.Openai,
