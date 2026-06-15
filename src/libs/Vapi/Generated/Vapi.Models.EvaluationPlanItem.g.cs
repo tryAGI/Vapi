@@ -24,6 +24,14 @@ namespace Vapi
         public global::Vapi.CreateStructuredOutputDTO? StructuredOutput { get; set; }
 
         /// <summary>
+        /// Optional dot-notation path to a primitive leaf when evaluating an object structured output.<br/>
+        /// Example: contact.auth_started
+        /// </summary>
+        /// <example>contact.auth_started</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("path")]
+        public string? Path { get; set; }
+
+        /// <summary>
         /// This is the comparison operator to use when evaluating the extracted value against the expected value.<br/>
         /// Available operators depend on the structured output's schema type:<br/>
         /// - boolean: '=', '!='<br/>
@@ -84,6 +92,10 @@ namespace Vapi
         /// Mutually exclusive with structuredOutputId.<br/>
         /// Only primitive schema types (string, number, integer, boolean) are allowed.
         /// </param>
+        /// <param name="path">
+        /// Optional dot-notation path to a primitive leaf when evaluating an object structured output.<br/>
+        /// Example: contact.auth_started
+        /// </param>
         /// <param name="required">
         /// This is whether this evaluation must pass for the simulation to pass.<br/>
         /// Defaults to true. If false, the result is informational only.<br/>
@@ -97,10 +109,12 @@ namespace Vapi
             global::Vapi.OneOf<double?, string, bool?> value,
             global::System.Guid? structuredOutputId,
             global::Vapi.CreateStructuredOutputDTO? structuredOutput,
+            string? path,
             bool? required)
         {
             this.StructuredOutputId = structuredOutputId;
             this.StructuredOutput = structuredOutput;
+            this.Path = path;
             this.Comparator = comparator;
             this.Value = value;
             this.Required = required;

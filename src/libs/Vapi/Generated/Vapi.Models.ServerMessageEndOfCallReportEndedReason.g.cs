@@ -839,6 +839,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallInProgressErrorVapifaultMicrosoftVoiceFailed,
+        /// <summary>
+        /// 
+        /// </summary>
         CallInProgressErrorVapifaultMinimax400BadRequestValidationFailed,
         /// <summary>
         /// 
@@ -1895,6 +1899,14 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        PipelineErrorMicrosoftVoiceFailed,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorMicrosoftVoiceRequestCanceled,
+        /// <summary>
+        /// 
+        /// </summary>
         PipelineErrorMinimax400BadRequestValidationFailed,
         /// <summary>
         /// 
@@ -2561,6 +2573,7 @@ namespace Vapi
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultInflectionAi429ExceededQuota => "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultInworldVoiceFailed => "call.in-progress.error-vapifault-inworld-voice-failed",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultLmntVoiceFailed => "call.in-progress.error-vapifault-lmnt-voice-failed",
+                ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMicrosoftVoiceFailed => "call.in-progress.error-vapifault-microsoft-voice-failed",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax400BadRequestValidationFailed => "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax401Unauthorized => "call.in-progress.error-vapifault-minimax-401-unauthorized",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax403ModelAccessDenied => "call.in-progress.error-vapifault-minimax-403-model-access-denied",
@@ -2825,6 +2838,8 @@ namespace Vapi
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorInflectionAiLlmFailed => "pipeline-error-inflection-ai-llm-failed",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorInworldVoiceFailed => "pipeline-error-inworld-voice-failed",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorLmntVoiceFailed => "pipeline-error-lmnt-voice-failed",
+                ServerMessageEndOfCallReportEndedReason.PipelineErrorMicrosoftVoiceFailed => "pipeline-error-microsoft-voice-failed",
+                ServerMessageEndOfCallReportEndedReason.PipelineErrorMicrosoftVoiceRequestCanceled => "pipeline-error-microsoft-voice-request-canceled",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax400BadRequestValidationFailed => "pipeline-error-minimax-400-bad-request-validation-failed",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax401Unauthorized => "pipeline-error-minimax-401-unauthorized",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax403ModelAccessDenied => "pipeline-error-minimax-403-model-access-denied",
@@ -3154,6 +3169,7 @@ namespace Vapi
                 "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultInflectionAi429ExceededQuota,
                 "call.in-progress.error-vapifault-inworld-voice-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultInworldVoiceFailed,
                 "call.in-progress.error-vapifault-lmnt-voice-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultLmntVoiceFailed,
+                "call.in-progress.error-vapifault-microsoft-voice-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMicrosoftVoiceFailed,
                 "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax400BadRequestValidationFailed,
                 "call.in-progress.error-vapifault-minimax-401-unauthorized" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax401Unauthorized,
                 "call.in-progress.error-vapifault-minimax-403-model-access-denied" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultMinimax403ModelAccessDenied,
@@ -3418,6 +3434,8 @@ namespace Vapi
                 "pipeline-error-inflection-ai-llm-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorInflectionAiLlmFailed,
                 "pipeline-error-inworld-voice-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorInworldVoiceFailed,
                 "pipeline-error-lmnt-voice-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorLmntVoiceFailed,
+                "pipeline-error-microsoft-voice-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMicrosoftVoiceFailed,
+                "pipeline-error-microsoft-voice-request-canceled" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMicrosoftVoiceRequestCanceled,
                 "pipeline-error-minimax-400-bad-request-validation-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax400BadRequestValidationFailed,
                 "pipeline-error-minimax-401-unauthorized" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax401Unauthorized,
                 "pipeline-error-minimax-403-model-access-denied" => ServerMessageEndOfCallReportEndedReason.PipelineErrorMinimax403ModelAccessDenied,
