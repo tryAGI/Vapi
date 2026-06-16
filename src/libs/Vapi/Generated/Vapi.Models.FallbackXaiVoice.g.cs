@@ -43,6 +43,13 @@ namespace Vapi
         public global::Vapi.FallbackXaiVoiceLanguage? Language { get; set; }
 
         /// <summary>
+        /// Speed multiplier for xAI TTS synthesis.<br/>
+        /// Default Value: 1.1F
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("speed")]
+        public double? Speed { get; set; }
+
+        /// <summary>
         /// This is the plan for chunking the model output before it is sent to the voice provider.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("chunkPlan")]
@@ -73,6 +80,10 @@ namespace Vapi
         /// BCP-47 language code for xAI TTS synthesis.<br/>
         /// Default Value: en
         /// </param>
+        /// <param name="speed">
+        /// Speed multiplier for xAI TTS synthesis.<br/>
+        /// Default Value: 1.1F
+        /// </param>
         /// <param name="chunkPlan">
         /// This is the plan for chunking the model output before it is sent to the voice provider.
         /// </param>
@@ -84,12 +95,14 @@ namespace Vapi
             bool? cachingEnabled,
             global::Vapi.FallbackXaiVoiceProvider provider,
             global::Vapi.FallbackXaiVoiceLanguage? language,
+            double? speed,
             global::Vapi.ChunkPlan? chunkPlan)
         {
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
             this.VoiceId = voiceId;
             this.Language = language;
+            this.Speed = speed;
             this.ChunkPlan = chunkPlan;
         }
 

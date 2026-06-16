@@ -265,6 +265,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt41_australiaeast,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt4o,
         /// <summary>
         /// 
@@ -401,6 +405,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt4o_australiaeast,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt5,
         /// <summary>
         /// 
@@ -438,6 +446,10 @@ namespace Vapi
         /// 
         /// </summary>
         Gpt54Mini,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54Mini_australiaeast,
         /// <summary>
         /// 
         /// </summary>
@@ -539,6 +551,7 @@ namespace Vapi
                 WorkflowOpenAIModelModel.Gpt41Nano20250414_southcentralus => "gpt-4.1-nano-2025-04-14:southcentralus",
                 WorkflowOpenAIModelModel.Gpt41Nano20250414_westus => "gpt-4.1-nano-2025-04-14:westus",
                 WorkflowOpenAIModelModel.Gpt41Nano20250414_westus3 => "gpt-4.1-nano-2025-04-14:westus3",
+                WorkflowOpenAIModelModel.Gpt41_australiaeast => "gpt-4.1:australiaeast",
                 WorkflowOpenAIModelModel.Gpt4o => "gpt-4o",
                 WorkflowOpenAIModelModel.Gpt4o20240513 => "gpt-4o-2024-05-13",
                 WorkflowOpenAIModelModel.Gpt4o20240513_eastus => "gpt-4o-2024-05-13:eastus",
@@ -573,6 +586,7 @@ namespace Vapi
                 WorkflowOpenAIModelModel.Gpt4oMini20240718_southcentralus => "gpt-4o-mini-2024-07-18:southcentralus",
                 WorkflowOpenAIModelModel.Gpt4oMini20240718_westus => "gpt-4o-mini-2024-07-18:westus",
                 WorkflowOpenAIModelModel.Gpt4oMini20240718_westus3 => "gpt-4o-mini-2024-07-18:westus3",
+                WorkflowOpenAIModelModel.Gpt4o_australiaeast => "gpt-4o:australiaeast",
                 WorkflowOpenAIModelModel.Gpt5 => "gpt-5",
                 WorkflowOpenAIModelModel.Gpt5ChatLatest => "gpt-5-chat-latest",
                 WorkflowOpenAIModelModel.Gpt5Mini => "gpt-5-mini",
@@ -583,6 +597,7 @@ namespace Vapi
                 WorkflowOpenAIModelModel.Gpt52ChatLatest => "gpt-5.2-chat-latest",
                 WorkflowOpenAIModelModel.Gpt54 => "gpt-5.4",
                 WorkflowOpenAIModelModel.Gpt54Mini => "gpt-5.4-mini",
+                WorkflowOpenAIModelModel.Gpt54Mini_australiaeast => "gpt-5.4-mini:australiaeast",
                 WorkflowOpenAIModelModel.Gpt54Nano => "gpt-5.4-nano",
                 WorkflowOpenAIModelModel.O1Mini => "o1-mini",
                 WorkflowOpenAIModelModel.O1Mini20240912 => "o1-mini-2024-09-12",
@@ -662,6 +677,7 @@ namespace Vapi
                 "gpt-4.1-nano-2025-04-14:southcentralus" => WorkflowOpenAIModelModel.Gpt41Nano20250414_southcentralus,
                 "gpt-4.1-nano-2025-04-14:westus" => WorkflowOpenAIModelModel.Gpt41Nano20250414_westus,
                 "gpt-4.1-nano-2025-04-14:westus3" => WorkflowOpenAIModelModel.Gpt41Nano20250414_westus3,
+                "gpt-4.1:australiaeast" => WorkflowOpenAIModelModel.Gpt41_australiaeast,
                 "gpt-4o" => WorkflowOpenAIModelModel.Gpt4o,
                 "gpt-4o-2024-05-13" => WorkflowOpenAIModelModel.Gpt4o20240513,
                 "gpt-4o-2024-05-13:eastus" => WorkflowOpenAIModelModel.Gpt4o20240513_eastus,
@@ -696,6 +712,7 @@ namespace Vapi
                 "gpt-4o-mini-2024-07-18:southcentralus" => WorkflowOpenAIModelModel.Gpt4oMini20240718_southcentralus,
                 "gpt-4o-mini-2024-07-18:westus" => WorkflowOpenAIModelModel.Gpt4oMini20240718_westus,
                 "gpt-4o-mini-2024-07-18:westus3" => WorkflowOpenAIModelModel.Gpt4oMini20240718_westus3,
+                "gpt-4o:australiaeast" => WorkflowOpenAIModelModel.Gpt4o_australiaeast,
                 "gpt-5" => WorkflowOpenAIModelModel.Gpt5,
                 "gpt-5-chat-latest" => WorkflowOpenAIModelModel.Gpt5ChatLatest,
                 "gpt-5-mini" => WorkflowOpenAIModelModel.Gpt5Mini,
@@ -706,6 +723,7 @@ namespace Vapi
                 "gpt-5.2-chat-latest" => WorkflowOpenAIModelModel.Gpt52ChatLatest,
                 "gpt-5.4" => WorkflowOpenAIModelModel.Gpt54,
                 "gpt-5.4-mini" => WorkflowOpenAIModelModel.Gpt54Mini,
+                "gpt-5.4-mini:australiaeast" => WorkflowOpenAIModelModel.Gpt54Mini_australiaeast,
                 "gpt-5.4-nano" => WorkflowOpenAIModelModel.Gpt54Nano,
                 "o1-mini" => WorkflowOpenAIModelModel.O1Mini,
                 "o1-mini-2024-09-12" => WorkflowOpenAIModelModel.O1Mini20240912,

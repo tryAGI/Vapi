@@ -6,14 +6,46 @@ namespace Vapi
     /// <summary>
     /// This is the type of recording consent.
     /// </summary>
-    public sealed partial class RecordingConsentType
+    public enum RecordingConsentType
     {
-
         /// <summary>
-        /// Additional properties that are not explicitly defined in the schema
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonExtensionData]
-        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+        StayOnLine,
+        /// <summary>
+        /// 
+        /// </summary>
+        Verbal,
+    }
 
+    /// <summary>
+    /// Enum extensions to do fast conversions without the reflection.
+    /// </summary>
+    public static class RecordingConsentTypeExtensions
+    {
+        /// <summary>
+        /// Converts an enum to a string.
+        /// </summary>
+        public static string ToValueString(this RecordingConsentType value)
+        {
+            return value switch
+            {
+                RecordingConsentType.StayOnLine => "stay-on-line",
+                RecordingConsentType.Verbal => "verbal",
+                _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
+            };
+        }
+        /// <summary>
+        /// Converts an string to a enum.
+        /// </summary>
+        public static RecordingConsentType? ToEnum(string value)
+        {
+            return value switch
+            {
+                "stay-on-line" => RecordingConsentType.StayOnLine,
+                "verbal" => RecordingConsentType.Verbal,
+                _ => null,
+            };
+        }
     }
 }

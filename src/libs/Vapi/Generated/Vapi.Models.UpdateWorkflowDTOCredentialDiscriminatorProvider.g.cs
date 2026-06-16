@@ -139,6 +139,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Microsoft,
+        /// <summary>
+        /// 
+        /// </summary>
         Minimax,
         /// <summary>
         /// 
@@ -274,6 +278,7 @@ namespace Vapi
                 UpdateWorkflowDTOCredentialDiscriminatorProvider.Langfuse => "langfuse",
                 UpdateWorkflowDTOCredentialDiscriminatorProvider.Lmnt => "lmnt",
                 UpdateWorkflowDTOCredentialDiscriminatorProvider.Make => "make",
+                UpdateWorkflowDTOCredentialDiscriminatorProvider.Microsoft => "microsoft",
                 UpdateWorkflowDTOCredentialDiscriminatorProvider.Minimax => "minimax",
                 UpdateWorkflowDTOCredentialDiscriminatorProvider.Mistral => "mistral",
                 UpdateWorkflowDTOCredentialDiscriminatorProvider.Neuphonic => "neuphonic",
@@ -339,6 +344,7 @@ namespace Vapi
                 "langfuse" => UpdateWorkflowDTOCredentialDiscriminatorProvider.Langfuse,
                 "lmnt" => UpdateWorkflowDTOCredentialDiscriminatorProvider.Lmnt,
                 "make" => UpdateWorkflowDTOCredentialDiscriminatorProvider.Make,
+                "microsoft" => UpdateWorkflowDTOCredentialDiscriminatorProvider.Microsoft,
                 "minimax" => UpdateWorkflowDTOCredentialDiscriminatorProvider.Minimax,
                 "mistral" => UpdateWorkflowDTOCredentialDiscriminatorProvider.Mistral,
                 "neuphonic" => UpdateWorkflowDTOCredentialDiscriminatorProvider.Neuphonic,

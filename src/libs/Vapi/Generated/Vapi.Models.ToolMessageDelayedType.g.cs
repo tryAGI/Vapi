@@ -4,11 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// This message is triggered when the tool call is delayed.<br/>
-    /// There are the two things that can trigger this message:<br/>
-    /// 1. The user talks with the assistant while your server is processing the request. Default is "Sorry, a few more seconds."<br/>
-    /// 2. The server doesn't respond within `timingMilliseconds`.<br/>
-    /// This message is never triggered for async tool calls.
+    /// This message is triggered when the tool call is delayed. Same timing means variants; different timings mean staged updates.
     /// </summary>
     public enum ToolMessageDelayedType
     {

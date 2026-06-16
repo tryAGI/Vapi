@@ -12016,7 +12016,7 @@
             "enum": [
               "request-start"
             ],
-            "description": "This message is triggered when the tool call starts.\n\nThis message is never triggered for async tools.\n\nIf this message is not provided, one of the default filler messages \"Hold on a sec\", \"One moment\", \"Just a sec\", \"Give me a moment\" or \"This'll just take a sec\" will be used."
+            "description": "This message is triggered when the tool call starts.\n\nThis message is never triggered for async tools.\n\nMultiple request-start messages are variants. One eligible variant is selected each time the tool starts.\n\nIf this message is not provided, one of the default filler messages \"Hold on a sec\", \"One moment\", \"Just a sec\", \"Give me a moment\" or \"This'll just take a sec\" will be used."
           },
           "blocking": {
             "type": "boolean",
@@ -12154,7 +12154,7 @@
           },
           "type": {
             "type": "string",
-            "description": "This message is triggered when the tool call is delayed.\n\nThere are the two things that can trigger this message:\n1. The user talks with the assistant while your server is processing the request. Default is \"Sorry, a few more seconds.\"\n2. The server doesn't respond within `timingMilliseconds`.\n\nThis message is never triggered for async tool calls.",
+            "description": "This message is triggered when the tool call is delayed. Same timing means variants; different timings mean staged updates.",
             "enum": [
               "request-response-delayed"
             ]
@@ -12164,7 +12164,7 @@
             "minimum": 100,
             "maximum": 120000,
             "example": 1000,
-            "description": "The number of milliseconds to wait for the server response before saying this message."
+            "description": "The number of milliseconds to wait for the server response before saying this delayed message."
           },
           "content": {
             "type": "string",
@@ -12356,7 +12356,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -12408,7 +12408,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -12455,7 +12455,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -12719,7 +12719,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -12813,7 +12813,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -12875,7 +12875,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -13532,6 +13532,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -13664,7 +13668,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -13711,7 +13715,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -13998,7 +14002,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -14384,7 +14388,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -14543,7 +14547,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -14597,7 +14601,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -14644,7 +14648,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -14691,7 +14695,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -14738,7 +14742,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -14789,7 +14793,7 @@
           },
           "messages": {
             "type": "array",
-            "description": "Custom messages for this specific tool. Set to an empty array to suppress all messages for this tool. If not provided, the tool will use the default messages from the parent MCP tool configuration.",
+            "description": "Custom messages for this specific tool. Set to an empty array to suppress all messages for this tool. If not provided, the tool will use the default messages from the parent MCP tool configuration. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -14834,7 +14838,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -14899,7 +14903,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -14946,7 +14950,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -14993,7 +14997,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -15040,7 +15044,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -15628,7 +15632,8 @@
               "claude-opus-4-6",
               "claude-sonnet-4-20250514",
               "claude-sonnet-4-5-20250929",
-              "claude-sonnet-4-6"
+              "claude-sonnet-4-6",
+              "global.anthropic.claude-haiku-4-5-20251001-v1:0"
             ]
           },
           "thinking": {
@@ -18166,6 +18171,7 @@
               "gpt-4.1-nano-2025-04-14:southcentralus",
               "gpt-4.1-nano-2025-04-14:westus",
               "gpt-4.1-nano-2025-04-14:westus3",
+              "gpt-4.1:australiaeast",
               "gpt-4o",
               "gpt-4o-2024-05-13",
               "gpt-4o-2024-05-13:eastus",
@@ -18200,6 +18206,7 @@
               "gpt-4o-mini-2024-07-18:southcentralus",
               "gpt-4o-mini-2024-07-18:westus",
               "gpt-4o-mini-2024-07-18:westus3",
+              "gpt-4o:australiaeast",
               "gpt-5",
               "gpt-5-chat-latest",
               "gpt-5-mini",
@@ -18210,6 +18217,7 @@
               "gpt-5.2-chat-latest",
               "gpt-5.4",
               "gpt-5.4-mini",
+              "gpt-5.4-mini:australiaeast",
               "gpt-5.4-nano",
               "o1-mini",
               "o1-mini-2024-09-12",
@@ -18321,7 +18329,8 @@
               "claude-opus-4-6",
               "claude-sonnet-4-20250514",
               "claude-sonnet-4-5-20250929",
-              "claude-sonnet-4-6"
+              "claude-sonnet-4-6",
+              "global.anthropic.claude-haiku-4-5-20251001-v1:0"
             ]
           },
           "thinking": {
@@ -18643,6 +18652,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -19163,7 +19176,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -19251,6 +19264,28 @@
               "say"
             ]
           },
+          "exact": {
+            "description": "This is the exact message to say. When a string array is provided, one is randomly selected.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "examples": [
+              "Are you still there?",
+              [
+                "Are you still there?",
+                "Could you repeat that?",
+                "I didn't catch that."
+              ]
+            ]
+          },
           "prompt": {
             "description": "This is the prompt for the assistant to generate a response based on existing conversation.\nCan be a string or an array of chat messages.",
             "oneOf": [
@@ -19296,10 +19331,6 @@
                 }
               ]
             ]
-          },
-          "exact": {
-            "type": "object",
-            "description": "This is the message to say"
           }
         },
         "required": [
@@ -19603,6 +19634,14 @@
       "CustomerSpeechTimeoutOptions": {
         "type": "object",
         "properties": {
+          "triggerResetMode": {
+            "type": "string",
+            "description": "This is whether the counter for hook trigger resets the user speaks.\n\n@default never",
+            "enum": [
+              "never",
+              "onUserSpeech"
+            ]
+          },
           "timeoutSeconds": {
             "type": "number",
             "description": "This is the timeout in seconds before action is triggered.\nThe clock starts when the assistant finishes speaking and remains active until the user speaks.\n\n@default 7.5\n@minimum 2\n@maximum 1000",
@@ -19614,10 +19653,6 @@
             "description": "This is the maximum number of times the hook will trigger in a call.\n\n@default 3",
             "minimum": 1,
             "maximum": 10
-          },
-          "triggerResetMode": {
-            "type": "object",
-            "description": "This is whether the counter for hook trigger resets the user speaks.\n\n@default never"
           }
         },
         "required": [
@@ -19847,6 +19882,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -19972,6 +20011,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -20348,19 +20391,103 @@
           "schema"
         ]
       },
+      "NumberComparatorScorecardMetricCondition": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "This is the type of the condition. Currently only 'comparator' is supported.",
+            "enum": [
+              "comparator"
+            ]
+          },
+          "comparator": {
+            "type": "string",
+            "description": "This is the comparator that will be used to compare the result of the structured output with the value specified.\nOnly '=', '!=', '>', '<', '>=', and '<=' are supported for number conditions\nOnly '=' is supported for boolean conditions.",
+            "enum": [
+              "eq",
+              "neq",
+              "gt",
+              "lt",
+              "gte",
+              "lte"
+            ]
+          },
+          "value": {
+            "type": "number",
+            "description": "This is the value that will be used to compare the result of the structured output with the comparator.\nIf the result of the comparison is true, the points will be added to the overall score."
+          },
+          "points": {
+            "type": "number",
+            "description": "These are the points that will be added to the overall score if the condition is met.\nThe points must be between 0 and 100.",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "comparator",
+          "points",
+          "type",
+          "value"
+        ]
+      },
+      "BooleanComparatorScorecardMetricCondition": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "This is the type of the condition. Currently only 'comparator' is supported.",
+            "enum": [
+              "comparator"
+            ]
+          },
+          "comparator": {
+            "type": "string",
+            "description": "The comparator can only be '=' for boolean conditions.",
+            "enum": [
+              "="
+            ]
+          },
+          "value": {
+            "type": "boolean",
+            "description": "This is the value that will be used to compare the result of the structured output with the comparator.\nIf the result of the comparison is true, the points will be added to the overall score."
+          },
+          "points": {
+            "type": "number",
+            "description": "These are the points that will be added to the overall score if the condition is met.\nThe points must be between 0 and 100.",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "comparator",
+          "points",
+          "type",
+          "value"
+        ]
+      },
       "ScorecardMetric": {
         "type": "object",
         "properties": {
+          "conditions": {
+            "type": "array",
+            "description": "These are the conditions that will be used to evaluate the scorecard.\nEach condition will have a comparator, value, and points that will be used to calculate the final score.\nThe points will be added to the overall score if the condition is met.\nThe overall score will be normalized to a 100 point scale to ensure uniformity across different scorecards.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/NumberComparatorScorecardMetricCondition",
+                  "title": "NumberComparatorScorecardMetricCondition"
+                },
+                {
+                  "$ref": "#/components/schemas/BooleanComparatorScorecardMetricCondition",
+                  "title": "BooleanComparatorScorecardMetricCondition"
+                }
+              ]
+            }
+          },
           "structuredOutputId": {
             "type": "string",
             "description": "This is the unique identifier for the structured output that will be used to evaluate the scorecard.\nThe structured output must be of type number or boolean only for now."
-          },
-          "conditions": {
-            "description": "These are the conditions that will be used to evaluate the scorecard.\nEach condition will have a comparator, value, and points that will be used to calculate the final score.\nThe points will be added to the overall score if the condition is met.\nThe overall score will be normalized to a 100 point scale to ensure uniformity across different scorecards.",
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
           }
         },
         "required": [
@@ -20873,6 +21000,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -21122,6 +21253,10 @@
                   "title": "XAiCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateMicrosoftCredentialDTO",
+                  "title": "MicrosoftCredential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "title": "GoogleCalendarOAuth2ClientCredential"
                 },
@@ -21204,6 +21339,7 @@
                   "webhook": "#/components/schemas/CreateWebhookCredentialDTO",
                   "custom-credential": "#/components/schemas/CreateCustomCredentialDTO",
                   "xai": "#/components/schemas/CreateXAiCredentialDTO",
+                  "microsoft": "#/components/schemas/CreateMicrosoftCredentialDTO",
                   "neuphonic": "#/components/schemas/CreateNeuphonicCredentialDTO",
                   "hume": "#/components/schemas/CreateHumeCredentialDTO",
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
@@ -21674,6 +21810,7 @@
               "grok-4-fast-reasoning",
               "grok-4.20-0309-non-reasoning",
               "grok-4.20-0309-reasoning",
+              "grok-4.3",
               "grok-beta"
             ]
           },
@@ -22012,6 +22149,10 @@
                 {
                   "$ref": "#/components/schemas/FallbackXaiVoice",
                   "title": "xAI"
+                },
+                {
+                  "$ref": "#/components/schemas/FallbackMicrosoftVoice",
+                  "title": "Microsoft"
                 }
               ]
             }
@@ -23875,12 +24016,83 @@
               "Zoe"
             ]
           },
+          "version": {
+            "type": "number",
+            "description": "The Vapi voice routing generation. Version 1 uses legacy mappings; version 2 can use xAI-backed voices when available. When omitted, Version 1 is used.",
+            "enum": [
+              1,
+              2
+            ]
+          },
           "speed": {
             "type": "number",
             "description": "This is the speed multiplier that will be used.\n\n@default 1",
             "minimum": 0.25,
             "maximum": 2,
             "default": 1
+          },
+          "language": {
+            "type": "string",
+            "description": "Language for Vapi voice synthesis. For Version 2, omit this field or set `auto` for automatic language detection. Version 1 supports legacy Vapi language values.",
+            "enum": [
+              "ar",
+              "ar-AE",
+              "ar-EG",
+              "ar-SA",
+              "auto",
+              "bg",
+              "bn",
+              "cs",
+              "da",
+              "de",
+              "el",
+              "en",
+              "en-AU",
+              "en-CA",
+              "en-GB",
+              "en-US",
+              "es",
+              "es-ES",
+              "es-MX",
+              "fi",
+              "fil",
+              "fr",
+              "fr-CA",
+              "fr-FR",
+              "gu",
+              "he",
+              "hi",
+              "hr",
+              "hu",
+              "id",
+              "it",
+              "ja",
+              "ka",
+              "kn",
+              "ko",
+              "ml",
+              "mr",
+              "ms",
+              "nl",
+              "no",
+              "pa",
+              "pl",
+              "pt",
+              "pt-BR",
+              "pt-PT",
+              "ro",
+              "ru",
+              "sk",
+              "sv",
+              "ta",
+              "te",
+              "th",
+              "tl",
+              "tr",
+              "uk",
+              "vi",
+              "zh"
+            ]
           },
           "pronunciationDictionary": {
             "description": "List of pronunciation dictionary locators for custom word pronunciations.",
@@ -24478,6 +24690,13 @@
             ],
             "default": "en"
           },
+          "speed": {
+            "type": "number",
+            "description": "Speed multiplier for xAI TTS synthesis.",
+            "minimum": 0.7,
+            "maximum": 1.5,
+            "default": 1.1
+          },
           "chunkPlan": {
             "description": "This is the plan for chunking the model output before it is sent to the voice provider.",
             "allOf": [
@@ -24485,6 +24704,126 @@
                 "$ref": "#/components/schemas/ChunkPlan"
               }
             ]
+          },
+          "fallbackPlan": {
+            "description": "This is the plan for voice provider fallbacks in the event that the primary voice provider fails.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FallbackPlan"
+              }
+            ]
+          }
+        },
+        "required": [
+          "provider",
+          "voiceId"
+        ]
+      },
+      "MicrosoftVoice": {
+        "type": "object",
+        "properties": {
+          "cachingEnabled": {
+            "type": "boolean",
+            "description": "This is the flag to toggle voice caching for the assistant.",
+            "example": true,
+            "default": true
+          },
+          "provider": {
+            "type": "string",
+            "description": "This is the voice provider that will be used.",
+            "enum": [
+              "microsoft"
+            ]
+          },
+          "voiceId": {
+            "type": "string",
+            "description": "MAI-Voice-1 voice ID. Built-in voices listed in enum.",
+            "enum": [
+              "en-us-Grant:MAI-Voice-1",
+              "en-us-Iris:MAI-Voice-1",
+              "en-us-Jasper:MAI-Voice-1",
+              "en-us-Joy:MAI-Voice-1",
+              "en-us-June:MAI-Voice-1",
+              "en-us-Reed:MAI-Voice-1"
+            ],
+            "example": "en-us-Jasper:MAI-Voice-1"
+          },
+          "style": {
+            "type": "string",
+            "description": "Speaking style applied via mstts:express-as on every request. Unknown styles are ignored by Azure and fall back to neutral.",
+            "enum": [
+              "advertisement_upbeat",
+              "affectionate",
+              "angry",
+              "assistant",
+              "calm",
+              "chat",
+              "cheerful",
+              "customerservice",
+              "depressed",
+              "disgruntled",
+              "documentary-narration",
+              "embarrassed",
+              "empathetic",
+              "envious",
+              "excited",
+              "fearful",
+              "friendly",
+              "gentle",
+              "hopeful",
+              "lyrical",
+              "narration-professional",
+              "narration-relaxed",
+              "newscast",
+              "newscast-casual",
+              "newscast-formal",
+              "poetry-reading",
+              "sad",
+              "serious",
+              "shouting",
+              "sports_commentary",
+              "sports_commentary_excited",
+              "terrified",
+              "unfriendly",
+              "whispering"
+            ],
+            "example": "chat"
+          },
+          "styleDegree": {
+            "type": "number",
+            "description": "Style intensity (0.01–2). Default 1 = the predefined style strength. Only applies when `style` is set.",
+            "minimum": 0.01,
+            "maximum": 2,
+            "default": 1
+          },
+          "role": {
+            "type": "string",
+            "description": "Role-play (age/gender imitation). Requires `style` to be set; ignored otherwise.",
+            "enum": [
+              "Boy",
+              "Girl",
+              "OlderAdultFemale",
+              "OlderAdultMale",
+              "SeniorFemale",
+              "SeniorMale",
+              "YoungAdultFemale",
+              "YoungAdultMale"
+            ],
+            "example": "YoungAdultFemale"
+          },
+          "chunkPlan": {
+            "description": "This is the plan for chunking the model output before it is sent to the voice provider.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ChunkPlan"
+              }
+            ]
+          },
+          "speed": {
+            "type": "number",
+            "description": "This is the speed multiplier that will be used.",
+            "minimum": 0.5,
+            "maximum": 2
           },
           "fallbackPlan": {
             "description": "This is the plan for voice provider fallbacks in the event that the primary voice provider fails.",
@@ -26003,12 +26342,83 @@
               "Zoe"
             ]
           },
+          "version": {
+            "type": "number",
+            "description": "The Vapi voice routing generation. Version 1 uses legacy mappings; version 2 can use xAI-backed voices when available. When omitted, Version 1 is used.",
+            "enum": [
+              1,
+              2
+            ]
+          },
           "speed": {
             "type": "number",
             "description": "This is the speed multiplier that will be used.\n\n@default 1",
             "minimum": 0.25,
             "maximum": 2,
             "default": 1
+          },
+          "language": {
+            "type": "string",
+            "description": "Language for Vapi voice synthesis. For Version 2, omit this field or set `auto` for automatic language detection. Version 1 supports legacy Vapi language values.",
+            "enum": [
+              "ar",
+              "ar-AE",
+              "ar-EG",
+              "ar-SA",
+              "auto",
+              "bg",
+              "bn",
+              "cs",
+              "da",
+              "de",
+              "el",
+              "en",
+              "en-AU",
+              "en-CA",
+              "en-GB",
+              "en-US",
+              "es",
+              "es-ES",
+              "es-MX",
+              "fi",
+              "fil",
+              "fr",
+              "fr-CA",
+              "fr-FR",
+              "gu",
+              "he",
+              "hi",
+              "hr",
+              "hu",
+              "id",
+              "it",
+              "ja",
+              "ka",
+              "kn",
+              "ko",
+              "ml",
+              "mr",
+              "ms",
+              "nl",
+              "no",
+              "pa",
+              "pl",
+              "pt",
+              "pt-BR",
+              "pt-PT",
+              "ro",
+              "ru",
+              "sk",
+              "sv",
+              "ta",
+              "te",
+              "th",
+              "tl",
+              "tr",
+              "uk",
+              "vi",
+              "zh"
+            ]
           },
           "pronunciationDictionary": {
             "description": "List of pronunciation dictionary locators for custom word pronunciations.",
@@ -26238,6 +26648,125 @@
               "zh"
             ],
             "default": "en"
+          },
+          "speed": {
+            "type": "number",
+            "description": "Speed multiplier for xAI TTS synthesis.",
+            "minimum": 0.7,
+            "maximum": 1.5,
+            "default": 1.1
+          },
+          "chunkPlan": {
+            "description": "This is the plan for chunking the model output before it is sent to the voice provider.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ChunkPlan"
+              }
+            ]
+          }
+        },
+        "required": [
+          "provider",
+          "voiceId"
+        ]
+      },
+      "FallbackMicrosoftVoice": {
+        "type": "object",
+        "properties": {
+          "cachingEnabled": {
+            "type": "boolean",
+            "description": "This is the flag to toggle voice caching for the assistant.",
+            "example": true,
+            "default": true
+          },
+          "provider": {
+            "type": "string",
+            "description": "This is the voice provider that will be used.",
+            "enum": [
+              "microsoft"
+            ]
+          },
+          "voiceId": {
+            "type": "string",
+            "description": "MAI-Voice-1 voice ID. Built-in voices listed in enum.",
+            "enum": [
+              "en-us-Grant:MAI-Voice-1",
+              "en-us-Iris:MAI-Voice-1",
+              "en-us-Jasper:MAI-Voice-1",
+              "en-us-Joy:MAI-Voice-1",
+              "en-us-June:MAI-Voice-1",
+              "en-us-Reed:MAI-Voice-1"
+            ],
+            "example": "en-us-Jasper:MAI-Voice-1"
+          },
+          "style": {
+            "type": "string",
+            "description": "Speaking style applied via mstts:express-as on every request. Unknown styles are ignored by Azure and fall back to neutral.",
+            "enum": [
+              "advertisement_upbeat",
+              "affectionate",
+              "angry",
+              "assistant",
+              "calm",
+              "chat",
+              "cheerful",
+              "customerservice",
+              "depressed",
+              "disgruntled",
+              "documentary-narration",
+              "embarrassed",
+              "empathetic",
+              "envious",
+              "excited",
+              "fearful",
+              "friendly",
+              "gentle",
+              "hopeful",
+              "lyrical",
+              "narration-professional",
+              "narration-relaxed",
+              "newscast",
+              "newscast-casual",
+              "newscast-formal",
+              "poetry-reading",
+              "sad",
+              "serious",
+              "shouting",
+              "sports_commentary",
+              "sports_commentary_excited",
+              "terrified",
+              "unfriendly",
+              "whispering"
+            ],
+            "example": "chat"
+          },
+          "styleDegree": {
+            "type": "number",
+            "description": "Style intensity (0.01–2). Default 1 = the predefined style strength. Only applies when `style` is set.",
+            "minimum": 0.01,
+            "maximum": 2,
+            "default": 1
+          },
+          "role": {
+            "type": "string",
+            "description": "Role-play (age/gender imitation). Requires `style` to be set; ignored otherwise.",
+            "enum": [
+              "Boy",
+              "Girl",
+              "OlderAdultFemale",
+              "OlderAdultMale",
+              "SeniorFemale",
+              "SeniorMale",
+              "YoungAdultFemale",
+              "YoungAdultMale"
+            ],
+            "example": "YoungAdultFemale"
+          },
+          "speed": {
+            "type": "number",
+            "description": "This is the speed multiplier that will be used.",
+            "minimum": 0.5,
+            "maximum": 2
           },
           "chunkPlan": {
             "description": "This is the plan for chunking the model output before it is sent to the voice provider.",
@@ -28378,6 +28907,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -28811,6 +29344,10 @@
                   "title": "XAiCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateMicrosoftCredentialDTO",
+                  "title": "MicrosoftCredential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "title": "GoogleCalendarOAuth2ClientCredential"
                 },
@@ -28893,6 +29430,7 @@
                   "webhook": "#/components/schemas/CreateWebhookCredentialDTO",
                   "custom-credential": "#/components/schemas/CreateCustomCredentialDTO",
                   "xai": "#/components/schemas/CreateXAiCredentialDTO",
+                  "microsoft": "#/components/schemas/CreateMicrosoftCredentialDTO",
                   "neuphonic": "#/components/schemas/CreateNeuphonicCredentialDTO",
                   "hume": "#/components/schemas/CreateHumeCredentialDTO",
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
@@ -29351,6 +29889,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -29784,6 +30326,10 @@
                   "title": "XAiCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateMicrosoftCredentialDTO",
+                  "title": "MicrosoftCredential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "title": "GoogleCalendarOAuth2ClientCredential"
                 },
@@ -29866,6 +30412,7 @@
                   "webhook": "#/components/schemas/CreateWebhookCredentialDTO",
                   "custom-credential": "#/components/schemas/CreateCustomCredentialDTO",
                   "xai": "#/components/schemas/CreateXAiCredentialDTO",
+                  "microsoft": "#/components/schemas/CreateMicrosoftCredentialDTO",
                   "neuphonic": "#/components/schemas/CreateNeuphonicCredentialDTO",
                   "hume": "#/components/schemas/CreateHumeCredentialDTO",
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
@@ -30221,6 +30768,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -30654,6 +31205,10 @@
                   "title": "XAiCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateMicrosoftCredentialDTO",
+                  "title": "MicrosoftCredential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "title": "GoogleCalendarOAuth2ClientCredential"
                 },
@@ -30736,6 +31291,7 @@
                   "webhook": "#/components/schemas/CreateWebhookCredentialDTO",
                   "custom-credential": "#/components/schemas/CreateCustomCredentialDTO",
                   "xai": "#/components/schemas/CreateXAiCredentialDTO",
+                  "microsoft": "#/components/schemas/CreateMicrosoftCredentialDTO",
                   "neuphonic": "#/components/schemas/CreateNeuphonicCredentialDTO",
                   "hume": "#/components/schemas/CreateHumeCredentialDTO",
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
@@ -31194,6 +31750,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -31627,6 +32187,10 @@
                   "title": "XAiCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateMicrosoftCredentialDTO",
+                  "title": "MicrosoftCredential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "title": "GoogleCalendarOAuth2ClientCredential"
                 },
@@ -31709,6 +32273,7 @@
                   "webhook": "#/components/schemas/CreateWebhookCredentialDTO",
                   "custom-credential": "#/components/schemas/CreateCustomCredentialDTO",
                   "xai": "#/components/schemas/CreateXAiCredentialDTO",
+                  "microsoft": "#/components/schemas/CreateMicrosoftCredentialDTO",
                   "neuphonic": "#/components/schemas/CreateNeuphonicCredentialDTO",
                   "hume": "#/components/schemas/CreateHumeCredentialDTO",
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
@@ -32111,6 +32676,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -32360,6 +32929,10 @@
                   "title": "XAiCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateMicrosoftCredentialDTO",
+                  "title": "MicrosoftCredential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "title": "GoogleCalendarOAuth2ClientCredential"
                 },
@@ -32442,6 +33015,7 @@
                   "webhook": "#/components/schemas/CreateWebhookCredentialDTO",
                   "custom-credential": "#/components/schemas/CreateCustomCredentialDTO",
                   "xai": "#/components/schemas/CreateXAiCredentialDTO",
+                  "microsoft": "#/components/schemas/CreateMicrosoftCredentialDTO",
                   "neuphonic": "#/components/schemas/CreateNeuphonicCredentialDTO",
                   "hume": "#/components/schemas/CreateHumeCredentialDTO",
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
@@ -32797,6 +33371,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -33046,6 +33624,10 @@
                   "title": "XAiCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateMicrosoftCredentialDTO",
+                  "title": "MicrosoftCredential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "title": "GoogleCalendarOAuth2ClientCredential"
                 },
@@ -33128,6 +33710,7 @@
                   "webhook": "#/components/schemas/CreateWebhookCredentialDTO",
                   "custom-credential": "#/components/schemas/CreateCustomCredentialDTO",
                   "xai": "#/components/schemas/CreateXAiCredentialDTO",
+                  "microsoft": "#/components/schemas/CreateMicrosoftCredentialDTO",
                   "neuphonic": "#/components/schemas/CreateNeuphonicCredentialDTO",
                   "hume": "#/components/schemas/CreateHumeCredentialDTO",
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
@@ -33465,6 +34048,10 @@
               {
                 "$ref": "#/components/schemas/XaiVoice",
                 "title": "XaiVoice"
+              },
+              {
+                "$ref": "#/components/schemas/MicrosoftVoice",
+                "title": "MicrosoftVoice"
               }
             ]
           },
@@ -33714,6 +34301,10 @@
                   "title": "XAiCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateMicrosoftCredentialDTO",
+                  "title": "MicrosoftCredential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "title": "GoogleCalendarOAuth2ClientCredential"
                 },
@@ -33796,6 +34387,7 @@
                   "webhook": "#/components/schemas/CreateWebhookCredentialDTO",
                   "custom-credential": "#/components/schemas/CreateCustomCredentialDTO",
                   "xai": "#/components/schemas/CreateXAiCredentialDTO",
+                  "microsoft": "#/components/schemas/CreateMicrosoftCredentialDTO",
                   "neuphonic": "#/components/schemas/CreateNeuphonicCredentialDTO",
                   "hume": "#/components/schemas/CreateHumeCredentialDTO",
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
@@ -33967,6 +34559,776 @@
             "description": "Incremental number of concurrent calls that will be allowed, including this call"
           }
         }
+      },
+      "UserMessage": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "description": "The role of the user in the conversation."
+          },
+          "message": {
+            "type": "string",
+            "description": "The message content from the user."
+          },
+          "time": {
+            "type": "number",
+            "description": "The timestamp when the message was sent."
+          },
+          "endTime": {
+            "type": "number",
+            "description": "The timestamp when the message ended."
+          },
+          "secondsFromStart": {
+            "type": "number",
+            "description": "The number of seconds from the start of the conversation."
+          },
+          "duration": {
+            "type": "number",
+            "description": "The duration of the message in seconds."
+          },
+          "isFiltered": {
+            "type": "boolean",
+            "description": "Indicates if the message was filtered for security reasons."
+          },
+          "detectedThreats": {
+            "description": "List of detected security threats if the message was filtered.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "originalMessage": {
+            "type": "string",
+            "description": "The original message before filtering (only included if content was filtered)."
+          },
+          "metadata": {
+            "type": "object",
+            "description": "The metadata associated with the message. Currently used to store the transcriber's word level confidence."
+          },
+          "speakerLabel": {
+            "type": "string",
+            "description": "Stable speaker label for diarized user speakers (e.g., \"Speaker 1\")."
+          }
+        },
+        "required": [
+          "endTime",
+          "message",
+          "role",
+          "secondsFromStart",
+          "time"
+        ]
+      },
+      "SystemMessage": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "description": "The role of the system in the conversation."
+          },
+          "message": {
+            "type": "string",
+            "description": "The message content from the system."
+          },
+          "time": {
+            "type": "number",
+            "description": "The timestamp when the message was sent."
+          },
+          "secondsFromStart": {
+            "type": "number",
+            "description": "The number of seconds from the start of the conversation."
+          }
+        },
+        "required": [
+          "message",
+          "role",
+          "secondsFromStart",
+          "time"
+        ]
+      },
+      "BotMessage": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "description": "The role of the bot in the conversation."
+          },
+          "message": {
+            "type": "string",
+            "description": "The message content from the bot."
+          },
+          "time": {
+            "type": "number",
+            "description": "The timestamp when the message was sent."
+          },
+          "endTime": {
+            "type": "number",
+            "description": "The timestamp when the message ended."
+          },
+          "secondsFromStart": {
+            "type": "number",
+            "description": "The number of seconds from the start of the conversation."
+          },
+          "source": {
+            "type": "string",
+            "description": "The source of the message."
+          },
+          "duration": {
+            "type": "number",
+            "description": "The duration of the message in seconds."
+          }
+        },
+        "required": [
+          "endTime",
+          "message",
+          "role",
+          "secondsFromStart",
+          "time"
+        ]
+      },
+      "ToolCallMessage": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "description": "The role of the tool call in the conversation."
+          },
+          "toolCalls": {
+            "description": "The list of tool calls made during the conversation.",
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "message": {
+            "type": "string",
+            "description": "The message content for the tool call."
+          },
+          "time": {
+            "type": "number",
+            "description": "The timestamp when the message was sent."
+          },
+          "secondsFromStart": {
+            "type": "number",
+            "description": "The number of seconds from the start of the conversation."
+          }
+        },
+        "required": [
+          "message",
+          "role",
+          "secondsFromStart",
+          "time",
+          "toolCalls"
+        ]
+      },
+      "ToolCallResultMessageWarning": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The kind of warning. Currently:\n- `oversized-tool-response`: the tool's serialized response exceeded the\n  recommended size and is likely to bloat the model context, increasing\n  latency and risking truncation of earlier instructions.",
+            "enum": [
+              "oversized-tool-response"
+            ]
+          },
+          "tokenCount": {
+            "type": "number",
+            "description": "The estimated number of tokens in the serialized tool response."
+          },
+          "threshold": {
+            "type": "number",
+            "description": "The threshold (in tokens) above which the warning is raised."
+          }
+        },
+        "required": [
+          "threshold",
+          "tokenCount",
+          "type"
+        ]
+      },
+      "ToolCallResultMessage": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "description": "The role of the tool call result in the conversation."
+          },
+          "toolCallId": {
+            "type": "string",
+            "description": "The ID of the tool call."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the tool that returned the result."
+          },
+          "result": {
+            "type": "string",
+            "description": "The result of the tool call in JSON format."
+          },
+          "time": {
+            "type": "number",
+            "description": "The timestamp when the message was sent."
+          },
+          "secondsFromStart": {
+            "type": "number",
+            "description": "The number of seconds from the start of the conversation."
+          },
+          "metadata": {
+            "type": "object",
+            "description": "The metadata for the tool call result."
+          },
+          "warnings": {
+            "description": "Warnings raised for this tool call result, e.g. when the response is\nlarger than recommended for voice AI context windows.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ToolCallResultMessageWarning"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "result",
+          "role",
+          "secondsFromStart",
+          "time",
+          "toolCallId"
+        ]
+      },
+      "TransportCost": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "This is the type of cost, always 'transport' for this class.",
+            "enum": [
+              "transport"
+            ]
+          },
+          "provider": {
+            "type": "string",
+            "enum": [
+              "daily",
+              "telnyx",
+              "twilio",
+              "vapi.sip",
+              "vapi.websocket",
+              "vonage"
+            ]
+          },
+          "minutes": {
+            "type": "number",
+            "description": "This is the minutes of `transport` usage. This should match `call.endedAt` - `call.startedAt`."
+          },
+          "cost": {
+            "type": "number",
+            "description": "This is the cost of the component in USD."
+          }
+        },
+        "required": [
+          "cost",
+          "minutes",
+          "type"
+        ]
+      },
+      "TranscriberCost": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "This is the type of cost, always 'transcriber' for this class.",
+            "enum": [
+              "transcriber"
+            ]
+          },
+          "transcriber": {
+            "type": "object",
+            "description": "This is the transcriber that was used during the call.\n\nThis matches one of the below:\n- `call.assistant.transcriber`,\n- `call.assistantId->transcriber`,\n- `call.squad[n].assistant.transcriber`,\n- `call.squad[n].assistantId->transcriber`,\n- `call.squadId->[n].assistant.transcriber`,\n- `call.squadId->[n].assistantId->transcriber`."
+          },
+          "minutes": {
+            "type": "number",
+            "description": "This is the minutes of `transcriber` usage. This should match `call.endedAt` - `call.startedAt` for single assistant calls, while squad calls will have multiple transcriber costs one for each assistant that was used."
+          },
+          "cost": {
+            "type": "number",
+            "description": "This is the cost of the component in USD."
+          }
+        },
+        "required": [
+          "cost",
+          "minutes",
+          "transcriber",
+          "type"
+        ]
+      },
+      "ModelCost": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "This is the type of cost, always 'model' for this class.",
+            "enum": [
+              "model"
+            ]
+          },
+          "model": {
+            "type": "object",
+            "description": "This is the model that was used during the call.\n\nThis matches one of the following:\n- `call.assistant.model`,\n- `call.assistantId->model`,\n- `call.squad[n].assistant.model`,\n- `call.squad[n].assistantId->model`,\n- `call.squadId->[n].assistant.model`,\n- `call.squadId->[n].assistantId->model`."
+          },
+          "promptTokens": {
+            "type": "number",
+            "description": "This is the number of prompt tokens used in the call. These should be total prompt tokens used in the call for single assistant calls, while squad calls will have multiple model costs one for each assistant that was used."
+          },
+          "completionTokens": {
+            "type": "number",
+            "description": "This is the number of completion tokens generated in the call. These should be total completion tokens used in the call for single assistant calls, while squad calls will have multiple model costs one for each assistant that was used."
+          },
+          "cachedPromptTokens": {
+            "type": "number",
+            "description": "This is the number of cached prompt tokens used in the call. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate."
+          },
+          "cost": {
+            "type": "number",
+            "description": "This is the cost of the component in USD."
+          }
+        },
+        "required": [
+          "completionTokens",
+          "cost",
+          "model",
+          "promptTokens",
+          "type"
+        ]
+      },
+      "VoiceCost": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "This is the type of cost, always 'voice' for this class.",
+            "enum": [
+              "voice"
+            ]
+          },
+          "voice": {
+            "type": "object",
+            "description": "This is the voice that was used during the call.\n\nThis matches one of the following:\n- `call.assistant.voice`,\n- `call.assistantId->voice`,\n- `call.squad[n].assistant.voice`,\n- `call.squad[n].assistantId->voice`,\n- `call.squadId->[n].assistant.voice`,\n- `call.squadId->[n].assistantId->voice`."
+          },
+          "characters": {
+            "type": "number",
+            "description": "This is the number of characters that were generated during the call. These should be total characters used in the call for single assistant calls, while squad calls will have multiple voice costs one for each assistant that was used."
+          },
+          "cost": {
+            "type": "number",
+            "description": "This is the cost of the component in USD."
+          }
+        },
+        "required": [
+          "characters",
+          "cost",
+          "type",
+          "voice"
+        ]
+      },
+      "ChatCost": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "This is the type of cost, always 'chat' for this class.",
+            "enum": [
+              "chat"
+            ]
+          },
+          "cost": {
+            "type": "number",
+            "description": "This is the cost of the component in USD."
+          }
+        },
+        "required": [
+          "cost",
+          "type"
+        ]
+      },
+      "VapiCost": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "This is the type of cost, always 'vapi' for this class.",
+            "enum": [
+              "vapi"
+            ]
+          },
+          "subType": {
+            "type": "string",
+            "description": "This is the sub type of the cost.",
+            "enum": [
+              "normal",
+              "overage"
+            ]
+          },
+          "minutes": {
+            "type": "number",
+            "description": "This is the minutes of Vapi usage. This should match `call.endedAt` - `call.startedAt`."
+          },
+          "cost": {
+            "type": "number",
+            "description": "This is the cost of the component in USD."
+          }
+        },
+        "required": [
+          "cost",
+          "minutes",
+          "subType",
+          "type"
+        ]
+      },
+      "VoicemailDetectionCost": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "This is the type of cost, always 'voicemail-detection' for this class.",
+            "enum": [
+              "voicemail-detection"
+            ]
+          },
+          "model": {
+            "type": "object",
+            "description": "This is the model that was used to perform the analysis."
+          },
+          "provider": {
+            "type": "string",
+            "description": "This is the provider that was used to detect the voicemail.",
+            "enum": [
+              "google",
+              "openai",
+              "twilio",
+              "vapi"
+            ]
+          },
+          "promptTextTokens": {
+            "type": "number",
+            "description": "This is the number of prompt text tokens used in the voicemail detection."
+          },
+          "promptAudioTokens": {
+            "type": "number",
+            "description": "This is the number of prompt audio tokens used in the voicemail detection."
+          },
+          "completionTextTokens": {
+            "type": "number",
+            "description": "This is the number of completion text tokens used in the voicemail detection."
+          },
+          "completionAudioTokens": {
+            "type": "number",
+            "description": "This is the number of completion audio tokens used in the voicemail detection."
+          },
+          "cost": {
+            "type": "number",
+            "description": "This is the cost of the component in USD."
+          }
+        },
+        "required": [
+          "completionAudioTokens",
+          "completionTextTokens",
+          "cost",
+          "model",
+          "promptAudioTokens",
+          "promptTextTokens",
+          "provider",
+          "type"
+        ]
+      },
+      "AnalysisCost": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "This is the type of cost, always 'analysis' for this class.",
+            "enum": [
+              "analysis"
+            ]
+          },
+          "analysisType": {
+            "type": "string",
+            "description": "This is the type of analysis performed.",
+            "enum": [
+              "structuredData",
+              "structuredOutput",
+              "successEvaluation",
+              "summary"
+            ]
+          },
+          "model": {
+            "type": "object",
+            "description": "This is the model that was used to perform the analysis."
+          },
+          "promptTokens": {
+            "type": "number",
+            "description": "This is the number of prompt tokens used in the analysis."
+          },
+          "completionTokens": {
+            "type": "number",
+            "description": "This is the number of completion tokens generated in the analysis."
+          },
+          "cachedPromptTokens": {
+            "type": "number",
+            "description": "This is the number of cached prompt tokens used in the analysis. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate."
+          },
+          "cost": {
+            "type": "number",
+            "description": "This is the cost of the component in USD."
+          }
+        },
+        "required": [
+          "analysisType",
+          "completionTokens",
+          "cost",
+          "model",
+          "promptTokens",
+          "type"
+        ]
+      },
+      "AudioFormat": {
+        "type": "object",
+        "properties": {
+          "sampleRate": {
+            "type": "number",
+            "description": "This is the sample rate of the call.\n\n@default 16000",
+            "minimum": 0,
+            "maximum": 192000
+          },
+          "format": {
+            "type": "object",
+            "description": "This is the audio format of the call.\n\n@default 'pcm_s16le'",
+            "enum": [
+              "mulaw",
+              "pcm_s16le"
+            ]
+          },
+          "container": {
+            "type": "string",
+            "description": "This is the container format of the call.\n\n@default 'raw'",
+            "enum": [
+              "raw"
+            ]
+          }
+        },
+        "required": [
+          "format",
+          "sampleRate"
+        ]
+      },
+      "VapiWebsocketTransport": {
+        "type": "object",
+        "properties": {
+          "conversationType": {
+            "type": "string",
+            "description": "This is the conversation type of the call (ie, voice or chat).",
+            "default": "voice",
+            "enum": [
+              "voice"
+            ]
+          },
+          "provider": {
+            "type": "string",
+            "description": "Vapi websocket transport provider",
+            "enum": [
+              "vapi.websocket"
+            ]
+          },
+          "audioFormat": {
+            "description": "This is the audio format of the call. Defaults to 16KHz raw pcm_s16le",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AudioFormat"
+              }
+            ]
+          }
+        },
+        "required": [
+          "provider"
+        ]
+      },
+      "VapiWebCallTransport": {
+        "type": "object",
+        "properties": {
+          "conversationType": {
+            "type": "string",
+            "description": "This is the conversation type of the call (ie, voice or chat).",
+            "default": "voice",
+            "enum": [
+              "voice"
+            ]
+          },
+          "provider": {
+            "type": "string",
+            "description": "Vapi web call transport provider",
+            "enum": [
+              "daily"
+            ]
+          },
+          "roomDeleteOnUserLeaveEnabled": {
+            "type": "boolean",
+            "description": "This determines whether the daily room will be deleted and all participants will be kicked once the user leaves the room.\nIf set to `false`, the room will be kept alive even after the user leaves, allowing clients to reconnect to the same room.\nIf set to `true`, the room will be deleted and reconnection will not be allowed.\n\nDefaults to `true`.",
+            "example": true,
+            "default": true
+          },
+          "callUrl": {
+            "type": "string",
+            "description": "This is the URL of the web call."
+          },
+          "callSipUri": {
+            "type": "string",
+            "description": "This is the SIP URI of the web call."
+          }
+        },
+        "required": [
+          "provider"
+        ]
+      },
+      "TwilioTransport": {
+        "type": "object",
+        "properties": {
+          "conversationType": {
+            "type": "string",
+            "description": "This is the conversation type of the call (ie, voice or chat).",
+            "default": "voice",
+            "enum": [
+              "voice"
+            ]
+          },
+          "provider": {
+            "type": "string",
+            "description": "Twilio transport provider",
+            "enum": [
+              "twilio"
+            ]
+          },
+          "accountSid": {
+            "type": "string",
+            "description": "This is the account SID of the Twilio account."
+          },
+          "callSid": {
+            "type": "string",
+            "description": "This is the call SID of the Twilio call."
+          },
+          "callToken": {
+            "type": "string",
+            "description": "This is the call token of the Twilio call."
+          },
+          "forwardedFrom": {
+            "type": "string",
+            "description": "This is the phone number from which the call was forwarded.\nUndefined if the call was not forwarded."
+          }
+        },
+        "required": [
+          "provider"
+        ]
+      },
+      "TelnyxTransport": {
+        "type": "object",
+        "properties": {
+          "conversationType": {
+            "type": "string",
+            "description": "This is the conversation type of the call (ie, voice or chat).",
+            "default": "voice",
+            "enum": [
+              "voice"
+            ]
+          },
+          "provider": {
+            "type": "string",
+            "description": "Telnyx transport provider",
+            "enum": [
+              "telnyx"
+            ]
+          },
+          "callControlId": {
+            "type": "string",
+            "description": "This is the call control ID of the Telnyx call."
+          },
+          "callLegId": {
+            "type": "string",
+            "description": "This is the call leg ID of the Telnyx call."
+          },
+          "callSessionId": {
+            "type": "string",
+            "description": "This is the call session ID of the Telnyx call."
+          }
+        },
+        "required": [
+          "provider"
+        ]
+      },
+      "VapiSipTransport": {
+        "type": "object",
+        "properties": {
+          "conversationType": {
+            "type": "string",
+            "description": "This is the conversation type of the call (ie, voice or chat).",
+            "default": "voice",
+            "enum": [
+              "voice"
+            ]
+          },
+          "provider": {
+            "type": "string",
+            "description": "Vapi SIP transport provider",
+            "enum": [
+              "vapi.sip"
+            ]
+          },
+          "dialTimeout": {
+            "type": "number",
+            "description": "This sets the timeout for outbound dial operations in seconds. This is the duration the call will ring before timing out.\n\n@default 60",
+            "minimum": 1,
+            "maximum": 600,
+            "default": 60
+          },
+          "sbcCallSid": {
+            "type": "string",
+            "description": "This is the call SID of the Vapi SIP call."
+          },
+          "callSid": {
+            "type": "string",
+            "description": "This is the call ID of the Vapi SIP call."
+          }
+        },
+        "required": [
+          "provider"
+        ]
+      },
+      "VonageTransport": {
+        "type": "object",
+        "properties": {
+          "conversationType": {
+            "type": "string",
+            "description": "This is the conversation type of the call (ie, voice or chat).",
+            "default": "voice",
+            "enum": [
+              "voice"
+            ]
+          },
+          "provider": {
+            "type": "string",
+            "description": "Vonage transport provider",
+            "enum": [
+              "vonage"
+            ]
+          },
+          "conversationUUID": {
+            "type": "string",
+            "description": "This is the conversation UUID of the Vonage call."
+          },
+          "callUUID": {
+            "type": "string",
+            "description": "This is the call ID of the Vonage call."
+          }
+        },
+        "required": [
+          "provider"
+        ]
       },
       "AnalysisCostBreakdown": {
         "type": "object",
@@ -34454,8 +35816,12 @@
         "type": "object",
         "properties": {
           "type": {
-            "type": "object",
-            "description": "This is the type of recording consent."
+            "type": "string",
+            "description": "This is the type of recording consent.",
+            "enum": [
+              "stay-on-line",
+              "verbal"
+            ]
           },
           "grantedAt": {
             "format": "date-time",
@@ -35183,6 +36549,7 @@
               "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota",
               "call.in-progress.error-vapifault-inworld-voice-failed",
               "call.in-progress.error-vapifault-lmnt-voice-failed",
+              "call.in-progress.error-vapifault-microsoft-voice-failed",
               "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-minimax-401-unauthorized",
               "call.in-progress.error-vapifault-minimax-403-model-access-denied",
@@ -35259,6 +36626,7 @@
               "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
               "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
               "call.in-progress.error-vapifault-xai-transcriber-server-error",
+              "call.in-progress.error-vapifault-xai-voice-failed",
               "call.in-progress.error-warm-transfer-assistant-cancelled",
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -35446,6 +36814,8 @@
               "pipeline-error-inflection-ai-llm-failed",
               "pipeline-error-inworld-voice-failed",
               "pipeline-error-lmnt-voice-failed",
+              "pipeline-error-microsoft-voice-failed",
+              "pipeline-error-microsoft-voice-request-canceled",
               "pipeline-error-minimax-400-bad-request-validation-failed",
               "pipeline-error-minimax-401-unauthorized",
               "pipeline-error-minimax-403-model-access-denied",
@@ -35574,6 +36944,35 @@
               {
                 "$ref": "#/components/schemas/TransferDestinationSip",
                 "title": "SipTransferDestination"
+              }
+            ]
+          },
+          "transport": {
+            "description": "This is the transport of the call.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/VapiWebsocketTransport",
+                "title": "VapiWebsocketTransport"
+              },
+              {
+                "$ref": "#/components/schemas/VonageTransport",
+                "title": "VonageTransport"
+              },
+              {
+                "$ref": "#/components/schemas/TwilioTransport",
+                "title": "TwilioTransport"
+              },
+              {
+                "$ref": "#/components/schemas/VapiSipTransport",
+                "title": "VapiSipTransport"
+              },
+              {
+                "$ref": "#/components/schemas/TelnyxTransport",
+                "title": "TelnyxTransport"
+              },
+              {
+                "$ref": "#/components/schemas/VapiWebCallTransport",
+                "title": "VapiWebCallTransport"
               }
             ]
           },
@@ -35762,10 +37161,6 @@
                 "$ref": "#/components/schemas/SchedulePlan"
               }
             ]
-          },
-          "transport": {
-            "type": "object",
-            "description": "This is the transport of the call."
           }
         },
         "required": [
@@ -35925,6 +37320,35 @@
       "CreateCallDTO": {
         "type": "object",
         "properties": {
+          "transport": {
+            "description": "This is the transport of the call.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/VapiWebsocketTransport",
+                "title": "VapiWebsocketTransport"
+              },
+              {
+                "$ref": "#/components/schemas/VonageTransport",
+                "title": "VonageTransport"
+              },
+              {
+                "$ref": "#/components/schemas/TwilioTransport",
+                "title": "TwilioTransport"
+              },
+              {
+                "$ref": "#/components/schemas/VapiSipTransport",
+                "title": "VapiSipTransport"
+              },
+              {
+                "$ref": "#/components/schemas/TelnyxTransport",
+                "title": "TelnyxTransport"
+              },
+              {
+                "$ref": "#/components/schemas/VapiWebCallTransport",
+                "title": "VapiWebCallTransport"
+              }
+            ]
+          },
           "customers": {
             "description": "This is used to issue batch calls to multiple customers.\n\nOnly relevant for `outboundPhoneCall`. To call a single customer, use `customer` instead.",
             "type": "array",
@@ -35944,10 +37368,6 @@
                 "$ref": "#/components/schemas/SchedulePlan"
               }
             ]
-          },
-          "transport": {
-            "type": "object",
-            "description": "This is the transport of the call."
           },
           "assistantId": {
             "type": "string",
@@ -36093,6 +37513,35 @@
       "CreateOutboundCallDTO": {
         "type": "object",
         "properties": {
+          "transport": {
+            "description": "This is the transport of the call.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/VapiWebsocketTransport",
+                "title": "VapiWebsocketTransport"
+              },
+              {
+                "$ref": "#/components/schemas/VonageTransport",
+                "title": "VonageTransport"
+              },
+              {
+                "$ref": "#/components/schemas/TwilioTransport",
+                "title": "TwilioTransport"
+              },
+              {
+                "$ref": "#/components/schemas/VapiSipTransport",
+                "title": "VapiSipTransport"
+              },
+              {
+                "$ref": "#/components/schemas/TelnyxTransport",
+                "title": "TelnyxTransport"
+              },
+              {
+                "$ref": "#/components/schemas/VapiWebCallTransport",
+                "title": "VapiWebCallTransport"
+              }
+            ]
+          },
           "customers": {
             "description": "This is used to issue batch calls to multiple customers.\n\nOnly relevant for `outboundPhoneCall`. To call a single customer, use `customer` instead.",
             "type": "array",
@@ -36112,10 +37561,6 @@
                 "$ref": "#/components/schemas/SchedulePlan"
               }
             ]
-          },
-          "transport": {
-            "type": "object",
-            "description": "This is the transport of the call."
           },
           "assistantId": {
             "type": "string",
@@ -36323,92 +37768,6 @@
         "required": [
           "content",
           "role"
-        ]
-      },
-      "SystemMessage": {
-        "type": "object",
-        "properties": {
-          "role": {
-            "type": "string",
-            "description": "The role of the system in the conversation."
-          },
-          "message": {
-            "type": "string",
-            "description": "The message content from the system."
-          },
-          "time": {
-            "type": "number",
-            "description": "The timestamp when the message was sent."
-          },
-          "secondsFromStart": {
-            "type": "number",
-            "description": "The number of seconds from the start of the conversation."
-          }
-        },
-        "required": [
-          "message",
-          "role",
-          "secondsFromStart",
-          "time"
-        ]
-      },
-      "UserMessage": {
-        "type": "object",
-        "properties": {
-          "role": {
-            "type": "string",
-            "description": "The role of the user in the conversation."
-          },
-          "message": {
-            "type": "string",
-            "description": "The message content from the user."
-          },
-          "time": {
-            "type": "number",
-            "description": "The timestamp when the message was sent."
-          },
-          "endTime": {
-            "type": "number",
-            "description": "The timestamp when the message ended."
-          },
-          "secondsFromStart": {
-            "type": "number",
-            "description": "The number of seconds from the start of the conversation."
-          },
-          "duration": {
-            "type": "number",
-            "description": "The duration of the message in seconds."
-          },
-          "isFiltered": {
-            "type": "boolean",
-            "description": "Indicates if the message was filtered for security reasons."
-          },
-          "detectedThreats": {
-            "description": "List of detected security threats if the message was filtered.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "originalMessage": {
-            "type": "string",
-            "description": "The original message before filtering (only included if content was filtered)."
-          },
-          "metadata": {
-            "type": "object",
-            "description": "The metadata associated with the message. Currently used to store the transcriber's word level confidence."
-          },
-          "speakerLabel": {
-            "type": "string",
-            "description": "Stable speaker label for diarized user speakers (e.g., \"Speaker 1\")."
-          }
-        },
-        "required": [
-          "endTime",
-          "message",
-          "role",
-          "secondsFromStart",
-          "time"
         ]
       },
       "ToolCallFunction": {
@@ -40474,7 +41833,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -40649,7 +42008,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -40772,7 +42131,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -40846,7 +42205,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -40915,7 +42274,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41020,7 +42379,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41093,7 +42452,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41166,7 +42525,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41254,7 +42613,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41355,7 +42714,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41424,7 +42783,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41518,7 +42877,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41626,7 +42985,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41720,7 +43079,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41796,7 +43155,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41865,7 +43224,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -41934,7 +43293,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42003,7 +43362,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42072,7 +43431,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42141,7 +43500,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42228,7 +43587,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42297,7 +43656,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42366,7 +43725,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42435,7 +43794,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42504,7 +43863,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42602,7 +43961,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42677,7 +44036,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42808,7 +44167,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42909,7 +44268,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -42956,7 +44315,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43028,7 +44387,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43114,7 +44473,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43186,7 +44545,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43233,7 +44592,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43309,7 +44668,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43428,7 +44787,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43518,7 +44877,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43560,7 +44919,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43597,7 +44956,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43670,7 +45029,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43710,7 +45069,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43750,7 +45109,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43819,7 +45178,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43876,7 +45235,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43913,7 +45272,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -43973,7 +45332,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44045,7 +45404,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44105,7 +45464,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44149,7 +45508,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44186,7 +45545,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44223,7 +45582,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44260,7 +45619,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44297,7 +45656,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44334,7 +45693,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44389,7 +45748,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44426,7 +45785,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44463,7 +45822,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44500,7 +45859,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44537,7 +45896,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -44602,7 +45961,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -46080,6 +47439,11 @@
               }
             ]
           },
+          "path": {
+            "type": "string",
+            "description": "Optional dot-notation path to a primitive leaf when evaluating an object structured output.",
+            "example": "contact.auth_started"
+          },
           "comparator": {
             "type": "string",
             "description": "This is the comparison operator to use when evaluating the extracted value against the expected value.\nAvailable operators depend on the structured output's schema type:\n- boolean: '=', '!='\n- string: '=', '!='\n- number/integer: '=', '!=', '>', '<', '>=', '<='",
@@ -46814,6 +48178,22 @@
           "name": {
             "type": "string",
             "description": "This is the name of the structured output."
+          },
+          "path": {
+            "type": "string",
+            "description": "This is the optional dot-notation path evaluated within an object structured output."
+          },
+          "description": {
+            "type": "string",
+            "description": "This is the structured output description captured when the evaluation ran."
+          },
+          "schema": {
+            "description": "This is the structured output schema captured when the evaluation ran.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/JsonSchema"
+              }
+            ]
           },
           "extractedValue": {
             "description": "This is the value extracted from the call by the structured output.",
@@ -50211,6 +51591,7 @@
               "gpt-4.1-nano-2025-04-14:southcentralus",
               "gpt-4.1-nano-2025-04-14:westus",
               "gpt-4.1-nano-2025-04-14:westus3",
+              "gpt-4.1:australiaeast",
               "gpt-4o",
               "gpt-4o-2024-05-13",
               "gpt-4o-2024-05-13:eastus",
@@ -50245,6 +51626,7 @@
               "gpt-4o-mini-2024-07-18:southcentralus",
               "gpt-4o-mini-2024-07-18:westus",
               "gpt-4o-mini-2024-07-18:westus3",
+              "gpt-4o:australiaeast",
               "gpt-5",
               "gpt-5-chat-latest",
               "gpt-5-mini",
@@ -50255,6 +51637,7 @@
               "gpt-5.2-chat-latest",
               "gpt-5.4",
               "gpt-5.4-mini",
+              "gpt-5.4-mini:australiaeast",
               "gpt-5.4-nano",
               "o1-mini",
               "o1-mini-2024-09-12",
@@ -51878,12 +53261,21 @@
             }
           },
           "role": {
-            "enum": [
-              "admin",
-              "editor",
-              "viewer"
-            ],
-            "type": "string"
+            "pattern": "ORG_ROLE_OR_CUSTOM_ROLE_PATTERN",
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "admin",
+                  "editor",
+                  "viewer"
+                ]
+              },
+              {
+                "type": "string",
+                "pattern": "^org-[a-z0-9-]+$"
+              }
+            ]
           },
           "redirectTo": {
             "type": "string"
@@ -51901,12 +53293,21 @@
             "type": "string"
           },
           "role": {
-            "enum": [
-              "admin",
-              "editor",
-              "viewer"
-            ],
-            "type": "string"
+            "pattern": "ORG_ROLE_OR_CUSTOM_ROLE_PATTERN",
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "admin",
+                  "editor",
+                  "viewer"
+                ]
+              },
+              {
+                "type": "string",
+                "pattern": "^org-[a-z0-9-]+$"
+              }
+            ]
           }
         },
         "required": [
@@ -53650,6 +55051,60 @@
           "updatedAt"
         ]
       },
+      "MicrosoftCredential": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "microsoft"
+            ]
+          },
+          "apiKey": {
+            "type": "string",
+            "description": "This is not returned in the API.",
+            "maxLength": 10000
+          },
+          "region": {
+            "type": "string",
+            "description": "Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-1 is preview and region-limited.",
+            "maxLength": 64,
+            "example": "eastus"
+          },
+          "id": {
+            "type": "string",
+            "description": "This is the unique identifier for the credential."
+          },
+          "orgId": {
+            "type": "string",
+            "description": "This is the unique identifier for the org that this credential belongs to."
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "This is the ISO 8601 date-time string of when the credential was created."
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "This is the ISO 8601 date-time string of when the assistant was last updated."
+          },
+          "name": {
+            "type": "string",
+            "description": "This is the name of credential. This is just for your reference.",
+            "minLength": 1,
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "apiKey",
+          "createdAt",
+          "id",
+          "orgId",
+          "provider",
+          "updatedAt"
+        ]
+      },
       "MistralCredential": {
         "type": "object",
         "properties": {
@@ -55329,6 +56784,38 @@
           "provider"
         ]
       },
+      "CreateMicrosoftCredentialDTO": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "microsoft"
+            ]
+          },
+          "apiKey": {
+            "type": "string",
+            "description": "This is not returned in the API.",
+            "maxLength": 10000
+          },
+          "region": {
+            "type": "string",
+            "description": "Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-1 is preview and region-limited.",
+            "maxLength": 64,
+            "example": "eastus"
+          },
+          "name": {
+            "type": "string",
+            "description": "This is the name of credential. This is just for your reference.",
+            "minLength": 1,
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "apiKey",
+          "provider"
+        ]
+      },
       "CreateMistralCredentialDTO": {
         "type": "object",
         "properties": {
@@ -56278,6 +57765,28 @@
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
+          },
+          "name": {
+            "type": "string",
+            "description": "This is the name of credential. This is just for your reference.",
+            "minLength": 1,
+            "maxLength": 40
+          }
+        }
+      },
+      "UpdateMicrosoftCredentialDTO": {
+        "type": "object",
+        "properties": {
+          "apiKey": {
+            "type": "string",
+            "description": "This is not returned in the API.",
+            "maxLength": 10000
+          },
+          "region": {
+            "type": "string",
+            "description": "Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-1 is preview and region-limited.",
+            "maxLength": 64,
+            "example": "eastus"
           },
           "name": {
             "type": "string",
@@ -57885,6 +59394,7 @@
               "hume",
               "inworld",
               "lmnt",
+              "microsoft",
               "minimax",
               "neuphonic",
               "openai",
@@ -58006,6 +59516,7 @@
               "hume",
               "inworld",
               "lmnt",
+              "microsoft",
               "minimax",
               "neuphonic",
               "openai",
@@ -58030,6 +59541,7 @@
                 "hume",
                 "inworld",
                 "lmnt",
+                "microsoft",
                 "minimax",
                 "neuphonic",
                 "openai",
@@ -58258,6 +59770,16 @@
       "VoiceLibraryVoiceResponse": {
         "type": "object",
         "properties": {
+          "age": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
           "voiceId": {
             "type": "string"
           },
@@ -58272,9 +59794,6 @@
           },
           "gender": {
             "type": "string"
-          },
-          "age": {
-            "type": "object"
           },
           "accent": {
             "type": "string"
@@ -60898,6 +62417,7 @@
               "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota",
               "call.in-progress.error-vapifault-inworld-voice-failed",
               "call.in-progress.error-vapifault-lmnt-voice-failed",
+              "call.in-progress.error-vapifault-microsoft-voice-failed",
               "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-minimax-401-unauthorized",
               "call.in-progress.error-vapifault-minimax-403-model-access-denied",
@@ -60974,6 +62494,7 @@
               "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
               "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
               "call.in-progress.error-vapifault-xai-transcriber-server-error",
+              "call.in-progress.error-vapifault-xai-voice-failed",
               "call.in-progress.error-warm-transfer-assistant-cancelled",
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -61161,6 +62682,8 @@
               "pipeline-error-inflection-ai-llm-failed",
               "pipeline-error-inworld-voice-failed",
               "pipeline-error-lmnt-voice-failed",
+              "pipeline-error-microsoft-voice-failed",
+              "pipeline-error-microsoft-voice-request-canceled",
               "pipeline-error-minimax-400-bad-request-validation-failed",
               "pipeline-error-minimax-401-unauthorized",
               "pipeline-error-minimax-403-model-access-denied",
@@ -62268,6 +63791,7 @@
               "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota",
               "call.in-progress.error-vapifault-inworld-voice-failed",
               "call.in-progress.error-vapifault-lmnt-voice-failed",
+              "call.in-progress.error-vapifault-microsoft-voice-failed",
               "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-minimax-401-unauthorized",
               "call.in-progress.error-vapifault-minimax-403-model-access-denied",
@@ -62344,6 +63868,7 @@
               "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
               "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
               "call.in-progress.error-vapifault-xai-transcriber-server-error",
+              "call.in-progress.error-vapifault-xai-voice-failed",
               "call.in-progress.error-warm-transfer-assistant-cancelled",
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -62531,6 +64056,8 @@
               "pipeline-error-inflection-ai-llm-failed",
               "pipeline-error-inworld-voice-failed",
               "pipeline-error-lmnt-voice-failed",
+              "pipeline-error-microsoft-voice-failed",
+              "pipeline-error-microsoft-voice-request-canceled",
               "pipeline-error-minimax-400-bad-request-validation-failed",
               "pipeline-error-minimax-401-unauthorized",
               "pipeline-error-minimax-403-model-access-denied",
@@ -65064,429 +66591,6 @@
           "message"
         ]
       },
-      "BotMessage": {
-        "type": "object",
-        "properties": {
-          "role": {
-            "type": "string",
-            "description": "The role of the bot in the conversation."
-          },
-          "message": {
-            "type": "string",
-            "description": "The message content from the bot."
-          },
-          "time": {
-            "type": "number",
-            "description": "The timestamp when the message was sent."
-          },
-          "endTime": {
-            "type": "number",
-            "description": "The timestamp when the message ended."
-          },
-          "secondsFromStart": {
-            "type": "number",
-            "description": "The number of seconds from the start of the conversation."
-          },
-          "source": {
-            "type": "string",
-            "description": "The source of the message."
-          },
-          "duration": {
-            "type": "number",
-            "description": "The duration of the message in seconds."
-          }
-        },
-        "required": [
-          "endTime",
-          "message",
-          "role",
-          "secondsFromStart",
-          "time"
-        ]
-      },
-      "ToolCallMessage": {
-        "type": "object",
-        "properties": {
-          "role": {
-            "type": "string",
-            "description": "The role of the tool call in the conversation."
-          },
-          "toolCalls": {
-            "description": "The list of tool calls made during the conversation.",
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "message": {
-            "type": "string",
-            "description": "The message content for the tool call."
-          },
-          "time": {
-            "type": "number",
-            "description": "The timestamp when the message was sent."
-          },
-          "secondsFromStart": {
-            "type": "number",
-            "description": "The number of seconds from the start of the conversation."
-          }
-        },
-        "required": [
-          "message",
-          "role",
-          "secondsFromStart",
-          "time",
-          "toolCalls"
-        ]
-      },
-      "ToolCallResultMessageWarning": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The kind of warning. Currently:\n- `oversized-tool-response`: the tool's serialized response exceeded the\n  recommended size and is likely to bloat the model context, increasing\n  latency and risking truncation of earlier instructions.",
-            "enum": [
-              "oversized-tool-response"
-            ]
-          },
-          "tokenCount": {
-            "type": "number",
-            "description": "The estimated number of tokens in the serialized tool response."
-          },
-          "threshold": {
-            "type": "number",
-            "description": "The threshold (in tokens) above which the warning is raised."
-          }
-        },
-        "required": [
-          "threshold",
-          "tokenCount",
-          "type"
-        ]
-      },
-      "ToolCallResultMessage": {
-        "type": "object",
-        "properties": {
-          "role": {
-            "type": "string",
-            "description": "The role of the tool call result in the conversation."
-          },
-          "toolCallId": {
-            "type": "string",
-            "description": "The ID of the tool call."
-          },
-          "name": {
-            "type": "string",
-            "description": "The name of the tool that returned the result."
-          },
-          "result": {
-            "type": "string",
-            "description": "The result of the tool call in JSON format."
-          },
-          "time": {
-            "type": "number",
-            "description": "The timestamp when the message was sent."
-          },
-          "secondsFromStart": {
-            "type": "number",
-            "description": "The number of seconds from the start of the conversation."
-          },
-          "metadata": {
-            "type": "object",
-            "description": "The metadata for the tool call result."
-          },
-          "warnings": {
-            "description": "Warnings raised for this tool call result, e.g. when the response is\nlarger than recommended for voice AI context windows.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ToolCallResultMessageWarning"
-            }
-          }
-        },
-        "required": [
-          "name",
-          "result",
-          "role",
-          "secondsFromStart",
-          "time",
-          "toolCallId"
-        ]
-      },
-      "TransportCost": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "This is the type of cost, always 'transport' for this class.",
-            "enum": [
-              "transport"
-            ]
-          },
-          "provider": {
-            "type": "string",
-            "enum": [
-              "daily",
-              "telnyx",
-              "twilio",
-              "vapi.sip",
-              "vapi.websocket",
-              "vonage"
-            ]
-          },
-          "minutes": {
-            "type": "number",
-            "description": "This is the minutes of `transport` usage. This should match `call.endedAt` - `call.startedAt`."
-          },
-          "cost": {
-            "type": "number",
-            "description": "This is the cost of the component in USD."
-          }
-        },
-        "required": [
-          "cost",
-          "minutes",
-          "type"
-        ]
-      },
-      "TranscriberCost": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "This is the type of cost, always 'transcriber' for this class.",
-            "enum": [
-              "transcriber"
-            ]
-          },
-          "transcriber": {
-            "type": "object",
-            "description": "This is the transcriber that was used during the call.\n\nThis matches one of the below:\n- `call.assistant.transcriber`,\n- `call.assistantId->transcriber`,\n- `call.squad[n].assistant.transcriber`,\n- `call.squad[n].assistantId->transcriber`,\n- `call.squadId->[n].assistant.transcriber`,\n- `call.squadId->[n].assistantId->transcriber`."
-          },
-          "minutes": {
-            "type": "number",
-            "description": "This is the minutes of `transcriber` usage. This should match `call.endedAt` - `call.startedAt` for single assistant calls, while squad calls will have multiple transcriber costs one for each assistant that was used."
-          },
-          "cost": {
-            "type": "number",
-            "description": "This is the cost of the component in USD."
-          }
-        },
-        "required": [
-          "cost",
-          "minutes",
-          "transcriber",
-          "type"
-        ]
-      },
-      "ModelCost": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "This is the type of cost, always 'model' for this class.",
-            "enum": [
-              "model"
-            ]
-          },
-          "model": {
-            "type": "object",
-            "description": "This is the model that was used during the call.\n\nThis matches one of the following:\n- `call.assistant.model`,\n- `call.assistantId->model`,\n- `call.squad[n].assistant.model`,\n- `call.squad[n].assistantId->model`,\n- `call.squadId->[n].assistant.model`,\n- `call.squadId->[n].assistantId->model`."
-          },
-          "promptTokens": {
-            "type": "number",
-            "description": "This is the number of prompt tokens used in the call. These should be total prompt tokens used in the call for single assistant calls, while squad calls will have multiple model costs one for each assistant that was used."
-          },
-          "completionTokens": {
-            "type": "number",
-            "description": "This is the number of completion tokens generated in the call. These should be total completion tokens used in the call for single assistant calls, while squad calls will have multiple model costs one for each assistant that was used."
-          },
-          "cachedPromptTokens": {
-            "type": "number",
-            "description": "This is the number of cached prompt tokens used in the call. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate."
-          },
-          "cost": {
-            "type": "number",
-            "description": "This is the cost of the component in USD."
-          }
-        },
-        "required": [
-          "completionTokens",
-          "cost",
-          "model",
-          "promptTokens",
-          "type"
-        ]
-      },
-      "VoiceCost": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "This is the type of cost, always 'voice' for this class.",
-            "enum": [
-              "voice"
-            ]
-          },
-          "voice": {
-            "type": "object",
-            "description": "This is the voice that was used during the call.\n\nThis matches one of the following:\n- `call.assistant.voice`,\n- `call.assistantId->voice`,\n- `call.squad[n].assistant.voice`,\n- `call.squad[n].assistantId->voice`,\n- `call.squadId->[n].assistant.voice`,\n- `call.squadId->[n].assistantId->voice`."
-          },
-          "characters": {
-            "type": "number",
-            "description": "This is the number of characters that were generated during the call. These should be total characters used in the call for single assistant calls, while squad calls will have multiple voice costs one for each assistant that was used."
-          },
-          "cost": {
-            "type": "number",
-            "description": "This is the cost of the component in USD."
-          }
-        },
-        "required": [
-          "characters",
-          "cost",
-          "type",
-          "voice"
-        ]
-      },
-      "VapiCost": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "This is the type of cost, always 'vapi' for this class.",
-            "enum": [
-              "vapi"
-            ]
-          },
-          "subType": {
-            "type": "string",
-            "description": "This is the sub type of the cost.",
-            "enum": [
-              "normal",
-              "overage"
-            ]
-          },
-          "minutes": {
-            "type": "number",
-            "description": "This is the minutes of Vapi usage. This should match `call.endedAt` - `call.startedAt`."
-          },
-          "cost": {
-            "type": "number",
-            "description": "This is the cost of the component in USD."
-          }
-        },
-        "required": [
-          "cost",
-          "minutes",
-          "subType",
-          "type"
-        ]
-      },
-      "AnalysisCost": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "This is the type of cost, always 'analysis' for this class.",
-            "enum": [
-              "analysis"
-            ]
-          },
-          "analysisType": {
-            "type": "string",
-            "description": "This is the type of analysis performed.",
-            "enum": [
-              "structuredData",
-              "structuredOutput",
-              "successEvaluation",
-              "summary"
-            ]
-          },
-          "model": {
-            "type": "object",
-            "description": "This is the model that was used to perform the analysis."
-          },
-          "promptTokens": {
-            "type": "number",
-            "description": "This is the number of prompt tokens used in the analysis."
-          },
-          "completionTokens": {
-            "type": "number",
-            "description": "This is the number of completion tokens generated in the analysis."
-          },
-          "cachedPromptTokens": {
-            "type": "number",
-            "description": "This is the number of cached prompt tokens used in the analysis. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate."
-          },
-          "cost": {
-            "type": "number",
-            "description": "This is the cost of the component in USD."
-          }
-        },
-        "required": [
-          "analysisType",
-          "completionTokens",
-          "cost",
-          "model",
-          "promptTokens",
-          "type"
-        ]
-      },
-      "VoicemailDetectionCost": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "This is the type of cost, always 'voicemail-detection' for this class.",
-            "enum": [
-              "voicemail-detection"
-            ]
-          },
-          "model": {
-            "type": "object",
-            "description": "This is the model that was used to perform the analysis."
-          },
-          "provider": {
-            "type": "string",
-            "description": "This is the provider that was used to detect the voicemail.",
-            "enum": [
-              "google",
-              "openai",
-              "twilio",
-              "vapi"
-            ]
-          },
-          "promptTextTokens": {
-            "type": "number",
-            "description": "This is the number of prompt text tokens used in the voicemail detection."
-          },
-          "promptAudioTokens": {
-            "type": "number",
-            "description": "This is the number of prompt audio tokens used in the voicemail detection."
-          },
-          "completionTextTokens": {
-            "type": "number",
-            "description": "This is the number of completion text tokens used in the voicemail detection."
-          },
-          "completionAudioTokens": {
-            "type": "number",
-            "description": "This is the number of completion audio tokens used in the voicemail detection."
-          },
-          "cost": {
-            "type": "number",
-            "description": "This is the cost of the component in USD."
-          }
-        },
-        "required": [
-          "completionAudioTokens",
-          "completionTextTokens",
-          "cost",
-          "model",
-          "promptAudioTokens",
-          "promptTextTokens",
-          "provider",
-          "type"
-        ]
-      },
       "KnowledgeBaseCost": {
         "type": "object",
         "properties": {
@@ -65522,26 +66626,6 @@
           "type"
         ]
       },
-      "ChatCost": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "This is the type of cost, always 'chat' for this class.",
-            "enum": [
-              "chat"
-            ]
-          },
-          "cost": {
-            "type": "number",
-            "description": "This is the cost of the component in USD."
-          }
-        },
-        "required": [
-          "cost",
-          "type"
-        ]
-      },
       "SessionCost": {
         "type": "object",
         "properties": {
@@ -65567,7 +66651,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -65654,7 +66738,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -65709,7 +66793,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -65764,7 +66848,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -65840,7 +66924,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -65930,7 +67014,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -66006,7 +67090,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -66057,7 +67141,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -66108,7 +67192,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -66159,7 +67243,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -66210,7 +67294,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {
@@ -66261,7 +67345,7 @@
         "properties": {
           "messages": {
             "type": "array",
-            "description": "These are the messages that will be spoken to the user as the tool is running.\n\nFor some tools, this is auto-filled based on special fields like `tool.destinations`. For others like the function tool, these can be custom configured.",
+            "description": "Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.",
             "items": {
               "oneOf": [
                 {

@@ -74,6 +74,13 @@ namespace Vapi
         public global::Vapi.OneOf<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>? Destination { get; set; }
 
         /// <summary>
+        /// This is the transport of the call.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transport")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>))]
+        public global::Vapi.OneOf<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>? Transport { get; set; }
+
+        /// <summary>
         /// This is the unique identifier for the call.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
@@ -289,12 +296,6 @@ namespace Vapi
         public global::Vapi.SchedulePlan? SchedulePlan { get; set; }
 
         /// <summary>
-        /// This is the transport of the call.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("transport")]
-        public object? Transport { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -337,6 +338,9 @@ namespace Vapi
         /// </param>
         /// <param name="destination">
         /// This is the destination where the call ended up being transferred to. If the call was not transferred, this will be empty.
+        /// </param>
+        /// <param name="transport">
+        /// This is the transport of the call.
         /// </param>
         /// <param name="startedAt">
         /// This is the ISO 8601 date-time string of when the call was started.
@@ -442,9 +446,6 @@ namespace Vapi
         /// <param name="schedulePlan">
         /// This is the schedule plan of the call.
         /// </param>
-        /// <param name="transport">
-        /// This is the transport of the call.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -461,6 +462,7 @@ namespace Vapi
             global::Vapi.CallEndedReason? endedReason,
             string? endedMessage,
             global::Vapi.OneOf<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>? destination,
+            global::Vapi.OneOf<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>? transport,
             global::System.DateTime? startedAt,
             global::System.DateTime? endedAt,
             double? cost,
@@ -485,8 +487,7 @@ namespace Vapi
             string? customerId,
             global::Vapi.CreateCustomerDTO? customer,
             string? name,
-            global::Vapi.SchedulePlan? schedulePlan,
-            object? transport)
+            global::Vapi.SchedulePlan? schedulePlan)
         {
             this.Type = type;
             this.Costs = costs;
@@ -496,6 +497,7 @@ namespace Vapi
             this.EndedReason = endedReason;
             this.EndedMessage = endedMessage;
             this.Destination = destination;
+            this.Transport = transport;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
@@ -525,7 +527,6 @@ namespace Vapi
             this.Customer = customer;
             this.Name = name;
             this.SchedulePlan = schedulePlan;
-            this.Transport = transport;
         }
 
         /// <summary>

@@ -839,6 +839,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallInProgressErrorVapifaultMicrosoftVoiceFailed,
+        /// <summary>
+        /// 
+        /// </summary>
         CallInProgressErrorVapifaultMinimax400BadRequestValidationFailed,
         /// <summary>
         /// 
@@ -1140,6 +1144,10 @@ namespace Vapi
         /// 
         /// </summary>
         CallInProgressErrorVapifaultXaiTranscriberServerError,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorVapifaultXaiVoiceFailed,
         /// <summary>
         /// 
         /// </summary>
@@ -1891,6 +1899,14 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        PipelineErrorMicrosoftVoiceFailed,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorMicrosoftVoiceRequestCanceled,
+        /// <summary>
+        /// 
+        /// </summary>
         PipelineErrorMinimax400BadRequestValidationFailed,
         /// <summary>
         /// 
@@ -2557,6 +2573,7 @@ namespace Vapi
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultInflectionAi429ExceededQuota => "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultInworldVoiceFailed => "call.in-progress.error-vapifault-inworld-voice-failed",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultLmntVoiceFailed => "call.in-progress.error-vapifault-lmnt-voice-failed",
+                ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultMicrosoftVoiceFailed => "call.in-progress.error-vapifault-microsoft-voice-failed",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultMinimax400BadRequestValidationFailed => "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultMinimax401Unauthorized => "call.in-progress.error-vapifault-minimax-401-unauthorized",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultMinimax403ModelAccessDenied => "call.in-progress.error-vapifault-minimax-403-model-access-denied",
@@ -2633,6 +2650,7 @@ namespace Vapi
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberInvalidConfig => "call.in-progress.error-vapifault-xai-transcriber-invalid-config",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberRateLimited => "call.in-progress.error-vapifault-xai-transcriber-rate-limited",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberServerError => "call.in-progress.error-vapifault-xai-transcriber-server-error",
+                ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiVoiceFailed => "call.in-progress.error-vapifault-xai-voice-failed",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferAssistantCancelled => "call.in-progress.error-warm-transfer-assistant-cancelled",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferMaxDuration => "call.in-progress.error-warm-transfer-max-duration",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferMicrophoneTimeout => "call.in-progress.error-warm-transfer-microphone-timeout",
@@ -2820,6 +2838,8 @@ namespace Vapi
                 ServerMessageStatusUpdateEndedReason.PipelineErrorInflectionAiLlmFailed => "pipeline-error-inflection-ai-llm-failed",
                 ServerMessageStatusUpdateEndedReason.PipelineErrorInworldVoiceFailed => "pipeline-error-inworld-voice-failed",
                 ServerMessageStatusUpdateEndedReason.PipelineErrorLmntVoiceFailed => "pipeline-error-lmnt-voice-failed",
+                ServerMessageStatusUpdateEndedReason.PipelineErrorMicrosoftVoiceFailed => "pipeline-error-microsoft-voice-failed",
+                ServerMessageStatusUpdateEndedReason.PipelineErrorMicrosoftVoiceRequestCanceled => "pipeline-error-microsoft-voice-request-canceled",
                 ServerMessageStatusUpdateEndedReason.PipelineErrorMinimax400BadRequestValidationFailed => "pipeline-error-minimax-400-bad-request-validation-failed",
                 ServerMessageStatusUpdateEndedReason.PipelineErrorMinimax401Unauthorized => "pipeline-error-minimax-401-unauthorized",
                 ServerMessageStatusUpdateEndedReason.PipelineErrorMinimax403ModelAccessDenied => "pipeline-error-minimax-403-model-access-denied",
@@ -3149,6 +3169,7 @@ namespace Vapi
                 "call.in-progress.error-vapifault-inflection-ai-429-exceeded-quota" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultInflectionAi429ExceededQuota,
                 "call.in-progress.error-vapifault-inworld-voice-failed" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultInworldVoiceFailed,
                 "call.in-progress.error-vapifault-lmnt-voice-failed" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultLmntVoiceFailed,
+                "call.in-progress.error-vapifault-microsoft-voice-failed" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultMicrosoftVoiceFailed,
                 "call.in-progress.error-vapifault-minimax-400-bad-request-validation-failed" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultMinimax400BadRequestValidationFailed,
                 "call.in-progress.error-vapifault-minimax-401-unauthorized" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultMinimax401Unauthorized,
                 "call.in-progress.error-vapifault-minimax-403-model-access-denied" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultMinimax403ModelAccessDenied,
@@ -3225,6 +3246,7 @@ namespace Vapi
                 "call.in-progress.error-vapifault-xai-transcriber-invalid-config" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberInvalidConfig,
                 "call.in-progress.error-vapifault-xai-transcriber-rate-limited" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberRateLimited,
                 "call.in-progress.error-vapifault-xai-transcriber-server-error" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiTranscriberServerError,
+                "call.in-progress.error-vapifault-xai-voice-failed" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultXaiVoiceFailed,
                 "call.in-progress.error-warm-transfer-assistant-cancelled" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferAssistantCancelled,
                 "call.in-progress.error-warm-transfer-max-duration" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferMaxDuration,
                 "call.in-progress.error-warm-transfer-microphone-timeout" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorWarmTransferMicrophoneTimeout,
@@ -3412,6 +3434,8 @@ namespace Vapi
                 "pipeline-error-inflection-ai-llm-failed" => ServerMessageStatusUpdateEndedReason.PipelineErrorInflectionAiLlmFailed,
                 "pipeline-error-inworld-voice-failed" => ServerMessageStatusUpdateEndedReason.PipelineErrorInworldVoiceFailed,
                 "pipeline-error-lmnt-voice-failed" => ServerMessageStatusUpdateEndedReason.PipelineErrorLmntVoiceFailed,
+                "pipeline-error-microsoft-voice-failed" => ServerMessageStatusUpdateEndedReason.PipelineErrorMicrosoftVoiceFailed,
+                "pipeline-error-microsoft-voice-request-canceled" => ServerMessageStatusUpdateEndedReason.PipelineErrorMicrosoftVoiceRequestCanceled,
                 "pipeline-error-minimax-400-bad-request-validation-failed" => ServerMessageStatusUpdateEndedReason.PipelineErrorMinimax400BadRequestValidationFailed,
                 "pipeline-error-minimax-401-unauthorized" => ServerMessageStatusUpdateEndedReason.PipelineErrorMinimax401Unauthorized,
                 "pipeline-error-minimax-403-model-access-denied" => ServerMessageStatusUpdateEndedReason.PipelineErrorMinimax403ModelAccessDenied,

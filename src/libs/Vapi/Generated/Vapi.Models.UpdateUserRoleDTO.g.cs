@@ -19,9 +19,9 @@ namespace Vapi
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateUserRoleDTORoleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.UpdateUserRoleDTORole?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Vapi.UpdateUserRoleDTORole Role { get; set; }
+        public required global::Vapi.OneOf<global::Vapi.UpdateUserRoleDTORole?, string> Role { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -39,7 +39,7 @@ namespace Vapi
 #endif
         public UpdateUserRoleDTO(
             string userId,
-            global::Vapi.UpdateUserRoleDTORole role)
+            global::Vapi.OneOf<global::Vapi.UpdateUserRoleDTORole?, string> role)
         {
             this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
             this.Role = role;
