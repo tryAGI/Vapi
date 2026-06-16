@@ -1,11 +1,22 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# OpenAPI spec: https://api.vapi.ai/api-json
+install_autosdk_cli() {
+  dotnet tool update --global autosdk.cli --prerelease >/dev/null 2>&1 || \
+    dotnet tool install --global autosdk.cli --prerelease
+}
 
-dotnet tool install --global autosdk.cli --prerelease
+fetch_spec() {
+  curl "$@" \
+    --fail --silent --show-error --location \
+    --retry 5 --retry-delay 10 --retry-all-errors \
+    --connect-timeout 30 --max-time 300
+}
+
+# OpenAPI spec: https://api.vapi.ai/api-json
+install_autosdk_cli
 rm -rf Generated
-curl --fail --silent --show-error --location https://api.vapi.ai/api-json -o openapi.yaml
+fetch_spec --fail --silent --show-error --location https://api.vapi.ai/api-json -o openapi.yaml
 
 # Fix 1: Flatten LMNTVoice/FallbackLMNTVoice language oneOf to simple string enum
 #         (oneOf with two enum types produces malformed OneOf<T1?,T2?>JsonConverter in typeof(); AutoSDK #206).
