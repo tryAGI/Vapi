@@ -9174,9 +9174,7 @@
               "gemini-2.5-flash",
               "gemini-2.5-flash-lite",
               "gemini-2.5-pro",
-              "gemini-3-flash-preview",
-              "gemini-3.1-flash-lite",
-              "gemini-3.5-flash"
+              "gemini-3-flash-preview"
             ]
           },
           "language": {
@@ -11526,9 +11524,7 @@
               "gemini-2.5-flash",
               "gemini-2.5-flash-lite",
               "gemini-2.5-pro",
-              "gemini-3-flash-preview",
-              "gemini-3.1-flash-lite",
-              "gemini-3.5-flash"
+              "gemini-3-flash-preview"
             ]
           },
           "language": {
@@ -14524,9 +14520,7 @@
               "gemini-2.5-flash",
               "gemini-2.5-flash-lite",
               "gemini-2.5-pro",
-              "gemini-3-flash-preview",
-              "gemini-3.1-flash-lite",
-              "gemini-3.5-flash"
+              "gemini-3-flash-preview"
             ]
           },
           "description": {
@@ -16585,9 +16579,7 @@
               "gemini-2.5-flash",
               "gemini-2.5-flash-lite",
               "gemini-2.5-pro",
-              "gemini-3-flash-preview",
-              "gemini-3.1-flash-lite",
-              "gemini-3.5-flash"
+              "gemini-3-flash-preview"
             ]
           },
           "provider": {
@@ -18396,9 +18388,7 @@
               "gemini-2.5-flash",
               "gemini-2.5-flash-lite",
               "gemini-2.5-pro",
-              "gemini-3-flash-preview",
-              "gemini-3.1-flash-lite",
-              "gemini-3.5-flash"
+              "gemini-3-flash-preview"
             ]
           },
           "temperature": {
@@ -24747,92 +24737,57 @@
           },
           "voiceId": {
             "type": "string",
-            "description": "MAI-Voice-2 voice ID. Built-in voices listed in enum.",
+            "description": "MAI-Voice-1 voice ID. Built-in voices listed in enum.",
             "enum": [
-              "de-DE-Klaus:MAI-Voice-2",
-              "de-DE-Mia:MAI-Voice-2",
-              "en-AU-Lisa:MAI-Voice-2",
-              "en-US-Ethan:MAI-Voice-2",
-              "en-US-Grant:MAI-Voice-2",
-              "en-US-Harper:MAI-Voice-2",
-              "en-US-Iris:MAI-Voice-2",
-              "en-US-Jasper:MAI-Voice-2",
-              "en-US-Olivia:MAI-Voice-2",
-              "es-ES-Marta:MAI-Voice-2",
-              "es-MX-Alejo:MAI-Voice-2",
-              "es-MX-Valeria:MAI-Voice-2",
-              "fr-FR-Marc:MAI-Voice-2",
-              "fr-FR-Soleil:MAI-Voice-2",
-              "hi-IN-Arjun:MAI-Voice-2",
-              "hi-IN-Dhruv:MAI-Voice-2",
-              "hi-IN-Kavya:MAI-Voice-2",
-              "hi-IN-Priya:MAI-Voice-2",
-              "hu-HU-Bence:MAI-Voice-2",
-              "hu-HU-Levente:MAI-Voice-2",
-              "hu-HU-Lilla:MAI-Voice-2",
-              "hu-HU-Réka:MAI-Voice-2",
-              "it-IT-Luca:MAI-Voice-2",
-              "it-IT-Rosa:MAI-Voice-2",
-              "ko-KR-Hana:MAI-Voice-2",
-              "ko-KR-Junho:MAI-Voice-2",
-              "nl-NL-Fleur:MAI-Voice-2",
-              "nl-NL-Sander:MAI-Voice-2",
-              "pt-BR-Caio:MAI-Voice-2",
-              "pt-BR-Luana:MAI-Voice-2",
-              "pt-BR-Pedro:MAI-Voice-2",
-              "pt-BR-Rafael:MAI-Voice-2",
-              "pt-PT-Rui:MAI-Voice-2",
-              "ro-RO-Andrei:MAI-Voice-2",
-              "ro-RO-Elena:MAI-Voice-2",
-              "ro-RO-Ioana:MAI-Voice-2",
-              "ro-RO-Radu:MAI-Voice-2",
-              "ru-RU-Lev:MAI-Voice-2",
-              "ru-RU-Masha:MAI-Voice-2",
-              "th-TH-Krit:MAI-Voice-2",
-              "th-TH-Nattapong:MAI-Voice-2",
-              "tr-TR-Aydin:MAI-Voice-2",
-              "tr-TR-Elif:MAI-Voice-2",
-              "zh-CN-Bo:MAI-Voice-2",
-              "zh-CN-Lan:MAI-Voice-2",
-              "zh-CN-Mei:MAI-Voice-2"
+              "en-us-Grant:MAI-Voice-1",
+              "en-us-Iris:MAI-Voice-1",
+              "en-us-Jasper:MAI-Voice-1",
+              "en-us-Joy:MAI-Voice-1",
+              "en-us-June:MAI-Voice-1",
+              "en-us-Reed:MAI-Voice-1"
             ],
-            "example": "en-US-Ethan:MAI-Voice-2"
+            "example": "en-us-Jasper:MAI-Voice-1"
           },
           "style": {
             "type": "string",
             "description": "Speaking style applied via mstts:express-as on every request. Unknown styles are ignored by Azure and fall back to neutral.",
             "enum": [
-              "adventurous",
+              "advertisement_upbeat",
+              "affectionate",
               "angry",
-              "caring",
+              "assistant",
+              "calm",
+              "chat",
               "cheerful",
-              "confused",
-              "curious",
-              "determined",
-              "disappointed",
-              "disgusted",
+              "customerservice",
+              "depressed",
+              "disgruntled",
+              "documentary-narration",
               "embarrassed",
-              "empathy",
-              "encouraging",
+              "empathetic",
+              "envious",
               "excited",
               "fearful",
               "friendly",
-              "happy",
+              "gentle",
               "hopeful",
-              "jealous",
-              "joyful",
-              "nostalgic",
-              "reflective",
-              "regretful",
-              "relieved",
+              "lyrical",
+              "narration-professional",
+              "narration-relaxed",
+              "newscast",
+              "newscast-casual",
+              "newscast-formal",
+              "poetry-reading",
               "sad",
               "serious",
               "shouting",
-              "softvoice",
-              "surprised",
+              "sports_commentary",
+              "sports_commentary_excited",
+              "terrified",
+              "unfriendly",
               "whispering"
             ],
-            "example": "happy"
+            "example": "chat"
           },
           "styleDegree": {
             "type": "number",
@@ -26733,92 +26688,57 @@
           },
           "voiceId": {
             "type": "string",
-            "description": "MAI-Voice-2 voice ID. Built-in voices listed in enum.",
+            "description": "MAI-Voice-1 voice ID. Built-in voices listed in enum.",
             "enum": [
-              "de-DE-Klaus:MAI-Voice-2",
-              "de-DE-Mia:MAI-Voice-2",
-              "en-AU-Lisa:MAI-Voice-2",
-              "en-US-Ethan:MAI-Voice-2",
-              "en-US-Grant:MAI-Voice-2",
-              "en-US-Harper:MAI-Voice-2",
-              "en-US-Iris:MAI-Voice-2",
-              "en-US-Jasper:MAI-Voice-2",
-              "en-US-Olivia:MAI-Voice-2",
-              "es-ES-Marta:MAI-Voice-2",
-              "es-MX-Alejo:MAI-Voice-2",
-              "es-MX-Valeria:MAI-Voice-2",
-              "fr-FR-Marc:MAI-Voice-2",
-              "fr-FR-Soleil:MAI-Voice-2",
-              "hi-IN-Arjun:MAI-Voice-2",
-              "hi-IN-Dhruv:MAI-Voice-2",
-              "hi-IN-Kavya:MAI-Voice-2",
-              "hi-IN-Priya:MAI-Voice-2",
-              "hu-HU-Bence:MAI-Voice-2",
-              "hu-HU-Levente:MAI-Voice-2",
-              "hu-HU-Lilla:MAI-Voice-2",
-              "hu-HU-Réka:MAI-Voice-2",
-              "it-IT-Luca:MAI-Voice-2",
-              "it-IT-Rosa:MAI-Voice-2",
-              "ko-KR-Hana:MAI-Voice-2",
-              "ko-KR-Junho:MAI-Voice-2",
-              "nl-NL-Fleur:MAI-Voice-2",
-              "nl-NL-Sander:MAI-Voice-2",
-              "pt-BR-Caio:MAI-Voice-2",
-              "pt-BR-Luana:MAI-Voice-2",
-              "pt-BR-Pedro:MAI-Voice-2",
-              "pt-BR-Rafael:MAI-Voice-2",
-              "pt-PT-Rui:MAI-Voice-2",
-              "ro-RO-Andrei:MAI-Voice-2",
-              "ro-RO-Elena:MAI-Voice-2",
-              "ro-RO-Ioana:MAI-Voice-2",
-              "ro-RO-Radu:MAI-Voice-2",
-              "ru-RU-Lev:MAI-Voice-2",
-              "ru-RU-Masha:MAI-Voice-2",
-              "th-TH-Krit:MAI-Voice-2",
-              "th-TH-Nattapong:MAI-Voice-2",
-              "tr-TR-Aydin:MAI-Voice-2",
-              "tr-TR-Elif:MAI-Voice-2",
-              "zh-CN-Bo:MAI-Voice-2",
-              "zh-CN-Lan:MAI-Voice-2",
-              "zh-CN-Mei:MAI-Voice-2"
+              "en-us-Grant:MAI-Voice-1",
+              "en-us-Iris:MAI-Voice-1",
+              "en-us-Jasper:MAI-Voice-1",
+              "en-us-Joy:MAI-Voice-1",
+              "en-us-June:MAI-Voice-1",
+              "en-us-Reed:MAI-Voice-1"
             ],
-            "example": "en-US-Ethan:MAI-Voice-2"
+            "example": "en-us-Jasper:MAI-Voice-1"
           },
           "style": {
             "type": "string",
             "description": "Speaking style applied via mstts:express-as on every request. Unknown styles are ignored by Azure and fall back to neutral.",
             "enum": [
-              "adventurous",
+              "advertisement_upbeat",
+              "affectionate",
               "angry",
-              "caring",
+              "assistant",
+              "calm",
+              "chat",
               "cheerful",
-              "confused",
-              "curious",
-              "determined",
-              "disappointed",
-              "disgusted",
+              "customerservice",
+              "depressed",
+              "disgruntled",
+              "documentary-narration",
               "embarrassed",
-              "empathy",
-              "encouraging",
+              "empathetic",
+              "envious",
               "excited",
               "fearful",
               "friendly",
-              "happy",
+              "gentle",
               "hopeful",
-              "jealous",
-              "joyful",
-              "nostalgic",
-              "reflective",
-              "regretful",
-              "relieved",
+              "lyrical",
+              "narration-professional",
+              "narration-relaxed",
+              "newscast",
+              "newscast-casual",
+              "newscast-formal",
+              "poetry-reading",
               "sad",
               "serious",
               "shouting",
-              "softvoice",
-              "surprised",
+              "sports_commentary",
+              "sports_commentary_excited",
+              "terrified",
+              "unfriendly",
               "whispering"
             ],
-            "example": "happy"
+            "example": "chat"
           },
           "styleDegree": {
             "type": "number",
@@ -27653,15 +27573,6 @@
             "type": "string",
             "maxLength": 10000,
             "description": "This is not returned in the API."
-          },
-          "baseUrl": {
-            "type": "string",
-            "enum": [
-              "https://api.elevenlabs.io",
-              "https://api.eu.residency.elevenlabs.io"
-            ],
-            "description": "This is the ElevenLabs API environment the key belongs to — the global endpoint or the EU data residency endpoint. It is detected automatically while validating the key and is not honored from the request, so a rotated key is always re-homed to the environment that actually accepts it.",
-            "readOnly": true
           },
           "name": {
             "type": "string",
@@ -51857,9 +51768,7 @@
               "gemini-2.5-flash",
               "gemini-2.5-flash-lite",
               "gemini-2.5-pro",
-              "gemini-3-flash-preview",
-              "gemini-3.1-flash-lite",
-              "gemini-3.5-flash"
+              "gemini-3-flash-preview"
             ]
           },
           "temperature": {
@@ -54596,15 +54505,6 @@
             "maxLength": 10000,
             "description": "This is not returned in the API."
           },
-          "baseUrl": {
-            "type": "string",
-            "enum": [
-              "https://api.elevenlabs.io",
-              "https://api.eu.residency.elevenlabs.io"
-            ],
-            "description": "This is the ElevenLabs API environment the key belongs to — the global endpoint or the EU data residency endpoint. It is detected automatically while validating the key and is not honored from the request, so a rotated key is always re-homed to the environment that actually accepts it.",
-            "readOnly": true
-          },
           "id": {
             "type": "string",
             "description": "This is the unique identifier for the credential."
@@ -55167,7 +55067,7 @@
           },
           "region": {
             "type": "string",
-            "description": "Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-2 is preview and region-limited.",
+            "description": "Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-1 is preview and region-limited.",
             "maxLength": 64,
             "example": "eastus"
           },
@@ -56900,7 +56800,7 @@
           },
           "region": {
             "type": "string",
-            "description": "Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-2 is preview and region-limited.",
+            "description": "Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-1 is preview and region-limited.",
             "maxLength": 64,
             "example": "eastus"
           },
@@ -57680,15 +57580,6 @@
             "maxLength": 10000,
             "description": "This is not returned in the API."
           },
-          "baseUrl": {
-            "type": "string",
-            "enum": [
-              "https://api.elevenlabs.io",
-              "https://api.eu.residency.elevenlabs.io"
-            ],
-            "description": "This is the ElevenLabs API environment the key belongs to — the global endpoint or the EU data residency endpoint. It is detected automatically while validating the key and is not honored from the request, so a rotated key is always re-homed to the environment that actually accepts it.",
-            "readOnly": true
-          },
           "name": {
             "type": "string",
             "description": "This is the name of credential. This is just for your reference.",
@@ -57893,7 +57784,7 @@
           },
           "region": {
             "type": "string",
-            "description": "Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-2 is preview and region-limited.",
+            "description": "Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-1 is preview and region-limited.",
             "maxLength": 64,
             "example": "eastus"
           },
