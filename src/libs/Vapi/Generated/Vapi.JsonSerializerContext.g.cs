@@ -1561,6 +1561,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderNullableJsonConverter),
@@ -3089,6 +3093,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ElevenLabsCredentialProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderNullableJsonConverter),
@@ -3364,6 +3372,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorTypeJsonConverter),
 
@@ -7110,6 +7122,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderNullableJsonConverter),
@@ -8638,6 +8654,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ElevenLabsCredentialProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderNullableJsonConverter),
@@ -8913,6 +8933,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorTypeJsonConverter),
 
@@ -11057,6 +11081,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateDeepInfraCredentialDTOProvider), TypeInfoPropertyName = "CreateDeepInfraCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateDeepSeekCredentialDTOProvider), TypeInfoPropertyName = "CreateDeepSeekCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateElevenLabsCredentialDTOProvider), TypeInfoPropertyName = "CreateElevenLabsCredentialDTOProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateElevenLabsCredentialDTOBaseUrl), TypeInfoPropertyName = "CreateElevenLabsCredentialDTOBaseUrl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GcpKey))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BucketPlan))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateGcpCredentialDTOProvider), TypeInfoPropertyName = "CreateGcpCredentialDTOProvider2")]
@@ -11099,7 +11124,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SessionCreatedHookOn), TypeInfoPropertyName = "SessionCreatedHookOn2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.ToolCallHookAction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SQLInjectionSecurityFilter))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SQLInjectionSecurityFilterType), TypeInfoPropertyName = "SQLInjectionSecurityFilterType2")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -12659,6 +12683,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderNullableJsonConverter),
@@ -14187,6 +14215,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ElevenLabsCredentialProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderNullableJsonConverter),
@@ -14462,6 +14494,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorTypeJsonConverter),
 
@@ -16226,6 +16262,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SQLInjectionSecurityFilterType), TypeInfoPropertyName = "SQLInjectionSecurityFilterType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.XSSSecurityFilter))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.XSSSecurityFilterType), TypeInfoPropertyName = "XSSSecurityFilterType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SSRFSecurityFilter))]
@@ -16648,7 +16685,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateComputerToolDTOType), TypeInfoPropertyName = "CreateComputerToolDTOType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateComputerToolDTOSubType), TypeInfoPropertyName = "CreateComputerToolDTOSubType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateComputerToolDTOName), TypeInfoPropertyName = "CreateComputerToolDTOName2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTextEditorToolDTOType), TypeInfoPropertyName = "CreateTextEditorToolDTOType2")]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -18208,6 +18244,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderNullableJsonConverter),
@@ -19736,6 +19776,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ElevenLabsCredentialProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderNullableJsonConverter),
@@ -20011,6 +20055,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorTypeJsonConverter),
 
@@ -21775,6 +21823,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTextEditorToolDTOType), TypeInfoPropertyName = "CreateTextEditorToolDTOType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTextEditorToolDTOSubType), TypeInfoPropertyName = "CreateTextEditorToolDTOSubType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTextEditorToolDTOName), TypeInfoPropertyName = "CreateTextEditorToolDTOName2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateSmsToolDTOType), TypeInfoPropertyName = "CreateSmsToolDTOType2")]
@@ -22189,6 +22238,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeepSeekCredentialProvider), TypeInfoPropertyName = "DeepSeekCredentialProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsCredential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsCredentialProvider), TypeInfoPropertyName = "ElevenLabsCredentialProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsCredentialBaseUrl), TypeInfoPropertyName = "ElevenLabsCredentialBaseUrl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GcpCredential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GcpCredentialProvider), TypeInfoPropertyName = "GcpCredentialProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaCredential))]
@@ -22196,8 +22246,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GoHighLevelCredential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GoHighLevelCredentialProvider), TypeInfoPropertyName = "GoHighLevelCredentialProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GoogleCredential))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GoogleCredentialProvider), TypeInfoPropertyName = "GoogleCredentialProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GroqCredential))]
     internal sealed partial class SourceGenerationContextChunk3 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -23757,6 +23805,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderNullableJsonConverter),
@@ -25285,6 +25337,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ElevenLabsCredentialProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderNullableJsonConverter),
@@ -25560,6 +25616,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorTypeJsonConverter),
 
@@ -27324,6 +27384,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GoogleCredentialProvider), TypeInfoPropertyName = "GoogleCredentialProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GroqCredential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GroqCredentialProvider), TypeInfoPropertyName = "GroqCredentialProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.HumeCredential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.HumeCredentialProvider), TypeInfoPropertyName = "HumeCredentialProvider2")]
@@ -27451,6 +27513,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateDeepInfraCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateDeepSeekCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateElevenLabsCredentialDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateElevenLabsCredentialDTOBaseUrl), TypeInfoPropertyName = "UpdateElevenLabsCredentialDTOBaseUrl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateGcpCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateGladiaCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateGoHighLevelCredentialDTO))]
@@ -27744,9 +27807,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BashToolWithToolCallSubType), TypeInfoPropertyName = "BashToolWithToolCallSubType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BashToolWithToolCallName), TypeInfoPropertyName = "BashToolWithToolCallName2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ComputerToolWithToolCallType), TypeInfoPropertyName = "ComputerToolWithToolCallType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ComputerToolWithToolCallSubType), TypeInfoPropertyName = "ComputerToolWithToolCallSubType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ComputerToolWithToolCallName), TypeInfoPropertyName = "ComputerToolWithToolCallName2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TextEditorToolWithToolCallType), TypeInfoPropertyName = "TextEditorToolWithToolCallType2")]
     internal sealed partial class SourceGenerationContextChunk4 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -29306,6 +29366,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderNullableJsonConverter),
@@ -30834,6 +30898,10 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.ElevenLabsCredentialProviderNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.GcpCredentialProviderNullableJsonConverter),
@@ -31109,6 +31177,10 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorTypeJsonConverter),
 
@@ -32873,6 +32945,9 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ComputerToolWithToolCallSubType), TypeInfoPropertyName = "ComputerToolWithToolCallSubType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ComputerToolWithToolCallName), TypeInfoPropertyName = "ComputerToolWithToolCallName2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TextEditorToolWithToolCallType), TypeInfoPropertyName = "TextEditorToolWithToolCallType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TextEditorToolWithToolCallSubType), TypeInfoPropertyName = "TextEditorToolWithToolCallSubType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TextEditorToolWithToolCallName), TypeInfoPropertyName = "TextEditorToolWithToolCallName2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GoogleCalendarCreateEventToolWithToolCallType), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCallType2")]
@@ -33955,6 +34030,8 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.CreateDeepSeekCredentialDTOProviderNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOProviderJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOProviderNullableJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CreateGcpCredentialDTOProviderNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CreateGladiaCredentialDTOProviderJsonConverter());
@@ -34719,6 +34796,8 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.DeepSeekCredentialProviderNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ElevenLabsCredentialProviderJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.ElevenLabsCredentialProviderNullableJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.ElevenLabsCredentialBaseUrlNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.GcpCredentialProviderJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.GcpCredentialProviderNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.GladiaCredentialProviderJsonConverter());
@@ -34857,6 +34936,8 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTORegionNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOModelNullableJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.UpdateElevenLabsCredentialDTOBaseUrlNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorTypeJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorTypeNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.UpdateCustomCredentialDTOAuthenticationPlanDiscriminatorTypeJsonConverter());
