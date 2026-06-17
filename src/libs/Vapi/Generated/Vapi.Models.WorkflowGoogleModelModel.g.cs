@@ -68,14 +68,6 @@ namespace Vapi
         /// 
         /// </summary>
         Gemini3FlashPreview,
-        /// <summary>
-        /// 
-        /// </summary>
-        Gemini31FlashLite,
-        /// <summary>
-        /// 
-        /// </summary>
-        Gemini35Flash,
     }
 
     /// <summary>
@@ -105,8 +97,6 @@ namespace Vapi
                 WorkflowGoogleModelModel.Gemini25FlashLite => "gemini-2.5-flash-lite",
                 WorkflowGoogleModelModel.Gemini25Pro => "gemini-2.5-pro",
                 WorkflowGoogleModelModel.Gemini3FlashPreview => "gemini-3-flash-preview",
-                WorkflowGoogleModelModel.Gemini31FlashLite => "gemini-3.1-flash-lite",
-                WorkflowGoogleModelModel.Gemini35Flash => "gemini-3.5-flash",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -132,8 +122,6 @@ namespace Vapi
                 "gemini-2.5-flash-lite" => WorkflowGoogleModelModel.Gemini25FlashLite,
                 "gemini-2.5-pro" => WorkflowGoogleModelModel.Gemini25Pro,
                 "gemini-3-flash-preview" => WorkflowGoogleModelModel.Gemini3FlashPreview,
-                "gemini-3.1-flash-lite" => WorkflowGoogleModelModel.Gemini31FlashLite,
-                "gemini-3.5-flash" => WorkflowGoogleModelModel.Gemini35Flash,
                 _ => null,
             };
         }

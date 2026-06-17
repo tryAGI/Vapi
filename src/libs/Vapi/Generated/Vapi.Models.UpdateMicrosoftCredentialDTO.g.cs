@@ -15,7 +15,7 @@ namespace Vapi
         public string? ApiKey { get; set; }
 
         /// <summary>
-        /// Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-2 is preview and region-limited.<br/>
+        /// Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-1 is preview and region-limited.<br/>
         /// Example: eastus
         /// </summary>
         /// <example>eastus</example>
@@ -41,7 +41,7 @@ namespace Vapi
         /// This is not returned in the API.
         /// </param>
         /// <param name="region">
-        /// Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-2 is preview and region-limited.<br/>
+        /// Azure region for the Speech resource. Defaults to `eastus` when omitted. MAI-Voice-1 is preview and region-limited.<br/>
         /// Example: eastus
         /// </param>
         /// <param name="name">

@@ -25,10 +25,10 @@ namespace Vapi
         public global::Vapi.MicrosoftVoiceProvider Provider { get; set; }
 
         /// <summary>
-        /// MAI-Voice-2 voice ID. Built-in voices listed in enum.<br/>
-        /// Example: en-US-Ethan:MAI-Voice-2
+        /// MAI-Voice-1 voice ID. Built-in voices listed in enum.<br/>
+        /// Example: en-us-Jasper:MAI-Voice-1
         /// </summary>
-        /// <example>en-US-Ethan:MAI-Voice-2</example>
+        /// <example>en-us-Jasper:MAI-Voice-1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("voiceId")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.MicrosoftVoiceVoiceIdJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -36,9 +36,9 @@ namespace Vapi
 
         /// <summary>
         /// Speaking style applied via mstts:express-as on every request. Unknown styles are ignored by Azure and fall back to neutral.<br/>
-        /// Example: happy
+        /// Example: chat
         /// </summary>
-        /// <example>happy</example>
+        /// <example>chat</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("style")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.MicrosoftVoiceStyleJsonConverter))]
         public global::Vapi.MicrosoftVoiceStyle? Style { get; set; }
@@ -87,8 +87,8 @@ namespace Vapi
         /// Initializes a new instance of the <see cref="MicrosoftVoice" /> class.
         /// </summary>
         /// <param name="voiceId">
-        /// MAI-Voice-2 voice ID. Built-in voices listed in enum.<br/>
-        /// Example: en-US-Ethan:MAI-Voice-2
+        /// MAI-Voice-1 voice ID. Built-in voices listed in enum.<br/>
+        /// Example: en-us-Jasper:MAI-Voice-1
         /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
@@ -100,7 +100,7 @@ namespace Vapi
         /// </param>
         /// <param name="style">
         /// Speaking style applied via mstts:express-as on every request. Unknown styles are ignored by Azure and fall back to neutral.<br/>
-        /// Example: happy
+        /// Example: chat
         /// </param>
         /// <param name="styleDegree">
         /// Style intensity (0.01–2). Default 1 = the predefined style strength. Only applies when `style` is set.<br/>

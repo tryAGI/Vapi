@@ -5,14 +5,18 @@ namespace Vapi
 {
     /// <summary>
     /// Speaking style applied via mstts:express-as on every request. Unknown styles are ignored by Azure and fall back to neutral.<br/>
-    /// Example: happy
+    /// Example: chat
     /// </summary>
     public enum MicrosoftVoiceStyle
     {
         /// <summary>
         /// 
         /// </summary>
-        Adventurous,
+        AdvertisementUpbeat,
+        /// <summary>
+        /// 
+        /// </summary>
+        Affectionate,
         /// <summary>
         /// 
         /// </summary>
@@ -20,7 +24,15 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Caring,
+        Assistant,
+        /// <summary>
+        /// 
+        /// </summary>
+        Calm,
+        /// <summary>
+        /// 
+        /// </summary>
+        Chat,
         /// <summary>
         /// 
         /// </summary>
@@ -28,23 +40,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Confused,
+        Customerservice,
         /// <summary>
         /// 
         /// </summary>
-        Curious,
+        Depressed,
         /// <summary>
         /// 
         /// </summary>
-        Determined,
+        Disgruntled,
         /// <summary>
         /// 
         /// </summary>
-        Disappointed,
-        /// <summary>
-        /// 
-        /// </summary>
-        Disgusted,
+        DocumentaryNarration,
         /// <summary>
         /// 
         /// </summary>
@@ -52,11 +60,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Empathy,
+        Empathetic,
         /// <summary>
         /// 
         /// </summary>
-        Encouraging,
+        Envious,
         /// <summary>
         /// 
         /// </summary>
@@ -72,7 +80,7 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Happy,
+        Gentle,
         /// <summary>
         /// 
         /// </summary>
@@ -80,27 +88,31 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Jealous,
+        Lyrical,
         /// <summary>
         /// 
         /// </summary>
-        Joyful,
+        NarrationProfessional,
         /// <summary>
         /// 
         /// </summary>
-        Nostalgic,
+        NarrationRelaxed,
         /// <summary>
         /// 
         /// </summary>
-        Reflective,
+        Newscast,
         /// <summary>
         /// 
         /// </summary>
-        Regretful,
+        NewscastCasual,
         /// <summary>
         /// 
         /// </summary>
-        Relieved,
+        NewscastFormal,
+        /// <summary>
+        /// 
+        /// </summary>
+        PoetryReading,
         /// <summary>
         /// 
         /// </summary>
@@ -116,11 +128,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        Softvoice,
+        SportsCommentary,
         /// <summary>
         /// 
         /// </summary>
-        Surprised,
+        SportsCommentaryExcited,
+        /// <summary>
+        /// 
+        /// </summary>
+        Terrified,
+        /// <summary>
+        /// 
+        /// </summary>
+        Unfriendly,
         /// <summary>
         /// 
         /// </summary>
@@ -139,34 +159,39 @@ namespace Vapi
         {
             return value switch
             {
-                MicrosoftVoiceStyle.Adventurous => "adventurous",
+                MicrosoftVoiceStyle.AdvertisementUpbeat => "advertisement_upbeat",
+                MicrosoftVoiceStyle.Affectionate => "affectionate",
                 MicrosoftVoiceStyle.Angry => "angry",
-                MicrosoftVoiceStyle.Caring => "caring",
+                MicrosoftVoiceStyle.Assistant => "assistant",
+                MicrosoftVoiceStyle.Calm => "calm",
+                MicrosoftVoiceStyle.Chat => "chat",
                 MicrosoftVoiceStyle.Cheerful => "cheerful",
-                MicrosoftVoiceStyle.Confused => "confused",
-                MicrosoftVoiceStyle.Curious => "curious",
-                MicrosoftVoiceStyle.Determined => "determined",
-                MicrosoftVoiceStyle.Disappointed => "disappointed",
-                MicrosoftVoiceStyle.Disgusted => "disgusted",
+                MicrosoftVoiceStyle.Customerservice => "customerservice",
+                MicrosoftVoiceStyle.Depressed => "depressed",
+                MicrosoftVoiceStyle.Disgruntled => "disgruntled",
+                MicrosoftVoiceStyle.DocumentaryNarration => "documentary-narration",
                 MicrosoftVoiceStyle.Embarrassed => "embarrassed",
-                MicrosoftVoiceStyle.Empathy => "empathy",
-                MicrosoftVoiceStyle.Encouraging => "encouraging",
+                MicrosoftVoiceStyle.Empathetic => "empathetic",
+                MicrosoftVoiceStyle.Envious => "envious",
                 MicrosoftVoiceStyle.Excited => "excited",
                 MicrosoftVoiceStyle.Fearful => "fearful",
                 MicrosoftVoiceStyle.Friendly => "friendly",
-                MicrosoftVoiceStyle.Happy => "happy",
+                MicrosoftVoiceStyle.Gentle => "gentle",
                 MicrosoftVoiceStyle.Hopeful => "hopeful",
-                MicrosoftVoiceStyle.Jealous => "jealous",
-                MicrosoftVoiceStyle.Joyful => "joyful",
-                MicrosoftVoiceStyle.Nostalgic => "nostalgic",
-                MicrosoftVoiceStyle.Reflective => "reflective",
-                MicrosoftVoiceStyle.Regretful => "regretful",
-                MicrosoftVoiceStyle.Relieved => "relieved",
+                MicrosoftVoiceStyle.Lyrical => "lyrical",
+                MicrosoftVoiceStyle.NarrationProfessional => "narration-professional",
+                MicrosoftVoiceStyle.NarrationRelaxed => "narration-relaxed",
+                MicrosoftVoiceStyle.Newscast => "newscast",
+                MicrosoftVoiceStyle.NewscastCasual => "newscast-casual",
+                MicrosoftVoiceStyle.NewscastFormal => "newscast-formal",
+                MicrosoftVoiceStyle.PoetryReading => "poetry-reading",
                 MicrosoftVoiceStyle.Sad => "sad",
                 MicrosoftVoiceStyle.Serious => "serious",
                 MicrosoftVoiceStyle.Shouting => "shouting",
-                MicrosoftVoiceStyle.Softvoice => "softvoice",
-                MicrosoftVoiceStyle.Surprised => "surprised",
+                MicrosoftVoiceStyle.SportsCommentary => "sports_commentary",
+                MicrosoftVoiceStyle.SportsCommentaryExcited => "sports_commentary_excited",
+                MicrosoftVoiceStyle.Terrified => "terrified",
+                MicrosoftVoiceStyle.Unfriendly => "unfriendly",
                 MicrosoftVoiceStyle.Whispering => "whispering",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -178,34 +203,39 @@ namespace Vapi
         {
             return value switch
             {
-                "adventurous" => MicrosoftVoiceStyle.Adventurous,
+                "advertisement_upbeat" => MicrosoftVoiceStyle.AdvertisementUpbeat,
+                "affectionate" => MicrosoftVoiceStyle.Affectionate,
                 "angry" => MicrosoftVoiceStyle.Angry,
-                "caring" => MicrosoftVoiceStyle.Caring,
+                "assistant" => MicrosoftVoiceStyle.Assistant,
+                "calm" => MicrosoftVoiceStyle.Calm,
+                "chat" => MicrosoftVoiceStyle.Chat,
                 "cheerful" => MicrosoftVoiceStyle.Cheerful,
-                "confused" => MicrosoftVoiceStyle.Confused,
-                "curious" => MicrosoftVoiceStyle.Curious,
-                "determined" => MicrosoftVoiceStyle.Determined,
-                "disappointed" => MicrosoftVoiceStyle.Disappointed,
-                "disgusted" => MicrosoftVoiceStyle.Disgusted,
+                "customerservice" => MicrosoftVoiceStyle.Customerservice,
+                "depressed" => MicrosoftVoiceStyle.Depressed,
+                "disgruntled" => MicrosoftVoiceStyle.Disgruntled,
+                "documentary-narration" => MicrosoftVoiceStyle.DocumentaryNarration,
                 "embarrassed" => MicrosoftVoiceStyle.Embarrassed,
-                "empathy" => MicrosoftVoiceStyle.Empathy,
-                "encouraging" => MicrosoftVoiceStyle.Encouraging,
+                "empathetic" => MicrosoftVoiceStyle.Empathetic,
+                "envious" => MicrosoftVoiceStyle.Envious,
                 "excited" => MicrosoftVoiceStyle.Excited,
                 "fearful" => MicrosoftVoiceStyle.Fearful,
                 "friendly" => MicrosoftVoiceStyle.Friendly,
-                "happy" => MicrosoftVoiceStyle.Happy,
+                "gentle" => MicrosoftVoiceStyle.Gentle,
                 "hopeful" => MicrosoftVoiceStyle.Hopeful,
-                "jealous" => MicrosoftVoiceStyle.Jealous,
-                "joyful" => MicrosoftVoiceStyle.Joyful,
-                "nostalgic" => MicrosoftVoiceStyle.Nostalgic,
-                "reflective" => MicrosoftVoiceStyle.Reflective,
-                "regretful" => MicrosoftVoiceStyle.Regretful,
-                "relieved" => MicrosoftVoiceStyle.Relieved,
+                "lyrical" => MicrosoftVoiceStyle.Lyrical,
+                "narration-professional" => MicrosoftVoiceStyle.NarrationProfessional,
+                "narration-relaxed" => MicrosoftVoiceStyle.NarrationRelaxed,
+                "newscast" => MicrosoftVoiceStyle.Newscast,
+                "newscast-casual" => MicrosoftVoiceStyle.NewscastCasual,
+                "newscast-formal" => MicrosoftVoiceStyle.NewscastFormal,
+                "poetry-reading" => MicrosoftVoiceStyle.PoetryReading,
                 "sad" => MicrosoftVoiceStyle.Sad,
                 "serious" => MicrosoftVoiceStyle.Serious,
                 "shouting" => MicrosoftVoiceStyle.Shouting,
-                "softvoice" => MicrosoftVoiceStyle.Softvoice,
-                "surprised" => MicrosoftVoiceStyle.Surprised,
+                "sports_commentary" => MicrosoftVoiceStyle.SportsCommentary,
+                "sports_commentary_excited" => MicrosoftVoiceStyle.SportsCommentaryExcited,
+                "terrified" => MicrosoftVoiceStyle.Terrified,
+                "unfriendly" => MicrosoftVoiceStyle.Unfriendly,
                 "whispering" => MicrosoftVoiceStyle.Whispering,
                 _ => null,
             };

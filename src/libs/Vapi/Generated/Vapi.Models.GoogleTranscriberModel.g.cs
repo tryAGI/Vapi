@@ -68,14 +68,6 @@ namespace Vapi
         /// 
         /// </summary>
         Gemini3FlashPreview,
-        /// <summary>
-        /// 
-        /// </summary>
-        Gemini31FlashLite,
-        /// <summary>
-        /// 
-        /// </summary>
-        Gemini35Flash,
     }
 
     /// <summary>
@@ -105,8 +97,6 @@ namespace Vapi
                 GoogleTranscriberModel.Gemini25FlashLite => "gemini-2.5-flash-lite",
                 GoogleTranscriberModel.Gemini25Pro => "gemini-2.5-pro",
                 GoogleTranscriberModel.Gemini3FlashPreview => "gemini-3-flash-preview",
-                GoogleTranscriberModel.Gemini31FlashLite => "gemini-3.1-flash-lite",
-                GoogleTranscriberModel.Gemini35Flash => "gemini-3.5-flash",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -132,8 +122,6 @@ namespace Vapi
                 "gemini-2.5-flash-lite" => GoogleTranscriberModel.Gemini25FlashLite,
                 "gemini-2.5-pro" => GoogleTranscriberModel.Gemini25Pro,
                 "gemini-3-flash-preview" => GoogleTranscriberModel.Gemini3FlashPreview,
-                "gemini-3.1-flash-lite" => GoogleTranscriberModel.Gemini31FlashLite,
-                "gemini-3.5-flash" => GoogleTranscriberModel.Gemini35Flash,
                 _ => null,
             };
         }
