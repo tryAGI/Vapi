@@ -12,6 +12,10 @@ namespace Vapi
         /// 
         /// </summary>
         SttRtV4,
+        /// <summary>
+        /// 
+        /// </summary>
+        SttRtV5,
     }
 
     /// <summary>
@@ -27,6 +31,7 @@ namespace Vapi
             return value switch
             {
                 SonioxTranscriberModel.SttRtV4 => "stt-rt-v4",
+                SonioxTranscriberModel.SttRtV5 => "stt-rt-v5",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -38,6 +43,7 @@ namespace Vapi
             return value switch
             {
                 "stt-rt-v4" => SonioxTranscriberModel.SttRtV4,
+                "stt-rt-v5" => SonioxTranscriberModel.SttRtV5,
                 _ => null,
             };
         }
