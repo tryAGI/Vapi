@@ -11,6 +11,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Ink2,
+        /// <summary>
+        /// 
+        /// </summary>
         InkWhisper,
     }
 
@@ -26,6 +30,7 @@ namespace Vapi
         {
             return value switch
             {
+                CartesiaTranscriberModel.Ink2 => "ink-2",
                 CartesiaTranscriberModel.InkWhisper => "ink-whisper",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -37,6 +42,7 @@ namespace Vapi
         {
             return value switch
             {
+                "ink-2" => CartesiaTranscriberModel.Ink2,
                 "ink-whisper" => CartesiaTranscriberModel.InkWhisper,
                 _ => null,
             };

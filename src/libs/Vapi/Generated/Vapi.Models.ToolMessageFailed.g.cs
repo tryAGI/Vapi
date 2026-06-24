@@ -29,7 +29,25 @@ namespace Vapi
         public global::Vapi.ToolMessageFailedType Type { get; set; }
 
         /// <summary>
+        /// This is optional and defaults to "assistant".<br/>
+        /// When role=assistant, `content` is said out loud when the tool call fails.<br/>
+        /// When role=system, `content` is passed to the model as a system message<br/>
+        /// along with the failure result, and the model's generated response is<br/>
+        /// spoken. Example:<br/>
+        ///     assistant: tool called<br/>
+        ///     tool: error from your server<br/>
+        ///     &lt;--- system prompt as hint<br/>
+        ///     ---&gt; model generates response which is spoken<br/>
+        /// This is useful when you want the model to generate an error-aware<br/>
+        /// response instead of speaking a fixed failure message.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("role")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.ToolMessageFailedRoleJsonConverter))]
+        public global::Vapi.ToolMessageFailedRole? Role { get; set; }
+
+        /// <summary>
         /// This is an optional boolean that if true, the call will end after the message is spoken. Default is false.<br/>
+        /// This is ignored if `role` is set to `system`.<br/>
         /// @default false<br/>
         /// Example: false
         /// </summary>
@@ -71,8 +89,22 @@ namespace Vapi
         /// If this message is not provided, the model will be requested to respond.<br/>
         /// If this message is provided, only this message will be spoken and the model will not be requested to come up with a response. It's an exclusive OR.
         /// </param>
+        /// <param name="role">
+        /// This is optional and defaults to "assistant".<br/>
+        /// When role=assistant, `content` is said out loud when the tool call fails.<br/>
+        /// When role=system, `content` is passed to the model as a system message<br/>
+        /// along with the failure result, and the model's generated response is<br/>
+        /// spoken. Example:<br/>
+        ///     assistant: tool called<br/>
+        ///     tool: error from your server<br/>
+        ///     &lt;--- system prompt as hint<br/>
+        ///     ---&gt; model generates response which is spoken<br/>
+        /// This is useful when you want the model to generate an error-aware<br/>
+        /// response instead of speaking a fixed failure message.
+        /// </param>
         /// <param name="endCallAfterSpokenEnabled">
         /// This is an optional boolean that if true, the call will end after the message is spoken. Default is false.<br/>
+        /// This is ignored if `role` is set to `system`.<br/>
         /// @default false<br/>
         /// Example: false
         /// </param>
@@ -88,12 +120,14 @@ namespace Vapi
         public ToolMessageFailed(
             global::System.Collections.Generic.IList<global::Vapi.TextContent>? contents,
             global::Vapi.ToolMessageFailedType type,
+            global::Vapi.ToolMessageFailedRole? role,
             bool? endCallAfterSpokenEnabled,
             string? content,
             global::System.Collections.Generic.IList<global::Vapi.Condition>? conditions)
         {
             this.Contents = contents;
             this.Type = type;
+            this.Role = role;
             this.EndCallAfterSpokenEnabled = endCallAfterSpokenEnabled;
             this.Content = content;
             this.Conditions = conditions;

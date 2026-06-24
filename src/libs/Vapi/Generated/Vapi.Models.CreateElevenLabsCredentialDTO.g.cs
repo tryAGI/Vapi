@@ -23,12 +23,11 @@ namespace Vapi
         public required string ApiKey { get; set; }
 
         /// <summary>
-        /// This is the ElevenLabs API environment the key belongs to — the global endpoint or the EU data residency endpoint. It is detected automatically while validating the key and is not honored from the request, so a rotated key is always re-homed to the environment that actually accepts it.<br/>
-        /// Included only in responses
+        /// ElevenLabs-only API environment for this key: the global endpoint or the EU data residency endpoint. If omitted on create, Vapi detects it automatically. If set to null on update, Vapi clears the saved endpoint and re-detects it with the saved API key.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("baseUrl")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOBaseUrlJsonConverter))]
-        public global::Vapi.CreateElevenLabsCredentialDTOBaseUrl? BaseUrl { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("apiUrl")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.CreateElevenLabsCredentialDTOApiUrlJsonConverter))]
+        public global::Vapi.CreateElevenLabsCredentialDTOApiUrl? ApiUrl { get; set; }
 
         /// <summary>
         /// This is the name of credential. This is just for your reference.
@@ -49,9 +48,8 @@ namespace Vapi
         /// This is not returned in the API.
         /// </param>
         /// <param name="provider"></param>
-        /// <param name="baseUrl">
-        /// This is the ElevenLabs API environment the key belongs to — the global endpoint or the EU data residency endpoint. It is detected automatically while validating the key and is not honored from the request, so a rotated key is always re-homed to the environment that actually accepts it.<br/>
-        /// Included only in responses
+        /// <param name="apiUrl">
+        /// ElevenLabs-only API environment for this key: the global endpoint or the EU data residency endpoint. If omitted on create, Vapi detects it automatically. If set to null on update, Vapi clears the saved endpoint and re-detects it with the saved API key.
         /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
@@ -62,12 +60,12 @@ namespace Vapi
         public CreateElevenLabsCredentialDTO(
             string apiKey,
             global::Vapi.CreateElevenLabsCredentialDTOProvider provider,
-            global::Vapi.CreateElevenLabsCredentialDTOBaseUrl? baseUrl,
+            global::Vapi.CreateElevenLabsCredentialDTOApiUrl? apiUrl,
             string? name)
         {
             this.Provider = provider;
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
-            this.BaseUrl = baseUrl;
+            this.ApiUrl = apiUrl;
             this.Name = name;
         }
 

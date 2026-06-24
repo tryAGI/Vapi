@@ -58,7 +58,7 @@ namespace Vapi
         public global::Vapi.AnthropicThinkingConfig? Thinking { get; set; }
 
         /// <summary>
-        /// This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.
+        /// This is the temperature that will be used for calls. Default is 0.5.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("temperature")]
         public double? Temperature { get; set; }
@@ -120,7 +120,7 @@ namespace Vapi
         /// If provided, maxTokens must be greater than thinking.budgetTokens.
         /// </param>
         /// <param name="temperature">
-        /// This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.
+        /// This is the temperature that will be used for calls. Default is 0.5.
         /// </param>
         /// <param name="maxTokens">
         /// This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250.

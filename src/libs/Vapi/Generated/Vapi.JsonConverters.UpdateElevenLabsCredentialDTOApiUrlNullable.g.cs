@@ -3,10 +3,10 @@
 namespace Vapi.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class ElevenLabsCredentialBaseUrlNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.ElevenLabsCredentialBaseUrl?>
+    public sealed class UpdateElevenLabsCredentialDTOApiUrlNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.UpdateElevenLabsCredentialDTOApiUrl?>
     {
         /// <inheritdoc />
-        public override global::Vapi.ElevenLabsCredentialBaseUrl? Read(
+        public override global::Vapi.UpdateElevenLabsCredentialDTOApiUrl? Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Vapi.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Vapi.ElevenLabsCredentialBaseUrlExtensions.ToEnum(stringValue);
+                        return global::Vapi.UpdateElevenLabsCredentialDTOApiUrlExtensions.ToEnum(stringValue);
                     }
                     
                     break;
@@ -26,11 +26,11 @@ namespace Vapi.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Vapi.ElevenLabsCredentialBaseUrl)numValue;
+                    return (global::Vapi.UpdateElevenLabsCredentialDTOApiUrl)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Vapi.ElevenLabsCredentialBaseUrl?);
+                    return default(global::Vapi.UpdateElevenLabsCredentialDTOApiUrl?);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,7 +42,7 @@ namespace Vapi.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Vapi.ElevenLabsCredentialBaseUrl? value,
+            global::Vapi.UpdateElevenLabsCredentialDTOApiUrl? value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
@@ -53,7 +53,7 @@ namespace Vapi.JsonConverters
             }
             else
             {
-                writer.WriteStringValue(global::Vapi.ElevenLabsCredentialBaseUrlExtensions.ToValueString(value.Value));
+                writer.WriteStringValue(global::Vapi.UpdateElevenLabsCredentialDTOApiUrlExtensions.ToValueString(value.Value));
             }
         }
     }

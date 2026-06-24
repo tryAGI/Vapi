@@ -7138,6 +7138,7 @@
           "model": {
             "type": "string",
             "enum": [
+              "ink-2",
               "ink-whisper"
             ]
           },
@@ -9691,6 +9692,7 @@
           "model": {
             "type": "string",
             "enum": [
+              "ink-2",
               "ink-whisper"
             ]
           },
@@ -12121,9 +12123,17 @@
               "request-failed"
             ]
           },
+          "role": {
+            "type": "string",
+            "description": "This is optional and defaults to \"assistant\".\n\nWhen role=assistant, `content` is said out loud when the tool call fails.\n\nWhen role=system, `content` is passed to the model as a system message\nalong with the failure result, and the model's generated response is\nspoken. Example:\n    assistant: tool called\n    tool: error from your server\n    <--- system prompt as hint\n    ---> model generates response which is spoken\nThis is useful when you want the model to generate an error-aware\nresponse instead of speaking a fixed failure message.",
+            "enum": [
+              "assistant",
+              "system"
+            ]
+          },
           "endCallAfterSpokenEnabled": {
             "type": "boolean",
-            "description": "This is an optional boolean that if true, the call will end after the message is spoken. Default is false.\n\n@default false",
+            "description": "This is an optional boolean that if true, the call will end after the message is spoken. Default is false.\n\nThis is ignored if `role` is set to `system`.\n\n@default false",
             "example": false
           },
           "content": {
@@ -12692,16 +12702,16 @@
       "OpenAIFunction": {
         "type": "object",
         "properties": {
-          "strict": {
-            "type": "boolean",
-            "description": "This is a boolean that controls whether to enable strict schema adherence when generating the function call. If set to true, the model will follow the exact schema defined in the parameters field. Only a subset of JSON Schema is supported when strict is true. Learn more about Structured Outputs in the [OpenAI guide](https://openai.com/index/introducing-structured-outputs-in-the-api/).\n\n@default false",
-            "default": false
-          },
           "name": {
             "type": "string",
             "description": "This is the the name of the function to be called.\n\nMust be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64.",
             "maxLength": 64,
             "pattern": "/^[a-zA-Z0-9_-]{1,64}$/"
+          },
+          "strict": {
+            "type": "boolean",
+            "description": "This is a boolean that controls whether to enable strict schema adherence when generating the function call. If set to true, the model will follow the exact schema defined in the parameters field. Only a subset of JSON Schema is supported when strict is true. Learn more about Structured Outputs in the [OpenAI guide](https://openai.com/index/introducing-structured-outputs-in-the-api/).\n\n@default false",
+            "default": false
           },
           "description": {
             "type": "string",
@@ -15256,7 +15266,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -15465,7 +15475,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -15654,7 +15664,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -15821,7 +15831,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -16018,7 +16028,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -16182,7 +16192,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -16349,7 +16359,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -16608,7 +16618,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -16788,7 +16798,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -16954,7 +16964,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -17120,7 +17130,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -17396,6 +17406,7 @@
               "gpt-5.4-mini",
               "gpt-5.4-mini:australiaeast",
               "gpt-5.4-nano",
+              "gpt-realtime-2",
               "gpt-realtime-2025-08-28",
               "gpt-realtime-mini-2025-12-15",
               "o1-mini",
@@ -17529,6 +17540,7 @@
                 "gpt-5.4-mini",
                 "gpt-5.4-mini:australiaeast",
                 "gpt-5.4-nano",
+                "gpt-realtime-2",
                 "gpt-realtime-2025-08-28",
                 "gpt-realtime-mini-2025-12-15",
                 "o1-mini",
@@ -17560,9 +17572,19 @@
             "description": "This is the prompt cache key for models that support extended caching (GPT-4.1, GPT-5 series).\n\nProviding a cache key allows you to share cached prefixes across requests.\n\n@default undefined",
             "maxLength": 64
           },
+          "reasoningEffort": {
+            "type": "string",
+            "description": "Reasoning effort for reasoning-capable OpenAI models.\nFor `gpt-realtime-2`: forwarded to V2 stream's session.update as `reasoning.effort`.\nFor non-realtime OpenAI models: routed through `modelSpecificOverridesGet` (openAIUtil.ts:622-726).\nNarrower than CompletionRequestParams.reasoningEffort intentionally: 'none' is an internal-only override value set by modelSpecificOverridesGet for GPT-5 family, not user-settable via DTO.",
+            "enum": [
+              "high",
+              "low",
+              "medium",
+              "minimal"
+            ]
+          },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -17725,7 +17747,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -17888,7 +17910,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -18051,7 +18073,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -21661,7 +21683,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -21834,7 +21856,7 @@
           },
           "temperature": {
             "type": "number",
-            "description": "This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.",
+            "description": "This is the temperature that will be used for calls. Default is 0.5.",
             "minimum": 0,
             "maximum": 2
           },
@@ -27656,14 +27678,14 @@
             "maxLength": 10000,
             "description": "This is not returned in the API."
           },
-          "baseUrl": {
+          "apiUrl": {
             "type": "string",
             "enum": [
               "https://api.elevenlabs.io",
               "https://api.eu.residency.elevenlabs.io"
             ],
-            "description": "This is the ElevenLabs API environment the key belongs to — the global endpoint or the EU data residency endpoint. It is detected automatically while validating the key and is not honored from the request, so a rotated key is always re-homed to the environment that actually accepts it.",
-            "readOnly": true
+            "description": "ElevenLabs-only API environment for this key: the global endpoint or the EU data residency endpoint. If omitted on create, Vapi detects it automatically. If set to null on update, Vapi clears the saved endpoint and re-detects it with the saved API key.",
+            "nullable": true
           },
           "name": {
             "type": "string",
@@ -34767,6 +34789,14 @@
           "duration": {
             "type": "number",
             "description": "The duration of the message in seconds."
+          },
+          "assistantName": {
+            "type": "string",
+            "description": "The name of the assistant that produced this message. In a squad or\nhandoff call this is the specific sub-agent active when the message was\nspoken, letting the transcript label each message by speaker."
+          },
+          "assistantId": {
+            "type": "string",
+            "description": "The ID of the assistant that produced this message. Stable reference for\nthe assistant named in `assistantName`."
           }
         },
         "required": [
@@ -36576,6 +36606,7 @@
               "call.in-progress.error-vapifault-call-started-but-connection-to-transport-missing",
               "call.in-progress.error-vapifault-cartesia-requested-payment",
               "call.in-progress.error-vapifault-cartesia-socket-hang-up",
+              "call.in-progress.error-vapifault-cartesia-transcriber-failed",
               "call.in-progress.error-vapifault-cartesia-voice-failed",
               "call.in-progress.error-vapifault-cerebras-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-cerebras-401-unauthorized",
@@ -36812,6 +36843,7 @@
               "pipeline-error-cartesia-522-server-error",
               "pipeline-error-cartesia-requested-payment",
               "pipeline-error-cartesia-socket-hang-up",
+              "pipeline-error-cartesia-transcriber-failed",
               "pipeline-error-cartesia-voice-failed",
               "pipeline-error-cerebras-400-bad-request-validation-failed",
               "pipeline-error-cerebras-401-unauthorized",
@@ -41953,6 +41985,12 @@
             ],
             "description": "The type of tool. \"apiRequest\" for API request tool."
           },
+          "name": {
+            "type": "string",
+            "description": "This is the name of the tool. This will be passed to the model.\n\nMust be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.",
+            "maxLength": 40,
+            "pattern": "/^[a-zA-Z0-9_-]{1,40}$/"
+          },
           "method": {
             "type": "string",
             "enum": [
@@ -42014,12 +42052,6 @@
                 "$ref": "#/components/schemas/ToolRejectionPlan"
               }
             ]
-          },
-          "name": {
-            "type": "string",
-            "description": "This is the name of the tool. This will be passed to the model.\n\nMust be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.",
-            "maxLength": 40,
-            "pattern": "/^[a-zA-Z0-9_-]{1,40}$/"
           },
           "description": {
             "type": "string",
@@ -44156,6 +44188,12 @@
             ],
             "description": "The type of tool. \"apiRequest\" for API request tool."
           },
+          "name": {
+            "type": "string",
+            "description": "This is the name of the tool. This will be passed to the model.\n\nMust be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.",
+            "maxLength": 40,
+            "pattern": "/^[a-zA-Z0-9_-]{1,40}$/"
+          },
           "method": {
             "type": "string",
             "enum": [
@@ -44191,12 +44229,6 @@
             "items": {
               "$ref": "#/components/schemas/ToolParameter"
             }
-          },
-          "name": {
-            "type": "string",
-            "description": "This is the name of the tool. This will be passed to the model.\n\nMust be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.",
-            "maxLength": 40,
-            "pattern": "/^[a-zA-Z0-9_-]{1,40}$/"
           },
           "description": {
             "type": "string",
@@ -44781,6 +44813,12 @@
               ]
             }
           },
+          "name": {
+            "type": "string",
+            "description": "This is the name of the tool. This will be passed to the model.\n\nMust be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.",
+            "maxLength": 40,
+            "pattern": "/^[a-zA-Z0-9_-]{1,40}$/"
+          },
           "method": {
             "type": "string",
             "enum": [
@@ -44824,12 +44862,6 @@
                 "$ref": "#/components/schemas/ToolRejectionPlan"
               }
             ]
-          },
-          "name": {
-            "type": "string",
-            "description": "This is the name of the tool. This will be passed to the model.\n\nMust be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.",
-            "maxLength": 40,
-            "pattern": "/^[a-zA-Z0-9_-]{1,40}$/"
           },
           "description": {
             "type": "string",
@@ -54598,14 +54630,14 @@
             "maxLength": 10000,
             "description": "This is not returned in the API."
           },
-          "baseUrl": {
+          "apiUrl": {
             "type": "string",
             "enum": [
               "https://api.elevenlabs.io",
               "https://api.eu.residency.elevenlabs.io"
             ],
-            "description": "This is the ElevenLabs API environment the key belongs to — the global endpoint or the EU data residency endpoint. It is detected automatically while validating the key and is not honored from the request, so a rotated key is always re-homed to the environment that actually accepts it.",
-            "readOnly": true
+            "description": "ElevenLabs-only API environment for this key: the global endpoint or the EU data residency endpoint. If omitted on create, Vapi detects it automatically. If set to null on update, Vapi clears the saved endpoint and re-detects it with the saved API key.",
+            "nullable": true
           },
           "id": {
             "type": "string",
@@ -57682,14 +57714,14 @@
             "maxLength": 10000,
             "description": "This is not returned in the API."
           },
-          "baseUrl": {
+          "apiUrl": {
             "type": "string",
             "enum": [
               "https://api.elevenlabs.io",
               "https://api.eu.residency.elevenlabs.io"
             ],
-            "description": "This is the ElevenLabs API environment the key belongs to — the global endpoint or the EU data residency endpoint. It is detected automatically while validating the key and is not honored from the request, so a rotated key is always re-homed to the environment that actually accepts it.",
-            "readOnly": true
+            "description": "ElevenLabs-only API environment for this key: the global endpoint or the EU data residency endpoint. If omitted on create, Vapi detects it automatically. If set to null on update, Vapi clears the saved endpoint and re-detects it with the saved API key.",
+            "nullable": true
           },
           "name": {
             "type": "string",
@@ -62464,6 +62496,7 @@
               "call.in-progress.error-vapifault-call-started-but-connection-to-transport-missing",
               "call.in-progress.error-vapifault-cartesia-requested-payment",
               "call.in-progress.error-vapifault-cartesia-socket-hang-up",
+              "call.in-progress.error-vapifault-cartesia-transcriber-failed",
               "call.in-progress.error-vapifault-cartesia-voice-failed",
               "call.in-progress.error-vapifault-cerebras-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-cerebras-401-unauthorized",
@@ -62700,6 +62733,7 @@
               "pipeline-error-cartesia-522-server-error",
               "pipeline-error-cartesia-requested-payment",
               "pipeline-error-cartesia-socket-hang-up",
+              "pipeline-error-cartesia-transcriber-failed",
               "pipeline-error-cartesia-voice-failed",
               "pipeline-error-cerebras-400-bad-request-validation-failed",
               "pipeline-error-cerebras-401-unauthorized",
@@ -63838,6 +63872,7 @@
               "call.in-progress.error-vapifault-call-started-but-connection-to-transport-missing",
               "call.in-progress.error-vapifault-cartesia-requested-payment",
               "call.in-progress.error-vapifault-cartesia-socket-hang-up",
+              "call.in-progress.error-vapifault-cartesia-transcriber-failed",
               "call.in-progress.error-vapifault-cartesia-voice-failed",
               "call.in-progress.error-vapifault-cerebras-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-cerebras-401-unauthorized",
@@ -64074,6 +64109,7 @@
               "pipeline-error-cartesia-522-server-error",
               "pipeline-error-cartesia-requested-payment",
               "pipeline-error-cartesia-socket-hang-up",
+              "pipeline-error-cartesia-transcriber-failed",
               "pipeline-error-cartesia-voice-failed",
               "pipeline-error-cerebras-400-bad-request-validation-failed",
               "pipeline-error-cerebras-401-unauthorized",

@@ -15,6 +15,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
 
         /// <summary>
+        /// This is the name of the tool. This will be passed to the model.<br/>
+        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("method")]
@@ -128,13 +135,6 @@ namespace Vapi
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rejectionPlan")]
         public global::Vapi.ToolRejectionPlan? RejectionPlan { get; set; }
-
-        /// <summary>
-        /// This is the name of the tool. This will be passed to the model.<br/>
-        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
-        public string? Name { get; set; }
 
         /// <summary>
         /// This is the description of the tool. This will be passed to the model.
@@ -315,6 +315,10 @@ namespace Vapi
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
+        /// <param name="name">
+        /// This is the name of the tool. This will be passed to the model.<br/>
+        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
+        /// </param>
         /// <param name="method"></param>
         /// <param name="timeoutSeconds">
         /// This is the timeout in seconds for the request. Defaults to 20 seconds.<br/>
@@ -406,10 +410,6 @@ namespace Vapi
         ///   }]<br/>
         /// }<br/>
         /// ```
-        /// </param>
-        /// <param name="name">
-        /// This is the name of the tool. This will be passed to the model.<br/>
-        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
         /// </param>
         /// <param name="description">
         /// This is the description of the tool. This will be passed to the model.
@@ -565,13 +565,13 @@ namespace Vapi
 #endif
         public UpdateApiRequestToolDTO(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
+            string? name,
             global::Vapi.UpdateApiRequestToolDTOMethod? method,
             double? timeoutSeconds,
             string? credentialId,
             global::System.Collections.Generic.IList<string>? encryptedPaths,
             global::System.Collections.Generic.IList<global::Vapi.ToolParameter>? parameters,
             global::Vapi.ToolRejectionPlan? rejectionPlan,
-            string? name,
             string? description,
             string? url,
             global::Vapi.JsonSchema? body,
@@ -580,13 +580,13 @@ namespace Vapi
             global::Vapi.VariableExtractionPlan? variableExtractionPlan)
         {
             this.Messages = messages;
+            this.Name = name;
             this.Method = method;
             this.TimeoutSeconds = timeoutSeconds;
             this.CredentialId = credentialId;
             this.EncryptedPaths = encryptedPaths;
             this.Parameters = parameters;
             this.RejectionPlan = rejectionPlan;
-            this.Name = name;
             this.Description = description;
             this.Url = url;
             this.Body = body;
