@@ -22,6 +22,13 @@ namespace Vapi
         public global::Vapi.ApiRequestToolType Type { get; set; }
 
         /// <summary>
+        /// This is the name of the tool. This will be passed to the model.<br/>
+        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("method")]
@@ -164,13 +171,6 @@ namespace Vapi
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rejectionPlan")]
         public global::Vapi.ToolRejectionPlan? RejectionPlan { get; set; }
-
-        /// <summary>
-        /// This is the name of the tool. This will be passed to the model.<br/>
-        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
-        public string? Name { get; set; }
 
         /// <summary>
         /// This is the description of the tool. This will be passed to the model.
@@ -371,6 +371,10 @@ namespace Vapi
         /// <param name="type">
         /// The type of tool. "apiRequest" for API request tool.
         /// </param>
+        /// <param name="name">
+        /// This is the name of the tool. This will be passed to the model.<br/>
+        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
+        /// </param>
         /// <param name="timeoutSeconds">
         /// This is the timeout in seconds for the request. Defaults to 20 seconds.<br/>
         /// @default 20<br/>
@@ -461,10 +465,6 @@ namespace Vapi
         ///   }]<br/>
         /// }<br/>
         /// ```
-        /// </param>
-        /// <param name="name">
-        /// This is the name of the tool. This will be passed to the model.<br/>
-        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
         /// </param>
         /// <param name="description">
         /// This is the description of the tool. This will be passed to the model.
@@ -624,12 +624,12 @@ namespace Vapi
             string url,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
             global::Vapi.ApiRequestToolType type,
+            string? name,
             double? timeoutSeconds,
             string? credentialId,
             global::System.Collections.Generic.IList<string>? encryptedPaths,
             global::System.Collections.Generic.IList<global::Vapi.ToolParameter>? parameters,
             global::Vapi.ToolRejectionPlan? rejectionPlan,
-            string? name,
             string? description,
             global::Vapi.JsonSchema? body,
             global::Vapi.JsonSchema? headers,
@@ -638,6 +638,7 @@ namespace Vapi
         {
             this.Messages = messages;
             this.Type = type;
+            this.Name = name;
             this.Method = method;
             this.TimeoutSeconds = timeoutSeconds;
             this.CredentialId = credentialId;
@@ -648,7 +649,6 @@ namespace Vapi
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.RejectionPlan = rejectionPlan;
-            this.Name = name;
             this.Description = description;
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.Body = body;

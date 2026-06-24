@@ -56,6 +56,21 @@ namespace Vapi
         public double? Duration { get; set; }
 
         /// <summary>
+        /// The name of the assistant that produced this message. In a squad or<br/>
+        /// handoff call this is the specific sub-agent active when the message was<br/>
+        /// spoken, letting the transcript label each message by speaker.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantName")]
+        public string? AssistantName { get; set; }
+
+        /// <summary>
+        /// The ID of the assistant that produced this message. Stable reference for<br/>
+        /// the assistant named in `assistantName`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantId")]
+        public string? AssistantId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -85,6 +100,15 @@ namespace Vapi
         /// <param name="duration">
         /// The duration of the message in seconds.
         /// </param>
+        /// <param name="assistantName">
+        /// The name of the assistant that produced this message. In a squad or<br/>
+        /// handoff call this is the specific sub-agent active when the message was<br/>
+        /// spoken, letting the transcript label each message by speaker.
+        /// </param>
+        /// <param name="assistantId">
+        /// The ID of the assistant that produced this message. Stable reference for<br/>
+        /// the assistant named in `assistantName`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -95,7 +119,9 @@ namespace Vapi
             double endTime,
             double secondsFromStart,
             string? source,
-            double? duration)
+            double? duration,
+            string? assistantName,
+            string? assistantId)
         {
             this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
             this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
@@ -104,6 +130,8 @@ namespace Vapi
             this.SecondsFromStart = secondsFromStart;
             this.Source = source;
             this.Duration = duration;
+            this.AssistantName = assistantName;
+            this.AssistantId = assistantId;
         }
 
         /// <summary>

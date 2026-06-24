@@ -22,6 +22,13 @@ namespace Vapi
         public global::Vapi.CreateApiRequestToolDTOType Type { get; set; }
 
         /// <summary>
+        /// This is the name of the tool. This will be passed to the model.<br/>
+        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("method")]
@@ -57,13 +64,6 @@ namespace Vapi
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parameters")]
         public global::System.Collections.Generic.IList<global::Vapi.ToolParameter>? Parameters { get; set; }
-
-        /// <summary>
-        /// This is the name of the tool. This will be passed to the model.<br/>
-        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
-        public string? Name { get; set; }
 
         /// <summary>
         /// This is the description of the tool. This will be passed to the model.
@@ -331,6 +331,10 @@ namespace Vapi
         /// <param name="type">
         /// The type of tool. "apiRequest" for API request tool.
         /// </param>
+        /// <param name="name">
+        /// This is the name of the tool. This will be passed to the model.<br/>
+        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
+        /// </param>
         /// <param name="timeoutSeconds">
         /// This is the timeout in seconds for the request. Defaults to 20 seconds.<br/>
         /// @default 20<br/>
@@ -345,10 +349,6 @@ namespace Vapi
         /// </param>
         /// <param name="parameters">
         /// Static key-value pairs merged into the request body. Values support Liquid templates.
-        /// </param>
-        /// <param name="name">
-        /// This is the name of the tool. This will be passed to the model.<br/>
-        /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.
         /// </param>
         /// <param name="description">
         /// This is the description of the tool. This will be passed to the model.
@@ -580,11 +580,11 @@ namespace Vapi
             string url,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
             global::Vapi.CreateApiRequestToolDTOType type,
+            string? name,
             double? timeoutSeconds,
             string? credentialId,
             global::System.Collections.Generic.IList<string>? encryptedPaths,
             global::System.Collections.Generic.IList<global::Vapi.ToolParameter>? parameters,
-            string? name,
             string? description,
             global::Vapi.JsonSchema? body,
             global::Vapi.JsonSchema? headers,
@@ -594,12 +594,12 @@ namespace Vapi
         {
             this.Messages = messages;
             this.Type = type;
+            this.Name = name;
             this.Method = method;
             this.TimeoutSeconds = timeoutSeconds;
             this.CredentialId = credentialId;
             this.EncryptedPaths = encryptedPaths;
             this.Parameters = parameters;
-            this.Name = name;
             this.Description = description;
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.Body = body;

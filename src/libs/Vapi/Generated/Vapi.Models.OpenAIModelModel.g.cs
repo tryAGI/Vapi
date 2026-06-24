@@ -470,6 +470,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        GptRealtime2,
+        /// <summary>
+        /// 
+        /// </summary>
         GptRealtime20250828,
         /// <summary>
         /// 
@@ -623,6 +627,7 @@ namespace Vapi
                 OpenAIModelModel.Gpt54Mini => "gpt-5.4-mini",
                 OpenAIModelModel.Gpt54Mini_australiaeast => "gpt-5.4-mini:australiaeast",
                 OpenAIModelModel.Gpt54Nano => "gpt-5.4-nano",
+                OpenAIModelModel.GptRealtime2 => "gpt-realtime-2",
                 OpenAIModelModel.GptRealtime20250828 => "gpt-realtime-2025-08-28",
                 OpenAIModelModel.GptRealtimeMini20251215 => "gpt-realtime-mini-2025-12-15",
                 OpenAIModelModel.O1Mini => "o1-mini",
@@ -754,6 +759,7 @@ namespace Vapi
                 "gpt-5.4-mini" => OpenAIModelModel.Gpt54Mini,
                 "gpt-5.4-mini:australiaeast" => OpenAIModelModel.Gpt54Mini_australiaeast,
                 "gpt-5.4-nano" => OpenAIModelModel.Gpt54Nano,
+                "gpt-realtime-2" => OpenAIModelModel.GptRealtime2,
                 "gpt-realtime-2025-08-28" => OpenAIModelModel.GptRealtime20250828,
                 "gpt-realtime-mini-2025-12-15" => OpenAIModelModel.GptRealtimeMini20251215,
                 "o1-mini" => OpenAIModelModel.O1Mini,

@@ -57,7 +57,7 @@ namespace Vapi
         public global::Vapi.GoogleRealtimeConfig? RealtimeConfig { get; set; }
 
         /// <summary>
-        /// This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.
+        /// This is the temperature that will be used for calls. Default is 0.5.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("temperature")]
         public double? Temperature { get; set; }
@@ -116,7 +116,7 @@ namespace Vapi
         /// Only applicable if the model `gemini-2.0-flash-realtime-exp` is selected.
         /// </param>
         /// <param name="temperature">
-        /// This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.
+        /// This is the temperature that will be used for calls. Default is 0.5.
         /// </param>
         /// <param name="maxTokens">
         /// This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250.

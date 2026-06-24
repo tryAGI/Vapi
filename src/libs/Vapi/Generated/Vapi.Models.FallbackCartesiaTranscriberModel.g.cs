@@ -11,6 +11,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Ink2,
+        /// <summary>
+        /// 
+        /// </summary>
         InkWhisper,
     }
 
@@ -26,6 +30,7 @@ namespace Vapi
         {
             return value switch
             {
+                FallbackCartesiaTranscriberModel.Ink2 => "ink-2",
                 FallbackCartesiaTranscriberModel.InkWhisper => "ink-whisper",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -37,6 +42,7 @@ namespace Vapi
         {
             return value switch
             {
+                "ink-2" => FallbackCartesiaTranscriberModel.Ink2,
                 "ink-whisper" => FallbackCartesiaTranscriberModel.InkWhisper,
                 _ => null,
             };

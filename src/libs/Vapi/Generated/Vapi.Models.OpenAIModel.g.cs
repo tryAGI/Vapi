@@ -90,7 +90,17 @@ namespace Vapi
         public string? PromptCacheKey { get; set; }
 
         /// <summary>
-        /// This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.
+        /// Reasoning effort for reasoning-capable OpenAI models.<br/>
+        /// For `gpt-realtime-2`: forwarded to V2 stream's session.update as `reasoning.effort`.<br/>
+        /// For non-realtime OpenAI models: routed through `modelSpecificOverridesGet` (openAIUtil.ts:622-726).<br/>
+        /// Narrower than CompletionRequestParams.reasoningEffort intentionally: 'none' is an internal-only override value set by modelSpecificOverridesGet for GPT-5 family, not user-settable via DTO.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningEffort")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OpenAIModelReasoningEffortJsonConverter))]
+        public global::Vapi.OpenAIModelReasoningEffort? ReasoningEffort { get; set; }
+
+        /// <summary>
+        /// This is the temperature that will be used for calls. Default is 0.5.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("temperature")]
         public double? Temperature { get; set; }
@@ -171,8 +181,14 @@ namespace Vapi
         /// Providing a cache key allows you to share cached prefixes across requests.<br/>
         /// @default undefined
         /// </param>
+        /// <param name="reasoningEffort">
+        /// Reasoning effort for reasoning-capable OpenAI models.<br/>
+        /// For `gpt-realtime-2`: forwarded to V2 stream's session.update as `reasoning.effort`.<br/>
+        /// For non-realtime OpenAI models: routed through `modelSpecificOverridesGet` (openAIUtil.ts:622-726).<br/>
+        /// Narrower than CompletionRequestParams.reasoningEffort intentionally: 'none' is an internal-only override value set by modelSpecificOverridesGet for GPT-5 family, not user-settable via DTO.
+        /// </param>
         /// <param name="temperature">
-        /// This is the temperature that will be used for calls. Default is 0 to leverage caching for lower latency.
+        /// This is the temperature that will be used for calls. Default is 0.5.
         /// </param>
         /// <param name="maxTokens">
         /// This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250.
@@ -201,6 +217,7 @@ namespace Vapi
             global::Vapi.OpenAIModelToolStrictCompatibilityMode? toolStrictCompatibilityMode,
             global::Vapi.OpenAIModelPromptCacheRetention? promptCacheRetention,
             string? promptCacheKey,
+            global::Vapi.OpenAIModelReasoningEffort? reasoningEffort,
             double? temperature,
             double? maxTokens,
             bool? emotionRecognitionEnabled,
@@ -216,6 +233,7 @@ namespace Vapi
             this.ToolStrictCompatibilityMode = toolStrictCompatibilityMode;
             this.PromptCacheRetention = promptCacheRetention;
             this.PromptCacheKey = promptCacheKey;
+            this.ReasoningEffort = reasoningEffort;
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;
             this.EmotionRecognitionEnabled = emotionRecognitionEnabled;

@@ -583,6 +583,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallInProgressErrorVapifaultCartesiaTranscriberFailed,
+        /// <summary>
+        /// 
+        /// </summary>
         CallInProgressErrorVapifaultCartesiaVoiceFailed,
         /// <summary>
         /// 
@@ -1524,6 +1528,10 @@ namespace Vapi
         /// 
         /// </summary>
         PipelineErrorCartesiaSocketHangUp,
+        /// <summary>
+        /// 
+        /// </summary>
+        PipelineErrorCartesiaTranscriberFailed,
         /// <summary>
         /// 
         /// </summary>
@@ -2509,6 +2517,7 @@ namespace Vapi
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCallStartedButConnectionToTransportMissing => "call.in-progress.error-vapifault-call-started-but-connection-to-transport-missing",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCartesiaRequestedPayment => "call.in-progress.error-vapifault-cartesia-requested-payment",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCartesiaSocketHangUp => "call.in-progress.error-vapifault-cartesia-socket-hang-up",
+                ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCartesiaTranscriberFailed => "call.in-progress.error-vapifault-cartesia-transcriber-failed",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCartesiaVoiceFailed => "call.in-progress.error-vapifault-cartesia-voice-failed",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCerebras400BadRequestValidationFailed => "call.in-progress.error-vapifault-cerebras-400-bad-request-validation-failed",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCerebras401Unauthorized => "call.in-progress.error-vapifault-cerebras-401-unauthorized",
@@ -2745,6 +2754,7 @@ namespace Vapi
                 ServerMessageStatusUpdateEndedReason.PipelineErrorCartesia522ServerError => "pipeline-error-cartesia-522-server-error",
                 ServerMessageStatusUpdateEndedReason.PipelineErrorCartesiaRequestedPayment => "pipeline-error-cartesia-requested-payment",
                 ServerMessageStatusUpdateEndedReason.PipelineErrorCartesiaSocketHangUp => "pipeline-error-cartesia-socket-hang-up",
+                ServerMessageStatusUpdateEndedReason.PipelineErrorCartesiaTranscriberFailed => "pipeline-error-cartesia-transcriber-failed",
                 ServerMessageStatusUpdateEndedReason.PipelineErrorCartesiaVoiceFailed => "pipeline-error-cartesia-voice-failed",
                 ServerMessageStatusUpdateEndedReason.PipelineErrorCerebras400BadRequestValidationFailed => "pipeline-error-cerebras-400-bad-request-validation-failed",
                 ServerMessageStatusUpdateEndedReason.PipelineErrorCerebras401Unauthorized => "pipeline-error-cerebras-401-unauthorized",
@@ -3105,6 +3115,7 @@ namespace Vapi
                 "call.in-progress.error-vapifault-call-started-but-connection-to-transport-missing" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCallStartedButConnectionToTransportMissing,
                 "call.in-progress.error-vapifault-cartesia-requested-payment" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCartesiaRequestedPayment,
                 "call.in-progress.error-vapifault-cartesia-socket-hang-up" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCartesiaSocketHangUp,
+                "call.in-progress.error-vapifault-cartesia-transcriber-failed" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCartesiaTranscriberFailed,
                 "call.in-progress.error-vapifault-cartesia-voice-failed" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCartesiaVoiceFailed,
                 "call.in-progress.error-vapifault-cerebras-400-bad-request-validation-failed" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCerebras400BadRequestValidationFailed,
                 "call.in-progress.error-vapifault-cerebras-401-unauthorized" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorVapifaultCerebras401Unauthorized,
@@ -3341,6 +3352,7 @@ namespace Vapi
                 "pipeline-error-cartesia-522-server-error" => ServerMessageStatusUpdateEndedReason.PipelineErrorCartesia522ServerError,
                 "pipeline-error-cartesia-requested-payment" => ServerMessageStatusUpdateEndedReason.PipelineErrorCartesiaRequestedPayment,
                 "pipeline-error-cartesia-socket-hang-up" => ServerMessageStatusUpdateEndedReason.PipelineErrorCartesiaSocketHangUp,
+                "pipeline-error-cartesia-transcriber-failed" => ServerMessageStatusUpdateEndedReason.PipelineErrorCartesiaTranscriberFailed,
                 "pipeline-error-cartesia-voice-failed" => ServerMessageStatusUpdateEndedReason.PipelineErrorCartesiaVoiceFailed,
                 "pipeline-error-cerebras-400-bad-request-validation-failed" => ServerMessageStatusUpdateEndedReason.PipelineErrorCerebras400BadRequestValidationFailed,
                 "pipeline-error-cerebras-401-unauthorized" => ServerMessageStatusUpdateEndedReason.PipelineErrorCerebras401Unauthorized,
