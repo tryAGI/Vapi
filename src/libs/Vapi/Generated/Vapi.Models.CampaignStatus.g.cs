@@ -11,6 +11,14 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Archived,
+        /// <summary>
+        /// 
+        /// </summary>
+        Cancelled,
+        /// <summary>
+        /// 
+        /// </summary>
         Ended,
         /// <summary>
         /// 
@@ -34,6 +42,8 @@ namespace Vapi
         {
             return value switch
             {
+                CampaignStatus.Archived => "archived",
+                CampaignStatus.Cancelled => "cancelled",
                 CampaignStatus.Ended => "ended",
                 CampaignStatus.InProgress => "in-progress",
                 CampaignStatus.Scheduled => "scheduled",
@@ -47,6 +57,8 @@ namespace Vapi
         {
             return value switch
             {
+                "archived" => CampaignStatus.Archived,
+                "cancelled" => CampaignStatus.Cancelled,
                 "ended" => CampaignStatus.Ended,
                 "in-progress" => CampaignStatus.InProgress,
                 "scheduled" => CampaignStatus.Scheduled,

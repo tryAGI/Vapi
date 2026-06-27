@@ -60,6 +60,30 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? Customers { get; set; }
 
         /// <summary>
+        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("maxConcurrency")]
+        public double? MaxConcurrency { get; set; }
+
+        /// <summary>
+        /// These are the overrides for the assistant's settings and template variables for the campaign. Use this when the campaign targets an `assistantId`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantOverrides")]
+        public global::Vapi.AssistantOverrides? AssistantOverrides { get; set; }
+
+        /// <summary>
+        /// These are the overrides for the squad and template variables for the campaign. Use this when the campaign targets a `squadId`. Per-contact `squadOverrides` are deep-merged on top of this at dispatch time.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("squadOverrides")]
+        public global::Vapi.AssistantOverrides? SquadOverrides { get; set; }
+
+        /// <summary>
+        /// Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("duplicateFromCampaignId")]
+        public string? DuplicateFromCampaignId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -93,6 +117,18 @@ namespace Vapi
         /// <param name="customers">
         /// These are the customers that will be called in the campaign. Required if dialPlan is not provided.
         /// </param>
+        /// <param name="maxConcurrency">
+        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10.
+        /// </param>
+        /// <param name="assistantOverrides">
+        /// These are the overrides for the assistant's settings and template variables for the campaign. Use this when the campaign targets an `assistantId`.
+        /// </param>
+        /// <param name="squadOverrides">
+        /// These are the overrides for the squad and template variables for the campaign. Use this when the campaign targets a `squadId`. Per-contact `squadOverrides` are deep-merged on top of this at dispatch time.
+        /// </param>
+        /// <param name="duplicateFromCampaignId">
+        /// Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -104,7 +140,11 @@ namespace Vapi
             string? phoneNumberId,
             global::System.Collections.Generic.IList<global::Vapi.DialPlanEntry>? dialPlan,
             global::Vapi.SchedulePlan? schedulePlan,
-            global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers)
+            global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers,
+            double? maxConcurrency,
+            global::Vapi.AssistantOverrides? assistantOverrides,
+            global::Vapi.AssistantOverrides? squadOverrides,
+            string? duplicateFromCampaignId)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.AssistantId = assistantId;
@@ -114,6 +154,10 @@ namespace Vapi
             this.DialPlan = dialPlan;
             this.SchedulePlan = schedulePlan;
             this.Customers = customers;
+            this.MaxConcurrency = maxConcurrency;
+            this.AssistantOverrides = assistantOverrides;
+            this.SquadOverrides = squadOverrides;
+            this.DuplicateFromCampaignId = duplicateFromCampaignId;
         }
 
         /// <summary>

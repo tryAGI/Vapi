@@ -472,9 +472,8 @@ namespace Vapi
         /// Can only be updated if campaign is not in progress or has ended.
         /// </param>
         /// <param name="status">
-        /// This is the status of the campaign.<br/>
-        /// Can only be updated to 'ended' if you want to end the campaign.<br/>
-        /// When set to 'ended', it will delete all scheduled calls. Calls in progress will be allowed to complete.
+        /// Set to 'cancelled' to stop the campaign ('ended' is a V1 alias). Scheduled<br/>
+        /// calls are deleted; in-progress calls are allowed to finish.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

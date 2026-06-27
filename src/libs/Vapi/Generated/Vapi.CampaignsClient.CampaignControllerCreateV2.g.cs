@@ -7,7 +7,7 @@ namespace Vapi
     {
 
 
-        private static readonly global::Vapi.EndPointSecurityRequirement s_CampaignControllerCreateSecurityRequirement0 =
+        private static readonly global::Vapi.EndPointSecurityRequirement s_CampaignControllerCreateV2SecurityRequirement0 =
             new global::Vapi.EndPointSecurityRequirement
             {
                 Authorizations = new global::Vapi.EndPointAuthorizationRequirement[]
@@ -21,40 +21,40 @@ namespace Vapi
                     },
                 },
             };
-        private static readonly global::Vapi.EndPointSecurityRequirement[] s_CampaignControllerCreateSecurityRequirements =
+        private static readonly global::Vapi.EndPointSecurityRequirement[] s_CampaignControllerCreateV2SecurityRequirements =
             new global::Vapi.EndPointSecurityRequirement[]
-            {                s_CampaignControllerCreateSecurityRequirement0,
+            {                s_CampaignControllerCreateV2SecurityRequirement0,
             };
-        partial void PrepareCampaignControllerCreateArguments(
+        partial void PrepareCampaignControllerCreateV2Arguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Vapi.CreateCampaignDTO request);
-        partial void PrepareCampaignControllerCreateRequest(
+        partial void PrepareCampaignControllerCreateV2Request(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::Vapi.CreateCampaignDTO request);
-        partial void ProcessCampaignControllerCreateResponse(
+        partial void ProcessCampaignControllerCreateV2Response(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCampaignControllerCreateResponseContent(
+        partial void ProcessCampaignControllerCreateV2ResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Create Campaign
+        /// Create Campaign V2
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateV2Async(
 
             global::Vapi.CreateCampaignDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CampaignControllerCreateAsResponseAsync(
+            var __response = await CampaignControllerCreateV2AsResponseAsync(
 
                 request: request,
                 requestOptions: requestOptions,
@@ -64,13 +64,13 @@ namespace Vapi
             return __response.Body;
         }
         /// <summary>
-        /// Create Campaign
+        /// Create Campaign V2
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>> CampaignControllerCreateAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>> CampaignControllerCreateV2AsResponseAsync(
 
             global::Vapi.CreateCampaignDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -80,15 +80,15 @@ namespace Vapi
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareCampaignControllerCreateArguments(
+            PrepareCampaignControllerCreateV2Arguments(
                 httpClient: HttpClient,
                 request: request);
 
 
             var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CampaignControllerCreateSecurityRequirements,
-                operationName: "CampaignControllerCreateAsync");
+                securityRequirements: s_CampaignControllerCreateV2SecurityRequirements,
+                operationName: "CampaignControllerCreateV2Async");
 
             using var __timeoutCancellationTokenSource = global::Vapi.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -108,7 +108,7 @@ namespace Vapi
             {
 
                             var __pathBuilder = new global::Vapi.PathBuilder(
-                                path: "/campaign",
+                                path: "/v2/campaign",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Vapi.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -153,7 +153,7 @@ namespace Vapi
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCampaignControllerCreateRequest(
+                PrepareCampaignControllerCreateV2Request(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     request: request);
@@ -173,9 +173,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
+                                operationId: "CampaignControllerCreateV2",
+                                methodName: "CampaignControllerCreateV2Async",
+                                pathTemplate: "\"/v2/campaign\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -207,9 +207,9 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
+                                operationId: "CampaignControllerCreateV2",
+                                methodName: "CampaignControllerCreateV2Async",
+                                pathTemplate: "\"/v2/campaign\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -248,9 +248,9 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
+                                operationId: "CampaignControllerCreateV2",
+                                methodName: "CampaignControllerCreateV2Async",
+                                pathTemplate: "\"/v2/campaign\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -288,7 +288,7 @@ namespace Vapi
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCampaignControllerCreateResponse(
+                ProcessCampaignControllerCreateV2Response(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -296,9 +296,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
+                                operationId: "CampaignControllerCreateV2",
+                                methodName: "CampaignControllerCreateV2Async",
+                                pathTemplate: "\"/v2/campaign\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -318,9 +318,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
+                                operationId: "CampaignControllerCreateV2",
+                                methodName: "CampaignControllerCreateV2Async",
+                                pathTemplate: "\"/v2/campaign\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -348,7 +348,7 @@ namespace Vapi
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCampaignControllerCreateResponseContent(
+                                ProcessCampaignControllerCreateV2ResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -432,7 +432,7 @@ namespace Vapi
             }
         }
         /// <summary>
-        /// Create Campaign
+        /// Create Campaign V2
         /// </summary>
         /// <param name="name">
         /// This is the name of the campaign. This is just for your own reference.<br/>
@@ -474,7 +474,7 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateV2Async(
             string name,
             string? assistantId = default,
             string? workflowId = default,
@@ -506,7 +506,7 @@ namespace Vapi
                 DuplicateFromCampaignId = duplicateFromCampaignId,
             };
 
-            return await CampaignControllerCreateAsync(
+            return await CampaignControllerCreateV2Async(
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

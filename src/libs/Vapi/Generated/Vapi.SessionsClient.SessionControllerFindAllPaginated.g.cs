@@ -36,6 +36,7 @@ namespace Vapi
             ref bool? numberE164CheckEnabled,
             ref string? extension,
             object? assistantOverrides,
+            object? squadOverrides,
             ref string? number,
             ref string? sipUri,
             ref string? customerName,
@@ -68,6 +69,7 @@ namespace Vapi
             bool? numberE164CheckEnabled,
             string? extension,
             object? assistantOverrides,
+            object? squadOverrides,
             string? number,
             string? sipUri,
             string? customerName,
@@ -115,6 +117,7 @@ namespace Vapi
         /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
         /// <param name="assistantOverrides"></param>
+        /// <param name="squadOverrides"></param>
         /// <param name="number"></param>
         /// <param name="sipUri"></param>
         /// <param name="customerName"></param>
@@ -150,6 +153,7 @@ namespace Vapi
             bool? numberE164CheckEnabled = default,
             string? extension = default,
             object? assistantOverrides = default,
+            object? squadOverrides = default,
             string? number = default,
             string? sipUri = default,
             string? customerName = default,
@@ -183,6 +187,7 @@ namespace Vapi
                 numberE164CheckEnabled: numberE164CheckEnabled,
                 extension: extension,
                 assistantOverrides: assistantOverrides,
+                squadOverrides: squadOverrides,
                 number: number,
                 sipUri: sipUri,
                 customerName: customerName,
@@ -227,6 +232,7 @@ namespace Vapi
         /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
         /// <param name="assistantOverrides"></param>
+        /// <param name="squadOverrides"></param>
         /// <param name="number"></param>
         /// <param name="sipUri"></param>
         /// <param name="customerName"></param>
@@ -262,6 +268,7 @@ namespace Vapi
             bool? numberE164CheckEnabled = default,
             string? extension = default,
             object? assistantOverrides = default,
+            object? squadOverrides = default,
             string? number = default,
             string? sipUri = default,
             string? customerName = default,
@@ -298,6 +305,7 @@ namespace Vapi
                 numberE164CheckEnabled: ref numberE164CheckEnabled,
                 extension: ref extension,
                 assistantOverrides: assistantOverrides,
+                squadOverrides: squadOverrides,
                 number: ref number,
                 sipUri: ref sipUri,
                 customerName: ref customerName,
@@ -355,6 +363,7 @@ namespace Vapi
                                 .AddOptionalParameter("numberE164CheckEnabled", numberE164CheckEnabled?.ToString().ToLowerInvariant())
                                 .AddOptionalParameter("extension", extension)
                                 .AddOptionalParameter("assistantOverrides", assistantOverrides?.ToString())
+                                .AddOptionalParameter("squadOverrides", squadOverrides?.ToString())
                                 .AddOptionalParameter("number", number)
                                 .AddOptionalParameter("sipUri", sipUri)
                                 .AddOptionalParameter("customerName", customerName)
@@ -425,6 +434,7 @@ namespace Vapi
                     numberE164CheckEnabled: numberE164CheckEnabled,
                     extension: extension,
                     assistantOverrides: assistantOverrides,
+                    squadOverrides: squadOverrides,
                     number: number,
                     sipUri: sipUri,
                     customerName: customerName,
