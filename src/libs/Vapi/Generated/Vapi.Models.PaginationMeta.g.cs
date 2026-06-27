@@ -42,6 +42,14 @@ namespace Vapi
         public bool? HasNextPage { get; set; }
 
         /// <summary>
+        /// Opaque cursor for the next page under keyset pagination (PRO-3163). Pass it<br/>
+        /// back as the `cursor` query param to fetch the next page without an OFFSET<br/>
+        /// scan. Present only when a further page likely exists.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nextCursor")]
+        public string? NextCursor { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sortOrder")]
@@ -80,6 +88,11 @@ namespace Vapi
         /// <param name="currentPage"></param>
         /// <param name="totalPages"></param>
         /// <param name="hasNextPage"></param>
+        /// <param name="nextCursor">
+        /// Opaque cursor for the next page under keyset pagination (PRO-3163). Pass it<br/>
+        /// back as the `cursor` query param to fetch the next page without an OFFSET<br/>
+        /// scan. Present only when a further page likely exists.
+        /// </param>
         /// <param name="sortOrder"></param>
         /// <param name="itemsBeyondRetention"></param>
         /// <param name="createdAtLe"></param>
@@ -93,6 +106,7 @@ namespace Vapi
             double currentPage,
             double? totalPages,
             bool? hasNextPage,
+            string? nextCursor,
             global::Vapi.PaginationMetaSortOrder? sortOrder,
             bool? itemsBeyondRetention,
             global::System.DateTime? createdAtLe,
@@ -103,6 +117,7 @@ namespace Vapi
             this.CurrentPage = currentPage;
             this.TotalPages = totalPages;
             this.HasNextPage = hasNextPage;
+            this.NextCursor = nextCursor;
             this.SortOrder = sortOrder;
             this.ItemsBeyondRetention = itemsBeyondRetention;
             this.CreatedAtLe = createdAtLe;

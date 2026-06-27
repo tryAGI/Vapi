@@ -3973,6 +3973,18 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.CampaignControllerFindAllSortByNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderNullableJsonConverter),
@@ -9541,6 +9553,18 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.CampaignControllerFindAllSortByJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CampaignControllerFindAllSortByNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderJsonConverter),
 
@@ -15111,6 +15135,18 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.CampaignControllerFindAllSortByNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderNullableJsonConverter),
@@ -20679,6 +20715,18 @@ namespace Vapi
             typeof(global::Vapi.JsonConverters.CampaignControllerFindAllSortByJsonConverter),
 
             typeof(global::Vapi.JsonConverters.CampaignControllerFindAllSortByNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByNullableJsonConverter),
 
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderJsonConverter),
 
@@ -26249,6 +26297,18 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.CampaignControllerFindAllSortByNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderNullableJsonConverter),
@@ -31818,6 +31878,18 @@ namespace Vapi
 
             typeof(global::Vapi.JsonConverters.CampaignControllerFindAllSortByNullableJsonConverter),
 
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderNullableJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByJsonConverter),
+
+            typeof(global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByNullableJsonConverter),
+
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderJsonConverter),
 
             typeof(global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderNullableJsonConverter),
@@ -33040,6 +33112,9 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CampaignControllerFindAllStatus), TypeInfoPropertyName = "CampaignControllerFindAllStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CampaignControllerFindAllSortOrder), TypeInfoPropertyName = "CampaignControllerFindAllSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CampaignControllerFindAllSortBy), TypeInfoPropertyName = "CampaignControllerFindAllSortBy2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CampaignControllerFindAllV2Status), TypeInfoPropertyName = "CampaignControllerFindAllV2Status2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CampaignControllerFindAllV2SortOrder), TypeInfoPropertyName = "CampaignControllerFindAllV2SortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CampaignControllerFindAllV2SortBy), TypeInfoPropertyName = "CampaignControllerFindAllV2SortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SessionControllerFindAllPaginatedSortOrder), TypeInfoPropertyName = "SessionControllerFindAllPaginatedSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SessionControllerFindAllPaginatedSortBy), TypeInfoPropertyName = "SessionControllerFindAllPaginatedSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberControllerFindAllPaginatedSortOrder), TypeInfoPropertyName = "PhoneNumberControllerFindAllPaginatedSortOrder2")]
@@ -35286,6 +35361,12 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.CampaignControllerFindAllSortOrderNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CampaignControllerFindAllSortByJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CampaignControllerFindAllSortByNullableJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CampaignControllerFindAllV2StatusNullableJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CampaignControllerFindAllV2SortOrderNullableJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CampaignControllerFindAllV2SortByNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortOrderNullableJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.SessionControllerFindAllPaginatedSortByJsonConverter());

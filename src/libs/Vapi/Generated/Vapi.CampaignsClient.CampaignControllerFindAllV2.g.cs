@@ -7,7 +7,7 @@ namespace Vapi
     {
 
 
-        private static readonly global::Vapi.EndPointSecurityRequirement s_CampaignControllerCreateSecurityRequirement0 =
+        private static readonly global::Vapi.EndPointSecurityRequirement s_CampaignControllerFindAllV2SecurityRequirement0 =
             new global::Vapi.EndPointSecurityRequirement
             {
                 Authorizations = new global::Vapi.EndPointAuthorizationRequirement[]
@@ -21,42 +21,105 @@ namespace Vapi
                     },
                 },
             };
-        private static readonly global::Vapi.EndPointSecurityRequirement[] s_CampaignControllerCreateSecurityRequirements =
+        private static readonly global::Vapi.EndPointSecurityRequirement[] s_CampaignControllerFindAllV2SecurityRequirements =
             new global::Vapi.EndPointSecurityRequirement[]
-            {                s_CampaignControllerCreateSecurityRequirement0,
+            {                s_CampaignControllerFindAllV2SecurityRequirement0,
             };
-        partial void PrepareCampaignControllerCreateArguments(
+        partial void PrepareCampaignControllerFindAllV2Arguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Vapi.CreateCampaignDTO request);
-        partial void PrepareCampaignControllerCreateRequest(
+            ref string? id,
+            ref global::Vapi.CampaignControllerFindAllV2Status? status,
+            ref double? page,
+            ref global::Vapi.CampaignControllerFindAllV2SortOrder? sortOrder,
+            ref global::Vapi.CampaignControllerFindAllV2SortBy? sortBy,
+            ref double? limit,
+            ref global::System.DateTime? createdAtGt,
+            ref global::System.DateTime? createdAtLt,
+            ref global::System.DateTime? createdAtGe,
+            ref global::System.DateTime? createdAtLe,
+            ref global::System.DateTime? updatedAtGt,
+            ref global::System.DateTime? updatedAtLt,
+            ref global::System.DateTime? updatedAtGe,
+            ref global::System.DateTime? updatedAtLe);
+        partial void PrepareCampaignControllerFindAllV2Request(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Vapi.CreateCampaignDTO request);
-        partial void ProcessCampaignControllerCreateResponse(
+            string? id,
+            global::Vapi.CampaignControllerFindAllV2Status? status,
+            double? page,
+            global::Vapi.CampaignControllerFindAllV2SortOrder? sortOrder,
+            global::Vapi.CampaignControllerFindAllV2SortBy? sortBy,
+            double? limit,
+            global::System.DateTime? createdAtGt,
+            global::System.DateTime? createdAtLt,
+            global::System.DateTime? createdAtGe,
+            global::System.DateTime? createdAtLe,
+            global::System.DateTime? updatedAtGt,
+            global::System.DateTime? updatedAtLt,
+            global::System.DateTime? updatedAtGe,
+            global::System.DateTime? updatedAtLe);
+        partial void ProcessCampaignControllerFindAllV2Response(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCampaignControllerCreateResponseContent(
+        partial void ProcessCampaignControllerFindAllV2ResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Create Campaign
+        /// List Campaigns V2
         /// </summary>
-        /// <param name="request"></param>
+        /// <param name="id"></param>
+        /// <param name="status"></param>
+        /// <param name="page"></param>
+        /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
+        /// <param name="limit"></param>
+        /// <param name="createdAtGt"></param>
+        /// <param name="createdAtLt"></param>
+        /// <param name="createdAtGe"></param>
+        /// <param name="createdAtLe"></param>
+        /// <param name="updatedAtGt"></param>
+        /// <param name="updatedAtLt"></param>
+        /// <param name="updatedAtGe"></param>
+        /// <param name="updatedAtLe"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateAsync(
-
-            global::Vapi.CreateCampaignDTO request,
+        public async global::System.Threading.Tasks.Task<global::Vapi.CampaignPaginatedResponse> CampaignControllerFindAllV2Async(
+            string? id = default,
+            global::Vapi.CampaignControllerFindAllV2Status? status = default,
+            double? page = default,
+            global::Vapi.CampaignControllerFindAllV2SortOrder? sortOrder = default,
+            global::Vapi.CampaignControllerFindAllV2SortBy? sortBy = default,
+            double? limit = default,
+            global::System.DateTime? createdAtGt = default,
+            global::System.DateTime? createdAtLt = default,
+            global::System.DateTime? createdAtGe = default,
+            global::System.DateTime? createdAtLe = default,
+            global::System.DateTime? updatedAtGt = default,
+            global::System.DateTime? updatedAtLt = default,
+            global::System.DateTime? updatedAtGe = default,
+            global::System.DateTime? updatedAtLe = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CampaignControllerCreateAsResponseAsync(
-
-                request: request,
+            var __response = await CampaignControllerFindAllV2AsResponseAsync(
+                id: id,
+                status: status,
+                page: page,
+                sortOrder: sortOrder,
+                sortBy: sortBy,
+                limit: limit,
+                createdAtGt: createdAtGt,
+                createdAtLt: createdAtLt,
+                createdAtGe: createdAtGe,
+                createdAtLe: createdAtLe,
+                updatedAtGt: updatedAtGt,
+                updatedAtLt: updatedAtLt,
+                updatedAtGe: updatedAtGe,
+                updatedAtLe: updatedAtLe,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -64,31 +127,67 @@ namespace Vapi
             return __response.Body;
         }
         /// <summary>
-        /// Create Campaign
+        /// List Campaigns V2
         /// </summary>
-        /// <param name="request"></param>
+        /// <param name="id"></param>
+        /// <param name="status"></param>
+        /// <param name="page"></param>
+        /// <param name="sortOrder"></param>
+        /// <param name="sortBy"></param>
+        /// <param name="limit"></param>
+        /// <param name="createdAtGt"></param>
+        /// <param name="createdAtLt"></param>
+        /// <param name="createdAtGe"></param>
+        /// <param name="createdAtLe"></param>
+        /// <param name="updatedAtGt"></param>
+        /// <param name="updatedAtLt"></param>
+        /// <param name="updatedAtGe"></param>
+        /// <param name="updatedAtLe"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>> CampaignControllerCreateAsResponseAsync(
-
-            global::Vapi.CreateCampaignDTO request,
+        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignPaginatedResponse>> CampaignControllerFindAllV2AsResponseAsync(
+            string? id = default,
+            global::Vapi.CampaignControllerFindAllV2Status? status = default,
+            double? page = default,
+            global::Vapi.CampaignControllerFindAllV2SortOrder? sortOrder = default,
+            global::Vapi.CampaignControllerFindAllV2SortBy? sortBy = default,
+            double? limit = default,
+            global::System.DateTime? createdAtGt = default,
+            global::System.DateTime? createdAtLt = default,
+            global::System.DateTime? createdAtGe = default,
+            global::System.DateTime? createdAtLe = default,
+            global::System.DateTime? updatedAtGt = default,
+            global::System.DateTime? updatedAtLt = default,
+            global::System.DateTime? updatedAtGe = default,
+            global::System.DateTime? updatedAtLe = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareCampaignControllerCreateArguments(
+            PrepareCampaignControllerFindAllV2Arguments(
                 httpClient: HttpClient,
-                request: request);
+                id: ref id,
+                status: ref status,
+                page: ref page,
+                sortOrder: ref sortOrder,
+                sortBy: ref sortBy,
+                limit: ref limit,
+                createdAtGt: ref createdAtGt,
+                createdAtLt: ref createdAtLt,
+                createdAtGe: ref createdAtGe,
+                createdAtLe: ref createdAtLe,
+                updatedAtGt: ref updatedAtGt,
+                updatedAtLt: ref updatedAtLt,
+                updatedAtGe: ref updatedAtGe,
+                updatedAtLe: ref updatedAtLe);
 
 
             var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CampaignControllerCreateSecurityRequirements,
-                operationName: "CampaignControllerCreateAsync");
+                securityRequirements: s_CampaignControllerFindAllV2SecurityRequirements,
+                operationName: "CampaignControllerFindAllV2Async");
 
             using var __timeoutCancellationTokenSource = global::Vapi.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -108,15 +207,31 @@ namespace Vapi
             {
 
                             var __pathBuilder = new global::Vapi.PathBuilder(
-                                path: "/campaign",
+                                path: "/v2/campaign",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddOptionalParameter("id", id)
+                                .AddOptionalParameter("status", status?.ToValueString())
+                                .AddOptionalParameter("page", page?.ToString())
+                                .AddOptionalParameter("sortOrder", sortOrder?.ToValueString())
+                                .AddOptionalParameter("sortBy", sortBy?.ToValueString())
+                                .AddOptionalParameter("limit", limit?.ToString())
+                                .AddOptionalParameter("createdAtGt", createdAtGt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("createdAtLt", createdAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("createdAtGe", createdAtGe?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("createdAtLe", createdAtLe?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("updatedAtGt", updatedAtGt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("updatedAtLt", updatedAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("updatedAtGe", updatedAtGe?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("updatedAtLe", updatedAtLe?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Vapi.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Post,
+                    method: global::System.Net.Http.HttpMethod.Get,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -139,12 +254,6 @@ namespace Vapi
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json");
-                            __httpRequest.Content = __httpRequestContent;
                 global::Vapi.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -153,10 +262,23 @@ namespace Vapi
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCampaignControllerCreateRequest(
+                PrepareCampaignControllerFindAllV2Request(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    request: request);
+                    id: id,
+                    status: status,
+                    page: page,
+                    sortOrder: sortOrder,
+                    sortBy: sortBy,
+                    limit: limit,
+                    createdAtGt: createdAtGt,
+                    createdAtLt: createdAtLt,
+                    createdAtGe: createdAtGe,
+                    createdAtLe: createdAtLe,
+                    updatedAtGt: updatedAtGt,
+                    updatedAtLt: updatedAtLt,
+                    updatedAtGe: updatedAtGe,
+                    updatedAtLe: updatedAtLe);
 
                 return __httpRequest;
             }
@@ -173,10 +295,10 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
-                                httpMethod: "POST",
+                                operationId: "CampaignControllerFindAllV2",
+                                methodName: "CampaignControllerFindAllV2Async",
+                                pathTemplate: "\"/v2/campaign\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -207,10 +329,10 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
-                                httpMethod: "POST",
+                                operationId: "CampaignControllerFindAllV2",
+                                methodName: "CampaignControllerFindAllV2Async",
+                                pathTemplate: "\"/v2/campaign\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -248,10 +370,10 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
-                                httpMethod: "POST",
+                                operationId: "CampaignControllerFindAllV2",
+                                methodName: "CampaignControllerFindAllV2Async",
+                                pathTemplate: "\"/v2/campaign\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -288,7 +410,7 @@ namespace Vapi
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCampaignControllerCreateResponse(
+                ProcessCampaignControllerFindAllV2Response(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -296,10 +418,10 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
-                                httpMethod: "POST",
+                                operationId: "CampaignControllerFindAllV2",
+                                methodName: "CampaignControllerFindAllV2Async",
+                                pathTemplate: "\"/v2/campaign\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -318,10 +440,10 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
-                                httpMethod: "POST",
+                                operationId: "CampaignControllerFindAllV2",
+                                methodName: "CampaignControllerFindAllV2Async",
+                                pathTemplate: "\"/v2/campaign\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -348,7 +470,7 @@ namespace Vapi
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCampaignControllerCreateResponseContent(
+                                ProcessCampaignControllerFindAllV2ResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -357,9 +479,9 @@ namespace Vapi
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Vapi.Campaign.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Vapi.CampaignPaginatedResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignPaginatedResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -389,9 +511,9 @@ namespace Vapi
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Vapi.Campaign.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Vapi.CampaignPaginatedResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignPaginatedResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -430,86 +552,6 @@ namespace Vapi
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// Create Campaign
-        /// </summary>
-        /// <param name="name">
-        /// This is the name of the campaign. This is just for your own reference.<br/>
-        /// Example: Q2 Sales Campaign
-        /// </param>
-        /// <param name="assistantId">
-        /// This is the assistant ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
-        /// </param>
-        /// <param name="workflowId">
-        /// This is the workflow ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
-        /// </param>
-        /// <param name="squadId">
-        /// This is the squad ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
-        /// </param>
-        /// <param name="phoneNumberId">
-        /// This is the phone number ID that will be used for the campaign calls. Required if dialPlan is not provided. Note: phoneNumberId and dialPlan are mutually exclusive.
-        /// </param>
-        /// <param name="dialPlan">
-        /// This is a list of dial entries, each specifying a phone number and the customers to call using that number. Use this when you want different phone numbers to call different sets of customers. Note: phoneNumberId and dialPlan are mutually exclusive.
-        /// </param>
-        /// <param name="schedulePlan">
-        /// This is the schedule plan for the campaign. Calls will start at startedAt and continue until your organization’s concurrency limit is reached. Any remaining calls will be retried for up to one hour as capacity becomes available. After that hour or after latestAt, whichever comes first, any calls that couldn’t be placed won’t be retried.
-        /// </param>
-        /// <param name="customers">
-        /// These are the customers that will be called in the campaign. Required if dialPlan is not provided.
-        /// </param>
-        /// <param name="maxConcurrency">
-        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10.
-        /// </param>
-        /// <param name="assistantOverrides">
-        /// These are the overrides for the assistant's settings and template variables for the campaign. Use this when the campaign targets an `assistantId`.
-        /// </param>
-        /// <param name="squadOverrides">
-        /// These are the overrides for the squad and template variables for the campaign. Use this when the campaign targets a `squadId`. Per-contact `squadOverrides` are deep-merged on top of this at dispatch time.
-        /// </param>
-        /// <param name="duplicateFromCampaignId">
-        /// Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source.
-        /// </param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateAsync(
-            string name,
-            string? assistantId = default,
-            string? workflowId = default,
-            string? squadId = default,
-            string? phoneNumberId = default,
-            global::System.Collections.Generic.IList<global::Vapi.DialPlanEntry>? dialPlan = default,
-            global::Vapi.SchedulePlan? schedulePlan = default,
-            global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers = default,
-            double? maxConcurrency = default,
-            global::Vapi.AssistantOverrides? assistantOverrides = default,
-            global::Vapi.AssistantOverrides? squadOverrides = default,
-            string? duplicateFromCampaignId = default,
-            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::Vapi.CreateCampaignDTO
-            {
-                Name = name,
-                AssistantId = assistantId,
-                WorkflowId = workflowId,
-                SquadId = squadId,
-                PhoneNumberId = phoneNumberId,
-                DialPlan = dialPlan,
-                SchedulePlan = schedulePlan,
-                Customers = customers,
-                MaxConcurrency = maxConcurrency,
-                AssistantOverrides = assistantOverrides,
-                SquadOverrides = squadOverrides,
-                DuplicateFromCampaignId = duplicateFromCampaignId,
-            };
-
-            return await CampaignControllerCreateAsync(
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

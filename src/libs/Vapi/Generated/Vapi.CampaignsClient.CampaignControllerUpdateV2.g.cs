@@ -7,7 +7,7 @@ namespace Vapi
     {
 
 
-        private static readonly global::Vapi.EndPointSecurityRequirement s_CampaignControllerCreateSecurityRequirement0 =
+        private static readonly global::Vapi.EndPointSecurityRequirement s_CampaignControllerUpdateV2SecurityRequirement0 =
             new global::Vapi.EndPointSecurityRequirement
             {
                 Authorizations = new global::Vapi.EndPointAuthorizationRequirement[]
@@ -21,40 +21,45 @@ namespace Vapi
                     },
                 },
             };
-        private static readonly global::Vapi.EndPointSecurityRequirement[] s_CampaignControllerCreateSecurityRequirements =
+        private static readonly global::Vapi.EndPointSecurityRequirement[] s_CampaignControllerUpdateV2SecurityRequirements =
             new global::Vapi.EndPointSecurityRequirement[]
-            {                s_CampaignControllerCreateSecurityRequirement0,
+            {                s_CampaignControllerUpdateV2SecurityRequirement0,
             };
-        partial void PrepareCampaignControllerCreateArguments(
+        partial void PrepareCampaignControllerUpdateV2Arguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Vapi.CreateCampaignDTO request);
-        partial void PrepareCampaignControllerCreateRequest(
+            ref global::System.Guid id,
+            global::Vapi.UpdateCampaignDTO request);
+        partial void PrepareCampaignControllerUpdateV2Request(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Vapi.CreateCampaignDTO request);
-        partial void ProcessCampaignControllerCreateResponse(
+            global::System.Guid id,
+            global::Vapi.UpdateCampaignDTO request);
+        partial void ProcessCampaignControllerUpdateV2Response(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCampaignControllerCreateResponseContent(
+        partial void ProcessCampaignControllerUpdateV2ResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Create Campaign
+        /// Update Campaign
         /// </summary>
+        /// <param name="id"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerUpdateV2Async(
+            global::System.Guid id,
 
-            global::Vapi.CreateCampaignDTO request,
+            global::Vapi.UpdateCampaignDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CampaignControllerCreateAsResponseAsync(
+            var __response = await CampaignControllerUpdateV2AsResponseAsync(
+                id: id,
 
                 request: request,
                 requestOptions: requestOptions,
@@ -64,15 +69,17 @@ namespace Vapi
             return __response.Body;
         }
         /// <summary>
-        /// Create Campaign
+        /// Update Campaign
         /// </summary>
+        /// <param name="id"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>> CampaignControllerCreateAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>> CampaignControllerUpdateV2AsResponseAsync(
+            global::System.Guid id,
 
-            global::Vapi.CreateCampaignDTO request,
+            global::Vapi.UpdateCampaignDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -80,15 +87,16 @@ namespace Vapi
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareCampaignControllerCreateArguments(
+            PrepareCampaignControllerUpdateV2Arguments(
                 httpClient: HttpClient,
+                id: ref id,
                 request: request);
 
 
             var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CampaignControllerCreateSecurityRequirements,
-                operationName: "CampaignControllerCreateAsync");
+                securityRequirements: s_CampaignControllerUpdateV2SecurityRequirements,
+                operationName: "CampaignControllerUpdateV2Async");
 
             using var __timeoutCancellationTokenSource = global::Vapi.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -108,7 +116,7 @@ namespace Vapi
             {
 
                             var __pathBuilder = new global::Vapi.PathBuilder(
-                                path: "/campaign",
+                                path: $"/v2/campaign/{id}",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Vapi.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -116,7 +124,7 @@ namespace Vapi
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Post,
+                    method: new global::System.Net.Http.HttpMethod("PATCH"),
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -153,9 +161,10 @@ namespace Vapi
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCampaignControllerCreateRequest(
+                PrepareCampaignControllerUpdateV2Request(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    id: id!,
                     request: request);
 
                 return __httpRequest;
@@ -173,10 +182,10 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
-                                httpMethod: "POST",
+                                operationId: "CampaignControllerUpdateV2",
+                                methodName: "CampaignControllerUpdateV2Async",
+                                pathTemplate: "$\"/v2/campaign/{id}\"",
+                                httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -207,10 +216,10 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
-                                httpMethod: "POST",
+                                operationId: "CampaignControllerUpdateV2",
+                                methodName: "CampaignControllerUpdateV2Async",
+                                pathTemplate: "$\"/v2/campaign/{id}\"",
+                                httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -248,10 +257,10 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
-                                httpMethod: "POST",
+                                operationId: "CampaignControllerUpdateV2",
+                                methodName: "CampaignControllerUpdateV2Async",
+                                pathTemplate: "$\"/v2/campaign/{id}\"",
+                                httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -288,7 +297,7 @@ namespace Vapi
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCampaignControllerCreateResponse(
+                ProcessCampaignControllerUpdateV2Response(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -296,10 +305,10 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
-                                httpMethod: "POST",
+                                operationId: "CampaignControllerUpdateV2",
+                                methodName: "CampaignControllerUpdateV2Async",
+                                pathTemplate: "$\"/v2/campaign/{id}\"",
+                                httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -318,10 +327,10 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
-                                httpMethod: "POST",
+                                operationId: "CampaignControllerUpdateV2",
+                                methodName: "CampaignControllerUpdateV2Async",
+                                pathTemplate: "$\"/v2/campaign/{id}\"",
+                                httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -348,7 +357,7 @@ namespace Vapi
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCampaignControllerCreateResponseContent(
+                                ProcessCampaignControllerUpdateV2ResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -432,65 +441,57 @@ namespace Vapi
             }
         }
         /// <summary>
-        /// Create Campaign
+        /// Update Campaign
         /// </summary>
+        /// <param name="id"></param>
         /// <param name="name">
-        /// This is the name of the campaign. This is just for your own reference.<br/>
-        /// Example: Q2 Sales Campaign
+        /// This is the name of the campaign. This is just for your own reference.
         /// </param>
         /// <param name="assistantId">
-        /// This is the assistant ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
+        /// This is the assistant ID that will be used for the campaign calls.<br/>
+        /// Can only be updated if campaign is not in progress or has ended.
         /// </param>
         /// <param name="workflowId">
-        /// This is the workflow ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
+        /// This is the workflow ID that will be used for the campaign calls.<br/>
+        /// Can only be updated if campaign is not in progress or has ended.
         /// </param>
         /// <param name="squadId">
-        /// This is the squad ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
+        /// This is the squad ID that will be used for the campaign calls.<br/>
+        /// Can only be updated if campaign is not in progress or has ended.
         /// </param>
         /// <param name="phoneNumberId">
-        /// This is the phone number ID that will be used for the campaign calls. Required if dialPlan is not provided. Note: phoneNumberId and dialPlan are mutually exclusive.
+        /// This is the phone number ID that will be used for the campaign calls.<br/>
+        /// Can only be updated if campaign is not in progress or has ended.<br/>
+        /// Note: `phoneNumberId` and `dialPlan` are mutually exclusive.
         /// </param>
         /// <param name="dialPlan">
-        /// This is a list of dial entries, each specifying a phone number and the customers to call using that number. Use this when you want different phone numbers to call different sets of customers. Note: phoneNumberId and dialPlan are mutually exclusive.
+        /// This is a list of dial entries, each specifying a phone number and the customers to call using that number. Can only be updated if campaign is not in progress or has ended. Note: phoneNumberId and dialPlan are mutually exclusive.
         /// </param>
         /// <param name="schedulePlan">
-        /// This is the schedule plan for the campaign. Calls will start at startedAt and continue until your organization’s concurrency limit is reached. Any remaining calls will be retried for up to one hour as capacity becomes available. After that hour or after latestAt, whichever comes first, any calls that couldn’t be placed won’t be retried.
+        /// This is the schedule plan for the campaign.<br/>
+        /// Can only be updated if campaign is not in progress or has ended.
         /// </param>
-        /// <param name="customers">
-        /// These are the customers that will be called in the campaign. Required if dialPlan is not provided.
-        /// </param>
-        /// <param name="maxConcurrency">
-        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10.
-        /// </param>
-        /// <param name="assistantOverrides">
-        /// These are the overrides for the assistant's settings and template variables for the campaign. Use this when the campaign targets an `assistantId`.
-        /// </param>
-        /// <param name="squadOverrides">
-        /// These are the overrides for the squad and template variables for the campaign. Use this when the campaign targets a `squadId`. Per-contact `squadOverrides` are deep-merged on top of this at dispatch time.
-        /// </param>
-        /// <param name="duplicateFromCampaignId">
-        /// Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source.
+        /// <param name="status">
+        /// Set to 'cancelled' to stop the campaign ('ended' is a V1 alias). Scheduled<br/>
+        /// calls are deleted; in-progress calls are allowed to finish.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateAsync(
-            string name,
+        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerUpdateV2Async(
+            global::System.Guid id,
+            string? name = default,
             string? assistantId = default,
             string? workflowId = default,
             string? squadId = default,
             string? phoneNumberId = default,
             global::System.Collections.Generic.IList<global::Vapi.DialPlanEntry>? dialPlan = default,
             global::Vapi.SchedulePlan? schedulePlan = default,
-            global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers = default,
-            double? maxConcurrency = default,
-            global::Vapi.AssistantOverrides? assistantOverrides = default,
-            global::Vapi.AssistantOverrides? squadOverrides = default,
-            string? duplicateFromCampaignId = default,
+            global::Vapi.UpdateCampaignDTOStatus? status = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Vapi.CreateCampaignDTO
+            var __request = new global::Vapi.UpdateCampaignDTO
             {
                 Name = name,
                 AssistantId = assistantId,
@@ -499,14 +500,11 @@ namespace Vapi
                 PhoneNumberId = phoneNumberId,
                 DialPlan = dialPlan,
                 SchedulePlan = schedulePlan,
-                Customers = customers,
-                MaxConcurrency = maxConcurrency,
-                AssistantOverrides = assistantOverrides,
-                SquadOverrides = squadOverrides,
-                DuplicateFromCampaignId = duplicateFromCampaignId,
+                Status = status,
             };
 
-            return await CampaignControllerCreateAsync(
+            return await CampaignControllerUpdateV2Async(
+                id: id,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

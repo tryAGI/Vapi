@@ -36,6 +36,14 @@ namespace Vapi
         public global::Vapi.AssistantOverrides? AssistantOverrides { get; set; }
 
         /// <summary>
+        /// These are the overrides applied when the call targets a `squadId`. Mirrors<br/>
+        /// the call-level `squadOverrides` — use this instead of `assistantOverrides`<br/>
+        /// when the campaign or call is squad-based.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("squadOverrides")]
+        public global::Vapi.AssistantOverrides? SquadOverrides { get; set; }
+
+        /// <summary>
         /// This is the number of the customer.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("number")]
@@ -92,6 +100,11 @@ namespace Vapi
         /// These are the overrides for the assistant's settings and template variables specific to this customer.<br/>
         /// This allows customization of the assistant's behavior for individual customers in batch calls.
         /// </param>
+        /// <param name="squadOverrides">
+        /// These are the overrides applied when the call targets a `squadId`. Mirrors<br/>
+        /// the call-level `squadOverrides` — use this instead of `assistantOverrides`<br/>
+        /// when the campaign or call is squad-based.
+        /// </param>
         /// <param name="number">
         /// This is the number of the customer.
         /// </param>
@@ -115,6 +128,7 @@ namespace Vapi
             bool? numberE164CheckEnabled,
             string? extension,
             global::Vapi.AssistantOverrides? assistantOverrides,
+            global::Vapi.AssistantOverrides? squadOverrides,
             string? number,
             string? sipUri,
             string? name,
@@ -124,6 +138,7 @@ namespace Vapi
             this.NumberE164CheckEnabled = numberE164CheckEnabled;
             this.Extension = extension;
             this.AssistantOverrides = assistantOverrides;
+            this.SquadOverrides = squadOverrides;
             this.Number = number;
             this.SipUri = sipUri;
             this.Name = name;

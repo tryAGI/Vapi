@@ -12,7 +12,7 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerUpdateAsync(
+        global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerUpdateV2Async(
             global::System.Guid id,
 
             global::Vapi.UpdateCampaignDTO request,
@@ -26,7 +26,7 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>> CampaignControllerUpdateAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>> CampaignControllerUpdateV2AsResponseAsync(
             global::System.Guid id,
 
             global::Vapi.UpdateCampaignDTO request,
@@ -70,7 +70,7 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerUpdateAsync(
+        global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerUpdateV2Async(
             global::System.Guid id,
             string? name = default,
             string? assistantId = default,

@@ -22,6 +22,7 @@ namespace Vapi
         /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
         /// <param name="assistantOverrides"></param>
+        /// <param name="squadOverrides"></param>
         /// <param name="number"></param>
         /// <param name="sipUri"></param>
         /// <param name="customerName"></param>
@@ -57,6 +58,7 @@ namespace Vapi
             bool? numberE164CheckEnabled = default,
             string? extension = default,
             object? assistantOverrides = default,
+            object? squadOverrides = default,
             string? number = default,
             string? sipUri = default,
             string? customerName = default,
@@ -97,6 +99,7 @@ namespace Vapi
         /// Example: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
         /// <param name="assistantOverrides"></param>
+        /// <param name="squadOverrides"></param>
         /// <param name="number"></param>
         /// <param name="sipUri"></param>
         /// <param name="customerName"></param>
@@ -132,6 +135,7 @@ namespace Vapi
             bool? numberE164CheckEnabled = default,
             string? extension = default,
             object? assistantOverrides = default,
+            object? squadOverrides = default,
             string? number = default,
             string? sipUri = default,
             string? customerName = default,

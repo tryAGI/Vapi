@@ -57,9 +57,8 @@ namespace Vapi
         public global::Vapi.SchedulePlan? SchedulePlan { get; set; }
 
         /// <summary>
-        /// This is the status of the campaign.<br/>
-        /// Can only be updated to 'ended' if you want to end the campaign.<br/>
-        /// When set to 'ended', it will delete all scheduled calls. Calls in progress will be allowed to complete.
+        /// Set to 'cancelled' to stop the campaign ('ended' is a V1 alias). Scheduled<br/>
+        /// calls are deleted; in-progress calls are allowed to finish.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateCampaignDTOStatusJsonConverter))]
@@ -102,9 +101,8 @@ namespace Vapi
         /// Can only be updated if campaign is not in progress or has ended.
         /// </param>
         /// <param name="status">
-        /// This is the status of the campaign.<br/>
-        /// Can only be updated to 'ended' if you want to end the campaign.<br/>
-        /// When set to 'ended', it will delete all scheduled calls. Calls in progress will be allowed to complete.
+        /// Set to 'cancelled' to stop the campaign ('ended' is a V1 alias). Scheduled<br/>
+        /// calls are deleted; in-progress calls are allowed to finish.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
