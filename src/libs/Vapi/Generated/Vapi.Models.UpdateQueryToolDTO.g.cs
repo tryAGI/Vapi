@@ -15,6 +15,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
 
         /// <summary>
+        /// The type of tool. "query" for Query tool.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateQueryToolDTOTypeJsonConverter))]
+        public global::Vapi.UpdateQueryToolDTOType? Type { get; set; }
+
+        /// <summary>
         /// The knowledge bases to query
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("knowledgeBases")]
@@ -111,6 +118,9 @@ namespace Vapi
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
+        /// <param name="type">
+        /// The type of tool. "query" for Query tool.
+        /// </param>
         /// <param name="knowledgeBases">
         /// The knowledge bases to query
         /// </param>
@@ -195,10 +205,12 @@ namespace Vapi
 #endif
         public UpdateQueryToolDTO(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
+            global::Vapi.UpdateQueryToolDTOType? type,
             global::System.Collections.Generic.IList<global::Vapi.KnowledgeBase>? knowledgeBases,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
             this.Messages = messages;
+            this.Type = type;
             this.KnowledgeBases = knowledgeBases;
             this.RejectionPlan = rejectionPlan;
         }

@@ -1,0 +1,151 @@
+
+#nullable enable
+
+namespace Vapi
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class ServerMessageCampaignPredial
+    {
+        /// <summary>
+        /// This is the phone number that the message is associated with.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("phoneNumber")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>))]
+        public global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? PhoneNumber { get; set; }
+
+        /// <summary>
+        /// This is the type of the message. "campaign.predial" is sent to the campaign's server before each contact is dialed, so the server can decide whether the contact is eligible to be called.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.ServerMessageCampaignPredialTypeJsonConverter))]
+        public global::Vapi.ServerMessageCampaignPredialType Type { get; set; }
+
+        /// <summary>
+        /// This is the ID of the campaign the contact belongs to.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("campaignId")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string CampaignId { get; set; }
+
+        /// <summary>
+        /// This is the contact that is about to be dialed.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("contact")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Vapi.CampaignContact Contact { get; set; }
+
+        /// <summary>
+        /// This is the timestamp of the message.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        public double? Timestamp { get; set; }
+
+        /// <summary>
+        /// This is a live version of the `call.artifact`.<br/>
+        /// This matches what is stored on `call.artifact` after the call.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("artifact")]
+        public global::Vapi.Artifact? Artifact { get; set; }
+
+        /// <summary>
+        /// This is the assistant that the message is associated with.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistant")]
+        public global::Vapi.CreateAssistantDTO? Assistant { get; set; }
+
+        /// <summary>
+        /// This is the customer that the message is associated with.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("customer")]
+        public global::Vapi.CreateCustomerDTO? Customer { get; set; }
+
+        /// <summary>
+        /// This is the call that the message is associated with.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("call")]
+        public global::Vapi.Call? Call { get; set; }
+
+        /// <summary>
+        /// This is the chat object.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("chat")]
+        public global::Vapi.Chat? Chat { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ServerMessageCampaignPredial" /> class.
+        /// </summary>
+        /// <param name="campaignId">
+        /// This is the ID of the campaign the contact belongs to.
+        /// </param>
+        /// <param name="contact">
+        /// This is the contact that is about to be dialed.
+        /// </param>
+        /// <param name="phoneNumber">
+        /// This is the phone number that the message is associated with.
+        /// </param>
+        /// <param name="type">
+        /// This is the type of the message. "campaign.predial" is sent to the campaign's server before each contact is dialed, so the server can decide whether the contact is eligible to be called.
+        /// </param>
+        /// <param name="timestamp">
+        /// This is the timestamp of the message.
+        /// </param>
+        /// <param name="artifact">
+        /// This is a live version of the `call.artifact`.<br/>
+        /// This matches what is stored on `call.artifact` after the call.
+        /// </param>
+        /// <param name="assistant">
+        /// This is the assistant that the message is associated with.
+        /// </param>
+        /// <param name="customer">
+        /// This is the customer that the message is associated with.
+        /// </param>
+        /// <param name="call">
+        /// This is the call that the message is associated with.
+        /// </param>
+        /// <param name="chat">
+        /// This is the chat object.
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public ServerMessageCampaignPredial(
+            string campaignId,
+            global::Vapi.CampaignContact contact,
+            global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? phoneNumber,
+            global::Vapi.ServerMessageCampaignPredialType type,
+            double? timestamp,
+            global::Vapi.Artifact? artifact,
+            global::Vapi.CreateAssistantDTO? assistant,
+            global::Vapi.CreateCustomerDTO? customer,
+            global::Vapi.Call? call,
+            global::Vapi.Chat? chat)
+        {
+            this.PhoneNumber = phoneNumber;
+            this.Type = type;
+            this.CampaignId = campaignId ?? throw new global::System.ArgumentNullException(nameof(campaignId));
+            this.Contact = contact ?? throw new global::System.ArgumentNullException(nameof(contact));
+            this.Timestamp = timestamp;
+            this.Artifact = artifact;
+            this.Assistant = assistant;
+            this.Customer = customer;
+            this.Call = call;
+            this.Chat = chat;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ServerMessageCampaignPredial" /> class.
+        /// </summary>
+        public ServerMessageCampaignPredial()
+        {
+        }
+
+    }
+}

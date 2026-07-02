@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateMakeCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateMakeCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateMakeCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// Team ID
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("teamId")]
@@ -41,6 +48,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateMakeCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="teamId">
         /// Team ID
         /// </param>
@@ -57,11 +65,13 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateMakeCredentialDTO(
+            global::Vapi.UpdateMakeCredentialDTOProvider? provider,
             string? teamId,
             string? region,
             string? apiKey,
             string? name)
         {
+            this.Provider = provider;
             this.TeamId = teamId;
             this.Region = region;
             this.ApiKey = apiKey;

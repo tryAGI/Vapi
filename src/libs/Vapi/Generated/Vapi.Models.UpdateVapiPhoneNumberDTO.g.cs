@@ -26,6 +26,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>? Hooks { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateVapiPhoneNumberDTOProviderJsonConverter))]
+        public global::Vapi.UpdateVapiPhoneNumberDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is the name of the phone number. This is just for your own reference.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
@@ -95,6 +102,7 @@ namespace Vapi
         /// <param name="hooks">
         /// This is the hooks that will be used for incoming calls to this phone number.
         /// </param>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of the phone number. This is just for your own reference.
         /// </param>
@@ -131,6 +139,7 @@ namespace Vapi
         public UpdateVapiPhoneNumberDTO(
             global::Vapi.OneOf<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>? fallbackDestination,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>? hooks,
+            global::Vapi.UpdateVapiPhoneNumberDTOProvider? provider,
             string? name,
             string? assistantId,
             string? workflowId,
@@ -141,6 +150,7 @@ namespace Vapi
         {
             this.FallbackDestination = fallbackDestination;
             this.Hooks = hooks;
+            this.Provider = provider;
             this.Name = name;
             this.AssistantId = assistantId;
             this.WorkflowId = workflowId;

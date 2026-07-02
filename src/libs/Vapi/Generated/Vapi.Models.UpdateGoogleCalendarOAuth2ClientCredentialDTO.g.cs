@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateGoogleCalendarOAuth2ClientCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateGoogleCalendarOAuth2ClientCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateGoogleCalendarOAuth2ClientCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is the name of credential. This is just for your reference.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
@@ -23,6 +30,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateGoogleCalendarOAuth2ClientCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -30,8 +38,10 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateGoogleCalendarOAuth2ClientCredentialDTO(
+            global::Vapi.UpdateGoogleCalendarOAuth2ClientCredentialDTOProvider? provider,
             string? name)
         {
+            this.Provider = provider;
             this.Name = name;
         }
 

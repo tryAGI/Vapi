@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateCartesiaCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateCartesiaCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateCartesiaCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is not returned in the API.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apiKey")]
@@ -35,6 +42,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateCartesiaCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
@@ -48,10 +56,12 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateCartesiaCredentialDTO(
+            global::Vapi.UpdateCartesiaCredentialDTOProvider? provider,
             string? apiKey,
             string? name,
             string? apiUrl)
         {
+            this.Provider = provider;
             this.ApiKey = apiKey;
             this.Name = name;
             this.ApiUrl = apiUrl;

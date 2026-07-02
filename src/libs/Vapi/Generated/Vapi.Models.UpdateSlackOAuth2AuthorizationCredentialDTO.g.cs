@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateSlackOAuth2AuthorizationCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateSlackOAuth2AuthorizationCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateSlackOAuth2AuthorizationCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// The authorization ID for the OAuth2 authorization
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authorizationId")]
@@ -29,6 +36,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateSlackOAuth2AuthorizationCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="authorizationId">
         /// The authorization ID for the OAuth2 authorization
         /// </param>
@@ -39,9 +47,11 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateSlackOAuth2AuthorizationCredentialDTO(
+            global::Vapi.UpdateSlackOAuth2AuthorizationCredentialDTOProvider? provider,
             string? authorizationId,
             string? name)
         {
+            this.Provider = provider;
             this.AuthorizationId = authorizationId;
             this.Name = name;
         }

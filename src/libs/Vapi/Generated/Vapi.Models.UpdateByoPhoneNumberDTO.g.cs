@@ -26,6 +26,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>? Hooks { get; set; }
 
         /// <summary>
+        /// This is to bring your own phone numbers from your own SIP trunks or Carriers.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateByoPhoneNumberDTOProviderJsonConverter))]
+        public global::Vapi.UpdateByoPhoneNumberDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is the flag to toggle the E164 check for the `number` field. This is an advanced property which should be used if you know your use case requires it.<br/>
         /// Use cases:<br/>
         /// - `false`: To allow non-E164 numbers like `+001234567890`, `1234`, or `abc`. This is useful for dialing out to non-E164 numbers on your SIP trunks.<br/>
@@ -106,6 +113,9 @@ namespace Vapi
         /// <param name="hooks">
         /// This is the hooks that will be used for incoming calls to this phone number.
         /// </param>
+        /// <param name="provider">
+        /// This is to bring your own phone numbers from your own SIP trunks or Carriers.
+        /// </param>
         /// <param name="numberE164CheckEnabled">
         /// This is the flag to toggle the E164 check for the `number` field. This is an advanced property which should be used if you know your use case requires it.<br/>
         /// Use cases:<br/>
@@ -150,6 +160,7 @@ namespace Vapi
         public UpdateByoPhoneNumberDTO(
             global::Vapi.OneOf<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>? fallbackDestination,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>? hooks,
+            global::Vapi.UpdateByoPhoneNumberDTOProvider? provider,
             bool? numberE164CheckEnabled,
             string? name,
             string? assistantId,
@@ -161,6 +172,7 @@ namespace Vapi
         {
             this.FallbackDestination = fallbackDestination;
             this.Hooks = hooks;
+            this.Provider = provider;
             this.NumberE164CheckEnabled = numberE164CheckEnabled;
             this.Name = name;
             this.AssistantId = assistantId;

@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateCustomKnowledgeBaseDTO
     {
         /// <summary>
+        /// This knowledge base is bring your own knowledge base implementation.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateCustomKnowledgeBaseDTOProviderJsonConverter))]
+        public global::Vapi.UpdateCustomKnowledgeBaseDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is where the knowledge base request will be sent.<br/>
         /// Request Example:<br/>
         /// POST https://{server.url}<br/>
@@ -57,6 +64,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateCustomKnowledgeBaseDTO" /> class.
         /// </summary>
+        /// <param name="provider">
+        /// This knowledge base is bring your own knowledge base implementation.
+        /// </param>
         /// <param name="server">
         /// This is where the knowledge base request will be sent.<br/>
         /// Request Example:<br/>
@@ -98,8 +108,10 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateCustomKnowledgeBaseDTO(
+            global::Vapi.UpdateCustomKnowledgeBaseDTOProvider? provider,
             global::Vapi.Server? server)
         {
+            this.Provider = provider;
             this.Server = server;
         }
 

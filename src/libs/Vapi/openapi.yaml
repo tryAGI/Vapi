@@ -27310,6 +27310,7 @@
             "enum": [
               "ap-northeast-1",
               "ap-southeast-2",
+              "eu-central-1",
               "eu-west-1",
               "eu-west-3",
               "us-east-1",
@@ -39807,6 +39808,14 @@
               }
             ]
           },
+          "server": {
+            "description": "This is the server (URL, auth headers, timeout, etc.) for the campaign webhooks.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Server"
+              }
+            ]
+          },
           "duplicateFromCampaignId": {
             "type": "string",
             "description": "Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source."
@@ -39900,6 +39909,14 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/AssistantOverrides"
+              }
+            ]
+          },
+          "server": {
+            "description": "This is the server (URL, auth headers, timeout, etc.) for the campaign webhooks.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Server"
               }
             ]
           },
@@ -41917,6 +41934,13 @@
               ]
             }
           },
+          "provider": {
+            "type": "string",
+            "description": "This is to bring your own phone numbers from your own SIP trunks or Carriers.",
+            "enum": [
+              "byo-phone-number"
+            ]
+          },
           "numberE164CheckEnabled": {
             "type": "boolean",
             "description": "This is the flag to toggle the E164 check for the `number` field. This is an advanced property which should be used if you know your use case requires it.\n\nUse cases:\n- `false`: To allow non-E164 numbers like `+001234567890`, `1234`, or `abc`. This is useful for dialing out to non-E164 numbers on your SIP trunks.\n- `true` (default): To allow only E164 numbers like `+14155551234`. This is standard for PSTN calls.\n\nIf `false`, the `number` is still required to only contain alphanumeric characters (regex: `/^\\+?[a-zA-Z0-9]+$/`).\n\n@default true (E164 check is enabled)",
@@ -41990,6 +42014,13 @@
                 }
               ]
             }
+          },
+          "provider": {
+            "type": "string",
+            "description": "This is to use numbers bought on Twilio.",
+            "enum": [
+              "twilio"
+            ]
           },
           "smsEnabled": {
             "type": "boolean",
@@ -42075,6 +42106,13 @@
               ]
             }
           },
+          "provider": {
+            "type": "string",
+            "description": "This is to use numbers bought on Vonage.",
+            "enum": [
+              "vonage"
+            ]
+          },
           "name": {
             "type": "string",
             "description": "This is the name of the phone number. This is just for your own reference.",
@@ -42141,6 +42179,12 @@
                 }
               ]
             }
+          },
+          "provider": {
+            "type": "string",
+            "enum": [
+              "vapi"
+            ]
           },
           "name": {
             "type": "string",
@@ -42212,6 +42256,13 @@
                 }
               ]
             }
+          },
+          "provider": {
+            "type": "string",
+            "description": "This is to use numbers bought on Telnyx.",
+            "enum": [
+              "telnyx"
+            ]
           },
           "name": {
             "type": "string",
@@ -45222,6 +45273,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "apiRequest"
+            ],
+            "description": "The type of tool. \"apiRequest\" for API request tool."
+          },
           "name": {
             "type": "string",
             "description": "This is the name of the tool. This will be passed to the model.\n\nMust be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 40.",
@@ -45341,6 +45399,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "code"
+            ],
+            "description": "The type of tool. \"code\" for Code tool."
+          },
           "async": {
             "type": "boolean",
             "example": false,
@@ -45431,6 +45496,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "dtmf"
+            ],
+            "description": "The type of tool. \"dtmf\" for DTMF tool."
+          },
           "sipInfoDtmfEnabled": {
             "type": "boolean",
             "description": "This enables sending DTMF tones via SIP INFO messages instead of RFC 2833 (RTP events). When enabled, DTMF digits will be sent using the SIP INFO method, which can be more reliable in some network configurations. Only relevant when using the `vapi.sip` transport.",
@@ -45473,6 +45545,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "endCall"
+            ],
+            "description": "The type of tool. \"endCall\" for End Call tool."
+          },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
             "allOf": [
@@ -45509,6 +45588,13 @@
                 }
               ]
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "function"
+            ],
+            "description": "The type of tool. \"function\" for Function tool."
           },
           "async": {
             "type": "boolean",
@@ -45583,6 +45669,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "ghl"
+            ],
+            "description": "The type of tool. \"ghl\" for GHL tool."
+          },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
             "allOf": [
@@ -45623,6 +45716,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "make"
+            ],
+            "description": "The type of tool. \"make\" for Make tool."
+          },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
             "allOf": [
@@ -45662,6 +45762,13 @@
                 }
               ]
             }
+          },
+          "type": {
+            "type": "string",
+            "description": "This is the type of the tool.\nWhen you're using handoff tool, we recommend adding this to your system prompt\n---\n# System context\n\nYou are part of a multi-agent system designed to make agent coordination and execution easy. Agents uses two primary abstraction: **Agents** and **Handoffs**. An agent encompasses instructions and tools and can hand off a conversation to another agent when appropriate. Handoffs are achieved by calling a handoff function, generally named `handoff_to_<agent_name>`. Handoffs between agents are handled seamlessly in the background; do not mention or draw attention to these handoffs in your conversation with the user.\n\n# Agent context\n\n{put your agent system prompt here}\n---",
+            "enum": [
+              "handoff"
+            ]
           },
           "defaultResult": {
             "type": "string",
@@ -45732,6 +45839,12 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "transferCall"
+            ]
+          },
           "destinations": {
             "type": "array",
             "description": "These are the destinations that the call can be transferred to. If no destinations are provided, server.url will be used to get the transfer destination once the tool is called.",
@@ -45789,6 +45902,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "output"
+            ],
+            "description": "The type of tool. \"output\" for Output tool."
+          },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
             "allOf": [
@@ -45825,6 +45945,13 @@
                 }
               ]
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "bash"
+            ],
+            "description": "The type of tool. \"bash\" for Bash tool."
           },
           "subType": {
             "type": "string",
@@ -45885,6 +46012,13 @@
                 }
               ]
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "computer"
+            ],
+            "description": "The type of tool. \"computer\" for Computer tool."
           },
           "subType": {
             "type": "string",
@@ -45958,6 +46092,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "textEditor"
+            ],
+            "description": "The type of tool. \"textEditor\" for Text Editor tool."
+          },
           "subType": {
             "type": "string",
             "enum": [
@@ -46018,6 +46159,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "query"
+            ],
+            "description": "The type of tool. \"query\" for Query tool."
+          },
           "knowledgeBases": {
             "description": "The knowledge bases to query",
             "type": "array",
@@ -46062,6 +46210,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "google.calendar.event.create"
+            ],
+            "description": "The type of tool. \"google.calendar.event.create\" for Google Calendar Create Event tool."
+          },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
             "allOf": [
@@ -46098,6 +46253,13 @@
                 }
               ]
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "google.sheets.row.append"
+            ],
+            "description": "The type of tool. \"google.sheets.row.append\" for Google Sheets Row Append tool."
           },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
@@ -46136,6 +46298,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "google.calendar.availability.check"
+            ],
+            "description": "The type of tool. \"google.calendar.availability.check\" for Google Calendar Check Availability tool."
+          },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
             "allOf": [
@@ -46172,6 +46341,13 @@
                 }
               ]
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "slack.message.send"
+            ],
+            "description": "The type of tool. \"slack.message.send\" for Slack Send Message tool."
           },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
@@ -46210,6 +46386,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "sms"
+            ],
+            "description": "The type of tool. \"sms\" for Twilio SMS sending tool."
+          },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
             "allOf": [
@@ -46246,6 +46429,13 @@
                 }
               ]
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "mcp"
+            ],
+            "description": "The type of tool. \"mcp\" for MCP tool."
           },
           "server": {
             "description": "\n  This is the server where a `tool-calls` webhook will be sent.\n\n  Notes:\n  - Webhook is sent to this server when a tool call is made.\n  - Webhook contains the call, assistant, and phone number objects.\n  - Webhook contains the variables set on the assistant.\n  - Webhook is sent to the first available URL in this order: {{tool.server.url}}, {{assistant.server.url}}, {{phoneNumber.server.url}}, {{org.server.url}}.\n  - Webhook expects a response with tool call result.",
@@ -46302,6 +46492,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "gohighlevel.calendar.availability.check"
+            ],
+            "description": "The type of tool. \"gohighlevel.calendar.availability.check\" for GoHighLevel Calendar Availability Check tool."
+          },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
             "allOf": [
@@ -46338,6 +46535,13 @@
                 }
               ]
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "gohighlevel.calendar.event.create"
+            ],
+            "description": "The type of tool. \"gohighlevel.calendar.event.create\" for GoHighLevel Calendar Event Create tool."
           },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
@@ -46376,6 +46580,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "gohighlevel.contact.create"
+            ],
+            "description": "The type of tool. \"gohighlevel.contact.create\" for GoHighLevel Contact Create tool."
+          },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
             "allOf": [
@@ -46413,6 +46624,13 @@
               ]
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "gohighlevel.contact.get"
+            ],
+            "description": "The type of tool. \"gohighlevel.contact.get\" for GoHighLevel Contact Get tool."
+          },
           "rejectionPlan": {
             "description": "This is the plan to reject a tool call based on the conversation state.\n\n// Example 1: Reject endCall if user didn't say goodbye\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '(?i)\\\\b(bye|goodbye|farewell|see you later|take care)\\\\b',\n    target: { position: -1, role: 'user' },\n    negate: true  // Reject if pattern does NOT match\n  }]\n}\n```\n\n// Example 2: Reject transfer if user is actually asking a question\n```json\n{\n  conditions: [{\n    type: 'regex',\n    regex: '\\\\?',\n    target: { position: -1, role: 'user' }\n  }]\n}\n```\n\n// Example 3: Reject transfer if user didn't mention transfer recently\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 5 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' %}\n{% assign mentioned = false %}\n{% for msg in userMessages %}\n  {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}\n    {% assign mentioned = true %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n{% if mentioned %}\n  false\n{% else %}\n  true\n{% endif %}`\n  }]\n}\n```\n\n// Example 4: Reject endCall if the bot is looping and trying to exit\n```json\n{\n  conditions: [{\n    type: 'liquid',\n    liquid: `{% assign recentMessages = messages | last: 6 %}\n{% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}\n{% if userMessages.size < 3 %}\n  false\n{% else %}\n  {% assign msg1 = userMessages[0].content | downcase %}\n  {% assign msg2 = userMessages[1].content | downcase %}\n  {% assign msg3 = userMessages[2].content | downcase %}\n  {% comment %} Check for repetitive messages {% endcomment %}\n  {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}\n    true\n  {% comment %} Check for common loop phrases {% endcomment %}\n  {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}\n    true\n  {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}\n    true\n  {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}\n    true\n  {% else %}\n    false\n  {% endif %}\n{% endif %}`\n  }]\n}\n```",
             "allOf": [
@@ -46449,6 +46667,13 @@
                 }
               ]
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "sipRequest"
+            ],
+            "description": "The type of tool. \"sipRequest\" for SIP request tool."
           },
           "verb": {
             "type": "string",
@@ -46514,6 +46739,13 @@
                 }
               ]
             }
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of tool. \"voicemail\" for Voicemail tool.",
+            "enum": [
+              "voicemail"
+            ]
           },
           "beepDetectionEnabled": {
             "type": "boolean",
@@ -46673,6 +46905,13 @@
       "UpdateCustomKnowledgeBaseDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "description": "This knowledge base is bring your own knowledge base implementation.",
+            "enum": [
+              "custom-knowledge-base"
+            ]
+          },
           "server": {
             "description": "This is where the knowledge base request will be sent.\n\nRequest Example:\n\nPOST https://{server.url}\nContent-Type: application/json\n\n{\n  \"messsage\": {\n    \"type\": \"knowledge-base-request\",\n    \"messages\": [\n      {\n        \"role\": \"user\",\n        \"content\": \"Why is ocean blue?\"\n      }\n    ],\n    ...other metadata about the call...\n  }\n}\n\nResponse Expected:\n```\n{\n  \"message\": {\n     \"role\": \"assistant\",\n     \"content\": \"The ocean is blue because water absorbs everything but blue.\",\n  }, // YOU CAN RETURN THE EXACT RESPONSE TO SPEAK\n  \"documents\": [\n    {\n      \"content\": \"The ocean is blue primarily because water absorbs colors in the red part of the light spectrum and scatters the blue light, making it more visible to our eyes.\",\n      \"similarity\": 1\n    },\n    {\n      \"content\": \"Blue light is scattered more by the water molecules than other colors, enhancing the blue appearance of the ocean.\",\n      \"similarity\": .5\n    }\n  ] // OR, YOU CAN RETURN AN ARRAY OF DOCUMENTS THAT WILL BE SENT TO THE MODEL\n}\n```",
             "allOf": [
@@ -54136,6 +54375,7 @@
             "enum": [
               "ap-northeast-1",
               "ap-southeast-2",
+              "eu-central-1",
               "eu-west-1",
               "eu-west-3",
               "us-east-1",
@@ -57660,6 +57900,12 @@
       "UpdateAnthropicCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "anthropic"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "maxLength": 10000,
@@ -57676,12 +57922,19 @@
       "UpdateAnthropicBedrockCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "anthropic-bedrock"
+            ]
+          },
           "region": {
             "type": "string",
             "description": "AWS region where Bedrock is configured.",
             "enum": [
               "ap-northeast-1",
               "ap-southeast-2",
+              "eu-central-1",
               "eu-west-1",
               "eu-west-3",
               "us-east-1",
@@ -57710,6 +57963,12 @@
       "UpdateAnyscaleCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "anyscale"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "maxLength": 10000,
@@ -57726,6 +57985,12 @@
       "UpdateAssemblyAICredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "assembly-ai"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -57741,6 +58006,12 @@
       "UpdateAzureCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "azure"
+            ]
+          },
           "service": {
             "type": "string",
             "description": "This is the service being used in Azure.",
@@ -57808,6 +58079,12 @@
       "UpdateAzureOpenAICredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "azure-openai"
+            ]
+          },
           "region": {
             "type": "string",
             "enum": [
@@ -57926,6 +58203,13 @@
       "UpdateByoSipTrunkCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "description": "This can be used to bring your own SIP trunks or to connect to a Carrier.",
+            "enum": [
+              "byo-sip-trunk"
+            ]
+          },
           "name": {
             "type": "string",
             "description": "This is the name of credential. This is just for your reference.",
@@ -57974,6 +58258,12 @@
       "UpdateCartesiaCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "cartesia"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -57993,6 +58283,12 @@
       "UpdateCerebrasCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "cerebras"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "maxLength": 10000,
@@ -58009,6 +58305,13 @@
       "UpdateCloudflareCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "cloudflare"
+            ],
+            "description": "Credential provider. Only allowed value is cloudflare"
+          },
           "accountId": {
             "type": "string",
             "description": "Cloudflare Account Id."
@@ -58045,6 +58348,12 @@
       "UpdateCustomLLMCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "custom-llm"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "maxLength": 10000,
@@ -58069,6 +58378,12 @@
       "UpdateDeepgramCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "deepgram"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58088,6 +58403,12 @@
       "UpdateDeepInfraCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "deepinfra"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58103,6 +58424,12 @@
       "UpdateDeepSeekCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "deep-seek"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58118,6 +58445,12 @@
       "UpdateElevenLabsCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "11labs"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "maxLength": 10000,
@@ -58143,6 +58476,12 @@
       "UpdateGcpCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "gcp"
+            ]
+          },
           "fallbackIndex": {
             "type": "number",
             "description": "This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.",
@@ -58175,6 +58514,12 @@
       "UpdateGladiaCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "gladia"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58190,6 +58535,12 @@
       "UpdateGoHighLevelCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "gohighlevel"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58205,6 +58556,13 @@
       "UpdateGoogleCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "description": "This is the key for Gemini in Google AI Studio. Get it from here: https://aistudio.google.com/app/apikey",
+            "enum": [
+              "google"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "maxLength": 10000,
@@ -58221,6 +58579,12 @@
       "UpdateGroqCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "groq"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58236,6 +58600,12 @@
       "UpdateHumeCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "hume"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "maxLength": 10000,
@@ -58252,6 +58622,13 @@
       "UpdateInflectionAICredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "description": "This is the api key for Pi in InflectionAI's console. Get it from here: https://developers.inflection.ai/keys, billing will need to be setup",
+            "enum": [
+              "inflection-ai"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "maxLength": 10000,
@@ -58268,6 +58645,12 @@
       "UpdateLangfuseCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "langfuse"
+            ]
+          },
           "publicKey": {
             "type": "string",
             "description": "The public key for Langfuse project. Eg: pk-lf-..."
@@ -58291,6 +58674,12 @@
       "UpdateLmntCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "lmnt"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58306,6 +58695,12 @@
       "UpdateMakeCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "make"
+            ]
+          },
           "teamId": {
             "type": "string",
             "description": "Team ID"
@@ -58329,6 +58724,12 @@
       "UpdateMicrosoftCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "microsoft"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API.",
@@ -58351,6 +58752,12 @@
       "UpdateMistralCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "mistral"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "maxLength": 100,
@@ -58367,6 +58774,12 @@
       "UpdateNeuphonicCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "neuphonic"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58382,6 +58795,12 @@
       "UpdateOpenAICredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "openai"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58397,6 +58816,12 @@
       "UpdateOpenRouterCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "openrouter"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58412,6 +58837,12 @@
       "UpdatePerplexityAICredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "perplexity-ai"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58427,6 +58858,12 @@
       "UpdatePlayHTCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "playht"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58445,6 +58882,12 @@
       "UpdateRimeAICredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "rime-ai"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58460,6 +58903,12 @@
       "UpdateRunpodCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "runpod"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58475,6 +58924,12 @@
       "UpdateWellSaidCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "wellsaid"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "maxLength": 10000,
@@ -58491,6 +58946,13 @@
       "UpdateS3CredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "s3"
+            ],
+            "description": "Credential provider. Only allowed value is s3"
+          },
           "awsAccessKeyId": {
             "type": "string",
             "description": "AWS access key ID."
@@ -58527,6 +58989,12 @@
       "UpdateTogetherAICredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "together-ai"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58542,6 +59010,12 @@
       "UpdateTwilioCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "twilio"
+            ]
+          },
           "authToken": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58568,6 +59042,12 @@
       "UpdateVonageCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "vonage"
+            ]
+          },
           "apiSecret": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -58586,6 +59066,12 @@
       "UpdateWebhookCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "webhook"
+            ]
+          },
           "authenticationPlan": {
             "description": "This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.",
             "oneOf": [
@@ -58619,6 +59105,12 @@
       "UpdateCustomCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "custom-credential"
+            ]
+          },
           "authenticationPlan": {
             "description": "This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.",
             "oneOf": [
@@ -58671,6 +59163,13 @@
       "UpdateXAiCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "description": "This is the api key for Grok in XAi's console. Get it from here: https://console.x.ai",
+            "enum": [
+              "xai"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "maxLength": 10000,
@@ -58687,6 +59186,12 @@
       "UpdateGoogleCalendarOAuth2ClientCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "google.calendar.oauth2-client"
+            ]
+          },
           "name": {
             "type": "string",
             "description": "This is the name of credential. This is just for your reference.",
@@ -58698,6 +59203,12 @@
       "UpdateGoogleCalendarOAuth2AuthorizationCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "google.calendar.oauth2-authorization"
+            ]
+          },
           "authorizationId": {
             "type": "string",
             "description": "The authorization ID for the OAuth2 authorization"
@@ -58713,6 +59224,12 @@
       "UpdateGoogleSheetsOAuth2AuthorizationCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "google.sheets.oauth2-authorization"
+            ]
+          },
           "authorizationId": {
             "type": "string",
             "description": "The authorization ID for the OAuth2 authorization"
@@ -58728,6 +59245,12 @@
       "UpdateSlackOAuth2AuthorizationCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "slack.oauth2-authorization"
+            ]
+          },
           "authorizationId": {
             "type": "string",
             "description": "The authorization ID for the OAuth2 authorization"
@@ -58743,6 +59266,12 @@
       "UpdateGoHighLevelMCPCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "ghl.oauth2-authorization"
+            ]
+          },
           "authenticationSession": {
             "description": "This is the authentication session for the credential.",
             "allOf": [
@@ -58762,6 +59291,12 @@
       "UpdateInworldCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "inworld"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is the Inworld Basic (Base64) authentication token. This is not returned in the API.",
@@ -58778,6 +59313,12 @@
       "UpdateEmailCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "email"
+            ]
+          },
           "email": {
             "type": "string",
             "description": "The recipient email address for alerts"
@@ -58793,6 +59334,12 @@
       "UpdateSlackWebhookCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "slack-webhook"
+            ]
+          },
           "webhookUrl": {
             "type": "string",
             "description": "Slack incoming webhook URL. See https://api.slack.com/messaging/webhooks for setup instructions. This is not returned in the API."
@@ -58808,6 +59355,12 @@
       "UpdateSonioxCredentialDTO": {
         "type": "object",
         "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "soniox"
+            ]
+          },
           "apiKey": {
             "type": "string",
             "description": "This is not returned in the API."
@@ -66513,6 +67066,152 @@
           "type"
         ]
       },
+      "CampaignContact": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "campaignId": {
+            "type": "string"
+          },
+          "orgId": {
+            "type": "string"
+          },
+          "customerId": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 40
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "assistantOverrides": {
+            "$ref": "#/components/schemas/AssistantOverrides"
+          },
+          "squadOverrides": {
+            "description": "Use this when the campaign targets a `squadId`. Mirrors the call-level `squadOverrides` field. Merged with the campaign-level squadOverrides at dispatch time.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AssistantOverrides"
+              }
+            ]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "campaignId",
+          "createdAt",
+          "id",
+          "number",
+          "orgId"
+        ]
+      },
+      "ServerMessageCampaignPredial": {
+        "type": "object",
+        "properties": {
+          "phoneNumber": {
+            "description": "This is the phone number that the message is associated with.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CreateByoPhoneNumberDTO",
+                "title": "ByoPhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateTwilioPhoneNumberDTO",
+                "title": "TwilioPhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateVonagePhoneNumberDTO",
+                "title": "VonagePhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateVapiPhoneNumberDTO",
+                "title": "VapiPhoneNumber"
+              },
+              {
+                "$ref": "#/components/schemas/CreateTelnyxPhoneNumberDTO",
+                "title": "TelnyxPhoneNumber"
+              }
+            ]
+          },
+          "type": {
+            "type": "string",
+            "description": "This is the type of the message. \"campaign.predial\" is sent to the campaign's server before each contact is dialed, so the server can decide whether the contact is eligible to be called.",
+            "enum": [
+              "campaign.predial"
+            ]
+          },
+          "campaignId": {
+            "type": "string",
+            "description": "This is the ID of the campaign the contact belongs to."
+          },
+          "contact": {
+            "description": "This is the contact that is about to be dialed.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CampaignContact"
+              }
+            ]
+          },
+          "timestamp": {
+            "type": "number",
+            "description": "This is the timestamp of the message."
+          },
+          "artifact": {
+            "description": "This is a live version of the `call.artifact`.\n\nThis matches what is stored on `call.artifact` after the call.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Artifact"
+              }
+            ]
+          },
+          "assistant": {
+            "description": "This is the assistant that the message is associated with.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreateAssistantDTO"
+              }
+            ]
+          },
+          "customer": {
+            "description": "This is the customer that the message is associated with.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreateCustomerDTO"
+              }
+            ]
+          },
+          "call": {
+            "description": "This is the call that the message is associated with.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Call"
+              }
+            ]
+          },
+          "chat": {
+            "description": "This is the chat object.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Chat"
+              }
+            ]
+          }
+        },
+        "required": [
+          "campaignId",
+          "contact",
+          "type"
+        ]
+      },
       "ServerMessage": {
         "type": "object",
         "properties": {
@@ -66626,6 +67325,10 @@
               {
                 "$ref": "#/components/schemas/ServerMessageCallDeleteFailed",
                 "title": "CallDeleteFailed"
+              },
+              {
+                "$ref": "#/components/schemas/ServerMessageCampaignPredial",
+                "title": "CampaignPredial"
               }
             ]
           }
@@ -66908,6 +67611,18 @@
           "timeoutSeconds"
         ]
       },
+      "ServerMessageResponseCampaignPredial": {
+        "type": "object",
+        "properties": {
+          "eligible": {
+            "type": "boolean",
+            "description": "This is whether the contact is eligible to be dialed. When `false` — or when the server is unreachable, errors, or times out — the contact is skipped and not called."
+          }
+        },
+        "required": [
+          "eligible"
+        ]
+      },
       "ServerMessageResponse": {
         "type": "object",
         "properties": {
@@ -66941,6 +67656,10 @@
               {
                 "$ref": "#/components/schemas/ServerMessageResponseCallEndpointingRequest",
                 "title": "CallEndpointingRequest"
+              },
+              {
+                "$ref": "#/components/schemas/ServerMessageResponseCampaignPredial",
+                "title": "CampaignPredial"
               }
             ]
           }

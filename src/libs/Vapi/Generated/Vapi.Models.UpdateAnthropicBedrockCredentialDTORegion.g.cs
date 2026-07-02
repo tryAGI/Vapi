@@ -19,6 +19,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        EuCentral1,
+        /// <summary>
+        /// 
+        /// </summary>
         EuWest1,
         /// <summary>
         /// 
@@ -48,6 +52,7 @@ namespace Vapi
             {
                 UpdateAnthropicBedrockCredentialDTORegion.ApNortheast1 => "ap-northeast-1",
                 UpdateAnthropicBedrockCredentialDTORegion.ApSoutheast2 => "ap-southeast-2",
+                UpdateAnthropicBedrockCredentialDTORegion.EuCentral1 => "eu-central-1",
                 UpdateAnthropicBedrockCredentialDTORegion.EuWest1 => "eu-west-1",
                 UpdateAnthropicBedrockCredentialDTORegion.EuWest3 => "eu-west-3",
                 UpdateAnthropicBedrockCredentialDTORegion.UsEast1 => "us-east-1",
@@ -64,6 +69,7 @@ namespace Vapi
             {
                 "ap-northeast-1" => UpdateAnthropicBedrockCredentialDTORegion.ApNortheast1,
                 "ap-southeast-2" => UpdateAnthropicBedrockCredentialDTORegion.ApSoutheast2,
+                "eu-central-1" => UpdateAnthropicBedrockCredentialDTORegion.EuCentral1,
                 "eu-west-1" => UpdateAnthropicBedrockCredentialDTORegion.EuWest1,
                 "eu-west-3" => UpdateAnthropicBedrockCredentialDTORegion.EuWest3,
                 "us-east-1" => UpdateAnthropicBedrockCredentialDTORegion.UsEast1,

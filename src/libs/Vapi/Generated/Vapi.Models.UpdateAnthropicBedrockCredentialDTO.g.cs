@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateAnthropicBedrockCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateAnthropicBedrockCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateAnthropicBedrockCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// AWS region where Bedrock is configured.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("region")]
@@ -37,6 +44,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateAnthropicBedrockCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="region">
         /// AWS region where Bedrock is configured.
         /// </param>
@@ -50,10 +58,12 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateAnthropicBedrockCredentialDTO(
+            global::Vapi.UpdateAnthropicBedrockCredentialDTOProvider? provider,
             global::Vapi.UpdateAnthropicBedrockCredentialDTORegion? region,
             global::Vapi.OneOf<global::Vapi.AWSIAMCredentialsAuthenticationPlan, global::Vapi.AWSStsAuthenticationPlan>? authenticationPlan,
             string? name)
         {
+            this.Provider = provider;
             this.Region = region;
             this.AuthenticationPlan = authenticationPlan;
             this.Name = name;

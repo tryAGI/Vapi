@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateLangfuseCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateLangfuseCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateLangfuseCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// The public key for Langfuse project. Eg: pk-lf-...
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("publicKey")]
@@ -41,6 +48,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateLangfuseCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="publicKey">
         /// The public key for Langfuse project. Eg: pk-lf-...
         /// </param>
@@ -57,11 +65,13 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateLangfuseCredentialDTO(
+            global::Vapi.UpdateLangfuseCredentialDTOProvider? provider,
             string? publicKey,
             string? apiKey,
             string? apiUrl,
             string? name)
         {
+            this.Provider = provider;
             this.PublicKey = publicKey;
             this.ApiKey = apiKey;
             this.ApiUrl = apiUrl;

@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateTwilioCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateTwilioCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateTwilioCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is not returned in the API.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authToken")]
@@ -47,6 +54,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateTwilioCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="authToken">
         /// This is not returned in the API.
         /// </param>
@@ -64,12 +72,14 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateTwilioCredentialDTO(
+            global::Vapi.UpdateTwilioCredentialDTOProvider? provider,
             string? authToken,
             string? apiKey,
             string? apiSecret,
             string? name,
             string? accountSid)
         {
+            this.Provider = provider;
             this.AuthToken = authToken;
             this.ApiKey = apiKey;
             this.ApiSecret = apiSecret;

@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateGoHighLevelMCPCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateGoHighLevelMCPCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateGoHighLevelMCPCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is the authentication session for the credential.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authenticationSession")]
@@ -29,6 +36,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateGoHighLevelMCPCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="authenticationSession">
         /// This is the authentication session for the credential.
         /// </param>
@@ -39,9 +47,11 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateGoHighLevelMCPCredentialDTO(
+            global::Vapi.UpdateGoHighLevelMCPCredentialDTOProvider? provider,
             global::Vapi.Oauth2AuthenticationSession? authenticationSession,
             string? name)
         {
+            this.Provider = provider;
             this.AuthenticationSession = authenticationSession;
             this.Name = name;
         }

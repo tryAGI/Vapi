@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateGcpCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateGcpCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateGcpCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fallbackIndex")]
@@ -48,6 +55,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateGcpCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="fallbackIndex">
         /// This is the order in which this storage provider is tried during upload retries. Lower numbers are tried first in increasing order.
         /// </param>
@@ -66,12 +74,14 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateGcpCredentialDTO(
+            global::Vapi.UpdateGcpCredentialDTOProvider? provider,
             double? fallbackIndex,
             string? name,
             global::Vapi.GcpKey? gcpKey,
             string? region,
             global::Vapi.BucketPlan? bucketPlan)
         {
+            this.Provider = provider;
             this.FallbackIndex = fallbackIndex;
             this.Name = name;
             this.GcpKey = gcpKey;
