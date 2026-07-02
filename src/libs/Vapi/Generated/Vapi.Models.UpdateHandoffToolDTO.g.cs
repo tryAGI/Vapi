@@ -15,6 +15,20 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
 
         /// <summary>
+        /// This is the type of the tool.<br/>
+        /// When you're using handoff tool, we recommend adding this to your system prompt<br/>
+        /// ---<br/>
+        /// # System context<br/>
+        /// You are part of a multi-agent system designed to make agent coordination and execution easy. Agents uses two primary abstraction: **Agents** and **Handoffs**. An agent encompasses instructions and tools and can hand off a conversation to another agent when appropriate. Handoffs are achieved by calling a handoff function, generally named `handoff_to_&lt;agent_name&gt;`. Handoffs between agents are handled seamlessly in the background; do not mention or draw attention to these handoffs in your conversation with the user.<br/>
+        /// # Agent context<br/>
+        /// {put your agent system prompt here}<br/>
+        /// ---
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateHandoffToolDTOTypeJsonConverter))]
+        public global::Vapi.UpdateHandoffToolDTOType? Type { get; set; }
+
+        /// <summary>
         /// This is the default local tool result message used when no runtime handoff result override is returned.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaultResult")]
@@ -369,6 +383,16 @@ namespace Vapi
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
+        /// <param name="type">
+        /// This is the type of the tool.<br/>
+        /// When you're using handoff tool, we recommend adding this to your system prompt<br/>
+        /// ---<br/>
+        /// # System context<br/>
+        /// You are part of a multi-agent system designed to make agent coordination and execution easy. Agents uses two primary abstraction: **Agents** and **Handoffs**. An agent encompasses instructions and tools and can hand off a conversation to another agent when appropriate. Handoffs are achieved by calling a handoff function, generally named `handoff_to_&lt;agent_name&gt;`. Handoffs between agents are handled seamlessly in the background; do not mention or draw attention to these handoffs in your conversation with the user.<br/>
+        /// # Agent context<br/>
+        /// {put your agent system prompt here}<br/>
+        /// ---
+        /// </param>
         /// <param name="defaultResult">
         /// This is the default local tool result message used when no runtime handoff result override is returned.
         /// </param>
@@ -705,12 +729,14 @@ namespace Vapi
 #endif
         public UpdateHandoffToolDTO(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
+            global::Vapi.UpdateHandoffToolDTOType? type,
             string? defaultResult,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.HandoffDestinationAssistant, global::Vapi.HandoffDestinationDynamic, global::Vapi.HandoffDestinationSquad>>? destinations,
             global::Vapi.ToolRejectionPlan? rejectionPlan,
             global::Vapi.OpenAIFunction? function)
         {
             this.Messages = messages;
+            this.Type = type;
             this.DefaultResult = defaultResult;
             this.Destinations = destinations;
             this.RejectionPlan = rejectionPlan;

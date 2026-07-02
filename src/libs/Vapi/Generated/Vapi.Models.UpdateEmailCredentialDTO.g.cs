@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateEmailCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateEmailCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateEmailCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// The recipient email address for alerts
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("email")]
@@ -29,6 +36,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateEmailCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="email">
         /// The recipient email address for alerts
         /// </param>
@@ -39,9 +47,11 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateEmailCredentialDTO(
+            global::Vapi.UpdateEmailCredentialDTOProvider? provider,
             string? email,
             string? name)
         {
+            this.Provider = provider;
             this.Email = email;
             this.Name = name;
         }

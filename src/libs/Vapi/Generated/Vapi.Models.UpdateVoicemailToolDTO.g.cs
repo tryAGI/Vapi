@@ -15,6 +15,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
 
         /// <summary>
+        /// The type of tool. "voicemail" for Voicemail tool.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateVoicemailToolDTOTypeJsonConverter))]
+        public global::Vapi.UpdateVoicemailToolDTOType? Type { get; set; }
+
+        /// <summary>
         /// This is the flag that enables beep detection for voicemail detection and applies only for twilio based calls.<br/>
         /// @default false<br/>
         /// Default Value: false<br/>
@@ -115,6 +122,9 @@ namespace Vapi
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
+        /// <param name="type">
+        /// The type of tool. "voicemail" for Voicemail tool.
+        /// </param>
         /// <param name="beepDetectionEnabled">
         /// This is the flag that enables beep detection for voicemail detection and applies only for twilio based calls.<br/>
         /// @default false<br/>
@@ -202,10 +212,12 @@ namespace Vapi
 #endif
         public UpdateVoicemailToolDTO(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
+            global::Vapi.UpdateVoicemailToolDTOType? type,
             bool? beepDetectionEnabled,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
             this.Messages = messages;
+            this.Type = type;
             this.BeepDetectionEnabled = beepDetectionEnabled;
             this.RejectionPlan = rejectionPlan;
         }

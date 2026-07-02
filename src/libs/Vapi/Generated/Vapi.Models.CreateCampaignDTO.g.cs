@@ -78,6 +78,12 @@ namespace Vapi
         public global::Vapi.AssistantOverrides? SquadOverrides { get; set; }
 
         /// <summary>
+        /// This is the server (URL, auth headers, timeout, etc.) for the campaign webhooks.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("server")]
+        public global::Vapi.Server? Server { get; set; }
+
+        /// <summary>
         /// Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("duplicateFromCampaignId")]
@@ -126,6 +132,9 @@ namespace Vapi
         /// <param name="squadOverrides">
         /// These are the overrides for the squad and template variables for the campaign. Use this when the campaign targets a `squadId`. Per-contact `squadOverrides` are deep-merged on top of this at dispatch time.
         /// </param>
+        /// <param name="server">
+        /// This is the server (URL, auth headers, timeout, etc.) for the campaign webhooks.
+        /// </param>
         /// <param name="duplicateFromCampaignId">
         /// Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source.
         /// </param>
@@ -144,6 +153,7 @@ namespace Vapi
             double? maxConcurrency,
             global::Vapi.AssistantOverrides? assistantOverrides,
             global::Vapi.AssistantOverrides? squadOverrides,
+            global::Vapi.Server? server,
             string? duplicateFromCampaignId)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
@@ -157,6 +167,7 @@ namespace Vapi
             this.MaxConcurrency = maxConcurrency;
             this.AssistantOverrides = assistantOverrides;
             this.SquadOverrides = squadOverrides;
+            this.Server = server;
             this.DuplicateFromCampaignId = duplicateFromCampaignId;
         }
 

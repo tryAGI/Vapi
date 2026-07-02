@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateS3CredentialDTO
     {
         /// <summary>
+        /// Credential provider. Only allowed value is s3
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateS3CredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateS3CredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// AWS access key ID.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("awsAccessKeyId")]
@@ -59,6 +66,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateS3CredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider">
+        /// Credential provider. Only allowed value is s3
+        /// </param>
         /// <param name="awsAccessKeyId">
         /// AWS access key ID.
         /// </param>
@@ -84,6 +94,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateS3CredentialDTO(
+            global::Vapi.UpdateS3CredentialDTOProvider? provider,
             string? awsAccessKeyId,
             string? awsSecretAccessKey,
             string? region,
@@ -92,6 +103,7 @@ namespace Vapi
             double? fallbackIndex,
             string? name)
         {
+            this.Provider = provider;
             this.AwsAccessKeyId = awsAccessKeyId;
             this.AwsSecretAccessKey = awsSecretAccessKey;
             this.Region = region;

@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateAzureCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateAzureCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateAzureCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is the service being used in Azure.<br/>
         /// Default Value: speech
         /// </summary>
@@ -56,6 +63,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateAzureCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="service">
         /// This is the service being used in Azure.<br/>
         /// Default Value: speech
@@ -79,6 +87,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateAzureCredentialDTO(
+            global::Vapi.UpdateAzureCredentialDTOProvider? provider,
             global::Vapi.UpdateAzureCredentialDTOService? service,
             global::Vapi.UpdateAzureCredentialDTORegion? region,
             string? apiKey,
@@ -86,6 +95,7 @@ namespace Vapi
             string? name,
             global::Vapi.AzureBlobStorageBucketPlan? bucketPlan)
         {
+            this.Provider = provider;
             this.Service = service;
             this.Region = region;
             this.ApiKey = apiKey;

@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateVonageCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateVonageCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateVonageCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is not returned in the API.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apiSecret")]
@@ -35,6 +42,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateVonageCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="apiSecret">
         /// This is not returned in the API.
         /// </param>
@@ -46,10 +54,12 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateVonageCredentialDTO(
+            global::Vapi.UpdateVonageCredentialDTOProvider? provider,
             string? apiSecret,
             string? name,
             string? apiKey)
         {
+            this.Provider = provider;
             this.ApiSecret = apiSecret;
             this.Name = name;
             this.ApiKey = apiKey;

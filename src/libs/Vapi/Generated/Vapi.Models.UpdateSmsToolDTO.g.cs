@@ -15,6 +15,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
 
         /// <summary>
+        /// The type of tool. "sms" for Twilio SMS sending tool.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateSmsToolDTOTypeJsonConverter))]
+        public global::Vapi.UpdateSmsToolDTOType? Type { get; set; }
+
+        /// <summary>
         /// This is the plan to reject a tool call based on the conversation state.<br/>
         /// // Example 1: Reject endCall if user didn't say goodbye<br/>
         /// ```json<br/>
@@ -105,6 +112,9 @@ namespace Vapi
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
+        /// <param name="type">
+        /// The type of tool. "sms" for Twilio SMS sending tool.
+        /// </param>
         /// <param name="rejectionPlan">
         /// This is the plan to reject a tool call based on the conversation state.<br/>
         /// // Example 1: Reject endCall if user didn't say goodbye<br/>
@@ -186,9 +196,11 @@ namespace Vapi
 #endif
         public UpdateSmsToolDTO(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
+            global::Vapi.UpdateSmsToolDTOType? type,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
             this.Messages = messages;
+            this.Type = type;
             this.RejectionPlan = rejectionPlan;
         }
 

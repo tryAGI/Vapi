@@ -15,6 +15,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
 
         /// <summary>
+        /// The type of tool. "mcp" for MCP tool.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateMcpToolDTOTypeJsonConverter))]
+        public global::Vapi.UpdateMcpToolDTOType? Type { get; set; }
+
+        /// <summary>
         ///   This is the server where a `tool-calls` webhook will be sent.<br/>
         ///   Notes:<br/>
         ///   - Webhook is sent to this server when a tool call is made.<br/>
@@ -129,6 +136,9 @@ namespace Vapi
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
+        /// <param name="type">
+        /// The type of tool. "mcp" for MCP tool.
+        /// </param>
         /// <param name="server">
         ///   This is the server where a `tool-calls` webhook will be sent.<br/>
         ///   Notes:<br/>
@@ -223,12 +233,14 @@ namespace Vapi
 #endif
         public UpdateMcpToolDTO(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
+            global::Vapi.UpdateMcpToolDTOType? type,
             global::Vapi.Server? server,
             global::System.Collections.Generic.IList<global::Vapi.McpToolMessages>? toolMessages,
             global::Vapi.ToolRejectionPlan? rejectionPlan,
             global::Vapi.McpToolMetadata? metadata)
         {
             this.Messages = messages;
+            this.Type = type;
             this.Server = server;
             this.ToolMessages = toolMessages;
             this.RejectionPlan = rejectionPlan;

@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateXAiCredentialDTO
     {
         /// <summary>
+        /// This is the api key for Grok in XAi's console. Get it from here: https://console.x.ai
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateXAiCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateXAiCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is not returned in the API.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apiKey")]
@@ -29,6 +36,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateXAiCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider">
+        /// This is the api key for Grok in XAi's console. Get it from here: https://console.x.ai
+        /// </param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
@@ -39,9 +49,11 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateXAiCredentialDTO(
+            global::Vapi.UpdateXAiCredentialDTOProvider? provider,
             string? apiKey,
             string? name)
         {
+            this.Provider = provider;
             this.ApiKey = apiKey;
             this.Name = name;
         }

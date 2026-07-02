@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateByoSipTrunkCredentialDTO
     {
         /// <summary>
+        /// This can be used to bring your own SIP trunks or to connect to a Carrier.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateByoSipTrunkCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateByoSipTrunkCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is the name of credential. This is just for your reference.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
@@ -62,6 +69,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateByoSipTrunkCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider">
+        /// This can be used to bring your own SIP trunks or to connect to a Carrier.
+        /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -90,6 +100,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateByoSipTrunkCredentialDTO(
+            global::Vapi.UpdateByoSipTrunkCredentialDTOProvider? provider,
             string? name,
             global::System.Collections.Generic.IList<global::Vapi.SipTrunkGateway>? gateways,
             global::Vapi.SipTrunkOutboundAuthenticationPlan? outboundAuthenticationPlan,
@@ -98,6 +109,7 @@ namespace Vapi
             string? sipDiversionHeader,
             global::Vapi.SbcConfiguration? sbcConfiguration)
         {
+            this.Provider = provider;
             this.Name = name;
             this.Gateways = gateways;
             this.OutboundAuthenticationPlan = outboundAuthenticationPlan;

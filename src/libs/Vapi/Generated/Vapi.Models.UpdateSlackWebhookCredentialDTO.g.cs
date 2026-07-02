@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateSlackWebhookCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateSlackWebhookCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateSlackWebhookCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// Slack incoming webhook URL. See https://api.slack.com/messaging/webhooks for setup instructions. This is not returned in the API.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("webhookUrl")]
@@ -29,6 +36,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateSlackWebhookCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="webhookUrl">
         /// Slack incoming webhook URL. See https://api.slack.com/messaging/webhooks for setup instructions. This is not returned in the API.
         /// </param>
@@ -39,9 +47,11 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateSlackWebhookCredentialDTO(
+            global::Vapi.UpdateSlackWebhookCredentialDTOProvider? provider,
             string? webhookUrl,
             string? name)
         {
+            this.Provider = provider;
             this.WebhookUrl = webhookUrl;
             this.Name = name;
         }

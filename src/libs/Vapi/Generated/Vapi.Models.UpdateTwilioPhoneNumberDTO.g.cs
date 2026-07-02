@@ -26,6 +26,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>? Hooks { get; set; }
 
         /// <summary>
+        /// This is to use numbers bought on Twilio.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateTwilioPhoneNumberDTOProviderJsonConverter))]
+        public global::Vapi.UpdateTwilioPhoneNumberDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// Controls whether Vapi sets the messaging webhook URL on the Twilio number during import.<br/>
         /// If set to `false`, Vapi will not update the Twilio messaging URL, leaving it as is.<br/>
         /// If `true` or omitted (default), Vapi will configure both the voice and messaging URLs.<br/>
@@ -121,6 +128,9 @@ namespace Vapi
         /// <param name="hooks">
         /// This is the hooks that will be used for incoming calls to this phone number.
         /// </param>
+        /// <param name="provider">
+        /// This is to use numbers bought on Twilio.
+        /// </param>
         /// <param name="smsEnabled">
         /// Controls whether Vapi sets the messaging webhook URL on the Twilio number during import.<br/>
         /// If set to `false`, Vapi will not update the Twilio messaging URL, leaving it as is.<br/>
@@ -171,6 +181,7 @@ namespace Vapi
         public UpdateTwilioPhoneNumberDTO(
             global::Vapi.OneOf<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>? fallbackDestination,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>? hooks,
+            global::Vapi.UpdateTwilioPhoneNumberDTOProvider? provider,
             bool? smsEnabled,
             string? name,
             string? assistantId,
@@ -185,6 +196,7 @@ namespace Vapi
         {
             this.FallbackDestination = fallbackDestination;
             this.Hooks = hooks;
+            this.Provider = provider;
             this.SmsEnabled = smsEnabled;
             this.Name = name;
             this.AssistantId = assistantId;

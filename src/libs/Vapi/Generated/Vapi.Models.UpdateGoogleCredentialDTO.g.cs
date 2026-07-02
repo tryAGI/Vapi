@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateGoogleCredentialDTO
     {
         /// <summary>
+        /// This is the key for Gemini in Google AI Studio. Get it from here: https://aistudio.google.com/app/apikey
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateGoogleCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateGoogleCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is not returned in the API.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apiKey")]
@@ -29,6 +36,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateGoogleCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider">
+        /// This is the key for Gemini in Google AI Studio. Get it from here: https://aistudio.google.com/app/apikey
+        /// </param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
@@ -39,9 +49,11 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateGoogleCredentialDTO(
+            global::Vapi.UpdateGoogleCredentialDTOProvider? provider,
             string? apiKey,
             string? name)
         {
+            this.Provider = provider;
             this.ApiKey = apiKey;
             this.Name = name;
         }

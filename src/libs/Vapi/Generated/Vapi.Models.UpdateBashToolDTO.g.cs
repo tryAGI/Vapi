@@ -15,6 +15,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
 
         /// <summary>
+        /// The type of tool. "bash" for Bash tool.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateBashToolDTOTypeJsonConverter))]
+        public global::Vapi.UpdateBashToolDTOType? Type { get; set; }
+
+        /// <summary>
         /// The sub type of tool.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("subType")]
@@ -132,6 +139,9 @@ namespace Vapi
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
+        /// <param name="type">
+        /// The type of tool. "bash" for Bash tool.
+        /// </param>
         /// <param name="subType">
         /// The sub type of tool.
         /// </param>
@@ -229,12 +239,14 @@ namespace Vapi
 #endif
         public UpdateBashToolDTO(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
+            global::Vapi.UpdateBashToolDTOType? type,
             global::Vapi.UpdateBashToolDTOSubType? subType,
             global::Vapi.Server? server,
             global::Vapi.ToolRejectionPlan? rejectionPlan,
             global::Vapi.UpdateBashToolDTOName? name)
         {
             this.Messages = messages;
+            this.Type = type;
             this.SubType = subType;
             this.Server = server;
             this.RejectionPlan = rejectionPlan;

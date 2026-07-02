@@ -468,6 +468,9 @@ namespace Vapi
         /// <param name="squadOverrides">
         /// These are the overrides for the squad and template variables for the campaign. Use this when the campaign targets a `squadId`. Per-contact `squadOverrides` are deep-merged on top of this at dispatch time.
         /// </param>
+        /// <param name="server">
+        /// This is the server (URL, auth headers, timeout, etc.) for the campaign webhooks.
+        /// </param>
         /// <param name="duplicateFromCampaignId">
         /// Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source.
         /// </param>
@@ -486,6 +489,7 @@ namespace Vapi
             double? maxConcurrency = default,
             global::Vapi.AssistantOverrides? assistantOverrides = default,
             global::Vapi.AssistantOverrides? squadOverrides = default,
+            global::Vapi.Server? server = default,
             string? duplicateFromCampaignId = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -503,6 +507,7 @@ namespace Vapi
                 MaxConcurrency = maxConcurrency,
                 AssistantOverrides = assistantOverrides,
                 SquadOverrides = squadOverrides,
+                Server = server,
                 DuplicateFromCampaignId = duplicateFromCampaignId,
             };
 

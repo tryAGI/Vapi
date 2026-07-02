@@ -11,6 +11,13 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateAzureOpenAICredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("region")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateAzureOpenAICredentialDTORegionJsonConverter))]
         public global::Vapi.UpdateAzureOpenAICredentialDTORegion? Region { get; set; }
@@ -55,6 +62,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateAzureOpenAICredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="region"></param>
         /// <param name="models">
         /// Example: [gpt-4-0125-preview, gpt-4-0613]
@@ -73,6 +81,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateAzureOpenAICredentialDTO(
+            global::Vapi.UpdateAzureOpenAICredentialDTOProvider? provider,
             global::Vapi.UpdateAzureOpenAICredentialDTORegion? region,
             global::System.Collections.Generic.IList<global::Vapi.UpdateAzureOpenAICredentialDTOModel>? models,
             string? openAIKey,
@@ -80,6 +89,7 @@ namespace Vapi
             string? name,
             string? openAIEndpoint)
         {
+            this.Provider = provider;
             this.Region = region;
             this.Models = models;
             this.OpenAIKey = openAIKey;

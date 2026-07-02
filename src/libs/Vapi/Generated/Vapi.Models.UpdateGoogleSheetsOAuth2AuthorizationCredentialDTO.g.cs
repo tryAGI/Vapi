@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateGoogleSheetsOAuth2AuthorizationCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateGoogleSheetsOAuth2AuthorizationCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateGoogleSheetsOAuth2AuthorizationCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// The authorization ID for the OAuth2 authorization
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authorizationId")]
@@ -29,6 +36,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateGoogleSheetsOAuth2AuthorizationCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="authorizationId">
         /// The authorization ID for the OAuth2 authorization
         /// </param>
@@ -39,9 +47,11 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateGoogleSheetsOAuth2AuthorizationCredentialDTO(
+            global::Vapi.UpdateGoogleSheetsOAuth2AuthorizationCredentialDTOProvider? provider,
             string? authorizationId,
             string? name)
         {
+            this.Provider = provider;
             this.AuthorizationId = authorizationId;
             this.Name = name;
         }

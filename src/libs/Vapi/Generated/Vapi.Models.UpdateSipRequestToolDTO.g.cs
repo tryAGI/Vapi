@@ -15,6 +15,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
 
         /// <summary>
+        /// The type of tool. "sipRequest" for SIP request tool.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateSipRequestToolDTOTypeJsonConverter))]
+        public global::Vapi.UpdateSipRequestToolDTOType? Type { get; set; }
+
+        /// <summary>
         /// The SIP method to send.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("verb")]
@@ -125,6 +132,9 @@ namespace Vapi
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
+        /// <param name="type">
+        /// The type of tool. "sipRequest" for SIP request tool.
+        /// </param>
         /// <param name="verb">
         /// The SIP method to send.
         /// </param>
@@ -215,12 +225,14 @@ namespace Vapi
 #endif
         public UpdateSipRequestToolDTO(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
+            global::Vapi.UpdateSipRequestToolDTOType? type,
             global::Vapi.UpdateSipRequestToolDTOVerb? verb,
             global::Vapi.JsonSchema? headers,
             global::Vapi.OneOf<string, global::Vapi.JsonSchema>? body,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
             this.Messages = messages;
+            this.Type = type;
             this.Verb = verb;
             this.Headers = headers;
             this.Body = body;

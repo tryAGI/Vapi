@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateCustomCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateCustomCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateCustomCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authenticationPlan")]
@@ -36,6 +43,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateCustomCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="authenticationPlan">
         /// This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.
         /// </param>
@@ -49,10 +57,12 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateCustomCredentialDTO(
+            global::Vapi.UpdateCustomCredentialDTOProvider? provider,
             global::Vapi.AuthenticationPlan9? authenticationPlan,
             global::Vapi.PublicKeyEncryptionPlan? encryptionPlan,
             string? name)
         {
+            this.Provider = provider;
             this.AuthenticationPlan = authenticationPlan;
             this.EncryptionPlan = encryptionPlan;
             this.Name = name;

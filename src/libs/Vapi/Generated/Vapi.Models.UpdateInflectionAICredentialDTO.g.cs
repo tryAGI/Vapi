@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateInflectionAICredentialDTO
     {
         /// <summary>
+        /// This is the api key for Pi in InflectionAI's console. Get it from here: https://developers.inflection.ai/keys, billing will need to be setup
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateInflectionAICredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateInflectionAICredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is not returned in the API.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apiKey")]
@@ -29,6 +36,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateInflectionAICredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider">
+        /// This is the api key for Pi in InflectionAI's console. Get it from here: https://developers.inflection.ai/keys, billing will need to be setup
+        /// </param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
@@ -39,9 +49,11 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateInflectionAICredentialDTO(
+            global::Vapi.UpdateInflectionAICredentialDTOProvider? provider,
             string? apiKey,
             string? name)
         {
+            this.Provider = provider;
             this.ApiKey = apiKey;
             this.Name = name;
         }

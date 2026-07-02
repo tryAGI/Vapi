@@ -26,6 +26,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>? Hooks { get; set; }
 
         /// <summary>
+        /// This is to use numbers bought on Telnyx.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateTelnyxPhoneNumberDTOProviderJsonConverter))]
+        public global::Vapi.UpdateTelnyxPhoneNumberDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is the name of the phone number. This is just for your own reference.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
@@ -93,6 +100,9 @@ namespace Vapi
         /// <param name="hooks">
         /// This is the hooks that will be used for incoming calls to this phone number.
         /// </param>
+        /// <param name="provider">
+        /// This is to use numbers bought on Telnyx.
+        /// </param>
         /// <param name="name">
         /// This is the name of the phone number. This is just for your own reference.
         /// </param>
@@ -127,6 +137,7 @@ namespace Vapi
         public UpdateTelnyxPhoneNumberDTO(
             global::Vapi.OneOf<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>? fallbackDestination,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>? hooks,
+            global::Vapi.UpdateTelnyxPhoneNumberDTOProvider? provider,
             string? name,
             string? assistantId,
             string? workflowId,
@@ -137,6 +148,7 @@ namespace Vapi
         {
             this.FallbackDestination = fallbackDestination;
             this.Hooks = hooks;
+            this.Provider = provider;
             this.Name = name;
             this.AssistantId = assistantId;
             this.WorkflowId = workflowId;

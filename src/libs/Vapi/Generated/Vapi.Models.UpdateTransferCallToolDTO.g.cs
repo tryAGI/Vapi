@@ -15,6 +15,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateTransferCallToolDTOTypeJsonConverter))]
+        public global::Vapi.UpdateTransferCallToolDTOType? Type { get; set; }
+
+        /// <summary>
         /// These are the destinations that the call can be transferred to. If no destinations are provided, server.url will be used to get the transfer destination once the tool is called.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("destinations")]
@@ -111,6 +118,7 @@ namespace Vapi
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
+        /// <param name="type"></param>
         /// <param name="destinations">
         /// These are the destinations that the call can be transferred to. If no destinations are provided, server.url will be used to get the transfer destination once the tool is called.
         /// </param>
@@ -195,10 +203,12 @@ namespace Vapi
 #endif
         public UpdateTransferCallToolDTO(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
+            global::Vapi.UpdateTransferCallToolDTOType? type,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.TransferDestinationAssistant, global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>>? destinations,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
             this.Messages = messages;
+            this.Type = type;
             this.Destinations = destinations;
             this.RejectionPlan = rejectionPlan;
         }

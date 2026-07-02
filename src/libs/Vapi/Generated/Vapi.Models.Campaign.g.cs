@@ -93,6 +93,12 @@ namespace Vapi
         public global::Vapi.AssistantOverrides? SquadOverrides { get; set; }
 
         /// <summary>
+        /// This is the server (URL, auth headers, timeout, etc.) for the campaign webhooks.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("server")]
+        public global::Vapi.Server? Server { get; set; }
+
+        /// <summary>
         /// This is the unique identifier for the campaign.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
@@ -241,6 +247,9 @@ namespace Vapi
         /// <param name="squadOverrides">
         /// These are the overrides for the squad and template variables for the campaign. Use this when the campaign targets a `squadId`. Per-contact `squadOverrides` are deep-merged on top of this at dispatch time.
         /// </param>
+        /// <param name="server">
+        /// This is the server (URL, auth headers, timeout, etc.) for the campaign webhooks.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -267,7 +276,8 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers,
             double? maxConcurrency,
             global::Vapi.AssistantOverrides? assistantOverrides,
-            global::Vapi.AssistantOverrides? squadOverrides)
+            global::Vapi.AssistantOverrides? squadOverrides,
+            global::Vapi.Server? server)
         {
             this.Status = status;
             this.EndedReason = endedReason;
@@ -282,6 +292,7 @@ namespace Vapi
             this.MaxConcurrency = maxConcurrency;
             this.AssistantOverrides = assistantOverrides;
             this.SquadOverrides = squadOverrides;
+            this.Server = server;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;

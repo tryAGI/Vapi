@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateCloudflareCredentialDTO
     {
         /// <summary>
+        /// Credential provider. Only allowed value is cloudflare
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateCloudflareCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateCloudflareCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// Cloudflare Account Id.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accountId")]
@@ -53,6 +60,9 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateCloudflareCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider">
+        /// Credential provider. Only allowed value is cloudflare
+        /// </param>
         /// <param name="accountId">
         /// Cloudflare Account Id.
         /// </param>
@@ -75,6 +85,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateCloudflareCredentialDTO(
+            global::Vapi.UpdateCloudflareCredentialDTOProvider? provider,
             string? accountId,
             string? apiKey,
             string? accountEmail,
@@ -82,6 +93,7 @@ namespace Vapi
             string? name,
             global::Vapi.CloudflareR2BucketPlan? bucketPlan)
         {
+            this.Provider = provider;
             this.AccountId = accountId;
             this.ApiKey = apiKey;
             this.AccountEmail = accountEmail;

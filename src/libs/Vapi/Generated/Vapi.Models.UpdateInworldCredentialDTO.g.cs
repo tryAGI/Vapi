@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateInworldCredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateInworldCredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateInworldCredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is the Inworld Basic (Base64) authentication token. This is not returned in the API.<br/>
         /// Example: your-base64-token-here
         /// </summary>
@@ -31,6 +38,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateInworldCredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="apiKey">
         /// This is the Inworld Basic (Base64) authentication token. This is not returned in the API.<br/>
         /// Example: your-base64-token-here
@@ -42,9 +50,11 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateInworldCredentialDTO(
+            global::Vapi.UpdateInworldCredentialDTOProvider? provider,
             string? apiKey,
             string? name)
         {
+            this.Provider = provider;
             this.ApiKey = apiKey;
             this.Name = name;
         }

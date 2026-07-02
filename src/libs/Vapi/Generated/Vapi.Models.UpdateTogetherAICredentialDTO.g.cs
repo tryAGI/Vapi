@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class UpdateTogetherAICredentialDTO
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateTogetherAICredentialDTOProviderJsonConverter))]
+        public global::Vapi.UpdateTogetherAICredentialDTOProvider? Provider { get; set; }
+
+        /// <summary>
         /// This is not returned in the API.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apiKey")]
@@ -29,6 +36,7 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateTogetherAICredentialDTO" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="apiKey">
         /// This is not returned in the API.
         /// </param>
@@ -39,9 +47,11 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateTogetherAICredentialDTO(
+            global::Vapi.UpdateTogetherAICredentialDTOProvider? provider,
             string? apiKey,
             string? name)
         {
+            this.Provider = provider;
             this.ApiKey = apiKey;
             this.Name = name;
         }

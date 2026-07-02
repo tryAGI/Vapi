@@ -15,6 +15,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
 
         /// <summary>
+        /// The type of tool. "function" for Function tool.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateFunctionToolDTOTypeJsonConverter))]
+        public global::Vapi.UpdateFunctionToolDTOType? Type { get; set; }
+
+        /// <summary>
         /// This determines if the tool is async.<br/>
         ///   If async, the assistant will move forward without waiting for your server to respond. This is useful if you just want to trigger something on your server.<br/>
         ///   If sync, the assistant will wait for your server to respond. This is useful if want assistant to respond with the result from your server.<br/>
@@ -146,6 +153,9 @@ namespace Vapi
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
+        /// <param name="type">
+        /// The type of tool. "function" for Function tool.
+        /// </param>
         /// <param name="async">
         /// This determines if the tool is async.<br/>
         ///   If async, the assistant will move forward without waiting for your server to respond. This is useful if you just want to trigger something on your server.<br/>
@@ -252,6 +262,7 @@ namespace Vapi
 #endif
         public UpdateFunctionToolDTO(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
+            global::Vapi.UpdateFunctionToolDTOType? type,
             bool? async,
             global::Vapi.Server? server,
             global::Vapi.VariableExtractionPlan? variableExtractionPlan,
@@ -260,6 +271,7 @@ namespace Vapi
             global::Vapi.OpenAIFunction? function)
         {
             this.Messages = messages;
+            this.Type = type;
             this.Async = async;
             this.Server = server;
             this.VariableExtractionPlan = variableExtractionPlan;
