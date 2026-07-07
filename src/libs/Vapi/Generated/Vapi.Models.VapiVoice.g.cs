@@ -33,10 +33,11 @@ namespace Vapi
         public required global::Vapi.VapiVoiceVoiceId VoiceId { get; set; }
 
         /// <summary>
-        /// The Vapi voice routing generation. Version 1 uses legacy mappings; version 2 can use xAI-backed voices when available. When omitted, Version 1 is used.
+        /// The Vapi voice routing generation. `latest` auto-updates to the newest generation; version 1 uses legacy mappings; version 2 can use xAI-backed voices when available. When omitted, Version 1 is used. Accepts the string channel ('latest', '1', '2'); legacy numeric values (1, 2) are also accepted and coerced to their string form.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("version")]
-        public double? Version { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.VapiVoiceVersion2?, double?>))]
+        public global::Vapi.OneOf<global::Vapi.VapiVoiceVersion2?, double?>? Version { get; set; }
 
         /// <summary>
         /// This is the speed multiplier that will be used.<br/>
@@ -92,7 +93,7 @@ namespace Vapi
         /// This is the voice provider that will be used.
         /// </param>
         /// <param name="version">
-        /// The Vapi voice routing generation. Version 1 uses legacy mappings; version 2 can use xAI-backed voices when available. When omitted, Version 1 is used.
+        /// The Vapi voice routing generation. `latest` auto-updates to the newest generation; version 1 uses legacy mappings; version 2 can use xAI-backed voices when available. When omitted, Version 1 is used. Accepts the string channel ('latest', '1', '2'); legacy numeric values (1, 2) are also accepted and coerced to their string form.
         /// </param>
         /// <param name="speed">
         /// This is the speed multiplier that will be used.<br/>
@@ -118,7 +119,7 @@ namespace Vapi
             global::Vapi.VapiVoiceVoiceId voiceId,
             bool? cachingEnabled,
             global::Vapi.VapiVoiceProvider provider,
-            double? version,
+            global::Vapi.OneOf<global::Vapi.VapiVoiceVersion2?, double?>? version,
             double? speed,
             global::Vapi.VapiVoiceLanguage? language,
             global::System.Collections.Generic.IList<global::Vapi.VapiPronunciationDictionaryLocator>? pronunciationDictionary,
