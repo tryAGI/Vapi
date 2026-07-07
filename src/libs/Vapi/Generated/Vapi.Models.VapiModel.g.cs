@@ -35,6 +35,27 @@ namespace Vapi
         public global::Vapi.CreateCustomKnowledgeBaseDTO? KnowledgeBase { get; set; }
 
         /// <summary>
+        /// White-label Vapi models are selected by `version`, not a model name, so<br/>
+        /// `model` is optional here (the runtime already accepts a version-only Vapi<br/>
+        /// payload). Overriding the required `ModelBase.model`: the declared type stays<br/>
+        /// `string` to match the base (avoids TS2416) and the `= undefined!` initializer<br/>
+        /// satisfies TS2612 for the field override, while `@IsOptional` +<br/>
+        /// `@ApiPropertyOptional` make validation and the generated OpenAPI schema treat<br/>
+        /// it as optional (so `VapiModel.required` is `['provider']`).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
+        public string? Model { get; set; }
+
+        /// <summary>
+        /// Vapi-managed model version (update channel). When set, this is a Vapi-managed<br/>
+        /// LLM routed by the registry; when absent, this is the legacy workflow form<br/>
+        /// below (`steps` / `workflow`).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.VapiModelVersionJsonConverter))]
+        public global::Vapi.VapiModelVersion? Version { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
@@ -52,13 +73,6 @@ namespace Vapi
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workflow")]
         public global::Vapi.WorkflowUserEditable? Workflow { get; set; }
-
-        /// <summary>
-        /// This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Model { get; set; }
 
         /// <summary>
         /// This is the temperature that will be used for calls. Default is 0.5.
@@ -97,9 +111,6 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="VapiModel" /> class.
         /// </summary>
-        /// <param name="model">
-        /// This is the name of the model. Ex. cognitivecomputations/dolphin-mixtral-8x7b
-        /// </param>
         /// <param name="messages">
         /// This is the starting state for the conversation.
         /// </param>
@@ -113,6 +124,20 @@ namespace Vapi
         /// </param>
         /// <param name="knowledgeBase">
         /// These are the options for the knowledge base.
+        /// </param>
+        /// <param name="model">
+        /// White-label Vapi models are selected by `version`, not a model name, so<br/>
+        /// `model` is optional here (the runtime already accepts a version-only Vapi<br/>
+        /// payload). Overriding the required `ModelBase.model`: the declared type stays<br/>
+        /// `string` to match the base (avoids TS2416) and the `= undefined!` initializer<br/>
+        /// satisfies TS2612 for the field override, while `@IsOptional` +<br/>
+        /// `@ApiPropertyOptional` make validation and the generated OpenAPI schema treat<br/>
+        /// it as optional (so `VapiModel.required` is `['provider']`).
+        /// </param>
+        /// <param name="version">
+        /// Vapi-managed model version (update channel). When set, this is a Vapi-managed<br/>
+        /// LLM routed by the registry; when absent, this is the legacy workflow form<br/>
+        /// below (`steps` / `workflow`).
         /// </param>
         /// <param name="provider"></param>
         /// <param name="workflowId">
@@ -141,11 +166,12 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public VapiModel(
-            string model,
             global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>? messages,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CreateApiRequestToolDTO, global::Vapi.CreateBashToolDTO, global::Vapi.CreateCodeToolDTO, global::Vapi.CreateComputerToolDTO, global::Vapi.CreateDtmfToolDTO, global::Vapi.CreateEndCallToolDTO, global::Vapi.CreateFunctionToolDTO, global::Vapi.CreateGoHighLevelCalendarAvailabilityToolDTO, global::Vapi.CreateGoHighLevelCalendarEventCreateToolDTO, global::Vapi.CreateGoHighLevelContactCreateToolDTO, global::Vapi.CreateGoHighLevelContactGetToolDTO, global::Vapi.CreateGoogleCalendarCheckAvailabilityToolDTO, global::Vapi.CreateGoogleCalendarCreateEventToolDTO, global::Vapi.CreateGoogleSheetsRowAppendToolDTO, global::Vapi.CreateHandoffToolDTO, global::Vapi.CreateMcpToolDTO, global::Vapi.CreateQueryToolDTO, global::Vapi.CreateSlackSendMessageToolDTO, global::Vapi.CreateSmsToolDTO, global::Vapi.CreateTextEditorToolDTO, global::Vapi.CreateTransferCallToolDTO, global::Vapi.CreateSipRequestToolDTO, global::Vapi.CreateVoicemailToolDTO>>? tools,
             global::System.Collections.Generic.IList<string>? toolIds,
             global::Vapi.CreateCustomKnowledgeBaseDTO? knowledgeBase,
+            string? model,
+            global::Vapi.VapiModelVersion? version,
             global::Vapi.VapiModelProvider provider,
             string? workflowId,
             global::Vapi.WorkflowUserEditable? workflow,
@@ -158,10 +184,11 @@ namespace Vapi
             this.Tools = tools;
             this.ToolIds = toolIds;
             this.KnowledgeBase = knowledgeBase;
+            this.Model = model;
+            this.Version = version;
             this.Provider = provider;
             this.WorkflowId = workflowId;
             this.Workflow = workflow;
-            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;
             this.EmotionRecognitionEnabled = emotionRecognitionEnabled;
