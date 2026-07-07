@@ -23,6 +23,12 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>? MessagesOpenAIFormatted { get; set; }
 
         /// <summary>
+        /// These are the transfer records from warm transfers, including destinations, transcripts, and status.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transfers")]
+        public global::System.Collections.Generic.IList<global::Vapi.TransferArtifact>? Transfers { get; set; }
+
+        /// <summary>
         /// This is the recording url for the call. To enable, set `assistant.artifactPlan.recordingEnabled`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("recordingUrl")]
@@ -113,12 +119,6 @@ namespace Vapi
         public object? Scorecards { get; set; }
 
         /// <summary>
-        /// These are the transfer records from warm transfers, including destinations, transcripts, and status.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("transfers")]
-        public global::System.Collections.Generic.IList<string>? Transfers { get; set; }
-
-        /// <summary>
         /// This is when the structured outputs were last updated
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("structuredOutputsLastUpdatedAt")]
@@ -138,6 +138,9 @@ namespace Vapi
         /// </param>
         /// <param name="messagesOpenAIFormatted">
         /// These are the messages that were spoken during the call, formatted for OpenAI.
+        /// </param>
+        /// <param name="transfers">
+        /// These are the transfer records from warm transfers, including destinations, transcripts, and status.
         /// </param>
         /// <param name="recording">
         /// This is the recording url for the call. To enable, set `assistant.artifactPlan.recordingEnabled`.
@@ -171,9 +174,6 @@ namespace Vapi
         /// These are the scorecards that have been evaluated based on the structured outputs extracted during the call.<br/>
         /// To enable, set `assistant.artifactPlan.scorecardIds` or `assistant.artifactPlan.scorecards` with the IDs or objects of the scorecards you want to evaluate.
         /// </param>
-        /// <param name="transfers">
-        /// These are the transfer records from warm transfers, including destinations, transcripts, and status.
-        /// </param>
         /// <param name="structuredOutputsLastUpdatedAt">
         /// This is when the structured outputs were last updated
         /// </param>
@@ -183,6 +183,7 @@ namespace Vapi
         public Artifact(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.UserMessage, global::Vapi.SystemMessage, global::Vapi.BotMessage, global::Vapi.ToolCallMessage, global::Vapi.ToolCallResultMessage>>? messages,
             global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>? messagesOpenAIFormatted,
+            global::System.Collections.Generic.IList<global::Vapi.TransferArtifact>? transfers,
             global::Vapi.Recording? recording,
             string? transcript,
             string? pcapUrl,
@@ -193,11 +194,11 @@ namespace Vapi
             global::Vapi.PerformanceMetrics? performanceMetrics,
             object? structuredOutputs,
             object? scorecards,
-            global::System.Collections.Generic.IList<string>? transfers,
             global::System.DateTime? structuredOutputsLastUpdatedAt)
         {
             this.Messages = messages;
             this.MessagesOpenAIFormatted = messagesOpenAIFormatted;
+            this.Transfers = transfers;
             this.Recording = recording;
             this.Transcript = transcript;
             this.PcapUrl = pcapUrl;
@@ -208,7 +209,6 @@ namespace Vapi
             this.PerformanceMetrics = performanceMetrics;
             this.StructuredOutputs = structuredOutputs;
             this.Scorecards = scorecards;
-            this.Transfers = transfers;
             this.StructuredOutputsLastUpdatedAt = structuredOutputsLastUpdatedAt;
         }
 
