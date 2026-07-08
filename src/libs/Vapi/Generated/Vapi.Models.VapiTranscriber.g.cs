@@ -61,12 +61,6 @@ namespace Vapi
         public global::Vapi.VapiTranscriberTurnTaking? TurnTaking { get; set; }
 
         /// <summary>
-        /// This is the plan for transcriber provider fallbacks in the event that the primary transcriber provider fails.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("fallbackPlan")]
-        public global::Vapi.FallbackTranscriberPlan? FallbackPlan { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -103,9 +97,6 @@ namespace Vapi
         /// native end-of-turn detection; `manual` ignores it and waits a fixed<br/>
         /// end-of-turn delay. Defaults to `intelligent`.
         /// </param>
-        /// <param name="fallbackPlan">
-        /// This is the plan for transcriber provider fallbacks in the event that the primary transcriber provider fails.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -115,8 +106,7 @@ namespace Vapi
             global::Vapi.VapiTranscriberLanguage? language,
             global::System.Collections.Generic.IList<global::Vapi.VapiTranscriberLanguage2>? languages,
             global::System.Collections.Generic.IList<string>? keywords,
-            global::Vapi.VapiTranscriberTurnTaking? turnTaking,
-            global::Vapi.FallbackTranscriberPlan? fallbackPlan)
+            global::Vapi.VapiTranscriberTurnTaking? turnTaking)
         {
             this.Provider = provider;
             this.Version = version;
@@ -124,7 +114,6 @@ namespace Vapi
             this.Languages = languages;
             this.Keywords = keywords;
             this.TurnTaking = turnTaking;
-            this.FallbackPlan = fallbackPlan;
         }
 
         /// <summary>

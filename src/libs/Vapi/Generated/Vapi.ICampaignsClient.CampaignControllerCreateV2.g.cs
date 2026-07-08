@@ -54,7 +54,7 @@ namespace Vapi
         /// This is the schedule plan for the campaign. Calls will start at startedAt and continue until your organization’s concurrency limit is reached. Any remaining calls will be retried for up to one hour as capacity becomes available. After that hour or after latestAt, whichever comes first, any calls that couldn’t be placed won’t be retried.
         /// </param>
         /// <param name="customers">
-        /// These are the customers that will be called in the campaign. Required if dialPlan is not provided.
+        /// These are the customers that will be called in the campaign. Required if dialPlan is not provided. Maximum of 10000 customers per campaign.
         /// </param>
         /// <param name="maxConcurrency">
         /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10.
