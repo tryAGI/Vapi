@@ -67,12 +67,6 @@ namespace Vapi
         public global::Vapi.ChunkPlan? ChunkPlan { get; set; }
 
         /// <summary>
-        /// This is the plan for voice provider fallbacks in the event that the primary voice provider fails.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("fallbackPlan")]
-        public global::Vapi.FallbackPlan? FallbackPlan { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -109,9 +103,6 @@ namespace Vapi
         /// <param name="chunkPlan">
         /// This is the plan for chunking the model output before it is sent to the voice provider.
         /// </param>
-        /// <param name="fallbackPlan">
-        /// This is the plan for voice provider fallbacks in the event that the primary voice provider fails.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -123,8 +114,7 @@ namespace Vapi
             double? speed,
             global::Vapi.VapiVoiceLanguage? language,
             global::System.Collections.Generic.IList<global::Vapi.VapiPronunciationDictionaryLocator>? pronunciationDictionary,
-            global::Vapi.ChunkPlan? chunkPlan,
-            global::Vapi.FallbackPlan? fallbackPlan)
+            global::Vapi.ChunkPlan? chunkPlan)
         {
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
@@ -134,7 +124,6 @@ namespace Vapi
             this.Language = language;
             this.PronunciationDictionary = pronunciationDictionary;
             this.ChunkPlan = chunkPlan;
-            this.FallbackPlan = fallbackPlan;
         }
 
         /// <summary>
