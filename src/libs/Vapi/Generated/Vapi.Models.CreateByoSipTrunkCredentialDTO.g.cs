@@ -50,12 +50,6 @@ namespace Vapi
         public string? SipDiversionHeader { get; set; }
 
         /// <summary>
-        /// This is an advanced configuration for enterprise deployments. This uses the onprem SBC to trunk into the SIP trunk's `gateways`, rather than the managed SBC provided by Vapi.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("sbcConfiguration")]
-        public global::Vapi.SbcConfiguration? SbcConfiguration { get; set; }
-
-        /// <summary>
         /// This is the name of credential. This is just for your reference.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
@@ -91,9 +85,6 @@ namespace Vapi
         /// <param name="sipDiversionHeader">
         /// This can be used to enable the SIP diversion header for authenticating the calling number if the SIP trunk supports it. This is an advanced property.
         /// </param>
-        /// <param name="sbcConfiguration">
-        /// This is an advanced configuration for enterprise deployments. This uses the onprem SBC to trunk into the SIP trunk's `gateways`, rather than the managed SBC provided by Vapi.
-        /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -107,7 +98,6 @@ namespace Vapi
             bool? outboundLeadingPlusEnabled,
             string? techPrefix,
             string? sipDiversionHeader,
-            global::Vapi.SbcConfiguration? sbcConfiguration,
             string? name)
         {
             this.Provider = provider;
@@ -116,7 +106,6 @@ namespace Vapi
             this.OutboundLeadingPlusEnabled = outboundLeadingPlusEnabled;
             this.TechPrefix = techPrefix;
             this.SipDiversionHeader = sipDiversionHeader;
-            this.SbcConfiguration = sbcConfiguration;
             this.Name = name;
         }
 
