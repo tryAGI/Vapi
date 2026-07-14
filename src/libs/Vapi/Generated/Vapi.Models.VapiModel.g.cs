@@ -81,12 +81,6 @@ namespace Vapi
         public double? Temperature { get; set; }
 
         /// <summary>
-        /// This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("maxTokens")]
-        public double? MaxTokens { get; set; }
-
-        /// <summary>
         /// This determines whether we detect user's emotion while they speak and send it as an additional info to model.<br/>
         /// Default `false` because the model is usually are good at understanding the user's emotion from text.<br/>
         /// @default false
@@ -149,9 +143,6 @@ namespace Vapi
         /// <param name="temperature">
         /// This is the temperature that will be used for calls. Default is 0.5.
         /// </param>
-        /// <param name="maxTokens">
-        /// This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250.
-        /// </param>
         /// <param name="emotionRecognitionEnabled">
         /// This determines whether we detect user's emotion while they speak and send it as an additional info to model.<br/>
         /// Default `false` because the model is usually are good at understanding the user's emotion from text.<br/>
@@ -176,7 +167,6 @@ namespace Vapi
             string? workflowId,
             global::Vapi.WorkflowUserEditable? workflow,
             double? temperature,
-            double? maxTokens,
             bool? emotionRecognitionEnabled,
             double? numFastTurns)
         {
@@ -190,7 +180,6 @@ namespace Vapi
             this.WorkflowId = workflowId;
             this.Workflow = workflow;
             this.Temperature = temperature;
-            this.MaxTokens = maxTokens;
             this.EmotionRecognitionEnabled = emotionRecognitionEnabled;
             this.NumFastTurns = numFastTurns;
         }
