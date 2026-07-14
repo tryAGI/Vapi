@@ -9,7 +9,7 @@ namespace Vapi
     public sealed partial class SipTrunkGateway
     {
         /// <summary>
-        /// This is the address of the gateway. It can be an IPv4 address like 1.1.1.1 or a fully qualified domain name like my-sip-trunk.pstn.twilio.com.
+        /// This is the address of the gateway. Inbound gateways require an IPv4 address like 1.1.1.1. Outbound-only gateways can also use a fully qualified domain name like my-sip-trunk.pstn.twilio.com.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ip")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -70,7 +70,7 @@ namespace Vapi
         /// Initializes a new instance of the <see cref="SipTrunkGateway" /> class.
         /// </summary>
         /// <param name="ip">
-        /// This is the address of the gateway. It can be an IPv4 address like 1.1.1.1 or a fully qualified domain name like my-sip-trunk.pstn.twilio.com.
+        /// This is the address of the gateway. Inbound gateways require an IPv4 address like 1.1.1.1. Outbound-only gateways can also use a fully qualified domain name like my-sip-trunk.pstn.twilio.com.
         /// </param>
         /// <param name="port">
         /// This is the port number of the gateway. Default is 5060.<br/>

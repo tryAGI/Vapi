@@ -419,6 +419,14 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallInProgressErrorProviderfaultVapiTranscriberFailed,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorProviderfaultVapiVoiceFailed,
+        /// <summary>
+        /// 
+        /// </summary>
         CallInProgressErrorProviderfaultXai500ServerError,
         /// <summary>
         /// 
@@ -1096,6 +1104,14 @@ namespace Vapi
         /// 
         /// </summary>
         CallInProgressErrorVapifaultVapi429ExceededQuota,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorVapifaultVapiLlmFailed,
+        /// <summary>
+        /// 
+        /// </summary>
+        CallInProgressErrorVapifaultVapiTranscriberFailed,
         /// <summary>
         /// 
         /// </summary>
@@ -2263,6 +2279,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        PipelineErrorVapiTranscriberFailed,
+        /// <summary>
+        /// 
+        /// </summary>
         PipelineErrorVapiVoiceFailed,
         /// <summary>
         /// 
@@ -2476,6 +2496,8 @@ namespace Vapi
                 CallEndedReason.CallInProgressErrorProviderfaultVapi500ServerError => "call.in-progress.error-providerfault-vapi-500-server-error",
                 CallEndedReason.CallInProgressErrorProviderfaultVapi503ServerOverloadedError => "call.in-progress.error-providerfault-vapi-503-server-overloaded-error",
                 CallEndedReason.CallInProgressErrorProviderfaultVapiLlmFailed => "call.in-progress.error-providerfault-vapi-llm-failed",
+                CallEndedReason.CallInProgressErrorProviderfaultVapiTranscriberFailed => "call.in-progress.error-providerfault-vapi-transcriber-failed",
+                CallEndedReason.CallInProgressErrorProviderfaultVapiVoiceFailed => "call.in-progress.error-providerfault-vapi-voice-failed",
                 CallEndedReason.CallInProgressErrorProviderfaultXai500ServerError => "call.in-progress.error-providerfault-xai-500-server-error",
                 CallEndedReason.CallInProgressErrorProviderfaultXai503ServerOverloadedError => "call.in-progress.error-providerfault-xai-503-server-overloaded-error",
                 CallEndedReason.CallInProgressErrorProviderfaultXaiLlmFailed => "call.in-progress.error-providerfault-xai-llm-failed",
@@ -2646,6 +2668,8 @@ namespace Vapi
                 CallEndedReason.CallInProgressErrorVapifaultVapi401Unauthorized => "call.in-progress.error-vapifault-vapi-401-unauthorized",
                 CallEndedReason.CallInProgressErrorVapifaultVapi403ModelAccessDenied => "call.in-progress.error-vapifault-vapi-403-model-access-denied",
                 CallEndedReason.CallInProgressErrorVapifaultVapi429ExceededQuota => "call.in-progress.error-vapifault-vapi-429-exceeded-quota",
+                CallEndedReason.CallInProgressErrorVapifaultVapiLlmFailed => "call.in-progress.error-vapifault-vapi-llm-failed",
+                CallEndedReason.CallInProgressErrorVapifaultVapiTranscriberFailed => "call.in-progress.error-vapifault-vapi-transcriber-failed",
                 CallEndedReason.CallInProgressErrorVapifaultVapiVoiceFailed => "call.in-progress.error-vapifault-vapi-voice-failed",
                 CallEndedReason.CallInProgressErrorVapifaultWellsaidVoiceFailed => "call.in-progress.error-vapifault-wellsaid-voice-failed",
                 CallEndedReason.CallInProgressErrorVapifaultWorkerDied => "call.in-progress.error-vapifault-worker-died",
@@ -2937,6 +2961,7 @@ namespace Vapi
                 CallEndedReason.PipelineErrorVapi500ServerError => "pipeline-error-vapi-500-server-error",
                 CallEndedReason.PipelineErrorVapi503ServerOverloadedError => "pipeline-error-vapi-503-server-overloaded-error",
                 CallEndedReason.PipelineErrorVapiLlmFailed => "pipeline-error-vapi-llm-failed",
+                CallEndedReason.PipelineErrorVapiTranscriberFailed => "pipeline-error-vapi-transcriber-failed",
                 CallEndedReason.PipelineErrorVapiVoiceFailed => "pipeline-error-vapi-voice-failed",
                 CallEndedReason.PipelineErrorWellsaidVoiceFailed => "pipeline-error-wellsaid-voice-failed",
                 CallEndedReason.PipelineErrorXai400BadRequestValidationFailed => "pipeline-error-xai-400-bad-request-validation-failed",
@@ -3074,6 +3099,8 @@ namespace Vapi
                 "call.in-progress.error-providerfault-vapi-500-server-error" => CallEndedReason.CallInProgressErrorProviderfaultVapi500ServerError,
                 "call.in-progress.error-providerfault-vapi-503-server-overloaded-error" => CallEndedReason.CallInProgressErrorProviderfaultVapi503ServerOverloadedError,
                 "call.in-progress.error-providerfault-vapi-llm-failed" => CallEndedReason.CallInProgressErrorProviderfaultVapiLlmFailed,
+                "call.in-progress.error-providerfault-vapi-transcriber-failed" => CallEndedReason.CallInProgressErrorProviderfaultVapiTranscriberFailed,
+                "call.in-progress.error-providerfault-vapi-voice-failed" => CallEndedReason.CallInProgressErrorProviderfaultVapiVoiceFailed,
                 "call.in-progress.error-providerfault-xai-500-server-error" => CallEndedReason.CallInProgressErrorProviderfaultXai500ServerError,
                 "call.in-progress.error-providerfault-xai-503-server-overloaded-error" => CallEndedReason.CallInProgressErrorProviderfaultXai503ServerOverloadedError,
                 "call.in-progress.error-providerfault-xai-llm-failed" => CallEndedReason.CallInProgressErrorProviderfaultXaiLlmFailed,
@@ -3244,6 +3271,8 @@ namespace Vapi
                 "call.in-progress.error-vapifault-vapi-401-unauthorized" => CallEndedReason.CallInProgressErrorVapifaultVapi401Unauthorized,
                 "call.in-progress.error-vapifault-vapi-403-model-access-denied" => CallEndedReason.CallInProgressErrorVapifaultVapi403ModelAccessDenied,
                 "call.in-progress.error-vapifault-vapi-429-exceeded-quota" => CallEndedReason.CallInProgressErrorVapifaultVapi429ExceededQuota,
+                "call.in-progress.error-vapifault-vapi-llm-failed" => CallEndedReason.CallInProgressErrorVapifaultVapiLlmFailed,
+                "call.in-progress.error-vapifault-vapi-transcriber-failed" => CallEndedReason.CallInProgressErrorVapifaultVapiTranscriberFailed,
                 "call.in-progress.error-vapifault-vapi-voice-failed" => CallEndedReason.CallInProgressErrorVapifaultVapiVoiceFailed,
                 "call.in-progress.error-vapifault-wellsaid-voice-failed" => CallEndedReason.CallInProgressErrorVapifaultWellsaidVoiceFailed,
                 "call.in-progress.error-vapifault-worker-died" => CallEndedReason.CallInProgressErrorVapifaultWorkerDied,
@@ -3535,6 +3564,7 @@ namespace Vapi
                 "pipeline-error-vapi-500-server-error" => CallEndedReason.PipelineErrorVapi500ServerError,
                 "pipeline-error-vapi-503-server-overloaded-error" => CallEndedReason.PipelineErrorVapi503ServerOverloadedError,
                 "pipeline-error-vapi-llm-failed" => CallEndedReason.PipelineErrorVapiLlmFailed,
+                "pipeline-error-vapi-transcriber-failed" => CallEndedReason.PipelineErrorVapiTranscriberFailed,
                 "pipeline-error-vapi-voice-failed" => CallEndedReason.PipelineErrorVapiVoiceFailed,
                 "pipeline-error-wellsaid-voice-failed" => CallEndedReason.PipelineErrorWellsaidVoiceFailed,
                 "pipeline-error-xai-400-bad-request-validation-failed" => CallEndedReason.PipelineErrorXai400BadRequestValidationFailed,
