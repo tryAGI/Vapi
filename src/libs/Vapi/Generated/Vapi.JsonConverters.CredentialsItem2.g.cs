@@ -259,6 +259,13 @@ namespace Vapi.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateS3CredentialDTO)}");
                 s3 = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+            global::Vapi.CreateS3CompatibleCredentialDTO? s3Compatible = default;
+            if (discriminator?.Provider == global::Vapi.AssistantOverridesCredentialDiscriminatorProvider.S3Compatible)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateS3CompatibleCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateS3CompatibleCredentialDTO> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateS3CompatibleCredentialDTO)}");
+                s3Compatible = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
             global::Vapi.CreateSmallestAICredentialDTO? smallestAi = default;
             if (discriminator?.Provider == global::Vapi.AssistantOverridesCredentialDiscriminatorProvider.SmallestAi)
             {
@@ -483,6 +490,8 @@ namespace Vapi.JsonConverters
                 runpod,
 
                 s3,
+
+                s3Compatible,
 
                 smallestAi,
 
@@ -744,6 +753,12 @@ namespace Vapi.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateS3CredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateS3CredentialDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateS3CredentialDTO).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.S3!, typeInfo);
+            }
+            else if (value.IsS3Compatible)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateS3CompatibleCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateS3CompatibleCredentialDTO?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateS3CompatibleCredentialDTO).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.S3Compatible!, typeInfo);
             }
             else if (value.IsSmallestAi)
             {

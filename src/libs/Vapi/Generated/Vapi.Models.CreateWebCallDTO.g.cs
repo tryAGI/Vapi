@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class CreateWebCallDTO
     {
         /// <summary>
+        /// This is the assistant version to use for this call. Supported only with<br/>
+        /// direct `assistantId`. Omit to follow the latest version.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
+        public string? AssistantVersion { get; set; }
+
+        /// <summary>
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("roomDeleteOnUserLeaveEnabled")]
@@ -102,6 +109,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWebCallDTO" /> class.
         /// </summary>
+        /// <param name="assistantVersion">
+        /// This is the assistant version to use for this call. Supported only with<br/>
+        /// direct `assistantId`. Omit to follow the latest version.
+        /// </param>
         /// <param name="roomDeleteOnUserLeaveEnabled">
         /// Default Value: true
         /// </param>
@@ -161,6 +172,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateWebCallDTO(
+            string? assistantVersion,
             bool? roomDeleteOnUserLeaveEnabled,
             string? assistantId,
             global::Vapi.CreateAssistantDTO? assistant,
@@ -172,6 +184,7 @@ namespace Vapi
             global::Vapi.CreateWorkflowDTO? workflow,
             global::Vapi.WorkflowOverrides? workflowOverrides)
         {
+            this.AssistantVersion = assistantVersion;
             this.RoomDeleteOnUserLeaveEnabled = roomDeleteOnUserLeaveEnabled;
             this.AssistantId = assistantId;
             this.Assistant = assistant;

@@ -16,6 +16,15 @@ namespace Vapi
         public global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? PhoneNumber { get; set; }
 
         /// <summary>
+        /// This is the version label (e.g. `v3`) of the assistant the call was<br/>
+        /// configured with. `null` for inline assistants, squad/workflow calls,<br/>
+        /// pre-resolution assistant-request messages, and orgs not on<br/>
+        /// assistant versioning.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
+        public string? AssistantVersion { get; set; }
+
+        /// <summary>
         /// This is the type of the message. "handoff-destination-request" is sent when the model is requesting handoff but destination is unknown.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
@@ -81,6 +90,12 @@ namespace Vapi
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
+        /// <param name="assistantVersion">
+        /// This is the version label (e.g. `v3`) of the assistant the call was<br/>
+        /// configured with. `null` for inline assistants, squad/workflow calls,<br/>
+        /// pre-resolution assistant-request messages, and orgs not on<br/>
+        /// assistant versioning.
+        /// </param>
         /// <param name="type">
         /// This is the type of the message. "handoff-destination-request" is sent when the model is requesting handoff but destination is unknown.
         /// </param>
@@ -109,6 +124,7 @@ namespace Vapi
         public ServerMessageHandoffDestinationRequest(
             object parameters,
             global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? phoneNumber,
+            string? assistantVersion,
             global::Vapi.ServerMessageHandoffDestinationRequestType type,
             double? timestamp,
             global::Vapi.Artifact? artifact,
@@ -118,6 +134,7 @@ namespace Vapi
             global::Vapi.Chat? chat)
         {
             this.PhoneNumber = phoneNumber;
+            this.AssistantVersion = assistantVersion;
             this.Type = type;
             this.Timestamp = timestamp;
             this.Artifact = artifact;

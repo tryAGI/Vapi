@@ -29,6 +29,15 @@ namespace Vapi
         public global::System.Collections.Generic.IList<string>? ToolIds { get; set; }
 
         /// <summary>
+        /// These are version-pinned references to tools. Each entry pins a specific<br/>
+        /// version of a tool by `(toolId, version)`. When the same `toolId` appears<br/>
+        /// in both `toolIds` and `toolRefs[]`, the `toolRefs` pin wins (the<br/>
+        /// `toolIds` entry is dropped at write time).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("toolRefs")]
+        public global::System.Collections.Generic.IList<global::Vapi.ToolRef>? ToolRefs { get; set; }
+
+        /// <summary>
         /// These are the options for the knowledge base.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("knowledgeBase")]
@@ -96,6 +105,12 @@ namespace Vapi
         /// These are the tools that the assistant can use during the call. To use transient tools, use `tools`.<br/>
         /// Both `tools` and `toolIds` can be used together.
         /// </param>
+        /// <param name="toolRefs">
+        /// These are version-pinned references to tools. Each entry pins a specific<br/>
+        /// version of a tool by `(toolId, version)`. When the same `toolId` appears<br/>
+        /// in both `toolIds` and `toolRefs[]`, the `toolRefs` pin wins (the<br/>
+        /// `toolIds` entry is dropped at write time).
+        /// </param>
         /// <param name="knowledgeBase">
         /// These are the options for the knowledge base.
         /// </param>
@@ -126,6 +141,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>? messages,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CreateApiRequestToolDTO, global::Vapi.CreateBashToolDTO, global::Vapi.CreateCodeToolDTO, global::Vapi.CreateComputerToolDTO, global::Vapi.CreateDtmfToolDTO, global::Vapi.CreateEndCallToolDTO, global::Vapi.CreateFunctionToolDTO, global::Vapi.CreateGoHighLevelCalendarAvailabilityToolDTO, global::Vapi.CreateGoHighLevelCalendarEventCreateToolDTO, global::Vapi.CreateGoHighLevelContactCreateToolDTO, global::Vapi.CreateGoHighLevelContactGetToolDTO, global::Vapi.CreateGoogleCalendarCheckAvailabilityToolDTO, global::Vapi.CreateGoogleCalendarCreateEventToolDTO, global::Vapi.CreateGoogleSheetsRowAppendToolDTO, global::Vapi.CreateHandoffToolDTO, global::Vapi.CreateMcpToolDTO, global::Vapi.CreateQueryToolDTO, global::Vapi.CreateSlackSendMessageToolDTO, global::Vapi.CreateSmsToolDTO, global::Vapi.CreateTextEditorToolDTO, global::Vapi.CreateTransferCallToolDTO, global::Vapi.CreateSipRequestToolDTO, global::Vapi.CreateVoicemailToolDTO>>? tools,
             global::System.Collections.Generic.IList<string>? toolIds,
+            global::System.Collections.Generic.IList<global::Vapi.ToolRef>? toolRefs,
             global::Vapi.CreateCustomKnowledgeBaseDTO? knowledgeBase,
             global::Vapi.InflectionAIModelModel model,
             global::Vapi.InflectionAIModelProvider provider,
@@ -137,6 +153,7 @@ namespace Vapi
             this.Messages = messages;
             this.Tools = tools;
             this.ToolIds = toolIds;
+            this.ToolRefs = toolRefs;
             this.KnowledgeBase = knowledgeBase;
             this.Model = model;
             this.Provider = provider;

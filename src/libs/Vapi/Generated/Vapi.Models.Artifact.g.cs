@@ -125,6 +125,68 @@ namespace Vapi
         public global::System.DateTime? StructuredOutputsLastUpdatedAt { get; set; }
 
         /// <summary>
+        /// This is a presigned URL to download the mono recording without<br/>
+        /// authentication. Populated on API responses and server messages; never<br/>
+        /// stored. Expires at `presignedUrlsExpiresAt` — after that, use<br/>
+        /// `GET /call/{id}/mono-recording`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("presignedMonoUrl")]
+        public string? PresignedMonoUrl { get; set; }
+
+        /// <summary>
+        /// This is a presigned URL to download the stereo recording without<br/>
+        /// authentication. Expires at `presignedUrlsExpiresAt` — after that, use<br/>
+        /// `GET /call/{id}/stereo-recording`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("presignedStereoUrl")]
+        public string? PresignedStereoUrl { get; set; }
+
+        /// <summary>
+        /// This is a presigned URL to download the video recording without<br/>
+        /// authentication. Expires at `presignedUrlsExpiresAt` — after that, use<br/>
+        /// `GET /call/{id}/video-recording`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("presignedVideoUrl")]
+        public string? PresignedVideoUrl { get; set; }
+
+        /// <summary>
+        /// This is a presigned URL to download the assistant-channel mono recording<br/>
+        /// without authentication. Expires at `presignedUrlsExpiresAt`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("presignedAssistantUrl")]
+        public string? PresignedAssistantUrl { get; set; }
+
+        /// <summary>
+        /// This is a presigned URL to download the customer-channel mono recording<br/>
+        /// without authentication. Expires at `presignedUrlsExpiresAt`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("presignedCustomerUrl")]
+        public string? PresignedCustomerUrl { get; set; }
+
+        /// <summary>
+        /// This is a presigned URL to download the packet capture without<br/>
+        /// authentication. Expires at `presignedUrlsExpiresAt`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("presignedPcapUrl")]
+        public string? PresignedPcapUrl { get; set; }
+
+        /// <summary>
+        /// This is a presigned URL to download the call logs without<br/>
+        /// authentication. Expires at `presignedUrlsExpiresAt`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("presignedLogUrl")]
+        public string? PresignedLogUrl { get; set; }
+
+        /// <summary>
+        /// This is when the presigned URLs above expire, as an ISO 8601 timestamp.<br/>
+        /// The raw `*Url` fields remain the stable identifiers and do not expire.<br/>
+        /// Presigned URLs are regenerated per response and per webhook delivery, so<br/>
+        /// values differ across retries.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("presignedUrlsExpiresAt")]
+        public string? PresignedUrlsExpiresAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -177,6 +239,44 @@ namespace Vapi
         /// <param name="structuredOutputsLastUpdatedAt">
         /// This is when the structured outputs were last updated
         /// </param>
+        /// <param name="presignedMonoUrl">
+        /// This is a presigned URL to download the mono recording without<br/>
+        /// authentication. Populated on API responses and server messages; never<br/>
+        /// stored. Expires at `presignedUrlsExpiresAt` — after that, use<br/>
+        /// `GET /call/{id}/mono-recording`.
+        /// </param>
+        /// <param name="presignedStereoUrl">
+        /// This is a presigned URL to download the stereo recording without<br/>
+        /// authentication. Expires at `presignedUrlsExpiresAt` — after that, use<br/>
+        /// `GET /call/{id}/stereo-recording`.
+        /// </param>
+        /// <param name="presignedVideoUrl">
+        /// This is a presigned URL to download the video recording without<br/>
+        /// authentication. Expires at `presignedUrlsExpiresAt` — after that, use<br/>
+        /// `GET /call/{id}/video-recording`.
+        /// </param>
+        /// <param name="presignedAssistantUrl">
+        /// This is a presigned URL to download the assistant-channel mono recording<br/>
+        /// without authentication. Expires at `presignedUrlsExpiresAt`.
+        /// </param>
+        /// <param name="presignedCustomerUrl">
+        /// This is a presigned URL to download the customer-channel mono recording<br/>
+        /// without authentication. Expires at `presignedUrlsExpiresAt`.
+        /// </param>
+        /// <param name="presignedPcapUrl">
+        /// This is a presigned URL to download the packet capture without<br/>
+        /// authentication. Expires at `presignedUrlsExpiresAt`.
+        /// </param>
+        /// <param name="presignedLogUrl">
+        /// This is a presigned URL to download the call logs without<br/>
+        /// authentication. Expires at `presignedUrlsExpiresAt`.
+        /// </param>
+        /// <param name="presignedUrlsExpiresAt">
+        /// This is when the presigned URLs above expire, as an ISO 8601 timestamp.<br/>
+        /// The raw `*Url` fields remain the stable identifiers and do not expire.<br/>
+        /// Presigned URLs are regenerated per response and per webhook delivery, so<br/>
+        /// values differ across retries.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -194,7 +294,15 @@ namespace Vapi
             global::Vapi.PerformanceMetrics? performanceMetrics,
             object? structuredOutputs,
             object? scorecards,
-            global::System.DateTime? structuredOutputsLastUpdatedAt)
+            global::System.DateTime? structuredOutputsLastUpdatedAt,
+            string? presignedMonoUrl,
+            string? presignedStereoUrl,
+            string? presignedVideoUrl,
+            string? presignedAssistantUrl,
+            string? presignedCustomerUrl,
+            string? presignedPcapUrl,
+            string? presignedLogUrl,
+            string? presignedUrlsExpiresAt)
         {
             this.Messages = messages;
             this.MessagesOpenAIFormatted = messagesOpenAIFormatted;
@@ -210,6 +318,14 @@ namespace Vapi
             this.StructuredOutputs = structuredOutputs;
             this.Scorecards = scorecards;
             this.StructuredOutputsLastUpdatedAt = structuredOutputsLastUpdatedAt;
+            this.PresignedMonoUrl = presignedMonoUrl;
+            this.PresignedStereoUrl = presignedStereoUrl;
+            this.PresignedVideoUrl = presignedVideoUrl;
+            this.PresignedAssistantUrl = presignedAssistantUrl;
+            this.PresignedCustomerUrl = presignedCustomerUrl;
+            this.PresignedPcapUrl = presignedPcapUrl;
+            this.PresignedLogUrl = presignedLogUrl;
+            this.PresignedUrlsExpiresAt = presignedUrlsExpiresAt;
         }
 
         /// <summary>

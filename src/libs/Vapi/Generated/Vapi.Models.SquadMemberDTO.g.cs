@@ -9,6 +9,14 @@ namespace Vapi
     public sealed partial class SquadMemberDTO
     {
         /// <summary>
+        /// This is the assistant version (e.g. `v3`) to pin for this squad member. When set, the call uses<br/>
+        /// the snapshot from `assistant_version` (by `(assistantId, version)`) instead of the latest. Valid<br/>
+        /// only with `assistantId`; rejected with inline `assistant`. Omit to follow the latest version.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
+        public string? AssistantVersion { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistantDestinations")]
@@ -41,6 +49,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="SquadMemberDTO" /> class.
         /// </summary>
+        /// <param name="assistantVersion">
+        /// This is the assistant version (e.g. `v3`) to pin for this squad member. When set, the call uses<br/>
+        /// the snapshot from `assistant_version` (by `(assistantId, version)`) instead of the latest. Valid<br/>
+        /// only with `assistantId`; rejected with inline `assistant`. Omit to follow the latest version.
+        /// </param>
         /// <param name="assistantDestinations"></param>
         /// <param name="assistantId">
         /// This is the assistant that will be used for the call. To use a transient assistant, use `assistant` instead.
@@ -55,11 +68,13 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public SquadMemberDTO(
+            string? assistantVersion,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.TransferDestinationAssistant, global::Vapi.HandoffDestinationAssistant>>? assistantDestinations,
             string? assistantId,
             global::Vapi.CreateAssistantDTO? assistant,
             global::Vapi.AssistantOverrides? assistantOverrides)
         {
+            this.AssistantVersion = assistantVersion;
             this.AssistantDestinations = assistantDestinations;
             this.AssistantId = assistantId;
             this.Assistant = assistant;

@@ -1211,6 +1211,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallStartAssistantVersionErrorValidation,
+        /// <summary>
+        /// 
+        /// </summary>
         CallStartErrorEnterpriseFeatureNotAvailableRecordingConsent,
         /// <summary>
         /// 
@@ -2694,6 +2698,7 @@ namespace Vapi
                 CallEndedReason.CallRingingHookExecutedSay => "call.ringing.hook-executed-say",
                 CallEndedReason.CallRingingHookExecutedTransfer => "call.ringing.hook-executed-transfer",
                 CallEndedReason.CallRingingSipInboundCallerHungupBeforeCallConnect => "call.ringing.sip-inbound-caller-hungup-before-call-connect",
+                CallEndedReason.CallStartAssistantVersionErrorValidation => "call.start.assistant-version-error-validation",
                 CallEndedReason.CallStartErrorEnterpriseFeatureNotAvailableRecordingConsent => "call.start.error-enterprise-feature-not-available-recording-consent",
                 CallEndedReason.CallStartErrorFraudCheckFailed => "call.start.error-fraud-check-failed",
                 CallEndedReason.CallStartErrorGetAssistant => "call.start.error-get-assistant",
@@ -3297,6 +3302,7 @@ namespace Vapi
                 "call.ringing.hook-executed-say" => CallEndedReason.CallRingingHookExecutedSay,
                 "call.ringing.hook-executed-transfer" => CallEndedReason.CallRingingHookExecutedTransfer,
                 "call.ringing.sip-inbound-caller-hungup-before-call-connect" => CallEndedReason.CallRingingSipInboundCallerHungupBeforeCallConnect,
+                "call.start.assistant-version-error-validation" => CallEndedReason.CallStartAssistantVersionErrorValidation,
                 "call.start.error-enterprise-feature-not-available-recording-consent" => CallEndedReason.CallStartErrorEnterpriseFeatureNotAvailableRecordingConsent,
                 "call.start.error-fraud-check-failed" => CallEndedReason.CallStartErrorFraudCheckFailed,
                 "call.start.error-get-assistant" => CallEndedReason.CallStartErrorGetAssistant,

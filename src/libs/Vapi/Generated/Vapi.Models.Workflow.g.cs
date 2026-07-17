@@ -64,7 +64,7 @@ namespace Vapi
         /// These are dynamic credentials that will be used for the workflow calls. By default, all the credentials are available for use in the call but you can supplement an additional credentials using this. Dynamic credentials override existing credentials.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("credentials")]
-        public global::System.Collections.Generic.IList<global::Vapi.CredentialsItem6>? Credentials { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.CredentialsItem10>? Credentials { get; set; }
 
         /// <summary>
         /// This is the voicemail detection plan for the workflow.
@@ -349,7 +349,7 @@ namespace Vapi
             global::Vapi.LangfuseObservabilityPlan? observabilityPlan,
             global::Vapi.OneOf<global::Vapi.WorkflowBackgroundSound?, string>? backgroundSound,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CallHookCallEnding, global::Vapi.CallHookAssistantSpeechInterrupted, global::Vapi.CallHookCustomerSpeechInterrupted, global::Vapi.CallHookCustomerSpeechTimeout, global::Vapi.CallHookModelResponseTimeout>>? hooks,
-            global::System.Collections.Generic.IList<global::Vapi.CredentialsItem6>? credentials,
+            global::System.Collections.Generic.IList<global::Vapi.CredentialsItem10>? credentials,
             global::Vapi.OneOf<global::Vapi.WorkflowVoicemailDetection?, global::Vapi.GoogleVoicemailDetectionPlan, global::Vapi.OpenAIVoicemailDetectionPlan, global::Vapi.TwilioVoicemailDetectionPlan, global::Vapi.VapiVoicemailDetectionPlan>? voicemailDetection,
             double? maxDurationSeconds,
             string? globalPrompt,

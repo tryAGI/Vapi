@@ -183,6 +183,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        S3Compatible,
+        /// <summary>
+        /// 
+        /// </summary>
         SlackWebhook,
         /// <summary>
         /// 
@@ -289,6 +293,7 @@ namespace Vapi
                 AssistantOverridesCredentialDiscriminatorProvider.RimeAi => "rime-ai",
                 AssistantOverridesCredentialDiscriminatorProvider.Runpod => "runpod",
                 AssistantOverridesCredentialDiscriminatorProvider.S3 => "s3",
+                AssistantOverridesCredentialDiscriminatorProvider.S3Compatible => "s3-compatible",
                 AssistantOverridesCredentialDiscriminatorProvider.SlackWebhook => "slack-webhook",
                 AssistantOverridesCredentialDiscriminatorProvider.SlackOauth2Authorization => "slack.oauth2-authorization",
                 AssistantOverridesCredentialDiscriminatorProvider.SmallestAi => "smallest-ai",
@@ -355,6 +360,7 @@ namespace Vapi
                 "rime-ai" => AssistantOverridesCredentialDiscriminatorProvider.RimeAi,
                 "runpod" => AssistantOverridesCredentialDiscriminatorProvider.Runpod,
                 "s3" => AssistantOverridesCredentialDiscriminatorProvider.S3,
+                "s3-compatible" => AssistantOverridesCredentialDiscriminatorProvider.S3Compatible,
                 "slack-webhook" => AssistantOverridesCredentialDiscriminatorProvider.SlackWebhook,
                 "slack.oauth2-authorization" => AssistantOverridesCredentialDiscriminatorProvider.SlackOauth2Authorization,
                 "smallest-ai" => AssistantOverridesCredentialDiscriminatorProvider.SmallestAi,
