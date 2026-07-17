@@ -134,6 +134,15 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CallHookCallEnding, global::Vapi.CallHookAssistantSpeechInterrupted, global::Vapi.CallHookCustomerSpeechInterrupted, global::Vapi.CallHookCustomerSpeechTimeout, global::Vapi.SessionCreatedHook>>? Hooks { get; set; }
 
         /// <summary>
+        /// This is the latest version label (e.g. `v3`) of the assistant in the<br/>
+        /// version history. `null` while the org is not yet<br/>
+        /// onboarded to versioning, or for assistants that have not yet been<br/>
+        /// published under it.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latestVersion")]
+        public string? LatestVersion { get; set; }
+
+        /// <summary>
         /// This is the name of the assistant.<br/>
         /// This is required when you want to transfer between assistants in a call.
         /// </summary>
@@ -365,6 +374,12 @@ namespace Vapi
         /// <param name="hooks">
         /// This is a set of actions that will be performed on certain events.
         /// </param>
+        /// <param name="latestVersion">
+        /// This is the latest version label (e.g. `v3`) of the assistant in the<br/>
+        /// version history. `null` while the org is not yet<br/>
+        /// onboarded to versioning, or for assistants that have not yet been<br/>
+        /// published under it.
+        /// </param>
         /// <param name="name">
         /// This is the name of the assistant.<br/>
         /// This is required when you want to transfer between assistants in a call.
@@ -455,6 +470,7 @@ namespace Vapi
             global::Vapi.LangfuseObservabilityPlan? observabilityPlan,
             global::System.Collections.Generic.IList<global::Vapi.CredentialsItem4>? credentials,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CallHookCallEnding, global::Vapi.CallHookAssistantSpeechInterrupted, global::Vapi.CallHookCustomerSpeechInterrupted, global::Vapi.CallHookCustomerSpeechTimeout, global::Vapi.SessionCreatedHook>>? hooks,
+            string? latestVersion,
             string? name,
             string? voicemailMessage,
             string? endCallMessage,
@@ -486,6 +502,7 @@ namespace Vapi
             this.ObservabilityPlan = observabilityPlan;
             this.Credentials = credentials;
             this.Hooks = hooks;
+            this.LatestVersion = latestVersion;
             this.Name = name;
             this.VoicemailMessage = voicemailMessage;
             this.EndCallMessage = endCallMessage;

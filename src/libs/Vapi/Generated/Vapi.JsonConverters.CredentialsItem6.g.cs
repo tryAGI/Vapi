@@ -17,397 +17,404 @@ namespace Vapi.JsonConverters
 
 
             var readerCopy = reader;
-            var discriminatorTypeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.WorkflowCredentialDiscriminator), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.WorkflowCredentialDiscriminator> ??
-                            throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.WorkflowCredentialDiscriminator)}");
+            var discriminatorTypeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.AssistantVersionCredentialDiscriminator), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.AssistantVersionCredentialDiscriminator> ??
+                            throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.AssistantVersionCredentialDiscriminator)}");
             var discriminator = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, discriminatorTypeInfo);
 
             global::Vapi.CreateAnthropicCredentialDTO? anthropic = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Anthropic)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Anthropic)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateAnthropicCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateAnthropicCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateAnthropicCredentialDTO)}");
                 anthropic = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateAnthropicBedrockCredentialDTO? anthropicBedrock = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.AnthropicBedrock)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.AnthropicBedrock)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateAnthropicBedrockCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateAnthropicBedrockCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateAnthropicBedrockCredentialDTO)}");
                 anthropicBedrock = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateAnyscaleCredentialDTO? anyscale = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Anyscale)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Anyscale)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateAnyscaleCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateAnyscaleCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateAnyscaleCredentialDTO)}");
                 anyscale = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateAssemblyAICredentialDTO? assemblyAi = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.AssemblyAi)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.AssemblyAi)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateAssemblyAICredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateAssemblyAICredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateAssemblyAICredentialDTO)}");
                 assemblyAi = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateAzureCredentialDTO? azure = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Azure)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Azure)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateAzureCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateAzureCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateAzureCredentialDTO)}");
                 azure = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateAzureOpenAICredentialDTO? azureOpenai = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.AzureOpenai)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.AzureOpenai)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateAzureOpenAICredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateAzureOpenAICredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateAzureOpenAICredentialDTO)}");
                 azureOpenai = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateByoSipTrunkCredentialDTO? byoSipTrunk = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.ByoSipTrunk)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.ByoSipTrunk)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateByoSipTrunkCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateByoSipTrunkCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateByoSipTrunkCredentialDTO)}");
                 byoSipTrunk = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateCartesiaCredentialDTO? cartesia = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Cartesia)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Cartesia)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateCartesiaCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateCartesiaCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateCartesiaCredentialDTO)}");
                 cartesia = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateCerebrasCredentialDTO? cerebras = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Cerebras)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Cerebras)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateCerebrasCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateCerebrasCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateCerebrasCredentialDTO)}");
                 cerebras = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateCloudflareCredentialDTO? cloudflare = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Cloudflare)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Cloudflare)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateCloudflareCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateCloudflareCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateCloudflareCredentialDTO)}");
                 cloudflare = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateCustomLLMCredentialDTO? customLlm = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.CustomLlm)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.CustomLlm)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateCustomLLMCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateCustomLLMCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateCustomLLMCredentialDTO)}");
                 customLlm = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateDeepgramCredentialDTO? deepgram = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Deepgram)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Deepgram)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateDeepgramCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateDeepgramCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateDeepgramCredentialDTO)}");
                 deepgram = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateDeepInfraCredentialDTO? deepinfra = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Deepinfra)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Deepinfra)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateDeepInfraCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateDeepInfraCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateDeepInfraCredentialDTO)}");
                 deepinfra = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateDeepSeekCredentialDTO? deepSeek = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.DeepSeek)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.DeepSeek)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateDeepSeekCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateDeepSeekCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateDeepSeekCredentialDTO)}");
                 deepSeek = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateElevenLabsCredentialDTO? elevenlabs = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Elevenlabs)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Elevenlabs)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateElevenLabsCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateElevenLabsCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateElevenLabsCredentialDTO)}");
                 elevenlabs = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateGcpCredentialDTO? gcp = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Gcp)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Gcp)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateGcpCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateGcpCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateGcpCredentialDTO)}");
                 gcp = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateGladiaCredentialDTO? gladia = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Gladia)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Gladia)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateGladiaCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateGladiaCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateGladiaCredentialDTO)}");
                 gladia = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateGoHighLevelCredentialDTO? gohighlevel = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Gohighlevel)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Gohighlevel)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateGoHighLevelCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateGoHighLevelCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateGoHighLevelCredentialDTO)}");
                 gohighlevel = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateGoogleCredentialDTO? google = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Google)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Google)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateGoogleCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateGoogleCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateGoogleCredentialDTO)}");
                 google = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateGroqCredentialDTO? groq = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Groq)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Groq)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateGroqCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateGroqCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateGroqCredentialDTO)}");
                 groq = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateHumeCredentialDTO? hume = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Hume)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Hume)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateHumeCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateHumeCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateHumeCredentialDTO)}");
                 hume = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateInflectionAICredentialDTO? inflectionAi = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.InflectionAi)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.InflectionAi)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateInflectionAICredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateInflectionAICredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateInflectionAICredentialDTO)}");
                 inflectionAi = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateLangfuseCredentialDTO? langfuse = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Langfuse)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Langfuse)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateLangfuseCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateLangfuseCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateLangfuseCredentialDTO)}");
                 langfuse = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateLmntCredentialDTO? lmnt = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Lmnt)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Lmnt)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateLmntCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateLmntCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateLmntCredentialDTO)}");
                 lmnt = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateMakeCredentialDTO? make = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Make)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Make)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateMakeCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateMakeCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateMakeCredentialDTO)}");
                 make = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateMistralCredentialDTO? mistral = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Mistral)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Mistral)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateMistralCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateMistralCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateMistralCredentialDTO)}");
                 mistral = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateNeuphonicCredentialDTO? neuphonic = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Neuphonic)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Neuphonic)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateNeuphonicCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateNeuphonicCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateNeuphonicCredentialDTO)}");
                 neuphonic = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateOpenAICredentialDTO? openai = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Openai)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Openai)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateOpenAICredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateOpenAICredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateOpenAICredentialDTO)}");
                 openai = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateOpenRouterCredentialDTO? openrouter = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Openrouter)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Openrouter)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateOpenRouterCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateOpenRouterCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateOpenRouterCredentialDTO)}");
                 openrouter = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreatePerplexityAICredentialDTO? perplexityAi = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.PerplexityAi)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.PerplexityAi)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreatePerplexityAICredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreatePerplexityAICredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreatePerplexityAICredentialDTO)}");
                 perplexityAi = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreatePlayHTCredentialDTO? playht = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Playht)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Playht)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreatePlayHTCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreatePlayHTCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreatePlayHTCredentialDTO)}");
                 playht = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateRimeAICredentialDTO? rimeAi = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.RimeAi)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.RimeAi)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateRimeAICredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateRimeAICredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateRimeAICredentialDTO)}");
                 rimeAi = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateRunpodCredentialDTO? runpod = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Runpod)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Runpod)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateRunpodCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateRunpodCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateRunpodCredentialDTO)}");
                 runpod = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateS3CredentialDTO? s3 = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.S3)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.S3)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateS3CredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateS3CredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateS3CredentialDTO)}");
                 s3 = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+            global::Vapi.CreateS3CompatibleCredentialDTO? s3Compatible = default;
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.S3Compatible)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateS3CompatibleCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateS3CompatibleCredentialDTO> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateS3CompatibleCredentialDTO)}");
+                s3Compatible = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
             global::Vapi.CreateSmallestAICredentialDTO? smallestAi = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.SmallestAi)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.SmallestAi)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateSmallestAICredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateSmallestAICredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateSmallestAICredentialDTO)}");
                 smallestAi = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateSpeechmaticsCredentialDTO? speechmatics = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Speechmatics)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Speechmatics)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateSpeechmaticsCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateSpeechmaticsCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateSpeechmaticsCredentialDTO)}");
                 speechmatics = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateSonioxCredentialDTO? soniox = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Soniox)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Soniox)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateSonioxCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateSonioxCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateSonioxCredentialDTO)}");
                 soniox = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateSupabaseCredentialDTO? supabase = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Supabase)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Supabase)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateSupabaseCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateSupabaseCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateSupabaseCredentialDTO)}");
                 supabase = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateTavusCredentialDTO? tavus = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Tavus)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Tavus)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateTavusCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateTavusCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateTavusCredentialDTO)}");
                 tavus = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateTogetherAICredentialDTO? togetherAi = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.TogetherAi)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.TogetherAi)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateTogetherAICredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateTogetherAICredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateTogetherAICredentialDTO)}");
                 togetherAi = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateTwilioCredentialDTO? twilio = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Twilio)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Twilio)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateTwilioCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateTwilioCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateTwilioCredentialDTO)}");
                 twilio = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateVonageCredentialDTO? vonage = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Vonage)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Vonage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateVonageCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateVonageCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateVonageCredentialDTO)}");
                 vonage = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateWebhookCredentialDTO? webhook = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Webhook)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Webhook)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateWebhookCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateWebhookCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateWebhookCredentialDTO)}");
                 webhook = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateCustomCredentialDTO? customCredential = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.CustomCredential)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.CustomCredential)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateCustomCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateCustomCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateCustomCredentialDTO)}");
                 customCredential = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateXAiCredentialDTO? xai = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Xai)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Xai)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateXAiCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateXAiCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateXAiCredentialDTO)}");
                 xai = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateMicrosoftCredentialDTO? microsoft = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Microsoft)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Microsoft)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateMicrosoftCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateMicrosoftCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateMicrosoftCredentialDTO)}");
                 microsoft = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateGoogleCalendarOAuth2ClientCredentialDTO? googleCalendarOauth2Client = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.GoogleCalendarOauth2Client)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.GoogleCalendarOauth2Client)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateGoogleCalendarOAuth2ClientCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateGoogleCalendarOAuth2ClientCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateGoogleCalendarOAuth2ClientCredentialDTO)}");
                 googleCalendarOauth2Client = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateGoogleCalendarOAuth2AuthorizationCredentialDTO? googleCalendarOauth2Authorization = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.GoogleCalendarOauth2Authorization)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.GoogleCalendarOauth2Authorization)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateGoogleCalendarOAuth2AuthorizationCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateGoogleCalendarOAuth2AuthorizationCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateGoogleCalendarOAuth2AuthorizationCredentialDTO)}");
                 googleCalendarOauth2Authorization = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateGoogleSheetsOAuth2AuthorizationCredentialDTO? googleSheetsOauth2Authorization = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.GoogleSheetsOauth2Authorization)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.GoogleSheetsOauth2Authorization)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateGoogleSheetsOAuth2AuthorizationCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateGoogleSheetsOAuth2AuthorizationCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateGoogleSheetsOAuth2AuthorizationCredentialDTO)}");
                 googleSheetsOauth2Authorization = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateSlackOAuth2AuthorizationCredentialDTO? slackOauth2Authorization = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.SlackOauth2Authorization)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.SlackOauth2Authorization)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateSlackOAuth2AuthorizationCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateSlackOAuth2AuthorizationCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateSlackOAuth2AuthorizationCredentialDTO)}");
                 slackOauth2Authorization = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateGoHighLevelMCPCredentialDTO? ghlOauth2Authorization = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.GhlOauth2Authorization)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.GhlOauth2Authorization)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateGoHighLevelMCPCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateGoHighLevelMCPCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateGoHighLevelMCPCredentialDTO)}");
                 ghlOauth2Authorization = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateInworldCredentialDTO? inworld = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Inworld)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Inworld)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateInworldCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateInworldCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateInworldCredentialDTO)}");
                 inworld = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateMinimaxCredentialDTO? minimax = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Minimax)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Minimax)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateMinimaxCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateMinimaxCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateMinimaxCredentialDTO)}");
                 minimax = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateWellSaidCredentialDTO? wellsaid = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Wellsaid)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Wellsaid)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateWellSaidCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateWellSaidCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateWellSaidCredentialDTO)}");
                 wellsaid = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateEmailCredentialDTO? email = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.Email)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.Email)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateEmailCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateEmailCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateEmailCredentialDTO)}");
                 email = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.CreateSlackWebhookCredentialDTO? slackWebhook = default;
-            if (discriminator?.Provider == global::Vapi.WorkflowCredentialDiscriminatorProvider.SlackWebhook)
+            if (discriminator?.Provider == global::Vapi.AssistantVersionCredentialDiscriminatorProvider.SlackWebhook)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateSlackWebhookCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateSlackWebhookCredentialDTO> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateSlackWebhookCredentialDTO)}");
@@ -483,6 +490,8 @@ namespace Vapi.JsonConverters
                 runpod,
 
                 s3,
+
+                s3Compatible,
 
                 smallestAi,
 
@@ -744,6 +753,12 @@ namespace Vapi.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateS3CredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateS3CredentialDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateS3CredentialDTO).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.S3!, typeInfo);
+            }
+            else if (value.IsS3Compatible)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateS3CompatibleCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateS3CompatibleCredentialDTO?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateS3CompatibleCredentialDTO).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.S3Compatible!, typeInfo);
             }
             else if (value.IsSmallestAi)
             {

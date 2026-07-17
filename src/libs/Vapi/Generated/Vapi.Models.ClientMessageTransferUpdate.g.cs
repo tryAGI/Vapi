@@ -16,6 +16,15 @@ namespace Vapi
         public global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? PhoneNumber { get; set; }
 
         /// <summary>
+        /// This is the version label (e.g. `v3`) of the assistant the call was<br/>
+        /// configured with. `null` for inline assistants, squad/workflow calls,<br/>
+        /// pre-resolution assistant-request messages, and orgs not on<br/>
+        /// assistant versioning.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
+        public string? AssistantVersion { get; set; }
+
+        /// <summary>
         /// This is the type of the message. "transfer-update" is sent whenever a transfer happens.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
@@ -89,6 +98,12 @@ namespace Vapi
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
+        /// <param name="assistantVersion">
+        /// This is the version label (e.g. `v3`) of the assistant the call was<br/>
+        /// configured with. `null` for inline assistants, squad/workflow calls,<br/>
+        /// pre-resolution assistant-request messages, and orgs not on<br/>
+        /// assistant versioning.
+        /// </param>
         /// <param name="type">
         /// This is the type of the message. "transfer-update" is sent whenever a transfer happens.
         /// </param>
@@ -124,6 +139,7 @@ namespace Vapi
 #endif
         public ClientMessageTransferUpdate(
             global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? phoneNumber,
+            string? assistantVersion,
             global::Vapi.ClientMessageTransferUpdateType type,
             global::Vapi.OneOf<global::Vapi.TransferDestinationAssistant, global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>? destination,
             double? timestamp,
@@ -136,6 +152,7 @@ namespace Vapi
             object? fromStepRecord)
         {
             this.PhoneNumber = phoneNumber;
+            this.AssistantVersion = assistantVersion;
             this.Type = type;
             this.Destination = destination;
             this.Timestamp = timestamp;

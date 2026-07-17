@@ -31,6 +31,10 @@ namespace Vapi
         /// <summary>
         /// Create Call
         /// </summary>
+        /// <param name="assistantVersion">
+        /// This is the assistant version to use for this call. Supported only with<br/>
+        /// direct `assistantId`. Omit to follow the latest version.
+        /// </param>
         /// <param name="transport">
         /// This is the transport of the call.
         /// </param>
@@ -116,6 +120,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::Vapi.Call, global::Vapi.CallBatchResponse>> CallControllerCreateAsync(
+            string? assistantVersion = default,
             global::Vapi.OneOf<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>? transport = default,
             global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers = default,
             string? name = default,

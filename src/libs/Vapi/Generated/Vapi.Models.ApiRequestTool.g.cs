@@ -9,6 +9,12 @@ namespace Vapi
     public sealed partial class ApiRequestTool
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latestVersion")]
+        public string? LatestVersion { get; set; }
+
+        /// <summary>
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
@@ -365,6 +371,7 @@ namespace Vapi
         /// <param name="url">
         /// This is where the request will be sent.
         /// </param>
+        /// <param name="latestVersion"></param>
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
@@ -622,6 +629,7 @@ namespace Vapi
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             string url,
+            string? latestVersion,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
             global::Vapi.ApiRequestToolType type,
             string? name,
@@ -636,6 +644,7 @@ namespace Vapi
             global::Vapi.BackoffPlan? backoffPlan,
             global::Vapi.VariableExtractionPlan? variableExtractionPlan)
         {
+            this.LatestVersion = latestVersion;
             this.Messages = messages;
             this.Type = type;
             this.Name = name;

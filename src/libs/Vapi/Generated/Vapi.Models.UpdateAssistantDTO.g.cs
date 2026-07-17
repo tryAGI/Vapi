@@ -125,7 +125,7 @@ namespace Vapi
         /// These are dynamic credentials that will be used for the assistant calls. By default, all the credentials are available for use in the call but you can supplement an additional credentials using this. Dynamic credentials override existing credentials.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("credentials")]
-        public global::System.Collections.Generic.IList<global::Vapi.CredentialsItem5>? Credentials { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.CredentialsItem9>? Credentials { get; set; }
 
         /// <summary>
         /// This is a set of actions that will be performed on certain events.
@@ -409,7 +409,7 @@ namespace Vapi
             bool? modelOutputInMessagesEnabled,
             global::System.Collections.Generic.IList<global::Vapi.TransportConfigurationTwilio>? transportConfigurations,
             global::Vapi.LangfuseObservabilityPlan? observabilityPlan,
-            global::System.Collections.Generic.IList<global::Vapi.CredentialsItem5>? credentials,
+            global::System.Collections.Generic.IList<global::Vapi.CredentialsItem9>? credentials,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CallHookCallEnding, global::Vapi.CallHookAssistantSpeechInterrupted, global::Vapi.CallHookCustomerSpeechInterrupted, global::Vapi.CallHookCustomerSpeechTimeout, global::Vapi.SessionCreatedHook>>? hooks,
             string? name,
             string? voicemailMessage,

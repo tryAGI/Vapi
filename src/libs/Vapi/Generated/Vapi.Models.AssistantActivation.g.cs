@@ -9,6 +9,15 @@ namespace Vapi
     public sealed partial class AssistantActivation
     {
         /// <summary>
+        /// This is the version label (e.g. `v3`) of the assistant active when<br/>
+        /// the activation row was recorded. `null` for inline assistants,<br/>
+        /// orgs not on assistant versioning, and parent assistants that have<br/>
+        /// not yet been published under it.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
+        public string? AssistantVersion { get; set; }
+
+        /// <summary>
         /// This is the name of the assistant that was active during the call.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistantName")]
@@ -33,6 +42,12 @@ namespace Vapi
         /// <param name="assistantName">
         /// This is the name of the assistant that was active during the call.
         /// </param>
+        /// <param name="assistantVersion">
+        /// This is the version label (e.g. `v3`) of the assistant active when<br/>
+        /// the activation row was recorded. `null` for inline assistants,<br/>
+        /// orgs not on assistant versioning, and parent assistants that have<br/>
+        /// not yet been published under it.
+        /// </param>
         /// <param name="assistantId">
         /// This is the ID of the assistant that was active during the call.
         /// </param>
@@ -41,8 +56,10 @@ namespace Vapi
 #endif
         public AssistantActivation(
             string assistantName,
+            string? assistantVersion,
             string? assistantId)
         {
+            this.AssistantVersion = assistantVersion;
             this.AssistantName = assistantName ?? throw new global::System.ArgumentNullException(nameof(assistantName));
             this.AssistantId = assistantId;
         }

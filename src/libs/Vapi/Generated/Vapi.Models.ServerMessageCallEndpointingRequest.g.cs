@@ -16,6 +16,15 @@ namespace Vapi
         public global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? PhoneNumber { get; set; }
 
         /// <summary>
+        /// This is the version label (e.g. `v3`) of the assistant the call was<br/>
+        /// configured with. `null` for inline assistants, squad/workflow calls,<br/>
+        /// pre-resolution assistant-request messages, and orgs not on<br/>
+        /// assistant versioning.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
+        public string? AssistantVersion { get; set; }
+
+        /// <summary>
         /// This is the type of the message. "call.endpointing.request" is sent when using `assistant.startSpeakingPlan.smartEndpointingPlan={ "provider": "custom-endpointing-model" }`.<br/>
         /// Here is what the request will look like:<br/>
         /// POST https://{assistant.startSpeakingPlan.smartEndpointingPlan.server.url}<br/>
@@ -108,6 +117,12 @@ namespace Vapi
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
+        /// <param name="assistantVersion">
+        /// This is the version label (e.g. `v3`) of the assistant the call was<br/>
+        /// configured with. `null` for inline assistants, squad/workflow calls,<br/>
+        /// pre-resolution assistant-request messages, and orgs not on<br/>
+        /// assistant versioning.
+        /// </param>
         /// <param name="type">
         /// This is the type of the message. "call.endpointing.request" is sent when using `assistant.startSpeakingPlan.smartEndpointingPlan={ "provider": "custom-endpointing-model" }`.<br/>
         /// Here is what the request will look like:<br/>
@@ -160,6 +175,7 @@ namespace Vapi
         public ServerMessageCallEndpointingRequest(
             global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage> messagesOpenAIFormatted,
             global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? phoneNumber,
+            string? assistantVersion,
             global::Vapi.ServerMessageCallEndpointingRequestType type,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.UserMessage, global::Vapi.SystemMessage, global::Vapi.BotMessage, global::Vapi.ToolCallMessage, global::Vapi.ToolCallResultMessage>>? messages,
             double? timestamp,
@@ -170,6 +186,7 @@ namespace Vapi
             global::Vapi.Chat? chat)
         {
             this.PhoneNumber = phoneNumber;
+            this.AssistantVersion = assistantVersion;
             this.Type = type;
             this.Messages = messages;
             this.MessagesOpenAIFormatted = messagesOpenAIFormatted ?? throw new global::System.ArgumentNullException(nameof(messagesOpenAIFormatted));

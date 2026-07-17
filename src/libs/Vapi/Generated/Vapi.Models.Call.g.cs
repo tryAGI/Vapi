@@ -74,6 +74,13 @@ namespace Vapi
         public global::Vapi.OneOf<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>? Destination { get; set; }
 
         /// <summary>
+        /// This is the assistant version to use for this call. Supported only with<br/>
+        /// direct `assistantId`. Omit to follow the latest version.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
+        public string? AssistantVersion { get; set; }
+
+        /// <summary>
         /// This is the transport of the call.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("transport")]
@@ -339,6 +346,10 @@ namespace Vapi
         /// <param name="destination">
         /// This is the destination where the call ended up being transferred to. If the call was not transferred, this will be empty.
         /// </param>
+        /// <param name="assistantVersion">
+        /// This is the assistant version to use for this call. Supported only with<br/>
+        /// direct `assistantId`. Omit to follow the latest version.
+        /// </param>
         /// <param name="transport">
         /// This is the transport of the call.
         /// </param>
@@ -462,6 +473,7 @@ namespace Vapi
             global::Vapi.CallEndedReason? endedReason,
             string? endedMessage,
             global::Vapi.OneOf<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>? destination,
+            string? assistantVersion,
             global::Vapi.OneOf<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>? transport,
             global::System.DateTime? startedAt,
             global::System.DateTime? endedAt,
@@ -497,6 +509,7 @@ namespace Vapi
             this.EndedReason = endedReason;
             this.EndedMessage = endedMessage;
             this.Destination = destination;
+            this.AssistantVersion = assistantVersion;
             this.Transport = transport;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));

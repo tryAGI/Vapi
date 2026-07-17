@@ -16,6 +16,15 @@ namespace Vapi
         public global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? PhoneNumber { get; set; }
 
         /// <summary>
+        /// This is the version label (e.g. `v3`) of the assistant the call was<br/>
+        /// configured with. `null` for inline assistants, squad/workflow calls,<br/>
+        /// pre-resolution assistant-request messages, and orgs not on<br/>
+        /// assistant versioning.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
+        public string? AssistantVersion { get; set; }
+
+        /// <summary>
         /// This is the type of the message. "phone-call-control" is an advanced type of message.<br/>
         /// When it is requested in `assistant.serverMessages`, the hangup and forwarding responsibilities are delegated to your server. Vapi will no longer do the actual transfer and hangup.
         /// </summary>
@@ -90,6 +99,12 @@ namespace Vapi
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
+        /// <param name="assistantVersion">
+        /// This is the version label (e.g. `v3`) of the assistant the call was<br/>
+        /// configured with. `null` for inline assistants, squad/workflow calls,<br/>
+        /// pre-resolution assistant-request messages, and orgs not on<br/>
+        /// assistant versioning.
+        /// </param>
         /// <param name="type">
         /// This is the type of the message. "phone-call-control" is an advanced type of message.<br/>
         /// When it is requested in `assistant.serverMessages`, the hangup and forwarding responsibilities are delegated to your server. Vapi will no longer do the actual transfer and hangup.
@@ -122,6 +137,7 @@ namespace Vapi
         public ServerMessagePhoneCallControl(
             global::Vapi.ServerMessagePhoneCallControlRequest request,
             global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? phoneNumber,
+            string? assistantVersion,
             global::Vapi.ServerMessagePhoneCallControlType type,
             global::Vapi.OneOf<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>? destination,
             double? timestamp,
@@ -132,6 +148,7 @@ namespace Vapi
             global::Vapi.Chat? chat)
         {
             this.PhoneNumber = phoneNumber;
+            this.AssistantVersion = assistantVersion;
             this.Type = type;
             this.Request = request;
             this.Destination = destination;

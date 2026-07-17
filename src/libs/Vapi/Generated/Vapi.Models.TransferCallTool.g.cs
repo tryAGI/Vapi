@@ -9,6 +9,12 @@ namespace Vapi
     public sealed partial class TransferCallTool
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latestVersion")]
+        public string? LatestVersion { get; set; }
+
+        /// <summary>
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
@@ -155,6 +161,7 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the tool was last updated.
         /// </param>
+        /// <param name="latestVersion"></param>
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
@@ -246,11 +253,13 @@ namespace Vapi
             string orgId,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
+            string? latestVersion,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
             global::Vapi.TransferCallToolType type,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.TransferDestinationAssistant, global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>>? destinations,
             global::Vapi.ToolRejectionPlan? rejectionPlan)
         {
+            this.LatestVersion = latestVersion;
             this.Messages = messages;
             this.Type = type;
             this.Destinations = destinations;

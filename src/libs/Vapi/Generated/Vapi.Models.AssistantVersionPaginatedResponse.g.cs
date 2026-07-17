@@ -13,20 +13,14 @@ namespace Vapi
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("results")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required byte[] Results { get; set; }
+        public required global::System.Collections.Generic.IList<global::Vapi.AssistantVersion> Results { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Vapi.PaginationMeta Metadata { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("nextPageState")]
-        public string? NextPageState { get; set; }
+        public required global::Vapi.AssistantVersionPaginatedMetadata Metadata { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -39,18 +33,15 @@ namespace Vapi
         /// </summary>
         /// <param name="results"></param>
         /// <param name="metadata"></param>
-        /// <param name="nextPageState"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AssistantVersionPaginatedResponse(
-            byte[] results,
-            global::Vapi.PaginationMeta metadata,
-            string? nextPageState)
+            global::System.Collections.Generic.IList<global::Vapi.AssistantVersion> results,
+            global::Vapi.AssistantVersionPaginatedMetadata metadata)
         {
             this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
             this.Metadata = metadata ?? throw new global::System.ArgumentNullException(nameof(metadata));
-            this.NextPageState = nextPageState;
         }
 
         /// <summary>

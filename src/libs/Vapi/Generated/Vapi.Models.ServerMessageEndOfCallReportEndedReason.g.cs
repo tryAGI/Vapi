@@ -1211,6 +1211,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallStartAssistantVersionErrorValidation,
+        /// <summary>
+        /// 
+        /// </summary>
         CallStartErrorEnterpriseFeatureNotAvailableRecordingConsent,
         /// <summary>
         /// 
@@ -2694,6 +2698,7 @@ namespace Vapi
                 ServerMessageEndOfCallReportEndedReason.CallRingingHookExecutedSay => "call.ringing.hook-executed-say",
                 ServerMessageEndOfCallReportEndedReason.CallRingingHookExecutedTransfer => "call.ringing.hook-executed-transfer",
                 ServerMessageEndOfCallReportEndedReason.CallRingingSipInboundCallerHungupBeforeCallConnect => "call.ringing.sip-inbound-caller-hungup-before-call-connect",
+                ServerMessageEndOfCallReportEndedReason.CallStartAssistantVersionErrorValidation => "call.start.assistant-version-error-validation",
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorEnterpriseFeatureNotAvailableRecordingConsent => "call.start.error-enterprise-feature-not-available-recording-consent",
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorFraudCheckFailed => "call.start.error-fraud-check-failed",
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorGetAssistant => "call.start.error-get-assistant",
@@ -3297,6 +3302,7 @@ namespace Vapi
                 "call.ringing.hook-executed-say" => ServerMessageEndOfCallReportEndedReason.CallRingingHookExecutedSay,
                 "call.ringing.hook-executed-transfer" => ServerMessageEndOfCallReportEndedReason.CallRingingHookExecutedTransfer,
                 "call.ringing.sip-inbound-caller-hungup-before-call-connect" => ServerMessageEndOfCallReportEndedReason.CallRingingSipInboundCallerHungupBeforeCallConnect,
+                "call.start.assistant-version-error-validation" => ServerMessageEndOfCallReportEndedReason.CallStartAssistantVersionErrorValidation,
                 "call.start.error-enterprise-feature-not-available-recording-consent" => ServerMessageEndOfCallReportEndedReason.CallStartErrorEnterpriseFeatureNotAvailableRecordingConsent,
                 "call.start.error-fraud-check-failed" => ServerMessageEndOfCallReportEndedReason.CallStartErrorFraudCheckFailed,
                 "call.start.error-get-assistant" => ServerMessageEndOfCallReportEndedReason.CallStartErrorGetAssistant,

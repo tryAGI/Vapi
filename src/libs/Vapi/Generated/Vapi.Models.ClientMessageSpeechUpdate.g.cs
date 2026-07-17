@@ -16,6 +16,15 @@ namespace Vapi
         public global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? PhoneNumber { get; set; }
 
         /// <summary>
+        /// This is the version label (e.g. `v3`) of the assistant the call was<br/>
+        /// configured with. `null` for inline assistants, squad/workflow calls,<br/>
+        /// pre-resolution assistant-request messages, and orgs not on<br/>
+        /// assistant versioning.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
+        public string? AssistantVersion { get; set; }
+
+        /// <summary>
         /// This is the type of the message. "speech-update" is sent whenever assistant or user start or stop speaking.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
@@ -86,6 +95,12 @@ namespace Vapi
         /// <param name="phoneNumber">
         /// This is the phone number that the message is associated with.
         /// </param>
+        /// <param name="assistantVersion">
+        /// This is the version label (e.g. `v3`) of the assistant the call was<br/>
+        /// configured with. `null` for inline assistants, squad/workflow calls,<br/>
+        /// pre-resolution assistant-request messages, and orgs not on<br/>
+        /// assistant versioning.
+        /// </param>
         /// <param name="type">
         /// This is the type of the message. "speech-update" is sent whenever assistant or user start or stop speaking.
         /// </param>
@@ -111,6 +126,7 @@ namespace Vapi
             global::Vapi.ClientMessageSpeechUpdateStatus status,
             global::Vapi.ClientMessageSpeechUpdateRole role,
             global::Vapi.OneOf<global::Vapi.CreateByoPhoneNumberDTO, global::Vapi.CreateTwilioPhoneNumberDTO, global::Vapi.CreateVonagePhoneNumberDTO, global::Vapi.CreateVapiPhoneNumberDTO, global::Vapi.CreateTelnyxPhoneNumberDTO>? phoneNumber,
+            string? assistantVersion,
             global::Vapi.ClientMessageSpeechUpdateType type,
             double? turn,
             double? timestamp,
@@ -119,6 +135,7 @@ namespace Vapi
             global::Vapi.CreateAssistantDTO? assistant)
         {
             this.PhoneNumber = phoneNumber;
+            this.AssistantVersion = assistantVersion;
             this.Type = type;
             this.Status = status;
             this.Role = role;
