@@ -16473,7 +16473,8 @@
               "claude-opus-4-6",
               "claude-sonnet-4-20250514",
               "claude-sonnet-4-5-20250929",
-              "claude-sonnet-4-6"
+              "claude-sonnet-4-6",
+              "claude-sonnet-5"
             ]
           },
           "provider": {
@@ -18380,6 +18381,7 @@
             "type": "string",
             "description": "This is the OpenAI model that will be used.\n\nWhen using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.\nThis is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.\n\n@default undefined",
             "enum": [
+              "chat-latest",
               "chatgpt-4o-latest",
               "gpt-3.5-turbo",
               "gpt-3.5-turbo-0125",
@@ -18494,6 +18496,10 @@
               "gpt-5.4-mini",
               "gpt-5.4-mini:australiaeast",
               "gpt-5.4-nano",
+              "gpt-5.5",
+              "gpt-5.6-luna",
+              "gpt-5.6-sol",
+              "gpt-5.6-terra",
               "gpt-realtime-2",
               "gpt-realtime-2025-08-28",
               "gpt-realtime-mini-2025-12-15",
@@ -18514,6 +18520,7 @@
             "items": {
               "type": "string",
               "enum": [
+                "chat-latest",
                 "chatgpt-4o-latest",
                 "gpt-3.5-turbo",
                 "gpt-3.5-turbo-0125",
@@ -18628,6 +18635,10 @@
                 "gpt-5.4-mini",
                 "gpt-5.4-mini:australiaeast",
                 "gpt-5.4-nano",
+                "gpt-5.5",
+                "gpt-5.6-luna",
+                "gpt-5.6-sol",
+                "gpt-5.6-terra",
                 "gpt-realtime-2",
                 "gpt-realtime-2025-08-28",
                 "gpt-realtime-mini-2025-12-15",
@@ -18649,7 +18660,7 @@
           },
           "promptCacheRetention": {
             "type": "string",
-            "description": "This controls the prompt cache retention policy for models that support extended caching (GPT-4.1, GPT-5 series).\n\n- `in_memory`: Default behavior, cache retained in GPU memory only\n- `24h`: Extended caching, keeps cached prefixes active for up to 24 hours by offloading to GPU-local storage\n\nOnly applies to models: gpt-5.4, gpt-5.4-mini, gpt-5.4-nano, gpt-5.2, gpt-5.1, gpt-5.1-codex, gpt-5.1-codex-mini, gpt-5.1-chat-latest, gpt-5, gpt-5-codex, gpt-4.1\n\n@default undefined (uses API default which is 'in_memory')",
+            "description": "This controls the prompt cache retention policy for models that support extended caching (GPT-4.1, GPT-5 series).\n\n- `in_memory`: Default behavior, cache retained in GPU memory only\n- `24h`: Extended caching, keeps cached prefixes active for up to 24 hours by offloading to GPU-local storage\n\nOnly applies to models: gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna, gpt-5.5, chat-latest, gpt-5.4, gpt-5.4-mini, gpt-5.4-nano, gpt-5.2, gpt-5.1, gpt-5.1-codex, gpt-5.1-codex-mini, gpt-5.1-chat-latest, gpt-5, gpt-5-codex, gpt-4.1\n\n@default undefined (uses API default which is 'in_memory')",
             "enum": [
               "24h",
               "in_memory"
@@ -19251,6 +19262,7 @@
             "description": "This is the OpenAI model that will be used.\n\nWhen using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.\nThis is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.",
             "maxLength": 100,
             "enum": [
+              "chat-latest",
               "chatgpt-4o-latest",
               "gpt-3.5-turbo",
               "gpt-3.5-turbo-0125",
@@ -19362,6 +19374,10 @@
               "gpt-5.4-mini",
               "gpt-5.4-mini:australiaeast",
               "gpt-5.4-nano",
+              "gpt-5.5",
+              "gpt-5.6-luna",
+              "gpt-5.6-sol",
+              "gpt-5.6-terra",
               "o1-mini",
               "o1-mini-2024-09-12",
               "o3",
@@ -19415,7 +19431,8 @@
               "claude-opus-4-6",
               "claude-sonnet-4-20250514",
               "claude-sonnet-4-5-20250929",
-              "claude-sonnet-4-6"
+              "claude-sonnet-4-6",
+              "claude-sonnet-5"
             ]
           },
           "thinking": {
@@ -58606,6 +58623,7 @@
             "description": "This is the OpenAI model that will be used.\n\nWhen using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.\nThis is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.",
             "maxLength": 100,
             "enum": [
+              "chat-latest",
               "chatgpt-4o-latest",
               "gpt-3.5-turbo",
               "gpt-3.5-turbo-0125",
@@ -58717,6 +58735,10 @@
               "gpt-5.4-mini",
               "gpt-5.4-mini:australiaeast",
               "gpt-5.4-nano",
+              "gpt-5.5",
+              "gpt-5.6-luna",
+              "gpt-5.6-sol",
+              "gpt-5.6-terra",
               "o1-mini",
               "o1-mini-2024-09-12",
               "o3",
@@ -58779,7 +58801,8 @@
               "claude-opus-4-6",
               "claude-sonnet-4-20250514",
               "claude-sonnet-4-5-20250929",
-              "claude-sonnet-4-6"
+              "claude-sonnet-4-6",
+              "claude-sonnet-5"
             ]
           },
           "thinking": {

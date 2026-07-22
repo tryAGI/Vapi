@@ -14,6 +14,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        ChatLatest,
+        /// <summary>
+        /// 
+        /// </summary>
         Chatgpt4oLatest,
         /// <summary>
         /// 
@@ -470,6 +474,22 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt55,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Luna,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Sol,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Terra,
+        /// <summary>
+        /// 
+        /// </summary>
         GptRealtime2,
         /// <summary>
         /// 
@@ -513,6 +533,7 @@ namespace Vapi
         {
             return value switch
             {
+                OpenAIModelModel.ChatLatest => "chat-latest",
                 OpenAIModelModel.Chatgpt4oLatest => "chatgpt-4o-latest",
                 OpenAIModelModel.Gpt35Turbo => "gpt-3.5-turbo",
                 OpenAIModelModel.Gpt35Turbo0125 => "gpt-3.5-turbo-0125",
@@ -627,6 +648,10 @@ namespace Vapi
                 OpenAIModelModel.Gpt54Mini => "gpt-5.4-mini",
                 OpenAIModelModel.Gpt54Mini_australiaeast => "gpt-5.4-mini:australiaeast",
                 OpenAIModelModel.Gpt54Nano => "gpt-5.4-nano",
+                OpenAIModelModel.Gpt55 => "gpt-5.5",
+                OpenAIModelModel.Gpt56Luna => "gpt-5.6-luna",
+                OpenAIModelModel.Gpt56Sol => "gpt-5.6-sol",
+                OpenAIModelModel.Gpt56Terra => "gpt-5.6-terra",
                 OpenAIModelModel.GptRealtime2 => "gpt-realtime-2",
                 OpenAIModelModel.GptRealtime20250828 => "gpt-realtime-2025-08-28",
                 OpenAIModelModel.GptRealtimeMini20251215 => "gpt-realtime-mini-2025-12-15",
@@ -645,6 +670,7 @@ namespace Vapi
         {
             return value switch
             {
+                "chat-latest" => OpenAIModelModel.ChatLatest,
                 "chatgpt-4o-latest" => OpenAIModelModel.Chatgpt4oLatest,
                 "gpt-3.5-turbo" => OpenAIModelModel.Gpt35Turbo,
                 "gpt-3.5-turbo-0125" => OpenAIModelModel.Gpt35Turbo0125,
@@ -759,6 +785,10 @@ namespace Vapi
                 "gpt-5.4-mini" => OpenAIModelModel.Gpt54Mini,
                 "gpt-5.4-mini:australiaeast" => OpenAIModelModel.Gpt54Mini_australiaeast,
                 "gpt-5.4-nano" => OpenAIModelModel.Gpt54Nano,
+                "gpt-5.5" => OpenAIModelModel.Gpt55,
+                "gpt-5.6-luna" => OpenAIModelModel.Gpt56Luna,
+                "gpt-5.6-sol" => OpenAIModelModel.Gpt56Sol,
+                "gpt-5.6-terra" => OpenAIModelModel.Gpt56Terra,
                 "gpt-realtime-2" => OpenAIModelModel.GptRealtime2,
                 "gpt-realtime-2025-08-28" => OpenAIModelModel.GptRealtime20250828,
                 "gpt-realtime-mini-2025-12-15" => OpenAIModelModel.GptRealtimeMini20251215,

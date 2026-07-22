@@ -13,6 +13,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        ChatLatest,
+        /// <summary>
+        /// 
+        /// </summary>
         Chatgpt4oLatest,
         /// <summary>
         /// 
@@ -457,6 +461,22 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt55,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Luna,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Sol,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Terra,
+        /// <summary>
+        /// 
+        /// </summary>
         O1Mini,
         /// <summary>
         /// 
@@ -488,6 +508,7 @@ namespace Vapi
         {
             return value switch
             {
+                WorkflowOpenAIModelModel.ChatLatest => "chat-latest",
                 WorkflowOpenAIModelModel.Chatgpt4oLatest => "chatgpt-4o-latest",
                 WorkflowOpenAIModelModel.Gpt35Turbo => "gpt-3.5-turbo",
                 WorkflowOpenAIModelModel.Gpt35Turbo0125 => "gpt-3.5-turbo-0125",
@@ -599,6 +620,10 @@ namespace Vapi
                 WorkflowOpenAIModelModel.Gpt54Mini => "gpt-5.4-mini",
                 WorkflowOpenAIModelModel.Gpt54Mini_australiaeast => "gpt-5.4-mini:australiaeast",
                 WorkflowOpenAIModelModel.Gpt54Nano => "gpt-5.4-nano",
+                WorkflowOpenAIModelModel.Gpt55 => "gpt-5.5",
+                WorkflowOpenAIModelModel.Gpt56Luna => "gpt-5.6-luna",
+                WorkflowOpenAIModelModel.Gpt56Sol => "gpt-5.6-sol",
+                WorkflowOpenAIModelModel.Gpt56Terra => "gpt-5.6-terra",
                 WorkflowOpenAIModelModel.O1Mini => "o1-mini",
                 WorkflowOpenAIModelModel.O1Mini20240912 => "o1-mini-2024-09-12",
                 WorkflowOpenAIModelModel.O3 => "o3",
@@ -614,6 +639,7 @@ namespace Vapi
         {
             return value switch
             {
+                "chat-latest" => WorkflowOpenAIModelModel.ChatLatest,
                 "chatgpt-4o-latest" => WorkflowOpenAIModelModel.Chatgpt4oLatest,
                 "gpt-3.5-turbo" => WorkflowOpenAIModelModel.Gpt35Turbo,
                 "gpt-3.5-turbo-0125" => WorkflowOpenAIModelModel.Gpt35Turbo0125,
@@ -725,6 +751,10 @@ namespace Vapi
                 "gpt-5.4-mini" => WorkflowOpenAIModelModel.Gpt54Mini,
                 "gpt-5.4-mini:australiaeast" => WorkflowOpenAIModelModel.Gpt54Mini_australiaeast,
                 "gpt-5.4-nano" => WorkflowOpenAIModelModel.Gpt54Nano,
+                "gpt-5.5" => WorkflowOpenAIModelModel.Gpt55,
+                "gpt-5.6-luna" => WorkflowOpenAIModelModel.Gpt56Luna,
+                "gpt-5.6-sol" => WorkflowOpenAIModelModel.Gpt56Sol,
+                "gpt-5.6-terra" => WorkflowOpenAIModelModel.Gpt56Terra,
                 "o1-mini" => WorkflowOpenAIModelModel.O1Mini,
                 "o1-mini-2024-09-12" => WorkflowOpenAIModelModel.O1Mini20240912,
                 "o3" => WorkflowOpenAIModelModel.O3,

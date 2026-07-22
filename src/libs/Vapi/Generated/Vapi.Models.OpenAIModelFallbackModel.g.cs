@@ -11,6 +11,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        ChatLatest,
+        /// <summary>
+        /// 
+        /// </summary>
         Chatgpt4oLatest,
         /// <summary>
         /// 
@@ -467,6 +471,22 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt55,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Luna,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Sol,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Terra,
+        /// <summary>
+        /// 
+        /// </summary>
         GptRealtime2,
         /// <summary>
         /// 
@@ -510,6 +530,7 @@ namespace Vapi
         {
             return value switch
             {
+                OpenAIModelFallbackModel.ChatLatest => "chat-latest",
                 OpenAIModelFallbackModel.Chatgpt4oLatest => "chatgpt-4o-latest",
                 OpenAIModelFallbackModel.Gpt35Turbo => "gpt-3.5-turbo",
                 OpenAIModelFallbackModel.Gpt35Turbo0125 => "gpt-3.5-turbo-0125",
@@ -624,6 +645,10 @@ namespace Vapi
                 OpenAIModelFallbackModel.Gpt54Mini => "gpt-5.4-mini",
                 OpenAIModelFallbackModel.Gpt54Mini_australiaeast => "gpt-5.4-mini:australiaeast",
                 OpenAIModelFallbackModel.Gpt54Nano => "gpt-5.4-nano",
+                OpenAIModelFallbackModel.Gpt55 => "gpt-5.5",
+                OpenAIModelFallbackModel.Gpt56Luna => "gpt-5.6-luna",
+                OpenAIModelFallbackModel.Gpt56Sol => "gpt-5.6-sol",
+                OpenAIModelFallbackModel.Gpt56Terra => "gpt-5.6-terra",
                 OpenAIModelFallbackModel.GptRealtime2 => "gpt-realtime-2",
                 OpenAIModelFallbackModel.GptRealtime20250828 => "gpt-realtime-2025-08-28",
                 OpenAIModelFallbackModel.GptRealtimeMini20251215 => "gpt-realtime-mini-2025-12-15",
@@ -642,6 +667,7 @@ namespace Vapi
         {
             return value switch
             {
+                "chat-latest" => OpenAIModelFallbackModel.ChatLatest,
                 "chatgpt-4o-latest" => OpenAIModelFallbackModel.Chatgpt4oLatest,
                 "gpt-3.5-turbo" => OpenAIModelFallbackModel.Gpt35Turbo,
                 "gpt-3.5-turbo-0125" => OpenAIModelFallbackModel.Gpt35Turbo0125,
@@ -756,6 +782,10 @@ namespace Vapi
                 "gpt-5.4-mini" => OpenAIModelFallbackModel.Gpt54Mini,
                 "gpt-5.4-mini:australiaeast" => OpenAIModelFallbackModel.Gpt54Mini_australiaeast,
                 "gpt-5.4-nano" => OpenAIModelFallbackModel.Gpt54Nano,
+                "gpt-5.5" => OpenAIModelFallbackModel.Gpt55,
+                "gpt-5.6-luna" => OpenAIModelFallbackModel.Gpt56Luna,
+                "gpt-5.6-sol" => OpenAIModelFallbackModel.Gpt56Sol,
+                "gpt-5.6-terra" => OpenAIModelFallbackModel.Gpt56Terra,
                 "gpt-realtime-2" => OpenAIModelFallbackModel.GptRealtime2,
                 "gpt-realtime-2025-08-28" => OpenAIModelFallbackModel.GptRealtime20250828,
                 "gpt-realtime-mini-2025-12-15" => OpenAIModelFallbackModel.GptRealtimeMini20251215,
