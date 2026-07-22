@@ -64,6 +64,10 @@ namespace Vapi
         /// 
         /// </summary>
         ClaudeSonnet46,
+        /// <summary>
+        /// 
+        /// </summary>
+        ClaudeSonnet5,
     }
 
     /// <summary>
@@ -92,6 +96,7 @@ namespace Vapi
                 AnthropicModelModel.ClaudeSonnet420250514 => "claude-sonnet-4-20250514",
                 AnthropicModelModel.ClaudeSonnet4520250929 => "claude-sonnet-4-5-20250929",
                 AnthropicModelModel.ClaudeSonnet46 => "claude-sonnet-4-6",
+                AnthropicModelModel.ClaudeSonnet5 => "claude-sonnet-5",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -116,6 +121,7 @@ namespace Vapi
                 "claude-sonnet-4-20250514" => AnthropicModelModel.ClaudeSonnet420250514,
                 "claude-sonnet-4-5-20250929" => AnthropicModelModel.ClaudeSonnet4520250929,
                 "claude-sonnet-4-6" => AnthropicModelModel.ClaudeSonnet46,
+                "claude-sonnet-5" => AnthropicModelModel.ClaudeSonnet5,
                 _ => null,
             };
         }
