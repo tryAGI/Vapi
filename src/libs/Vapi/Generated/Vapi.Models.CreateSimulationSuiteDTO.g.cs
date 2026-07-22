@@ -31,6 +31,12 @@ namespace Vapi
         public required global::System.Collections.Generic.IList<string> SimulationIds { get; set; }
 
         /// <summary>
+        /// Optional assistant or squad assignments for the suite.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("targetAssignments")]
+        public global::System.Collections.Generic.IList<global::Vapi.SimulationSuiteTargetAssignment>? TargetAssignments { get; set; }
+
+        /// <summary>
         /// Optional folder path for organizing simulation suites.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
         /// Maps to GitOps resource folder structure.
@@ -57,6 +63,9 @@ namespace Vapi
         /// <param name="slackWebhookUrl">
         /// This is the Slack webhook URL for notifications.
         /// </param>
+        /// <param name="targetAssignments">
+        /// Optional assistant or squad assignments for the suite.
+        /// </param>
         /// <param name="path">
         /// Optional folder path for organizing simulation suites.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
@@ -69,11 +78,13 @@ namespace Vapi
             string name,
             global::System.Collections.Generic.IList<string> simulationIds,
             string? slackWebhookUrl,
+            global::System.Collections.Generic.IList<global::Vapi.SimulationSuiteTargetAssignment>? targetAssignments,
             string? path)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.SlackWebhookUrl = slackWebhookUrl;
             this.SimulationIds = simulationIds ?? throw new global::System.ArgumentNullException(nameof(simulationIds));
+            this.TargetAssignments = targetAssignments;
             this.Path = path;
         }
 

@@ -23,7 +23,8 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>? MessagesOpenAIFormatted { get; set; }
 
         /// <summary>
-        /// These are the transfer records from warm transfers, including destinations, transcripts, and status.
+        /// These are the transfer records for the call's transfer attempts (warm and blind), including<br/>
+        /// destination, mode, and status. Warm transfer records also include transcripts and messages.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("transfers")]
         public global::System.Collections.Generic.IList<global::Vapi.TransferArtifact>? Transfers { get; set; }
@@ -202,7 +203,8 @@ namespace Vapi
         /// These are the messages that were spoken during the call, formatted for OpenAI.
         /// </param>
         /// <param name="transfers">
-        /// These are the transfer records from warm transfers, including destinations, transcripts, and status.
+        /// These are the transfer records for the call's transfer attempts (warm and blind), including<br/>
+        /// destination, mode, and status. Warm transfer records also include transcripts and messages.
         /// </param>
         /// <param name="recording">
         /// This is the recording url for the call. To enable, set `assistant.artifactPlan.recordingEnabled`.

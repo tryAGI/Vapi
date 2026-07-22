@@ -83,6 +83,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallForwardingNoAnswer,
+        /// <summary>
+        /// 
+        /// </summary>
         CallForwardingOperatorBusy,
         /// <summary>
         /// 
@@ -2416,6 +2420,7 @@ namespace Vapi
                 ServerMessageStatusUpdateEndedReason.CallStartErrorNeitherAssistantNorServerSet => "call-start-error-neither-assistant-nor-server-set",
                 ServerMessageStatusUpdateEndedReason.CallEndingHookExecutedSay => "call.ending.hook-executed-say",
                 ServerMessageStatusUpdateEndedReason.CallEndingHookExecutedTransfer => "call.ending.hook-executed-transfer",
+                ServerMessageStatusUpdateEndedReason.CallForwardingNoAnswer => "call.forwarding.no-answer",
                 ServerMessageStatusUpdateEndedReason.CallForwardingOperatorBusy => "call.forwarding.operator-busy",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorAssistantDidNotReceiveCustomerAudio => "call.in-progress.error-assistant-did-not-receive-customer-audio",
                 ServerMessageStatusUpdateEndedReason.CallInProgressErrorPipelineNoAvailableLlmModel => "call.in-progress.error-pipeline-no-available-llm-model",
@@ -3020,6 +3025,7 @@ namespace Vapi
                 "call-start-error-neither-assistant-nor-server-set" => ServerMessageStatusUpdateEndedReason.CallStartErrorNeitherAssistantNorServerSet,
                 "call.ending.hook-executed-say" => ServerMessageStatusUpdateEndedReason.CallEndingHookExecutedSay,
                 "call.ending.hook-executed-transfer" => ServerMessageStatusUpdateEndedReason.CallEndingHookExecutedTransfer,
+                "call.forwarding.no-answer" => ServerMessageStatusUpdateEndedReason.CallForwardingNoAnswer,
                 "call.forwarding.operator-busy" => ServerMessageStatusUpdateEndedReason.CallForwardingOperatorBusy,
                 "call.in-progress.error-assistant-did-not-receive-customer-audio" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorAssistantDidNotReceiveCustomerAudio,
                 "call.in-progress.error-pipeline-no-available-llm-model" => ServerMessageStatusUpdateEndedReason.CallInProgressErrorPipelineNoAvailableLlmModel,

@@ -67,6 +67,13 @@ namespace Vapi
         public required global::System.Collections.Generic.IList<string> SimulationIds { get; set; }
 
         /// <summary>
+        /// This is the ordered list of assistant or squad assignments for the suite.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("targetAssignments")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Vapi.SimulationSuiteTargetAssignment> TargetAssignments { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -94,6 +101,9 @@ namespace Vapi
         /// <param name="simulationIds">
         /// This is the list of simulation IDs in this suite.
         /// </param>
+        /// <param name="targetAssignments">
+        /// This is the ordered list of assistant or squad assignments for the suite.
+        /// </param>
         /// <param name="slackWebhookUrl">
         /// This is the Slack webhook URL for notifications.
         /// </param>
@@ -112,6 +122,7 @@ namespace Vapi
             global::System.DateTime updatedAt,
             string name,
             global::System.Collections.Generic.IList<string> simulationIds,
+            global::System.Collections.Generic.IList<global::Vapi.SimulationSuiteTargetAssignment> targetAssignments,
             string? slackWebhookUrl,
             string? path)
         {
@@ -123,6 +134,7 @@ namespace Vapi
             this.SlackWebhookUrl = slackWebhookUrl;
             this.Path = path;
             this.SimulationIds = simulationIds ?? throw new global::System.ArgumentNullException(nameof(simulationIds));
+            this.TargetAssignments = targetAssignments ?? throw new global::System.ArgumentNullException(nameof(targetAssignments));
         }
 
         /// <summary>

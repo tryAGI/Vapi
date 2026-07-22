@@ -6,8 +6,8 @@ namespace Vapi
     /// <summary>
     /// Reasoning effort for reasoning-capable OpenAI models.<br/>
     /// For `gpt-realtime-2`: forwarded to V2 stream's session.update as `reasoning.effort`.<br/>
-    /// For non-realtime OpenAI models: routed through `modelSpecificOverridesGet` (openAIUtil.ts:622-726).<br/>
-    /// Narrower than CompletionRequestParams.reasoningEffort intentionally: 'none' is an internal-only override value set by modelSpecificOverridesGet for GPT-5 family, not user-settable via DTO.
+    /// For non-realtime OpenAI models, model-aware validation limits newly public<br/>
+    /// values while preserving the existing four-value storage contract.
     /// </summary>
     public enum OpenAIModelReasoningEffort
     {
@@ -27,6 +27,14 @@ namespace Vapi
         /// 
         /// </summary>
         Minimal,
+        /// <summary>
+        /// 
+        /// </summary>
+        None,
+        /// <summary>
+        /// 
+        /// </summary>
+        Xhigh,
     }
 
     /// <summary>
@@ -45,6 +53,8 @@ namespace Vapi
                 OpenAIModelReasoningEffort.Low => "low",
                 OpenAIModelReasoningEffort.Medium => "medium",
                 OpenAIModelReasoningEffort.Minimal => "minimal",
+                OpenAIModelReasoningEffort.None => "none",
+                OpenAIModelReasoningEffort.Xhigh => "xhigh",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -59,6 +69,8 @@ namespace Vapi
                 "low" => OpenAIModelReasoningEffort.Low,
                 "medium" => OpenAIModelReasoningEffort.Medium,
                 "minimal" => OpenAIModelReasoningEffort.Minimal,
+                "none" => OpenAIModelReasoningEffort.None,
+                "xhigh" => OpenAIModelReasoningEffort.Xhigh,
                 _ => null,
             };
         }

@@ -83,6 +83,14 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Switzerlandnorth,
+        /// <summary>
+        /// 
+        /// </summary>
+        Switzerlandwest,
+        /// <summary>
+        /// 
+        /// </summary>
         Uaenorth,
         /// <summary>
         /// 
@@ -132,6 +140,8 @@ namespace Vapi
                 CreateAzureCredentialDTORegion.Spaincentral => "spaincentral",
                 CreateAzureCredentialDTORegion.Swedencentral => "swedencentral",
                 CreateAzureCredentialDTORegion.Switzerland => "switzerland",
+                CreateAzureCredentialDTORegion.Switzerlandnorth => "switzerlandnorth",
+                CreateAzureCredentialDTORegion.Switzerlandwest => "switzerlandwest",
                 CreateAzureCredentialDTORegion.Uaenorth => "uaenorth",
                 CreateAzureCredentialDTORegion.Uk => "uk",
                 CreateAzureCredentialDTORegion.Westeurope => "westeurope",
@@ -165,6 +175,8 @@ namespace Vapi
                 "spaincentral" => CreateAzureCredentialDTORegion.Spaincentral,
                 "swedencentral" => CreateAzureCredentialDTORegion.Swedencentral,
                 "switzerland" => CreateAzureCredentialDTORegion.Switzerland,
+                "switzerlandnorth" => CreateAzureCredentialDTORegion.Switzerlandnorth,
+                "switzerlandwest" => CreateAzureCredentialDTORegion.Switzerlandwest,
                 "uaenorth" => CreateAzureCredentialDTORegion.Uaenorth,
                 "uk" => CreateAzureCredentialDTORegion.Uk,
                 "westeurope" => CreateAzureCredentialDTORegion.Westeurope,

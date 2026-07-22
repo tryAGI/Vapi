@@ -84,6 +84,20 @@ namespace Vapi
         public global::Vapi.Server? Server { get; set; }
 
         /// <summary>
+        /// These are the messages that will be sent to your Server URL.<br/>
+        /// Example: [campaign.started, contact.dispatched]
+        /// </summary>
+        /// <example>[campaign.started, contact.dispatched]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("serverMessages")]
+        public global::System.Collections.Generic.IList<global::Vapi.CreateCampaignDTOServerMessage>? ServerMessages { get; set; }
+
+        /// <summary>
+        /// This opts the campaign into the blocking `campaign.predial` eligibility webhook. When set, every contact triggers a `campaign.predial` POST to the Server URL before dialing, and the response `{ eligible: boolean }` decides whether the call is placed. Requires `server`. When unset, no pre-dial webhook is sent.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("predialPlan")]
+        public global::Vapi.CampaignPredialPlan? PredialPlan { get; set; }
+
+        /// <summary>
         /// Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("duplicateFromCampaignId")]
@@ -135,6 +149,13 @@ namespace Vapi
         /// <param name="server">
         /// This is the server (URL, auth headers, timeout, etc.) for the campaign webhooks.
         /// </param>
+        /// <param name="serverMessages">
+        /// These are the messages that will be sent to your Server URL.<br/>
+        /// Example: [campaign.started, contact.dispatched]
+        /// </param>
+        /// <param name="predialPlan">
+        /// This opts the campaign into the blocking `campaign.predial` eligibility webhook. When set, every contact triggers a `campaign.predial` POST to the Server URL before dialing, and the response `{ eligible: boolean }` decides whether the call is placed. Requires `server`. When unset, no pre-dial webhook is sent.
+        /// </param>
         /// <param name="duplicateFromCampaignId">
         /// Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source.
         /// </param>
@@ -154,6 +175,8 @@ namespace Vapi
             global::Vapi.AssistantOverrides? assistantOverrides,
             global::Vapi.AssistantOverrides? squadOverrides,
             global::Vapi.Server? server,
+            global::System.Collections.Generic.IList<global::Vapi.CreateCampaignDTOServerMessage>? serverMessages,
+            global::Vapi.CampaignPredialPlan? predialPlan,
             string? duplicateFromCampaignId)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
@@ -168,6 +191,8 @@ namespace Vapi
             this.AssistantOverrides = assistantOverrides;
             this.SquadOverrides = squadOverrides;
             this.Server = server;
+            this.ServerMessages = serverMessages;
+            this.PredialPlan = predialPlan;
             this.DuplicateFromCampaignId = duplicateFromCampaignId;
         }
 

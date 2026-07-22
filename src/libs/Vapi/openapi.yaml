@@ -14871,7 +14871,7 @@
             "description": "This flag includes the sipHeaders from above in the refer to sip uri as url encoded query params.\n\n@default false"
           },
           "fallbackPlan": {
-            "description": "This configures the fallback plan when the transfer fails (destination unreachable, busy, or not human).\n\nUsage:\n- Used only when `mode` is `warm-transfer-experimental`.\n- If not provided when using `warm-transfer-experimental`, a default message will be used.",
+            "description": "This configures the fallback plan when the transfer fails (destination unreachable, busy, or not human).\n\nUsage:\n- Used when `mode` is `warm-transfer-experimental`. If not provided, a default message will be used.\n- Used for SIP cold transfers (`blind-transfer` modes) when transfer outcome detection and fallback\n  are enabled for the organization: on a failed transfer, the assistant speaks `message`, then ends\n  the call or continues with the customer per `endCallEnabled`.",
             "allOf": [
               {
                 "$ref": "#/components/schemas/TransferFallbackPlan"
@@ -18662,12 +18662,14 @@
           },
           "reasoningEffort": {
             "type": "string",
-            "description": "Reasoning effort for reasoning-capable OpenAI models.\nFor `gpt-realtime-2`: forwarded to V2 stream's session.update as `reasoning.effort`.\nFor non-realtime OpenAI models: routed through `modelSpecificOverridesGet` (openAIUtil.ts:622-726).\nNarrower than CompletionRequestParams.reasoningEffort intentionally: 'none' is an internal-only override value set by modelSpecificOverridesGet for GPT-5 family, not user-settable via DTO.",
+            "description": "Reasoning effort for reasoning-capable OpenAI models.\nFor `gpt-realtime-2`: forwarded to V2 stream's session.update as `reasoning.effort`.\nFor non-realtime OpenAI models, model-aware validation limits newly public\nvalues while preserving the existing four-value storage contract.",
             "enum": [
               "high",
               "low",
               "medium",
-              "minimal"
+              "minimal",
+              "none",
+              "xhigh"
             ]
           },
           "temperature": {
@@ -21692,7 +21694,7 @@
           },
           "recordingUseCustomStorageEnabled": {
             "type": "boolean",
-            "description": "This determines whether to use custom storage (S3 or GCP) for call recordings when storage credentials are configured.\n\nWhen set to false, recordings will be stored on Vapi's storage instead of your custom storage, even if you have custom storage credentials configured.\n\nUsage:\n- Set to false if you have custom storage configured but want to store recordings on Vapi's storage for this assistant.\n- Set to true (or leave unset) to use your custom storage for recordings when available.\n\n@default true",
+            "description": "This determines whether to use custom storage (S3 or GCP) for call recordings when storage credentials are configured.\n\nWhen set to false, recordings will be stored on Vapi's storage instead of your custom storage, even if you have custom storage credentials configured.\n\nUsage:\n- Set to false if you have custom storage configured but want to store recordings on Vapi's storage for this assistant.\n- Set to true (or leave unset) to use your custom storage for recordings when available.\n\nIf your organization has ZDR (zero data retention) or PCI enabled, recordings are never written to Vapi storage. In that case, false means \"do not use my custom storage\", so nothing is stored at all.\n\n@default true",
             "example": true
           },
           "videoRecordingEnabled": {
@@ -21717,7 +21719,7 @@
           },
           "pcapUseCustomStorageEnabled": {
             "type": "boolean",
-            "description": "This determines whether to use custom storage (S3 or GCP) for SIP packet captures when storage credentials are configured.\n\nWhen set to false, packet captures will be stored on Vapi's storage instead of your custom storage, even if you have custom storage credentials configured.\n\nUsage:\n- Set to false if you have custom storage configured but want to store packet captures on Vapi's storage for this assistant.\n- Set to true (or leave unset) to use your custom storage for packet captures when available.\n\n@default true",
+            "description": "This determines whether to use custom storage (S3 or GCP) for SIP packet captures when storage credentials are configured.\n\nWhen set to false, packet captures will be stored on Vapi's storage instead of your custom storage, even if you have custom storage credentials configured.\n\nUsage:\n- Set to false if you have custom storage configured but want to store packet captures on Vapi's storage for this assistant.\n- Set to true (or leave unset) to use your custom storage for packet captures when available.\n\nIf your organization has ZDR (zero data retention) or PCI enabled, packet captures are never written to Vapi storage. In that case, false means \"do not use my custom storage\", so nothing is stored at all.\n\n@default true",
             "example": true
           },
           "loggingEnabled": {
@@ -21727,7 +21729,7 @@
           },
           "loggingUseCustomStorageEnabled": {
             "type": "boolean",
-            "description": "This determines whether to use custom storage (S3 or GCP) for call logs when storage credentials are configured.\n\nWhen set to false, logs will be stored on Vapi's storage instead of your custom storage, even if you have custom storage credentials configured.\n\nUsage:\n- Set to false if you have custom storage configured but want to store logs on Vapi's storage for this assistant.\n- Set to true (or leave unset) to use your custom storage for logs when available.\n\n@default true",
+            "description": "This determines whether to use custom storage (S3 or GCP) for call logs when storage credentials are configured.\n\nWhen set to false, logs will be stored on Vapi's storage instead of your custom storage, even if you have custom storage credentials configured.\n\nUsage:\n- Set to false if you have custom storage configured but want to store logs on Vapi's storage for this assistant.\n- Set to true (or leave unset) to use your custom storage for logs when available.\n\nIf your organization has ZDR (zero data retention) or PCI enabled, logs are never written to Vapi storage. In that case, false means \"do not use my custom storage\", so nothing is stored at all.\n\n@default true",
             "example": true
           },
           "transcriptPlan": {
@@ -28268,6 +28270,8 @@
               "spaincentral",
               "swedencentral",
               "switzerland",
+              "switzerlandnorth",
+              "switzerlandwest",
               "uaenorth",
               "uk",
               "westeurope",
@@ -28335,6 +28339,8 @@
               "spaincentral",
               "swedencentral",
               "switzerland",
+              "switzerlandnorth",
+              "switzerlandwest",
               "uaenorth",
               "uk",
               "westeurope",
@@ -41056,7 +41062,7 @@
             }
           },
           "transfers": {
-            "description": "These are the transfer records from warm transfers, including destinations, transcripts, and status.",
+            "description": "These are the transfer records for the call's transfer attempts (warm and blind), including\ndestination, mode, and status. Warm transfer records also include transcripts and messages.",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TransferArtifact"
@@ -41731,6 +41737,7 @@
               "call-start-error-neither-assistant-nor-server-set",
               "call.ending.hook-executed-say",
               "call.ending.hook-executed-transfer",
+              "call.forwarding.no-answer",
               "call.forwarding.operator-busy",
               "call.in-progress.error-assistant-did-not-receive-customer-audio",
               "call.in-progress.error-pipeline-no-available-llm-model",
@@ -44656,6 +44663,15 @@
           "phoneNumberId"
         ]
       },
+      "CampaignPredialPlan": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "description": "Whether the pre-dial eligibility webhook is active. Defaults to true when `predialPlan` is set. Set to false to keep the plan without running the webhook (useful when duplicating a campaign)."
+          }
+        }
+      },
       "CreateCampaignDTO": {
         "type": "object",
         "properties": {
@@ -44728,6 +44744,51 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/Server"
+              }
+            ]
+          },
+          "serverMessages": {
+            "type": "array",
+            "enum": [
+              "campaign.archived",
+              "campaign.cancelled",
+              "campaign.ended",
+              "campaign.job.continued",
+              "campaign.started",
+              "campaign.unarchived",
+              "contact.completed",
+              "contact.dispatched",
+              "contact.failed",
+              "contact.predial-failed",
+              "contact.skipped"
+            ],
+            "example": [
+              "campaign.started",
+              "contact.dispatched"
+            ],
+            "description": "These are the messages that will be sent to your Server URL.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "campaign.archived",
+                "campaign.cancelled",
+                "campaign.ended",
+                "campaign.job.continued",
+                "campaign.started",
+                "campaign.unarchived",
+                "contact.completed",
+                "contact.dispatched",
+                "contact.failed",
+                "contact.predial-failed",
+                "contact.skipped"
+              ]
+            }
+          },
+          "predialPlan": {
+            "description": "This opts the campaign into the blocking `campaign.predial` eligibility webhook. When set, every contact triggers a `campaign.predial` POST to the Server URL before dialing, and the response `{ eligible: boolean }` decides whether the call is placed. Requires `server`. When unset, no pre-dial webhook is sent.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CampaignPredialPlan"
               }
             ]
           },
@@ -44832,6 +44893,51 @@
             "allOf": [
               {
                 "$ref": "#/components/schemas/Server"
+              }
+            ]
+          },
+          "serverMessages": {
+            "type": "array",
+            "enum": [
+              "campaign.archived",
+              "campaign.cancelled",
+              "campaign.ended",
+              "campaign.job.continued",
+              "campaign.started",
+              "campaign.unarchived",
+              "contact.completed",
+              "contact.dispatched",
+              "contact.failed",
+              "contact.predial-failed",
+              "contact.skipped"
+            ],
+            "example": [
+              "campaign.started",
+              "contact.dispatched"
+            ],
+            "description": "These are the messages that will be sent to your Server URL.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "campaign.archived",
+                "campaign.cancelled",
+                "campaign.ended",
+                "campaign.job.continued",
+                "campaign.started",
+                "campaign.unarchived",
+                "contact.completed",
+                "contact.dispatched",
+                "contact.failed",
+                "contact.predial-failed",
+                "contact.skipped"
+              ]
+            }
+          },
+          "predialPlan": {
+            "description": "This opts the campaign into the blocking `campaign.predial` eligibility webhook. When set, every contact triggers a `campaign.predial` POST to the Server URL before dialing, and the response `{ eligible: boolean }` decides whether the call is placed. Requires `server`. When unset, no pre-dial webhook is sent.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CampaignPredialPlan"
               }
             ]
           },
@@ -51820,8 +51926,12 @@
             "nullable": true
           },
           "server": {
-            "type": "object",
-            "nullable": true
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Server"
+              }
+            ]
           },
           "async": {
             "type": "boolean",
@@ -54843,6 +54953,7 @@
           "iterations": {
             "type": "number",
             "minimum": 1,
+            "maximum": 10,
             "description": "Number of times to run each simulation (default: 1)",
             "default": 1
           },
@@ -55481,6 +55592,28 @@
           "updatedAt"
         ]
       },
+      "SimulationSuiteTargetAssignment": {
+        "type": "object",
+        "properties": {
+          "targetType": {
+            "type": "string",
+            "description": "This is the type of target assigned to the simulation suite.",
+            "enum": [
+              "assistant",
+              "squad"
+            ]
+          },
+          "targetId": {
+            "type": "string",
+            "description": "This is the unique identifier of the assigned assistant or squad.",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "targetId",
+          "targetType"
+        ]
+      },
       "CreateSimulationSuiteDTO": {
         "type": "object",
         "properties": {
@@ -55499,6 +55632,13 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "targetAssignments": {
+            "description": "Optional assistant or squad assignments for the suite.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SimulationSuiteTargetAssignment"
             }
           },
           "path": {
@@ -55560,6 +55700,13 @@
             "items": {
               "type": "string"
             }
+          },
+          "targetAssignments": {
+            "description": "This is the ordered list of assistant or squad assignments for the suite.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SimulationSuiteTargetAssignment"
+            }
           }
         },
         "required": [
@@ -55568,6 +55715,7 @@
           "name",
           "orgId",
           "simulationIds",
+          "targetAssignments",
           "updatedAt"
         ]
       },
@@ -55588,6 +55736,13 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "targetAssignments": {
+            "description": "Optional assistant or squad assignments (replaces existing).",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SimulationSuiteTargetAssignment"
             }
           },
           "path": {
@@ -60731,6 +60886,8 @@
               "spaincentral",
               "swedencentral",
               "switzerland",
+              "switzerlandnorth",
+              "switzerlandwest",
               "uaenorth",
               "uk",
               "westeurope",
@@ -60820,6 +60977,8 @@
               "spaincentral",
               "swedencentral",
               "switzerland",
+              "switzerlandnorth",
+              "switzerlandwest",
               "uaenorth",
               "uk",
               "westeurope",
@@ -64307,6 +64466,8 @@
               "spaincentral",
               "swedencentral",
               "switzerland",
+              "switzerlandnorth",
+              "switzerlandwest",
               "uaenorth",
               "uk",
               "westeurope",
@@ -64370,6 +64531,8 @@
               "spaincentral",
               "swedencentral",
               "switzerland",
+              "switzerlandnorth",
+              "switzerlandwest",
               "uaenorth",
               "uk",
               "westeurope",
@@ -69771,6 +69934,7 @@
               "call-start-error-neither-assistant-nor-server-set",
               "call.ending.hook-executed-say",
               "call.ending.hook-executed-transfer",
+              "call.forwarding.no-answer",
               "call.forwarding.operator-busy",
               "call.in-progress.error-assistant-did-not-receive-customer-audio",
               "call.in-progress.error-pipeline-no-available-llm-model",
@@ -71188,6 +71352,7 @@
               "call-start-error-neither-assistant-nor-server-set",
               "call.ending.hook-executed-say",
               "call.ending.hook-executed-transfer",
+              "call.forwarding.no-answer",
               "call.forwarding.operator-busy",
               "call.in-progress.error-assistant-did-not-receive-customer-audio",
               "call.in-progress.error-pipeline-no-available-llm-model",
@@ -73719,7 +73884,7 @@
           },
           "type": {
             "type": "string",
-            "description": "This is the type of the message. \"campaign.predial\" is sent to the campaign's server before each contact is dialed, so the server can decide whether the contact is eligible to be called.",
+            "description": "This is the type of the message. \"campaign.predial\" is sent to the campaign's server before each contact is dialed, so the server can decide whether the contact is eligible to be called. It is only sent when the campaign's `predialPlan` is set (and not disabled).",
             "enum": [
               "campaign.predial"
             ]
@@ -74191,7 +74356,7 @@
         "properties": {
           "eligible": {
             "type": "boolean",
-            "description": "This is whether the contact is eligible to be dialed. When `false` — or when the server is unreachable, errors, or times out — the contact is skipped and not called."
+            "description": "This is whether the contact is eligible to be dialed. `true` places the call; `false` skips the contact. Any other response — a missing or non-boolean `eligible`, an unreachable server, an error, or a timeout — records a pre-dial failure for the contact and the call is not placed."
           }
         },
         "required": [

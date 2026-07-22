@@ -101,8 +101,8 @@ namespace Vapi
         /// <summary>
         /// Reasoning effort for reasoning-capable OpenAI models.<br/>
         /// For `gpt-realtime-2`: forwarded to V2 stream's session.update as `reasoning.effort`.<br/>
-        /// For non-realtime OpenAI models: routed through `modelSpecificOverridesGet` (openAIUtil.ts:622-726).<br/>
-        /// Narrower than CompletionRequestParams.reasoningEffort intentionally: 'none' is an internal-only override value set by modelSpecificOverridesGet for GPT-5 family, not user-settable via DTO.
+        /// For non-realtime OpenAI models, model-aware validation limits newly public<br/>
+        /// values while preserving the existing four-value storage contract.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reasoningEffort")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OpenAIModelReasoningEffortJsonConverter))]
@@ -199,8 +199,8 @@ namespace Vapi
         /// <param name="reasoningEffort">
         /// Reasoning effort for reasoning-capable OpenAI models.<br/>
         /// For `gpt-realtime-2`: forwarded to V2 stream's session.update as `reasoning.effort`.<br/>
-        /// For non-realtime OpenAI models: routed through `modelSpecificOverridesGet` (openAIUtil.ts:622-726).<br/>
-        /// Narrower than CompletionRequestParams.reasoningEffort intentionally: 'none' is an internal-only override value set by modelSpecificOverridesGet for GPT-5 family, not user-settable via DTO.
+        /// For non-realtime OpenAI models, model-aware validation limits newly public<br/>
+        /// values while preserving the existing four-value storage contract.
         /// </param>
         /// <param name="temperature">
         /// This is the temperature that will be used for calls. Default is 0.5.
