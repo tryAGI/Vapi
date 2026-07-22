@@ -54,7 +54,7 @@ namespace Vapi
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("server")]
-        public object? Server { get; set; }
+        public global::Vapi.Server? Server { get; set; }
 
         /// <summary>
         /// 
@@ -379,7 +379,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<object>? messages,
             object? metadata,
             string? templateId,
-            object? server,
+            global::Vapi.Server? server,
             bool? async,
             global::System.Collections.Generic.IList<object>? destinations,
             string? name,

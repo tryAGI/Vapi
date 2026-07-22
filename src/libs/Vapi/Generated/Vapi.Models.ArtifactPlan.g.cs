@@ -35,6 +35,7 @@ namespace Vapi
         /// Usage:<br/>
         /// - Set to false if you have custom storage configured but want to store recordings on Vapi's storage for this assistant.<br/>
         /// - Set to true (or leave unset) to use your custom storage for recordings when available.<br/>
+        /// If your organization has ZDR (zero data retention) or PCI enabled, recordings are never written to Vapi storage. In that case, false means "do not use my custom storage", so nothing is stored at all.<br/>
         /// @default true<br/>
         /// Example: true
         /// </summary>
@@ -89,6 +90,7 @@ namespace Vapi
         /// Usage:<br/>
         /// - Set to false if you have custom storage configured but want to store packet captures on Vapi's storage for this assistant.<br/>
         /// - Set to true (or leave unset) to use your custom storage for packet captures when available.<br/>
+        /// If your organization has ZDR (zero data retention) or PCI enabled, packet captures are never written to Vapi storage. In that case, false means "do not use my custom storage", so nothing is stored at all.<br/>
         /// @default true<br/>
         /// Example: true
         /// </summary>
@@ -111,6 +113,7 @@ namespace Vapi
         /// Usage:<br/>
         /// - Set to false if you have custom storage configured but want to store logs on Vapi's storage for this assistant.<br/>
         /// - Set to true (or leave unset) to use your custom storage for logs when available.<br/>
+        /// If your organization has ZDR (zero data retention) or PCI enabled, logs are never written to Vapi storage. In that case, false means "do not use my custom storage", so nothing is stored at all.<br/>
         /// @default true<br/>
         /// Example: true
         /// </summary>
@@ -203,6 +206,7 @@ namespace Vapi
         /// Usage:<br/>
         /// - Set to false if you have custom storage configured but want to store recordings on Vapi's storage for this assistant.<br/>
         /// - Set to true (or leave unset) to use your custom storage for recordings when available.<br/>
+        /// If your organization has ZDR (zero data retention) or PCI enabled, recordings are never written to Vapi storage. In that case, false means "do not use my custom storage", so nothing is stored at all.<br/>
         /// @default true<br/>
         /// Example: true
         /// </param>
@@ -237,6 +241,7 @@ namespace Vapi
         /// Usage:<br/>
         /// - Set to false if you have custom storage configured but want to store packet captures on Vapi's storage for this assistant.<br/>
         /// - Set to true (or leave unset) to use your custom storage for packet captures when available.<br/>
+        /// If your organization has ZDR (zero data retention) or PCI enabled, packet captures are never written to Vapi storage. In that case, false means "do not use my custom storage", so nothing is stored at all.<br/>
         /// @default true<br/>
         /// Example: true
         /// </param>
@@ -251,6 +256,7 @@ namespace Vapi
         /// Usage:<br/>
         /// - Set to false if you have custom storage configured but want to store logs on Vapi's storage for this assistant.<br/>
         /// - Set to true (or leave unset) to use your custom storage for logs when available.<br/>
+        /// If your organization has ZDR (zero data retention) or PCI enabled, logs are never written to Vapi storage. In that case, false means "do not use my custom storage", so nothing is stored at all.<br/>
         /// @default true<br/>
         /// Example: true
         /// </param>

@@ -83,6 +83,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallForwardingNoAnswer,
+        /// <summary>
+        /// 
+        /// </summary>
         CallForwardingOperatorBusy,
         /// <summary>
         /// 
@@ -2416,6 +2420,7 @@ namespace Vapi
                 CallEndedReason.CallStartErrorNeitherAssistantNorServerSet => "call-start-error-neither-assistant-nor-server-set",
                 CallEndedReason.CallEndingHookExecutedSay => "call.ending.hook-executed-say",
                 CallEndedReason.CallEndingHookExecutedTransfer => "call.ending.hook-executed-transfer",
+                CallEndedReason.CallForwardingNoAnswer => "call.forwarding.no-answer",
                 CallEndedReason.CallForwardingOperatorBusy => "call.forwarding.operator-busy",
                 CallEndedReason.CallInProgressErrorAssistantDidNotReceiveCustomerAudio => "call.in-progress.error-assistant-did-not-receive-customer-audio",
                 CallEndedReason.CallInProgressErrorPipelineNoAvailableLlmModel => "call.in-progress.error-pipeline-no-available-llm-model",
@@ -3020,6 +3025,7 @@ namespace Vapi
                 "call-start-error-neither-assistant-nor-server-set" => CallEndedReason.CallStartErrorNeitherAssistantNorServerSet,
                 "call.ending.hook-executed-say" => CallEndedReason.CallEndingHookExecutedSay,
                 "call.ending.hook-executed-transfer" => CallEndedReason.CallEndingHookExecutedTransfer,
+                "call.forwarding.no-answer" => CallEndedReason.CallForwardingNoAnswer,
                 "call.forwarding.operator-busy" => CallEndedReason.CallForwardingOperatorBusy,
                 "call.in-progress.error-assistant-did-not-receive-customer-audio" => CallEndedReason.CallInProgressErrorAssistantDidNotReceiveCustomerAudio,
                 "call.in-progress.error-pipeline-no-available-llm-model" => CallEndedReason.CallInProgressErrorPipelineNoAvailableLlmModel,

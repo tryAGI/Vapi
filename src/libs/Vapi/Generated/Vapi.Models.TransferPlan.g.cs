@@ -133,8 +133,10 @@ namespace Vapi
         /// <summary>
         /// This configures the fallback plan when the transfer fails (destination unreachable, busy, or not human).<br/>
         /// Usage:<br/>
-        /// - Used only when `mode` is `warm-transfer-experimental`.<br/>
-        /// - If not provided when using `warm-transfer-experimental`, a default message will be used.
+        /// - Used when `mode` is `warm-transfer-experimental`. If not provided, a default message will be used.<br/>
+        /// - Used for SIP cold transfers (`blind-transfer` modes) when transfer outcome detection and fallback<br/>
+        ///   are enabled for the organization: on a failed transfer, the assistant speaks `message`, then ends<br/>
+        ///   the call or continues with the customer per `endCallEnabled`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fallbackPlan")]
         public global::Vapi.TransferFallbackPlan? FallbackPlan { get; set; }
@@ -236,8 +238,10 @@ namespace Vapi
         /// <param name="fallbackPlan">
         /// This configures the fallback plan when the transfer fails (destination unreachable, busy, or not human).<br/>
         /// Usage:<br/>
-        /// - Used only when `mode` is `warm-transfer-experimental`.<br/>
-        /// - If not provided when using `warm-transfer-experimental`, a default message will be used.
+        /// - Used when `mode` is `warm-transfer-experimental`. If not provided, a default message will be used.<br/>
+        /// - Used for SIP cold transfers (`blind-transfer` modes) when transfer outcome detection and fallback<br/>
+        ///   are enabled for the organization: on a failed transfer, the assistant speaks `message`, then ends<br/>
+        ///   the call or continues with the customer per `endCallEnabled`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

@@ -83,6 +83,14 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Switzerlandnorth,
+        /// <summary>
+        /// 
+        /// </summary>
+        Switzerlandwest,
+        /// <summary>
+        /// 
+        /// </summary>
         Uaenorth,
         /// <summary>
         /// 
@@ -132,6 +140,8 @@ namespace Vapi
                 AzureCredentialRegion.Spaincentral => "spaincentral",
                 AzureCredentialRegion.Swedencentral => "swedencentral",
                 AzureCredentialRegion.Switzerland => "switzerland",
+                AzureCredentialRegion.Switzerlandnorth => "switzerlandnorth",
+                AzureCredentialRegion.Switzerlandwest => "switzerlandwest",
                 AzureCredentialRegion.Uaenorth => "uaenorth",
                 AzureCredentialRegion.Uk => "uk",
                 AzureCredentialRegion.Westeurope => "westeurope",
@@ -165,6 +175,8 @@ namespace Vapi
                 "spaincentral" => AzureCredentialRegion.Spaincentral,
                 "swedencentral" => AzureCredentialRegion.Swedencentral,
                 "switzerland" => AzureCredentialRegion.Switzerland,
+                "switzerlandnorth" => AzureCredentialRegion.Switzerlandnorth,
+                "switzerlandwest" => AzureCredentialRegion.Switzerlandwest,
                 "uaenorth" => AzureCredentialRegion.Uaenorth,
                 "uk" => AzureCredentialRegion.Uk,
                 "westeurope" => AzureCredentialRegion.Westeurope,

@@ -68,6 +68,13 @@ namespace Vapi
         /// <param name="server">
         /// This is the server (URL, auth headers, timeout, etc.) for the campaign webhooks.
         /// </param>
+        /// <param name="serverMessages">
+        /// These are the messages that will be sent to your Server URL.<br/>
+        /// Example: [campaign.started, contact.dispatched]
+        /// </param>
+        /// <param name="predialPlan">
+        /// This opts the campaign into the blocking `campaign.predial` eligibility webhook. When set, every contact triggers a `campaign.predial` POST to the Server URL before dialing, and the response `{ eligible: boolean }` decides whether the call is placed. Requires `server`. When unset, no pre-dial webhook is sent.
+        /// </param>
         /// <param name="duplicateFromCampaignId">
         /// Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source.
         /// </param>
@@ -87,6 +94,8 @@ namespace Vapi
             global::Vapi.AssistantOverrides? assistantOverrides = default,
             global::Vapi.AssistantOverrides? squadOverrides = default,
             global::Vapi.Server? server = default,
+            global::System.Collections.Generic.IList<global::Vapi.CreateCampaignDTOServerMessage>? serverMessages = default,
+            global::Vapi.CampaignPredialPlan? predialPlan = default,
             string? duplicateFromCampaignId = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

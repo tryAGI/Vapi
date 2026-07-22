@@ -27,6 +27,12 @@ namespace Vapi
         public global::System.Collections.Generic.IList<string>? SimulationIds { get; set; }
 
         /// <summary>
+        /// Optional assistant or squad assignments (replaces existing).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("targetAssignments")]
+        public global::System.Collections.Generic.IList<global::Vapi.SimulationSuiteTargetAssignment>? TargetAssignments { get; set; }
+
+        /// <summary>
         /// Optional folder path for organizing simulation suites.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
         /// Set to null to remove from folder.
@@ -52,6 +58,9 @@ namespace Vapi
         /// <param name="simulationIds">
         /// This is the list of simulation IDs to include in the suite (replaces existing).
         /// </param>
+        /// <param name="targetAssignments">
+        /// Optional assistant or squad assignments (replaces existing).
+        /// </param>
         /// <param name="path">
         /// Optional folder path for organizing simulation suites.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
@@ -64,11 +73,13 @@ namespace Vapi
             string? name,
             string? slackWebhookUrl,
             global::System.Collections.Generic.IList<string>? simulationIds,
+            global::System.Collections.Generic.IList<global::Vapi.SimulationSuiteTargetAssignment>? targetAssignments,
             string? path)
         {
             this.Name = name;
             this.SlackWebhookUrl = slackWebhookUrl;
             this.SimulationIds = simulationIds;
+            this.TargetAssignments = targetAssignments;
             this.Path = path;
         }
 
