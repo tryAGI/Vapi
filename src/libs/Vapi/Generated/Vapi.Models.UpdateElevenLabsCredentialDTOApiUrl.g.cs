@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// ElevenLabs-only API environment for this key: the global endpoint or the EU data residency endpoint. If omitted on create, Vapi detects it automatically. If set to null on update, Vapi clears the saved endpoint and re-detects it with the saved API key.
+    /// ElevenLabs-only API environment for this key: the global endpoint or the EU data residency endpoint. In EU deployments, new credentials must explicitly use the EU data residency endpoint; existing credentials may omit this field on update to retain their saved endpoint. Outside EU deployments, Vapi detects an omitted endpoint automatically and null on update clears and re-detects the endpoint.
     /// </summary>
     public enum UpdateElevenLabsCredentialDTOApiUrl
     {

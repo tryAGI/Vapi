@@ -21,6 +21,19 @@ namespace Vapi
         public bool? HipaaEnabled { get; set; }
 
         /// <summary>
+        /// The org was created locally, but WorkOS access is still being repaired.<br/>
+        /// Clients should keep the current session/org and refresh the org list.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("workosRepairPending")]
+        public bool? WorkosRepairPending { get; set; }
+
+        /// <summary>
+        /// Whether the pending WorkOS repair was accepted by Kafka.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("workosRepairQueued")]
+        public bool? WorkosRepairQueued { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("subscription")]
@@ -160,6 +173,13 @@ namespace Vapi
         /// This is due to the compliance requirements of HIPAA. Other providers may not meet these requirements.<br/>
         /// Example: false
         /// </param>
+        /// <param name="workosRepairPending">
+        /// The org was created locally, but WorkOS access is still being repaired.<br/>
+        /// Clients should keep the current session/org and refresh the org list.
+        /// </param>
+        /// <param name="workosRepairQueued">
+        /// Whether the pending WorkOS repair was accepted by Kafka.
+        /// </param>
         /// <param name="subscription"></param>
         /// <param name="subscriptionId">
         /// This is the ID of the subscription the org belongs to.
@@ -214,6 +234,8 @@ namespace Vapi
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             bool? hipaaEnabled,
+            bool? workosRepairPending,
+            bool? workosRepairQueued,
             global::Vapi.Subscription? subscription,
             string? subscriptionId,
             string? stripeSubscriptionId,
@@ -229,6 +251,8 @@ namespace Vapi
             global::Vapi.CompliancePlan? compliancePlan)
         {
             this.HipaaEnabled = hipaaEnabled;
+            this.WorkosRepairPending = workosRepairPending;
+            this.WorkosRepairQueued = workosRepairQueued;
             this.Subscription = subscription;
             this.SubscriptionId = subscriptionId;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
