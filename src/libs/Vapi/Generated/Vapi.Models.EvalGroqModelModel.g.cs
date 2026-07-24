@@ -47,10 +47,6 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        MetaLlamaLlama4Maverick17b128eInstruct,
-        /// <summary>
-        /// 
-        /// </summary>
         MetaLlamaLlama4Scout17b16eInstruct,
         /// <summary>
         /// 
@@ -91,7 +87,6 @@ namespace Vapi
                 EvalGroqModelModel.Llama3370bVersatile => "llama-3.3-70b-versatile",
                 EvalGroqModelModel.Llama370b8192 => "llama3-70b-8192",
                 EvalGroqModelModel.Llama38b8192 => "llama3-8b-8192",
-                EvalGroqModelModel.MetaLlamaLlama4Maverick17b128eInstruct => "meta-llama/llama-4-maverick-17b-128e-instruct",
                 EvalGroqModelModel.MetaLlamaLlama4Scout17b16eInstruct => "meta-llama/llama-4-scout-17b-16e-instruct",
                 EvalGroqModelModel.MistralSaba24b => "mistral-saba-24b",
                 EvalGroqModelModel.MoonshotaiKimiK2Instruct0905 => "moonshotai/kimi-k2-instruct-0905",
@@ -116,7 +111,6 @@ namespace Vapi
                 "llama-3.3-70b-versatile" => EvalGroqModelModel.Llama3370bVersatile,
                 "llama3-70b-8192" => EvalGroqModelModel.Llama370b8192,
                 "llama3-8b-8192" => EvalGroqModelModel.Llama38b8192,
-                "meta-llama/llama-4-maverick-17b-128e-instruct" => EvalGroqModelModel.MetaLlamaLlama4Maverick17b128eInstruct,
                 "meta-llama/llama-4-scout-17b-16e-instruct" => EvalGroqModelModel.MetaLlamaLlama4Scout17b16eInstruct,
                 "mistral-saba-24b" => EvalGroqModelModel.MistralSaba24b,
                 "moonshotai/kimi-k2-instruct-0905" => EvalGroqModelModel.MoonshotaiKimiK2Instruct0905,
