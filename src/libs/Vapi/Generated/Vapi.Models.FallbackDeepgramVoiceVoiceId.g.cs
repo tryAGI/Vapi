@@ -55,6 +55,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Aurelia,
+        /// <summary>
+        /// 
+        /// </summary>
         Aurora,
         /// <summary>
         /// 
@@ -91,11 +95,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Elara,
+        /// <summary>
+        /// 
+        /// </summary>
         Electra,
         /// <summary>
         /// 
         /// </summary>
         Estrella,
+        /// <summary>
+        /// 
+        /// </summary>
+        Fabian,
         /// <summary>
         /// 
         /// </summary>
@@ -135,11 +147,23 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Julius,
+        /// <summary>
+        /// 
+        /// </summary>
         Juno,
         /// <summary>
         /// 
         /// </summary>
         Jupiter,
+        /// <summary>
+        /// 
+        /// </summary>
+        Kara,
+        /// <summary>
+        /// 
+        /// </summary>
+        Lara,
         /// <summary>
         /// 
         /// </summary>
@@ -227,6 +251,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Viktoria,
+        /// <summary>
+        /// 
+        /// </summary>
         Zeus,
     }
 
@@ -253,6 +281,7 @@ namespace Vapi
                 FallbackDeepgramVoiceVoiceId.Asteria => "asteria",
                 FallbackDeepgramVoiceVoiceId.Athena => "athena",
                 FallbackDeepgramVoiceVoiceId.Atlas => "atlas",
+                FallbackDeepgramVoiceVoiceId.Aurelia => "aurelia",
                 FallbackDeepgramVoiceVoiceId.Aurora => "aurora",
                 FallbackDeepgramVoiceVoiceId.Callista => "callista",
                 FallbackDeepgramVoiceVoiceId.Carina => "carina",
@@ -262,8 +291,10 @@ namespace Vapi
                 FallbackDeepgramVoiceVoiceId.Delia => "delia",
                 FallbackDeepgramVoiceVoiceId.Diana => "diana",
                 FallbackDeepgramVoiceVoiceId.Draco => "draco",
+                FallbackDeepgramVoiceVoiceId.Elara => "elara",
                 FallbackDeepgramVoiceVoiceId.Electra => "electra",
                 FallbackDeepgramVoiceVoiceId.Estrella => "estrella",
+                FallbackDeepgramVoiceVoiceId.Fabian => "fabian",
                 FallbackDeepgramVoiceVoiceId.Harmonia => "harmonia",
                 FallbackDeepgramVoiceVoiceId.Helena => "helena",
                 FallbackDeepgramVoiceVoiceId.Helios => "helios",
@@ -273,8 +304,11 @@ namespace Vapi
                 FallbackDeepgramVoiceVoiceId.Iris => "iris",
                 FallbackDeepgramVoiceVoiceId.Janus => "janus",
                 FallbackDeepgramVoiceVoiceId.Javier => "javier",
+                FallbackDeepgramVoiceVoiceId.Julius => "julius",
                 FallbackDeepgramVoiceVoiceId.Juno => "juno",
                 FallbackDeepgramVoiceVoiceId.Jupiter => "jupiter",
+                FallbackDeepgramVoiceVoiceId.Kara => "kara",
+                FallbackDeepgramVoiceVoiceId.Lara => "lara",
                 FallbackDeepgramVoiceVoiceId.Luna => "luna",
                 FallbackDeepgramVoiceVoiceId.Mars => "mars",
                 FallbackDeepgramVoiceVoiceId.Minerva => "minerva",
@@ -296,6 +330,7 @@ namespace Vapi
                 FallbackDeepgramVoiceVoiceId.Thalia => "thalia",
                 FallbackDeepgramVoiceVoiceId.Theia => "theia",
                 FallbackDeepgramVoiceVoiceId.Vesta => "vesta",
+                FallbackDeepgramVoiceVoiceId.Viktoria => "viktoria",
                 FallbackDeepgramVoiceVoiceId.Zeus => "zeus",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -318,6 +353,7 @@ namespace Vapi
                 "asteria" => FallbackDeepgramVoiceVoiceId.Asteria,
                 "athena" => FallbackDeepgramVoiceVoiceId.Athena,
                 "atlas" => FallbackDeepgramVoiceVoiceId.Atlas,
+                "aurelia" => FallbackDeepgramVoiceVoiceId.Aurelia,
                 "aurora" => FallbackDeepgramVoiceVoiceId.Aurora,
                 "callista" => FallbackDeepgramVoiceVoiceId.Callista,
                 "carina" => FallbackDeepgramVoiceVoiceId.Carina,
@@ -327,8 +363,10 @@ namespace Vapi
                 "delia" => FallbackDeepgramVoiceVoiceId.Delia,
                 "diana" => FallbackDeepgramVoiceVoiceId.Diana,
                 "draco" => FallbackDeepgramVoiceVoiceId.Draco,
+                "elara" => FallbackDeepgramVoiceVoiceId.Elara,
                 "electra" => FallbackDeepgramVoiceVoiceId.Electra,
                 "estrella" => FallbackDeepgramVoiceVoiceId.Estrella,
+                "fabian" => FallbackDeepgramVoiceVoiceId.Fabian,
                 "harmonia" => FallbackDeepgramVoiceVoiceId.Harmonia,
                 "helena" => FallbackDeepgramVoiceVoiceId.Helena,
                 "helios" => FallbackDeepgramVoiceVoiceId.Helios,
@@ -338,8 +376,11 @@ namespace Vapi
                 "iris" => FallbackDeepgramVoiceVoiceId.Iris,
                 "janus" => FallbackDeepgramVoiceVoiceId.Janus,
                 "javier" => FallbackDeepgramVoiceVoiceId.Javier,
+                "julius" => FallbackDeepgramVoiceVoiceId.Julius,
                 "juno" => FallbackDeepgramVoiceVoiceId.Juno,
                 "jupiter" => FallbackDeepgramVoiceVoiceId.Jupiter,
+                "kara" => FallbackDeepgramVoiceVoiceId.Kara,
+                "lara" => FallbackDeepgramVoiceVoiceId.Lara,
                 "luna" => FallbackDeepgramVoiceVoiceId.Luna,
                 "mars" => FallbackDeepgramVoiceVoiceId.Mars,
                 "minerva" => FallbackDeepgramVoiceVoiceId.Minerva,
@@ -361,6 +402,7 @@ namespace Vapi
                 "thalia" => FallbackDeepgramVoiceVoiceId.Thalia,
                 "theia" => FallbackDeepgramVoiceVoiceId.Theia,
                 "vesta" => FallbackDeepgramVoiceVoiceId.Vesta,
+                "viktoria" => FallbackDeepgramVoiceVoiceId.Viktoria,
                 "zeus" => FallbackDeepgramVoiceVoiceId.Zeus,
                 _ => null,
             };

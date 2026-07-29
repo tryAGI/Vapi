@@ -50,6 +50,13 @@ namespace Vapi
         public double? CachedPromptTokens { get; set; }
 
         /// <summary>
+        /// This is the number of reasoning tokens generated in the call. This is only applicable to reasoning models (e.g., OpenAI o-series, GPT-5) on providers that report them.<br/>
+        /// This is a **subset of `completionTokens`**, not an addition to it: reasoning tokens are already counted in `completionTokens` and are already billed at the output-token rate. It is reported separately for visibility only and does not affect `cost`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningTokens")]
+        public double? ReasoningTokens { get; set; }
+
+        /// <summary>
         /// This is the cost of the component in USD.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cost")]
@@ -90,6 +97,10 @@ namespace Vapi
         /// <param name="cachedPromptTokens">
         /// This is the number of cached prompt tokens used in the call. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate.
         /// </param>
+        /// <param name="reasoningTokens">
+        /// This is the number of reasoning tokens generated in the call. This is only applicable to reasoning models (e.g., OpenAI o-series, GPT-5) on providers that report them.<br/>
+        /// This is a **subset of `completionTokens`**, not an addition to it: reasoning tokens are already counted in `completionTokens` and are already billed at the output-token rate. It is reported separately for visibility only and does not affect `cost`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -99,13 +110,15 @@ namespace Vapi
             double completionTokens,
             double cost,
             global::Vapi.ModelCostType type,
-            double? cachedPromptTokens)
+            double? cachedPromptTokens,
+            double? reasoningTokens)
         {
             this.Type = type;
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.PromptTokens = promptTokens;
             this.CompletionTokens = completionTokens;
             this.CachedPromptTokens = cachedPromptTokens;
+            this.ReasoningTokens = reasoningTokens;
             this.Cost = cost;
         }
 
