@@ -9,6 +9,18 @@ namespace Vapi
     public sealed partial class WorkflowOpenAIModel
     {
         /// <summary>
+        /// These are the messages used to customize the prompt used for structured output extraction.<br/>
+        /// When provided, these messages replace the default prompts. Message contents support LiquidJS templating with the following variables:<br/>
+        /// - `{{transcript}}` or `{{messages}}` to reference the conversation (one is required)<br/>
+        /// - `{{structuredOutput.name}}`, `{{structuredOutput.description}}`, or `{{structuredOutput.schema}}` to reference the structured output definition (one is required)<br/>
+        /// - `{{systemPrompt}}`, `{{callEndedReason}}`, `{{duration}}`, `{{startedAt}}`, `{{endedAt}}`, and any `assistantOverrides.variableValues`<br/>
+        /// `{{messages}}` is the full message history including tool calls; `{{transcript}}` is the spoken text only, which uses significantly fewer tokens.<br/>
+        /// If not provided, default system and user prompts are used.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
+        public global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>? Messages { get; set; }
+
+        /// <summary>
         /// This is the provider of the model (`openai`).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
@@ -51,6 +63,15 @@ namespace Vapi
         /// When using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.<br/>
         /// This is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.
         /// </param>
+        /// <param name="messages">
+        /// These are the messages used to customize the prompt used for structured output extraction.<br/>
+        /// When provided, these messages replace the default prompts. Message contents support LiquidJS templating with the following variables:<br/>
+        /// - `{{transcript}}` or `{{messages}}` to reference the conversation (one is required)<br/>
+        /// - `{{structuredOutput.name}}`, `{{structuredOutput.description}}`, or `{{structuredOutput.schema}}` to reference the structured output definition (one is required)<br/>
+        /// - `{{systemPrompt}}`, `{{callEndedReason}}`, `{{duration}}`, `{{startedAt}}`, `{{endedAt}}`, and any `assistantOverrides.variableValues`<br/>
+        /// `{{messages}}` is the full message history including tool calls; `{{transcript}}` is the spoken text only, which uses significantly fewer tokens.<br/>
+        /// If not provided, default system and user prompts are used.
+        /// </param>
         /// <param name="provider">
         /// This is the provider of the model (`openai`).
         /// </param>
@@ -65,10 +86,12 @@ namespace Vapi
 #endif
         public WorkflowOpenAIModel(
             global::Vapi.WorkflowOpenAIModelModel model,
+            global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>? messages,
             global::Vapi.WorkflowOpenAIModelProvider provider,
             double? temperature,
             double? maxTokens)
         {
+            this.Messages = messages;
             this.Provider = provider;
             this.Model = model;
             this.Temperature = temperature;

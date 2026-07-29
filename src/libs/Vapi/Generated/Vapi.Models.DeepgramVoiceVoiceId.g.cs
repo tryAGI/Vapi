@@ -55,6 +55,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Aurelia,
+        /// <summary>
+        /// 
+        /// </summary>
         Aurora,
         /// <summary>
         /// 
@@ -91,11 +95,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Elara,
+        /// <summary>
+        /// 
+        /// </summary>
         Electra,
         /// <summary>
         /// 
         /// </summary>
         Estrella,
+        /// <summary>
+        /// 
+        /// </summary>
+        Fabian,
         /// <summary>
         /// 
         /// </summary>
@@ -135,11 +147,23 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Julius,
+        /// <summary>
+        /// 
+        /// </summary>
         Juno,
         /// <summary>
         /// 
         /// </summary>
         Jupiter,
+        /// <summary>
+        /// 
+        /// </summary>
+        Kara,
+        /// <summary>
+        /// 
+        /// </summary>
+        Lara,
         /// <summary>
         /// 
         /// </summary>
@@ -227,6 +251,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Viktoria,
+        /// <summary>
+        /// 
+        /// </summary>
         Zeus,
     }
 
@@ -253,6 +281,7 @@ namespace Vapi
                 DeepgramVoiceVoiceId.Asteria => "asteria",
                 DeepgramVoiceVoiceId.Athena => "athena",
                 DeepgramVoiceVoiceId.Atlas => "atlas",
+                DeepgramVoiceVoiceId.Aurelia => "aurelia",
                 DeepgramVoiceVoiceId.Aurora => "aurora",
                 DeepgramVoiceVoiceId.Callista => "callista",
                 DeepgramVoiceVoiceId.Carina => "carina",
@@ -262,8 +291,10 @@ namespace Vapi
                 DeepgramVoiceVoiceId.Delia => "delia",
                 DeepgramVoiceVoiceId.Diana => "diana",
                 DeepgramVoiceVoiceId.Draco => "draco",
+                DeepgramVoiceVoiceId.Elara => "elara",
                 DeepgramVoiceVoiceId.Electra => "electra",
                 DeepgramVoiceVoiceId.Estrella => "estrella",
+                DeepgramVoiceVoiceId.Fabian => "fabian",
                 DeepgramVoiceVoiceId.Harmonia => "harmonia",
                 DeepgramVoiceVoiceId.Helena => "helena",
                 DeepgramVoiceVoiceId.Helios => "helios",
@@ -273,8 +304,11 @@ namespace Vapi
                 DeepgramVoiceVoiceId.Iris => "iris",
                 DeepgramVoiceVoiceId.Janus => "janus",
                 DeepgramVoiceVoiceId.Javier => "javier",
+                DeepgramVoiceVoiceId.Julius => "julius",
                 DeepgramVoiceVoiceId.Juno => "juno",
                 DeepgramVoiceVoiceId.Jupiter => "jupiter",
+                DeepgramVoiceVoiceId.Kara => "kara",
+                DeepgramVoiceVoiceId.Lara => "lara",
                 DeepgramVoiceVoiceId.Luna => "luna",
                 DeepgramVoiceVoiceId.Mars => "mars",
                 DeepgramVoiceVoiceId.Minerva => "minerva",
@@ -296,6 +330,7 @@ namespace Vapi
                 DeepgramVoiceVoiceId.Thalia => "thalia",
                 DeepgramVoiceVoiceId.Theia => "theia",
                 DeepgramVoiceVoiceId.Vesta => "vesta",
+                DeepgramVoiceVoiceId.Viktoria => "viktoria",
                 DeepgramVoiceVoiceId.Zeus => "zeus",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -318,6 +353,7 @@ namespace Vapi
                 "asteria" => DeepgramVoiceVoiceId.Asteria,
                 "athena" => DeepgramVoiceVoiceId.Athena,
                 "atlas" => DeepgramVoiceVoiceId.Atlas,
+                "aurelia" => DeepgramVoiceVoiceId.Aurelia,
                 "aurora" => DeepgramVoiceVoiceId.Aurora,
                 "callista" => DeepgramVoiceVoiceId.Callista,
                 "carina" => DeepgramVoiceVoiceId.Carina,
@@ -327,8 +363,10 @@ namespace Vapi
                 "delia" => DeepgramVoiceVoiceId.Delia,
                 "diana" => DeepgramVoiceVoiceId.Diana,
                 "draco" => DeepgramVoiceVoiceId.Draco,
+                "elara" => DeepgramVoiceVoiceId.Elara,
                 "electra" => DeepgramVoiceVoiceId.Electra,
                 "estrella" => DeepgramVoiceVoiceId.Estrella,
+                "fabian" => DeepgramVoiceVoiceId.Fabian,
                 "harmonia" => DeepgramVoiceVoiceId.Harmonia,
                 "helena" => DeepgramVoiceVoiceId.Helena,
                 "helios" => DeepgramVoiceVoiceId.Helios,
@@ -338,8 +376,11 @@ namespace Vapi
                 "iris" => DeepgramVoiceVoiceId.Iris,
                 "janus" => DeepgramVoiceVoiceId.Janus,
                 "javier" => DeepgramVoiceVoiceId.Javier,
+                "julius" => DeepgramVoiceVoiceId.Julius,
                 "juno" => DeepgramVoiceVoiceId.Juno,
                 "jupiter" => DeepgramVoiceVoiceId.Jupiter,
+                "kara" => DeepgramVoiceVoiceId.Kara,
+                "lara" => DeepgramVoiceVoiceId.Lara,
                 "luna" => DeepgramVoiceVoiceId.Luna,
                 "mars" => DeepgramVoiceVoiceId.Mars,
                 "minerva" => DeepgramVoiceVoiceId.Minerva,
@@ -361,6 +402,7 @@ namespace Vapi
                 "thalia" => DeepgramVoiceVoiceId.Thalia,
                 "theia" => DeepgramVoiceVoiceId.Theia,
                 "vesta" => DeepgramVoiceVoiceId.Vesta,
+                "viktoria" => DeepgramVoiceVoiceId.Viktoria,
                 "zeus" => DeepgramVoiceVoiceId.Zeus,
                 _ => null,
             };
