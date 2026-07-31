@@ -23,6 +23,12 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>? MessagesOpenAIFormatted { get; set; }
 
         /// <summary>
+        /// Structured outputs skipped because their conditions were not met, keyed by saved or runtime output ID.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("skippedStructuredOutputs")]
+        public global::System.Collections.Generic.Dictionary<string, global::Vapi.SkippedStructuredOutput>? SkippedStructuredOutputs { get; set; }
+
+        /// <summary>
         /// These are the transfer records for the call's transfer attempts (warm and blind), including<br/>
         /// destination, mode, and status. Warm transfer records also include transcripts and messages.
         /// </summary>
@@ -202,6 +208,9 @@ namespace Vapi
         /// <param name="messagesOpenAIFormatted">
         /// These are the messages that were spoken during the call, formatted for OpenAI.
         /// </param>
+        /// <param name="skippedStructuredOutputs">
+        /// Structured outputs skipped because their conditions were not met, keyed by saved or runtime output ID.
+        /// </param>
         /// <param name="transfers">
         /// These are the transfer records for the call's transfer attempts (warm and blind), including<br/>
         /// destination, mode, and status. Warm transfer records also include transcripts and messages.
@@ -285,6 +294,7 @@ namespace Vapi
         public Artifact(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.UserMessage, global::Vapi.SystemMessage, global::Vapi.BotMessage, global::Vapi.ToolCallMessage, global::Vapi.ToolCallResultMessage>>? messages,
             global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>? messagesOpenAIFormatted,
+            global::System.Collections.Generic.Dictionary<string, global::Vapi.SkippedStructuredOutput>? skippedStructuredOutputs,
             global::System.Collections.Generic.IList<global::Vapi.TransferArtifact>? transfers,
             global::Vapi.Recording? recording,
             string? transcript,
@@ -308,6 +318,7 @@ namespace Vapi
         {
             this.Messages = messages;
             this.MessagesOpenAIFormatted = messagesOpenAIFormatted;
+            this.SkippedStructuredOutputs = skippedStructuredOutputs;
             this.Transfers = transfers;
             this.Recording = recording;
             this.Transcript = transcript;

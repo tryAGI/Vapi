@@ -58,6 +58,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public BoardClient Board { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public CallsClient Calls { get; }
 
         /// <summary>
