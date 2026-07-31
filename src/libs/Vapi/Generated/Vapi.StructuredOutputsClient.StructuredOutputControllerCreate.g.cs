@@ -468,6 +468,10 @@ namespace Vapi
         /// Compliance configuration for this output. Only enable overrides if no sensitive data will be stored.<br/>
         /// Example: {"forceStoreOnHipaaEnabled":false}
         /// </param>
+        /// <param name="conditions">
+        /// These are the conditions that gate the execution of this structured output. Every condition must pass for the structured output to run (AND semantics). When omitted or empty, no user-defined conditions gate this output. Send null to clear a previously saved gate.<br/>
+        /// Example: [{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]
+        /// </param>
         /// <param name="name">
         /// This is the name of the structured output.
         /// </param>
@@ -503,6 +507,7 @@ namespace Vapi
             string? regex = default,
             global::Vapi.OneOf<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>? model = default,
             global::Vapi.ComplianceOverride? compliancePlan = default,
+            global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>>? conditions = default,
             string? description = default,
             global::System.Collections.Generic.IList<string>? assistantIds = default,
             global::System.Collections.Generic.IList<string>? workflowIds = default,
@@ -515,6 +520,7 @@ namespace Vapi
                 Regex = regex,
                 Model = model,
                 CompliancePlan = compliancePlan,
+                Conditions = conditions,
                 Name = name,
                 Schema = schema,
                 Description = description,

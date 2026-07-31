@@ -4,9 +4,11 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    /// These are the structured outputs whose conditions gated them, keyed by<br/>
+    /// structured output id. Absent when nothing was skipped. An entry here means<br/>
+    /// no extraction ran and no cost was incurred for that output.
     /// </summary>
-    public sealed partial class StructuredOutputControllerRunResponse
+    public sealed partial class StructuredOutputRunPreviewResponseSkipped
     {
 
         /// <summary>

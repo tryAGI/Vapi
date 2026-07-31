@@ -56,6 +56,14 @@ namespace Vapi
         public global::Vapi.ComplianceOverride? CompliancePlan { get; set; }
 
         /// <summary>
+        /// These are the conditions that gate the execution of this structured output. Every condition must pass for the structured output to run (AND semantics). When omitted or empty, no user-defined conditions gate this output. Send null to clear a previously saved gate.<br/>
+        /// Example: [{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]
+        /// </summary>
+        /// <example>[{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>>? Conditions { get; set; }
+
+        /// <summary>
         /// This is the name of the structured output.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
@@ -136,6 +144,10 @@ namespace Vapi
         /// Compliance configuration for this output. Only enable overrides if no sensitive data will be stored.<br/>
         /// Example: {"forceStoreOnHipaaEnabled":false}
         /// </param>
+        /// <param name="conditions">
+        /// These are the conditions that gate the execution of this structured output. Every condition must pass for the structured output to run (AND semantics). When omitted or empty, no user-defined conditions gate this output. Send null to clear a previously saved gate.<br/>
+        /// Example: [{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]
+        /// </param>
         /// <param name="name">
         /// This is the name of the structured output.
         /// </param>
@@ -169,6 +181,7 @@ namespace Vapi
             string? regex,
             global::Vapi.OneOf<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>? model,
             global::Vapi.ComplianceOverride? compliancePlan,
+            global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>>? conditions,
             string? name,
             string? description,
             global::System.Collections.Generic.IList<string>? assistantIds,
@@ -179,6 +192,7 @@ namespace Vapi
             this.Regex = regex;
             this.Model = model;
             this.CompliancePlan = compliancePlan;
+            this.Conditions = conditions;
             this.Name = name;
             this.Description = description;
             this.AssistantIds = assistantIds;

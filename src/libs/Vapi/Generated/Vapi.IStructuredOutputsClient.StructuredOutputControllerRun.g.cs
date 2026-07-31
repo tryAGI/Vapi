@@ -11,7 +11,7 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Vapi.StructuredOutput> StructuredOutputControllerRunAsync(
+        global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::Vapi.AllOf<global::Vapi.StructuredOutputRunPreviewResponse, object>?, global::Vapi.StructuredOutputRerunResponse>> StructuredOutputControllerRunAsync(
 
             global::Vapi.StructuredOutputRunDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -23,7 +23,7 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.StructuredOutput>> StructuredOutputControllerRunAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.OneOf<global::Vapi.AllOf<global::Vapi.StructuredOutputRunPreviewResponse, object>?, global::Vapi.StructuredOutputRerunResponse>>> StructuredOutputControllerRunAsResponseAsync(
 
             global::Vapi.StructuredOutputRunDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -51,7 +51,7 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Vapi.StructuredOutput> StructuredOutputControllerRunAsync(
+        global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::Vapi.AllOf<global::Vapi.StructuredOutputRunPreviewResponse, object>?, global::Vapi.StructuredOutputRerunResponse>> StructuredOutputControllerRunAsync(
             global::System.Collections.Generic.IList<string> callIds,
             bool? previewEnabled = default,
             string? structuredOutputId = default,

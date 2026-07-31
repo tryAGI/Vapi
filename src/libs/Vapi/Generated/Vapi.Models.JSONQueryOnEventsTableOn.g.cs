@@ -16,6 +16,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        AssistantAnalysisStructuredOutputSkipped,
+        /// <summary>
+        /// 
+        /// </summary>
         AssistantModelCleanup,
         /// <summary>
         /// 
@@ -400,6 +404,7 @@ namespace Vapi
             return value switch
             {
                 JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputGenerated => "assistant.analysis.structuredOutputGenerated",
+                JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputSkipped => "assistant.analysis.structuredOutputSkipped",
                 JSONQueryOnEventsTableOn.AssistantModelCleanup => "assistant.model.cleanup",
                 JSONQueryOnEventsTableOn.AssistantModelClearing => "assistant.model.clearing",
                 JSONQueryOnEventsTableOn.AssistantModelConnectionClosed => "assistant.model.connectionClosed",
@@ -504,6 +509,7 @@ namespace Vapi
             return value switch
             {
                 "assistant.analysis.structuredOutputGenerated" => JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputGenerated,
+                "assistant.analysis.structuredOutputSkipped" => JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputSkipped,
                 "assistant.model.cleanup" => JSONQueryOnEventsTableOn.AssistantModelCleanup,
                 "assistant.model.clearing" => JSONQueryOnEventsTableOn.AssistantModelClearing,
                 "assistant.model.connectionClosed" => JSONQueryOnEventsTableOn.AssistantModelConnectionClosed,
