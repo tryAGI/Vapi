@@ -18,12 +18,21 @@ namespace Vapi
         public required string PronunciationDictId { get; set; }
 
         /// <summary>
-        /// Version ID (only required for ElevenLabs, ignored for Cartesia)<br/>
+        /// Version ID (only used by ElevenLabs, ignored for Cartesia)<br/>
         /// Example: ver_abc123
         /// </summary>
         /// <example>ver_abc123</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("versionId")]
         public string? VersionId { get; set; }
+
+        /// <summary>
+        /// Provider that hosts this pronunciation dictionary<br/>
+        /// Example: 11labs
+        /// </summary>
+        /// <example>11labs</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.VapiPronunciationDictionaryLocatorProviderJsonConverter))]
+        public global::Vapi.VapiPronunciationDictionaryLocatorProvider? Provider { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -39,18 +48,24 @@ namespace Vapi
         /// Example: pdict_abc123
         /// </param>
         /// <param name="versionId">
-        /// Version ID (only required for ElevenLabs, ignored for Cartesia)<br/>
+        /// Version ID (only used by ElevenLabs, ignored for Cartesia)<br/>
         /// Example: ver_abc123
+        /// </param>
+        /// <param name="provider">
+        /// Provider that hosts this pronunciation dictionary<br/>
+        /// Example: 11labs
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public VapiPronunciationDictionaryLocator(
             string pronunciationDictId,
-            string? versionId)
+            string? versionId,
+            global::Vapi.VapiPronunciationDictionaryLocatorProvider? provider)
         {
             this.PronunciationDictId = pronunciationDictId ?? throw new global::System.ArgumentNullException(nameof(pronunciationDictId));
             this.VersionId = versionId;
+            this.Provider = provider;
         }
 
         /// <summary>

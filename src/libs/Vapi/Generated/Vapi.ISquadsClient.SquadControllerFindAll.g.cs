@@ -7,6 +7,7 @@ namespace Vapi
         /// <summary>
         /// List Squads
         /// </summary>
+        /// <param name="idAny"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -20,6 +21,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Vapi.Squad>> SquadControllerFindAllAsync(
+            global::System.Collections.Generic.IList<string>? idAny = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -34,6 +36,7 @@ namespace Vapi
         /// <summary>
         /// List Squads
         /// </summary>
+        /// <param name="idAny"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -47,6 +50,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.Squad>>> SquadControllerFindAllAsResponseAsync(
+            global::System.Collections.Generic.IList<string>? idAny = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,

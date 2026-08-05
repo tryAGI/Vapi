@@ -51,6 +51,18 @@ namespace Vapi
         public required double Canceled { get; set; }
 
         /// <summary>
+        /// Number of distinct simulations represented by the run items. Omitted when any item has no simulation ID.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distinctSimulationTotal")]
+        public double? DistinctSimulationTotal { get; set; }
+
+        /// <summary>
+        /// Number of distinct simulations with a failed or canceled item. Omitted when any item has no simulation ID.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distinctSimulationFailed")]
+        public double? DistinctSimulationFailed { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -77,6 +89,12 @@ namespace Vapi
         /// <param name="canceled">
         /// Number of canceled run items
         /// </param>
+        /// <param name="distinctSimulationTotal">
+        /// Number of distinct simulations represented by the run items. Omitted when any item has no simulation ID.
+        /// </param>
+        /// <param name="distinctSimulationFailed">
+        /// Number of distinct simulations with a failed or canceled item. Omitted when any item has no simulation ID.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -86,7 +104,9 @@ namespace Vapi
             double failed,
             double running,
             double queued,
-            double canceled)
+            double canceled,
+            double? distinctSimulationTotal,
+            double? distinctSimulationFailed)
         {
             this.Total = total;
             this.Passed = passed;
@@ -94,6 +114,8 @@ namespace Vapi
             this.Running = running;
             this.Queued = queued;
             this.Canceled = canceled;
+            this.DistinctSimulationTotal = distinctSimulationTotal;
+            this.DistinctSimulationFailed = distinctSimulationFailed;
         }
 
         /// <summary>

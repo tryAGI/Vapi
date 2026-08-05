@@ -27,6 +27,7 @@ namespace Vapi
             };
         partial void PrepareSquadControllerFindAllArguments(
             global::System.Net.Http.HttpClient httpClient,
+            global::System.Collections.Generic.IList<string>? idAny,
             ref double? limit,
             ref global::System.DateTime? createdAtGt,
             ref global::System.DateTime? createdAtLt,
@@ -39,6 +40,7 @@ namespace Vapi
         partial void PrepareSquadControllerFindAllRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            global::System.Collections.Generic.IList<string>? idAny,
             double? limit,
             global::System.DateTime? createdAtGt,
             global::System.DateTime? createdAtLt,
@@ -60,6 +62,7 @@ namespace Vapi
         /// <summary>
         /// List Squads
         /// </summary>
+        /// <param name="idAny"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -73,6 +76,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Vapi.Squad>> SquadControllerFindAllAsync(
+            global::System.Collections.Generic.IList<string>? idAny = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -86,6 +90,7 @@ namespace Vapi
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await SquadControllerFindAllAsResponseAsync(
+                idAny: idAny,
                 limit: limit,
                 createdAtGt: createdAtGt,
                 createdAtLt: createdAtLt,
@@ -104,6 +109,7 @@ namespace Vapi
         /// <summary>
         /// List Squads
         /// </summary>
+        /// <param name="idAny"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -117,6 +123,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.Squad>>> SquadControllerFindAllAsResponseAsync(
+            global::System.Collections.Generic.IList<string>? idAny = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -133,6 +140,7 @@ namespace Vapi
                 client: HttpClient);
             PrepareSquadControllerFindAllArguments(
                 httpClient: HttpClient,
+                idAny: idAny,
                 limit: ref limit,
                 createdAtGt: ref createdAtGt,
                 createdAtLt: ref createdAtLt,
@@ -170,6 +178,7 @@ namespace Vapi
                                 path: "/squad",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
+                                .AddOptionalParameter("idAny", idAny, delimiter: ",", explode: true)
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("createdAtGt", createdAtGt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("createdAtLt", createdAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
@@ -220,6 +229,7 @@ namespace Vapi
                 PrepareSquadControllerFindAllRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    idAny: idAny,
                     limit: limit,
                     createdAtGt: createdAtGt,
                     createdAtLt: createdAtLt,

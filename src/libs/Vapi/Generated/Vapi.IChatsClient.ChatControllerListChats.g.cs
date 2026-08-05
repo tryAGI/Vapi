@@ -15,6 +15,7 @@ namespace Vapi
         /// <param name="squadId"></param>
         /// <param name="sessionId"></param>
         /// <param name="previousChatId"></param>
+        /// <param name="idAny"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
         /// <param name="sortBy"></param>
@@ -37,6 +38,7 @@ namespace Vapi
             string? squadId = default,
             string? sessionId = default,
             string? previousChatId = default,
+            string? idAny = default,
             double? page = default,
             global::Vapi.ChatControllerListChatsSortOrder? sortOrder = default,
             global::Vapi.ChatControllerListChatsSortBy? sortBy = default,
@@ -62,6 +64,7 @@ namespace Vapi
         /// <param name="squadId"></param>
         /// <param name="sessionId"></param>
         /// <param name="previousChatId"></param>
+        /// <param name="idAny"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
         /// <param name="sortBy"></param>
@@ -84,6 +87,7 @@ namespace Vapi
             string? squadId = default,
             string? sessionId = default,
             string? previousChatId = default,
+            string? idAny = default,
             double? page = default,
             global::Vapi.ChatControllerListChatsSortOrder? sortOrder = default,
             global::Vapi.ChatControllerListChatsSortBy? sortBy = default,

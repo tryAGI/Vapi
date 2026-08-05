@@ -61,6 +61,12 @@ namespace Vapi
         public string? CustomerNumberAny { get; set; }
 
         /// <summary>
+        /// Filter by multiple session IDs. Provide as comma-separated values.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("idAny")]
+        public string? IdAny { get; set; }
+
+        /// <summary>
         /// This will return sessions with the specified phoneNumberId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("phoneNumberId")]
@@ -181,6 +187,9 @@ namespace Vapi
         /// Filter by any of the specified customer phone numbers (comma-separated).<br/>
         /// Example: +1234567890,+0987654321
         /// </param>
+        /// <param name="idAny">
+        /// Filter by multiple session IDs. Provide as comma-separated values.
+        /// </param>
         /// <param name="phoneNumberId">
         /// This will return sessions with the specified phoneNumberId.
         /// </param>
@@ -235,6 +244,7 @@ namespace Vapi
             string? workflowId,
             global::Vapi.CreateCustomerDTO? customer,
             string? customerNumberAny,
+            string? idAny,
             string? phoneNumberId,
             global::System.Collections.Generic.IList<string>? phoneNumberIdAny,
             double? page,
@@ -258,6 +268,7 @@ namespace Vapi
             this.WorkflowId = workflowId;
             this.Customer = customer;
             this.CustomerNumberAny = customerNumberAny;
+            this.IdAny = idAny;
             this.PhoneNumberId = phoneNumberId;
             this.PhoneNumberIdAny = phoneNumberIdAny;
             this.Page = page;

@@ -16,11 +16,11 @@ namespace Vapi
         public required string PronunciationDictionaryId { get; set; }
 
         /// <summary>
-        /// This is the version ID of the pronunciation dictionary to use.
+        /// This is the version ID of the pronunciation dictionary to use.<br/>
+        /// Omit to use the dictionary's latest version.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("versionId")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string VersionId { get; set; }
+        public string? VersionId { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -35,17 +35,18 @@ namespace Vapi
         /// This is the ID of the pronunciation dictionary to use.
         /// </param>
         /// <param name="versionId">
-        /// This is the version ID of the pronunciation dictionary to use.
+        /// This is the version ID of the pronunciation dictionary to use.<br/>
+        /// Omit to use the dictionary's latest version.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ElevenLabsPronunciationDictionaryLocator(
             string pronunciationDictionaryId,
-            string versionId)
+            string? versionId)
         {
             this.PronunciationDictionaryId = pronunciationDictionaryId ?? throw new global::System.ArgumentNullException(nameof(pronunciationDictionaryId));
-            this.VersionId = versionId ?? throw new global::System.ArgumentNullException(nameof(versionId));
+            this.VersionId = versionId;
         }
 
         /// <summary>
