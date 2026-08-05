@@ -47,6 +47,12 @@ namespace Vapi
         public string? PreviousChatId { get; set; }
 
         /// <summary>
+        /// Filter by multiple chat IDs. Provide as comma-separated values.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("idAny")]
+        public string? IdAny { get; set; }
+
+        /// <summary>
         /// This is the page number to return. Defaults to 1.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("page")]
@@ -148,6 +154,9 @@ namespace Vapi
         /// <param name="previousChatId">
         /// This is the unique identifier for the previous chat to filter by.
         /// </param>
+        /// <param name="idAny">
+        /// Filter by multiple chat IDs. Provide as comma-separated values.
+        /// </param>
         /// <param name="page">
         /// This is the page number to return. Defaults to 1.
         /// </param>
@@ -194,6 +203,7 @@ namespace Vapi
             string? squadId,
             string? sessionId,
             string? previousChatId,
+            string? idAny,
             double? page,
             global::Vapi.GetChatPaginatedDTOSortOrder? sortOrder,
             global::Vapi.GetChatPaginatedDTOSortBy? sortBy,
@@ -213,6 +223,7 @@ namespace Vapi
             this.SquadId = squadId;
             this.SessionId = sessionId;
             this.PreviousChatId = previousChatId;
+            this.IdAny = idAny;
             this.Page = page;
             this.SortOrder = sortOrder;
             this.SortBy = sortBy;

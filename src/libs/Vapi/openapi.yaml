@@ -329,6 +329,19 @@
         "summary": "List Squads",
         "parameters": [
           {
+            "name": "idAny",
+            "required": false,
+            "in": "query",
+            "description": "Return only squads matching the provided ids",
+            "schema": {
+              "format": "uuid",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
             "name": "limit",
             "required": false,
             "in": "query",
@@ -597,6 +610,12 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Client/policy failure (limits, validation, missing resources)"
+          },
+          "500": {
+            "description": "System failure (database, queue, or internal infra)"
           }
         },
         "tags": [
@@ -1214,6 +1233,15 @@
             "required": false,
             "in": "query",
             "description": "This is the unique identifier for the previous chat to filter by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idAny",
+            "required": false,
+            "in": "query",
+            "description": "Filter by multiple chat IDs. Provide as comma-separated values.",
             "schema": {
               "type": "string"
             }
@@ -2420,6 +2448,15 @@
             "description": "Filter by any of the specified customer phone numbers (comma-separated).",
             "schema": {
               "example": "+1234567890,+0987654321",
+              "type": "string"
+            }
+          },
+          {
+            "name": "idAny",
+            "required": false,
+            "in": "query",
+            "description": "Filter by multiple session IDs. Provide as comma-separated values.",
+            "schema": {
               "type": "string"
             }
           },
@@ -24329,13 +24366,12 @@
           },
           "versionId": {
             "type": "string",
-            "description": "This is the version ID of the pronunciation dictionary to use.",
+            "description": "This is the version ID of the pronunciation dictionary to use.\n\nOmit to use the dictionary's latest version.",
             "title": "This is the ElevenLabs Pronunciation Dictionary Version ID"
           }
         },
         "required": [
-          "pronunciationDictionaryId",
-          "versionId"
+          "pronunciationDictionaryId"
         ]
       },
       "ElevenLabsVoice": {
@@ -25660,8 +25696,17 @@
           },
           "versionId": {
             "type": "string",
-            "description": "Version ID (only required for ElevenLabs, ignored for Cartesia)",
+            "description": "Version ID (only used by ElevenLabs, ignored for Cartesia)",
             "example": "ver_abc123"
+          },
+          "provider": {
+            "type": "string",
+            "description": "Provider that hosts this pronunciation dictionary",
+            "enum": [
+              "11labs",
+              "cartesia"
+            ],
+            "example": "11labs"
           }
         },
         "required": [
@@ -40833,6 +40878,42 @@
           "type"
         ]
       },
+      "StructuredOutputCostBreakdown": {
+        "type": "object",
+        "properties": {
+          "structuredOutputId": {
+            "type": "string",
+            "description": "This is the unique identifier of the structured output that produced this cost."
+          },
+          "name": {
+            "type": "string",
+            "description": "This is the name of the structured output, so this breakdown is readable without looking the id up."
+          },
+          "cost": {
+            "type": "number",
+            "description": "This is the cost in USD of evaluating this structured output."
+          },
+          "promptTokens": {
+            "type": "number",
+            "description": "This is the number of prompt tokens used to evaluate this structured output."
+          },
+          "completionTokens": {
+            "type": "number",
+            "description": "This is the number of completion tokens generated for this structured output."
+          },
+          "cachedPromptTokens": {
+            "type": "number",
+            "description": "This is the number of cached prompt tokens used to evaluate this structured output. This is a subset of `promptTokens`, not an addition to it."
+          }
+        },
+        "required": [
+          "completionTokens",
+          "cost",
+          "name",
+          "promptTokens",
+          "structuredOutputId"
+        ]
+      },
       "AnalysisCost": {
         "type": "object",
         "properties": {
@@ -40868,6 +40949,13 @@
           "cachedPromptTokens": {
             "type": "number",
             "description": "This is the number of cached prompt tokens used in the analysis. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate."
+          },
+          "structuredOutputBreakdown": {
+            "description": "This is the per-structured-output breakdown of this cost. The `cost`, `promptTokens`, `completionTokens` and `cachedPromptTokens` above are the sums of these rows.\n\nThis is only set when `analysisType` is `structuredOutput`, and it is omitted entirely rather than partially populated, so when it is present the rows always reconcile to the totals above.\n\nA structured output that was skipped, or that extracts via regex, makes no LLM call and so has no row here — this is not a complete list of the call's configured structured outputs. There is one row per evaluation, so a `structuredOutputId` can appear more than once if it was evaluated more than once; sum the rows rather than indexing them by id.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StructuredOutputCostBreakdown"
+            }
           },
           "cost": {
             "type": "number",
@@ -44280,6 +44368,10 @@
             "type": "string",
             "description": "This is the unique identifier for the previous chat to filter by."
           },
+          "idAny": {
+            "type": "string",
+            "description": "Filter by multiple chat IDs. Provide as comma-separated values."
+          },
           "page": {
             "type": "number",
             "description": "This is the page number to return. Defaults to 1.",
@@ -44845,6 +44937,10 @@
           "previousChatId": {
             "type": "string",
             "description": "This is the unique identifier for the previous chat to filter by."
+          },
+          "idAny": {
+            "type": "string",
+            "description": "Filter by multiple chat IDs. Provide as comma-separated values."
           },
           "columns": {
             "type": "string",
@@ -46200,6 +46296,10 @@
             "description": "Filter by any of the specified customer phone numbers (comma-separated).",
             "example": "+1234567890,+0987654321"
           },
+          "idAny": {
+            "type": "string",
+            "description": "Filter by multiple session IDs. Provide as comma-separated values."
+          },
           "phoneNumberId": {
             "type": "string",
             "description": "This will return sessions with the specified phoneNumberId."
@@ -46339,6 +46439,10 @@
             "type": "string",
             "description": "Filter by any of the specified customer phone numbers (comma-separated).",
             "example": "+1234567890,+0987654321"
+          },
+          "idAny": {
+            "type": "string",
+            "description": "Filter by multiple session IDs. Provide as comma-separated values."
           },
           "columns": {
             "type": "string",
@@ -55542,6 +55646,12 @@
             "description": "ID of the simulation suite to run",
             "format": "uuid"
           },
+          "name": {
+            "type": "string",
+            "maxLength": 80,
+            "description": "Historical suite name captured when the run was created",
+            "readOnly": true
+          },
           "suiteId": {
             "type": "string",
             "deprecated": true
@@ -55702,6 +55812,14 @@
           "canceled": {
             "type": "number",
             "description": "Number of canceled run items"
+          },
+          "distinctSimulationTotal": {
+            "type": "number",
+            "description": "Number of distinct simulations represented by the run items. Omitted when any item has no simulation ID."
+          },
+          "distinctSimulationFailed": {
+            "type": "number",
+            "description": "Number of distinct simulations with a failed or canceled item. Omitted when any item has no simulation ID."
           }
         },
         "required": [
@@ -55957,6 +56075,196 @@
           "status",
           "target",
           "updatedAt"
+        ]
+      },
+      "SimulationRunListSource": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "adHoc",
+              "api",
+              "simulation",
+              "suite"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string"
+          },
+          "linkable": {
+            "type": "boolean"
+          },
+          "simulationIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "linkable",
+          "name",
+          "simulationIds",
+          "type"
+        ]
+      },
+      "SimulationRunListSummary": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "$ref": "#/components/schemas/SimulationRunListSource"
+          },
+          "targetSnapshotName": {
+            "type": "string"
+          },
+          "simulationCount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "simulationCount",
+          "source"
+        ]
+      },
+      "SimulationRunListItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the run",
+            "format": "uuid"
+          },
+          "orgId": {
+            "type": "string",
+            "description": "Organization ID",
+            "format": "uuid"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ended",
+              "queued",
+              "running"
+            ],
+            "description": "Current status of the run"
+          },
+          "queuedAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "When the run was queued"
+          },
+          "startedAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "When the run started"
+          },
+          "endedAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "When the run ended"
+          },
+          "endedReason": {
+            "type": "string",
+            "description": "Reason the run ended"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "ISO 8601 date-time when created"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "ISO 8601 date-time when last updated"
+          },
+          "itemCounts": {
+            "description": "Aggregate counts of run items by status",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SimulationRunItemCounts"
+              }
+            ]
+          },
+          "simulations": {
+            "type": "array",
+            "description": "Array of simulations and/or suites to run",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/SimulationRunSimulationEntry",
+                  "title": "Simulation"
+                },
+                {
+                  "$ref": "#/components/schemas/SimulationRunSuiteEntry",
+                  "title": "Suite"
+                }
+              ]
+            }
+          },
+          "target": {
+            "description": "Target to test against",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/SimulationRunTargetAssistant",
+                "title": "Assistant"
+              },
+              {
+                "$ref": "#/components/schemas/SimulationRunTargetSquad",
+                "title": "Squad"
+              }
+            ]
+          },
+          "iterations": {
+            "type": "number",
+            "minimum": 1,
+            "description": "Number of times to run each simulation (default: 1)",
+            "default": 1
+          },
+          "transport": {
+            "description": "Transport configuration for the simulation runs",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SimulationRunTransportConfiguration"
+              }
+            ]
+          },
+          "summary": {
+            "$ref": "#/components/schemas/SimulationRunListSummary"
+          }
+        },
+        "required": [
+          "createdAt",
+          "id",
+          "orgId",
+          "queuedAt",
+          "simulations",
+          "status",
+          "summary",
+          "target",
+          "updatedAt"
+        ]
+      },
+      "SimulationRunsPaginatedResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SimulationRunListItem"
+            }
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/PaginationMeta"
+          }
+        },
+        "required": [
+          "metadata",
+          "results"
         ]
       },
       "SimulationRunItemCallMonitor": {
@@ -58108,7 +58416,10 @@
             "description": "The event type to query",
             "example": "assistant.model.requestFailed",
             "enum": [
+              "assistant.analysis.structuredOutputError",
               "assistant.analysis.structuredOutputGenerated",
+              "assistant.analysis.structuredOutputRequest",
+              "assistant.analysis.structuredOutputResponse",
               "assistant.analysis.structuredOutputSkipped",
               "assistant.model.cleanup",
               "assistant.model.clearing",

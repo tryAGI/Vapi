@@ -43,6 +43,7 @@ namespace Vapi
             ref string? email,
             ref string? externalId,
             ref string? customerNumberAny,
+            ref string? idAny,
             ref string? phoneNumberId,
             global::System.Collections.Generic.IList<string>? phoneNumberIdAny,
             ref double? page,
@@ -76,6 +77,7 @@ namespace Vapi
             string? email,
             string? externalId,
             string? customerNumberAny,
+            string? idAny,
             string? phoneNumberId,
             global::System.Collections.Generic.IList<string>? phoneNumberIdAny,
             double? page,
@@ -126,6 +128,7 @@ namespace Vapi
         /// <param name="customerNumberAny">
         /// Example: +1234567890,+0987654321
         /// </param>
+        /// <param name="idAny"></param>
         /// <param name="phoneNumberId"></param>
         /// <param name="phoneNumberIdAny"></param>
         /// <param name="page"></param>
@@ -160,6 +163,7 @@ namespace Vapi
             string? email = default,
             string? externalId = default,
             string? customerNumberAny = default,
+            string? idAny = default,
             string? phoneNumberId = default,
             global::System.Collections.Generic.IList<string>? phoneNumberIdAny = default,
             double? page = default,
@@ -194,6 +198,7 @@ namespace Vapi
                 email: email,
                 externalId: externalId,
                 customerNumberAny: customerNumberAny,
+                idAny: idAny,
                 phoneNumberId: phoneNumberId,
                 phoneNumberIdAny: phoneNumberIdAny,
                 page: page,
@@ -241,6 +246,7 @@ namespace Vapi
         /// <param name="customerNumberAny">
         /// Example: +1234567890,+0987654321
         /// </param>
+        /// <param name="idAny"></param>
         /// <param name="phoneNumberId"></param>
         /// <param name="phoneNumberIdAny"></param>
         /// <param name="page"></param>
@@ -275,6 +281,7 @@ namespace Vapi
             string? email = default,
             string? externalId = default,
             string? customerNumberAny = default,
+            string? idAny = default,
             string? phoneNumberId = default,
             global::System.Collections.Generic.IList<string>? phoneNumberIdAny = default,
             double? page = default,
@@ -312,6 +319,7 @@ namespace Vapi
                 email: ref email,
                 externalId: ref externalId,
                 customerNumberAny: ref customerNumberAny,
+                idAny: ref idAny,
                 phoneNumberId: ref phoneNumberId,
                 phoneNumberIdAny: phoneNumberIdAny,
                 page: ref page,
@@ -370,6 +378,7 @@ namespace Vapi
                                 .AddOptionalParameter("email", email)
                                 .AddOptionalParameter("externalId", externalId)
                                 .AddOptionalParameter("customerNumberAny", customerNumberAny)
+                                .AddOptionalParameter("idAny", idAny)
                                 .AddOptionalParameter("phoneNumberId", phoneNumberId)
                                 .AddOptionalParameter("phoneNumberIdAny", phoneNumberIdAny, delimiter: ",", explode: true)
                                 .AddOptionalParameter("page", page?.ToString())
@@ -441,6 +450,7 @@ namespace Vapi
                     email: email,
                     externalId: externalId,
                     customerNumberAny: customerNumberAny,
+                    idAny: idAny,
                     phoneNumberId: phoneNumberId,
                     phoneNumberIdAny: phoneNumberIdAny,
                     page: page,

@@ -61,6 +61,12 @@ namespace Vapi
         public string? CustomerNumberAny { get; set; }
 
         /// <summary>
+        /// Filter by multiple session IDs. Provide as comma-separated values.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("idAny")]
+        public string? IdAny { get; set; }
+
+        /// <summary>
         /// Columns to include in the CSV export<br/>
         /// Default Value: [assistantId, cost, createdAt, customerName, customerNumber, id, messages, name, phoneNumberId, squadId, status, updatedAt]
         /// </summary>
@@ -205,6 +211,9 @@ namespace Vapi
         /// Filter by any of the specified customer phone numbers (comma-separated).<br/>
         /// Example: +1234567890,+0987654321
         /// </param>
+        /// <param name="idAny">
+        /// Filter by multiple session IDs. Provide as comma-separated values.
+        /// </param>
         /// <param name="columns">
         /// Columns to include in the CSV export<br/>
         /// Default Value: [assistantId, cost, createdAt, customerName, customerNumber, id, messages, name, phoneNumberId, squadId, status, updatedAt]
@@ -272,6 +281,7 @@ namespace Vapi
             string? workflowId,
             global::Vapi.CreateCustomerDTO? customer,
             string? customerNumberAny,
+            string? idAny,
             global::Vapi.ExportSessionDTOColumns? columns,
             string? email,
             global::Vapi.ExportSessionDTOFormat? format,
@@ -298,6 +308,7 @@ namespace Vapi
             this.WorkflowId = workflowId;
             this.Customer = customer;
             this.CustomerNumberAny = customerNumberAny;
+            this.IdAny = idAny;
             this.Columns = columns;
             this.Email = email;
             this.Format = format;

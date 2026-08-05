@@ -12,7 +12,19 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        AssistantAnalysisStructuredOutputError,
+        /// <summary>
+        /// 
+        /// </summary>
         AssistantAnalysisStructuredOutputGenerated,
+        /// <summary>
+        /// 
+        /// </summary>
+        AssistantAnalysisStructuredOutputRequest,
+        /// <summary>
+        /// 
+        /// </summary>
+        AssistantAnalysisStructuredOutputResponse,
         /// <summary>
         /// 
         /// </summary>
@@ -403,7 +415,10 @@ namespace Vapi
         {
             return value switch
             {
+                JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputError => "assistant.analysis.structuredOutputError",
                 JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputGenerated => "assistant.analysis.structuredOutputGenerated",
+                JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputRequest => "assistant.analysis.structuredOutputRequest",
+                JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputResponse => "assistant.analysis.structuredOutputResponse",
                 JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputSkipped => "assistant.analysis.structuredOutputSkipped",
                 JSONQueryOnEventsTableOn.AssistantModelCleanup => "assistant.model.cleanup",
                 JSONQueryOnEventsTableOn.AssistantModelClearing => "assistant.model.clearing",
@@ -508,7 +523,10 @@ namespace Vapi
         {
             return value switch
             {
+                "assistant.analysis.structuredOutputError" => JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputError,
                 "assistant.analysis.structuredOutputGenerated" => JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputGenerated,
+                "assistant.analysis.structuredOutputRequest" => JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputRequest,
+                "assistant.analysis.structuredOutputResponse" => JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputResponse,
                 "assistant.analysis.structuredOutputSkipped" => JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputSkipped,
                 "assistant.model.cleanup" => JSONQueryOnEventsTableOn.AssistantModelCleanup,
                 "assistant.model.clearing" => JSONQueryOnEventsTableOn.AssistantModelClearing,

@@ -24,6 +24,13 @@ namespace Vapi
         public global::System.Guid? SimulationSuiteId { get; set; }
 
         /// <summary>
+        /// Historical suite name captured when the run was created<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("suiteId")]
@@ -45,15 +52,21 @@ namespace Vapi
         /// <param name="simulationSuiteId">
         /// ID of the simulation suite to run
         /// </param>
+        /// <param name="name">
+        /// Historical suite name captured when the run was created<br/>
+        /// Included only in responses
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public SimulationRunSuiteEntry(
             global::Vapi.SimulationRunSuiteEntryType type,
-            global::System.Guid? simulationSuiteId)
+            global::System.Guid? simulationSuiteId,
+            string? name)
         {
             this.Type = type;
             this.SimulationSuiteId = simulationSuiteId;
+            this.Name = name;
         }
 
         /// <summary>

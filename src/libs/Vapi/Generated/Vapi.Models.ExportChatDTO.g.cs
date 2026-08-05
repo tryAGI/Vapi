@@ -47,6 +47,12 @@ namespace Vapi
         public string? PreviousChatId { get; set; }
 
         /// <summary>
+        /// Filter by multiple chat IDs. Provide as comma-separated values.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("idAny")]
+        public string? IdAny { get; set; }
+
+        /// <summary>
         /// Columns to include in the CSV export<br/>
         /// Default Value: [assistantId, cost, createdAt, id, messages, output, previousChatId, sessionId, squadId, updatedAt]
         /// </summary>
@@ -172,6 +178,9 @@ namespace Vapi
         /// <param name="previousChatId">
         /// This is the unique identifier for the previous chat to filter by.
         /// </param>
+        /// <param name="idAny">
+        /// Filter by multiple chat IDs. Provide as comma-separated values.
+        /// </param>
         /// <param name="columns">
         /// Columns to include in the CSV export<br/>
         /// Default Value: [assistantId, cost, createdAt, id, messages, output, previousChatId, sessionId, squadId, updatedAt]
@@ -231,6 +240,7 @@ namespace Vapi
             string? squadId,
             string? sessionId,
             string? previousChatId,
+            string? idAny,
             global::Vapi.ExportChatDTOColumns? columns,
             string? email,
             global::Vapi.ExportChatDTOFormat? format,
@@ -253,6 +263,7 @@ namespace Vapi
             this.SquadId = squadId;
             this.SessionId = sessionId;
             this.PreviousChatId = previousChatId;
+            this.IdAny = idAny;
             this.Columns = columns;
             this.Email = email;
             this.Format = format;
