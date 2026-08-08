@@ -7,7 +7,7 @@ namespace Vapi
     {
 
 
-        private static readonly global::Vapi.EndPointSecurityRequirement s_CampaignControllerFindOneV2SecurityRequirement0 =
+        private static readonly global::Vapi.EndPointSecurityRequirement s_CampaignControllerGetCampaignV2ContactsSecurityRequirement0 =
             new global::Vapi.EndPointSecurityRequirement
             {
                 Authorizations = new global::Vapi.EndPointAuthorizationRequirement[]
@@ -21,45 +21,55 @@ namespace Vapi
                     },
                 },
             };
-        private static readonly global::Vapi.EndPointSecurityRequirement[] s_CampaignControllerFindOneV2SecurityRequirements =
+        private static readonly global::Vapi.EndPointSecurityRequirement[] s_CampaignControllerGetCampaignV2ContactsSecurityRequirements =
             new global::Vapi.EndPointSecurityRequirement[]
-            {                s_CampaignControllerFindOneV2SecurityRequirement0,
+            {                s_CampaignControllerGetCampaignV2ContactsSecurityRequirement0,
             };
-        partial void PrepareCampaignControllerFindOneV2Arguments(
+        partial void PrepareCampaignControllerGetCampaignV2ContactsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid id,
-            ref bool? includeCounters);
-        partial void PrepareCampaignControllerFindOneV2Request(
+            global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? status,
+            ref double? limit,
+            ref double? page);
+        partial void PrepareCampaignControllerGetCampaignV2ContactsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::System.Guid id,
-            bool? includeCounters);
-        partial void ProcessCampaignControllerFindOneV2Response(
+            global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? status,
+            double? limit,
+            double? page);
+        partial void ProcessCampaignControllerGetCampaignV2ContactsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCampaignControllerFindOneV2ResponseContent(
+        partial void ProcessCampaignControllerGetCampaignV2ContactsResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Get Campaign V2
+        /// Get Campaign V2 Contacts
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="includeCounters"></param>
+        /// <param name="status"></param>
+        /// <param name="limit"></param>
+        /// <param name="page"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.CampaignSummary> CampaignControllerFindOneV2Async(
+        public async global::System.Threading.Tasks.Task<global::Vapi.CampaignContactPaginatedResponse> CampaignControllerGetCampaignV2ContactsAsync(
             global::System.Guid id,
-            bool? includeCounters = default,
+            global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? status = default,
+            double? limit = default,
+            double? page = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CampaignControllerFindOneV2AsResponseAsync(
+            var __response = await CampaignControllerGetCampaignV2ContactsAsResponseAsync(
                 id: id,
-                includeCounters: includeCounters,
+                status: status,
+                limit: limit,
+                page: page,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -67,31 +77,37 @@ namespace Vapi
             return __response.Body;
         }
         /// <summary>
-        /// Get Campaign V2
+        /// Get Campaign V2 Contacts
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="includeCounters"></param>
+        /// <param name="status"></param>
+        /// <param name="limit"></param>
+        /// <param name="page"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignSummary>> CampaignControllerFindOneV2AsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignContactPaginatedResponse>> CampaignControllerGetCampaignV2ContactsAsResponseAsync(
             global::System.Guid id,
-            bool? includeCounters = default,
+            global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? status = default,
+            double? limit = default,
+            double? page = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareCampaignControllerFindOneV2Arguments(
+            PrepareCampaignControllerGetCampaignV2ContactsArguments(
                 httpClient: HttpClient,
                 id: ref id,
-                includeCounters: ref includeCounters);
+                status: status,
+                limit: ref limit,
+                page: ref page);
 
 
             var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CampaignControllerFindOneV2SecurityRequirements,
-                operationName: "CampaignControllerFindOneV2Async");
+                securityRequirements: s_CampaignControllerGetCampaignV2ContactsSecurityRequirements,
+                operationName: "CampaignControllerGetCampaignV2ContactsAsync");
 
             using var __timeoutCancellationTokenSource = global::Vapi.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -111,10 +127,12 @@ namespace Vapi
             {
 
                             var __pathBuilder = new global::Vapi.PathBuilder(
-                                path: $"/v2/campaign/{id}",
+                                path: $"/v2/campaign/{id}/contacts",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("includeCounters", includeCounters?.ToString().ToLowerInvariant())
+                                .AddOptionalParameter("status", status, selector: static x => x.ToValueString(), delimiter: ",", explode: true)
+                                .AddOptionalParameter("limit", limit?.ToString())
+                                .AddOptionalParameter("page", page?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Vapi.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -153,11 +171,13 @@ namespace Vapi
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCampaignControllerFindOneV2Request(
+                PrepareCampaignControllerGetCampaignV2ContactsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     id: id!,
-                    includeCounters: includeCounters);
+                    status: status,
+                    limit: limit,
+                    page: page);
 
                 return __httpRequest;
             }
@@ -174,9 +194,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerFindOneV2",
-                                methodName: "CampaignControllerFindOneV2Async",
-                                pathTemplate: "$\"/v2/campaign/{id}\"",
+                                operationId: "CampaignControllerGetCampaignV2Contacts",
+                                methodName: "CampaignControllerGetCampaignV2ContactsAsync",
+                                pathTemplate: "$\"/v2/campaign/{id}/contacts\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -208,9 +228,9 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerFindOneV2",
-                                methodName: "CampaignControllerFindOneV2Async",
-                                pathTemplate: "$\"/v2/campaign/{id}\"",
+                                operationId: "CampaignControllerGetCampaignV2Contacts",
+                                methodName: "CampaignControllerGetCampaignV2ContactsAsync",
+                                pathTemplate: "$\"/v2/campaign/{id}/contacts\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -249,9 +269,9 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerFindOneV2",
-                                methodName: "CampaignControllerFindOneV2Async",
-                                pathTemplate: "$\"/v2/campaign/{id}\"",
+                                operationId: "CampaignControllerGetCampaignV2Contacts",
+                                methodName: "CampaignControllerGetCampaignV2ContactsAsync",
+                                pathTemplate: "$\"/v2/campaign/{id}/contacts\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -289,7 +309,7 @@ namespace Vapi
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCampaignControllerFindOneV2Response(
+                ProcessCampaignControllerGetCampaignV2ContactsResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -297,9 +317,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerFindOneV2",
-                                methodName: "CampaignControllerFindOneV2Async",
-                                pathTemplate: "$\"/v2/campaign/{id}\"",
+                                operationId: "CampaignControllerGetCampaignV2Contacts",
+                                methodName: "CampaignControllerGetCampaignV2ContactsAsync",
+                                pathTemplate: "$\"/v2/campaign/{id}/contacts\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -319,9 +339,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerFindOneV2",
-                                methodName: "CampaignControllerFindOneV2Async",
-                                pathTemplate: "$\"/v2/campaign/{id}\"",
+                                operationId: "CampaignControllerGetCampaignV2Contacts",
+                                methodName: "CampaignControllerGetCampaignV2ContactsAsync",
+                                pathTemplate: "$\"/v2/campaign/{id}/contacts\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -349,7 +369,7 @@ namespace Vapi
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCampaignControllerFindOneV2ResponseContent(
+                                ProcessCampaignControllerGetCampaignV2ContactsResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -358,9 +378,9 @@ namespace Vapi
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Vapi.CampaignSummary.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Vapi.CampaignContactPaginatedResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignSummary>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignContactPaginatedResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -390,9 +410,9 @@ namespace Vapi
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Vapi.CampaignSummary.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Vapi.CampaignContactPaginatedResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignSummary>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignContactPaginatedResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

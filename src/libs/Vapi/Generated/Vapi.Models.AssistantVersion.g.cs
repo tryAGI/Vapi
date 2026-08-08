@@ -190,6 +190,12 @@ namespace Vapi
         public string? ParentVersion { get; set; }
 
         /// <summary>
+        /// The version this version was restored from. Null when it was not restored.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("restoredFromVersion")]
+        public string? RestoredFromVersion { get; set; }
+
+        /// <summary>
         /// This is the actor that wrote this version. Email when created via JWT, null when created via API.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdBy")]
@@ -429,6 +435,9 @@ namespace Vapi
         /// <param name="parentVersion">
         /// This is the prior version label (vN-1). Null on v1 or for branch roots.
         /// </param>
+        /// <param name="restoredFromVersion">
+        /// The version this version was restored from. Null when it was not restored.
+        /// </param>
         /// <param name="createdBy">
         /// This is the actor that wrote this version. Email when created via JWT, null when created via API.
         /// </param>
@@ -530,6 +539,7 @@ namespace Vapi
             string? versionName,
             string? versionDescription,
             string? parentVersion,
+            string? restoredFromVersion,
             string? createdBy,
             global::System.DateTime? deletedAt,
             string? name,
@@ -571,6 +581,7 @@ namespace Vapi
             this.Version = version ?? throw new global::System.ArgumentNullException(nameof(version));
             this.ConfigHash = configHash ?? throw new global::System.ArgumentNullException(nameof(configHash));
             this.ParentVersion = parentVersion;
+            this.RestoredFromVersion = restoredFromVersion;
             this.CreatedBy = createdBy;
             this.DeletedAt = deletedAt;
             this.CreatedAt = createdAt;

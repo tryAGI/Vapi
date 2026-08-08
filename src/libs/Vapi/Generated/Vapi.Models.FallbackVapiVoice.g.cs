@@ -25,12 +25,13 @@ namespace Vapi
         public global::Vapi.FallbackVapiVoiceProvider Provider { get; set; }
 
         /// <summary>
-        /// The voices provided by Vapi
+        /// The voice to use: a built-in Vapi voice name, or a cloned voice id (used with version 2).<br/>
+        /// Example: Clara
         /// </summary>
+        /// <example>Clara</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("voiceId")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.FallbackVapiVoiceVoiceIdJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Vapi.FallbackVapiVoiceVoiceId VoiceId { get; set; }
+        public required string VoiceId { get; set; }
 
         /// <summary>
         /// The Vapi voice routing generation. `latest` auto-updates to the newest generation; version 1 uses legacy mappings; version 2 can use xAI-backed voices when available. When omitted, Version 1 is used. Accepts the string channel ('latest', '1', '2'); legacy numeric values (1, 2) are also accepted and coerced to their string form.
@@ -76,7 +77,8 @@ namespace Vapi
         /// Initializes a new instance of the <see cref="FallbackVapiVoice" /> class.
         /// </summary>
         /// <param name="voiceId">
-        /// The voices provided by Vapi
+        /// The voice to use: a built-in Vapi voice name, or a cloned voice id (used with version 2).<br/>
+        /// Example: Clara
         /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
@@ -107,7 +109,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public FallbackVapiVoice(
-            global::Vapi.FallbackVapiVoiceVoiceId voiceId,
+            string voiceId,
             bool? cachingEnabled,
             global::Vapi.FallbackVapiVoiceProvider provider,
             global::Vapi.OneOf<global::Vapi.FallbackVapiVoiceVersion2?, double?>? version,
@@ -118,7 +120,7 @@ namespace Vapi
         {
             this.CachingEnabled = cachingEnabled;
             this.Provider = provider;
-            this.VoiceId = voiceId;
+            this.VoiceId = voiceId ?? throw new global::System.ArgumentNullException(nameof(voiceId));
             this.Version = version;
             this.Speed = speed;
             this.Language = language;

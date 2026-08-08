@@ -3,10 +3,10 @@
 namespace Vapi.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class FallbackVapiVoiceVoiceIdJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.FallbackVapiVoiceVoiceId>
+    public sealed class CampaignControllerGetCampaignV2ContactsStatuJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>
     {
         /// <inheritdoc />
-        public override global::Vapi.FallbackVapiVoiceVoiceId Read(
+        public override global::Vapi.CampaignControllerGetCampaignV2ContactsStatu Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Vapi.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Vapi.FallbackVapiVoiceVoiceIdExtensions.ToEnum(stringValue) ?? default;
+                        return global::Vapi.CampaignControllerGetCampaignV2ContactsStatuExtensions.ToEnum(stringValue) ?? default;
                     }
                     
                     break;
@@ -26,11 +26,11 @@ namespace Vapi.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Vapi.FallbackVapiVoiceVoiceId)numValue;
+                    return (global::Vapi.CampaignControllerGetCampaignV2ContactsStatu)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Vapi.FallbackVapiVoiceVoiceId);
+                    return default(global::Vapi.CampaignControllerGetCampaignV2ContactsStatu);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,12 +42,12 @@ namespace Vapi.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Vapi.FallbackVapiVoiceVoiceId value,
+            global::Vapi.CampaignControllerGetCampaignV2ContactsStatu value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            writer.WriteStringValue(global::Vapi.FallbackVapiVoiceVoiceIdExtensions.ToValueString(value));
+            writer.WriteStringValue(global::Vapi.CampaignControllerGetCampaignV2ContactsStatuExtensions.ToValueString(value));
         }
     }
 }
