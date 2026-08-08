@@ -3,10 +3,10 @@
 namespace Vapi.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class FallbackVapiVoiceVoiceIdNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.FallbackVapiVoiceVoiceId?>
+    public sealed class CampaignSummaryStatusNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.CampaignSummaryStatus?>
     {
         /// <inheritdoc />
-        public override global::Vapi.FallbackVapiVoiceVoiceId? Read(
+        public override global::Vapi.CampaignSummaryStatus? Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Vapi.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Vapi.FallbackVapiVoiceVoiceIdExtensions.ToEnum(stringValue);
+                        return global::Vapi.CampaignSummaryStatusExtensions.ToEnum(stringValue);
                     }
                     
                     break;
@@ -26,11 +26,11 @@ namespace Vapi.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Vapi.FallbackVapiVoiceVoiceId)numValue;
+                    return (global::Vapi.CampaignSummaryStatus)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Vapi.FallbackVapiVoiceVoiceId?);
+                    return default(global::Vapi.CampaignSummaryStatus?);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,7 +42,7 @@ namespace Vapi.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Vapi.FallbackVapiVoiceVoiceId? value,
+            global::Vapi.CampaignSummaryStatus? value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
@@ -53,7 +53,7 @@ namespace Vapi.JsonConverters
             }
             else
             {
-                writer.WriteStringValue(global::Vapi.FallbackVapiVoiceVoiceIdExtensions.ToValueString(value.Value));
+                writer.WriteStringValue(global::Vapi.CampaignSummaryStatusExtensions.ToValueString(value.Value));
             }
         }
     }

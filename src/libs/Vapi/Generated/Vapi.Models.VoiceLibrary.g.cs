@@ -136,6 +136,29 @@ namespace Vapi
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
+        /// Whether this voice was cloned by the org from their own audio, as opposed<br/>
+        /// to a seeded/preset voice. Drives the cloned filter and tag. Backed by a<br/>
+        /// NOT NULL DEFAULT false column, so it is always present at read time.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isCloned")]
+        public bool? IsCloned { get; set; }
+
+        /// <summary>
+        /// The provider that produced the clone (e.g. 'xai'). The voice `provider`<br/>
+        /// stays 'vapi'; this records the underlying backend. Unset for non-cloned voices.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cloneBackend")]
+        public string? CloneBackend { get; set; }
+
+        /// <summary>
+        /// When the clone's prorated creation fee was successfully charged. Unset<br/>
+        /// means the org was never charged for this clone, which is what makes it<br/>
+        /// neither billable monthly nor refundable on delete.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cloneChargedAt")]
+        public global::System.DateTime? CloneChargedAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -204,6 +227,20 @@ namespace Vapi
         /// <param name="credentialId">
         /// The credential ID of the voice.
         /// </param>
+        /// <param name="isCloned">
+        /// Whether this voice was cloned by the org from their own audio, as opposed<br/>
+        /// to a seeded/preset voice. Drives the cloned filter and tag. Backed by a<br/>
+        /// NOT NULL DEFAULT false column, so it is always present at read time.
+        /// </param>
+        /// <param name="cloneBackend">
+        /// The provider that produced the clone (e.g. 'xai'). The voice `provider`<br/>
+        /// stays 'vapi'; this records the underlying backend. Unset for non-cloned voices.
+        /// </param>
+        /// <param name="cloneChargedAt">
+        /// When the clone's prorated creation fee was successfully charged. Unset<br/>
+        /// means the org was never charged for this clone, which is what makes it<br/>
+        /// neither billable monthly nor refundable on delete.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -227,7 +264,10 @@ namespace Vapi
             string? previewUrl,
             double? sortOrder,
             string? description,
-            string? credentialId)
+            string? credentialId,
+            bool? isCloned,
+            string? cloneBackend,
+            global::System.DateTime? cloneChargedAt)
         {
             this.Provider = provider;
             this.ProviderId = providerId;
@@ -249,6 +289,9 @@ namespace Vapi
             this.IsDeleted = isDeleted;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
+            this.IsCloned = isCloned;
+            this.CloneBackend = cloneBackend;
+            this.CloneChargedAt = cloneChargedAt;
         }
 
         /// <summary>
