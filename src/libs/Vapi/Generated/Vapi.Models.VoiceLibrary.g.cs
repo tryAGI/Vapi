@@ -151,14 +151,6 @@ namespace Vapi
         public string? CloneBackend { get; set; }
 
         /// <summary>
-        /// When the clone's prorated creation fee was successfully charged. Unset<br/>
-        /// means the org was never charged for this clone, which is what makes it<br/>
-        /// neither billable monthly nor refundable on delete.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("cloneChargedAt")]
-        public global::System.DateTime? CloneChargedAt { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -236,11 +228,6 @@ namespace Vapi
         /// The provider that produced the clone (e.g. 'xai'). The voice `provider`<br/>
         /// stays 'vapi'; this records the underlying backend. Unset for non-cloned voices.
         /// </param>
-        /// <param name="cloneChargedAt">
-        /// When the clone's prorated creation fee was successfully charged. Unset<br/>
-        /// means the org was never charged for this clone, which is what makes it<br/>
-        /// neither billable monthly nor refundable on delete.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -266,8 +253,7 @@ namespace Vapi
             string? description,
             string? credentialId,
             bool? isCloned,
-            string? cloneBackend,
-            global::System.DateTime? cloneChargedAt)
+            string? cloneBackend)
         {
             this.Provider = provider;
             this.ProviderId = providerId;
@@ -291,7 +277,6 @@ namespace Vapi
             this.UpdatedAt = updatedAt;
             this.IsCloned = isCloned;
             this.CloneBackend = cloneBackend;
-            this.CloneChargedAt = cloneChargedAt;
         }
 
         /// <summary>

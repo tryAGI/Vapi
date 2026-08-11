@@ -80,6 +80,20 @@ namespace Vapi
         public required string Transcript { get; set; }
 
         /// <summary>
+        /// The ID of the assistant that produced this transcript. Present on<br/>
+        /// assistant-role events when an active assistant ID is available.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantId")]
+        public string? AssistantId { get; set; }
+
+        /// <summary>
+        /// The name of the assistant that produced this transcript. Present on<br/>
+        /// assistant-role events when an active assistant name is available.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantName")]
+        public string? AssistantName { get; set; }
+
+        /// <summary>
         /// Indicates if the transcript was filtered for security reasons.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isFiltered")]
@@ -139,6 +153,14 @@ namespace Vapi
         /// <param name="assistant">
         /// This is the assistant that the message is associated with.
         /// </param>
+        /// <param name="assistantId">
+        /// The ID of the assistant that produced this transcript. Present on<br/>
+        /// assistant-role events when an active assistant ID is available.
+        /// </param>
+        /// <param name="assistantName">
+        /// The name of the assistant that produced this transcript. Present on<br/>
+        /// assistant-role events when an active assistant name is available.
+        /// </param>
         /// <param name="isFiltered">
         /// Indicates if the transcript was filtered for security reasons.
         /// </param>
@@ -162,6 +184,8 @@ namespace Vapi
             global::Vapi.Call? call,
             global::Vapi.CreateCustomerDTO? customer,
             global::Vapi.CreateAssistantDTO? assistant,
+            string? assistantId,
+            string? assistantName,
             bool? isFiltered,
             global::System.Collections.Generic.IList<string>? detectedThreats,
             string? originalTranscript)
@@ -176,6 +200,8 @@ namespace Vapi
             this.Role = role;
             this.TranscriptType = transcriptType;
             this.Transcript = transcript ?? throw new global::System.ArgumentNullException(nameof(transcript));
+            this.AssistantId = assistantId;
+            this.AssistantName = assistantName;
             this.IsFiltered = isFiltered;
             this.DetectedThreats = detectedThreats;
             this.OriginalTranscript = originalTranscript;

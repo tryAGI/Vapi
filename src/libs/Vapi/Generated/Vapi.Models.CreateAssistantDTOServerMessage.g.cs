@@ -19,6 +19,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallArtifactUpload,
+        /// <summary>
+        /// 
+        /// </summary>
         CallDeleteFailed,
         /// <summary>
         /// 
@@ -132,6 +136,7 @@ namespace Vapi
             {
                 CreateAssistantDTOServerMessage.AssistantSpeechStarted => "assistant.speechStarted",
                 CreateAssistantDTOServerMessage.AssistantStarted => "assistant.started",
+                CreateAssistantDTOServerMessage.CallArtifactUpload => "call.artifact.upload",
                 CreateAssistantDTOServerMessage.CallDeleteFailed => "call.delete.failed",
                 CreateAssistantDTOServerMessage.CallDeleted => "call.deleted",
                 CreateAssistantDTOServerMessage.ChatCreated => "chat.created",
@@ -169,6 +174,7 @@ namespace Vapi
             {
                 "assistant.speechStarted" => CreateAssistantDTOServerMessage.AssistantSpeechStarted,
                 "assistant.started" => CreateAssistantDTOServerMessage.AssistantStarted,
+                "call.artifact.upload" => CreateAssistantDTOServerMessage.CallArtifactUpload,
                 "call.delete.failed" => CreateAssistantDTOServerMessage.CallDeleteFailed,
                 "call.deleted" => CreateAssistantDTOServerMessage.CallDeleted,
                 "chat.created" => CreateAssistantDTOServerMessage.ChatCreated,
