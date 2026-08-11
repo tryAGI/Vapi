@@ -19,6 +19,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        CallArtifactUpload,
+        /// <summary>
+        /// 
+        /// </summary>
         CallDeleteFailed,
         /// <summary>
         /// 
@@ -132,6 +136,7 @@ namespace Vapi
             {
                 AssistantServerMessage.AssistantSpeechStarted => "assistant.speechStarted",
                 AssistantServerMessage.AssistantStarted => "assistant.started",
+                AssistantServerMessage.CallArtifactUpload => "call.artifact.upload",
                 AssistantServerMessage.CallDeleteFailed => "call.delete.failed",
                 AssistantServerMessage.CallDeleted => "call.deleted",
                 AssistantServerMessage.ChatCreated => "chat.created",
@@ -169,6 +174,7 @@ namespace Vapi
             {
                 "assistant.speechStarted" => AssistantServerMessage.AssistantSpeechStarted,
                 "assistant.started" => AssistantServerMessage.AssistantStarted,
+                "call.artifact.upload" => AssistantServerMessage.CallArtifactUpload,
                 "call.delete.failed" => AssistantServerMessage.CallDeleteFailed,
                 "call.deleted" => AssistantServerMessage.CallDeleted,
                 "chat.created" => AssistantServerMessage.ChatCreated,

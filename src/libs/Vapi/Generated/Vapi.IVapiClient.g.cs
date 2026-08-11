@@ -113,6 +113,36 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public SimulationPersonalitiesClient SimulationPersonalities { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public SimulationRunItemsClient SimulationRunItems { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public SimulationRunsClient SimulationRuns { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public SimulationScenariosClient SimulationScenarios { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public SimulationSuitesClient SimulationSuites { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public SimulationsClient Simulations { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public SquadsClient Squads { get; }
 
         /// <summary>
