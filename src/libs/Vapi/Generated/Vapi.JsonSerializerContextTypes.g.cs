@@ -4956,5231 +4956,5251 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCampaignDTO? Type1232 { get; set; }
+        public global::Vapi.CampaignSummaryPaginatedResponse? Type1232 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCampaignDTOStatus? Type1233 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.CampaignSummary>? Type1233 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CampaignContactWithOutcome? Type1234 { get; set; }
+        public global::Vapi.UpdateCampaignDTO? Type1234 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CampaignContactWithOutcomeStatus? Type1235 { get; set; }
+        public global::Vapi.UpdateCampaignDTOStatus? Type1235 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CampaignContactPaginatedResponse? Type1236 { get; set; }
+        public global::Vapi.CampaignContactWithOutcome? Type1236 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.CampaignContactWithOutcome>? Type1237 { get; set; }
+        public global::Vapi.CampaignContactWithOutcomeStatus? Type1237 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayTargetAssistant? Type1238 { get; set; }
+        public global::Vapi.CampaignContactPaginatedResponse? Type1238 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayTargetAssistantType? Type1239 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.CampaignContactWithOutcome>? Type1239 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayTargetSquad? Type1240 { get; set; }
+        public global::Vapi.RelayTargetAssistant? Type1240 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayTargetSquadType? Type1241 { get; set; }
+        public global::Vapi.RelayTargetAssistantType? Type1241 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayTargetOptions? Type1242 { get; set; }
+        public global::Vapi.RelayTargetSquad? Type1242 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayTargetOptionsType? Type1243 { get; set; }
+        public global::Vapi.RelayTargetSquadType? Type1243 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayCommandSay? Type1244 { get; set; }
+        public global::Vapi.RelayTargetOptions? Type1244 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayCommandSayType? Type1245 { get; set; }
+        public global::Vapi.RelayTargetOptionsType? Type1245 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayCommandNote? Type1246 { get; set; }
+        public global::Vapi.RelayCommandSay? Type1246 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayCommandNoteType? Type1247 { get; set; }
+        public global::Vapi.RelayCommandSayType? Type1247 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayCommandOptions? Type1248 { get; set; }
+        public global::Vapi.RelayCommandNote? Type1248 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayCommandOptionsType? Type1249 { get; set; }
+        public global::Vapi.RelayCommandNoteType? Type1249 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayRequest? Type1250 { get; set; }
+        public global::Vapi.RelayCommandOptions? Type1250 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.RelayTargetAssistant, global::Vapi.RelayTargetSquad>? Type1251 { get; set; }
+        public global::Vapi.RelayCommandOptionsType? Type1251 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.RelayCommandSay, global::Vapi.RelayCommandNote>>? Type1252 { get; set; }
+        public global::Vapi.RelayRequest? Type1252 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.RelayCommandSay, global::Vapi.RelayCommandNote>? Type1253 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.RelayTargetAssistant, global::Vapi.RelayTargetSquad>? Type1253 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayResponse? Type1254 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.RelayCommandSay, global::Vapi.RelayCommandNote>>? Type1254 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RelayResponseStatus? Type1255 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.RelayCommandSay, global::Vapi.RelayCommandNote>? Type1255 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Session? Type1256 { get; set; }
+        public global::Vapi.RelayResponse? Type1256 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ModelCost, global::Vapi.AnalysisCost, global::Vapi.SessionCost>>? Type1257 { get; set; }
+        public global::Vapi.RelayResponseStatus? Type1257 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.ModelCost, global::Vapi.AnalysisCost, global::Vapi.SessionCost>? Type1258 { get; set; }
+        public global::Vapi.Session? Type1258 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SessionCost? Type1259 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ModelCost, global::Vapi.AnalysisCost, global::Vapi.SessionCost>>? Type1259 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SessionStatus? Type1260 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.ModelCost, global::Vapi.AnalysisCost, global::Vapi.SessionCost>? Type1260 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSessionDTO? Type1261 { get; set; }
+        public global::Vapi.SessionCost? Type1261 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSessionDTOStatus? Type1262 { get; set; }
+        public global::Vapi.SessionStatus? Type1262 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSessionDTO? Type1263 { get; set; }
+        public global::Vapi.CreateSessionDTO? Type1263 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSessionDTOStatus? Type1264 { get; set; }
+        public global::Vapi.CreateSessionDTOStatus? Type1264 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GetSessionPaginatedDTO? Type1265 { get; set; }
+        public global::Vapi.UpdateSessionDTO? Type1265 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GetSessionPaginatedDTOSortOrder? Type1266 { get; set; }
+        public global::Vapi.UpdateSessionDTOStatus? Type1266 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GetSessionPaginatedDTOSortBy? Type1267 { get; set; }
+        public global::Vapi.GetSessionPaginatedDTO? Type1267 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SessionPaginatedResponse? Type1268 { get; set; }
+        public global::Vapi.GetSessionPaginatedDTOSortOrder? Type1268 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.Session>? Type1269 { get; set; }
+        public global::Vapi.GetSessionPaginatedDTOSortBy? Type1269 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ExportSessionDTO? Type1270 { get; set; }
+        public global::Vapi.SessionPaginatedResponse? Type1270 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ExportSessionDTOColumns? Type1271 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.Session>? Type1271 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ExportSessionDTOFormat? Type1272 { get; set; }
+        public global::Vapi.ExportSessionDTO? Type1272 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ExportSessionDTOSortOrder? Type1273 { get; set; }
+        public global::Vapi.ExportSessionDTOColumns? Type1273 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ExportSessionDTOSortBy? Type1274 { get; set; }
+        public global::Vapi.ExportSessionDTOFormat? Type1274 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ByoPhoneNumber? Type1275 { get; set; }
+        public global::Vapi.ExportSessionDTOSortOrder? Type1275 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ByoPhoneNumberProvider? Type1276 { get; set; }
+        public global::Vapi.ExportSessionDTOSortBy? Type1276 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ByoPhoneNumberStatus? Type1277 { get; set; }
+        public global::Vapi.ByoPhoneNumber? Type1277 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TwilioPhoneNumber? Type1278 { get; set; }
+        public global::Vapi.ByoPhoneNumberProvider? Type1278 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TwilioPhoneNumberProvider? Type1279 { get; set; }
+        public global::Vapi.ByoPhoneNumberStatus? Type1279 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TwilioPhoneNumberStatus? Type1280 { get; set; }
+        public global::Vapi.TwilioPhoneNumber? Type1280 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VonagePhoneNumber? Type1281 { get; set; }
+        public global::Vapi.TwilioPhoneNumberProvider? Type1281 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VonagePhoneNumberProvider? Type1282 { get; set; }
+        public global::Vapi.TwilioPhoneNumberStatus? Type1282 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VonagePhoneNumberStatus? Type1283 { get; set; }
+        public global::Vapi.VonagePhoneNumber? Type1283 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SipAuthentication? Type1284 { get; set; }
+        public global::Vapi.VonagePhoneNumberProvider? Type1284 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VapiPhoneNumber? Type1285 { get; set; }
+        public global::Vapi.VonagePhoneNumberStatus? Type1285 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VapiPhoneNumberProvider? Type1286 { get; set; }
+        public global::Vapi.SipAuthentication? Type1286 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VapiPhoneNumberStatus? Type1287 { get; set; }
+        public global::Vapi.VapiPhoneNumber? Type1287 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TelnyxPhoneNumber? Type1288 { get; set; }
+        public global::Vapi.VapiPhoneNumberProvider? Type1288 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TelnyxPhoneNumberProvider? Type1289 { get; set; }
+        public global::Vapi.VapiPhoneNumberStatus? Type1289 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TelnyxPhoneNumberStatus? Type1290 { get; set; }
+        public global::Vapi.TelnyxPhoneNumber? Type1290 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateByoPhoneNumberDTO? Type1291 { get; set; }
+        public global::Vapi.TelnyxPhoneNumberProvider? Type1291 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateByoPhoneNumberDTOProvider? Type1292 { get; set; }
+        public global::Vapi.TelnyxPhoneNumberStatus? Type1292 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTwilioPhoneNumberDTO? Type1293 { get; set; }
+        public global::Vapi.CreateByoPhoneNumberDTO? Type1293 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTwilioPhoneNumberDTOProvider? Type1294 { get; set; }
+        public global::Vapi.CreateByoPhoneNumberDTOProvider? Type1294 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateVonagePhoneNumberDTO? Type1295 { get; set; }
+        public global::Vapi.CreateTwilioPhoneNumberDTO? Type1295 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateVonagePhoneNumberDTOProvider? Type1296 { get; set; }
+        public global::Vapi.CreateTwilioPhoneNumberDTOProvider? Type1296 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateVapiPhoneNumberDTO? Type1297 { get; set; }
+        public global::Vapi.CreateVonagePhoneNumberDTO? Type1297 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateVapiPhoneNumberDTOProvider? Type1298 { get; set; }
+        public global::Vapi.CreateVonagePhoneNumberDTOProvider? Type1298 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTelnyxPhoneNumberDTO? Type1299 { get; set; }
+        public global::Vapi.CreateVapiPhoneNumberDTO? Type1299 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTelnyxPhoneNumberDTOProvider? Type1300 { get; set; }
+        public global::Vapi.CreateVapiPhoneNumberDTOProvider? Type1300 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateByoPhoneNumberDTO? Type1301 { get; set; }
+        public global::Vapi.CreateTelnyxPhoneNumberDTO? Type1301 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateByoPhoneNumberDTOProvider? Type1302 { get; set; }
+        public global::Vapi.CreateTelnyxPhoneNumberDTOProvider? Type1302 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTwilioPhoneNumberDTO? Type1303 { get; set; }
+        public global::Vapi.UpdateByoPhoneNumberDTO? Type1303 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTwilioPhoneNumberDTOProvider? Type1304 { get; set; }
+        public global::Vapi.UpdateByoPhoneNumberDTOProvider? Type1304 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateVonagePhoneNumberDTO? Type1305 { get; set; }
+        public global::Vapi.UpdateTwilioPhoneNumberDTO? Type1305 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateVonagePhoneNumberDTOProvider? Type1306 { get; set; }
+        public global::Vapi.UpdateTwilioPhoneNumberDTOProvider? Type1306 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateVapiPhoneNumberDTO? Type1307 { get; set; }
+        public global::Vapi.UpdateVonagePhoneNumberDTO? Type1307 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateVapiPhoneNumberDTOProvider? Type1308 { get; set; }
+        public global::Vapi.UpdateVonagePhoneNumberDTOProvider? Type1308 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTelnyxPhoneNumberDTO? Type1309 { get; set; }
+        public global::Vapi.UpdateVapiPhoneNumberDTO? Type1309 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTelnyxPhoneNumberDTOProvider? Type1310 { get; set; }
+        public global::Vapi.UpdateVapiPhoneNumberDTOProvider? Type1310 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ImportVonagePhoneNumberDTO? Type1311 { get; set; }
+        public global::Vapi.UpdateTelnyxPhoneNumberDTO? Type1311 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberPaginatedResponse? Type1312 { get; set; }
+        public global::Vapi.UpdateTelnyxPhoneNumberDTOProvider? Type1312 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ByoPhoneNumber, global::Vapi.TwilioPhoneNumber, global::Vapi.VonagePhoneNumber, global::Vapi.VapiPhoneNumber, global::Vapi.TelnyxPhoneNumber>>? Type1313 { get; set; }
+        public global::Vapi.ImportVonagePhoneNumberDTO? Type1313 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.ByoPhoneNumber, global::Vapi.TwilioPhoneNumber, global::Vapi.VonagePhoneNumber, global::Vapi.VapiPhoneNumber, global::Vapi.TelnyxPhoneNumber>? Type1314 { get; set; }
+        public global::Vapi.PhoneNumberPaginatedResponse? Type1314 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ApiRequestTool? Type1315 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ByoPhoneNumber, global::Vapi.TwilioPhoneNumber, global::Vapi.VonagePhoneNumber, global::Vapi.VapiPhoneNumber, global::Vapi.TelnyxPhoneNumber>>? Type1315 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ApiRequestToolType? Type1316 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.ByoPhoneNumber, global::Vapi.TwilioPhoneNumber, global::Vapi.VonagePhoneNumber, global::Vapi.VapiPhoneNumber, global::Vapi.TelnyxPhoneNumber>? Type1316 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ApiRequestToolMethod? Type1317 { get; set; }
+        public global::Vapi.ApiRequestTool? Type1317 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CodeToolEnvironmentVariable? Type1318 { get; set; }
+        public global::Vapi.ApiRequestToolType? Type1318 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CodeTool? Type1319 { get; set; }
+        public global::Vapi.ApiRequestToolMethod? Type1319 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CodeToolType? Type1320 { get; set; }
+        public global::Vapi.CodeToolEnvironmentVariable? Type1320 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.CodeToolEnvironmentVariable>? Type1321 { get; set; }
+        public global::Vapi.CodeTool? Type1321 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.DtmfTool? Type1322 { get; set; }
+        public global::Vapi.CodeToolType? Type1322 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.DtmfToolType? Type1323 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.CodeToolEnvironmentVariable>? Type1323 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EndCallTool? Type1324 { get; set; }
+        public global::Vapi.DtmfTool? Type1324 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EndCallToolType? Type1325 { get; set; }
+        public global::Vapi.DtmfToolType? Type1325 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FunctionTool? Type1326 { get; set; }
+        public global::Vapi.EndCallTool? Type1326 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FunctionToolType? Type1327 { get; set; }
+        public global::Vapi.EndCallToolType? Type1327 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GhlTool? Type1328 { get; set; }
+        public global::Vapi.FunctionTool? Type1328 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GhlToolType? Type1329 { get; set; }
+        public global::Vapi.FunctionToolType? Type1329 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MakeTool? Type1330 { get; set; }
+        public global::Vapi.GhlTool? Type1330 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MakeToolType? Type1331 { get; set; }
+        public global::Vapi.GhlToolType? Type1331 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TransferCallTool? Type1332 { get; set; }
+        public global::Vapi.MakeTool? Type1332 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TransferCallToolType? Type1333 { get; set; }
+        public global::Vapi.MakeToolType? Type1333 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.HandoffTool? Type1334 { get; set; }
+        public global::Vapi.TransferCallTool? Type1334 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.HandoffToolType? Type1335 { get; set; }
+        public global::Vapi.TransferCallToolType? Type1335 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OutputTool? Type1336 { get; set; }
+        public global::Vapi.HandoffTool? Type1336 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OutputToolType? Type1337 { get; set; }
+        public global::Vapi.HandoffToolType? Type1337 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BashTool? Type1338 { get; set; }
+        public global::Vapi.OutputTool? Type1338 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BashToolType? Type1339 { get; set; }
+        public global::Vapi.OutputToolType? Type1339 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BashToolSubType? Type1340 { get; set; }
+        public global::Vapi.BashTool? Type1340 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BashToolName? Type1341 { get; set; }
+        public global::Vapi.BashToolType? Type1341 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ComputerTool? Type1342 { get; set; }
+        public global::Vapi.BashToolSubType? Type1342 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ComputerToolType? Type1343 { get; set; }
+        public global::Vapi.BashToolName? Type1343 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ComputerToolSubType? Type1344 { get; set; }
+        public global::Vapi.ComputerTool? Type1344 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ComputerToolName? Type1345 { get; set; }
+        public global::Vapi.ComputerToolType? Type1345 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextEditorTool? Type1346 { get; set; }
+        public global::Vapi.ComputerToolSubType? Type1346 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextEditorToolType? Type1347 { get; set; }
+        public global::Vapi.ComputerToolName? Type1347 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextEditorToolSubType? Type1348 { get; set; }
+        public global::Vapi.TextEditorTool? Type1348 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextEditorToolName? Type1349 { get; set; }
+        public global::Vapi.TextEditorToolType? Type1349 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.QueryTool? Type1350 { get; set; }
+        public global::Vapi.TextEditorToolSubType? Type1350 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.QueryToolType? Type1351 { get; set; }
+        public global::Vapi.TextEditorToolName? Type1351 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarCreateEventTool? Type1352 { get; set; }
+        public global::Vapi.QueryTool? Type1352 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarCreateEventToolType? Type1353 { get; set; }
+        public global::Vapi.QueryToolType? Type1353 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleSheetsRowAppendTool? Type1354 { get; set; }
+        public global::Vapi.GoogleCalendarCreateEventTool? Type1354 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleSheetsRowAppendToolType? Type1355 { get; set; }
+        public global::Vapi.GoogleCalendarCreateEventToolType? Type1355 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarCheckAvailabilityTool? Type1356 { get; set; }
+        public global::Vapi.GoogleSheetsRowAppendTool? Type1356 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarCheckAvailabilityToolType? Type1357 { get; set; }
+        public global::Vapi.GoogleSheetsRowAppendToolType? Type1357 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SlackSendMessageTool? Type1358 { get; set; }
+        public global::Vapi.GoogleCalendarCheckAvailabilityTool? Type1358 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SlackSendMessageToolType? Type1359 { get; set; }
+        public global::Vapi.GoogleCalendarCheckAvailabilityToolType? Type1359 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SmsTool? Type1360 { get; set; }
+        public global::Vapi.SlackSendMessageTool? Type1360 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SmsToolType? Type1361 { get; set; }
+        public global::Vapi.SlackSendMessageToolType? Type1361 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.McpTool? Type1362 { get; set; }
+        public global::Vapi.SmsTool? Type1362 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.McpToolType? Type1363 { get; set; }
+        public global::Vapi.SmsToolType? Type1363 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarAvailabilityTool? Type1364 { get; set; }
+        public global::Vapi.McpTool? Type1364 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarAvailabilityToolType? Type1365 { get; set; }
+        public global::Vapi.McpToolType? Type1365 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarEventCreateTool? Type1366 { get; set; }
+        public global::Vapi.GoHighLevelCalendarAvailabilityTool? Type1366 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarEventCreateToolType? Type1367 { get; set; }
+        public global::Vapi.GoHighLevelCalendarAvailabilityToolType? Type1367 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactCreateTool? Type1368 { get; set; }
+        public global::Vapi.GoHighLevelCalendarEventCreateTool? Type1368 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactCreateToolType? Type1369 { get; set; }
+        public global::Vapi.GoHighLevelCalendarEventCreateToolType? Type1369 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactGetTool? Type1370 { get; set; }
+        public global::Vapi.GoHighLevelContactCreateTool? Type1370 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactGetToolType? Type1371 { get; set; }
+        public global::Vapi.GoHighLevelContactCreateToolType? Type1371 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SipRequestTool? Type1372 { get; set; }
+        public global::Vapi.GoHighLevelContactGetTool? Type1372 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SipRequestToolType? Type1373 { get; set; }
+        public global::Vapi.GoHighLevelContactGetToolType? Type1373 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SipRequestToolVerb? Type1374 { get; set; }
+        public global::Vapi.SipRequestTool? Type1374 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<string, global::Vapi.JsonSchema>? Type1375 { get; set; }
+        public global::Vapi.SipRequestToolType? Type1375 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VoicemailTool? Type1376 { get; set; }
+        public global::Vapi.SipRequestToolVerb? Type1376 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VoicemailToolType? Type1377 { get; set; }
+        public global::Vapi.OneOf<string, global::Vapi.JsonSchema>? Type1377 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateApiRequestToolDTOType? Type1378 { get; set; }
+        public global::Vapi.VoicemailTool? Type1378 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateApiRequestToolDTOMethod? Type1379 { get; set; }
+        public global::Vapi.VoicemailToolType? Type1379 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateCodeToolDTOType? Type1380 { get; set; }
+        public global::Vapi.CreateApiRequestToolDTOType? Type1380 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateOutputToolDTO? Type1381 { get; set; }
+        public global::Vapi.CreateApiRequestToolDTOMethod? Type1381 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateOutputToolDTOType? Type1382 { get; set; }
+        public global::Vapi.CreateCodeToolDTOType? Type1382 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateBashToolDTOType? Type1383 { get; set; }
+        public global::Vapi.CreateOutputToolDTO? Type1383 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateBashToolDTOSubType? Type1384 { get; set; }
+        public global::Vapi.CreateOutputToolDTOType? Type1384 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateBashToolDTOName? Type1385 { get; set; }
+        public global::Vapi.CreateBashToolDTOType? Type1385 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateComputerToolDTOType? Type1386 { get; set; }
+        public global::Vapi.CreateBashToolDTOSubType? Type1386 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateComputerToolDTOSubType? Type1387 { get; set; }
+        public global::Vapi.CreateBashToolDTOName? Type1387 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateComputerToolDTOName? Type1388 { get; set; }
+        public global::Vapi.CreateComputerToolDTOType? Type1388 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTextEditorToolDTOType? Type1389 { get; set; }
+        public global::Vapi.CreateComputerToolDTOSubType? Type1389 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTextEditorToolDTOSubType? Type1390 { get; set; }
+        public global::Vapi.CreateComputerToolDTOName? Type1390 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTextEditorToolDTOName? Type1391 { get; set; }
+        public global::Vapi.CreateTextEditorToolDTOType? Type1391 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSmsToolDTOType? Type1392 { get; set; }
+        public global::Vapi.CreateTextEditorToolDTOSubType? Type1392 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSipRequestToolDTOType? Type1393 { get; set; }
+        public global::Vapi.CreateTextEditorToolDTOName? Type1393 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSipRequestToolDTOVerb? Type1394 { get; set; }
+        public global::Vapi.CreateSmsToolDTOType? Type1394 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateApiRequestToolDTO? Type1395 { get; set; }
+        public global::Vapi.CreateSipRequestToolDTOType? Type1395 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateApiRequestToolDTOType? Type1396 { get; set; }
+        public global::Vapi.CreateSipRequestToolDTOVerb? Type1396 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateApiRequestToolDTOMethod? Type1397 { get; set; }
+        public global::Vapi.UpdateApiRequestToolDTO? Type1397 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCodeToolDTO? Type1398 { get; set; }
+        public global::Vapi.UpdateApiRequestToolDTOType? Type1398 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCodeToolDTOType? Type1399 { get; set; }
+        public global::Vapi.UpdateApiRequestToolDTOMethod? Type1399 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateDtmfToolDTO? Type1400 { get; set; }
+        public global::Vapi.UpdateCodeToolDTO? Type1400 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateDtmfToolDTOType? Type1401 { get; set; }
+        public global::Vapi.UpdateCodeToolDTOType? Type1401 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateEndCallToolDTO? Type1402 { get; set; }
+        public global::Vapi.UpdateDtmfToolDTO? Type1402 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateEndCallToolDTOType? Type1403 { get; set; }
+        public global::Vapi.UpdateDtmfToolDTOType? Type1403 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateFunctionToolDTO? Type1404 { get; set; }
+        public global::Vapi.UpdateEndCallToolDTO? Type1404 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateFunctionToolDTOType? Type1405 { get; set; }
+        public global::Vapi.UpdateEndCallToolDTOType? Type1405 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGhlToolDTO? Type1406 { get; set; }
+        public global::Vapi.UpdateFunctionToolDTO? Type1406 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGhlToolDTOType? Type1407 { get; set; }
+        public global::Vapi.UpdateFunctionToolDTOType? Type1407 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateMakeToolDTO? Type1408 { get; set; }
+        public global::Vapi.UpdateGhlToolDTO? Type1408 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateMakeToolDTOType? Type1409 { get; set; }
+        public global::Vapi.UpdateGhlToolDTOType? Type1409 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateHandoffToolDTO? Type1410 { get; set; }
+        public global::Vapi.UpdateMakeToolDTO? Type1410 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateHandoffToolDTOType? Type1411 { get; set; }
+        public global::Vapi.UpdateMakeToolDTOType? Type1411 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTransferCallToolDTO? Type1412 { get; set; }
+        public global::Vapi.UpdateHandoffToolDTO? Type1412 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTransferCallToolDTOType? Type1413 { get; set; }
+        public global::Vapi.UpdateHandoffToolDTOType? Type1413 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateOutputToolDTO? Type1414 { get; set; }
+        public global::Vapi.UpdateTransferCallToolDTO? Type1414 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateOutputToolDTOType? Type1415 { get; set; }
+        public global::Vapi.UpdateTransferCallToolDTOType? Type1415 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateBashToolDTO? Type1416 { get; set; }
+        public global::Vapi.UpdateOutputToolDTO? Type1416 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateBashToolDTOType? Type1417 { get; set; }
+        public global::Vapi.UpdateOutputToolDTOType? Type1417 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateBashToolDTOSubType? Type1418 { get; set; }
+        public global::Vapi.UpdateBashToolDTO? Type1418 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateBashToolDTOName? Type1419 { get; set; }
+        public global::Vapi.UpdateBashToolDTOType? Type1419 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateComputerToolDTO? Type1420 { get; set; }
+        public global::Vapi.UpdateBashToolDTOSubType? Type1420 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateComputerToolDTOType? Type1421 { get; set; }
+        public global::Vapi.UpdateBashToolDTOName? Type1421 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateComputerToolDTOSubType? Type1422 { get; set; }
+        public global::Vapi.UpdateComputerToolDTO? Type1422 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateComputerToolDTOName? Type1423 { get; set; }
+        public global::Vapi.UpdateComputerToolDTOType? Type1423 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTextEditorToolDTO? Type1424 { get; set; }
+        public global::Vapi.UpdateComputerToolDTOSubType? Type1424 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTextEditorToolDTOType? Type1425 { get; set; }
+        public global::Vapi.UpdateComputerToolDTOName? Type1425 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTextEditorToolDTOSubType? Type1426 { get; set; }
+        public global::Vapi.UpdateTextEditorToolDTO? Type1426 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTextEditorToolDTOName? Type1427 { get; set; }
+        public global::Vapi.UpdateTextEditorToolDTOType? Type1427 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateQueryToolDTO? Type1428 { get; set; }
+        public global::Vapi.UpdateTextEditorToolDTOSubType? Type1428 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateQueryToolDTOType? Type1429 { get; set; }
+        public global::Vapi.UpdateTextEditorToolDTOName? Type1429 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleCalendarCreateEventToolDTO? Type1430 { get; set; }
+        public global::Vapi.UpdateQueryToolDTO? Type1430 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleCalendarCreateEventToolDTOType? Type1431 { get; set; }
+        public global::Vapi.UpdateQueryToolDTOType? Type1431 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleSheetsRowAppendToolDTO? Type1432 { get; set; }
+        public global::Vapi.UpdateGoogleCalendarCreateEventToolDTO? Type1432 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleSheetsRowAppendToolDTOType? Type1433 { get; set; }
+        public global::Vapi.UpdateGoogleCalendarCreateEventToolDTOType? Type1433 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleCalendarCheckAvailabilityToolDTO? Type1434 { get; set; }
+        public global::Vapi.UpdateGoogleSheetsRowAppendToolDTO? Type1434 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleCalendarCheckAvailabilityToolDTOType? Type1435 { get; set; }
+        public global::Vapi.UpdateGoogleSheetsRowAppendToolDTOType? Type1435 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSlackSendMessageToolDTO? Type1436 { get; set; }
+        public global::Vapi.UpdateGoogleCalendarCheckAvailabilityToolDTO? Type1436 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSlackSendMessageToolDTOType? Type1437 { get; set; }
+        public global::Vapi.UpdateGoogleCalendarCheckAvailabilityToolDTOType? Type1437 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSmsToolDTO? Type1438 { get; set; }
+        public global::Vapi.UpdateSlackSendMessageToolDTO? Type1438 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSmsToolDTOType? Type1439 { get; set; }
+        public global::Vapi.UpdateSlackSendMessageToolDTOType? Type1439 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateMcpToolDTO? Type1440 { get; set; }
+        public global::Vapi.UpdateSmsToolDTO? Type1440 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateMcpToolDTOType? Type1441 { get; set; }
+        public global::Vapi.UpdateSmsToolDTOType? Type1441 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelCalendarAvailabilityToolDTO? Type1442 { get; set; }
+        public global::Vapi.UpdateMcpToolDTO? Type1442 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelCalendarAvailabilityToolDTOType? Type1443 { get; set; }
+        public global::Vapi.UpdateMcpToolDTOType? Type1443 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelCalendarEventCreateToolDTO? Type1444 { get; set; }
+        public global::Vapi.UpdateGoHighLevelCalendarAvailabilityToolDTO? Type1444 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelCalendarEventCreateToolDTOType? Type1445 { get; set; }
+        public global::Vapi.UpdateGoHighLevelCalendarAvailabilityToolDTOType? Type1445 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelContactCreateToolDTO? Type1446 { get; set; }
+        public global::Vapi.UpdateGoHighLevelCalendarEventCreateToolDTO? Type1446 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelContactCreateToolDTOType? Type1447 { get; set; }
+        public global::Vapi.UpdateGoHighLevelCalendarEventCreateToolDTOType? Type1447 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelContactGetToolDTO? Type1448 { get; set; }
+        public global::Vapi.UpdateGoHighLevelContactCreateToolDTO? Type1448 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelContactGetToolDTOType? Type1449 { get; set; }
+        public global::Vapi.UpdateGoHighLevelContactCreateToolDTOType? Type1449 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSipRequestToolDTO? Type1450 { get; set; }
+        public global::Vapi.UpdateGoHighLevelContactGetToolDTO? Type1450 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSipRequestToolDTOType? Type1451 { get; set; }
+        public global::Vapi.UpdateGoHighLevelContactGetToolDTOType? Type1451 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSipRequestToolDTOVerb? Type1452 { get; set; }
+        public global::Vapi.UpdateSipRequestToolDTO? Type1452 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateVoicemailToolDTO? Type1453 { get; set; }
+        public global::Vapi.UpdateSipRequestToolDTOType? Type1453 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateVoicemailToolDTOType? Type1454 { get; set; }
+        public global::Vapi.UpdateSipRequestToolDTOVerb? Type1454 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolVersion? Type1455 { get; set; }
+        public global::Vapi.UpdateVoicemailToolDTO? Type1455 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolVersionPaginatedMetadata? Type1456 { get; set; }
+        public global::Vapi.UpdateVoicemailToolDTOType? Type1456 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolVersionPaginatedResponse? Type1457 { get; set; }
+        public global::Vapi.ToolVersion? Type1457 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.ToolVersion>? Type1458 { get; set; }
+        public global::Vapi.ToolVersionPaginatedMetadata? Type1458 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolDraft? Type1459 { get; set; }
+        public global::Vapi.ToolVersionPaginatedResponse? Type1459 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolDraftType? Type1460 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.ToolVersion>? Type1460 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolDraftMethod? Type1461 { get; set; }
+        public global::Vapi.ToolDraft? Type1461 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolDraftVerb? Type1462 { get; set; }
+        public global::Vapi.ToolDraftType? Type1462 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateToolDraftDTO? Type1463 { get; set; }
+        public global::Vapi.ToolDraftMethod? Type1463 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateToolDraftDTOType? Type1464 { get; set; }
+        public global::Vapi.ToolDraftVerb? Type1464 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateToolDraftDTOMethod? Type1465 { get; set; }
+        public global::Vapi.CreateToolDraftDTO? Type1465 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateToolDraftDTOVerb? Type1466 { get; set; }
+        public global::Vapi.CreateToolDraftDTOType? Type1466 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateToolDraftDTO? Type1467 { get; set; }
+        public global::Vapi.CreateToolDraftDTOMethod? Type1467 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateToolDraftDTOType? Type1468 { get; set; }
+        public global::Vapi.CreateToolDraftDTOVerb? Type1468 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateToolDraftDTOMethod? Type1469 { get; set; }
+        public global::Vapi.UpdateToolDraftDTO? Type1469 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateToolDraftDTOVerb? Type1470 { get; set; }
+        public global::Vapi.UpdateToolDraftDTOType? Type1470 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolDraftPaginatedMetadata? Type1471 { get; set; }
+        public global::Vapi.UpdateToolDraftDTOMethod? Type1471 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolDraftPaginatedResponse? Type1472 { get; set; }
+        public global::Vapi.UpdateToolDraftDTOVerb? Type1472 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.ToolDraft>? Type1473 { get; set; }
+        public global::Vapi.ToolDraftPaginatedMetadata? Type1473 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolDraftConflictResponseDTO? Type1474 { get; set; }
+        public global::Vapi.ToolDraftPaginatedResponse? Type1474 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GetToolDraftsDTO? Type1475 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.ToolDraft>? Type1475 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateToolVersionMetadataDTO? Type1476 { get; set; }
+        public global::Vapi.ToolDraftConflictResponseDTO? Type1476 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolPinnedConflictResponseDTO? Type1477 { get; set; }
+        public global::Vapi.GetToolDraftsDTO? Type1477 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolPinnedConflictResponseDTOError? Type1478 { get; set; }
+        public global::Vapi.UpdateToolVersionMetadataDTO? Type1478 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateFileDTO? Type1479 { get; set; }
+        public global::Vapi.ToolPinnedConflictResponseDTO? Type1479 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.File? Type1480 { get; set; }
+        public global::Vapi.ToolPinnedConflictResponseDTOError? Type1480 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FileObject? Type1481 { get; set; }
+        public global::Vapi.CreateFileDTO? Type1481 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FileStatus? Type1482 { get; set; }
+        public global::Vapi.File? Type1482 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateFileDTO? Type1483 { get; set; }
+        public global::Vapi.FileObject? Type1483 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CustomKnowledgeBase? Type1484 { get; set; }
+        public global::Vapi.FileStatus? Type1484 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CustomKnowledgeBaseProvider? Type1485 { get; set; }
+        public global::Vapi.UpdateFileDTO? Type1485 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCustomKnowledgeBaseDTO? Type1486 { get; set; }
+        public global::Vapi.CustomKnowledgeBase? Type1486 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCustomKnowledgeBaseDTOProvider? Type1487 { get; set; }
+        public global::Vapi.CustomKnowledgeBaseProvider? Type1487 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.StructuredOutputRunResult? Type1488 { get; set; }
+        public global::Vapi.UpdateCustomKnowledgeBaseDTO? Type1488 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.StructuredOutputRunPreviewResponse? Type1489 { get; set; }
+        public global::Vapi.UpdateCustomKnowledgeBaseDTOProvider? Type1489 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.StructuredOutputRerunResponse? Type1490 { get; set; }
+        public global::Vapi.StructuredOutputRunResult? Type1490 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.StructuredOutput? Type1491 { get; set; }
+        public global::Vapi.StructuredOutputRunPreviewResponse? Type1491 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.StructuredOutputType? Type1492 { get; set; }
+        public global::Vapi.StructuredOutputRerunResponse? Type1492 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.StructuredOutputPaginatedResponse? Type1493 { get; set; }
+        public global::Vapi.StructuredOutput? Type1493 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.StructuredOutput>? Type1494 { get; set; }
+        public global::Vapi.StructuredOutputType? Type1494 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateStructuredOutputDTO? Type1495 { get; set; }
+        public global::Vapi.StructuredOutputPaginatedResponse? Type1495 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateStructuredOutputDTOType? Type1496 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.StructuredOutput>? Type1496 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.StructuredOutputRunDTO? Type1497 { get; set; }
+        public global::Vapi.UpdateStructuredOutputDTO? Type1497 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TesterPlan? Type1498 { get; set; }
+        public global::Vapi.UpdateStructuredOutputDTOType? Type1498 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuitePhoneNumber? Type1499 { get; set; }
+        public global::Vapi.StructuredOutputRunDTO? Type1499 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuitePhoneNumberProvider? Type1500 { get; set; }
+        public global::Vapi.TesterPlan? Type1500 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TargetPlan? Type1501 { get; set; }
+        public global::Vapi.TestSuitePhoneNumber? Type1501 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuite? Type1502 { get; set; }
+        public global::Vapi.TestSuitePhoneNumberProvider? Type1502 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuitesPaginatedResponse? Type1503 { get; set; }
+        public global::Vapi.TargetPlan? Type1503 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.TestSuite>? Type1504 { get; set; }
+        public global::Vapi.TestSuite? Type1504 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTestSuiteDto? Type1505 { get; set; }
+        public global::Vapi.TestSuitesPaginatedResponse? Type1505 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTestSuiteDto? Type1506 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.TestSuite>? Type1506 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteTestVoice? Type1507 { get; set; }
+        public global::Vapi.CreateTestSuiteDto? Type1507 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.TestSuiteTestScorerAI>? Type1508 { get; set; }
+        public global::Vapi.UpdateTestSuiteDto? Type1508 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteTestScorerAI? Type1509 { get; set; }
+        public global::Vapi.TestSuiteTestVoice? Type1509 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteTestVoiceType? Type1510 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.TestSuiteTestScorerAI>? Type1510 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteTestChat? Type1511 { get; set; }
+        public global::Vapi.TestSuiteTestScorerAI? Type1511 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteTestChatType? Type1512 { get; set; }
+        public global::Vapi.TestSuiteTestVoiceType? Type1512 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTestSuiteTestVoiceDto? Type1513 { get; set; }
+        public global::Vapi.TestSuiteTestChat? Type1513 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTestSuiteTestVoiceDtoType? Type1514 { get; set; }
+        public global::Vapi.TestSuiteTestChatType? Type1514 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTestSuiteTestChatDto? Type1515 { get; set; }
+        public global::Vapi.CreateTestSuiteTestVoiceDto? Type1515 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTestSuiteTestChatDtoType? Type1516 { get; set; }
+        public global::Vapi.CreateTestSuiteTestVoiceDtoType? Type1516 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTestSuiteTestVoiceDto? Type1517 { get; set; }
+        public global::Vapi.CreateTestSuiteTestChatDto? Type1517 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTestSuiteTestVoiceDtoType? Type1518 { get; set; }
+        public global::Vapi.CreateTestSuiteTestChatDtoType? Type1518 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTestSuiteTestChatDto? Type1519 { get; set; }
+        public global::Vapi.UpdateTestSuiteTestVoiceDto? Type1519 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTestSuiteTestChatDtoType? Type1520 { get; set; }
+        public global::Vapi.UpdateTestSuiteTestVoiceDtoType? Type1520 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteTestScorerAIType? Type1521 { get; set; }
+        public global::Vapi.UpdateTestSuiteTestChatDto? Type1521 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteTestsPaginatedResponse? Type1522 { get; set; }
+        public global::Vapi.UpdateTestSuiteTestChatDtoType? Type1522 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.TestSuiteTestVoice, global::Vapi.TestSuiteTestChat>>? Type1523 { get; set; }
+        public global::Vapi.TestSuiteTestScorerAIType? Type1523 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.TestSuiteTestVoice, global::Vapi.TestSuiteTestChat>? Type1524 { get; set; }
+        public global::Vapi.TestSuiteTestsPaginatedResponse? Type1524 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteRunScorerAI? Type1525 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.TestSuiteTestVoice, global::Vapi.TestSuiteTestChat>>? Type1525 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteRunScorerAIType? Type1526 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.TestSuiteTestVoice, global::Vapi.TestSuiteTestChat>? Type1526 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteRunScorerAIResult? Type1527 { get; set; }
+        public global::Vapi.TestSuiteRunScorerAI? Type1527 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteRunTestAttemptCall? Type1528 { get; set; }
+        public global::Vapi.TestSuiteRunScorerAIType? Type1528 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteRunTestAttemptMetadata? Type1529 { get; set; }
+        public global::Vapi.TestSuiteRunScorerAIResult? Type1529 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteRunTestAttempt? Type1530 { get; set; }
+        public global::Vapi.TestSuiteRunTestAttemptCall? Type1530 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.TestSuiteRunScorerAI>? Type1531 { get; set; }
+        public global::Vapi.TestSuiteRunTestAttemptMetadata? Type1531 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteRunTestResult? Type1532 { get; set; }
+        public global::Vapi.TestSuiteRunTestAttempt? Type1532 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.TestSuiteRunTestAttempt>? Type1533 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.TestSuiteRunScorerAI>? Type1533 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteRun? Type1534 { get; set; }
+        public global::Vapi.TestSuiteRunTestResult? Type1534 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteRunStatus? Type1535 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.TestSuiteRunTestAttempt>? Type1535 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.TestSuiteRunTestResult>? Type1536 { get; set; }
+        public global::Vapi.TestSuiteRun? Type1536 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TestSuiteRunsPaginatedResponse? Type1537 { get; set; }
+        public global::Vapi.TestSuiteRunStatus? Type1537 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.TestSuiteRun>? Type1538 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.TestSuiteRunTestResult>? Type1538 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTestSuiteRunDto? Type1539 { get; set; }
+        public global::Vapi.TestSuiteRunsPaginatedResponse? Type1539 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTestSuiteRunDto? Type1540 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.TestSuiteRun>? Type1540 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreatePersonalityDTO? Type1541 { get; set; }
+        public global::Vapi.CreateTestSuiteRunDto? Type1541 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Personality? Type1542 { get; set; }
+        public global::Vapi.UpdateTestSuiteRunDto? Type1542 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdatePersonalityDTO? Type1543 { get; set; }
+        public global::Vapi.CreatePersonalityDTO? Type1543 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationHookInclude? Type1544 { get; set; }
+        public global::Vapi.Personality? Type1544 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationHookWebhookAction? Type1545 { get; set; }
+        public global::Vapi.UpdatePersonalityDTO? Type1545 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationHookWebhookActionType? Type1546 { get; set; }
+        public global::Vapi.SimulationHookInclude? Type1546 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationHookCallStarted? Type1547 { get; set; }
+        public global::Vapi.SimulationHookWebhookAction? Type1547 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationHookCallStartedOn? Type1548 { get; set; }
+        public global::Vapi.SimulationHookWebhookActionType? Type1548 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.SimulationHookWebhookAction>? Type1549 { get; set; }
+        public global::Vapi.SimulationHookCallStarted? Type1549 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationHookCallEnded? Type1550 { get; set; }
+        public global::Vapi.SimulationHookCallStartedOn? Type1550 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationHookCallEndedOn? Type1551 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.SimulationHookWebhookAction>? Type1551 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvaluationPlanItem? Type1552 { get; set; }
+        public global::Vapi.SimulationHookCallEnded? Type1552 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvaluationPlanItemComparator? Type1553 { get; set; }
+        public global::Vapi.SimulationHookCallEndedOn? Type1553 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<double?, string, bool?>? Type1554 { get; set; }
+        public global::Vapi.EvaluationPlanItem? Type1554 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ScenarioToolMock? Type1555 { get; set; }
+        public global::Vapi.EvaluationPlanItemComparator? Type1555 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateScenarioDTO? Type1556 { get; set; }
+        public global::Vapi.OneOf<double?, string, bool?>? Type1556 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.EvaluationPlanItem>? Type1557 { get; set; }
+        public global::Vapi.ScenarioToolMock? Type1557 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>? Type1558 { get; set; }
+        public global::Vapi.CreateScenarioDTO? Type1558 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>? Type1559 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.EvaluationPlanItem>? Type1559 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? Type1560 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>? Type1560 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Scenario? Type1561 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>? Type1561 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateScenarioDTO? Type1562 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? Type1562 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunSimulationEntry? Type1563 { get; set; }
+        public global::Vapi.Scenario? Type1563 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunSimulationEntryType? Type1564 { get; set; }
+        public global::Vapi.UpdateScenarioDTO? Type1564 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunSuiteEntry? Type1565 { get; set; }
+        public global::Vapi.SimulationRunSimulationEntry? Type1565 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunSuiteEntryType? Type1566 { get; set; }
+        public global::Vapi.SimulationRunSimulationEntryType? Type1566 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunTargetAssistant? Type1567 { get; set; }
+        public global::Vapi.SimulationRunSuiteEntry? Type1567 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunTargetAssistantType? Type1568 { get; set; }
+        public global::Vapi.SimulationRunSuiteEntryType? Type1568 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunTargetSquad? Type1569 { get; set; }
+        public global::Vapi.SimulationRunTargetAssistant? Type1569 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunTargetSquadType? Type1570 { get; set; }
+        public global::Vapi.SimulationRunTargetAssistantType? Type1570 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunTransportConfiguration? Type1571 { get; set; }
+        public global::Vapi.SimulationRunTargetSquad? Type1571 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunTransportConfigurationProvider? Type1572 { get; set; }
+        public global::Vapi.SimulationRunTargetSquadType? Type1572 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSimulationRunDTO? Type1573 { get; set; }
+        public global::Vapi.SimulationRunTransportConfiguration? Type1573 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationRunSimulationEntry, global::Vapi.SimulationRunSuiteEntry>>? Type1574 { get; set; }
+        public global::Vapi.SimulationRunTransportConfigurationProvider? Type1574 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.SimulationRunSimulationEntry, global::Vapi.SimulationRunSuiteEntry>? Type1575 { get; set; }
+        public global::Vapi.CreateSimulationRunDTO? Type1575 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.SimulationRunTargetAssistant, global::Vapi.SimulationRunTargetSquad>? Type1576 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationRunSimulationEntry, global::Vapi.SimulationRunSuiteEntry>>? Type1576 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunItemCounts? Type1577 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.SimulationRunSimulationEntry, global::Vapi.SimulationRunSuiteEntry>? Type1577 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSimulationRunResponse? Type1578 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.SimulationRunTargetAssistant, global::Vapi.SimulationRunTargetSquad>? Type1578 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSimulationRunResponseStatus? Type1579 { get; set; }
+        public global::Vapi.SimulationRunItemCounts? Type1579 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRun? Type1580 { get; set; }
+        public global::Vapi.CreateSimulationRunResponse? Type1580 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunStatus? Type1581 { get; set; }
+        public global::Vapi.CreateSimulationRunResponseStatus? Type1581 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunListSource? Type1582 { get; set; }
+        public global::Vapi.SimulationRunPaymentRequiredResponse? Type1582 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunListSourceType? Type1583 { get; set; }
+        public global::Vapi.SimulationRunPaymentRequiredResponseReason? Type1583 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunListSummary? Type1584 { get; set; }
+        public global::Vapi.SimulationRun? Type1584 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunListItem? Type1585 { get; set; }
+        public global::Vapi.SimulationRunStatus? Type1585 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunListItemStatus? Type1586 { get; set; }
+        public global::Vapi.SimulationRunListSource? Type1586 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunsPaginatedResponse? Type1587 { get; set; }
+        public global::Vapi.SimulationRunListSourceType? Type1587 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.SimulationRunListItem>? Type1588 { get; set; }
+        public global::Vapi.SimulationRunListSummary? Type1588 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunItemCallMonitor? Type1589 { get; set; }
+        public global::Vapi.SimulationRunListItem? Type1589 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunItemCallMetadata? Type1590 { get; set; }
+        public global::Vapi.SimulationRunListItemStatus? Type1590 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunItemMetadata? Type1591 { get; set; }
+        public global::Vapi.SimulationRunsPaginatedResponse? Type1591 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.StructuredOutputEvaluationResult? Type1592 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.SimulationRunListItem>? Type1592 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<double?, string, bool?, object>? Type1593 { get; set; }
+        public global::Vapi.SimulationRunItemCallMonitor? Type1593 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.StructuredOutputEvaluationResultComparator? Type1594 { get; set; }
+        public global::Vapi.SimulationRunItemCallMetadata? Type1594 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LatencyMetrics? Type1595 { get; set; }
+        public global::Vapi.SimulationRunItemMetadata? Type1595 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunItemResults? Type1596 { get; set; }
+        public global::Vapi.StructuredOutputEvaluationResult? Type1596 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.StructuredOutputEvaluationResult>? Type1597 { get; set; }
+        public global::Vapi.OneOf<double?, string, bool?, object>? Type1597 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunItemImprovementSuggestion? Type1598 { get; set; }
+        public global::Vapi.StructuredOutputEvaluationResultComparator? Type1598 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunItemImprovements? Type1599 { get; set; }
+        public global::Vapi.LatencyMetrics? Type1599 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.SimulationRunItemImprovementSuggestion>? Type1600 { get; set; }
+        public global::Vapi.SimulationRunItemResults? Type1600 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunConfiguration? Type1601 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.StructuredOutputEvaluationResult>? Type1601 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunItem? Type1602 { get; set; }
+        public global::Vapi.SimulationRunItemImprovementSuggestion? Type1602 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunItemStatus? Type1603 { get; set; }
+        public global::Vapi.SimulationRunItemImprovements? Type1603 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationSuiteTargetAssignment? Type1604 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.SimulationRunItemImprovementSuggestion>? Type1604 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationSuiteTargetAssignmentTargetType? Type1605 { get; set; }
+        public global::Vapi.SimulationRunConfiguration? Type1605 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSimulationSuiteDTO? Type1606 { get; set; }
+        public global::Vapi.SimulationRunItem? Type1606 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.SimulationSuiteTargetAssignment>? Type1607 { get; set; }
+        public global::Vapi.SimulationRunItemStatus? Type1607 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationSuite? Type1608 { get; set; }
+        public global::Vapi.SimulationSuiteTargetAssignment? Type1608 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSimulationSuiteDTO? Type1609 { get; set; }
+        public global::Vapi.SimulationSuiteTargetAssignmentTargetType? Type1609 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GenerateScenariosDTO? Type1610 { get; set; }
+        public global::Vapi.CreateSimulationSuiteDTO? Type1610 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GeneratedScenario? Type1611 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.SimulationSuiteTargetAssignment>? Type1611 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GeneratedScenarioCategory? Type1612 { get; set; }
+        public global::Vapi.SimulationSuite? Type1612 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GenerateScenariosResponse? Type1613 { get; set; }
+        public global::Vapi.UpdateSimulationSuiteDTO? Type1613 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.GeneratedScenario>? Type1614 { get; set; }
+        public global::Vapi.GenerateScenariosDTO? Type1614 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSimulationDTO? Type1615 { get; set; }
+        public global::Vapi.GeneratedScenario? Type1615 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Simulation? Type1616 { get; set; }
+        public global::Vapi.GeneratedScenarioCategory? Type1616 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSimulationDTO? Type1617 { get; set; }
+        public global::Vapi.GenerateScenariosResponse? Type1617 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationConcurrencyResponse? Type1618 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.GeneratedScenario>? Type1618 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BarInsightMetadata? Type1619 { get; set; }
+        public global::Vapi.CreateSimulationDTO? Type1619 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightTimeRangeWithStep? Type1620 { get; set; }
+        public global::Vapi.Simulation? Type1620 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightTimeRangeWithStepStep? Type1621 { get; set; }
+        public global::Vapi.UpdateSimulationDTO? Type1621 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BarInsight? Type1622 { get; set; }
+        public global::Vapi.SimulationConcurrencyResponse? Type1622 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BarInsightType? Type1623 { get; set; }
+        public global::Vapi.BarInsightMetadata? Type1623 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.InsightFormula>? Type1624 { get; set; }
+        public global::Vapi.InsightTimeRangeWithStep? Type1624 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightFormula? Type1625 { get; set; }
+        public global::Vapi.InsightTimeRangeWithStepStep? Type1625 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BarInsightGroupBy? Type1626 { get; set; }
+        public global::Vapi.BarInsight? Type1626 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithStringTypeColumn? Type1627 { get; set; }
+        public global::Vapi.BarInsightType? Type1627 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithNumberTypeColumn? Type1628 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.InsightFormula>? Type1628 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumn? Type1629 { get; set; }
+        public global::Vapi.InsightFormula? Type1629 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnEventsTable? Type1630 { get; set; }
+        public global::Vapi.BarInsightGroupBy? Type1630 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightTimeRange? Type1631 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithStringTypeColumn? Type1631 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PieInsight? Type1632 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithNumberTypeColumn? Type1632 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PieInsightType? Type1633 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumn? Type1633 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PieInsightGroupBy? Type1634 { get; set; }
+        public global::Vapi.JSONQueryOnEventsTable? Type1634 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LineInsightMetadata? Type1635 { get; set; }
+        public global::Vapi.InsightTimeRange? Type1635 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LineInsight? Type1636 { get; set; }
+        public global::Vapi.PieInsight? Type1636 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LineInsightType? Type1637 { get; set; }
+        public global::Vapi.PieInsightType? Type1637 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LineInsightGroupBy? Type1638 { get; set; }
+        public global::Vapi.PieInsightGroupBy? Type1638 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextInsight? Type1639 { get; set; }
+        public global::Vapi.LineInsightMetadata? Type1639 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextInsightType? Type1640 { get; set; }
+        public global::Vapi.LineInsight? Type1640 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateBarInsightFromCallTableDTO? Type1641 { get; set; }
+        public global::Vapi.LineInsightType? Type1641 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateBarInsightFromCallTableDTOType? Type1642 { get; set; }
+        public global::Vapi.LineInsightGroupBy? Type1642 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateBarInsightFromCallTableDTOGroupBy? Type1643 { get; set; }
+        public global::Vapi.TextInsight? Type1643 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdatePieInsightFromCallTableDTO? Type1644 { get; set; }
+        public global::Vapi.TextInsightType? Type1644 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdatePieInsightFromCallTableDTOType? Type1645 { get; set; }
+        public global::Vapi.UpdateBarInsightFromCallTableDTO? Type1645 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdatePieInsightFromCallTableDTOGroupBy? Type1646 { get; set; }
+        public global::Vapi.UpdateBarInsightFromCallTableDTOType? Type1646 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateLineInsightFromCallTableDTO? Type1647 { get; set; }
+        public global::Vapi.UpdateBarInsightFromCallTableDTOGroupBy? Type1647 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateLineInsightFromCallTableDTOType? Type1648 { get; set; }
+        public global::Vapi.UpdatePieInsightFromCallTableDTO? Type1648 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateLineInsightFromCallTableDTOGroupBy? Type1649 { get; set; }
+        public global::Vapi.UpdatePieInsightFromCallTableDTOType? Type1649 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTextInsightFromCallTableDTO? Type1650 { get; set; }
+        public global::Vapi.UpdatePieInsightFromCallTableDTOGroupBy? Type1650 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTextInsightFromCallTableDTOType? Type1651 { get; set; }
+        public global::Vapi.UpdateLineInsightFromCallTableDTO? Type1651 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateBarInsightFromCallTableDTO? Type1652 { get; set; }
+        public global::Vapi.UpdateLineInsightFromCallTableDTOType? Type1652 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateBarInsightFromCallTableDTOType? Type1653 { get; set; }
+        public global::Vapi.UpdateLineInsightFromCallTableDTOGroupBy? Type1653 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateBarInsightFromCallTableDTOGroupBy? Type1654 { get; set; }
+        public global::Vapi.UpdateTextInsightFromCallTableDTO? Type1654 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreatePieInsightFromCallTableDTO? Type1655 { get; set; }
+        public global::Vapi.UpdateTextInsightFromCallTableDTOType? Type1655 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreatePieInsightFromCallTableDTOType? Type1656 { get; set; }
+        public global::Vapi.CreateBarInsightFromCallTableDTO? Type1656 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreatePieInsightFromCallTableDTOGroupBy? Type1657 { get; set; }
+        public global::Vapi.CreateBarInsightFromCallTableDTOType? Type1657 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateLineInsightFromCallTableDTO? Type1658 { get; set; }
+        public global::Vapi.CreateBarInsightFromCallTableDTOGroupBy? Type1658 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateLineInsightFromCallTableDTOType? Type1659 { get; set; }
+        public global::Vapi.CreatePieInsightFromCallTableDTO? Type1659 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateLineInsightFromCallTableDTOGroupBy? Type1660 { get; set; }
+        public global::Vapi.CreatePieInsightFromCallTableDTOType? Type1660 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTextInsightFromCallTableDTO? Type1661 { get; set; }
+        public global::Vapi.CreatePieInsightFromCallTableDTOGroupBy? Type1661 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTextInsightFromCallTableDTOType? Type1662 { get; set; }
+        public global::Vapi.CreateLineInsightFromCallTableDTO? Type1662 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithStringTypeColumnType? Type1663 { get; set; }
+        public global::Vapi.CreateLineInsightFromCallTableDTOType? Type1663 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithStringTypeColumnTable? Type1664 { get; set; }
+        public global::Vapi.CreateLineInsightFromCallTableDTOGroupBy? Type1664 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterStringTypeColumnOnCallTable? Type1665 { get; set; }
+        public global::Vapi.CreateTextInsightFromCallTableDTO? Type1665 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterStringArrayTypeColumnOnCallTable? Type1666 { get; set; }
+        public global::Vapi.CreateTextInsightFromCallTableDTOType? Type1666 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterNumberTypeColumnOnCallTable? Type1667 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithStringTypeColumnType? Type1667 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterNumberArrayTypeColumnOnCallTable? Type1668 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithStringTypeColumnTable? Type1668 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterDateTypeColumnOnCallTable? Type1669 { get; set; }
+        public global::Vapi.FilterStringTypeColumnOnCallTable? Type1669 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterStructuredOutputColumnOnCallTable? Type1670 { get; set; }
+        public global::Vapi.FilterStringArrayTypeColumnOnCallTable? Type1670 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithStringTypeColumnColumn? Type1671 { get; set; }
+        public global::Vapi.FilterNumberTypeColumnOnCallTable? Type1671 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithStringTypeColumnOperation? Type1672 { get; set; }
+        public global::Vapi.FilterNumberArrayTypeColumnOnCallTable? Type1672 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithNumberTypeColumnType? Type1673 { get; set; }
+        public global::Vapi.FilterDateTypeColumnOnCallTable? Type1673 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithNumberTypeColumnTable? Type1674 { get; set; }
+        public global::Vapi.FilterStructuredOutputColumnOnCallTable? Type1674 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithNumberTypeColumnColumn? Type1675 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithStringTypeColumnColumn? Type1675 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithNumberTypeColumnOperation? Type1676 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithStringTypeColumnOperation? Type1676 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumnType? Type1677 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithNumberTypeColumnType? Type1677 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumnTable? Type1678 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithNumberTypeColumnTable? Type1678 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumnColumn? Type1679 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithNumberTypeColumnColumn? Type1679 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumnOperation? Type1680 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithNumberTypeColumnOperation? Type1680 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnEventsTableType? Type1681 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumnType? Type1681 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnEventsTableTable? Type1682 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumnTable? Type1682 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnEventsTableOn? Type1683 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumnColumn? Type1683 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JSONQueryOnEventsTableOperation? Type1684 { get; set; }
+        public global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumnOperation? Type1684 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.EventsTableStringCondition, global::Vapi.EventsTableNumberCondition, global::Vapi.EventsTableBooleanCondition>>? Type1685 { get; set; }
+        public global::Vapi.JSONQueryOnEventsTableType? Type1685 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.EventsTableStringCondition, global::Vapi.EventsTableNumberCondition, global::Vapi.EventsTableBooleanCondition>? Type1686 { get; set; }
+        public global::Vapi.JSONQueryOnEventsTableTable? Type1686 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EventsTableStringCondition? Type1687 { get; set; }
+        public global::Vapi.JSONQueryOnEventsTableOn? Type1687 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EventsTableNumberCondition? Type1688 { get; set; }
+        public global::Vapi.JSONQueryOnEventsTableOperation? Type1688 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EventsTableBooleanCondition? Type1689 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.EventsTableStringCondition, global::Vapi.EventsTableNumberCondition, global::Vapi.EventsTableBooleanCondition>>? Type1689 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterStringTypeColumnOnCallTableColumn? Type1690 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.EventsTableStringCondition, global::Vapi.EventsTableNumberCondition, global::Vapi.EventsTableBooleanCondition>? Type1690 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterStringTypeColumnOnCallTableOperator? Type1691 { get; set; }
+        public global::Vapi.EventsTableStringCondition? Type1691 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterNumberTypeColumnOnCallTableColumn? Type1692 { get; set; }
+        public global::Vapi.EventsTableNumberCondition? Type1692 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterNumberTypeColumnOnCallTableOperator? Type1693 { get; set; }
+        public global::Vapi.EventsTableBooleanCondition? Type1693 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterDateTypeColumnOnCallTableColumn? Type1694 { get; set; }
+        public global::Vapi.FilterStringTypeColumnOnCallTableColumn? Type1694 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterDateTypeColumnOnCallTableOperator? Type1695 { get; set; }
+        public global::Vapi.FilterStringTypeColumnOnCallTableOperator? Type1695 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterStructuredOutputColumnOnCallTableColumn? Type1696 { get; set; }
+        public global::Vapi.FilterNumberTypeColumnOnCallTableColumn? Type1696 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterStructuredOutputColumnOnCallTableOperator? Type1697 { get; set; }
+        public global::Vapi.FilterNumberTypeColumnOnCallTableOperator? Type1697 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterStringArrayTypeColumnOnCallTableColumn? Type1698 { get; set; }
+        public global::Vapi.FilterDateTypeColumnOnCallTableColumn? Type1698 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterStringArrayTypeColumnOnCallTableOperator? Type1699 { get; set; }
+        public global::Vapi.FilterDateTypeColumnOnCallTableOperator? Type1699 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterNumberArrayTypeColumnOnCallTableColumn? Type1700 { get; set; }
+        public global::Vapi.FilterStructuredOutputColumnOnCallTableColumn? Type1700 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FilterNumberArrayTypeColumnOnCallTableOperator? Type1701 { get; set; }
+        public global::Vapi.FilterStructuredOutputColumnOnCallTableOperator? Type1701 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EventsTableStringConditionOperator? Type1702 { get; set; }
+        public global::Vapi.FilterStringArrayTypeColumnOnCallTableColumn? Type1702 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EventsTableNumberConditionOperator? Type1703 { get; set; }
+        public global::Vapi.FilterStringArrayTypeColumnOnCallTableOperator? Type1703 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EventsTableBooleanConditionOperator? Type1704 { get; set; }
+        public global::Vapi.FilterNumberArrayTypeColumnOnCallTableColumn? Type1704 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BarInsightFromCallTable? Type1705 { get; set; }
+        public global::Vapi.FilterNumberArrayTypeColumnOnCallTableOperator? Type1705 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BarInsightFromCallTableType? Type1706 { get; set; }
+        public global::Vapi.EventsTableStringConditionOperator? Type1706 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BarInsightFromCallTableGroupBy? Type1707 { get; set; }
+        public global::Vapi.EventsTableNumberConditionOperator? Type1707 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PieInsightFromCallTable? Type1708 { get; set; }
+        public global::Vapi.EventsTableBooleanConditionOperator? Type1708 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PieInsightFromCallTableType? Type1709 { get; set; }
+        public global::Vapi.BarInsightFromCallTable? Type1709 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PieInsightFromCallTableGroupBy? Type1710 { get; set; }
+        public global::Vapi.BarInsightFromCallTableType? Type1710 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LineInsightFromCallTable? Type1711 { get; set; }
+        public global::Vapi.BarInsightFromCallTableGroupBy? Type1711 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LineInsightFromCallTableType? Type1712 { get; set; }
+        public global::Vapi.PieInsightFromCallTable? Type1712 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LineInsightFromCallTableGroupBy? Type1713 { get; set; }
+        public global::Vapi.PieInsightFromCallTableType? Type1713 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextInsightFromCallTable? Type1714 { get; set; }
+        public global::Vapi.PieInsightFromCallTableGroupBy? Type1714 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextInsightFromCallTableType? Type1715 { get; set; }
+        public global::Vapi.LineInsightFromCallTable? Type1715 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightRunFormatPlan? Type1716 { get; set; }
+        public global::Vapi.LineInsightFromCallTableType? Type1716 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightRunFormatPlanFormat? Type1717 { get; set; }
+        public global::Vapi.LineInsightFromCallTableGroupBy? Type1717 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightRunDTO? Type1718 { get; set; }
+        public global::Vapi.TextInsightFromCallTable? Type1718 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightRunResponse? Type1719 { get; set; }
+        public global::Vapi.TextInsightFromCallTableType? Type1719 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Insight? Type1720 { get; set; }
+        public global::Vapi.InsightRunFormatPlan? Type1720 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightType? Type1721 { get; set; }
+        public global::Vapi.InsightRunFormatPlanFormat? Type1721 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightPaginatedResponse? Type1722 { get; set; }
+        public global::Vapi.InsightRunDTO? Type1722 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.Insight>? Type1723 { get; set; }
+        public global::Vapi.InsightRunResponse? Type1723 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BoardLayout? Type1724 { get; set; }
+        public global::Vapi.Insight? Type1724 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Board? Type1725 { get; set; }
+        public global::Vapi.InsightType? Type1725 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>>? Type1726 { get; set; }
+        public global::Vapi.InsightPaginatedResponse? Type1726 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>? Type1727 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.Insight>? Type1727 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BoardInsightItem? Type1728 { get; set; }
+        public global::Vapi.BoardLayout? Type1728 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BoardMetricWidgetItem? Type1729 { get; set; }
+        public global::Vapi.Board? Type1729 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BoardItemPosition? Type1730 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>>? Type1730 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BoardItemSize? Type1731 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>? Type1731 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BoardInsightItemType? Type1732 { get; set; }
+        public global::Vapi.BoardInsightItem? Type1732 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BoardMetricWidgetItemType? Type1733 { get; set; }
+        public global::Vapi.BoardMetricWidgetItem? Type1733 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateBoardDTO? Type1734 { get; set; }
+        public global::Vapi.BoardItemPosition? Type1734 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateBoardDTO? Type1735 { get; set; }
+        public global::Vapi.BoardItemSize? Type1735 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BoardPaginatedResponse? Type1736 { get; set; }
+        public global::Vapi.BoardInsightItemType? Type1736 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.Board>? Type1737 { get; set; }
+        public global::Vapi.BoardMetricWidgetItemType? Type1737 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateEvalDTO? Type1738 { get; set; }
+        public global::Vapi.CreateBoardDTO? Type1738 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalAssistantMessageMock? Type1739 { get; set; }
+        public global::Vapi.UpdateBoardDTO? Type1739 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalSystemMessageMock? Type1740 { get; set; }
+        public global::Vapi.BoardPaginatedResponse? Type1740 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalToolResponseMessageMock? Type1741 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.Board>? Type1741 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalToolResponseMessageEvaluation? Type1742 { get; set; }
+        public global::Vapi.CreateEvalDTO? Type1742 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalUserMessageMock? Type1743 { get; set; }
+        public global::Vapi.ChatEvalAssistantMessageMock? Type1743 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalAssistantMessageEvaluation? Type1744 { get; set; }
+        public global::Vapi.ChatEvalSystemMessageMock? Type1744 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateEvalDTOType? Type1745 { get; set; }
+        public global::Vapi.ChatEvalToolResponseMessageMock? Type1745 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Eval? Type1746 { get; set; }
+        public global::Vapi.ChatEvalToolResponseMessageEvaluation? Type1746 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalType? Type1747 { get; set; }
+        public global::Vapi.ChatEvalUserMessageMock? Type1747 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalModelListOptions? Type1748 { get; set; }
+        public global::Vapi.ChatEvalAssistantMessageEvaluation? Type1748 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalModelListOptionsProvider? Type1749 { get; set; }
+        public global::Vapi.CreateEvalDTOType? Type1749 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalUserEditable? Type1750 { get; set; }
+        public global::Vapi.Eval? Type1750 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalUserEditableType? Type1751 { get; set; }
+        public global::Vapi.EvalType? Type1751 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalAssistantMessageMockToolCall? Type1752 { get; set; }
+        public global::Vapi.EvalModelListOptions? Type1752 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalAssistantMessageMockRole? Type1753 { get; set; }
+        public global::Vapi.EvalModelListOptionsProvider? Type1753 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.ChatEvalAssistantMessageMockToolCall>? Type1754 { get; set; }
+        public global::Vapi.EvalUserEditable? Type1754 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalSystemMessageMockRole? Type1755 { get; set; }
+        public global::Vapi.EvalUserEditableType? Type1755 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalToolResponseMessageMockRole? Type1756 { get; set; }
+        public global::Vapi.ChatEvalAssistantMessageMockToolCall? Type1756 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalUserMessageMockRole? Type1757 { get; set; }
+        public global::Vapi.ChatEvalAssistantMessageMockRole? Type1757 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AssistantMessageEvaluationContinuePlan? Type1758 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.ChatEvalAssistantMessageMockToolCall>? Type1758 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalAssistantMessageEvaluationRole? Type1759 { get; set; }
+        public global::Vapi.ChatEvalSystemMessageMockRole? Type1759 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.AssistantMessageJudgePlanExact, global::Vapi.AssistantMessageJudgePlanRegex, global::Vapi.AssistantMessageJudgePlanAI>? Type1760 { get; set; }
+        public global::Vapi.ChatEvalToolResponseMessageMockRole? Type1760 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AssistantMessageJudgePlanExact? Type1761 { get; set; }
+        public global::Vapi.ChatEvalUserMessageMockRole? Type1761 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AssistantMessageJudgePlanRegex? Type1762 { get; set; }
+        public global::Vapi.AssistantMessageEvaluationContinuePlan? Type1762 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AssistantMessageJudgePlanAI? Type1763 { get; set; }
+        public global::Vapi.ChatEvalAssistantMessageEvaluationRole? Type1763 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalOpenAIModel? Type1764 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.AssistantMessageJudgePlanExact, global::Vapi.AssistantMessageJudgePlanRegex, global::Vapi.AssistantMessageJudgePlanAI>? Type1764 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalOpenAIModelProvider? Type1765 { get; set; }
+        public global::Vapi.AssistantMessageJudgePlanExact? Type1765 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalOpenAIModelModel? Type1766 { get; set; }
+        public global::Vapi.AssistantMessageJudgePlanRegex? Type1766 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalAnthropicModel? Type1767 { get; set; }
+        public global::Vapi.AssistantMessageJudgePlanAI? Type1767 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalAnthropicModelProvider? Type1768 { get; set; }
+        public global::Vapi.EvalOpenAIModel? Type1768 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalAnthropicModelModel? Type1769 { get; set; }
+        public global::Vapi.EvalOpenAIModelProvider? Type1769 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalGoogleModel? Type1770 { get; set; }
+        public global::Vapi.EvalOpenAIModelModel? Type1770 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalGoogleModelProvider? Type1771 { get; set; }
+        public global::Vapi.EvalAnthropicModel? Type1771 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalGoogleModelModel? Type1772 { get; set; }
+        public global::Vapi.EvalAnthropicModelProvider? Type1772 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalGroqModel? Type1773 { get; set; }
+        public global::Vapi.EvalAnthropicModelModel? Type1773 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalGroqModelProvider? Type1774 { get; set; }
+        public global::Vapi.EvalGoogleModel? Type1774 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalGroqModelModel? Type1775 { get; set; }
+        public global::Vapi.EvalGoogleModelProvider? Type1775 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalCustomModel? Type1776 { get; set; }
+        public global::Vapi.EvalGoogleModelModel? Type1776 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalCustomModelProvider? Type1777 { get; set; }
+        public global::Vapi.EvalGroqModel? Type1777 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.EvalOpenAIModel, global::Vapi.EvalAnthropicModel, global::Vapi.EvalGoogleModel, global::Vapi.EvalCustomModel>? Type1778 { get; set; }
+        public global::Vapi.EvalGroqModelProvider? Type1778 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AssistantMessageJudgePlanAIType? Type1779 { get; set; }
+        public global::Vapi.EvalGroqModelModel? Type1779 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatEvalToolResponseMessageEvaluationRole? Type1780 { get; set; }
+        public global::Vapi.EvalCustomModel? Type1780 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AssistantMessageJudgePlanExactType? Type1781 { get; set; }
+        public global::Vapi.EvalCustomModelProvider? Type1781 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AssistantMessageJudgePlanRegexType? Type1782 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.EvalOpenAIModel, global::Vapi.EvalAnthropicModel, global::Vapi.EvalGoogleModel, global::Vapi.EvalCustomModel>? Type1782 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GetEvalPaginatedDTO? Type1783 { get; set; }
+        public global::Vapi.AssistantMessageJudgePlanAIType? Type1783 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GetEvalPaginatedDTOSortOrder? Type1784 { get; set; }
+        public global::Vapi.ChatEvalToolResponseMessageEvaluationRole? Type1784 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GetEvalPaginatedDTOSortBy? Type1785 { get; set; }
+        public global::Vapi.AssistantMessageJudgePlanExactType? Type1785 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalPaginatedResponse? Type1786 { get; set; }
+        public global::Vapi.AssistantMessageJudgePlanRegexType? Type1786 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.Eval>? Type1787 { get; set; }
+        public global::Vapi.GetEvalPaginatedDTO? Type1787 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateEvalDTO? Type1788 { get; set; }
+        public global::Vapi.GetEvalPaginatedDTOSortOrder? Type1788 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateEvalDTOType? Type1789 { get; set; }
+        public global::Vapi.GetEvalPaginatedDTOSortBy? Type1789 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateEvalRunDTO? Type1790 { get; set; }
+        public global::Vapi.EvalPaginatedResponse? Type1790 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.EvalRunTargetAssistant, global::Vapi.EvalRunTargetSquad>? Type1791 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.Eval>? Type1791 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalRunTargetAssistant? Type1792 { get; set; }
+        public global::Vapi.UpdateEvalDTO? Type1792 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalRunTargetSquad? Type1793 { get; set; }
+        public global::Vapi.UpdateEvalDTOType? Type1793 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateEvalRunDTOType? Type1794 { get; set; }
+        public global::Vapi.CreateEvalRunDTO? Type1794 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalRunResult? Type1795 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.EvalRunTargetAssistant, global::Vapi.EvalRunTargetSquad>? Type1795 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalRunResultStatus? Type1796 { get; set; }
+        public global::Vapi.EvalRunTargetAssistant? Type1796 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalAssistantMessageMock>? Type1797 { get; set; }
+        public global::Vapi.EvalRunTargetSquad? Type1797 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalRun? Type1798 { get; set; }
+        public global::Vapi.CreateEvalRunDTOType? Type1798 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalRunStatus? Type1799 { get; set; }
+        public global::Vapi.EvalRunResult? Type1799 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalRunEndedReason? Type1800 { get; set; }
+        public global::Vapi.EvalRunResultStatus? Type1800 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.EvalRunResult>? Type1801 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalAssistantMessageMock>? Type1801 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalRunType? Type1802 { get; set; }
+        public global::Vapi.EvalRun? Type1802 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalRunPaginatedResponse? Type1803 { get; set; }
+        public global::Vapi.EvalRunStatus? Type1803 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.EvalRun>? Type1804 { get; set; }
+        public global::Vapi.EvalRunEndedReason? Type1804 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GetEvalRunPaginatedDTO? Type1805 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.EvalRunResult>? Type1805 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GetEvalRunPaginatedDTOSortOrder? Type1806 { get; set; }
+        public global::Vapi.EvalRunType? Type1806 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GetEvalRunPaginatedDTOSortBy? Type1807 { get; set; }
+        public global::Vapi.EvalRunPaginatedResponse? Type1807 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalRunTargetAssistantType? Type1808 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.EvalRun>? Type1808 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalRunTargetSquadType? Type1809 { get; set; }
+        public global::Vapi.GetEvalRunPaginatedDTO? Type1809 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Scorecard? Type1810 { get; set; }
+        public global::Vapi.GetEvalRunPaginatedDTOSortOrder? Type1810 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ScorecardPaginatedResponse? Type1811 { get; set; }
+        public global::Vapi.GetEvalRunPaginatedDTOSortBy? Type1811 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.Scorecard>? Type1812 { get; set; }
+        public global::Vapi.EvalRunTargetAssistantType? Type1812 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateScorecardDTO? Type1813 { get; set; }
+        public global::Vapi.EvalRunTargetSquadType? Type1813 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateOrgDTO? Type1814 { get; set; }
+        public global::Vapi.Scorecard? Type1814 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateOrgDTOChannel? Type1815 { get; set; }
+        public global::Vapi.ScorecardPaginatedResponse? Type1815 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AutoReloadPlan? Type1816 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.Scorecard>? Type1816 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InvoicePlan? Type1817 { get; set; }
+        public global::Vapi.UpdateScorecardDTO? Type1817 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Subscription? Type1818 { get; set; }
+        public global::Vapi.CreateOrgDTO? Type1818 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SubscriptionType? Type1819 { get; set; }
+        public global::Vapi.CreateOrgDTOChannel? Type1819 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SubscriptionStatus? Type1820 { get; set; }
+        public global::Vapi.AutoReloadPlan? Type1820 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SubscriptionMinutesIncludedResetFrequency? Type1821 { get; set; }
+        public global::Vapi.InvoicePlan? Type1821 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Org? Type1822 { get; set; }
+        public global::Vapi.Subscription? Type1822 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OrgChannel? Type1823 { get; set; }
+        public global::Vapi.SubscriptionType? Type1823 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateOrgDTO? Type1824 { get; set; }
+        public global::Vapi.SubscriptionStatus? Type1824 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateOrgDTOChannel? Type1825 { get; set; }
+        public global::Vapi.SubscriptionMinutesIncludedResetFrequency? Type1825 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.User? Type1826 { get; set; }
+        public global::Vapi.Org? Type1826 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InviteUserDTO? Type1827 { get; set; }
+        public global::Vapi.OrgChannel? Type1827 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.InviteUserDTORole?, string>? Type1828 { get; set; }
+        public global::Vapi.UpdateOrgDTO? Type1828 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InviteUserDTORole? Type1829 { get; set; }
+        public global::Vapi.UpdateOrgDTOChannel? Type1829 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PendingInvitationDTO? Type1830 { get; set; }
+        public global::Vapi.User? Type1830 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PendingInvitationsResponseDTO? Type1831 { get; set; }
+        public global::Vapi.InviteUserDTO? Type1831 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.PendingInvitationDTO>? Type1832 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.InviteUserDTORole?, string>? Type1832 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RevokeInvitationResponseDTO? Type1833 { get; set; }
+        public global::Vapi.InviteUserDTORole? Type1833 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateUserRoleDTO? Type1834 { get; set; }
+        public global::Vapi.PendingInvitationDTO? Type1834 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.UpdateUserRoleDTORole?, string>? Type1835 { get; set; }
+        public global::Vapi.PendingInvitationsResponseDTO? Type1835 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateUserRoleDTORole? Type1836 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.PendingInvitationDTO>? Type1836 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.JwtResponse? Type1837 { get; set; }
+        public global::Vapi.RevokeInvitationResponseDTO? Type1837 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TokenRestrictions? Type1838 { get; set; }
+        public global::Vapi.UpdateUserRoleDTO? Type1838 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTokenDTO? Type1839 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.UpdateUserRoleDTORole?, string>? Type1839 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateTokenDTOTag? Type1840 { get; set; }
+        public global::Vapi.UpdateUserRoleDTORole? Type1840 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Token? Type1841 { get; set; }
+        public global::Vapi.JwtResponse? Type1841 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TokenTag? Type1842 { get; set; }
+        public global::Vapi.TokenRestrictions? Type1842 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTokenDTO? Type1843 { get; set; }
+        public global::Vapi.CreateTokenDTO? Type1843 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTokenDTOTag? Type1844 { get; set; }
+        public global::Vapi.CreateTokenDTOTag? Type1844 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnthropicCredential? Type1845 { get; set; }
+        public global::Vapi.Token? Type1845 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnthropicCredentialProvider? Type1846 { get; set; }
+        public global::Vapi.TokenTag? Type1846 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AWSStsAuthenticationArtifact? Type1847 { get; set; }
+        public global::Vapi.UpdateTokenDTO? Type1847 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AWSStsAssumeRoleUser? Type1848 { get; set; }
+        public global::Vapi.UpdateTokenDTOTag? Type1848 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AWSStsCredentials? Type1849 { get; set; }
+        public global::Vapi.AnthropicCredential? Type1849 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AWSStsAuthenticationSession? Type1850 { get; set; }
+        public global::Vapi.AnthropicCredentialProvider? Type1850 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnthropicBedrockCredential? Type1851 { get; set; }
+        public global::Vapi.AWSStsAuthenticationArtifact? Type1851 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnthropicBedrockCredentialProvider? Type1852 { get; set; }
+        public global::Vapi.AWSStsAssumeRoleUser? Type1852 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnthropicBedrockCredentialRegion? Type1853 { get; set; }
+        public global::Vapi.AWSStsCredentials? Type1853 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnyscaleCredential? Type1854 { get; set; }
+        public global::Vapi.AWSStsAuthenticationSession? Type1854 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnyscaleCredentialProvider? Type1855 { get; set; }
+        public global::Vapi.AnthropicBedrockCredential? Type1855 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AssemblyAICredential? Type1856 { get; set; }
+        public global::Vapi.AnthropicBedrockCredentialProvider? Type1856 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AssemblyAICredentialProvider? Type1857 { get; set; }
+        public global::Vapi.AnthropicBedrockCredentialRegion? Type1857 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AzureCredential? Type1858 { get; set; }
+        public global::Vapi.AnyscaleCredential? Type1858 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AzureCredentialProvider? Type1859 { get; set; }
+        public global::Vapi.AnyscaleCredentialProvider? Type1859 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AzureCredentialService? Type1860 { get; set; }
+        public global::Vapi.AssemblyAICredential? Type1860 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AzureCredentialRegion? Type1861 { get; set; }
+        public global::Vapi.AssemblyAICredentialProvider? Type1861 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AzureOpenAICredential? Type1862 { get; set; }
+        public global::Vapi.AzureCredential? Type1862 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AzureOpenAICredentialProvider? Type1863 { get; set; }
+        public global::Vapi.AzureCredentialProvider? Type1863 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AzureOpenAICredentialRegion? Type1864 { get; set; }
+        public global::Vapi.AzureCredentialService? Type1864 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.AzureOpenAICredentialModel>? Type1865 { get; set; }
+        public global::Vapi.AzureCredentialRegion? Type1865 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AzureOpenAICredentialModel? Type1866 { get; set; }
+        public global::Vapi.AzureOpenAICredential? Type1866 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ByoSipTrunkCredential? Type1867 { get; set; }
+        public global::Vapi.AzureOpenAICredentialProvider? Type1867 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ByoSipTrunkCredentialProvider? Type1868 { get; set; }
+        public global::Vapi.AzureOpenAICredentialRegion? Type1868 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CartesiaCredential? Type1869 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.AzureOpenAICredentialModel>? Type1869 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CartesiaCredentialProvider? Type1870 { get; set; }
+        public global::Vapi.AzureOpenAICredentialModel? Type1870 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CerebrasCredential? Type1871 { get; set; }
+        public global::Vapi.ByoSipTrunkCredential? Type1871 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CerebrasCredentialProvider? Type1872 { get; set; }
+        public global::Vapi.ByoSipTrunkCredentialProvider? Type1872 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CloudflareCredential? Type1873 { get; set; }
+        public global::Vapi.CartesiaCredential? Type1873 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CloudflareCredentialProvider? Type1874 { get; set; }
+        public global::Vapi.CartesiaCredentialProvider? Type1874 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Oauth2AuthenticationSession? Type1875 { get; set; }
+        public global::Vapi.CerebrasCredential? Type1875 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CustomLLMCredential? Type1876 { get; set; }
+        public global::Vapi.CerebrasCredentialProvider? Type1876 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CustomLLMCredentialProvider? Type1877 { get; set; }
+        public global::Vapi.CloudflareCredential? Type1877 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.DeepgramCredential? Type1878 { get; set; }
+        public global::Vapi.CloudflareCredentialProvider? Type1878 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.DeepgramCredentialProvider? Type1879 { get; set; }
+        public global::Vapi.Oauth2AuthenticationSession? Type1879 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.DeepInfraCredential? Type1880 { get; set; }
+        public global::Vapi.CustomLLMCredential? Type1880 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.DeepInfraCredentialProvider? Type1881 { get; set; }
+        public global::Vapi.CustomLLMCredentialProvider? Type1881 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.DeepSeekCredential? Type1882 { get; set; }
+        public global::Vapi.DeepgramCredential? Type1882 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.DeepSeekCredentialProvider? Type1883 { get; set; }
+        public global::Vapi.DeepgramCredentialProvider? Type1883 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ElevenLabsCredential? Type1884 { get; set; }
+        public global::Vapi.DeepInfraCredential? Type1884 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ElevenLabsCredentialProvider? Type1885 { get; set; }
+        public global::Vapi.DeepInfraCredentialProvider? Type1885 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ElevenLabsCredentialApiUrl? Type1886 { get; set; }
+        public global::Vapi.DeepSeekCredential? Type1886 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GcpCredential? Type1887 { get; set; }
+        public global::Vapi.DeepSeekCredentialProvider? Type1887 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GcpCredentialProvider? Type1888 { get; set; }
+        public global::Vapi.ElevenLabsCredential? Type1888 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GladiaCredential? Type1889 { get; set; }
+        public global::Vapi.ElevenLabsCredentialProvider? Type1889 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GladiaCredentialProvider? Type1890 { get; set; }
+        public global::Vapi.ElevenLabsCredentialApiUrl? Type1890 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCredential? Type1891 { get; set; }
+        public global::Vapi.GcpCredential? Type1891 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCredentialProvider? Type1892 { get; set; }
+        public global::Vapi.GcpCredentialProvider? Type1892 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCredential? Type1893 { get; set; }
+        public global::Vapi.GladiaCredential? Type1893 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCredentialProvider? Type1894 { get; set; }
+        public global::Vapi.GladiaCredentialProvider? Type1894 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GroqCredential? Type1895 { get; set; }
+        public global::Vapi.GoHighLevelCredential? Type1895 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GroqCredentialProvider? Type1896 { get; set; }
+        public global::Vapi.GoHighLevelCredentialProvider? Type1896 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.HumeCredential? Type1897 { get; set; }
+        public global::Vapi.GoogleCredential? Type1897 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.HumeCredentialProvider? Type1898 { get; set; }
+        public global::Vapi.GoogleCredentialProvider? Type1898 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InflectionAICredential? Type1899 { get; set; }
+        public global::Vapi.GroqCredential? Type1899 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InflectionAICredentialProvider? Type1900 { get; set; }
+        public global::Vapi.GroqCredentialProvider? Type1900 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LangfuseCredential? Type1901 { get; set; }
+        public global::Vapi.HumeCredential? Type1901 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LangfuseCredentialProvider? Type1902 { get; set; }
+        public global::Vapi.HumeCredentialProvider? Type1902 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LmntCredential? Type1903 { get; set; }
+        public global::Vapi.InflectionAICredential? Type1903 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.LmntCredentialProvider? Type1904 { get; set; }
+        public global::Vapi.InflectionAICredentialProvider? Type1904 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MakeCredential? Type1905 { get; set; }
+        public global::Vapi.LangfuseCredential? Type1905 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MakeCredentialProvider? Type1906 { get; set; }
+        public global::Vapi.LangfuseCredentialProvider? Type1906 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MicrosoftCredential? Type1907 { get; set; }
+        public global::Vapi.LmntCredential? Type1907 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MicrosoftCredentialProvider? Type1908 { get; set; }
+        public global::Vapi.LmntCredentialProvider? Type1908 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MistralCredential? Type1909 { get; set; }
+        public global::Vapi.MakeCredential? Type1909 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MistralCredentialProvider? Type1910 { get; set; }
+        public global::Vapi.MakeCredentialProvider? Type1910 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.NeuphonicCredential? Type1911 { get; set; }
+        public global::Vapi.MicrosoftCredential? Type1911 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.NeuphonicCredentialProvider? Type1912 { get; set; }
+        public global::Vapi.MicrosoftCredentialProvider? Type1912 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OpenAICredential? Type1913 { get; set; }
+        public global::Vapi.MistralCredential? Type1913 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OpenAICredentialProvider? Type1914 { get; set; }
+        public global::Vapi.MistralCredentialProvider? Type1914 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OpenRouterCredential? Type1915 { get; set; }
+        public global::Vapi.NeuphonicCredential? Type1915 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OpenRouterCredentialProvider? Type1916 { get; set; }
+        public global::Vapi.NeuphonicCredentialProvider? Type1916 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PerplexityAICredential? Type1917 { get; set; }
+        public global::Vapi.OpenAICredential? Type1917 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PerplexityAICredentialProvider? Type1918 { get; set; }
+        public global::Vapi.OpenAICredentialProvider? Type1918 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PlayHTCredential? Type1919 { get; set; }
+        public global::Vapi.OpenRouterCredential? Type1919 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PlayHTCredentialProvider? Type1920 { get; set; }
+        public global::Vapi.OpenRouterCredentialProvider? Type1920 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RimeAICredential? Type1921 { get; set; }
+        public global::Vapi.PerplexityAICredential? Type1921 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RimeAICredentialProvider? Type1922 { get; set; }
+        public global::Vapi.PerplexityAICredentialProvider? Type1922 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RunpodCredential? Type1923 { get; set; }
+        public global::Vapi.PlayHTCredential? Type1923 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.RunpodCredentialProvider? Type1924 { get; set; }
+        public global::Vapi.PlayHTCredentialProvider? Type1924 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.WellSaidCredential? Type1925 { get; set; }
+        public global::Vapi.RimeAICredential? Type1925 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.WellSaidCredentialProvider? Type1926 { get; set; }
+        public global::Vapi.RimeAICredentialProvider? Type1926 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.S3Credential? Type1927 { get; set; }
+        public global::Vapi.RunpodCredential? Type1927 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.S3CredentialProvider? Type1928 { get; set; }
+        public global::Vapi.RunpodCredentialProvider? Type1928 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.S3CompatibleBucketPlan? Type1929 { get; set; }
+        public global::Vapi.WellSaidCredential? Type1929 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.S3CompatibleStorageCredential? Type1930 { get; set; }
+        public global::Vapi.WellSaidCredentialProvider? Type1930 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.S3CompatibleStorageCredentialProvider? Type1931 { get; set; }
+        public global::Vapi.S3Credential? Type1931 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SmallestAICredential? Type1932 { get; set; }
+        public global::Vapi.S3CredentialProvider? Type1932 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SmallestAICredentialProvider? Type1933 { get; set; }
+        public global::Vapi.S3CompatibleBucketPlan? Type1933 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SonioxCredential? Type1934 { get; set; }
+        public global::Vapi.S3CompatibleStorageCredential? Type1934 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SonioxCredentialProvider? Type1935 { get; set; }
+        public global::Vapi.S3CompatibleStorageCredentialProvider? Type1935 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SpeechmaticsCredential? Type1936 { get; set; }
+        public global::Vapi.SmallestAICredential? Type1936 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SpeechmaticsCredentialProvider? Type1937 { get; set; }
+        public global::Vapi.SmallestAICredentialProvider? Type1937 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SupabaseCredential? Type1938 { get; set; }
+        public global::Vapi.SonioxCredential? Type1938 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SupabaseCredentialProvider? Type1939 { get; set; }
+        public global::Vapi.SonioxCredentialProvider? Type1939 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TavusCredential? Type1940 { get; set; }
+        public global::Vapi.SpeechmaticsCredential? Type1940 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TavusCredentialProvider? Type1941 { get; set; }
+        public global::Vapi.SpeechmaticsCredentialProvider? Type1941 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TogetherAICredential? Type1942 { get; set; }
+        public global::Vapi.SupabaseCredential? Type1942 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TogetherAICredentialProvider? Type1943 { get; set; }
+        public global::Vapi.SupabaseCredentialProvider? Type1943 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TwilioCredential? Type1944 { get; set; }
+        public global::Vapi.TavusCredential? Type1944 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TwilioCredentialProvider? Type1945 { get; set; }
+        public global::Vapi.TavusCredentialProvider? Type1945 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VonageCredential? Type1946 { get; set; }
+        public global::Vapi.TogetherAICredential? Type1946 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VonageCredentialProvider? Type1947 { get; set; }
+        public global::Vapi.TogetherAICredentialProvider? Type1947 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.WebhookCredential? Type1948 { get; set; }
+        public global::Vapi.TwilioCredential? Type1948 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.WebhookCredentialProvider? Type1949 { get; set; }
+        public global::Vapi.TwilioCredentialProvider? Type1949 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AuthenticationPlan4? Type1950 { get; set; }
+        public global::Vapi.VonageCredential? Type1950 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.WebhookCredentialAuthenticationPlanDiscriminator? Type1951 { get; set; }
+        public global::Vapi.VonageCredentialProvider? Type1951 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.WebhookCredentialAuthenticationPlanDiscriminatorType? Type1952 { get; set; }
+        public global::Vapi.WebhookCredential? Type1952 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SpkiPemPublicKeyConfig? Type1953 { get; set; }
+        public global::Vapi.WebhookCredentialProvider? Type1953 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SpkiPemPublicKeyConfigFormat? Type1954 { get; set; }
+        public global::Vapi.AuthenticationPlan4? Type1954 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PublicKeyEncryptionPlan? Type1955 { get; set; }
+        public global::Vapi.WebhookCredentialAuthenticationPlanDiscriminator? Type1955 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PublicKeyEncryptionPlanType? Type1956 { get; set; }
+        public global::Vapi.WebhookCredentialAuthenticationPlanDiscriminatorType? Type1956 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PublicKeyEncryptionPlanAlgorithm? Type1957 { get; set; }
+        public global::Vapi.SpkiPemPublicKeyConfig? Type1957 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PublicKeyEncryptionPlanPublicKeyDiscriminator? Type1958 { get; set; }
+        public global::Vapi.SpkiPemPublicKeyConfigFormat? Type1958 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PublicKeyEncryptionPlanPublicKeyDiscriminatorFormat? Type1959 { get; set; }
+        public global::Vapi.PublicKeyEncryptionPlan? Type1959 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CustomCredential? Type1960 { get; set; }
+        public global::Vapi.PublicKeyEncryptionPlanType? Type1960 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CustomCredentialProvider? Type1961 { get; set; }
+        public global::Vapi.PublicKeyEncryptionPlanAlgorithm? Type1961 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AuthenticationPlan5? Type1962 { get; set; }
+        public global::Vapi.PublicKeyEncryptionPlanPublicKeyDiscriminator? Type1962 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CustomCredentialAuthenticationPlanDiscriminator? Type1963 { get; set; }
+        public global::Vapi.PublicKeyEncryptionPlanPublicKeyDiscriminatorFormat? Type1963 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CustomCredentialAuthenticationPlanDiscriminatorType? Type1964 { get; set; }
+        public global::Vapi.CustomCredential? Type1964 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CustomCredentialEncryptionPlanDiscriminator? Type1965 { get; set; }
+        public global::Vapi.CustomCredentialProvider? Type1965 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CustomCredentialEncryptionPlanDiscriminatorType? Type1966 { get; set; }
+        public global::Vapi.AuthenticationPlan5? Type1966 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.XAiCredential? Type1967 { get; set; }
+        public global::Vapi.CustomCredentialAuthenticationPlanDiscriminator? Type1967 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.XAiCredentialProvider? Type1968 { get; set; }
+        public global::Vapi.CustomCredentialAuthenticationPlanDiscriminatorType? Type1968 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarOAuth2ClientCredential? Type1969 { get; set; }
+        public global::Vapi.CustomCredentialEncryptionPlanDiscriminator? Type1969 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarOAuth2ClientCredentialProvider? Type1970 { get; set; }
+        public global::Vapi.CustomCredentialEncryptionPlanDiscriminatorType? Type1970 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarOAuth2AuthorizationCredential? Type1971 { get; set; }
+        public global::Vapi.XAiCredential? Type1971 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarOAuth2AuthorizationCredentialProvider? Type1972 { get; set; }
+        public global::Vapi.XAiCredentialProvider? Type1972 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleSheetsOAuth2AuthorizationCredential? Type1973 { get; set; }
+        public global::Vapi.GoogleCalendarOAuth2ClientCredential? Type1973 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleSheetsOAuth2AuthorizationCredentialProvider? Type1974 { get; set; }
+        public global::Vapi.GoogleCalendarOAuth2ClientCredentialProvider? Type1974 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SlackOAuth2AuthorizationCredential? Type1975 { get; set; }
+        public global::Vapi.GoogleCalendarOAuth2AuthorizationCredential? Type1975 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SlackOAuth2AuthorizationCredentialProvider? Type1976 { get; set; }
+        public global::Vapi.GoogleCalendarOAuth2AuthorizationCredentialProvider? Type1976 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelMCPCredential? Type1977 { get; set; }
+        public global::Vapi.GoogleSheetsOAuth2AuthorizationCredential? Type1977 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelMCPCredentialProvider? Type1978 { get; set; }
+        public global::Vapi.GoogleSheetsOAuth2AuthorizationCredentialProvider? Type1978 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InworldCredential? Type1979 { get; set; }
+        public global::Vapi.SlackOAuth2AuthorizationCredential? Type1979 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InworldCredentialProvider? Type1980 { get; set; }
+        public global::Vapi.SlackOAuth2AuthorizationCredentialProvider? Type1980 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EmailCredential? Type1981 { get; set; }
+        public global::Vapi.GoHighLevelMCPCredential? Type1981 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EmailCredentialProvider? Type1982 { get; set; }
+        public global::Vapi.GoHighLevelMCPCredentialProvider? Type1982 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SlackWebhookCredential? Type1983 { get; set; }
+        public global::Vapi.InworldCredential? Type1983 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SlackWebhookCredentialProvider? Type1984 { get; set; }
+        public global::Vapi.InworldCredentialProvider? Type1984 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateCerebrasCredentialDTOProvider? Type1985 { get; set; }
+        public global::Vapi.EmailCredential? Type1985 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateGoogleCredentialDTOProvider? Type1986 { get; set; }
+        public global::Vapi.EmailCredentialProvider? Type1986 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateHumeCredentialDTOProvider? Type1987 { get; set; }
+        public global::Vapi.SlackWebhookCredential? Type1987 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateInflectionAICredentialDTOProvider? Type1988 { get; set; }
+        public global::Vapi.SlackWebhookCredentialProvider? Type1988 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateMicrosoftCredentialDTOProvider? Type1989 { get; set; }
+        public global::Vapi.CreateCerebrasCredentialDTOProvider? Type1989 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateMistralCredentialDTOProvider? Type1990 { get; set; }
+        public global::Vapi.CreateGoogleCredentialDTOProvider? Type1990 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateNeuphonicCredentialDTOProvider? Type1991 { get; set; }
+        public global::Vapi.CreateHumeCredentialDTOProvider? Type1991 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateWellSaidCredentialDTOProvider? Type1992 { get; set; }
+        public global::Vapi.CreateInflectionAICredentialDTOProvider? Type1992 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateS3CompatibleCredentialDTOProvider? Type1993 { get; set; }
+        public global::Vapi.CreateMicrosoftCredentialDTOProvider? Type1993 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSonioxCredentialDTOProvider? Type1994 { get; set; }
+        public global::Vapi.CreateMistralCredentialDTOProvider? Type1994 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSpeechmaticsCredentialDTOProvider? Type1995 { get; set; }
+        public global::Vapi.CreateNeuphonicCredentialDTOProvider? Type1995 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateCustomCredentialDTOProvider? Type1996 { get; set; }
+        public global::Vapi.CreateWellSaidCredentialDTOProvider? Type1996 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AuthenticationPlan6? Type1997 { get; set; }
+        public global::Vapi.CreateS3CompatibleCredentialDTOProvider? Type1997 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminator? Type1998 { get; set; }
+        public global::Vapi.CreateSonioxCredentialDTOProvider? Type1998 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType? Type1999 { get; set; }
+        public global::Vapi.CreateSpeechmaticsCredentialDTOProvider? Type1999 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateCustomCredentialDTOEncryptionPlanDiscriminator? Type2000 { get; set; }
+        public global::Vapi.CreateCustomCredentialDTOProvider? Type2000 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateCustomCredentialDTOEncryptionPlanDiscriminatorType? Type2001 { get; set; }
+        public global::Vapi.AuthenticationPlan6? Type2001 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateGoHighLevelMCPCredentialDTOProvider? Type2002 { get; set; }
+        public global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminator? Type2002 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateInworldCredentialDTOProvider? Type2003 { get; set; }
+        public global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType? Type2003 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateEmailCredentialDTOProvider? Type2004 { get; set; }
+        public global::Vapi.CreateCustomCredentialDTOEncryptionPlanDiscriminator? Type2004 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSlackWebhookCredentialDTOProvider? Type2005 { get; set; }
+        public global::Vapi.CreateCustomCredentialDTOEncryptionPlanDiscriminatorType? Type2005 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAnthropicCredentialDTO? Type2006 { get; set; }
+        public global::Vapi.CreateGoHighLevelMCPCredentialDTOProvider? Type2006 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAnthropicCredentialDTOProvider? Type2007 { get; set; }
+        public global::Vapi.CreateInworldCredentialDTOProvider? Type2007 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAnthropicBedrockCredentialDTO? Type2008 { get; set; }
+        public global::Vapi.CreateEmailCredentialDTOProvider? Type2008 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAnthropicBedrockCredentialDTOProvider? Type2009 { get; set; }
+        public global::Vapi.CreateSlackWebhookCredentialDTOProvider? Type2009 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAnthropicBedrockCredentialDTORegion? Type2010 { get; set; }
+        public global::Vapi.UpdateAnthropicCredentialDTO? Type2010 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAnyscaleCredentialDTO? Type2011 { get; set; }
+        public global::Vapi.UpdateAnthropicCredentialDTOProvider? Type2011 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAnyscaleCredentialDTOProvider? Type2012 { get; set; }
+        public global::Vapi.UpdateAnthropicBedrockCredentialDTO? Type2012 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAssemblyAICredentialDTO? Type2013 { get; set; }
+        public global::Vapi.UpdateAnthropicBedrockCredentialDTOProvider? Type2013 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAssemblyAICredentialDTOProvider? Type2014 { get; set; }
+        public global::Vapi.UpdateAnthropicBedrockCredentialDTORegion? Type2014 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAzureCredentialDTO? Type2015 { get; set; }
+        public global::Vapi.UpdateAnyscaleCredentialDTO? Type2015 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAzureCredentialDTOProvider? Type2016 { get; set; }
+        public global::Vapi.UpdateAnyscaleCredentialDTOProvider? Type2016 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAzureCredentialDTOService? Type2017 { get; set; }
+        public global::Vapi.UpdateAssemblyAICredentialDTO? Type2017 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAzureCredentialDTORegion? Type2018 { get; set; }
+        public global::Vapi.UpdateAssemblyAICredentialDTOProvider? Type2018 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAzureOpenAICredentialDTO? Type2019 { get; set; }
+        public global::Vapi.UpdateAzureCredentialDTO? Type2019 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAzureOpenAICredentialDTOProvider? Type2020 { get; set; }
+        public global::Vapi.UpdateAzureCredentialDTOProvider? Type2020 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAzureOpenAICredentialDTORegion? Type2021 { get; set; }
+        public global::Vapi.UpdateAzureCredentialDTOService? Type2021 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.UpdateAzureOpenAICredentialDTOModel>? Type2022 { get; set; }
+        public global::Vapi.UpdateAzureCredentialDTORegion? Type2022 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateAzureOpenAICredentialDTOModel? Type2023 { get; set; }
+        public global::Vapi.UpdateAzureOpenAICredentialDTO? Type2023 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateByoSipTrunkCredentialDTO? Type2024 { get; set; }
+        public global::Vapi.UpdateAzureOpenAICredentialDTOProvider? Type2024 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateByoSipTrunkCredentialDTOProvider? Type2025 { get; set; }
+        public global::Vapi.UpdateAzureOpenAICredentialDTORegion? Type2025 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCartesiaCredentialDTO? Type2026 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.UpdateAzureOpenAICredentialDTOModel>? Type2026 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCartesiaCredentialDTOProvider? Type2027 { get; set; }
+        public global::Vapi.UpdateAzureOpenAICredentialDTOModel? Type2027 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCerebrasCredentialDTO? Type2028 { get; set; }
+        public global::Vapi.UpdateByoSipTrunkCredentialDTO? Type2028 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCerebrasCredentialDTOProvider? Type2029 { get; set; }
+        public global::Vapi.UpdateByoSipTrunkCredentialDTOProvider? Type2029 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCloudflareCredentialDTO? Type2030 { get; set; }
+        public global::Vapi.UpdateCartesiaCredentialDTO? Type2030 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCloudflareCredentialDTOProvider? Type2031 { get; set; }
+        public global::Vapi.UpdateCartesiaCredentialDTOProvider? Type2031 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCustomLLMCredentialDTO? Type2032 { get; set; }
+        public global::Vapi.UpdateCerebrasCredentialDTO? Type2032 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCustomLLMCredentialDTOProvider? Type2033 { get; set; }
+        public global::Vapi.UpdateCerebrasCredentialDTOProvider? Type2033 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateDeepgramCredentialDTO? Type2034 { get; set; }
+        public global::Vapi.UpdateCloudflareCredentialDTO? Type2034 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateDeepgramCredentialDTOProvider? Type2035 { get; set; }
+        public global::Vapi.UpdateCloudflareCredentialDTOProvider? Type2035 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateDeepInfraCredentialDTO? Type2036 { get; set; }
+        public global::Vapi.UpdateCustomLLMCredentialDTO? Type2036 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateDeepInfraCredentialDTOProvider? Type2037 { get; set; }
+        public global::Vapi.UpdateCustomLLMCredentialDTOProvider? Type2037 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateDeepSeekCredentialDTO? Type2038 { get; set; }
+        public global::Vapi.UpdateDeepgramCredentialDTO? Type2038 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateDeepSeekCredentialDTOProvider? Type2039 { get; set; }
+        public global::Vapi.UpdateDeepgramCredentialDTOProvider? Type2039 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateElevenLabsCredentialDTO? Type2040 { get; set; }
+        public global::Vapi.UpdateDeepInfraCredentialDTO? Type2040 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateElevenLabsCredentialDTOProvider? Type2041 { get; set; }
+        public global::Vapi.UpdateDeepInfraCredentialDTOProvider? Type2041 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateElevenLabsCredentialDTOApiUrl? Type2042 { get; set; }
+        public global::Vapi.UpdateDeepSeekCredentialDTO? Type2042 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGcpCredentialDTO? Type2043 { get; set; }
+        public global::Vapi.UpdateDeepSeekCredentialDTOProvider? Type2043 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGcpCredentialDTOProvider? Type2044 { get; set; }
+        public global::Vapi.UpdateElevenLabsCredentialDTO? Type2044 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGladiaCredentialDTO? Type2045 { get; set; }
+        public global::Vapi.UpdateElevenLabsCredentialDTOProvider? Type2045 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGladiaCredentialDTOProvider? Type2046 { get; set; }
+        public global::Vapi.UpdateElevenLabsCredentialDTOApiUrl? Type2046 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelCredentialDTO? Type2047 { get; set; }
+        public global::Vapi.UpdateGcpCredentialDTO? Type2047 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelCredentialDTOProvider? Type2048 { get; set; }
+        public global::Vapi.UpdateGcpCredentialDTOProvider? Type2048 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleCredentialDTO? Type2049 { get; set; }
+        public global::Vapi.UpdateGladiaCredentialDTO? Type2049 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleCredentialDTOProvider? Type2050 { get; set; }
+        public global::Vapi.UpdateGladiaCredentialDTOProvider? Type2050 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGroqCredentialDTO? Type2051 { get; set; }
+        public global::Vapi.UpdateGoHighLevelCredentialDTO? Type2051 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGroqCredentialDTOProvider? Type2052 { get; set; }
+        public global::Vapi.UpdateGoHighLevelCredentialDTOProvider? Type2052 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateHumeCredentialDTO? Type2053 { get; set; }
+        public global::Vapi.UpdateGoogleCredentialDTO? Type2053 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateHumeCredentialDTOProvider? Type2054 { get; set; }
+        public global::Vapi.UpdateGoogleCredentialDTOProvider? Type2054 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateInflectionAICredentialDTO? Type2055 { get; set; }
+        public global::Vapi.UpdateGroqCredentialDTO? Type2055 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateInflectionAICredentialDTOProvider? Type2056 { get; set; }
+        public global::Vapi.UpdateGroqCredentialDTOProvider? Type2056 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateLangfuseCredentialDTO? Type2057 { get; set; }
+        public global::Vapi.UpdateHumeCredentialDTO? Type2057 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateLangfuseCredentialDTOProvider? Type2058 { get; set; }
+        public global::Vapi.UpdateHumeCredentialDTOProvider? Type2058 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateLmntCredentialDTO? Type2059 { get; set; }
+        public global::Vapi.UpdateInflectionAICredentialDTO? Type2059 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateLmntCredentialDTOProvider? Type2060 { get; set; }
+        public global::Vapi.UpdateInflectionAICredentialDTOProvider? Type2060 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateMakeCredentialDTO? Type2061 { get; set; }
+        public global::Vapi.UpdateLangfuseCredentialDTO? Type2061 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateMakeCredentialDTOProvider? Type2062 { get; set; }
+        public global::Vapi.UpdateLangfuseCredentialDTOProvider? Type2062 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateMicrosoftCredentialDTO? Type2063 { get; set; }
+        public global::Vapi.UpdateLmntCredentialDTO? Type2063 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateMicrosoftCredentialDTOProvider? Type2064 { get; set; }
+        public global::Vapi.UpdateLmntCredentialDTOProvider? Type2064 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateMistralCredentialDTO? Type2065 { get; set; }
+        public global::Vapi.UpdateMakeCredentialDTO? Type2065 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateMistralCredentialDTOProvider? Type2066 { get; set; }
+        public global::Vapi.UpdateMakeCredentialDTOProvider? Type2066 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateNeuphonicCredentialDTO? Type2067 { get; set; }
+        public global::Vapi.UpdateMicrosoftCredentialDTO? Type2067 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateNeuphonicCredentialDTOProvider? Type2068 { get; set; }
+        public global::Vapi.UpdateMicrosoftCredentialDTOProvider? Type2068 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateOpenAICredentialDTO? Type2069 { get; set; }
+        public global::Vapi.UpdateMistralCredentialDTO? Type2069 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateOpenAICredentialDTOProvider? Type2070 { get; set; }
+        public global::Vapi.UpdateMistralCredentialDTOProvider? Type2070 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateOpenRouterCredentialDTO? Type2071 { get; set; }
+        public global::Vapi.UpdateNeuphonicCredentialDTO? Type2071 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateOpenRouterCredentialDTOProvider? Type2072 { get; set; }
+        public global::Vapi.UpdateNeuphonicCredentialDTOProvider? Type2072 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdatePerplexityAICredentialDTO? Type2073 { get; set; }
+        public global::Vapi.UpdateOpenAICredentialDTO? Type2073 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdatePerplexityAICredentialDTOProvider? Type2074 { get; set; }
+        public global::Vapi.UpdateOpenAICredentialDTOProvider? Type2074 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdatePlayHTCredentialDTO? Type2075 { get; set; }
+        public global::Vapi.UpdateOpenRouterCredentialDTO? Type2075 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdatePlayHTCredentialDTOProvider? Type2076 { get; set; }
+        public global::Vapi.UpdateOpenRouterCredentialDTOProvider? Type2076 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateRimeAICredentialDTO? Type2077 { get; set; }
+        public global::Vapi.UpdatePerplexityAICredentialDTO? Type2077 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateRimeAICredentialDTOProvider? Type2078 { get; set; }
+        public global::Vapi.UpdatePerplexityAICredentialDTOProvider? Type2078 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateRunpodCredentialDTO? Type2079 { get; set; }
+        public global::Vapi.UpdatePlayHTCredentialDTO? Type2079 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateRunpodCredentialDTOProvider? Type2080 { get; set; }
+        public global::Vapi.UpdatePlayHTCredentialDTOProvider? Type2080 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateWellSaidCredentialDTO? Type2081 { get; set; }
+        public global::Vapi.UpdateRimeAICredentialDTO? Type2081 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateWellSaidCredentialDTOProvider? Type2082 { get; set; }
+        public global::Vapi.UpdateRimeAICredentialDTOProvider? Type2082 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateS3CredentialDTO? Type2083 { get; set; }
+        public global::Vapi.UpdateRunpodCredentialDTO? Type2083 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateS3CredentialDTOProvider? Type2084 { get; set; }
+        public global::Vapi.UpdateRunpodCredentialDTOProvider? Type2084 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateS3CompatibleBucketPlanDTO? Type2085 { get; set; }
+        public global::Vapi.UpdateWellSaidCredentialDTO? Type2085 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateS3CompatibleCredentialDTO? Type2086 { get; set; }
+        public global::Vapi.UpdateWellSaidCredentialDTOProvider? Type2086 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateS3CompatibleCredentialDTOProvider? Type2087 { get; set; }
+        public global::Vapi.UpdateS3CredentialDTO? Type2087 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTogetherAICredentialDTO? Type2088 { get; set; }
+        public global::Vapi.UpdateS3CredentialDTOProvider? Type2088 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTogetherAICredentialDTOProvider? Type2089 { get; set; }
+        public global::Vapi.UpdateS3CompatibleBucketPlanDTO? Type2089 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTwilioCredentialDTO? Type2090 { get; set; }
+        public global::Vapi.UpdateS3CompatibleCredentialDTO? Type2090 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateTwilioCredentialDTOProvider? Type2091 { get; set; }
+        public global::Vapi.UpdateS3CompatibleCredentialDTOProvider? Type2091 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateVonageCredentialDTO? Type2092 { get; set; }
+        public global::Vapi.UpdateTogetherAICredentialDTO? Type2092 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateVonageCredentialDTOProvider? Type2093 { get; set; }
+        public global::Vapi.UpdateTogetherAICredentialDTOProvider? Type2093 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateWebhookCredentialDTO? Type2094 { get; set; }
+        public global::Vapi.UpdateTwilioCredentialDTO? Type2094 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateWebhookCredentialDTOProvider? Type2095 { get; set; }
+        public global::Vapi.UpdateTwilioCredentialDTOProvider? Type2095 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AuthenticationPlan8? Type2096 { get; set; }
+        public global::Vapi.UpdateVonageCredentialDTO? Type2096 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminator? Type2097 { get; set; }
+        public global::Vapi.UpdateVonageCredentialDTOProvider? Type2097 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorType? Type2098 { get; set; }
+        public global::Vapi.UpdateWebhookCredentialDTO? Type2098 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCustomCredentialDTO? Type2099 { get; set; }
+        public global::Vapi.UpdateWebhookCredentialDTOProvider? Type2099 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCustomCredentialDTOProvider? Type2100 { get; set; }
+        public global::Vapi.AuthenticationPlan8? Type2100 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AuthenticationPlan9? Type2101 { get; set; }
+        public global::Vapi.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminator? Type2101 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCustomCredentialDTOAuthenticationPlanDiscriminator? Type2102 { get; set; }
+        public global::Vapi.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorType? Type2102 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCustomCredentialDTOAuthenticationPlanDiscriminatorType? Type2103 { get; set; }
+        public global::Vapi.UpdateCustomCredentialDTO? Type2103 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCustomCredentialDTOEncryptionPlanDiscriminator? Type2104 { get; set; }
+        public global::Vapi.UpdateCustomCredentialDTOProvider? Type2104 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateCustomCredentialDTOEncryptionPlanDiscriminatorType? Type2105 { get; set; }
+        public global::Vapi.AuthenticationPlan9? Type2105 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateXAiCredentialDTO? Type2106 { get; set; }
+        public global::Vapi.UpdateCustomCredentialDTOAuthenticationPlanDiscriminator? Type2106 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateXAiCredentialDTOProvider? Type2107 { get; set; }
+        public global::Vapi.UpdateCustomCredentialDTOAuthenticationPlanDiscriminatorType? Type2107 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleCalendarOAuth2ClientCredentialDTO? Type2108 { get; set; }
+        public global::Vapi.UpdateCustomCredentialDTOEncryptionPlanDiscriminator? Type2108 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleCalendarOAuth2ClientCredentialDTOProvider? Type2109 { get; set; }
+        public global::Vapi.UpdateCustomCredentialDTOEncryptionPlanDiscriminatorType? Type2109 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleCalendarOAuth2AuthorizationCredentialDTO? Type2110 { get; set; }
+        public global::Vapi.UpdateXAiCredentialDTO? Type2110 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleCalendarOAuth2AuthorizationCredentialDTOProvider? Type2111 { get; set; }
+        public global::Vapi.UpdateXAiCredentialDTOProvider? Type2111 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleSheetsOAuth2AuthorizationCredentialDTO? Type2112 { get; set; }
+        public global::Vapi.UpdateGoogleCalendarOAuth2ClientCredentialDTO? Type2112 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoogleSheetsOAuth2AuthorizationCredentialDTOProvider? Type2113 { get; set; }
+        public global::Vapi.UpdateGoogleCalendarOAuth2ClientCredentialDTOProvider? Type2113 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSlackOAuth2AuthorizationCredentialDTO? Type2114 { get; set; }
+        public global::Vapi.UpdateGoogleCalendarOAuth2AuthorizationCredentialDTO? Type2114 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSlackOAuth2AuthorizationCredentialDTOProvider? Type2115 { get; set; }
+        public global::Vapi.UpdateGoogleCalendarOAuth2AuthorizationCredentialDTOProvider? Type2115 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelMCPCredentialDTO? Type2116 { get; set; }
+        public global::Vapi.UpdateGoogleSheetsOAuth2AuthorizationCredentialDTO? Type2116 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateGoHighLevelMCPCredentialDTOProvider? Type2117 { get; set; }
+        public global::Vapi.UpdateGoogleSheetsOAuth2AuthorizationCredentialDTOProvider? Type2117 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateInworldCredentialDTO? Type2118 { get; set; }
+        public global::Vapi.UpdateSlackOAuth2AuthorizationCredentialDTO? Type2118 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateInworldCredentialDTOProvider? Type2119 { get; set; }
+        public global::Vapi.UpdateSlackOAuth2AuthorizationCredentialDTOProvider? Type2119 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateEmailCredentialDTO? Type2120 { get; set; }
+        public global::Vapi.UpdateGoHighLevelMCPCredentialDTO? Type2120 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateEmailCredentialDTOProvider? Type2121 { get; set; }
+        public global::Vapi.UpdateGoHighLevelMCPCredentialDTOProvider? Type2121 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSlackWebhookCredentialDTO? Type2122 { get; set; }
+        public global::Vapi.UpdateInworldCredentialDTO? Type2122 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSlackWebhookCredentialDTOProvider? Type2123 { get; set; }
+        public global::Vapi.UpdateInworldCredentialDTOProvider? Type2123 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSonioxCredentialDTO? Type2124 { get; set; }
+        public global::Vapi.UpdateEmailCredentialDTO? Type2124 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateSonioxCredentialDTOProvider? Type2125 { get; set; }
+        public global::Vapi.UpdateEmailCredentialDTOProvider? Type2125 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CredentialSessionResponse? Type2126 { get; set; }
+        public global::Vapi.UpdateSlackWebhookCredentialDTO? Type2126 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CredentialEndUser? Type2127 { get; set; }
+        public global::Vapi.UpdateSlackWebhookCredentialDTOProvider? Type2127 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CredentialSessionError? Type2128 { get; set; }
+        public global::Vapi.UpdateSonioxCredentialDTO? Type2128 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CredentialWebhookDTO? Type2129 { get; set; }
+        public global::Vapi.UpdateSonioxCredentialDTOProvider? Type2129 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CredentialWebhookDTOType? Type2130 { get; set; }
+        public global::Vapi.CredentialSessionResponse? Type2130 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CredentialWebhookDTOOperation? Type2131 { get; set; }
+        public global::Vapi.CredentialEndUser? Type2131 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CredentialWebhookDTOAuthMode? Type2132 { get; set; }
+        public global::Vapi.CredentialSessionError? Type2132 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CredentialActionRequest? Type2133 { get; set; }
+        public global::Vapi.CredentialWebhookDTO? Type2133 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.HMACAuthenticationPlanType? Type2134 { get; set; }
+        public global::Vapi.CredentialWebhookDTOType? Type2134 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.HMACAuthenticationPlanAlgorithm? Type2135 { get; set; }
+        public global::Vapi.CredentialWebhookDTOOperation? Type2135 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.HMACAuthenticationPlanSignatureEncoding? Type2136 { get; set; }
+        public global::Vapi.CredentialWebhookDTOAuthMode? Type2136 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BearerAuthenticationPlanType? Type2137 { get; set; }
+        public global::Vapi.CredentialActionRequest? Type2137 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AWSIAMCredentialsAuthenticationPlanType? Type2138 { get; set; }
+        public global::Vapi.HMACAuthenticationPlanType? Type2138 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AWSStsAuthenticationPlanType? Type2139 { get; set; }
+        public global::Vapi.HMACAuthenticationPlanAlgorithm? Type2139 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolTemplateSetup? Type2140 { get; set; }
+        public global::Vapi.HMACAuthenticationPlanSignatureEncoding? Type2140 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MakeToolProviderDetails? Type2141 { get; set; }
+        public global::Vapi.BearerAuthenticationPlanType? Type2141 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.ToolTemplateSetup>? Type2142 { get; set; }
+        public global::Vapi.AWSIAMCredentialsAuthenticationPlanType? Type2142 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MakeToolProviderDetailsType? Type2143 { get; set; }
+        public global::Vapi.AWSStsAuthenticationPlanType? Type2143 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GhlToolProviderDetails? Type2144 { get; set; }
+        public global::Vapi.ToolTemplateSetup? Type2144 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GhlToolProviderDetailsType? Type2145 { get; set; }
+        public global::Vapi.MakeToolProviderDetails? Type2145 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FunctionToolProviderDetails? Type2146 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.ToolTemplateSetup>? Type2146 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FunctionToolProviderDetailsType? Type2147 { get; set; }
+        public global::Vapi.MakeToolProviderDetailsType? Type2147 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarCreateEventToolProviderDetails? Type2148 { get; set; }
+        public global::Vapi.GhlToolProviderDetails? Type2148 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarCreateEventToolProviderDetailsType? Type2149 { get; set; }
+        public global::Vapi.GhlToolProviderDetailsType? Type2149 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleSheetsRowAppendToolProviderDetails? Type2150 { get; set; }
+        public global::Vapi.FunctionToolProviderDetails? Type2150 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleSheetsRowAppendToolProviderDetailsType? Type2151 { get; set; }
+        public global::Vapi.FunctionToolProviderDetailsType? Type2151 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarAvailabilityToolProviderDetails? Type2152 { get; set; }
+        public global::Vapi.GoogleCalendarCreateEventToolProviderDetails? Type2152 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarAvailabilityToolProviderDetailsType? Type2153 { get; set; }
+        public global::Vapi.GoogleCalendarCreateEventToolProviderDetailsType? Type2153 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarEventCreateToolProviderDetails? Type2154 { get; set; }
+        public global::Vapi.GoogleSheetsRowAppendToolProviderDetails? Type2154 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarEventCreateToolProviderDetailsType? Type2155 { get; set; }
+        public global::Vapi.GoogleSheetsRowAppendToolProviderDetailsType? Type2155 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactCreateToolProviderDetails? Type2156 { get; set; }
+        public global::Vapi.GoHighLevelCalendarAvailabilityToolProviderDetails? Type2156 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactCreateToolProviderDetailsType? Type2157 { get; set; }
+        public global::Vapi.GoHighLevelCalendarAvailabilityToolProviderDetailsType? Type2157 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactGetToolProviderDetails? Type2158 { get; set; }
+        public global::Vapi.GoHighLevelCalendarEventCreateToolProviderDetails? Type2158 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactGetToolProviderDetailsType? Type2159 { get; set; }
+        public global::Vapi.GoHighLevelCalendarEventCreateToolProviderDetailsType? Type2159 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolTemplateMetadata? Type2160 { get; set; }
+        public global::Vapi.GoHighLevelContactCreateToolProviderDetails? Type2160 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateToolTemplateDTO? Type2161 { get; set; }
+        public global::Vapi.GoHighLevelContactCreateToolProviderDetailsType? Type2161 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateToolTemplateDTOVisibility? Type2162 { get; set; }
+        public global::Vapi.GoHighLevelContactGetToolProviderDetails? Type2162 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateToolTemplateDTOType? Type2163 { get; set; }
+        public global::Vapi.GoHighLevelContactGetToolProviderDetailsType? Type2163 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateToolTemplateDTOProvider? Type2164 { get; set; }
+        public global::Vapi.ToolTemplateMetadata? Type2164 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Template? Type2165 { get; set; }
+        public global::Vapi.CreateToolTemplateDTO? Type2165 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TemplateVisibility? Type2166 { get; set; }
+        public global::Vapi.CreateToolTemplateDTOVisibility? Type2166 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TemplateType? Type2167 { get; set; }
+        public global::Vapi.CreateToolTemplateDTOType? Type2167 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TemplateProvider? Type2168 { get; set; }
+        public global::Vapi.CreateToolTemplateDTOProvider? Type2168 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateToolTemplateDTO? Type2169 { get; set; }
+        public global::Vapi.Template? Type2169 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateToolTemplateDTOVisibility? Type2170 { get; set; }
+        public global::Vapi.TemplateVisibility? Type2170 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateToolTemplateDTOType? Type2171 { get; set; }
+        public global::Vapi.TemplateType? Type2171 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateToolTemplateDTOProvider? Type2172 { get; set; }
+        public global::Vapi.TemplateProvider? Type2172 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VoiceLibrary? Type2173 { get; set; }
+        public global::Vapi.UpdateToolTemplateDTO? Type2173 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VoiceLibraryGender? Type2174 { get; set; }
+        public global::Vapi.UpdateToolTemplateDTOVisibility? Type2174 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SyncVoiceLibraryDTO? Type2175 { get; set; }
+        public global::Vapi.UpdateToolTemplateDTOType? Type2175 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.SyncVoiceLibraryDTOProvider>? Type2176 { get; set; }
+        public global::Vapi.UpdateToolTemplateDTOProvider? Type2176 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SyncVoiceLibraryDTOProvider? Type2177 { get; set; }
+        public global::Vapi.VoiceLibrary? Type2177 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CreateSesameVoiceDTO? Type2178 { get; set; }
+        public global::Vapi.VoiceLibraryGender? Type2178 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.UpdateVoiceLibraryMetadataDTO? Type2179 { get; set; }
+        public global::Vapi.SyncVoiceLibraryDTO? Type2179 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CartesiaPronunciationDictItem? Type2180 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.SyncVoiceLibraryDTOProvider>? Type2180 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CartesiaPronunciationDictionary? Type2181 { get; set; }
+        public global::Vapi.SyncVoiceLibraryDTOProvider? Type2181 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.CartesiaPronunciationDictItem>? Type2182 { get; set; }
+        public global::Vapi.CreateSesameVoiceDTO? Type2182 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ElevenLabsPronunciationDictionary? Type2183 { get; set; }
+        public global::Vapi.UpdateVoiceLibraryMetadataDTO? Type2183 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ElevenLabsPronunciationDictionaryPermissionOnResource? Type2184 { get; set; }
+        public global::Vapi.CartesiaPronunciationDictItem? Type2184 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResource? Type2185 { get; set; }
+        public global::Vapi.CartesiaPronunciationDictionary? Type2185 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceProvider? Type2186 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.CartesiaPronunciationDictItem>? Type2186 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceResourceName? Type2187 { get; set; }
+        public global::Vapi.ElevenLabsPronunciationDictionary? Type2187 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourcePaginatedResponse? Type2188 { get; set; }
+        public global::Vapi.ElevenLabsPronunciationDictionaryPermissionOnResource? Type2188 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.ProviderResource>? Type2189 { get; set; }
+        public global::Vapi.ProviderResource? Type2189 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VoiceLibraryVoiceResponse? Type2190 { get; set; }
+        public global::Vapi.ProviderResourceProvider? Type2190 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<string, double?>? Type2191 { get; set; }
+        public global::Vapi.ProviderResourceResourceName? Type2191 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AddVoiceToProviderDTO? Type2192 { get; set; }
+        public global::Vapi.ProviderResourcePaginatedResponse? Type2192 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CloneVoiceDTO? Type2193 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.ProviderResource>? Type2193 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<byte[]>? Type2194 { get; set; }
+        public global::Vapi.VoiceLibraryVoiceResponse? Type2194 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VapiVoiceCloneDTO? Type2195 { get; set; }
+        public global::Vapi.OneOf<string, double?>? Type2195 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VariableValueGroupBy? Type2196 { get; set; }
+        public global::Vapi.AddVoiceToProviderDTO? Type2196 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TimeRange? Type2197 { get; set; }
+        public global::Vapi.CloneVoiceDTO? Type2197 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TimeRangeStep? Type2198 { get; set; }
+        public global::System.Collections.Generic.IList<byte[]>? Type2198 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnalyticsOperation? Type2199 { get; set; }
+        public global::Vapi.VapiVoiceCloneDTO? Type2199 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnalyticsOperationOperation? Type2200 { get; set; }
+        public global::Vapi.VariableValueGroupBy? Type2200 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnalyticsOperationColumn? Type2201 { get; set; }
+        public global::Vapi.TimeRange? Type2201 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnalyticsQuery? Type2202 { get; set; }
+        public global::Vapi.TimeRangeStep? Type2202 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnalyticsQueryTable? Type2203 { get; set; }
+        public global::Vapi.AnalyticsOperation? Type2203 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.AnalyticsQueryGroupByItem>? Type2204 { get; set; }
+        public global::Vapi.AnalyticsOperationOperation? Type2204 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnalyticsQueryGroupByItem? Type2205 { get; set; }
+        public global::Vapi.AnalyticsOperationColumn? Type2205 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.VariableValueGroupBy>? Type2206 { get; set; }
+        public global::Vapi.AnalyticsQuery? Type2206 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.AnalyticsOperation>? Type2207 { get; set; }
+        public global::Vapi.AnalyticsQueryTable? Type2207 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnalyticsQueryDTO? Type2208 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.AnalyticsQueryGroupByItem>? Type2208 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.AnalyticsQuery>? Type2209 { get; set; }
+        public global::Vapi.AnalyticsQueryGroupByItem? Type2209 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AnalyticsQueryResult? Type2210 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.VariableValueGroupBy>? Type2210 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageWorkflowNodeStarted? Type2211 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.AnalyticsOperation>? Type2211 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageWorkflowNodeStartedType? Type2212 { get; set; }
+        public global::Vapi.AnalyticsQueryDTO? Type2212 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageAssistantStarted? Type2213 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.AnalyticsQuery>? Type2213 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageAssistantStartedType? Type2214 { get; set; }
+        public global::Vapi.AnalyticsQueryResult? Type2214 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageConversationUpdate? Type2215 { get; set; }
+        public global::Vapi.ClientMessageWorkflowNodeStarted? Type2215 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageConversationUpdateType? Type2216 { get; set; }
+        public global::Vapi.ClientMessageWorkflowNodeStartedType? Type2216 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageHang? Type2217 { get; set; }
+        public global::Vapi.ClientMessageAssistantStarted? Type2217 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageHangType? Type2218 { get; set; }
+        public global::Vapi.ClientMessageAssistantStartedType? Type2218 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageMetadata? Type2219 { get; set; }
+        public global::Vapi.ClientMessageConversationUpdate? Type2219 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageMetadataType? Type2220 { get; set; }
+        public global::Vapi.ClientMessageConversationUpdateType? Type2220 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageModelOutput? Type2221 { get; set; }
+        public global::Vapi.ClientMessageHang? Type2221 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageModelOutputType? Type2222 { get; set; }
+        public global::Vapi.ClientMessageHangType? Type2222 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageSpeechUpdate? Type2223 { get; set; }
+        public global::Vapi.ClientMessageMetadata? Type2223 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageSpeechUpdateType? Type2224 { get; set; }
+        public global::Vapi.ClientMessageMetadataType? Type2224 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageSpeechUpdateStatus? Type2225 { get; set; }
+        public global::Vapi.ClientMessageModelOutput? Type2225 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageSpeechUpdateRole? Type2226 { get; set; }
+        public global::Vapi.ClientMessageModelOutputType? Type2226 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageTranscript? Type2227 { get; set; }
+        public global::Vapi.ClientMessageSpeechUpdate? Type2227 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageTranscriptType? Type2228 { get; set; }
+        public global::Vapi.ClientMessageSpeechUpdateType? Type2228 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageTranscriptRole? Type2229 { get; set; }
+        public global::Vapi.ClientMessageSpeechUpdateStatus? Type2229 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageTranscriptTranscriptType? Type2230 { get; set; }
+        public global::Vapi.ClientMessageSpeechUpdateRole? Type2230 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageToolCalls? Type2231 { get; set; }
+        public global::Vapi.ClientMessageTranscript? Type2231 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageToolCallsType? Type2232 { get; set; }
+        public global::Vapi.ClientMessageTranscriptType? Type2232 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FunctionToolWithToolCall? Type2233 { get; set; }
+        public global::Vapi.ClientMessageTranscriptRole? Type2233 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GhlToolWithToolCall? Type2234 { get; set; }
+        public global::Vapi.ClientMessageTranscriptTranscriptType? Type2234 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MakeToolWithToolCall? Type2235 { get; set; }
+        public global::Vapi.ClientMessageToolCalls? Type2235 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BashToolWithToolCall? Type2236 { get; set; }
+        public global::Vapi.ClientMessageToolCallsType? Type2236 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ComputerToolWithToolCall? Type2237 { get; set; }
+        public global::Vapi.FunctionToolWithToolCall? Type2237 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextEditorToolWithToolCall? Type2238 { get; set; }
+        public global::Vapi.GhlToolWithToolCall? Type2238 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarCreateEventToolWithToolCall? Type2239 { get; set; }
+        public global::Vapi.MakeToolWithToolCall? Type2239 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageToolCallsResult? Type2240 { get; set; }
+        public global::Vapi.BashToolWithToolCall? Type2240 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageToolCallsResultType? Type2241 { get; set; }
+        public global::Vapi.ComputerToolWithToolCall? Type2241 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageTransferUpdate? Type2242 { get; set; }
+        public global::Vapi.TextEditorToolWithToolCall? Type2242 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageTransferUpdateType? Type2243 { get; set; }
+        public global::Vapi.GoogleCalendarCreateEventToolWithToolCall? Type2243 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageUserInterrupted? Type2244 { get; set; }
+        public global::Vapi.ClientMessageToolCallsResult? Type2244 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageUserInterruptedType? Type2245 { get; set; }
+        public global::Vapi.ClientMessageToolCallsResultType? Type2245 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageLanguageChangeDetected? Type2246 { get; set; }
+        public global::Vapi.ClientMessageTransferUpdate? Type2246 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageLanguageChangeDetectedType? Type2247 { get; set; }
+        public global::Vapi.ClientMessageTransferUpdateType? Type2247 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageVoiceInput? Type2248 { get; set; }
+        public global::Vapi.ClientMessageUserInterrupted? Type2248 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageVoiceInputType? Type2249 { get; set; }
+        public global::Vapi.ClientMessageUserInterruptedType? Type2249 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageAssistantSpeech? Type2250 { get; set; }
+        public global::Vapi.ClientMessageLanguageChangeDetected? Type2250 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageAssistantSpeechType? Type2251 { get; set; }
+        public global::Vapi.ClientMessageLanguageChangeDetectedType? Type2251 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageAssistantSpeechSource? Type2252 { get; set; }
+        public global::Vapi.ClientMessageVoiceInput? Type2252 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Timing? Type2253 { get; set; }
+        public global::Vapi.ClientMessageVoiceInputType? Type2253 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageAssistantSpeechTimingDiscriminator? Type2254 { get; set; }
+        public global::Vapi.ClientMessageAssistantSpeech? Type2254 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageAssistantSpeechTimingDiscriminatorType? Type2255 { get; set; }
+        public global::Vapi.ClientMessageAssistantSpeechType? Type2255 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageChatCreated? Type2256 { get; set; }
+        public global::Vapi.ClientMessageAssistantSpeechSource? Type2256 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageChatCreatedType? Type2257 { get; set; }
+        public global::Vapi.Timing? Type2257 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageChatDeleted? Type2258 { get; set; }
+        public global::Vapi.ClientMessageAssistantSpeechTimingDiscriminator? Type2258 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageChatDeletedType? Type2259 { get; set; }
+        public global::Vapi.ClientMessageAssistantSpeechTimingDiscriminatorType? Type2259 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageSessionCreated? Type2260 { get; set; }
+        public global::Vapi.ClientMessageChatCreated? Type2260 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageSessionCreatedType? Type2261 { get; set; }
+        public global::Vapi.ClientMessageChatCreatedType? Type2261 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageSessionUpdated? Type2262 { get; set; }
+        public global::Vapi.ClientMessageChatDeleted? Type2262 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageSessionUpdatedType? Type2263 { get; set; }
+        public global::Vapi.ClientMessageChatDeletedType? Type2263 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageSessionDeleted? Type2264 { get; set; }
+        public global::Vapi.ClientMessageSessionCreated? Type2264 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageSessionDeletedType? Type2265 { get; set; }
+        public global::Vapi.ClientMessageSessionCreatedType? Type2265 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageCallDeleted? Type2266 { get; set; }
+        public global::Vapi.ClientMessageSessionUpdated? Type2266 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageCallDeletedType? Type2267 { get; set; }
+        public global::Vapi.ClientMessageSessionUpdatedType? Type2267 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageCallDeleteFailed? Type2268 { get; set; }
+        public global::Vapi.ClientMessageSessionDeleted? Type2268 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessageCallDeleteFailedType? Type2269 { get; set; }
+        public global::Vapi.ClientMessageSessionDeletedType? Type2269 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientMessage? Type2270 { get; set; }
+        public global::Vapi.ClientMessageCallDeleted? Type2270 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageAssistantRequest? Type2271 { get; set; }
+        public global::Vapi.ClientMessageCallDeletedType? Type2271 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageAssistantRequestType? Type2272 { get; set; }
+        public global::Vapi.ClientMessageCallDeleteFailed? Type2272 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageConversationUpdate? Type2273 { get; set; }
+        public global::Vapi.ClientMessageCallDeleteFailedType? Type2273 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageConversationUpdateType? Type2274 { get; set; }
+        public global::Vapi.ClientMessage? Type2274 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageEndOfCallReport? Type2275 { get; set; }
+        public global::Vapi.ServerMessageAssistantRequest? Type2275 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageEndOfCallReportType? Type2276 { get; set; }
+        public global::Vapi.ServerMessageAssistantRequestType? Type2276 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageEndOfCallReportEndedReason? Type2277 { get; set; }
+        public global::Vapi.ServerMessageConversationUpdate? Type2277 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageHandoffDestinationRequest? Type2278 { get; set; }
+        public global::Vapi.ServerMessageConversationUpdateType? Type2278 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageHandoffDestinationRequestType? Type2279 { get; set; }
+        public global::Vapi.ServerMessageEndOfCallReport? Type2279 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageHang? Type2280 { get; set; }
+        public global::Vapi.ServerMessageEndOfCallReportType? Type2280 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageHangType? Type2281 { get; set; }
+        public global::Vapi.ServerMessageEndOfCallReportEndedReason? Type2281 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageKnowledgeBaseRequest? Type2282 { get; set; }
+        public global::Vapi.ServerMessageHandoffDestinationRequest? Type2282 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageKnowledgeBaseRequestType? Type2283 { get; set; }
+        public global::Vapi.ServerMessageHandoffDestinationRequestType? Type2283 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageModelOutput? Type2284 { get; set; }
+        public global::Vapi.ServerMessageHang? Type2284 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageModelOutputType? Type2285 { get; set; }
+        public global::Vapi.ServerMessageHangType? Type2285 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessagePhoneCallControl? Type2286 { get; set; }
+        public global::Vapi.ServerMessageKnowledgeBaseRequest? Type2286 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessagePhoneCallControlType? Type2287 { get; set; }
+        public global::Vapi.ServerMessageKnowledgeBaseRequestType? Type2287 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessagePhoneCallControlRequest? Type2288 { get; set; }
+        public global::Vapi.ServerMessageModelOutput? Type2288 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageSpeechUpdate? Type2289 { get; set; }
+        public global::Vapi.ServerMessageModelOutputType? Type2289 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageSpeechUpdateType? Type2290 { get; set; }
+        public global::Vapi.ServerMessagePhoneCallControl? Type2290 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageSpeechUpdateStatus? Type2291 { get; set; }
+        public global::Vapi.ServerMessagePhoneCallControlType? Type2291 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageSpeechUpdateRole? Type2292 { get; set; }
+        public global::Vapi.ServerMessagePhoneCallControlRequest? Type2292 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageStatusUpdate? Type2293 { get; set; }
+        public global::Vapi.ServerMessageSpeechUpdate? Type2293 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageStatusUpdateType? Type2294 { get; set; }
+        public global::Vapi.ServerMessageSpeechUpdateType? Type2294 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageStatusUpdateStatus? Type2295 { get; set; }
+        public global::Vapi.ServerMessageSpeechUpdateStatus? Type2295 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageStatusUpdateEndedReason? Type2296 { get; set; }
+        public global::Vapi.ServerMessageSpeechUpdateRole? Type2296 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageToolCalls? Type2297 { get; set; }
+        public global::Vapi.ServerMessageStatusUpdate? Type2297 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageToolCallsType? Type2298 { get; set; }
+        public global::Vapi.ServerMessageStatusUpdateType? Type2298 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageTransferDestinationRequest? Type2299 { get; set; }
+        public global::Vapi.ServerMessageStatusUpdateStatus? Type2299 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageTransferDestinationRequestType? Type2300 { get; set; }
+        public global::Vapi.ServerMessageStatusUpdateEndedReason? Type2300 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageTransferUpdate? Type2301 { get; set; }
+        public global::Vapi.ServerMessageToolCalls? Type2301 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageTransferUpdateType? Type2302 { get; set; }
+        public global::Vapi.ServerMessageToolCallsType? Type2302 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageTranscript? Type2303 { get; set; }
+        public global::Vapi.ServerMessageTransferDestinationRequest? Type2303 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageTranscriptType? Type2304 { get; set; }
+        public global::Vapi.ServerMessageTransferDestinationRequestType? Type2304 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageTranscriptRole? Type2305 { get; set; }
+        public global::Vapi.ServerMessageTransferUpdate? Type2305 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageTranscriptTranscriptType? Type2306 { get; set; }
+        public global::Vapi.ServerMessageTransferUpdateType? Type2306 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageUserInterrupted? Type2307 { get; set; }
+        public global::Vapi.ServerMessageTranscript? Type2307 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageUserInterruptedType? Type2308 { get; set; }
+        public global::Vapi.ServerMessageTranscriptType? Type2308 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageLanguageChangeDetected? Type2309 { get; set; }
+        public global::Vapi.ServerMessageTranscriptRole? Type2309 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageLanguageChangeDetectedType? Type2310 { get; set; }
+        public global::Vapi.ServerMessageTranscriptTranscriptType? Type2310 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageVoiceInput? Type2311 { get; set; }
+        public global::Vapi.ServerMessageUserInterrupted? Type2311 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageVoiceInputType? Type2312 { get; set; }
+        public global::Vapi.ServerMessageUserInterruptedType? Type2312 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageAssistantSpeech? Type2313 { get; set; }
+        public global::Vapi.ServerMessageLanguageChangeDetected? Type2313 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageAssistantSpeechType? Type2314 { get; set; }
+        public global::Vapi.ServerMessageLanguageChangeDetectedType? Type2314 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageAssistantSpeechSource? Type2315 { get; set; }
+        public global::Vapi.ServerMessageVoiceInput? Type2315 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.Timing2? Type2316 { get; set; }
+        public global::Vapi.ServerMessageVoiceInputType? Type2316 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageAssistantSpeechTimingDiscriminator? Type2317 { get; set; }
+        public global::Vapi.ServerMessageAssistantSpeech? Type2317 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageAssistantSpeechTimingDiscriminatorType? Type2318 { get; set; }
+        public global::Vapi.ServerMessageAssistantSpeechType? Type2318 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageVoiceRequest? Type2319 { get; set; }
+        public global::Vapi.ServerMessageAssistantSpeechSource? Type2319 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageVoiceRequestType? Type2320 { get; set; }
+        public global::Vapi.Timing2? Type2320 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageCallEndpointingRequest? Type2321 { get; set; }
+        public global::Vapi.ServerMessageAssistantSpeechTimingDiscriminator? Type2321 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageCallEndpointingRequestType? Type2322 { get; set; }
+        public global::Vapi.ServerMessageAssistantSpeechTimingDiscriminatorType? Type2322 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageChatCreated? Type2323 { get; set; }
+        public global::Vapi.ServerMessageVoiceRequest? Type2323 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageChatCreatedType? Type2324 { get; set; }
+        public global::Vapi.ServerMessageVoiceRequestType? Type2324 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageChatDeleted? Type2325 { get; set; }
+        public global::Vapi.ServerMessageCallEndpointingRequest? Type2325 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageChatDeletedType? Type2326 { get; set; }
+        public global::Vapi.ServerMessageCallEndpointingRequestType? Type2326 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageSessionCreated? Type2327 { get; set; }
+        public global::Vapi.ServerMessageChatCreated? Type2327 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageSessionCreatedType? Type2328 { get; set; }
+        public global::Vapi.ServerMessageChatCreatedType? Type2328 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageSessionUpdated? Type2329 { get; set; }
+        public global::Vapi.ServerMessageChatDeleted? Type2329 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageSessionUpdatedType? Type2330 { get; set; }
+        public global::Vapi.ServerMessageChatDeletedType? Type2330 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageSessionDeleted? Type2331 { get; set; }
+        public global::Vapi.ServerMessageSessionCreated? Type2331 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageSessionDeletedType? Type2332 { get; set; }
+        public global::Vapi.ServerMessageSessionCreatedType? Type2332 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageCallDeleted? Type2333 { get; set; }
+        public global::Vapi.ServerMessageSessionUpdated? Type2333 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageCallDeletedType? Type2334 { get; set; }
+        public global::Vapi.ServerMessageSessionUpdatedType? Type2334 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageCallDeleteFailed? Type2335 { get; set; }
+        public global::Vapi.ServerMessageSessionDeleted? Type2335 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageCallDeleteFailedType? Type2336 { get; set; }
+        public global::Vapi.ServerMessageSessionDeletedType? Type2336 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CallArtifactUploadItem? Type2337 { get; set; }
+        public global::Vapi.ServerMessageCallDeleted? Type2337 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CallArtifactUploadItemType? Type2338 { get; set; }
+        public global::Vapi.ServerMessageCallDeletedType? Type2338 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageCallArtifactUpload? Type2339 { get; set; }
+        public global::Vapi.ServerMessageCallDeleteFailed? Type2339 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageCallArtifactUploadType? Type2340 { get; set; }
+        public global::Vapi.ServerMessageCallDeleteFailedType? Type2340 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.CallArtifactUploadItem>? Type2341 { get; set; }
+        public global::Vapi.CallArtifactUploadItem? Type2341 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CampaignContact? Type2342 { get; set; }
+        public global::Vapi.CallArtifactUploadItemType? Type2342 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageCampaignPredial? Type2343 { get; set; }
+        public global::Vapi.ServerMessageCallArtifactUpload? Type2343 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageCampaignPredialType? Type2344 { get; set; }
+        public global::Vapi.ServerMessageCallArtifactUploadType? Type2344 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessage? Type2345 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.CallArtifactUploadItem>? Type2345 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageResponseAssistantRequest? Type2346 { get; set; }
+        public global::Vapi.CampaignContact? Type2346 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageResponseHandoffDestinationRequest? Type2347 { get; set; }
+        public global::Vapi.ServerMessageCampaignPredial? Type2347 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.KnowledgeBaseResponseDocument? Type2348 { get; set; }
+        public global::Vapi.ServerMessageCampaignPredialType? Type2348 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageResponseKnowledgeBaseRequest? Type2349 { get; set; }
+        public global::Vapi.ServerMessage? Type2349 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.KnowledgeBaseResponseDocument>? Type2350 { get; set; }
+        public global::Vapi.ServerMessageResponseAssistantRequest? Type2350 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolCallResult? Type2351 { get; set; }
+        public global::Vapi.ServerMessageResponseHandoffDestinationRequest? Type2351 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed>? Type2352 { get; set; }
+        public global::Vapi.KnowledgeBaseResponseDocument? Type2352 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageResponseToolCalls? Type2353 { get; set; }
+        public global::Vapi.ServerMessageResponseKnowledgeBaseRequest? Type2353 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.ToolCallResult>? Type2354 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.KnowledgeBaseResponseDocument>? Type2354 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageResponseTransferDestinationRequest? Type2355 { get; set; }
+        public global::Vapi.ToolCallResult? Type2355 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageResponseVoiceRequest? Type2356 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed>? Type2356 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageResponseCallEndpointingRequest? Type2357 { get; set; }
+        public global::Vapi.ServerMessageResponseToolCalls? Type2357 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageResponseCampaignPredial? Type2358 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.ToolCallResult>? Type2358 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ServerMessageResponse? Type2359 { get; set; }
+        public global::Vapi.ServerMessageResponseTransferDestinationRequest? Type2359 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageAddMessage? Type2360 { get; set; }
+        public global::Vapi.ServerMessageResponseVoiceRequest? Type2360 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageAddMessageType? Type2361 { get; set; }
+        public global::Vapi.ServerMessageResponseCallEndpointingRequest? Type2361 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageControl? Type2362 { get; set; }
+        public global::Vapi.ServerMessageResponseCampaignPredial? Type2362 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageControlType? Type2363 { get; set; }
+        public global::Vapi.ServerMessageResponse? Type2363 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageControlControl? Type2364 { get; set; }
+        public global::Vapi.ClientInboundMessageAddMessage? Type2364 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageSay? Type2365 { get; set; }
+        public global::Vapi.ClientInboundMessageAddMessageType? Type2365 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageSayType? Type2366 { get; set; }
+        public global::Vapi.ClientInboundMessageControl? Type2366 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageEndCall? Type2367 { get; set; }
+        public global::Vapi.ClientInboundMessageControlType? Type2367 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageEndCallType? Type2368 { get; set; }
+        public global::Vapi.ClientInboundMessageControlControl? Type2368 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageTransfer? Type2369 { get; set; }
+        public global::Vapi.ClientInboundMessageSay? Type2369 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageTransferType? Type2370 { get; set; }
+        public global::Vapi.ClientInboundMessageSayType? Type2370 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageSendTransportMessage? Type2371 { get; set; }
+        public global::Vapi.ClientInboundMessageEndCall? Type2371 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessageSendTransportMessageType? Type2372 { get; set; }
+        public global::Vapi.ClientInboundMessageEndCallType? Type2372 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.VapiSipTransportMessage, global::Vapi.TwilioTransportMessage>? Type2373 { get; set; }
+        public global::Vapi.ClientInboundMessageTransfer? Type2373 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VapiSipTransportMessage? Type2374 { get; set; }
+        public global::Vapi.ClientInboundMessageTransferType? Type2374 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TwilioTransportMessage? Type2375 { get; set; }
+        public global::Vapi.ClientInboundMessageSendTransportMessage? Type2375 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ClientInboundMessage? Type2376 { get; set; }
+        public global::Vapi.ClientInboundMessageSendTransportMessageType? Type2376 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.KnowledgeBaseCostType? Type2377 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.VapiSipTransportMessage, global::Vapi.TwilioTransportMessage>? Type2377 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SessionCostType? Type2378 { get; set; }
+        public global::Vapi.VapiSipTransportMessage? Type2378 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.FunctionToolWithToolCallType? Type2379 { get; set; }
+        public global::Vapi.TwilioTransportMessage? Type2379 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GhlToolWithToolCallType? Type2380 { get; set; }
+        public global::Vapi.ClientInboundMessage? Type2380 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.MakeToolWithToolCallType? Type2381 { get; set; }
+        public global::Vapi.KnowledgeBaseCostType? Type2381 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BashToolWithToolCallType? Type2382 { get; set; }
+        public global::Vapi.SessionCostType? Type2382 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BashToolWithToolCallSubType? Type2383 { get; set; }
+        public global::Vapi.FunctionToolWithToolCallType? Type2383 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BashToolWithToolCallName? Type2384 { get; set; }
+        public global::Vapi.GhlToolWithToolCallType? Type2384 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ComputerToolWithToolCallType? Type2385 { get; set; }
+        public global::Vapi.MakeToolWithToolCallType? Type2385 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ComputerToolWithToolCallSubType? Type2386 { get; set; }
+        public global::Vapi.BashToolWithToolCallType? Type2386 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ComputerToolWithToolCallName? Type2387 { get; set; }
+        public global::Vapi.BashToolWithToolCallSubType? Type2387 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextEditorToolWithToolCallType? Type2388 { get; set; }
+        public global::Vapi.BashToolWithToolCallName? Type2388 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextEditorToolWithToolCallSubType? Type2389 { get; set; }
+        public global::Vapi.ComputerToolWithToolCallType? Type2389 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TextEditorToolWithToolCallName? Type2390 { get; set; }
+        public global::Vapi.ComputerToolWithToolCallSubType? Type2390 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleCalendarCreateEventToolWithToolCallType? Type2391 { get; set; }
+        public global::Vapi.ComputerToolWithToolCallName? Type2391 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleSheetsRowAppendToolWithToolCall? Type2392 { get; set; }
+        public global::Vapi.TextEditorToolWithToolCallType? Type2392 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoogleSheetsRowAppendToolWithToolCallType? Type2393 { get; set; }
+        public global::Vapi.TextEditorToolWithToolCallSubType? Type2393 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarAvailabilityToolWithToolCall? Type2394 { get; set; }
+        public global::Vapi.TextEditorToolWithToolCallName? Type2394 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarAvailabilityToolWithToolCallType? Type2395 { get; set; }
+        public global::Vapi.GoogleCalendarCreateEventToolWithToolCallType? Type2395 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarEventCreateToolWithToolCall? Type2396 { get; set; }
+        public global::Vapi.GoogleSheetsRowAppendToolWithToolCall? Type2396 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarEventCreateToolWithToolCallType? Type2397 { get; set; }
+        public global::Vapi.GoogleSheetsRowAppendToolWithToolCallType? Type2397 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactCreateToolWithToolCall? Type2398 { get; set; }
+        public global::Vapi.GoHighLevelCalendarAvailabilityToolWithToolCall? Type2398 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactCreateToolWithToolCallType? Type2399 { get; set; }
+        public global::Vapi.GoHighLevelCalendarAvailabilityToolWithToolCallType? Type2399 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactGetToolWithToolCall? Type2400 { get; set; }
+        public global::Vapi.GoHighLevelCalendarEventCreateToolWithToolCall? Type2400 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.GoHighLevelContactGetToolWithToolCallType? Type2401 { get; set; }
+        public global::Vapi.GoHighLevelCalendarEventCreateToolWithToolCallType? Type2401 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VapiSipTransportMessageTransport? Type2402 { get; set; }
+        public global::Vapi.GoHighLevelContactCreateToolWithToolCall? Type2402 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.VapiSipTransportMessageSipVerb? Type2403 { get; set; }
+        public global::Vapi.GoHighLevelContactCreateToolWithToolCallType? Type2403 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.TwilioTransportMessageTransport? Type2404 { get; set; }
+        public global::Vapi.GoHighLevelContactGetToolWithToolCall? Type2404 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerCreateRequest? Type2405 { get; set; }
+        public global::Vapi.GoHighLevelContactGetToolWithToolCallType? Type2405 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerCreateRequestDiscriminator? Type2406 { get; set; }
+        public global::Vapi.VapiSipTransportMessageTransport? Type2406 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerCreateRequestDiscriminatorProvider? Type2407 { get; set; }
+        public global::Vapi.VapiSipTransportMessageSipVerb? Type2407 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerUpdateRequest? Type2408 { get; set; }
+        public global::Vapi.TwilioTransportMessageTransport? Type2408 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerUpdateRequestDiscriminator? Type2409 { get; set; }
+        public global::Vapi.PhoneNumberControllerCreateRequest? Type2409 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerUpdateRequestDiscriminatorProvider? Type2410 { get; set; }
+        public global::Vapi.PhoneNumberControllerCreateRequestDiscriminator? Type2410 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerCreateRequest? Type2411 { get; set; }
+        public global::Vapi.PhoneNumberControllerCreateRequestDiscriminatorProvider? Type2411 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerCreateRequestDiscriminator? Type2412 { get; set; }
+        public global::Vapi.PhoneNumberControllerUpdateRequest? Type2412 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerCreateRequestDiscriminatorType? Type2413 { get; set; }
+        public global::Vapi.PhoneNumberControllerUpdateRequestDiscriminator? Type2413 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerUpdateRequest? Type2414 { get; set; }
+        public global::Vapi.PhoneNumberControllerUpdateRequestDiscriminatorProvider? Type2414 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerUpdateRequestDiscriminator? Type2415 { get; set; }
+        public global::Vapi.ToolControllerCreateRequest? Type2415 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerUpdateRequestDiscriminatorType? Type2416 { get; set; }
+        public global::Vapi.ToolControllerCreateRequestDiscriminator? Type2416 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerCreateRequest? Type2417 { get; set; }
+        public global::Vapi.ToolControllerCreateRequestDiscriminatorType? Type2417 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerCreateRequestDiscriminator? Type2418 { get; set; }
+        public global::Vapi.ToolControllerUpdateRequest? Type2418 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerCreateRequestDiscriminatorType? Type2419 { get; set; }
+        public global::Vapi.ToolControllerUpdateRequestDiscriminator? Type2419 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerUpdateRequest? Type2420 { get; set; }
+        public global::Vapi.ToolControllerUpdateRequestDiscriminatorType? Type2420 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerUpdateRequestDiscriminator? Type2421 { get; set; }
+        public global::Vapi.InsightControllerCreateRequest? Type2421 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerUpdateRequestDiscriminatorType? Type2422 { get; set; }
+        public global::Vapi.InsightControllerCreateRequestDiscriminator? Type2422 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerPreviewRequest? Type2423 { get; set; }
+        public global::Vapi.InsightControllerCreateRequestDiscriminatorType? Type2423 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerPreviewRequestDiscriminator? Type2424 { get; set; }
+        public global::Vapi.InsightControllerUpdateRequest? Type2424 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerPreviewRequestDiscriminatorType? Type2425 { get; set; }
+        public global::Vapi.InsightControllerUpdateRequestDiscriminator? Type2425 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatControllerListChatsSortOrder? Type2426 { get; set; }
+        public global::Vapi.InsightControllerUpdateRequestDiscriminatorType? Type2426 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ChatControllerListChatsSortBy? Type2427 { get; set; }
+        public global::Vapi.InsightControllerPreviewRequest? Type2427 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CampaignControllerFindAllStatus? Type2428 { get; set; }
+        public global::Vapi.InsightControllerPreviewRequestDiscriminator? Type2428 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CampaignControllerFindAllSortOrder? Type2429 { get; set; }
+        public global::Vapi.InsightControllerPreviewRequestDiscriminatorType? Type2429 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CampaignControllerFindAllSortBy? Type2430 { get; set; }
+        public global::Vapi.ChatControllerListChatsSortOrder? Type2430 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CampaignControllerFindAllV2Status? Type2431 { get; set; }
+        public global::Vapi.ChatControllerListChatsSortBy? Type2431 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CampaignControllerFindAllV2SortOrder? Type2432 { get; set; }
+        public global::Vapi.CampaignControllerFindAllStatus? Type2432 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CampaignControllerFindAllV2SortBy? Type2433 { get; set; }
+        public global::Vapi.CampaignControllerFindAllSortOrder? Type2433 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? Type2434 { get; set; }
+        public global::Vapi.CampaignControllerFindAllSortBy? Type2434 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.CampaignControllerGetCampaignV2ContactsStatu? Type2435 { get; set; }
+        public global::Vapi.CampaignControllerFindAllV2Status? Type2435 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SessionControllerFindAllPaginatedSortOrder? Type2436 { get; set; }
+        public global::Vapi.CampaignControllerFindAllV2SortOrder? Type2436 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SessionControllerFindAllPaginatedSortBy? Type2437 { get; set; }
+        public global::Vapi.CampaignControllerFindAllV2SortBy? Type2437 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerFindAllPaginatedSortOrder? Type2438 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? Type2438 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerFindAllPaginatedSortBy? Type2439 { get; set; }
+        public global::Vapi.CampaignControllerGetCampaignV2ContactsStatu? Type2439 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.StructuredOutputControllerFindAllSortOrder? Type2440 { get; set; }
+        public global::Vapi.CampaignControllerGetCampaignV2ContactsSortBy? Type2440 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.StructuredOutputControllerFindAllSortBy? Type2441 { get; set; }
+        public global::Vapi.SessionControllerFindAllPaginatedSortOrder? Type2441 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PersonalityControllerFindAllSortOrder? Type2442 { get; set; }
+        public global::Vapi.SessionControllerFindAllPaginatedSortBy? Type2442 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PersonalityControllerFindAllSortBy? Type2443 { get; set; }
+        public global::Vapi.PhoneNumberControllerFindAllPaginatedSortOrder? Type2443 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ScenarioControllerFindAllSortOrder? Type2444 { get; set; }
+        public global::Vapi.PhoneNumberControllerFindAllPaginatedSortBy? Type2444 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ScenarioControllerFindAllSortBy? Type2445 { get; set; }
+        public global::Vapi.StructuredOutputControllerFindAllSortOrder? Type2445 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunControllerFindAllStatus? Type2446 { get; set; }
+        public global::Vapi.StructuredOutputControllerFindAllSortBy? Type2446 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunControllerFindAllFilterStatus? Type2447 { get; set; }
+        public global::Vapi.PersonalityControllerFindAllSortOrder? Type2447 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunControllerFindAllTargetType? Type2448 { get; set; }
+        public global::Vapi.PersonalityControllerFindAllSortBy? Type2448 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunControllerFindAllSortOrder? Type2449 { get; set; }
+        public global::Vapi.ScenarioControllerFindAllSortOrder? Type2449 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunControllerFindAllSortBy? Type2450 { get; set; }
+        public global::Vapi.ScenarioControllerFindAllSortBy? Type2450 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunControllerFindItemsStatus? Type2451 { get; set; }
+        public global::Vapi.SimulationRunControllerFindAllStatus? Type2451 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunControllerFindItemsSortOrder? Type2452 { get; set; }
+        public global::Vapi.SimulationRunControllerFindAllFilterStatus? Type2452 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationRunControllerFindItemsSortBy? Type2453 { get; set; }
+        public global::Vapi.SimulationRunControllerFindAllTargetType? Type2453 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationSuiteControllerFindAllSortOrder? Type2454 { get; set; }
+        public global::Vapi.SimulationRunControllerFindAllSortOrder? Type2454 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationSuiteControllerFindAllSortBy? Type2455 { get; set; }
+        public global::Vapi.SimulationRunControllerFindAllSortBy? Type2455 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationControllerFindAllSortOrder? Type2456 { get; set; }
+        public global::Vapi.SimulationRunControllerFindItemsStatus? Type2456 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.SimulationControllerFindAllSortBy? Type2457 { get; set; }
+        public global::Vapi.SimulationRunControllerFindItemsSortOrder? Type2457 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerFindAllSortOrder? Type2458 { get; set; }
+        public global::Vapi.SimulationRunControllerFindItemsSortBy? Type2458 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerFindAllSortBy? Type2459 { get; set; }
+        public global::Vapi.SimulationSuiteControllerFindAllSortOrder? Type2459 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BoardControllerFindAllSortOrder? Type2460 { get; set; }
+        public global::Vapi.SimulationSuiteControllerFindAllSortBy? Type2460 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.BoardControllerFindAllSortBy? Type2461 { get; set; }
+        public global::Vapi.SimulationControllerFindAllSortOrder? Type2461 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalControllerGetPaginatedSortOrder? Type2462 { get; set; }
+        public global::Vapi.SimulationControllerFindAllSortBy? Type2462 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalControllerGetPaginatedSortBy? Type2463 { get; set; }
+        public global::Vapi.InsightControllerFindAllSortOrder? Type2463 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalControllerGetRunsPaginatedSortOrder? Type2464 { get; set; }
+        public global::Vapi.InsightControllerFindAllSortBy? Type2464 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.EvalControllerGetRunsPaginatedSortBy? Type2465 { get; set; }
+        public global::Vapi.BoardControllerFindAllSortOrder? Type2465 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ScorecardControllerGetPaginatedSortOrder? Type2466 { get; set; }
+        public global::Vapi.BoardControllerFindAllSortBy? Type2466 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ScorecardControllerGetPaginatedSortBy? Type2467 { get; set; }
+        public global::Vapi.EvalControllerGetPaginatedSortOrder? Type2467 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerCreateProviderResourceProvider? Type2468 { get; set; }
+        public global::Vapi.EvalControllerGetPaginatedSortBy? Type2468 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerCreateProviderResourceResourceName? Type2469 { get; set; }
+        public global::Vapi.EvalControllerGetRunsPaginatedSortOrder? Type2469 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedProvider? Type2470 { get; set; }
+        public global::Vapi.EvalControllerGetRunsPaginatedSortBy? Type2470 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedResourceName? Type2471 { get; set; }
+        public global::Vapi.ScorecardControllerGetPaginatedSortOrder? Type2471 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedSortOrder? Type2472 { get; set; }
+        public global::Vapi.ScorecardControllerGetPaginatedSortBy? Type2472 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedSortBy? Type2473 { get; set; }
+        public global::Vapi.ProviderResourceControllerCreateProviderResourceProvider? Type2473 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerGetProviderResourceProvider? Type2474 { get; set; }
+        public global::Vapi.ProviderResourceControllerCreateProviderResourceResourceName? Type2474 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerGetProviderResourceResourceName? Type2475 { get; set; }
+        public global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedProvider? Type2475 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerDeleteProviderResourceProvider? Type2476 { get; set; }
+        public global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedResourceName? Type2476 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerDeleteProviderResourceResourceName? Type2477 { get; set; }
+        public global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedSortOrder? Type2477 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerUpdateProviderResourceProvider? Type2478 { get; set; }
+        public global::Vapi.ProviderResourceControllerGetProviderResourcesPaginatedSortBy? Type2478 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ProviderResourceControllerUpdateProviderResourceResourceName? Type2479 { get; set; }
+        public global::Vapi.ProviderResourceControllerGetProviderResourceProvider? Type2479 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.Squad>? Type2480 { get; set; }
+        public global::Vapi.ProviderResourceControllerGetProviderResourceResourceName? Type2480 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.Call, global::Vapi.CallBatchResponse>? Type2481 { get; set; }
+        public global::Vapi.ProviderResourceControllerDeleteProviderResourceProvider? Type2481 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.Chat, global::Vapi.CreateChatStreamResponse>? Type2482 { get; set; }
+        public global::Vapi.ProviderResourceControllerDeleteProviderResourceResourceName? Type2482 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.ResponseObject, global::Vapi.ResponseTextDeltaEvent, global::Vapi.ResponseTextDoneEvent, global::Vapi.ResponseCompletedEvent, global::Vapi.ResponseErrorEvent>? Type2483 { get; set; }
+        public global::Vapi.ProviderResourceControllerUpdateProviderResourceProvider? Type2483 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerCreateResponse? Type2484 { get; set; }
+        public global::Vapi.ProviderResourceControllerUpdateProviderResourceResourceName? Type2484 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerCreateResponseDiscriminator? Type2485 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.Squad>? Type2485 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerCreateResponseDiscriminatorProvider? Type2486 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.Call, global::Vapi.CallBatchResponse>? Type2486 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.PhoneNumberControllerFindAllResponseItem>? Type2487 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.Chat, global::Vapi.CreateChatStreamResponse>? Type2487 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerFindAllResponseItem? Type2488 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.ResponseObject, global::Vapi.ResponseTextDeltaEvent, global::Vapi.ResponseTextDoneEvent, global::Vapi.ResponseCompletedEvent, global::Vapi.ResponseErrorEvent>? Type2488 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerFindAllResponseItemDiscriminator? Type2489 { get; set; }
+        public global::Vapi.PhoneNumberControllerCreateResponse? Type2489 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerFindAllResponseItemDiscriminatorProvider? Type2490 { get; set; }
+        public global::Vapi.PhoneNumberControllerCreateResponseDiscriminator? Type2490 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerFindOneResponse? Type2491 { get; set; }
+        public global::Vapi.PhoneNumberControllerCreateResponseDiscriminatorProvider? Type2491 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerFindOneResponseDiscriminator? Type2492 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.PhoneNumberControllerFindAllResponseItem>? Type2492 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerFindOneResponseDiscriminatorProvider? Type2493 { get; set; }
+        public global::Vapi.PhoneNumberControllerFindAllResponseItem? Type2493 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerUpdateResponse? Type2494 { get; set; }
+        public global::Vapi.PhoneNumberControllerFindAllResponseItemDiscriminator? Type2494 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerUpdateResponseDiscriminator? Type2495 { get; set; }
+        public global::Vapi.PhoneNumberControllerFindAllResponseItemDiscriminatorProvider? Type2495 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerUpdateResponseDiscriminatorProvider? Type2496 { get; set; }
+        public global::Vapi.PhoneNumberControllerFindOneResponse? Type2496 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerRemoveResponse? Type2497 { get; set; }
+        public global::Vapi.PhoneNumberControllerFindOneResponseDiscriminator? Type2497 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerRemoveResponseDiscriminator? Type2498 { get; set; }
+        public global::Vapi.PhoneNumberControllerFindOneResponseDiscriminatorProvider? Type2498 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.PhoneNumberControllerRemoveResponseDiscriminatorProvider? Type2499 { get; set; }
+        public global::Vapi.PhoneNumberControllerUpdateResponse? Type2499 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerCreateResponse? Type2500 { get; set; }
+        public global::Vapi.PhoneNumberControllerUpdateResponseDiscriminator? Type2500 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerCreateResponseDiscriminator? Type2501 { get; set; }
+        public global::Vapi.PhoneNumberControllerUpdateResponseDiscriminatorProvider? Type2501 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerCreateResponseDiscriminatorType? Type2502 { get; set; }
+        public global::Vapi.PhoneNumberControllerRemoveResponse? Type2502 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.ToolControllerFindAllResponseItem>? Type2503 { get; set; }
+        public global::Vapi.PhoneNumberControllerRemoveResponseDiscriminator? Type2503 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerFindAllResponseItem? Type2504 { get; set; }
+        public global::Vapi.PhoneNumberControllerRemoveResponseDiscriminatorProvider? Type2504 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerFindAllResponseItemDiscriminator? Type2505 { get; set; }
+        public global::Vapi.ToolControllerCreateResponse? Type2505 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerFindAllResponseItemDiscriminatorType? Type2506 { get; set; }
+        public global::Vapi.ToolControllerCreateResponseDiscriminator? Type2506 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerFindOneResponse? Type2507 { get; set; }
+        public global::Vapi.ToolControllerCreateResponseDiscriminatorType? Type2507 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerFindOneResponseDiscriminator? Type2508 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.ToolControllerFindAllResponseItem>? Type2508 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerFindOneResponseDiscriminatorType? Type2509 { get; set; }
+        public global::Vapi.ToolControllerFindAllResponseItem? Type2509 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerUpdateResponse? Type2510 { get; set; }
+        public global::Vapi.ToolControllerFindAllResponseItemDiscriminator? Type2510 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerUpdateResponseDiscriminator? Type2511 { get; set; }
+        public global::Vapi.ToolControllerFindAllResponseItemDiscriminatorType? Type2511 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerUpdateResponseDiscriminatorType? Type2512 { get; set; }
+        public global::Vapi.ToolControllerFindOneResponse? Type2512 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerRemoveResponse? Type2513 { get; set; }
+        public global::Vapi.ToolControllerFindOneResponseDiscriminator? Type2513 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerRemoveResponseDiscriminator? Type2514 { get; set; }
+        public global::Vapi.ToolControllerFindOneResponseDiscriminatorType? Type2514 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.ToolControllerRemoveResponseDiscriminatorType? Type2515 { get; set; }
+        public global::Vapi.ToolControllerUpdateResponse? Type2515 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.File>? Type2516 { get; set; }
+        public global::Vapi.ToolControllerUpdateResponseDiscriminator? Type2516 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::Vapi.AllOf<global::Vapi.StructuredOutputRunPreviewResponse, object>?, global::Vapi.StructuredOutputRerunResponse>? Type2517 { get; set; }
+        public global::Vapi.ToolControllerUpdateResponseDiscriminatorType? Type2517 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.AllOf<global::Vapi.StructuredOutputRunPreviewResponse, object>? Type2518 { get; set; }
+        public global::Vapi.ToolControllerRemoveResponse? Type2518 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.Personality>? Type2519 { get; set; }
+        public global::Vapi.ToolControllerRemoveResponseDiscriminator? Type2519 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.Scenario>? Type2520 { get; set; }
+        public global::Vapi.ToolControllerRemoveResponseDiscriminatorType? Type2520 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRun>, global::Vapi.SimulationRunsPaginatedResponse>? Type2521 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.File>? Type2521 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.SimulationRun>? Type2522 { get; set; }
+        public global::Vapi.OneOf<global::Vapi.AllOf<global::Vapi.StructuredOutputRunPreviewResponse, object>?, global::Vapi.StructuredOutputRerunResponse>? Type2522 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>? Type2523 { get; set; }
+        public global::Vapi.AllOf<global::Vapi.StructuredOutputRunPreviewResponse, object>? Type2523 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>? Type2524 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.Personality>? Type2524 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.Simulation>? Type2525 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.Scenario>? Type2525 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerCreateResponse? Type2526 { get; set; }
+        public global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRun>, global::Vapi.SimulationRunsPaginatedResponse>? Type2526 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerCreateResponseDiscriminator? Type2527 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.SimulationRun>? Type2527 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerCreateResponseDiscriminatorType? Type2528 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>? Type2528 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerUpdateResponse? Type2529 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>? Type2529 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerUpdateResponseDiscriminator? Type2530 { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.Simulation>? Type2530 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerUpdateResponseDiscriminatorType? Type2531 { get; set; }
+        public global::Vapi.InsightControllerCreateResponse? Type2531 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerFindOneResponse? Type2532 { get; set; }
+        public global::Vapi.InsightControllerCreateResponseDiscriminator? Type2532 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerFindOneResponseDiscriminator? Type2533 { get; set; }
+        public global::Vapi.InsightControllerCreateResponseDiscriminatorType? Type2533 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerFindOneResponseDiscriminatorType? Type2534 { get; set; }
+        public global::Vapi.InsightControllerUpdateResponse? Type2534 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerRemoveResponse? Type2535 { get; set; }
+        public global::Vapi.InsightControllerUpdateResponseDiscriminator? Type2535 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerRemoveResponseDiscriminator? Type2536 { get; set; }
+        public global::Vapi.InsightControllerUpdateResponseDiscriminatorType? Type2536 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.InsightControllerRemoveResponseDiscriminatorType? Type2537 { get; set; }
+        public global::Vapi.InsightControllerFindOneResponse? Type2537 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Vapi.AnalyticsQueryResult>? Type2538 { get; set; }
+        public global::Vapi.InsightControllerFindOneResponseDiscriminator? Type2538 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.InsightControllerFindOneResponseDiscriminatorType? Type2539 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.InsightControllerRemoveResponse? Type2540 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.InsightControllerRemoveResponseDiscriminator? Type2541 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Vapi.InsightControllerRemoveResponseDiscriminatorType? Type2542 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Vapi.AnalyticsQueryResult>? Type2543 { get; set; }
 
         /// <summary>
         /// 
@@ -10645,258 +10665,262 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.CampaignContactWithOutcome>? ListType115 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.CampaignSummary>? ListType115 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.RelayCommandSay, global::Vapi.RelayCommandNote>>? ListType116 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.CampaignContactWithOutcome>? ListType116 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ModelCost, global::Vapi.AnalysisCost, global::Vapi.SessionCost>>? ListType117 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.RelayCommandSay, global::Vapi.RelayCommandNote>>? ListType117 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.Session>? ListType118 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ModelCost, global::Vapi.AnalysisCost, global::Vapi.SessionCost>>? ListType118 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ByoPhoneNumber, global::Vapi.TwilioPhoneNumber, global::Vapi.VonagePhoneNumber, global::Vapi.VapiPhoneNumber, global::Vapi.TelnyxPhoneNumber>>? ListType119 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.Session>? ListType119 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.CodeToolEnvironmentVariable>? ListType120 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ByoPhoneNumber, global::Vapi.TwilioPhoneNumber, global::Vapi.VonagePhoneNumber, global::Vapi.VapiPhoneNumber, global::Vapi.TelnyxPhoneNumber>>? ListType120 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.ToolVersion>? ListType121 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.CodeToolEnvironmentVariable>? ListType121 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.ToolDraft>? ListType122 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.ToolVersion>? ListType122 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.StructuredOutput>? ListType123 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.ToolDraft>? ListType123 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.TestSuite>? ListType124 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.StructuredOutput>? ListType124 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.TestSuiteTestScorerAI>? ListType125 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.TestSuite>? ListType125 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.TestSuiteTestVoice, global::Vapi.TestSuiteTestChat>>? ListType126 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.TestSuiteTestScorerAI>? ListType126 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.TestSuiteRunScorerAI>? ListType127 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.TestSuiteTestVoice, global::Vapi.TestSuiteTestChat>>? ListType127 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.TestSuiteRunTestAttempt>? ListType128 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.TestSuiteRunScorerAI>? ListType128 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.TestSuiteRunTestResult>? ListType129 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.TestSuiteRunTestAttempt>? ListType129 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.TestSuiteRun>? ListType130 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.TestSuiteRunTestResult>? ListType130 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.SimulationHookWebhookAction>? ListType131 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.TestSuiteRun>? ListType131 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.EvaluationPlanItem>? ListType132 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.SimulationHookWebhookAction>? ListType132 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>? ListType133 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.EvaluationPlanItem>? ListType133 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.ScenarioToolMock>? ListType134 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>? ListType134 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.SimulationRunSimulationEntry, global::Vapi.SimulationRunSuiteEntry>>? ListType135 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.ScenarioToolMock>? ListType135 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.SimulationRunListItem>? ListType136 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.SimulationRunSimulationEntry, global::Vapi.SimulationRunSuiteEntry>>? ListType136 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.StructuredOutputEvaluationResult>? ListType137 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.SimulationRunListItem>? ListType137 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.SimulationRunItemImprovementSuggestion>? ListType138 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.StructuredOutputEvaluationResult>? ListType138 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.SimulationSuiteTargetAssignment>? ListType139 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.SimulationRunItemImprovementSuggestion>? ListType139 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.GeneratedScenario>? ListType140 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.SimulationSuiteTargetAssignment>? ListType140 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.InsightFormula>? ListType141 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.GeneratedScenario>? ListType141 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.EventsTableStringCondition, global::Vapi.EventsTableNumberCondition, global::Vapi.EventsTableBooleanCondition>>? ListType142 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.InsightFormula>? ListType142 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.Insight>? ListType143 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.EventsTableStringCondition, global::Vapi.EventsTableNumberCondition, global::Vapi.EventsTableBooleanCondition>>? ListType143 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>>? ListType144 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.Insight>? ListType144 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.Board>? ListType145 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>>? ListType145 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.ChatEvalAssistantMessageMockToolCall>? ListType146 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.Board>? ListType146 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.Eval>? ListType147 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.ChatEvalAssistantMessageMockToolCall>? ListType147 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.EvalRunResult>? ListType148 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.Eval>? ListType148 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.EvalRun>? ListType149 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.EvalRunResult>? ListType149 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.Scorecard>? ListType150 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.EvalRun>? ListType150 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.PendingInvitationDTO>? ListType151 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.Scorecard>? ListType151 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.AzureOpenAICredentialModel>? ListType152 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.PendingInvitationDTO>? ListType152 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.UpdateAzureOpenAICredentialDTOModel>? ListType153 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.AzureOpenAICredentialModel>? ListType153 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.ToolTemplateSetup>? ListType154 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.UpdateAzureOpenAICredentialDTOModel>? ListType154 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.SyncVoiceLibraryDTOProvider>? ListType155 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.ToolTemplateSetup>? ListType155 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.CartesiaPronunciationDictItem>? ListType156 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.SyncVoiceLibraryDTOProvider>? ListType156 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.ProviderResource>? ListType157 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.CartesiaPronunciationDictItem>? ListType157 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<byte[]>? ListType158 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.ProviderResource>? ListType158 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.AnalyticsQueryGroupByItem>? ListType159 { get; set; }
+        public global::System.Collections.Generic.List<byte[]>? ListType159 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.VariableValueGroupBy>? ListType160 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.AnalyticsQueryGroupByItem>? ListType160 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.AnalyticsOperation>? ListType161 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.VariableValueGroupBy>? ListType161 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.AnalyticsQuery>? ListType162 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.AnalyticsOperation>? ListType162 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.CallArtifactUploadItem>? ListType163 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.AnalyticsQuery>? ListType163 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.KnowledgeBaseResponseDocument>? ListType164 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.CallArtifactUploadItem>? ListType164 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.ToolCallResult>? ListType165 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.KnowledgeBaseResponseDocument>? ListType165 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? ListType166 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.ToolCallResult>? ListType166 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.Squad>? ListType167 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? ListType167 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.PhoneNumberControllerFindAllResponseItem>? ListType168 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.Squad>? ListType168 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.ToolControllerFindAllResponseItem>? ListType169 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.PhoneNumberControllerFindAllResponseItem>? ListType169 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.File>? ListType170 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.ToolControllerFindAllResponseItem>? ListType170 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.Personality>? ListType171 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.File>? ListType171 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.Scenario>? ListType172 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.Personality>? ListType172 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Vapi.OneOf<global::System.Collections.Generic.List<global::Vapi.SimulationRun>, global::Vapi.SimulationRunsPaginatedResponse>? ListType173 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.Scenario>? ListType173 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.SimulationRun>? ListType174 { get; set; }
+        public global::Vapi.OneOf<global::System.Collections.Generic.List<global::Vapi.SimulationRun>, global::Vapi.SimulationRunsPaginatedResponse>? ListType174 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.SimulationRunItem>? ListType175 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.SimulationRun>? ListType175 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.SimulationSuite>? ListType176 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.SimulationRunItem>? ListType176 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.Simulation>? ListType177 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.SimulationSuite>? ListType177 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Vapi.AnalyticsQueryResult>? ListType178 { get; set; }
+        public global::System.Collections.Generic.List<global::Vapi.Simulation>? ListType178 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Vapi.AnalyticsQueryResult>? ListType179 { get; set; }
     }
 }
