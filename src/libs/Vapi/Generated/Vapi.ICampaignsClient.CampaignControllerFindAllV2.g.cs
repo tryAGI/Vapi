@@ -9,6 +9,7 @@ namespace Vapi
         /// </summary>
         /// <param name="id"></param>
         /// <param name="status"></param>
+        /// <param name="includeCounters"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
         /// <param name="sortBy"></param>
@@ -24,9 +25,10 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Vapi.CampaignPaginatedResponse> CampaignControllerFindAllV2Async(
+        global::System.Threading.Tasks.Task<global::Vapi.CampaignSummaryPaginatedResponse> CampaignControllerFindAllV2Async(
             string? id = default,
             global::Vapi.CampaignControllerFindAllV2Status? status = default,
+            bool? includeCounters = default,
             double? page = default,
             global::Vapi.CampaignControllerFindAllV2SortOrder? sortOrder = default,
             global::Vapi.CampaignControllerFindAllV2SortBy? sortBy = default,
@@ -46,6 +48,7 @@ namespace Vapi
         /// </summary>
         /// <param name="id"></param>
         /// <param name="status"></param>
+        /// <param name="includeCounters"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
         /// <param name="sortBy"></param>
@@ -61,9 +64,10 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignPaginatedResponse>> CampaignControllerFindAllV2AsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignSummaryPaginatedResponse>> CampaignControllerFindAllV2AsResponseAsync(
             string? id = default,
             global::Vapi.CampaignControllerFindAllV2Status? status = default,
+            bool? includeCounters = default,
             double? page = default,
             global::Vapi.CampaignControllerFindAllV2SortOrder? sortOrder = default,
             global::Vapi.CampaignControllerFindAllV2SortBy? sortBy = default,

@@ -30,6 +30,7 @@ namespace Vapi
             ref global::System.Guid id,
             global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? status,
             ref double? limit,
+            ref global::Vapi.CampaignControllerGetCampaignV2ContactsSortBy? sortBy,
             ref double? page);
         partial void PrepareCampaignControllerGetCampaignV2ContactsRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -37,6 +38,7 @@ namespace Vapi
             global::System.Guid id,
             global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? status,
             double? limit,
+            global::Vapi.CampaignControllerGetCampaignV2ContactsSortBy? sortBy,
             double? page);
         partial void ProcessCampaignControllerGetCampaignV2ContactsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -53,6 +55,7 @@ namespace Vapi
         /// <param name="id"></param>
         /// <param name="status"></param>
         /// <param name="limit"></param>
+        /// <param name="sortBy"></param>
         /// <param name="page"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -61,6 +64,7 @@ namespace Vapi
             global::System.Guid id,
             global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? status = default,
             double? limit = default,
+            global::Vapi.CampaignControllerGetCampaignV2ContactsSortBy? sortBy = default,
             double? page = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -69,6 +73,7 @@ namespace Vapi
                 id: id,
                 status: status,
                 limit: limit,
+                sortBy: sortBy,
                 page: page,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
@@ -82,6 +87,7 @@ namespace Vapi
         /// <param name="id"></param>
         /// <param name="status"></param>
         /// <param name="limit"></param>
+        /// <param name="sortBy"></param>
         /// <param name="page"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -90,6 +96,7 @@ namespace Vapi
             global::System.Guid id,
             global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? status = default,
             double? limit = default,
+            global::Vapi.CampaignControllerGetCampaignV2ContactsSortBy? sortBy = default,
             double? page = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -101,6 +108,7 @@ namespace Vapi
                 id: ref id,
                 status: status,
                 limit: ref limit,
+                sortBy: ref sortBy,
                 page: ref page);
 
 
@@ -132,6 +140,7 @@ namespace Vapi
                             __pathBuilder
                                 .AddOptionalParameter("status", status, selector: static x => x.ToValueString(), delimiter: ",", explode: true)
                                 .AddOptionalParameter("limit", limit?.ToString())
+                                .AddOptionalParameter("sortBy", sortBy?.ToValueString())
                                 .AddOptionalParameter("page", page?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
@@ -177,6 +186,7 @@ namespace Vapi
                     id: id!,
                     status: status,
                     limit: limit,
+                    sortBy: sortBy,
                     page: page);
 
                 return __httpRequest;

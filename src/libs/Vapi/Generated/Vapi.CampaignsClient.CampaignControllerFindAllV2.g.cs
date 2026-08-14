@@ -29,6 +29,7 @@ namespace Vapi
             global::System.Net.Http.HttpClient httpClient,
             ref string? id,
             ref global::Vapi.CampaignControllerFindAllV2Status? status,
+            ref bool? includeCounters,
             ref double? page,
             ref global::Vapi.CampaignControllerFindAllV2SortOrder? sortOrder,
             ref global::Vapi.CampaignControllerFindAllV2SortBy? sortBy,
@@ -46,6 +47,7 @@ namespace Vapi
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string? id,
             global::Vapi.CampaignControllerFindAllV2Status? status,
+            bool? includeCounters,
             double? page,
             global::Vapi.CampaignControllerFindAllV2SortOrder? sortOrder,
             global::Vapi.CampaignControllerFindAllV2SortBy? sortBy,
@@ -72,6 +74,7 @@ namespace Vapi
         /// </summary>
         /// <param name="id"></param>
         /// <param name="status"></param>
+        /// <param name="includeCounters"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
         /// <param name="sortBy"></param>
@@ -87,9 +90,10 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.CampaignPaginatedResponse> CampaignControllerFindAllV2Async(
+        public async global::System.Threading.Tasks.Task<global::Vapi.CampaignSummaryPaginatedResponse> CampaignControllerFindAllV2Async(
             string? id = default,
             global::Vapi.CampaignControllerFindAllV2Status? status = default,
+            bool? includeCounters = default,
             double? page = default,
             global::Vapi.CampaignControllerFindAllV2SortOrder? sortOrder = default,
             global::Vapi.CampaignControllerFindAllV2SortBy? sortBy = default,
@@ -108,6 +112,7 @@ namespace Vapi
             var __response = await CampaignControllerFindAllV2AsResponseAsync(
                 id: id,
                 status: status,
+                includeCounters: includeCounters,
                 page: page,
                 sortOrder: sortOrder,
                 sortBy: sortBy,
@@ -131,6 +136,7 @@ namespace Vapi
         /// </summary>
         /// <param name="id"></param>
         /// <param name="status"></param>
+        /// <param name="includeCounters"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
         /// <param name="sortBy"></param>
@@ -146,9 +152,10 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignPaginatedResponse>> CampaignControllerFindAllV2AsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignSummaryPaginatedResponse>> CampaignControllerFindAllV2AsResponseAsync(
             string? id = default,
             global::Vapi.CampaignControllerFindAllV2Status? status = default,
+            bool? includeCounters = default,
             double? page = default,
             global::Vapi.CampaignControllerFindAllV2SortOrder? sortOrder = default,
             global::Vapi.CampaignControllerFindAllV2SortBy? sortBy = default,
@@ -170,6 +177,7 @@ namespace Vapi
                 httpClient: HttpClient,
                 id: ref id,
                 status: ref status,
+                includeCounters: ref includeCounters,
                 page: ref page,
                 sortOrder: ref sortOrder,
                 sortBy: ref sortBy,
@@ -212,6 +220,7 @@ namespace Vapi
                             __pathBuilder
                                 .AddOptionalParameter("id", id)
                                 .AddOptionalParameter("status", status?.ToValueString())
+                                .AddOptionalParameter("includeCounters", includeCounters?.ToString().ToLowerInvariant())
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("sortOrder", sortOrder?.ToValueString())
                                 .AddOptionalParameter("sortBy", sortBy?.ToValueString())
@@ -267,6 +276,7 @@ namespace Vapi
                     httpRequestMessage: __httpRequest,
                     id: id,
                     status: status,
+                    includeCounters: includeCounters,
                     page: page,
                     sortOrder: sortOrder,
                     sortBy: sortBy,
@@ -479,9 +489,9 @@ namespace Vapi
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Vapi.CampaignPaginatedResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Vapi.CampaignSummaryPaginatedResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignPaginatedResponse>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignSummaryPaginatedResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -511,9 +521,9 @@ namespace Vapi
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Vapi.CampaignPaginatedResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Vapi.CampaignSummaryPaginatedResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignPaginatedResponse>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.CampaignSummaryPaginatedResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

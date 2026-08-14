@@ -10,6 +10,7 @@ namespace Vapi
         /// <param name="id"></param>
         /// <param name="status"></param>
         /// <param name="limit"></param>
+        /// <param name="sortBy"></param>
         /// <param name="page"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -18,6 +19,7 @@ namespace Vapi
             global::System.Guid id,
             global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? status = default,
             double? limit = default,
+            global::Vapi.CampaignControllerGetCampaignV2ContactsSortBy? sortBy = default,
             double? page = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -27,6 +29,7 @@ namespace Vapi
         /// <param name="id"></param>
         /// <param name="status"></param>
         /// <param name="limit"></param>
+        /// <param name="sortBy"></param>
         /// <param name="page"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -35,6 +38,7 @@ namespace Vapi
             global::System.Guid id,
             global::System.Collections.Generic.IList<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>? status = default,
             double? limit = default,
+            global::Vapi.CampaignControllerGetCampaignV2ContactsSortBy? sortBy = default,
             double? page = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
