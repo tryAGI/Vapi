@@ -112,6 +112,18 @@ namespace Vapi
         /// 
         /// </summary>
         Gpt54Nano,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Luna20260709,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Sol20260709,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Terra20260709,
     }
 
     /// <summary>
@@ -152,6 +164,9 @@ namespace Vapi
                 AzureOpenAICredentialModel.Gpt54Mini => "gpt-5.4-mini",
                 AzureOpenAICredentialModel.Gpt54Mini20260317 => "gpt-5.4-mini-2026-03-17",
                 AzureOpenAICredentialModel.Gpt54Nano => "gpt-5.4-nano",
+                AzureOpenAICredentialModel.Gpt56Luna20260709 => "gpt-5.6-luna-2026-07-09",
+                AzureOpenAICredentialModel.Gpt56Sol20260709 => "gpt-5.6-sol-2026-07-09",
+                AzureOpenAICredentialModel.Gpt56Terra20260709 => "gpt-5.6-terra-2026-07-09",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -188,6 +203,9 @@ namespace Vapi
                 "gpt-5.4-mini" => AzureOpenAICredentialModel.Gpt54Mini,
                 "gpt-5.4-mini-2026-03-17" => AzureOpenAICredentialModel.Gpt54Mini20260317,
                 "gpt-5.4-nano" => AzureOpenAICredentialModel.Gpt54Nano,
+                "gpt-5.6-luna-2026-07-09" => AzureOpenAICredentialModel.Gpt56Luna20260709,
+                "gpt-5.6-sol-2026-07-09" => AzureOpenAICredentialModel.Gpt56Sol20260709,
+                "gpt-5.6-terra-2026-07-09" => AzureOpenAICredentialModel.Gpt56Terra20260709,
                 _ => null,
             };
         }

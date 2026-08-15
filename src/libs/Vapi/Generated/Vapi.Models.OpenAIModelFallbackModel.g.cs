@@ -435,7 +435,39 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt5Mini_eastus2,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5Mini_germanywestcentral,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5Mini_polandcentral,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5Mini_spaincentral,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5Mini_swedencentral,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5Mini_westeurope,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt5Nano,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5Nano_eastus2,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5Nano_swedencentral,
         /// <summary>
         /// 
         /// </summary>
@@ -447,11 +479,27 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt51_eastus2,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt51_swedencentral,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt52,
         /// <summary>
         /// 
         /// </summary>
         Gpt52ChatLatest,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt52_eastus2,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt52_swedencentral,
         /// <summary>
         /// 
         /// </summary>
@@ -467,7 +515,31 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt54Mini_eastus2,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54Mini_swedencentral,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt54Nano,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54Nano_eastus2,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54Nano_swedencentral,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54_eastus2,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt54_swedencentral,
         /// <summary>
         /// 
         /// </summary>
@@ -479,11 +551,55 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        Gpt56Luna_westus3,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt56Sol,
         /// <summary>
         /// 
         /// </summary>
+        Gpt56Sol_westus3,
+        /// <summary>
+        /// 
+        /// </summary>
         Gpt56Terra,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt56Terra_westus3,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5_canadaeast,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5_eastus,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5_eastus2,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5_germanywestcentral,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5_polandcentral,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5_spaincentral,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5_swedencentral,
+        /// <summary>
+        /// 
+        /// </summary>
+        Gpt5_westeurope,
         /// <summary>
         /// 
         /// </summary>
@@ -636,19 +752,48 @@ namespace Vapi
                 OpenAIModelFallbackModel.Gpt5 => "gpt-5",
                 OpenAIModelFallbackModel.Gpt5ChatLatest => "gpt-5-chat-latest",
                 OpenAIModelFallbackModel.Gpt5Mini => "gpt-5-mini",
+                OpenAIModelFallbackModel.Gpt5Mini_eastus2 => "gpt-5-mini:eastus2",
+                OpenAIModelFallbackModel.Gpt5Mini_germanywestcentral => "gpt-5-mini:germanywestcentral",
+                OpenAIModelFallbackModel.Gpt5Mini_polandcentral => "gpt-5-mini:polandcentral",
+                OpenAIModelFallbackModel.Gpt5Mini_spaincentral => "gpt-5-mini:spaincentral",
+                OpenAIModelFallbackModel.Gpt5Mini_swedencentral => "gpt-5-mini:swedencentral",
+                OpenAIModelFallbackModel.Gpt5Mini_westeurope => "gpt-5-mini:westeurope",
                 OpenAIModelFallbackModel.Gpt5Nano => "gpt-5-nano",
+                OpenAIModelFallbackModel.Gpt5Nano_eastus2 => "gpt-5-nano:eastus2",
+                OpenAIModelFallbackModel.Gpt5Nano_swedencentral => "gpt-5-nano:swedencentral",
                 OpenAIModelFallbackModel.Gpt51 => "gpt-5.1",
                 OpenAIModelFallbackModel.Gpt51ChatLatest => "gpt-5.1-chat-latest",
+                OpenAIModelFallbackModel.Gpt51_eastus2 => "gpt-5.1:eastus2",
+                OpenAIModelFallbackModel.Gpt51_swedencentral => "gpt-5.1:swedencentral",
                 OpenAIModelFallbackModel.Gpt52 => "gpt-5.2",
                 OpenAIModelFallbackModel.Gpt52ChatLatest => "gpt-5.2-chat-latest",
+                OpenAIModelFallbackModel.Gpt52_eastus2 => "gpt-5.2:eastus2",
+                OpenAIModelFallbackModel.Gpt52_swedencentral => "gpt-5.2:swedencentral",
                 OpenAIModelFallbackModel.Gpt54 => "gpt-5.4",
                 OpenAIModelFallbackModel.Gpt54Mini => "gpt-5.4-mini",
                 OpenAIModelFallbackModel.Gpt54Mini_australiaeast => "gpt-5.4-mini:australiaeast",
+                OpenAIModelFallbackModel.Gpt54Mini_eastus2 => "gpt-5.4-mini:eastus2",
+                OpenAIModelFallbackModel.Gpt54Mini_swedencentral => "gpt-5.4-mini:swedencentral",
                 OpenAIModelFallbackModel.Gpt54Nano => "gpt-5.4-nano",
+                OpenAIModelFallbackModel.Gpt54Nano_eastus2 => "gpt-5.4-nano:eastus2",
+                OpenAIModelFallbackModel.Gpt54Nano_swedencentral => "gpt-5.4-nano:swedencentral",
+                OpenAIModelFallbackModel.Gpt54_eastus2 => "gpt-5.4:eastus2",
+                OpenAIModelFallbackModel.Gpt54_swedencentral => "gpt-5.4:swedencentral",
                 OpenAIModelFallbackModel.Gpt55 => "gpt-5.5",
                 OpenAIModelFallbackModel.Gpt56Luna => "gpt-5.6-luna",
+                OpenAIModelFallbackModel.Gpt56Luna_westus3 => "gpt-5.6-luna:westus3",
                 OpenAIModelFallbackModel.Gpt56Sol => "gpt-5.6-sol",
+                OpenAIModelFallbackModel.Gpt56Sol_westus3 => "gpt-5.6-sol:westus3",
                 OpenAIModelFallbackModel.Gpt56Terra => "gpt-5.6-terra",
+                OpenAIModelFallbackModel.Gpt56Terra_westus3 => "gpt-5.6-terra:westus3",
+                OpenAIModelFallbackModel.Gpt5_canadaeast => "gpt-5:canadaeast",
+                OpenAIModelFallbackModel.Gpt5_eastus => "gpt-5:eastus",
+                OpenAIModelFallbackModel.Gpt5_eastus2 => "gpt-5:eastus2",
+                OpenAIModelFallbackModel.Gpt5_germanywestcentral => "gpt-5:germanywestcentral",
+                OpenAIModelFallbackModel.Gpt5_polandcentral => "gpt-5:polandcentral",
+                OpenAIModelFallbackModel.Gpt5_spaincentral => "gpt-5:spaincentral",
+                OpenAIModelFallbackModel.Gpt5_swedencentral => "gpt-5:swedencentral",
+                OpenAIModelFallbackModel.Gpt5_westeurope => "gpt-5:westeurope",
                 OpenAIModelFallbackModel.GptRealtime2 => "gpt-realtime-2",
                 OpenAIModelFallbackModel.GptRealtime20250828 => "gpt-realtime-2025-08-28",
                 OpenAIModelFallbackModel.GptRealtimeMini20251215 => "gpt-realtime-mini-2025-12-15",
@@ -773,19 +918,48 @@ namespace Vapi
                 "gpt-5" => OpenAIModelFallbackModel.Gpt5,
                 "gpt-5-chat-latest" => OpenAIModelFallbackModel.Gpt5ChatLatest,
                 "gpt-5-mini" => OpenAIModelFallbackModel.Gpt5Mini,
+                "gpt-5-mini:eastus2" => OpenAIModelFallbackModel.Gpt5Mini_eastus2,
+                "gpt-5-mini:germanywestcentral" => OpenAIModelFallbackModel.Gpt5Mini_germanywestcentral,
+                "gpt-5-mini:polandcentral" => OpenAIModelFallbackModel.Gpt5Mini_polandcentral,
+                "gpt-5-mini:spaincentral" => OpenAIModelFallbackModel.Gpt5Mini_spaincentral,
+                "gpt-5-mini:swedencentral" => OpenAIModelFallbackModel.Gpt5Mini_swedencentral,
+                "gpt-5-mini:westeurope" => OpenAIModelFallbackModel.Gpt5Mini_westeurope,
                 "gpt-5-nano" => OpenAIModelFallbackModel.Gpt5Nano,
+                "gpt-5-nano:eastus2" => OpenAIModelFallbackModel.Gpt5Nano_eastus2,
+                "gpt-5-nano:swedencentral" => OpenAIModelFallbackModel.Gpt5Nano_swedencentral,
                 "gpt-5.1" => OpenAIModelFallbackModel.Gpt51,
                 "gpt-5.1-chat-latest" => OpenAIModelFallbackModel.Gpt51ChatLatest,
+                "gpt-5.1:eastus2" => OpenAIModelFallbackModel.Gpt51_eastus2,
+                "gpt-5.1:swedencentral" => OpenAIModelFallbackModel.Gpt51_swedencentral,
                 "gpt-5.2" => OpenAIModelFallbackModel.Gpt52,
                 "gpt-5.2-chat-latest" => OpenAIModelFallbackModel.Gpt52ChatLatest,
+                "gpt-5.2:eastus2" => OpenAIModelFallbackModel.Gpt52_eastus2,
+                "gpt-5.2:swedencentral" => OpenAIModelFallbackModel.Gpt52_swedencentral,
                 "gpt-5.4" => OpenAIModelFallbackModel.Gpt54,
                 "gpt-5.4-mini" => OpenAIModelFallbackModel.Gpt54Mini,
                 "gpt-5.4-mini:australiaeast" => OpenAIModelFallbackModel.Gpt54Mini_australiaeast,
+                "gpt-5.4-mini:eastus2" => OpenAIModelFallbackModel.Gpt54Mini_eastus2,
+                "gpt-5.4-mini:swedencentral" => OpenAIModelFallbackModel.Gpt54Mini_swedencentral,
                 "gpt-5.4-nano" => OpenAIModelFallbackModel.Gpt54Nano,
+                "gpt-5.4-nano:eastus2" => OpenAIModelFallbackModel.Gpt54Nano_eastus2,
+                "gpt-5.4-nano:swedencentral" => OpenAIModelFallbackModel.Gpt54Nano_swedencentral,
+                "gpt-5.4:eastus2" => OpenAIModelFallbackModel.Gpt54_eastus2,
+                "gpt-5.4:swedencentral" => OpenAIModelFallbackModel.Gpt54_swedencentral,
                 "gpt-5.5" => OpenAIModelFallbackModel.Gpt55,
                 "gpt-5.6-luna" => OpenAIModelFallbackModel.Gpt56Luna,
+                "gpt-5.6-luna:westus3" => OpenAIModelFallbackModel.Gpt56Luna_westus3,
                 "gpt-5.6-sol" => OpenAIModelFallbackModel.Gpt56Sol,
+                "gpt-5.6-sol:westus3" => OpenAIModelFallbackModel.Gpt56Sol_westus3,
                 "gpt-5.6-terra" => OpenAIModelFallbackModel.Gpt56Terra,
+                "gpt-5.6-terra:westus3" => OpenAIModelFallbackModel.Gpt56Terra_westus3,
+                "gpt-5:canadaeast" => OpenAIModelFallbackModel.Gpt5_canadaeast,
+                "gpt-5:eastus" => OpenAIModelFallbackModel.Gpt5_eastus,
+                "gpt-5:eastus2" => OpenAIModelFallbackModel.Gpt5_eastus2,
+                "gpt-5:germanywestcentral" => OpenAIModelFallbackModel.Gpt5_germanywestcentral,
+                "gpt-5:polandcentral" => OpenAIModelFallbackModel.Gpt5_polandcentral,
+                "gpt-5:spaincentral" => OpenAIModelFallbackModel.Gpt5_spaincentral,
+                "gpt-5:swedencentral" => OpenAIModelFallbackModel.Gpt5_swedencentral,
+                "gpt-5:westeurope" => OpenAIModelFallbackModel.Gpt5_westeurope,
                 "gpt-realtime-2" => OpenAIModelFallbackModel.GptRealtime2,
                 "gpt-realtime-2025-08-28" => OpenAIModelFallbackModel.GptRealtime20250828,
                 "gpt-realtime-mini-2025-12-15" => OpenAIModelFallbackModel.GptRealtimeMini20251215,
