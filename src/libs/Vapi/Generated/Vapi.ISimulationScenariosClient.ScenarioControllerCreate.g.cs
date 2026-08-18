@@ -7,8 +7,6 @@ namespace Vapi
         /// <summary>
         /// Create Scenario
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -16,15 +14,11 @@ namespace Vapi
         global::System.Threading.Tasks.Task<global::Vapi.Scenario> ScenarioControllerCreateAsync(
 
             global::Vapi.CreateScenarioDTO request,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Scenario
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -32,15 +26,11 @@ namespace Vapi
         global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Scenario>> ScenarioControllerCreateAsResponseAsync(
 
             global::Vapi.CreateScenarioDTO request,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Scenario
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="name">
         /// This is the name of the scenario.<br/>
         /// Example: Health Enrollment - Eligible Path
@@ -75,8 +65,6 @@ namespace Vapi
             string name,
             string instructions,
             global::System.Collections.Generic.IList<global::Vapi.EvaluationPlanItem> evaluations,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>? hooks = default,
             global::Vapi.AssistantOverrides? targetOverrides = default,
             global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? toolMocks = default,

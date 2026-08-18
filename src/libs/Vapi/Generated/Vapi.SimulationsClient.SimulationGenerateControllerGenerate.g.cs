@@ -27,14 +27,10 @@ namespace Vapi
             };
         partial void PrepareSimulationGenerateControllerGenerateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string? xClientSource,
-            ref string? xSimulationEntryPoint,
             global::Vapi.GenerateScenariosDTO request);
         partial void PrepareSimulationGenerateControllerGenerateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string? xClientSource,
-            string? xSimulationEntryPoint,
             global::Vapi.GenerateScenariosDTO request);
         partial void ProcessSimulationGenerateControllerGenerateResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -49,8 +45,6 @@ namespace Vapi
         /// Generate Scenarios with AI<br/>
         /// Uses AI to analyze an assistant or squad configuration and generate test scenarios
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -58,16 +52,12 @@ namespace Vapi
         public async global::System.Threading.Tasks.Task<global::Vapi.GenerateScenariosResponse> SimulationGenerateControllerGenerateAsync(
 
             global::Vapi.GenerateScenariosDTO request,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await SimulationGenerateControllerGenerateAsResponseAsync(
 
                 request: request,
-                xClientSource: xClientSource,
-                xSimulationEntryPoint: xSimulationEntryPoint,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -78,8 +68,6 @@ namespace Vapi
         /// Generate Scenarios with AI<br/>
         /// Uses AI to analyze an assistant or squad configuration and generate test scenarios
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -87,8 +75,6 @@ namespace Vapi
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.GenerateScenariosResponse>> SimulationGenerateControllerGenerateAsResponseAsync(
 
             global::Vapi.GenerateScenariosDTO request,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -98,8 +84,6 @@ namespace Vapi
                 client: HttpClient);
             PrepareSimulationGenerateControllerGenerateArguments(
                 httpClient: HttpClient,
-                xClientSource: ref xClientSource,
-                xSimulationEntryPoint: ref xSimulationEntryPoint,
                 request: request);
 
 
@@ -157,16 +141,6 @@ namespace Vapi
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-
-            if (xClientSource != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-client-source", xClientSource.ToString());
-            }
-            if (xSimulationEntryPoint != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-simulation-entry-point", xSimulationEntryPoint.ToString());
-            }
-
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
                                 content: __httpRequestContentBody,
@@ -184,8 +158,6 @@ namespace Vapi
                 PrepareSimulationGenerateControllerGenerateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    xClientSource: xClientSource,
-                    xSimulationEntryPoint: xSimulationEntryPoint,
                     request: request);
 
                 return __httpRequest;
@@ -465,8 +437,6 @@ namespace Vapi
         /// Generate Scenarios with AI<br/>
         /// Uses AI to analyze an assistant or squad configuration and generate test scenarios
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="assistantId">
         /// ID of the assistant to generate scenarios for
         /// </param>
@@ -477,8 +447,6 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.GenerateScenariosResponse> SimulationGenerateControllerGenerateAsync(
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             string? assistantId = default,
             string? squadId = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -491,8 +459,6 @@ namespace Vapi
             };
 
             return await SimulationGenerateControllerGenerateAsync(
-                xClientSource: xClientSource,
-                xSimulationEntryPoint: xSimulationEntryPoint,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

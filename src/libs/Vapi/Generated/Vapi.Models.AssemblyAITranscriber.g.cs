@@ -95,8 +95,35 @@ namespace Vapi
         public bool? VadAssistedEndpointingEnabled { get; set; }
 
         /// <summary>
+        /// This is the transcription mode used by the `universal-3-5-pro` speech model. Only applies to the `universal-3-5-pro` speech model.<br/>
+        /// @default 'balanced'
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AssemblyAITranscriberModeJsonConverter))]
+        public global::Vapi.AssemblyAITranscriberMode? Mode { get; set; }
+
+        /// <summary>
+        /// This is a prompt that provides additional context to the transcription model. Only applies to the `universal-3-5-pro` speech model.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("prompt")]
+        public string? Prompt { get; set; }
+
+        /// <summary>
+        /// This is context about the voice agent that guides the transcription model. Only applies to the `universal-3-5-pro` speech model.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agentContext")]
+        public string? AgentContext { get; set; }
+
+        /// <summary>
+        /// These are language codes used to steer automatic language detection. Only applies to the `universal-3-5-pro` speech model.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("languageCodes")]
+        public global::System.Collections.Generic.IList<global::Vapi.AssemblyAITranscriberLanguageCode>? LanguageCodes { get; set; }
+
+        /// <summary>
         /// This is the speech model used for the streaming session.<br/>
-        /// Note: Keyterms prompting is not supported with multilingual streaming.<br/>
+        /// Keyterms prompting is supported on universal-streaming-english and universal-3-5-pro.<br/>
+        /// universal-3-5-pro is AssemblyAI's most accurate voice-agent model.<br/>
         /// @default 'universal-streaming-english'
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("speechModel")]
@@ -118,7 +145,7 @@ namespace Vapi
         /// <summary>
         /// Keyterms prompting improves recognition accuracy for specific words and phrases.<br/>
         /// Can include up to 100 keyterms, each up to 50 characters.<br/>
-        /// Costs an additional $0.04/hour when enabled.
+        /// Costs an additional $0.04/hour on universal-streaming-english and is included at no extra cost on universal-3-5-pro.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("keytermsPrompt")]
         public global::System.Collections.Generic.IList<string>? KeytermsPrompt { get; set; }
@@ -195,9 +222,23 @@ namespace Vapi
         /// @default true<br/>
         /// Example: true
         /// </param>
+        /// <param name="mode">
+        /// This is the transcription mode used by the `universal-3-5-pro` speech model. Only applies to the `universal-3-5-pro` speech model.<br/>
+        /// @default 'balanced'
+        /// </param>
+        /// <param name="prompt">
+        /// This is a prompt that provides additional context to the transcription model. Only applies to the `universal-3-5-pro` speech model.
+        /// </param>
+        /// <param name="agentContext">
+        /// This is context about the voice agent that guides the transcription model. Only applies to the `universal-3-5-pro` speech model.
+        /// </param>
+        /// <param name="languageCodes">
+        /// These are language codes used to steer automatic language detection. Only applies to the `universal-3-5-pro` speech model.
+        /// </param>
         /// <param name="speechModel">
         /// This is the speech model used for the streaming session.<br/>
-        /// Note: Keyterms prompting is not supported with multilingual streaming.<br/>
+        /// Keyterms prompting is supported on universal-streaming-english and universal-3-5-pro.<br/>
+        /// universal-3-5-pro is AssemblyAI's most accurate voice-agent model.<br/>
         /// @default 'universal-streaming-english'
         /// </param>
         /// <param name="realtimeUrl">
@@ -209,7 +250,7 @@ namespace Vapi
         /// <param name="keytermsPrompt">
         /// Keyterms prompting improves recognition accuracy for specific words and phrases.<br/>
         /// Can include up to 100 keyterms, each up to 50 characters.<br/>
-        /// Costs an additional $0.04/hour when enabled.
+        /// Costs an additional $0.04/hour on universal-streaming-english and is included at no extra cost on universal-3-5-pro.
         /// </param>
         /// <param name="endUtteranceSilenceThreshold">
         /// The duration of the end utterance silence threshold in milliseconds.
@@ -233,6 +274,10 @@ namespace Vapi
             double? minEndOfTurnSilenceWhenConfident,
             double? maxTurnSilence,
             bool? vadAssistedEndpointingEnabled,
+            global::Vapi.AssemblyAITranscriberMode? mode,
+            string? prompt,
+            string? agentContext,
+            global::System.Collections.Generic.IList<global::Vapi.AssemblyAITranscriberLanguageCode>? languageCodes,
             global::Vapi.AssemblyAITranscriberSpeechModel? speechModel,
             string? realtimeUrl,
             global::System.Collections.Generic.IList<string>? wordBoost,
@@ -249,6 +294,10 @@ namespace Vapi
             this.MinEndOfTurnSilenceWhenConfident = minEndOfTurnSilenceWhenConfident;
             this.MaxTurnSilence = maxTurnSilence;
             this.VadAssistedEndpointingEnabled = vadAssistedEndpointingEnabled;
+            this.Mode = mode;
+            this.Prompt = prompt;
+            this.AgentContext = agentContext;
+            this.LanguageCodes = languageCodes;
             this.SpeechModel = speechModel;
             this.RealtimeUrl = realtimeUrl;
             this.WordBoost = wordBoost;

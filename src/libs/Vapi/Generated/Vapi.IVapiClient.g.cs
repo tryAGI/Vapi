@@ -93,6 +93,11 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public KnowledgeBasesV2Client KnowledgeBasesV2 { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ObservabilityScorecardClient ObservabilityScorecard { get; }
 
         /// <summary>

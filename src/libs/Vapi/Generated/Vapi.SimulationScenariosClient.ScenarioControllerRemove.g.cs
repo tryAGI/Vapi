@@ -27,15 +27,11 @@ namespace Vapi
             };
         partial void PrepareScenarioControllerRemoveArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::System.Guid id,
-            ref string? xClientSource,
-            ref string? xSimulationEntryPoint);
+            ref global::System.Guid id);
         partial void PrepareScenarioControllerRemoveRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.Guid id,
-            string? xClientSource,
-            string? xSimulationEntryPoint);
+            global::System.Guid id);
         partial void ProcessScenarioControllerRemoveResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -49,22 +45,16 @@ namespace Vapi
         /// Delete Scenario
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.Scenario> ScenarioControllerRemoveAsync(
             global::System.Guid id,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await ScenarioControllerRemoveAsResponseAsync(
                 id: id,
-                xClientSource: xClientSource,
-                xSimulationEntryPoint: xSimulationEntryPoint,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -75,15 +65,11 @@ namespace Vapi
         /// Delete Scenario
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Scenario>> ScenarioControllerRemoveAsResponseAsync(
             global::System.Guid id,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -91,9 +77,7 @@ namespace Vapi
                 client: HttpClient);
             PrepareScenarioControllerRemoveArguments(
                 httpClient: HttpClient,
-                id: ref id,
-                xClientSource: ref xClientSource,
-                xSimulationEntryPoint: ref xSimulationEntryPoint);
+                id: ref id);
 
 
             var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
@@ -150,16 +134,6 @@ namespace Vapi
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-
-            if (xClientSource != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-client-source", xClientSource.ToString());
-            }
-            if (xSimulationEntryPoint != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-simulation-entry-point", xSimulationEntryPoint.ToString());
-            }
-
                 global::Vapi.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -171,9 +145,7 @@ namespace Vapi
                 PrepareScenarioControllerRemoveRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id!,
-                    xClientSource: xClientSource,
-                    xSimulationEntryPoint: xSimulationEntryPoint);
+                    id: id!);
 
                 return __httpRequest;
             }

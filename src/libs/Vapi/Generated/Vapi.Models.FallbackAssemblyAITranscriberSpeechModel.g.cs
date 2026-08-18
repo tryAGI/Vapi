@@ -5,11 +5,16 @@ namespace Vapi
 {
     /// <summary>
     /// This is the speech model used for the streaming session.<br/>
-    /// Note: Keyterms prompting is not supported with multilingual streaming.<br/>
+    /// Keyterms prompting is supported on universal-streaming-english and universal-3-5-pro.<br/>
+    /// universal-3-5-pro is AssemblyAI's most accurate voice-agent model.<br/>
     /// @default 'universal-streaming-english'
     /// </summary>
     public enum FallbackAssemblyAITranscriberSpeechModel
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Universal35Pro,
         /// <summary>
         /// 
         /// </summary>
@@ -32,6 +37,7 @@ namespace Vapi
         {
             return value switch
             {
+                FallbackAssemblyAITranscriberSpeechModel.Universal35Pro => "universal-3-5-pro",
                 FallbackAssemblyAITranscriberSpeechModel.UniversalStreamingEnglish => "universal-streaming-english",
                 FallbackAssemblyAITranscriberSpeechModel.UniversalStreamingMultilingual => "universal-streaming-multilingual",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -44,6 +50,7 @@ namespace Vapi
         {
             return value switch
             {
+                "universal-3-5-pro" => FallbackAssemblyAITranscriberSpeechModel.Universal35Pro,
                 "universal-streaming-english" => FallbackAssemblyAITranscriberSpeechModel.UniversalStreamingEnglish,
                 "universal-streaming-multilingual" => FallbackAssemblyAITranscriberSpeechModel.UniversalStreamingMultilingual,
                 _ => null,

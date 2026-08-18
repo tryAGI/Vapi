@@ -75,6 +75,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        KnowledgeBase,
+        /// <summary>
+        /// 
+        /// </summary>
         Make,
         /// <summary>
         /// 
@@ -150,6 +154,7 @@ namespace Vapi
                 ToolDraftType.GoogleCalendarEventCreate => "google.calendar.event.create",
                 ToolDraftType.GoogleSheetsRowAppend => "google.sheets.row.append",
                 ToolDraftType.Handoff => "handoff",
+                ToolDraftType.KnowledgeBase => "knowledgeBase",
                 ToolDraftType.Make => "make",
                 ToolDraftType.Mcp => "mcp",
                 ToolDraftType.Output => "output",
@@ -188,6 +193,7 @@ namespace Vapi
                 "google.calendar.event.create" => ToolDraftType.GoogleCalendarEventCreate,
                 "google.sheets.row.append" => ToolDraftType.GoogleSheetsRowAppend,
                 "handoff" => ToolDraftType.Handoff,
+                "knowledgeBase" => ToolDraftType.KnowledgeBase,
                 "make" => ToolDraftType.Make,
                 "mcp" => ToolDraftType.Mcp,
                 "output" => ToolDraftType.Output,

@@ -131,6 +131,15 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        public KnowledgeBasesV2Client KnowledgeBasesV2 => new KnowledgeBasesV2Client(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ObservabilityScorecardClient ObservabilityScorecard => new ObservabilityScorecardClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
