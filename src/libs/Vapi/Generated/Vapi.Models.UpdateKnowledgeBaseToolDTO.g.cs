@@ -1,0 +1,235 @@
+
+#nullable enable
+
+namespace Vapi
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class UpdateKnowledgeBaseToolDTO
+    {
+        /// <summary>
+        /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? Messages { get; set; }
+
+        /// <summary>
+        /// A Vapi-hosted knowledge base retrieval tool.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UpdateKnowledgeBaseToolDTOTypeJsonConverter))]
+        public global::Vapi.UpdateKnowledgeBaseToolDTOType? Type { get; set; }
+
+        /// <summary>
+        /// The knowledge base this tool searches. At most one search tool references a knowledge base. Deleting the base also deletes its generated tool; null references are retained only for backward compatibility and are inert.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("knowledgeBaseId")]
+        public global::System.Guid? KnowledgeBaseId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("function")]
+        public global::Vapi.KnowledgeBaseToolFunction? Function { get; set; }
+
+        /// <summary>
+        /// This is the plan to reject a tool call based on the conversation state.<br/>
+        /// // Example 1: Reject endCall if user didn't say goodbye<br/>
+        /// ```json<br/>
+        /// {<br/>
+        ///   conditions: [{<br/>
+        ///     type: 'regex',<br/>
+        ///     regex: '(?i)\\b(bye|goodbye|farewell|see you later|take care)\\b',<br/>
+        ///     target: { position: -1, role: 'user' },<br/>
+        ///     negate: true  // Reject if pattern does NOT match<br/>
+        ///   }]<br/>
+        /// }<br/>
+        /// ```<br/>
+        /// // Example 2: Reject transfer if user is actually asking a question<br/>
+        /// ```json<br/>
+        /// {<br/>
+        ///   conditions: [{<br/>
+        ///     type: 'regex',<br/>
+        ///     regex: '\\?',<br/>
+        ///     target: { position: -1, role: 'user' }<br/>
+        ///   }]<br/>
+        /// }<br/>
+        /// ```<br/>
+        /// // Example 3: Reject transfer if user didn't mention transfer recently<br/>
+        /// ```json<br/>
+        /// {<br/>
+        ///   conditions: [{<br/>
+        ///     type: 'liquid',<br/>
+        ///     liquid: `{% assign recentMessages = messages | last: 5 %}<br/>
+        /// {% assign userMessages = recentMessages | where: 'role', 'user' %}<br/>
+        /// {% assign mentioned = false %}<br/>
+        /// {% for msg in userMessages %}<br/>
+        ///   {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}<br/>
+        ///     {% assign mentioned = true %}<br/>
+        ///     {% break %}<br/>
+        ///   {% endif %}<br/>
+        /// {% endfor %}<br/>
+        /// {% if mentioned %}<br/>
+        ///   false<br/>
+        /// {% else %}<br/>
+        ///   true<br/>
+        /// {% endif %}`<br/>
+        ///   }]<br/>
+        /// }<br/>
+        /// ```<br/>
+        /// // Example 4: Reject endCall if the bot is looping and trying to exit<br/>
+        /// ```json<br/>
+        /// {<br/>
+        ///   conditions: [{<br/>
+        ///     type: 'liquid',<br/>
+        ///     liquid: `{% assign recentMessages = messages | last: 6 %}<br/>
+        /// {% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}<br/>
+        /// {% if userMessages.size &lt; 3 %}<br/>
+        ///   false<br/>
+        /// {% else %}<br/>
+        ///   {% assign msg1 = userMessages[0].content | downcase %}<br/>
+        ///   {% assign msg2 = userMessages[1].content | downcase %}<br/>
+        ///   {% assign msg3 = userMessages[2].content | downcase %}<br/>
+        ///   {% comment %} Check for repetitive messages {% endcomment %}<br/>
+        ///   {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}<br/>
+        ///     true<br/>
+        ///   {% comment %} Check for common loop phrases {% endcomment %}<br/>
+        ///   {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}<br/>
+        ///     true<br/>
+        ///   {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}<br/>
+        ///     true<br/>
+        ///   {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}<br/>
+        ///     true<br/>
+        ///   {% else %}<br/>
+        ///     false<br/>
+        ///   {% endif %}<br/>
+        /// {% endif %}`<br/>
+        ///   }]<br/>
+        /// }<br/>
+        /// ```
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rejectionPlan")]
+        public global::Vapi.ToolRejectionPlan? RejectionPlan { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UpdateKnowledgeBaseToolDTO" /> class.
+        /// </summary>
+        /// <param name="messages">
+        /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
+        /// </param>
+        /// <param name="type">
+        /// A Vapi-hosted knowledge base retrieval tool.
+        /// </param>
+        /// <param name="knowledgeBaseId">
+        /// The knowledge base this tool searches. At most one search tool references a knowledge base. Deleting the base also deletes its generated tool; null references are retained only for backward compatibility and are inert.
+        /// </param>
+        /// <param name="function"></param>
+        /// <param name="rejectionPlan">
+        /// This is the plan to reject a tool call based on the conversation state.<br/>
+        /// // Example 1: Reject endCall if user didn't say goodbye<br/>
+        /// ```json<br/>
+        /// {<br/>
+        ///   conditions: [{<br/>
+        ///     type: 'regex',<br/>
+        ///     regex: '(?i)\\b(bye|goodbye|farewell|see you later|take care)\\b',<br/>
+        ///     target: { position: -1, role: 'user' },<br/>
+        ///     negate: true  // Reject if pattern does NOT match<br/>
+        ///   }]<br/>
+        /// }<br/>
+        /// ```<br/>
+        /// // Example 2: Reject transfer if user is actually asking a question<br/>
+        /// ```json<br/>
+        /// {<br/>
+        ///   conditions: [{<br/>
+        ///     type: 'regex',<br/>
+        ///     regex: '\\?',<br/>
+        ///     target: { position: -1, role: 'user' }<br/>
+        ///   }]<br/>
+        /// }<br/>
+        /// ```<br/>
+        /// // Example 3: Reject transfer if user didn't mention transfer recently<br/>
+        /// ```json<br/>
+        /// {<br/>
+        ///   conditions: [{<br/>
+        ///     type: 'liquid',<br/>
+        ///     liquid: `{% assign recentMessages = messages | last: 5 %}<br/>
+        /// {% assign userMessages = recentMessages | where: 'role', 'user' %}<br/>
+        /// {% assign mentioned = false %}<br/>
+        /// {% for msg in userMessages %}<br/>
+        ///   {% if msg.content contains 'transfer' or msg.content contains 'connect' or msg.content contains 'speak to' %}<br/>
+        ///     {% assign mentioned = true %}<br/>
+        ///     {% break %}<br/>
+        ///   {% endif %}<br/>
+        /// {% endfor %}<br/>
+        /// {% if mentioned %}<br/>
+        ///   false<br/>
+        /// {% else %}<br/>
+        ///   true<br/>
+        /// {% endif %}`<br/>
+        ///   }]<br/>
+        /// }<br/>
+        /// ```<br/>
+        /// // Example 4: Reject endCall if the bot is looping and trying to exit<br/>
+        /// ```json<br/>
+        /// {<br/>
+        ///   conditions: [{<br/>
+        ///     type: 'liquid',<br/>
+        ///     liquid: `{% assign recentMessages = messages | last: 6 %}<br/>
+        /// {% assign userMessages = recentMessages | where: 'role', 'user' | reverse %}<br/>
+        /// {% if userMessages.size &lt; 3 %}<br/>
+        ///   false<br/>
+        /// {% else %}<br/>
+        ///   {% assign msg1 = userMessages[0].content | downcase %}<br/>
+        ///   {% assign msg2 = userMessages[1].content | downcase %}<br/>
+        ///   {% assign msg3 = userMessages[2].content | downcase %}<br/>
+        ///   {% comment %} Check for repetitive messages {% endcomment %}<br/>
+        ///   {% if msg1 == msg2 or msg1 == msg3 or msg2 == msg3 %}<br/>
+        ///     true<br/>
+        ///   {% comment %} Check for common loop phrases {% endcomment %}<br/>
+        ///   {% elsif msg1 contains 'cool thanks' or msg2 contains 'cool thanks' or msg3 contains 'cool thanks' %}<br/>
+        ///     true<br/>
+        ///   {% elsif msg1 contains 'okay thanks' or msg2 contains 'okay thanks' or msg3 contains 'okay thanks' %}<br/>
+        ///     true<br/>
+        ///   {% elsif msg1 contains 'got it' or msg2 contains 'got it' or msg3 contains 'got it' %}<br/>
+        ///     true<br/>
+        ///   {% else %}<br/>
+        ///     false<br/>
+        ///   {% endif %}<br/>
+        /// {% endif %}`<br/>
+        ///   }]<br/>
+        /// }<br/>
+        /// ```
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public UpdateKnowledgeBaseToolDTO(
+            global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
+            global::Vapi.UpdateKnowledgeBaseToolDTOType? type,
+            global::System.Guid? knowledgeBaseId,
+            global::Vapi.KnowledgeBaseToolFunction? function,
+            global::Vapi.ToolRejectionPlan? rejectionPlan)
+        {
+            this.Messages = messages;
+            this.Type = type;
+            this.KnowledgeBaseId = knowledgeBaseId;
+            this.Function = function;
+            this.RejectionPlan = rejectionPlan;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UpdateKnowledgeBaseToolDTO" /> class.
+        /// </summary>
+        public UpdateKnowledgeBaseToolDTO()
+        {
+        }
+
+    }
+}

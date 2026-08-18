@@ -56,6 +56,13 @@ namespace Vapi.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.FunctionTool)}");
                 function = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+            global::Vapi.KnowledgeBaseTool? knowledgeBase = default;
+            if (discriminator?.Type == global::Vapi.ToolControllerRemoveResponseDiscriminatorType.KnowledgeBase)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.KnowledgeBaseTool), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.KnowledgeBaseTool> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.KnowledgeBaseTool)}");
+                knowledgeBase = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
             global::Vapi.GhlTool? ghl = default;
             if (discriminator?.Type == global::Vapi.ToolControllerRemoveResponseDiscriminatorType.Ghl)
             {
@@ -202,6 +209,8 @@ namespace Vapi.JsonConverters
 
                 function,
 
+                knowledgeBase,
+
                 ghl,
 
                 transferCall,
@@ -282,6 +291,12 @@ namespace Vapi.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.FunctionTool), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.FunctionTool?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.FunctionTool).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.Function!, typeInfo);
+            }
+            else if (value.IsKnowledgeBase)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.KnowledgeBaseTool), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.KnowledgeBaseTool?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.KnowledgeBaseTool).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.KnowledgeBase!, typeInfo);
             }
             else if (value.IsGhl)
             {

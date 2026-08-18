@@ -75,6 +75,10 @@ namespace Vapi
         /// <summary>
         /// 
         /// </summary>
+        KnowledgeBase,
+        /// <summary>
+        /// 
+        /// </summary>
         Mcp,
         /// <summary>
         /// 
@@ -134,6 +138,7 @@ namespace Vapi
                 ToolControllerCreateResponseDiscriminatorType.GoogleCalendarEventCreate => "google.calendar.event.create",
                 ToolControllerCreateResponseDiscriminatorType.GoogleSheetsRowAppend => "google.sheets.row.append",
                 ToolControllerCreateResponseDiscriminatorType.Handoff => "handoff",
+                ToolControllerCreateResponseDiscriminatorType.KnowledgeBase => "knowledgeBase",
                 ToolControllerCreateResponseDiscriminatorType.Mcp => "mcp",
                 ToolControllerCreateResponseDiscriminatorType.Query => "query",
                 ToolControllerCreateResponseDiscriminatorType.SipRequest => "sipRequest",
@@ -168,6 +173,7 @@ namespace Vapi
                 "google.calendar.event.create" => ToolControllerCreateResponseDiscriminatorType.GoogleCalendarEventCreate,
                 "google.sheets.row.append" => ToolControllerCreateResponseDiscriminatorType.GoogleSheetsRowAppend,
                 "handoff" => ToolControllerCreateResponseDiscriminatorType.Handoff,
+                "knowledgeBase" => ToolControllerCreateResponseDiscriminatorType.KnowledgeBase,
                 "mcp" => ToolControllerCreateResponseDiscriminatorType.Mcp,
                 "query" => ToolControllerCreateResponseDiscriminatorType.Query,
                 "sipRequest" => ToolControllerCreateResponseDiscriminatorType.SipRequest,

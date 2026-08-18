@@ -28,15 +28,11 @@ namespace Vapi
         partial void PrepareSimulationRunControllerCreateArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? userAgent,
-            ref string? xClientSource,
-            ref string? xSimulationEntryPoint,
             global::Vapi.CreateSimulationRunDTO request);
         partial void PrepareSimulationRunControllerCreateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string? userAgent,
-            string? xClientSource,
-            string? xSimulationEntryPoint,
             global::Vapi.CreateSimulationRunDTO request);
         partial void ProcessSimulationRunControllerCreateResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -51,8 +47,6 @@ namespace Vapi
         /// Create Simulation Run
         /// </summary>
         /// <param name="userAgent"></param>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -61,8 +55,6 @@ namespace Vapi
 
             global::Vapi.CreateSimulationRunDTO request,
             string? userAgent = default,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -70,8 +62,6 @@ namespace Vapi
 
                 request: request,
                 userAgent: userAgent,
-                xClientSource: xClientSource,
-                xSimulationEntryPoint: xSimulationEntryPoint,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -82,8 +72,6 @@ namespace Vapi
         /// Create Simulation Run
         /// </summary>
         /// <param name="userAgent"></param>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -92,8 +80,6 @@ namespace Vapi
 
             global::Vapi.CreateSimulationRunDTO request,
             string? userAgent = default,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -104,8 +90,6 @@ namespace Vapi
             PrepareSimulationRunControllerCreateArguments(
                 httpClient: HttpClient,
                 userAgent: ref userAgent,
-                xClientSource: ref xClientSource,
-                xSimulationEntryPoint: ref xSimulationEntryPoint,
                 request: request);
 
 
@@ -168,14 +152,6 @@ namespace Vapi
             {
                 __httpRequest.Headers.TryAddWithoutValidation("user-agent", userAgent.ToString());
             }
-            if (xClientSource != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-client-source", xClientSource.ToString());
-            }
-            if (xSimulationEntryPoint != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-simulation-entry-point", xSimulationEntryPoint.ToString());
-            }
 
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -195,8 +171,6 @@ namespace Vapi
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     userAgent: userAgent,
-                    xClientSource: xClientSource,
-                    xSimulationEntryPoint: xSimulationEntryPoint,
                     request: request);
 
                 return __httpRequest;
@@ -513,8 +487,6 @@ namespace Vapi
         /// Create Simulation Run
         /// </summary>
         /// <param name="userAgent"></param>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="simulations">
         /// Array of simulations and/or suites to run
         /// </param>
@@ -535,8 +507,6 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationRunSimulationEntry, global::Vapi.SimulationRunSuiteEntry>> simulations,
             global::Vapi.OneOf<global::Vapi.SimulationRunTargetAssistant, global::Vapi.SimulationRunTargetSquad> target,
             string? userAgent = default,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             double? iterations = default,
             global::Vapi.SimulationRunTransportConfiguration? transport = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -552,8 +522,6 @@ namespace Vapi
 
             return await SimulationRunControllerCreateAsync(
                 userAgent: userAgent,
-                xClientSource: xClientSource,
-                xSimulationEntryPoint: xSimulationEntryPoint,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

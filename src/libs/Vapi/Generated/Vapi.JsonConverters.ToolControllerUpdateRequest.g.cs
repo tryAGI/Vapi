@@ -56,6 +56,13 @@ namespace Vapi.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.UpdateFunctionToolDTO)}");
                 function = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+            global::Vapi.UpdateKnowledgeBaseToolDTO? knowledgeBase = default;
+            if (discriminator?.Type == global::Vapi.ToolControllerUpdateRequestDiscriminatorType.KnowledgeBase)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateKnowledgeBaseToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateKnowledgeBaseToolDTO> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.UpdateKnowledgeBaseToolDTO)}");
+                knowledgeBase = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
             global::Vapi.UpdateTransferCallToolDTO? transferCall = default;
             if (discriminator?.Type == global::Vapi.ToolControllerUpdateRequestDiscriminatorType.TransferCall)
             {
@@ -195,6 +202,8 @@ namespace Vapi.JsonConverters
 
                 function,
 
+                knowledgeBase,
+
                 transferCall,
 
                 handoff,
@@ -273,6 +282,12 @@ namespace Vapi.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateFunctionToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateFunctionToolDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateFunctionToolDTO).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.Function!, typeInfo);
+            }
+            else if (value.IsKnowledgeBase)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.UpdateKnowledgeBaseToolDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.UpdateKnowledgeBaseToolDTO?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.UpdateKnowledgeBaseToolDTO).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.KnowledgeBase!, typeInfo);
             }
             else if (value.IsTransferCall)
             {

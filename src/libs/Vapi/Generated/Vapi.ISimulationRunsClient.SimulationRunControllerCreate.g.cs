@@ -8,8 +8,6 @@ namespace Vapi
         /// Create Simulation Run
         /// </summary>
         /// <param name="userAgent"></param>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -18,16 +16,12 @@ namespace Vapi
 
             global::Vapi.CreateSimulationRunDTO request,
             string? userAgent = default,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Simulation Run
         /// </summary>
         /// <param name="userAgent"></param>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -36,16 +30,12 @@ namespace Vapi
 
             global::Vapi.CreateSimulationRunDTO request,
             string? userAgent = default,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Simulation Run
         /// </summary>
         /// <param name="userAgent"></param>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="simulations">
         /// Array of simulations and/or suites to run
         /// </param>
@@ -66,8 +56,6 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationRunSimulationEntry, global::Vapi.SimulationRunSuiteEntry>> simulations,
             global::Vapi.OneOf<global::Vapi.SimulationRunTargetAssistant, global::Vapi.SimulationRunTargetSquad> target,
             string? userAgent = default,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             double? iterations = default,
             global::Vapi.SimulationRunTransportConfiguration? transport = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,

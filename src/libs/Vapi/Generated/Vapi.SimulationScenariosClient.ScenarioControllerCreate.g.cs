@@ -27,14 +27,10 @@ namespace Vapi
             };
         partial void PrepareScenarioControllerCreateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string? xClientSource,
-            ref string? xSimulationEntryPoint,
             global::Vapi.CreateScenarioDTO request);
         partial void PrepareScenarioControllerCreateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string? xClientSource,
-            string? xSimulationEntryPoint,
             global::Vapi.CreateScenarioDTO request);
         partial void ProcessScenarioControllerCreateResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -48,8 +44,6 @@ namespace Vapi
         /// <summary>
         /// Create Scenario
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -57,16 +51,12 @@ namespace Vapi
         public async global::System.Threading.Tasks.Task<global::Vapi.Scenario> ScenarioControllerCreateAsync(
 
             global::Vapi.CreateScenarioDTO request,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await ScenarioControllerCreateAsResponseAsync(
 
                 request: request,
-                xClientSource: xClientSource,
-                xSimulationEntryPoint: xSimulationEntryPoint,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -76,8 +66,6 @@ namespace Vapi
         /// <summary>
         /// Create Scenario
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -85,8 +73,6 @@ namespace Vapi
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Scenario>> ScenarioControllerCreateAsResponseAsync(
 
             global::Vapi.CreateScenarioDTO request,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -96,8 +82,6 @@ namespace Vapi
                 client: HttpClient);
             PrepareScenarioControllerCreateArguments(
                 httpClient: HttpClient,
-                xClientSource: ref xClientSource,
-                xSimulationEntryPoint: ref xSimulationEntryPoint,
                 request: request);
 
 
@@ -155,16 +139,6 @@ namespace Vapi
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-
-            if (xClientSource != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-client-source", xClientSource.ToString());
-            }
-            if (xSimulationEntryPoint != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-simulation-entry-point", xSimulationEntryPoint.ToString());
-            }
-
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
                                 content: __httpRequestContentBody,
@@ -182,8 +156,6 @@ namespace Vapi
                 PrepareScenarioControllerCreateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    xClientSource: xClientSource,
-                    xSimulationEntryPoint: xSimulationEntryPoint,
                     request: request);
 
                 return __httpRequest;
@@ -462,8 +434,6 @@ namespace Vapi
         /// <summary>
         /// Create Scenario
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="name">
         /// This is the name of the scenario.<br/>
         /// Example: Health Enrollment - Eligible Path
@@ -498,8 +468,6 @@ namespace Vapi
             string name,
             string instructions,
             global::System.Collections.Generic.IList<global::Vapi.EvaluationPlanItem> evaluations,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>? hooks = default,
             global::Vapi.AssistantOverrides? targetOverrides = default,
             global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? toolMocks = default,
@@ -519,8 +487,6 @@ namespace Vapi
             };
 
             return await ScenarioControllerCreateAsync(
-                xClientSource: xClientSource,
-                xSimulationEntryPoint: xSimulationEntryPoint,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

@@ -28,15 +28,11 @@ namespace Vapi
         partial void PreparePersonalityControllerUpdateArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid id,
-            ref string? xClientSource,
-            ref string? xSimulationEntryPoint,
             global::Vapi.UpdatePersonalityDTO request);
         partial void PreparePersonalityControllerUpdateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::System.Guid id,
-            string? xClientSource,
-            string? xSimulationEntryPoint,
             global::Vapi.UpdatePersonalityDTO request);
         partial void ProcessPersonalityControllerUpdateResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -51,8 +47,6 @@ namespace Vapi
         /// Update Personality
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -61,8 +55,6 @@ namespace Vapi
             global::System.Guid id,
 
             global::Vapi.UpdatePersonalityDTO request,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -70,8 +62,6 @@ namespace Vapi
                 id: id,
 
                 request: request,
-                xClientSource: xClientSource,
-                xSimulationEntryPoint: xSimulationEntryPoint,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -82,8 +72,6 @@ namespace Vapi
         /// Update Personality
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -92,8 +80,6 @@ namespace Vapi
             global::System.Guid id,
 
             global::Vapi.UpdatePersonalityDTO request,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -104,8 +90,6 @@ namespace Vapi
             PreparePersonalityControllerUpdateArguments(
                 httpClient: HttpClient,
                 id: ref id,
-                xClientSource: ref xClientSource,
-                xSimulationEntryPoint: ref xSimulationEntryPoint,
                 request: request);
 
 
@@ -163,16 +147,6 @@ namespace Vapi
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-
-            if (xClientSource != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-client-source", xClientSource.ToString());
-            }
-            if (xSimulationEntryPoint != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-simulation-entry-point", xSimulationEntryPoint.ToString());
-            }
-
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
                                 content: __httpRequestContentBody,
@@ -191,8 +165,6 @@ namespace Vapi
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     id: id!,
-                    xClientSource: xClientSource,
-                    xSimulationEntryPoint: xSimulationEntryPoint,
                     request: request);
 
                 return __httpRequest;
@@ -472,8 +444,6 @@ namespace Vapi
         /// Update Personality
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="name">
         /// This is the name of the personality.
         /// </param>
@@ -490,8 +460,6 @@ namespace Vapi
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.Personality> PersonalityControllerUpdateAsync(
             global::System.Guid id,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             string? name = default,
             global::Vapi.CreateAssistantDTO? assistant = default,
             string? path = default,
@@ -507,8 +475,6 @@ namespace Vapi
 
             return await PersonalityControllerUpdateAsync(
                 id: id,
-                xClientSource: xClientSource,
-                xSimulationEntryPoint: xSimulationEntryPoint,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

@@ -27,14 +27,10 @@ namespace Vapi
             };
         partial void PreparePersonalityControllerCreateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string? xClientSource,
-            ref string? xSimulationEntryPoint,
             global::Vapi.CreatePersonalityDTO request);
         partial void PreparePersonalityControllerCreateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string? xClientSource,
-            string? xSimulationEntryPoint,
             global::Vapi.CreatePersonalityDTO request);
         partial void ProcessPersonalityControllerCreateResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -48,8 +44,6 @@ namespace Vapi
         /// <summary>
         /// Create Personality
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -57,16 +51,12 @@ namespace Vapi
         public async global::System.Threading.Tasks.Task<global::Vapi.Personality> PersonalityControllerCreateAsync(
 
             global::Vapi.CreatePersonalityDTO request,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await PersonalityControllerCreateAsResponseAsync(
 
                 request: request,
-                xClientSource: xClientSource,
-                xSimulationEntryPoint: xSimulationEntryPoint,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -76,8 +66,6 @@ namespace Vapi
         /// <summary>
         /// Create Personality
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -85,8 +73,6 @@ namespace Vapi
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Personality>> PersonalityControllerCreateAsResponseAsync(
 
             global::Vapi.CreatePersonalityDTO request,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -96,8 +82,6 @@ namespace Vapi
                 client: HttpClient);
             PreparePersonalityControllerCreateArguments(
                 httpClient: HttpClient,
-                xClientSource: ref xClientSource,
-                xSimulationEntryPoint: ref xSimulationEntryPoint,
                 request: request);
 
 
@@ -155,16 +139,6 @@ namespace Vapi
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-
-            if (xClientSource != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-client-source", xClientSource.ToString());
-            }
-            if (xSimulationEntryPoint != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-simulation-entry-point", xSimulationEntryPoint.ToString());
-            }
-
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
                                 content: __httpRequestContentBody,
@@ -182,8 +156,6 @@ namespace Vapi
                 PreparePersonalityControllerCreateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    xClientSource: xClientSource,
-                    xSimulationEntryPoint: xSimulationEntryPoint,
                     request: request);
 
                 return __httpRequest;
@@ -462,8 +434,6 @@ namespace Vapi
         /// <summary>
         /// Create Personality
         /// </summary>
-        /// <param name="xClientSource"></param>
-        /// <param name="xSimulationEntryPoint"></param>
         /// <param name="name">
         /// This is the name of the personality (e.g., "Confused Carl", "Rude Rob").
         /// </param>
@@ -482,8 +452,6 @@ namespace Vapi
         public async global::System.Threading.Tasks.Task<global::Vapi.Personality> PersonalityControllerCreateAsync(
             string name,
             global::Vapi.CreateAssistantDTO assistant,
-            string? xClientSource = default,
-            string? xSimulationEntryPoint = default,
             string? path = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -496,8 +464,6 @@ namespace Vapi
             };
 
             return await PersonalityControllerCreateAsync(
-                xClientSource: xClientSource,
-                xSimulationEntryPoint: xSimulationEntryPoint,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
