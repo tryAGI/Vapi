@@ -36,6 +36,16 @@ namespace Vapi
         public bool? RoomDeleteOnUserLeaveEnabled { get; set; }
 
         /// <summary>
+        /// This is the meeting token the web client should join the call with.<br/>
+        /// When video recording is enabled, joining with this token starts the cloud<br/>
+        /// recording automatically server-side, which is more reliable than the<br/>
+        /// client starting it after joining. Set by the server; only present when<br/>
+        /// video recording is enabled.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("callToken")]
+        public string? CallToken { get; set; }
+
+        /// <summary>
         /// This is the URL of the web call.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("callUrl")]
@@ -71,6 +81,13 @@ namespace Vapi
         /// Default Value: true<br/>
         /// Example: true
         /// </param>
+        /// <param name="callToken">
+        /// This is the meeting token the web client should join the call with.<br/>
+        /// When video recording is enabled, joining with this token starts the cloud<br/>
+        /// recording automatically server-side, which is more reliable than the<br/>
+        /// client starting it after joining. Set by the server; only present when<br/>
+        /// video recording is enabled.
+        /// </param>
         /// <param name="callUrl">
         /// This is the URL of the web call.
         /// </param>
@@ -84,12 +101,14 @@ namespace Vapi
             global::Vapi.VapiWebCallTransportConversationType? conversationType,
             global::Vapi.VapiWebCallTransportProvider provider,
             bool? roomDeleteOnUserLeaveEnabled,
+            string? callToken,
             string? callUrl,
             string? callSipUri)
         {
             this.ConversationType = conversationType;
             this.Provider = provider;
             this.RoomDeleteOnUserLeaveEnabled = roomDeleteOnUserLeaveEnabled;
+            this.CallToken = callToken;
             this.CallUrl = callUrl;
             this.CallSipUri = callSipUri;
         }
