@@ -17124,6 +17124,11 @@
             "type": "string",
             "description": "This is the assistant to transfer the call to."
           },
+          "name": {
+            "type": "string",
+            "description": "This is the name of the transfer destination. This is just for your own reference.\n\nUsage:\n- Optional. Stored with the destination wherever it is supplied. For `number`\n  and `sip` destinations it is also persisted on the transfer record in the\n  call artifact after a transfer and displayed in the dashboard call log (on\n  the transfer divider in the transcript view) alongside the destination.\n  When omitted, everything behaves exactly as before.\n- Display-only. Unlike `description`, it is never included in prompts or tool\n  descriptions and has no effect on model behavior or destination choice.",
+            "maxLength": 40
+          },
           "description": {
             "type": "string",
             "description": "This is the description of the destination, used by the AI to choose when and how to transfer the call."
@@ -18077,6 +18082,11 @@
               }
             ]
           },
+          "name": {
+            "type": "string",
+            "description": "This is the name of the transfer destination. This is just for your own reference.\n\nUsage:\n- Optional. Stored with the destination wherever it is supplied. For `number`\n  and `sip` destinations it is also persisted on the transfer record in the\n  call artifact after a transfer and displayed in the dashboard call log (on\n  the transfer divider in the transcript view) alongside the destination.\n  When omitted, everything behaves exactly as before.\n- Display-only. Unlike `description`, it is never included in prompts or tool\n  descriptions and has no effect on model behavior or destination choice.",
+            "maxLength": 40
+          },
           "description": {
             "type": "string",
             "description": "This is the description of the destination, used by the AI to choose when and how to transfer the call."
@@ -18127,6 +18137,11 @@
           "sipHeaders": {
             "type": "object",
             "description": "These are custom headers to be added to SIP refer during transfer call."
+          },
+          "name": {
+            "type": "string",
+            "description": "This is the name of the transfer destination. This is just for your own reference.\n\nUsage:\n- Optional. Stored with the destination wherever it is supplied. For `number`\n  and `sip` destinations it is also persisted on the transfer record in the\n  call artifact after a transfer and displayed in the dashboard call log (on\n  the transfer divider in the transcript view) alongside the destination.\n  When omitted, everything behaves exactly as before.\n- Display-only. Unlike `description`, it is never included in prompts or tool\n  descriptions and has no effect on model behavior or destination choice.",
+            "maxLength": 40
           },
           "description": {
             "type": "string",

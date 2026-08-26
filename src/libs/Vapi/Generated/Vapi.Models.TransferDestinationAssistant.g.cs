@@ -111,6 +111,20 @@ namespace Vapi
         public required string AssistantName { get; set; }
 
         /// <summary>
+        /// This is the name of the transfer destination. This is just for your own reference.<br/>
+        /// Usage:<br/>
+        /// - Optional. Stored with the destination wherever it is supplied. For `number`<br/>
+        ///   and `sip` destinations it is also persisted on the transfer record in the<br/>
+        ///   call artifact after a transfer and displayed in the dashboard call log (on<br/>
+        ///   the transfer divider in the transcript view) alongside the destination.<br/>
+        ///   When omitted, everything behaves exactly as before.<br/>
+        /// - Display-only. Unlike `description`, it is never included in prompts or tool<br/>
+        ///   descriptions and has no effect on model behavior or destination choice.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
         /// This is the description of the destination, used by the AI to choose when and how to transfer the call.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
@@ -209,6 +223,17 @@ namespace Vapi
         ///     assistant: assistant2 first message (or model generated if firstMessageMode is set to `assistant-speaks-first-with-model-generated-message`)<br/>
         /// @default 'rolling-history'
         /// </param>
+        /// <param name="name">
+        /// This is the name of the transfer destination. This is just for your own reference.<br/>
+        /// Usage:<br/>
+        /// - Optional. Stored with the destination wherever it is supplied. For `number`<br/>
+        ///   and `sip` destinations it is also persisted on the transfer record in the<br/>
+        ///   call artifact after a transfer and displayed in the dashboard call log (on<br/>
+        ///   the transfer divider in the transcript view) alongside the destination.<br/>
+        ///   When omitted, everything behaves exactly as before.<br/>
+        /// - Display-only. Unlike `description`, it is never included in prompts or tool<br/>
+        ///   descriptions and has no effect on model behavior or destination choice.
+        /// </param>
         /// <param name="description">
         /// This is the description of the destination, used by the AI to choose when and how to transfer the call.
         /// </param>
@@ -220,12 +245,14 @@ namespace Vapi
             global::Vapi.OneOf<string, global::Vapi.CustomMessage>? message,
             global::Vapi.TransferDestinationAssistantType type,
             global::Vapi.TransferDestinationAssistantTransferMode? transferMode,
+            string? name,
             string? description)
         {
             this.Message = message;
             this.Type = type;
             this.TransferMode = transferMode;
             this.AssistantName = assistantName ?? throw new global::System.ArgumentNullException(nameof(assistantName));
+            this.Name = name;
             this.Description = description;
         }
 
