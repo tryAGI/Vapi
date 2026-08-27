@@ -4,20 +4,20 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FallbackVapiVoiceVersion2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Latest,
     }

@@ -14,15 +14,15 @@ namespace Vapi
     public enum CustomLLMModelMetadataSendMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Destructured,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Off,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Variable,
     }

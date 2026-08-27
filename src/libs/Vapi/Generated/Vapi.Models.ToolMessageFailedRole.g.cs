@@ -23,7 +23,7 @@ namespace Vapi
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         System,
     }

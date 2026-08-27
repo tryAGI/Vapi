@@ -18,7 +18,7 @@ namespace Vapi
     public enum AssistantCustomEndpointingRuleType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
     }

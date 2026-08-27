@@ -10,12 +10,12 @@ namespace Vapi
     public readonly partial struct AuthenticationPlan6 : global::System.IEquatable<AuthenticationPlan6>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType? Type { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.OAuth2AuthenticationPlan? Oauth2 { get; init; }
@@ -24,7 +24,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Oauth2))]
@@ -32,7 +32,7 @@ namespace Vapi
         public bool IsOauth2 => Oauth2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickOauth2(
 #if NET6_0_OR_GREATER
@@ -45,14 +45,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.OAuth2AuthenticationPlan PickOauth2() => IsOauth2
             ? Oauth2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Oauth2' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.HMACAuthenticationPlan? Hmac { get; init; }
@@ -61,7 +61,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Hmac))]
@@ -69,7 +69,7 @@ namespace Vapi
         public bool IsHmac => Hmac != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickHmac(
 #if NET6_0_OR_GREATER
@@ -82,14 +82,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.HMACAuthenticationPlan PickHmac() => IsHmac
             ? Hmac!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Hmac' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.BearerAuthenticationPlan? Bearer { get; init; }
@@ -98,7 +98,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Bearer))]
@@ -106,7 +106,7 @@ namespace Vapi
         public bool IsBearer => Bearer != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickBearer(
 #if NET6_0_OR_GREATER
@@ -119,23 +119,23 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.BearerAuthenticationPlan PickBearer() => IsBearer
             ? Bearer!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Bearer' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthenticationPlan6(global::Vapi.OAuth2AuthenticationPlan value) => new AuthenticationPlan6((global::Vapi.OAuth2AuthenticationPlan?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.OAuth2AuthenticationPlan?(AuthenticationPlan6 @this) => @this.Oauth2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthenticationPlan6(global::Vapi.OAuth2AuthenticationPlan? value)
         {
@@ -143,22 +143,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthenticationPlan6 FromOauth2(global::Vapi.OAuth2AuthenticationPlan? value) => new AuthenticationPlan6(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthenticationPlan6(global::Vapi.HMACAuthenticationPlan value) => new AuthenticationPlan6((global::Vapi.HMACAuthenticationPlan?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.HMACAuthenticationPlan?(AuthenticationPlan6 @this) => @this.Hmac;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthenticationPlan6(global::Vapi.HMACAuthenticationPlan? value)
         {
@@ -166,22 +166,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthenticationPlan6 FromHmac(global::Vapi.HMACAuthenticationPlan? value) => new AuthenticationPlan6(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthenticationPlan6(global::Vapi.BearerAuthenticationPlan value) => new AuthenticationPlan6((global::Vapi.BearerAuthenticationPlan?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.BearerAuthenticationPlan?(AuthenticationPlan6 @this) => @this.Bearer;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthenticationPlan6(global::Vapi.BearerAuthenticationPlan? value)
         {
@@ -189,12 +189,12 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthenticationPlan6 FromBearer(global::Vapi.BearerAuthenticationPlan? value) => new AuthenticationPlan6(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthenticationPlan6(
             global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType? type,
@@ -211,25 +211,25 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Bearer as object ??
             Hmac as object ??
-            Oauth2 as object 
+            Oauth2 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Oauth2?.ToString() ??
             Hmac?.ToString() ??
-            Bearer?.ToString() 
+            Bearer?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -237,7 +237,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Vapi.OAuth2AuthenticationPlan, TResult>? oauth2 = null,
@@ -267,7 +267,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Vapi.OAuth2AuthenticationPlan>? oauth2 = null,
@@ -297,7 +297,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Vapi.OAuth2AuthenticationPlan>? oauth2 = null,
@@ -325,7 +325,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -348,19 +348,19 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(AuthenticationPlan6 other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.OAuth2AuthenticationPlan?>.Default.Equals(Oauth2, other.Oauth2) &&
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.HMACAuthenticationPlan?>.Default.Equals(Hmac, other.Hmac) &&
-                global::System.Collections.Generic.EqualityComparer<global::Vapi.BearerAuthenticationPlan?>.Default.Equals(Bearer, other.Bearer) 
+                global::System.Collections.Generic.EqualityComparer<global::Vapi.BearerAuthenticationPlan?>.Default.Equals(Bearer, other.Bearer)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(AuthenticationPlan6 obj1, AuthenticationPlan6 obj2)
         {
@@ -368,7 +368,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(AuthenticationPlan6 obj1, AuthenticationPlan6 obj2)
         {
@@ -376,7 +376,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

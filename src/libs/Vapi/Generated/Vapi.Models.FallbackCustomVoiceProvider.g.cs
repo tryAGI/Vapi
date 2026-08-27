@@ -9,7 +9,7 @@ namespace Vapi
     public enum FallbackCustomVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomVoice,
     }

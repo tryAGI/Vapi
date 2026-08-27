@@ -9,7 +9,7 @@ namespace Vapi
     public enum GoogleVoicemailDetectionPlanProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Google,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateToolTemplateDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tool,
     }

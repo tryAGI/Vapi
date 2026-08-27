@@ -20,7 +20,7 @@ namespace Vapi.JsonConverters
                     {
                         return global::Vapi.KnowledgeBaseV2FileStatusExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

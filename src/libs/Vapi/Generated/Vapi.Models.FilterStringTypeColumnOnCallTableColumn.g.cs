@@ -12,43 +12,43 @@ namespace Vapi
     public enum FilterStringTypeColumnOnCallTableColumn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndedReason,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ForwardedPhoneNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhoneNumberId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SquadId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Status,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Type,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkflowId,
     }

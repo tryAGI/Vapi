@@ -9,7 +9,7 @@ namespace Vapi
     public enum TwilioPhoneNumberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Twilio,
     }

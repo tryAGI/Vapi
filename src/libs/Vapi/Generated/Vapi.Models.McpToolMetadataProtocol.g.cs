@@ -9,11 +9,11 @@ namespace Vapi
     public enum McpToolMetadataProtocol
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Shttp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sse,
     }

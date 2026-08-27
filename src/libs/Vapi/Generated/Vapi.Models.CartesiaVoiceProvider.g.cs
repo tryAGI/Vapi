@@ -9,7 +9,7 @@ namespace Vapi
     public enum CartesiaVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cartesia,
     }

@@ -20,7 +20,7 @@ namespace Vapi.JsonConverters
                     {
                         return global::Vapi.FallbackTavusVoiceProviderExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

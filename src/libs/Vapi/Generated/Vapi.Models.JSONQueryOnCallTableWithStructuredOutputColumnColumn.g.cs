@@ -11,7 +11,7 @@ namespace Vapi
     public enum JSONQueryOnCallTableWithStructuredOutputColumnColumn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArtifactStructuredOutputsOutputID,
     }

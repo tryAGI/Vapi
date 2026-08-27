@@ -10,7 +10,7 @@ namespace Vapi
     public enum ResponseTextDeltaEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseOutputTextDelta,
     }

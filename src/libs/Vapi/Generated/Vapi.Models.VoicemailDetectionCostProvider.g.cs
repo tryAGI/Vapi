@@ -9,19 +9,19 @@ namespace Vapi
     public enum VoicemailDetectionCostProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Google,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Twilio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vapi,
     }

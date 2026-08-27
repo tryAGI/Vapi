@@ -4,20 +4,20 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum WebhookCredentialAuthenticationPlanDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bearer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hmac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Oauth2,
     }

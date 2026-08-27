@@ -9,7 +9,7 @@ namespace Vapi
     public enum SimulationRunTargetSquadType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Squad,
     }

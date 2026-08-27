@@ -10,11 +10,11 @@ namespace Vapi
     public enum MinimaxVoiceRegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         China,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Worldwide,
     }

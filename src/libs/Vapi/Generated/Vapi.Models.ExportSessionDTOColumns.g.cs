@@ -10,51 +10,51 @@ namespace Vapi
     public enum ExportSessionDTOColumns
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreatedAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerName,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Messages,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Name,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhoneNumberId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SquadId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Status,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UpdatedAt,
     }

@@ -11,7 +11,7 @@ namespace Vapi
     public enum AssistantMessageJudgePlanExactType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Exact,
     }

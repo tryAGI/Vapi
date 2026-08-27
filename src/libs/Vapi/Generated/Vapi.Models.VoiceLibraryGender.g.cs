@@ -9,11 +9,11 @@ namespace Vapi
     public enum VoiceLibraryGender
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Female,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Male,
     }

@@ -11,7 +11,7 @@ namespace Vapi
     public enum JSONQueryOnCallTableWithStringTypeColumnOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Count,
     }

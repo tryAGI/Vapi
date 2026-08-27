@@ -9,7 +9,7 @@ namespace Vapi
     public enum ElevenLabsTranscriberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x11labs,
     }

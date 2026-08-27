@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TransferDestinationAssistant
     {
@@ -20,7 +20,7 @@ namespace Vapi
         public global::Vapi.OneOf<string, global::Vapi.CustomMessage>? Message { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.TransferDestinationAssistantTypeJsonConverter))]

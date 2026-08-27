@@ -12,35 +12,35 @@ namespace Vapi
     public enum JSONQueryOnCallTableWithNumberTypeColumnColumn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArtifactStructuredOutputsOutputID,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AverageEndpointingLatency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AverageModelLatency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AverageTranscriberLatency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AverageTurnLatency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AverageVoiceLatency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageAssistantSpeechType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantSpeechStarted,
     }

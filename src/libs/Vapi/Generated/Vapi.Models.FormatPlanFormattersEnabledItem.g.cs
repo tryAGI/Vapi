@@ -4,76 +4,76 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FormatPlanFormattersEnabledItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Acronym,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asterisk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Colon,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dash,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Date,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Distance,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DollarAmount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Email,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Markdown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Newline,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Number,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Percentage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhoneNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Quote,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StripAsterisk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Time,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unit,
     }

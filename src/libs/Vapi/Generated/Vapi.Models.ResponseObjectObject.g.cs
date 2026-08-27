@@ -10,7 +10,7 @@ namespace Vapi
     public enum ResponseObjectObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Response,
     }

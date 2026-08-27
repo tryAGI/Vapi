@@ -9,7 +9,7 @@ namespace Vapi
     public enum QueryToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Query,
     }

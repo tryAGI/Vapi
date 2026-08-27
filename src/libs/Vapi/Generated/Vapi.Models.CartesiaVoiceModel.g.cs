@@ -10,47 +10,47 @@ namespace Vapi
     public enum CartesiaVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sonic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sonic2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sonic220250611,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sonic3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sonic320251027,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sonic320260112,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sonic35,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sonic3520260504,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SonicEnglish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SonicMultilingual,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SonicPreview,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum TranscriberCostType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Transcriber,
     }

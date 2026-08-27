@@ -10,7 +10,7 @@ namespace Vapi
     public enum MinCallDurationConditionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MinCallDuration,
     }

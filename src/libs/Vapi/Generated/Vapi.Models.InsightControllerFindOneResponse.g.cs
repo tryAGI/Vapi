@@ -5,17 +5,17 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct InsightControllerFindOneResponse : global::System.IEquatable<InsightControllerFindOneResponse>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.InsightControllerFindOneResponseDiscriminatorType? Type { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.BarInsight? Bar { get; init; }
@@ -24,7 +24,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Bar))]
@@ -32,7 +32,7 @@ namespace Vapi
         public bool IsBar => Bar != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickBar(
 #if NET6_0_OR_GREATER
@@ -45,14 +45,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.BarInsight PickBar() => IsBar
             ? Bar!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Bar' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.PieInsight? Pie { get; init; }
@@ -61,7 +61,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Pie))]
@@ -69,7 +69,7 @@ namespace Vapi
         public bool IsPie => Pie != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPie(
 #if NET6_0_OR_GREATER
@@ -82,14 +82,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.PieInsight PickPie() => IsPie
             ? Pie!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Pie' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.LineInsight? Line { get; init; }
@@ -98,7 +98,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Line))]
@@ -106,7 +106,7 @@ namespace Vapi
         public bool IsLine => Line != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickLine(
 #if NET6_0_OR_GREATER
@@ -119,14 +119,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.LineInsight PickLine() => IsLine
             ? Line!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Line' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.TextInsight? Text { get; init; }
@@ -135,7 +135,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Text))]
@@ -143,7 +143,7 @@ namespace Vapi
         public bool IsText => Text != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickText(
 #if NET6_0_OR_GREATER
@@ -156,23 +156,23 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.TextInsight PickText() => IsText
             ? Text!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InsightControllerFindOneResponse(global::Vapi.BarInsight value) => new InsightControllerFindOneResponse((global::Vapi.BarInsight?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.BarInsight?(InsightControllerFindOneResponse @this) => @this.Bar;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InsightControllerFindOneResponse(global::Vapi.BarInsight? value)
         {
@@ -180,22 +180,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InsightControllerFindOneResponse FromBar(global::Vapi.BarInsight? value) => new InsightControllerFindOneResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InsightControllerFindOneResponse(global::Vapi.PieInsight value) => new InsightControllerFindOneResponse((global::Vapi.PieInsight?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.PieInsight?(InsightControllerFindOneResponse @this) => @this.Pie;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InsightControllerFindOneResponse(global::Vapi.PieInsight? value)
         {
@@ -203,22 +203,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InsightControllerFindOneResponse FromPie(global::Vapi.PieInsight? value) => new InsightControllerFindOneResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InsightControllerFindOneResponse(global::Vapi.LineInsight value) => new InsightControllerFindOneResponse((global::Vapi.LineInsight?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.LineInsight?(InsightControllerFindOneResponse @this) => @this.Line;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InsightControllerFindOneResponse(global::Vapi.LineInsight? value)
         {
@@ -226,22 +226,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InsightControllerFindOneResponse FromLine(global::Vapi.LineInsight? value) => new InsightControllerFindOneResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InsightControllerFindOneResponse(global::Vapi.TextInsight value) => new InsightControllerFindOneResponse((global::Vapi.TextInsight?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.TextInsight?(InsightControllerFindOneResponse @this) => @this.Text;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InsightControllerFindOneResponse(global::Vapi.TextInsight? value)
         {
@@ -249,12 +249,12 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InsightControllerFindOneResponse FromText(global::Vapi.TextInsight? value) => new InsightControllerFindOneResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InsightControllerFindOneResponse(
             global::Vapi.InsightControllerFindOneResponseDiscriminatorType? type,
@@ -273,27 +273,27 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Text as object ??
             Line as object ??
             Pie as object ??
-            Bar as object 
+            Bar as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Bar?.ToString() ??
             Pie?.ToString() ??
             Line?.ToString() ??
-            Text?.ToString() 
+            Text?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -301,7 +301,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Vapi.BarInsight, TResult>? bar = null,
@@ -336,7 +336,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Vapi.BarInsight>? bar = null,
@@ -372,7 +372,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Vapi.BarInsight>? bar = null,
@@ -405,7 +405,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -430,7 +430,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(InsightControllerFindOneResponse other)
         {
@@ -438,12 +438,12 @@ namespace Vapi
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.BarInsight?>.Default.Equals(Bar, other.Bar) &&
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.PieInsight?>.Default.Equals(Pie, other.Pie) &&
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.LineInsight?>.Default.Equals(Line, other.Line) &&
-                global::System.Collections.Generic.EqualityComparer<global::Vapi.TextInsight?>.Default.Equals(Text, other.Text) 
+                global::System.Collections.Generic.EqualityComparer<global::Vapi.TextInsight?>.Default.Equals(Text, other.Text)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(InsightControllerFindOneResponse obj1, InsightControllerFindOneResponse obj2)
         {
@@ -451,7 +451,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(InsightControllerFindOneResponse obj1, InsightControllerFindOneResponse obj2)
         {
@@ -459,7 +459,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -9,23 +9,23 @@ namespace Vapi
     public enum CartesiaExperimentalControlsSpeed
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fastest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Normal,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slow,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slowest,
     }

@@ -10,11 +10,11 @@ namespace Vapi
     public enum GladiaTranscriberRegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EuWest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UsWest,
     }

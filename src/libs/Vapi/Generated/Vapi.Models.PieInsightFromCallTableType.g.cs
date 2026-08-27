@@ -10,7 +10,7 @@ namespace Vapi
     public enum PieInsightFromCallTableType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pie,
     }

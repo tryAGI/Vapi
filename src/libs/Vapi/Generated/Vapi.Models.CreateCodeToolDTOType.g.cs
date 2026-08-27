@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateCodeToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Code,
     }

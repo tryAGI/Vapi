@@ -6,7 +6,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class SimulationRunSuiteEntry
     {
@@ -31,7 +31,7 @@ namespace Vapi
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("suiteId")]
         [global::System.Obsolete("This property marked as deprecated.")]

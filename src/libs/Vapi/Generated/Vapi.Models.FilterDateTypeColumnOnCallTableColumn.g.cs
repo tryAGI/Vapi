@@ -12,11 +12,11 @@ namespace Vapi
     public enum FilterDateTypeColumnOnCallTableColumn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndedAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StartedAt,
     }

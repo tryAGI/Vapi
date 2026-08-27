@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateTelnyxPhoneNumberDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Telnyx,
     }

@@ -9,11 +9,11 @@ namespace Vapi
     public enum HMACAuthenticationPlanSignatureEncoding
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Base64,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hex,
     }

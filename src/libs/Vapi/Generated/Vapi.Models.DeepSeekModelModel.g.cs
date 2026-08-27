@@ -9,11 +9,11 @@ namespace Vapi
     public enum DeepSeekModelModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeepseekChat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeepseekReasoner,
     }

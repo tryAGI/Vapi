@@ -9,7 +9,7 @@ namespace Vapi
     public enum CustomTranscriberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomTranscriber,
     }

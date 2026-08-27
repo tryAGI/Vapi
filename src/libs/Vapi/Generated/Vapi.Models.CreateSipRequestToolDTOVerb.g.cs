@@ -9,15 +9,15 @@ namespace Vapi
     public enum CreateSipRequestToolDTOVerb
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Info,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Message,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Notify,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateMcpToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mcp,
     }

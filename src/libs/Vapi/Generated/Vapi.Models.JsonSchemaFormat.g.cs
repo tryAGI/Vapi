@@ -10,39 +10,39 @@ namespace Vapi
     public enum JsonSchemaFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Date,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DateTime,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Email,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hostname,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ipv4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ipv6,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Time,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uuid,
     }

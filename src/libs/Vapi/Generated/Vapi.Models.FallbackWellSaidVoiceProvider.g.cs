@@ -9,7 +9,7 @@ namespace Vapi
     public enum FallbackWellSaidVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wellsaid,
     }

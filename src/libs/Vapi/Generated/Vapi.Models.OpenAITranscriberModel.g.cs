@@ -9,11 +9,11 @@ namespace Vapi
     public enum OpenAITranscriberModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMiniTranscribe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oTranscribe,
     }

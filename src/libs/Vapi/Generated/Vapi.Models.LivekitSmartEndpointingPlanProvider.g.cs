@@ -10,15 +10,15 @@ namespace Vapi
     public enum LivekitSmartEndpointingPlanProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomEndpointingModel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Livekit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vapi,
     }

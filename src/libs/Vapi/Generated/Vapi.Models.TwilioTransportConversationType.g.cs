@@ -10,7 +10,7 @@ namespace Vapi
     public enum TwilioTransportConversationType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voice,
     }

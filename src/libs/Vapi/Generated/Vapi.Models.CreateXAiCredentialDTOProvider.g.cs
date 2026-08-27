@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateXAiCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Xai,
     }

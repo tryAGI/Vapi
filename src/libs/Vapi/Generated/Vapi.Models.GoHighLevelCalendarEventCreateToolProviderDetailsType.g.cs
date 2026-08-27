@@ -9,7 +9,7 @@ namespace Vapi
     public enum GoHighLevelCalendarEventCreateToolProviderDetailsType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GohighlevelCalendarEventCreate,
     }

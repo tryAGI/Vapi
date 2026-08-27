@@ -10,19 +10,19 @@ namespace Vapi
     public enum CallPhoneCallProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Telnyx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Twilio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vapi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vonage,
     }

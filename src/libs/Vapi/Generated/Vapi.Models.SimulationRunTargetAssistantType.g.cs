@@ -9,7 +9,7 @@ namespace Vapi
     public enum SimulationRunTargetAssistantType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
     }

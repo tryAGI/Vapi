@@ -9,7 +9,7 @@ namespace Vapi
     public enum SSRFSecurityFilterType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ssrf,
     }

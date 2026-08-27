@@ -9,15 +9,15 @@ namespace Vapi
     public enum ServerMessageAssistantSpeechSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomVoice,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ForceSay,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
     }

@@ -9,11 +9,11 @@ namespace Vapi
     public enum ProviderResourceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x11labs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cartesia,
     }

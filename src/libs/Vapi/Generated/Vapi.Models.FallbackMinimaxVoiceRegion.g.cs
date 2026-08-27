@@ -10,11 +10,11 @@ namespace Vapi
     public enum FallbackMinimaxVoiceRegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         China,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Worldwide,
     }

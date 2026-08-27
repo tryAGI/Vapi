@@ -9,7 +9,7 @@ namespace Vapi
     public enum EvalOpenAIModelProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openai,
     }

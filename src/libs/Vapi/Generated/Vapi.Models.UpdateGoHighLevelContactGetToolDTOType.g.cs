@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateGoHighLevelContactGetToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GohighlevelContactGet,
     }

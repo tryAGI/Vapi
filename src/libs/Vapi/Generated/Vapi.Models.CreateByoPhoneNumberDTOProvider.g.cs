@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateByoPhoneNumberDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ByoPhoneNumber,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum GhlToolWithToolCallType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ghl,
     }

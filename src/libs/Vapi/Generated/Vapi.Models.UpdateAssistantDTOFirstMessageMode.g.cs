@@ -15,15 +15,15 @@ namespace Vapi
     public enum UpdateAssistantDTOFirstMessageMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantSpeaksFirst,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantSpeaksFirstWithModelGeneratedMessage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantWaitsForUser,
     }

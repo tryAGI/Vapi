@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateInflectionAICredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InflectionAi,
     }

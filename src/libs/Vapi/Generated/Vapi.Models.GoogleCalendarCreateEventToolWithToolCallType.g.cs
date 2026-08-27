@@ -9,7 +9,7 @@ namespace Vapi
     public enum GoogleCalendarCreateEventToolWithToolCallType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleCalendarEventCreate,
     }

@@ -11,7 +11,7 @@ namespace Vapi
     public enum EvalRunTargetAssistantType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
     }

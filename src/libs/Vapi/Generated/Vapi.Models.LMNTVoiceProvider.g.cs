@@ -9,7 +9,7 @@ namespace Vapi
     public enum LMNTVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lmnt,
     }

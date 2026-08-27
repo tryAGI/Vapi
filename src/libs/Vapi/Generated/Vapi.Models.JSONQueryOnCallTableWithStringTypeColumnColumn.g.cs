@@ -12,11 +12,11 @@ namespace Vapi
     public enum JSONQueryOnCallTableWithStringTypeColumnColumn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArtifactStructuredOutputsOutputID,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id,
     }

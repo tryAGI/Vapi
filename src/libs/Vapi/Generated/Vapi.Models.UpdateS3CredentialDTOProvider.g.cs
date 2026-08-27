@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateS3CredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3,
     }

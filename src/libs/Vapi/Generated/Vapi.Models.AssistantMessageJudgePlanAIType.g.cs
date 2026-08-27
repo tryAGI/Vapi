@@ -11,7 +11,7 @@ namespace Vapi
     public enum AssistantMessageJudgePlanAIType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ai,
     }

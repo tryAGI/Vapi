@@ -9,7 +9,7 @@ namespace Vapi
     public enum WorkflowGoogleModelProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Google,
     }

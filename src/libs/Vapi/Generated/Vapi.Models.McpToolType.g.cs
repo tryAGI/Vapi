@@ -9,7 +9,7 @@ namespace Vapi
     public enum McpToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mcp,
     }

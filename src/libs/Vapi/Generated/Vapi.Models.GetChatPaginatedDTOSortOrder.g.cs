@@ -9,11 +9,11 @@ namespace Vapi
     public enum GetChatPaginatedDTOSortOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

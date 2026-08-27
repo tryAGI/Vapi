@@ -10,11 +10,11 @@ namespace Vapi
     public enum FallbackHumeVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Octave,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Octave2,
     }

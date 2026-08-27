@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateCustomCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomCredential,
     }

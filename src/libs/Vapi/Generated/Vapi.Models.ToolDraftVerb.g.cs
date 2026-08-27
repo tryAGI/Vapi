@@ -9,15 +9,15 @@ namespace Vapi
     public enum ToolDraftVerb
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Info,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Message,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Notify,
     }

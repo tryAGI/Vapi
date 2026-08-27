@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientMessageSessionUpdatedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SessionUpdated,
     }

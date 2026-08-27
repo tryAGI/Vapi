@@ -10,11 +10,11 @@ namespace Vapi
     public enum CreateAzureCredentialDTOService
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BlobStorage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Speech,
     }

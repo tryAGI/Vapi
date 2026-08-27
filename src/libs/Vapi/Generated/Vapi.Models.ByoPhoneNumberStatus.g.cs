@@ -9,15 +9,15 @@ namespace Vapi
     public enum ByoPhoneNumberStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Activating,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Blocked,
     }

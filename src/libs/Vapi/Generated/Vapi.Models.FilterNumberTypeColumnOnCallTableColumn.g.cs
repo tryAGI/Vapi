@@ -12,31 +12,31 @@ namespace Vapi
     public enum FilterNumberTypeColumnOnCallTableColumn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AverageEndpointingLatency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AverageModelLatency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AverageTranscriberLatency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AverageTurnLatency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AverageVoiceLatency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
     }

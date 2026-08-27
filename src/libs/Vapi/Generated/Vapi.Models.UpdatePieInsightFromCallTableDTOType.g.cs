@@ -10,7 +10,7 @@ namespace Vapi
     public enum UpdatePieInsightFromCallTableDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pie,
     }

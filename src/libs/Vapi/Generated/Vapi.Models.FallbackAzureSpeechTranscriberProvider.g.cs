@@ -9,7 +9,7 @@ namespace Vapi
     public enum FallbackAzureSpeechTranscriberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Azure,
     }

@@ -4,19 +4,19 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AzureOpenAICredential
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AzureOpenAICredentialProviderJsonConverter))]
         public global::Vapi.AzureOpenAICredentialProvider Provider { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("region")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AzureOpenAICredentialRegionJsonConverter))]
@@ -79,7 +79,7 @@ namespace Vapi
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("openAIEndpoint")]
         [global::System.Text.Json.Serialization.JsonRequired]

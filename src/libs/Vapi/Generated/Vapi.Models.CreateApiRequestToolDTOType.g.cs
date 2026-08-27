@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateApiRequestToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApiRequest,
     }

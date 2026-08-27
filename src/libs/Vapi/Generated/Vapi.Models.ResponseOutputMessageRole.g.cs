@@ -10,7 +10,7 @@ namespace Vapi
     public enum ResponseOutputMessageRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
     }

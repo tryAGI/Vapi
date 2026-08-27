@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientMessageVoiceInputType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VoiceInput,
     }

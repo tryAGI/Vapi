@@ -5,17 +5,17 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct RecordingConsentPlan : global::System.IEquatable<RecordingConsentPlan>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CompliancePlanRecordingConsentPlanDiscriminatorType? Type { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.RecordingConsentPlanStayOnLine? StayOnLine { get; init; }
@@ -24,7 +24,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(StayOnLine))]
@@ -32,7 +32,7 @@ namespace Vapi
         public bool IsStayOnLine => StayOnLine != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickStayOnLine(
 #if NET6_0_OR_GREATER
@@ -45,14 +45,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.RecordingConsentPlanStayOnLine PickStayOnLine() => IsStayOnLine
             ? StayOnLine!
             : throw new global::System.InvalidOperationException($"Expected union variant 'StayOnLine' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.RecordingConsentPlanVerbal? Verbal { get; init; }
@@ -61,7 +61,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Verbal))]
@@ -69,7 +69,7 @@ namespace Vapi
         public bool IsVerbal => Verbal != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickVerbal(
 #if NET6_0_OR_GREATER
@@ -82,23 +82,23 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.RecordingConsentPlanVerbal PickVerbal() => IsVerbal
             ? Verbal!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Verbal' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator RecordingConsentPlan(global::Vapi.RecordingConsentPlanStayOnLine value) => new RecordingConsentPlan((global::Vapi.RecordingConsentPlanStayOnLine?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.RecordingConsentPlanStayOnLine?(RecordingConsentPlan @this) => @this.StayOnLine;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RecordingConsentPlan(global::Vapi.RecordingConsentPlanStayOnLine? value)
         {
@@ -106,22 +106,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static RecordingConsentPlan FromStayOnLine(global::Vapi.RecordingConsentPlanStayOnLine? value) => new RecordingConsentPlan(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator RecordingConsentPlan(global::Vapi.RecordingConsentPlanVerbal value) => new RecordingConsentPlan((global::Vapi.RecordingConsentPlanVerbal?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.RecordingConsentPlanVerbal?(RecordingConsentPlan @this) => @this.Verbal;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RecordingConsentPlan(global::Vapi.RecordingConsentPlanVerbal? value)
         {
@@ -129,12 +129,12 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static RecordingConsentPlan FromVerbal(global::Vapi.RecordingConsentPlanVerbal? value) => new RecordingConsentPlan(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RecordingConsentPlan(
             global::Vapi.CompliancePlanRecordingConsentPlanDiscriminatorType? type,
@@ -149,23 +149,23 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Verbal as object ??
-            StayOnLine as object 
+            StayOnLine as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             StayOnLine?.ToString() ??
-            Verbal?.ToString() 
+            Verbal?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -173,7 +173,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Vapi.RecordingConsentPlanStayOnLine, TResult>? stayOnLine = null,
@@ -198,7 +198,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Vapi.RecordingConsentPlanStayOnLine>? stayOnLine = null,
@@ -222,7 +222,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Vapi.RecordingConsentPlanStayOnLine>? stayOnLine = null,
@@ -245,7 +245,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -266,18 +266,18 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(RecordingConsentPlan other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.RecordingConsentPlanStayOnLine?>.Default.Equals(StayOnLine, other.StayOnLine) &&
-                global::System.Collections.Generic.EqualityComparer<global::Vapi.RecordingConsentPlanVerbal?>.Default.Equals(Verbal, other.Verbal) 
+                global::System.Collections.Generic.EqualityComparer<global::Vapi.RecordingConsentPlanVerbal?>.Default.Equals(Verbal, other.Verbal)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(RecordingConsentPlan obj1, RecordingConsentPlan obj2)
         {
@@ -285,7 +285,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(RecordingConsentPlan obj1, RecordingConsentPlan obj2)
         {
@@ -293,7 +293,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -10,31 +10,31 @@ namespace Vapi
     public enum InsightTimeRangeWithStepStep
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Day,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hour,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Minute,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Month,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Quarter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Week,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Year,
     }

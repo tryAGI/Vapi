@@ -9,35 +9,35 @@ namespace Vapi
     public enum XaiModelModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Grok2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Grok3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Grok4FastNonReasoning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Grok4FastReasoning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Grok4200309NonReasoning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Grok4200309Reasoning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Grok43,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GrokBeta,
     }

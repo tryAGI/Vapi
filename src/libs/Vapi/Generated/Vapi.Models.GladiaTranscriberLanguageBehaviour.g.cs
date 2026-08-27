@@ -4,20 +4,20 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GladiaTranscriberLanguageBehaviour
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AutomaticMultipleLanguages,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AutomaticSingleLanguage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manual,
     }

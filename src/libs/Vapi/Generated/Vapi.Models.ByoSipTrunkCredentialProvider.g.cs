@@ -9,7 +9,7 @@ namespace Vapi
     public enum ByoSipTrunkCredentialProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ByoSipTrunk,
     }

@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class SimulationRunListItem
     {
@@ -104,7 +104,7 @@ namespace Vapi
         public global::Vapi.SimulationRunTransportConfiguration? Transport { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
         [global::System.Text.Json.Serialization.JsonRequired]

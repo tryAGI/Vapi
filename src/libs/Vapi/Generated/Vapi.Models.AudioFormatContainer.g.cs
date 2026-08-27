@@ -10,7 +10,7 @@ namespace Vapi
     public enum AudioFormatContainer
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Raw,
     }

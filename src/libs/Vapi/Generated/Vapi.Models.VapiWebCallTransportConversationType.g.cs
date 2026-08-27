@@ -10,7 +10,7 @@ namespace Vapi
     public enum VapiWebCallTransportConversationType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voice,
     }

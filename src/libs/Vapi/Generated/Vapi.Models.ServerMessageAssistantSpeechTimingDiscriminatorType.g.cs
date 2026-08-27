@@ -4,16 +4,16 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ServerMessageAssistantSpeechTimingDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WordAlignment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WordProgress,
     }

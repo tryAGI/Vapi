@@ -10,11 +10,11 @@ namespace Vapi
     public enum CallPhoneCallTransport
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pstn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sip,
     }

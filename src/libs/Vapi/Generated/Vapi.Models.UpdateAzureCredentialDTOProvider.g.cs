@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UpdateAzureCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Azure,
     }

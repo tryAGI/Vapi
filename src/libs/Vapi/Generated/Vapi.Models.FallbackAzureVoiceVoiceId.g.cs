@@ -4,20 +4,20 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FallbackAzureVoiceVoiceId
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Andrew,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Brian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Emma,
     }

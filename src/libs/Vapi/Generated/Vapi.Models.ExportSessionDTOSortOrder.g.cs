@@ -9,11 +9,11 @@ namespace Vapi
     public enum ExportSessionDTOSortOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum PublicKeyEncryptionPlanType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PublicKey,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum GoogleTranscriberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Google,
     }

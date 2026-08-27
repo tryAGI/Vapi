@@ -9,15 +9,15 @@ namespace Vapi
     public enum UpdateSipRequestToolDTOVerb
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Info,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Message,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Notify,
     }

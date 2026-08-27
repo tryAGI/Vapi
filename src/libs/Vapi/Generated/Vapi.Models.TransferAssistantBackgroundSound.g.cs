@@ -9,11 +9,11 @@ namespace Vapi
     public enum TransferAssistantBackgroundSound
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Off,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Office,
     }

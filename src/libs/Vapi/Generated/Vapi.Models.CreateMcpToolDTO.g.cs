@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateMcpToolDTO
     {
@@ -40,7 +40,7 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.McpToolMessages>? ToolMessages { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         public global::Vapi.McpToolMetadata? Metadata { get; set; }

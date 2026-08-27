@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientMessageConversationUpdateType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationUpdate,
     }

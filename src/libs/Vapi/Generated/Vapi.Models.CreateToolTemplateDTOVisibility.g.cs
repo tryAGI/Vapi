@@ -9,11 +9,11 @@ namespace Vapi
     public enum CreateToolTemplateDTOVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

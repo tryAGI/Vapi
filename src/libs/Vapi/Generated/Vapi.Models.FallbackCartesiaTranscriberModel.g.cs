@@ -4,16 +4,16 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FallbackCartesiaTranscriberModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ink2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InkWhisper,
     }

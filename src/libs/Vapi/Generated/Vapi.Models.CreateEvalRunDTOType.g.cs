@@ -11,7 +11,7 @@ namespace Vapi
     public enum CreateEvalRunDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eval,
     }

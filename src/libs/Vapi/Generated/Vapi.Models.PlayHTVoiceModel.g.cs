@@ -9,19 +9,19 @@ namespace Vapi
     public enum PlayHTVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Play30Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PlayDialog,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PlayHT20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PlayHT20Turbo,
     }

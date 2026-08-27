@@ -5,17 +5,17 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct ToolControllerCreateRequest : global::System.IEquatable<ToolControllerCreateRequest>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.ToolControllerCreateRequestDiscriminatorType? Type { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateApiRequestToolDTO? ApiRequest { get; init; }
@@ -24,7 +24,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ApiRequest))]
@@ -32,7 +32,7 @@ namespace Vapi
         public bool IsApiRequest => ApiRequest != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickApiRequest(
 #if NET6_0_OR_GREATER
@@ -45,14 +45,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateApiRequestToolDTO PickApiRequest() => IsApiRequest
             ? ApiRequest!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ApiRequest' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateCodeToolDTO? Code { get; init; }
@@ -61,7 +61,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Code))]
@@ -69,7 +69,7 @@ namespace Vapi
         public bool IsCode => Code != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCode(
 #if NET6_0_OR_GREATER
@@ -82,14 +82,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateCodeToolDTO PickCode() => IsCode
             ? Code!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Code' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateDtmfToolDTO? Dtmf { get; init; }
@@ -98,7 +98,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Dtmf))]
@@ -106,7 +106,7 @@ namespace Vapi
         public bool IsDtmf => Dtmf != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickDtmf(
 #if NET6_0_OR_GREATER
@@ -119,14 +119,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateDtmfToolDTO PickDtmf() => IsDtmf
             ? Dtmf!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Dtmf' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateEndCallToolDTO? EndCall { get; init; }
@@ -135,7 +135,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EndCall))]
@@ -143,7 +143,7 @@ namespace Vapi
         public bool IsEndCall => EndCall != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickEndCall(
 #if NET6_0_OR_GREATER
@@ -156,14 +156,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateEndCallToolDTO PickEndCall() => IsEndCall
             ? EndCall!
             : throw new global::System.InvalidOperationException($"Expected union variant 'EndCall' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateFunctionToolDTO? Function { get; init; }
@@ -172,7 +172,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Function))]
@@ -180,7 +180,7 @@ namespace Vapi
         public bool IsFunction => Function != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickFunction(
 #if NET6_0_OR_GREATER
@@ -193,14 +193,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateFunctionToolDTO PickFunction() => IsFunction
             ? Function!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Function' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateTransferCallToolDTO? TransferCall { get; init; }
@@ -209,7 +209,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TransferCall))]
@@ -217,7 +217,7 @@ namespace Vapi
         public bool IsTransferCall => TransferCall != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTransferCall(
 #if NET6_0_OR_GREATER
@@ -230,14 +230,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateTransferCallToolDTO PickTransferCall() => IsTransferCall
             ? TransferCall!
             : throw new global::System.InvalidOperationException($"Expected union variant 'TransferCall' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateHandoffToolDTO? Handoff { get; init; }
@@ -246,7 +246,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Handoff))]
@@ -254,7 +254,7 @@ namespace Vapi
         public bool IsHandoff => Handoff != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickHandoff(
 #if NET6_0_OR_GREATER
@@ -267,14 +267,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateHandoffToolDTO PickHandoff() => IsHandoff
             ? Handoff!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Handoff' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateBashToolDTO? Bash { get; init; }
@@ -283,7 +283,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Bash))]
@@ -291,7 +291,7 @@ namespace Vapi
         public bool IsBash => Bash != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickBash(
 #if NET6_0_OR_GREATER
@@ -304,14 +304,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateBashToolDTO PickBash() => IsBash
             ? Bash!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Bash' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateComputerToolDTO? Computer { get; init; }
@@ -320,7 +320,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Computer))]
@@ -328,7 +328,7 @@ namespace Vapi
         public bool IsComputer => Computer != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickComputer(
 #if NET6_0_OR_GREATER
@@ -341,14 +341,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateComputerToolDTO PickComputer() => IsComputer
             ? Computer!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Computer' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateTextEditorToolDTO? TextEditor { get; init; }
@@ -357,7 +357,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TextEditor))]
@@ -365,7 +365,7 @@ namespace Vapi
         public bool IsTextEditor => TextEditor != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTextEditor(
 #if NET6_0_OR_GREATER
@@ -378,14 +378,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateTextEditorToolDTO PickTextEditor() => IsTextEditor
             ? TextEditor!
             : throw new global::System.InvalidOperationException($"Expected union variant 'TextEditor' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateQueryToolDTO? Query { get; init; }
@@ -394,7 +394,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Query))]
@@ -402,7 +402,7 @@ namespace Vapi
         public bool IsQuery => Query != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickQuery(
 #if NET6_0_OR_GREATER
@@ -415,14 +415,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateQueryToolDTO PickQuery() => IsQuery
             ? Query!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Query' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGoogleCalendarCreateEventToolDTO? GoogleCalendarEventCreate { get; init; }
@@ -431,7 +431,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GoogleCalendarEventCreate))]
@@ -439,7 +439,7 @@ namespace Vapi
         public bool IsGoogleCalendarEventCreate => GoogleCalendarEventCreate != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGoogleCalendarEventCreate(
 #if NET6_0_OR_GREATER
@@ -452,14 +452,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateGoogleCalendarCreateEventToolDTO PickGoogleCalendarEventCreate() => IsGoogleCalendarEventCreate
             ? GoogleCalendarEventCreate!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleCalendarEventCreate' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGoogleSheetsRowAppendToolDTO? GoogleSheetsRowAppend { get; init; }
@@ -468,7 +468,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GoogleSheetsRowAppend))]
@@ -476,7 +476,7 @@ namespace Vapi
         public bool IsGoogleSheetsRowAppend => GoogleSheetsRowAppend != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGoogleSheetsRowAppend(
 #if NET6_0_OR_GREATER
@@ -489,14 +489,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateGoogleSheetsRowAppendToolDTO PickGoogleSheetsRowAppend() => IsGoogleSheetsRowAppend
             ? GoogleSheetsRowAppend!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleSheetsRowAppend' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGoogleCalendarCheckAvailabilityToolDTO? GoogleCalendarAvailabilityCheck { get; init; }
@@ -505,7 +505,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GoogleCalendarAvailabilityCheck))]
@@ -513,7 +513,7 @@ namespace Vapi
         public bool IsGoogleCalendarAvailabilityCheck => GoogleCalendarAvailabilityCheck != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGoogleCalendarAvailabilityCheck(
 #if NET6_0_OR_GREATER
@@ -526,14 +526,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateGoogleCalendarCheckAvailabilityToolDTO PickGoogleCalendarAvailabilityCheck() => IsGoogleCalendarAvailabilityCheck
             ? GoogleCalendarAvailabilityCheck!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleCalendarAvailabilityCheck' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateSlackSendMessageToolDTO? SlackMessageSend { get; init; }
@@ -542,7 +542,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(SlackMessageSend))]
@@ -550,7 +550,7 @@ namespace Vapi
         public bool IsSlackMessageSend => SlackMessageSend != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickSlackMessageSend(
 #if NET6_0_OR_GREATER
@@ -563,14 +563,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateSlackSendMessageToolDTO PickSlackMessageSend() => IsSlackMessageSend
             ? SlackMessageSend!
             : throw new global::System.InvalidOperationException($"Expected union variant 'SlackMessageSend' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateSmsToolDTO? Sms { get; init; }
@@ -579,7 +579,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Sms))]
@@ -587,7 +587,7 @@ namespace Vapi
         public bool IsSms => Sms != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickSms(
 #if NET6_0_OR_GREATER
@@ -600,14 +600,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateSmsToolDTO PickSms() => IsSms
             ? Sms!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Sms' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateMcpToolDTO? Mcp { get; init; }
@@ -616,7 +616,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Mcp))]
@@ -624,7 +624,7 @@ namespace Vapi
         public bool IsMcp => Mcp != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMcp(
 #if NET6_0_OR_GREATER
@@ -637,14 +637,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateMcpToolDTO PickMcp() => IsMcp
             ? Mcp!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Mcp' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGoHighLevelCalendarAvailabilityToolDTO? GohighlevelCalendarAvailabilityCheck { get; init; }
@@ -653,7 +653,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GohighlevelCalendarAvailabilityCheck))]
@@ -661,7 +661,7 @@ namespace Vapi
         public bool IsGohighlevelCalendarAvailabilityCheck => GohighlevelCalendarAvailabilityCheck != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGohighlevelCalendarAvailabilityCheck(
 #if NET6_0_OR_GREATER
@@ -674,14 +674,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateGoHighLevelCalendarAvailabilityToolDTO PickGohighlevelCalendarAvailabilityCheck() => IsGohighlevelCalendarAvailabilityCheck
             ? GohighlevelCalendarAvailabilityCheck!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelCalendarAvailabilityCheck' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGoHighLevelCalendarEventCreateToolDTO? GohighlevelCalendarEventCreate { get; init; }
@@ -690,7 +690,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GohighlevelCalendarEventCreate))]
@@ -698,7 +698,7 @@ namespace Vapi
         public bool IsGohighlevelCalendarEventCreate => GohighlevelCalendarEventCreate != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGohighlevelCalendarEventCreate(
 #if NET6_0_OR_GREATER
@@ -711,14 +711,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateGoHighLevelCalendarEventCreateToolDTO PickGohighlevelCalendarEventCreate() => IsGohighlevelCalendarEventCreate
             ? GohighlevelCalendarEventCreate!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelCalendarEventCreate' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGoHighLevelContactCreateToolDTO? GohighlevelContactCreate { get; init; }
@@ -727,7 +727,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GohighlevelContactCreate))]
@@ -735,7 +735,7 @@ namespace Vapi
         public bool IsGohighlevelContactCreate => GohighlevelContactCreate != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGohighlevelContactCreate(
 #if NET6_0_OR_GREATER
@@ -748,14 +748,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateGoHighLevelContactCreateToolDTO PickGohighlevelContactCreate() => IsGohighlevelContactCreate
             ? GohighlevelContactCreate!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelContactCreate' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateGoHighLevelContactGetToolDTO? GohighlevelContactGet { get; init; }
@@ -764,7 +764,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GohighlevelContactGet))]
@@ -772,7 +772,7 @@ namespace Vapi
         public bool IsGohighlevelContactGet => GohighlevelContactGet != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGohighlevelContactGet(
 #if NET6_0_OR_GREATER
@@ -785,14 +785,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateGoHighLevelContactGetToolDTO PickGohighlevelContactGet() => IsGohighlevelContactGet
             ? GohighlevelContactGet!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelContactGet' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateSipRequestToolDTO? SipRequest { get; init; }
@@ -801,7 +801,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(SipRequest))]
@@ -809,7 +809,7 @@ namespace Vapi
         public bool IsSipRequest => SipRequest != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickSipRequest(
 #if NET6_0_OR_GREATER
@@ -822,14 +822,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateSipRequestToolDTO PickSipRequest() => IsSipRequest
             ? SipRequest!
             : throw new global::System.InvalidOperationException($"Expected union variant 'SipRequest' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CreateVoicemailToolDTO? Voicemail { get; init; }
@@ -838,7 +838,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Voicemail))]
@@ -846,7 +846,7 @@ namespace Vapi
         public bool IsVoicemail => Voicemail != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickVoicemail(
 #if NET6_0_OR_GREATER
@@ -859,23 +859,23 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CreateVoicemailToolDTO PickVoicemail() => IsVoicemail
             ? Voicemail!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Voicemail' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateApiRequestToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateApiRequestToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateApiRequestToolDTO?(ToolControllerCreateRequest @this) => @this.ApiRequest;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateApiRequestToolDTO? value)
         {
@@ -883,22 +883,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromApiRequest(global::Vapi.CreateApiRequestToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateCodeToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateCodeToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateCodeToolDTO?(ToolControllerCreateRequest @this) => @this.Code;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateCodeToolDTO? value)
         {
@@ -906,22 +906,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromCode(global::Vapi.CreateCodeToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateDtmfToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateDtmfToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateDtmfToolDTO?(ToolControllerCreateRequest @this) => @this.Dtmf;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateDtmfToolDTO? value)
         {
@@ -929,22 +929,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromDtmf(global::Vapi.CreateDtmfToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateEndCallToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateEndCallToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateEndCallToolDTO?(ToolControllerCreateRequest @this) => @this.EndCall;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateEndCallToolDTO? value)
         {
@@ -952,22 +952,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromEndCall(global::Vapi.CreateEndCallToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateFunctionToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateFunctionToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateFunctionToolDTO?(ToolControllerCreateRequest @this) => @this.Function;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateFunctionToolDTO? value)
         {
@@ -975,22 +975,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromFunction(global::Vapi.CreateFunctionToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateTransferCallToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateTransferCallToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateTransferCallToolDTO?(ToolControllerCreateRequest @this) => @this.TransferCall;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateTransferCallToolDTO? value)
         {
@@ -998,22 +998,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromTransferCall(global::Vapi.CreateTransferCallToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateHandoffToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateHandoffToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateHandoffToolDTO?(ToolControllerCreateRequest @this) => @this.Handoff;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateHandoffToolDTO? value)
         {
@@ -1021,22 +1021,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromHandoff(global::Vapi.CreateHandoffToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateBashToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateBashToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateBashToolDTO?(ToolControllerCreateRequest @this) => @this.Bash;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateBashToolDTO? value)
         {
@@ -1044,22 +1044,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromBash(global::Vapi.CreateBashToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateComputerToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateComputerToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateComputerToolDTO?(ToolControllerCreateRequest @this) => @this.Computer;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateComputerToolDTO? value)
         {
@@ -1067,22 +1067,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromComputer(global::Vapi.CreateComputerToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateTextEditorToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateTextEditorToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateTextEditorToolDTO?(ToolControllerCreateRequest @this) => @this.TextEditor;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateTextEditorToolDTO? value)
         {
@@ -1090,22 +1090,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromTextEditor(global::Vapi.CreateTextEditorToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateQueryToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateQueryToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateQueryToolDTO?(ToolControllerCreateRequest @this) => @this.Query;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateQueryToolDTO? value)
         {
@@ -1113,22 +1113,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromQuery(global::Vapi.CreateQueryToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateGoogleCalendarCreateEventToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateGoogleCalendarCreateEventToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateGoogleCalendarCreateEventToolDTO?(ToolControllerCreateRequest @this) => @this.GoogleCalendarEventCreate;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateGoogleCalendarCreateEventToolDTO? value)
         {
@@ -1136,22 +1136,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromGoogleCalendarEventCreate(global::Vapi.CreateGoogleCalendarCreateEventToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateGoogleSheetsRowAppendToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateGoogleSheetsRowAppendToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateGoogleSheetsRowAppendToolDTO?(ToolControllerCreateRequest @this) => @this.GoogleSheetsRowAppend;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateGoogleSheetsRowAppendToolDTO? value)
         {
@@ -1159,22 +1159,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromGoogleSheetsRowAppend(global::Vapi.CreateGoogleSheetsRowAppendToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateGoogleCalendarCheckAvailabilityToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateGoogleCalendarCheckAvailabilityToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateGoogleCalendarCheckAvailabilityToolDTO?(ToolControllerCreateRequest @this) => @this.GoogleCalendarAvailabilityCheck;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateGoogleCalendarCheckAvailabilityToolDTO? value)
         {
@@ -1182,22 +1182,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromGoogleCalendarAvailabilityCheck(global::Vapi.CreateGoogleCalendarCheckAvailabilityToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateSlackSendMessageToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateSlackSendMessageToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateSlackSendMessageToolDTO?(ToolControllerCreateRequest @this) => @this.SlackMessageSend;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateSlackSendMessageToolDTO? value)
         {
@@ -1205,22 +1205,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromSlackMessageSend(global::Vapi.CreateSlackSendMessageToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateSmsToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateSmsToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateSmsToolDTO?(ToolControllerCreateRequest @this) => @this.Sms;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateSmsToolDTO? value)
         {
@@ -1228,22 +1228,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromSms(global::Vapi.CreateSmsToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateMcpToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateMcpToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateMcpToolDTO?(ToolControllerCreateRequest @this) => @this.Mcp;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateMcpToolDTO? value)
         {
@@ -1251,22 +1251,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromMcp(global::Vapi.CreateMcpToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateGoHighLevelCalendarAvailabilityToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateGoHighLevelCalendarAvailabilityToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateGoHighLevelCalendarAvailabilityToolDTO?(ToolControllerCreateRequest @this) => @this.GohighlevelCalendarAvailabilityCheck;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateGoHighLevelCalendarAvailabilityToolDTO? value)
         {
@@ -1274,22 +1274,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromGohighlevelCalendarAvailabilityCheck(global::Vapi.CreateGoHighLevelCalendarAvailabilityToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateGoHighLevelCalendarEventCreateToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateGoHighLevelCalendarEventCreateToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateGoHighLevelCalendarEventCreateToolDTO?(ToolControllerCreateRequest @this) => @this.GohighlevelCalendarEventCreate;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateGoHighLevelCalendarEventCreateToolDTO? value)
         {
@@ -1297,22 +1297,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromGohighlevelCalendarEventCreate(global::Vapi.CreateGoHighLevelCalendarEventCreateToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateGoHighLevelContactCreateToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateGoHighLevelContactCreateToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateGoHighLevelContactCreateToolDTO?(ToolControllerCreateRequest @this) => @this.GohighlevelContactCreate;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateGoHighLevelContactCreateToolDTO? value)
         {
@@ -1320,22 +1320,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromGohighlevelContactCreate(global::Vapi.CreateGoHighLevelContactCreateToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateGoHighLevelContactGetToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateGoHighLevelContactGetToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateGoHighLevelContactGetToolDTO?(ToolControllerCreateRequest @this) => @this.GohighlevelContactGet;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateGoHighLevelContactGetToolDTO? value)
         {
@@ -1343,22 +1343,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromGohighlevelContactGet(global::Vapi.CreateGoHighLevelContactGetToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateSipRequestToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateSipRequestToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateSipRequestToolDTO?(ToolControllerCreateRequest @this) => @this.SipRequest;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateSipRequestToolDTO? value)
         {
@@ -1366,22 +1366,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromSipRequest(global::Vapi.CreateSipRequestToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerCreateRequest(global::Vapi.CreateVoicemailToolDTO value) => new ToolControllerCreateRequest((global::Vapi.CreateVoicemailToolDTO?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CreateVoicemailToolDTO?(ToolControllerCreateRequest @this) => @this.Voicemail;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(global::Vapi.CreateVoicemailToolDTO? value)
         {
@@ -1389,12 +1389,12 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerCreateRequest FromVoicemail(global::Vapi.CreateVoicemailToolDTO? value) => new ToolControllerCreateRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerCreateRequest(
             global::Vapi.ToolControllerCreateRequestDiscriminatorType? type,
@@ -1451,7 +1451,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Voicemail as object ??
@@ -1476,11 +1476,11 @@ namespace Vapi
             EndCall as object ??
             Dtmf as object ??
             Code as object ??
-            ApiRequest as object 
+            ApiRequest as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             ApiRequest?.ToString() ??
@@ -1505,11 +1505,11 @@ namespace Vapi
             GohighlevelContactCreate?.ToString() ??
             GohighlevelContactGet?.ToString() ??
             SipRequest?.ToString() ??
-            Voicemail?.ToString() 
+            Voicemail?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -1517,7 +1517,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Vapi.CreateApiRequestToolDTO, TResult>? apiRequest = null,
@@ -1647,7 +1647,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Vapi.CreateApiRequestToolDTO>? apiRequest = null,
@@ -1797,7 +1797,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Vapi.CreateApiRequestToolDTO>? apiRequest = null,
@@ -1925,7 +1925,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -1988,7 +1988,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ToolControllerCreateRequest other)
         {
@@ -2015,12 +2015,12 @@ namespace Vapi
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.CreateGoHighLevelContactCreateToolDTO?>.Default.Equals(GohighlevelContactCreate, other.GohighlevelContactCreate) &&
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.CreateGoHighLevelContactGetToolDTO?>.Default.Equals(GohighlevelContactGet, other.GohighlevelContactGet) &&
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.CreateSipRequestToolDTO?>.Default.Equals(SipRequest, other.SipRequest) &&
-                global::System.Collections.Generic.EqualityComparer<global::Vapi.CreateVoicemailToolDTO?>.Default.Equals(Voicemail, other.Voicemail) 
+                global::System.Collections.Generic.EqualityComparer<global::Vapi.CreateVoicemailToolDTO?>.Default.Equals(Voicemail, other.Voicemail)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ToolControllerCreateRequest obj1, ToolControllerCreateRequest obj2)
         {
@@ -2028,7 +2028,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ToolControllerCreateRequest obj1, ToolControllerCreateRequest obj2)
         {
@@ -2036,7 +2036,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

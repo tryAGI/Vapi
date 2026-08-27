@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateFunctionToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }

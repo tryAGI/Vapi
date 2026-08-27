@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageEndOfCallReportType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndOfCallReport,
     }

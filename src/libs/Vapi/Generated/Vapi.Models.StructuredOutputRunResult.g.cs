@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class StructuredOutputRunResult
     {
@@ -23,7 +23,7 @@ namespace Vapi
         public global::Vapi.OneOf<string, double?, bool?, object, byte[]>? Result { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("compliancePlan")]
         public global::Vapi.ComplianceOverride? CompliancePlan { get; set; }

@@ -10,7 +10,7 @@ namespace Vapi
     public enum TextInsightType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

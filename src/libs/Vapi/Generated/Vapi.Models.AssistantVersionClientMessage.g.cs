@@ -4,84 +4,84 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AssistantVersionClientMessage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantSpeechStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationUpdate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FunctionCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FunctionCallResult,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hang,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LanguageChanged,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Metadata,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ModelOutput,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpeechUpdate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StatusUpdate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolCalls,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolCallsResult,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Transcript,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TransferUpdate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserInterrupted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VoiceInput,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkflowNodeStarted,
     }

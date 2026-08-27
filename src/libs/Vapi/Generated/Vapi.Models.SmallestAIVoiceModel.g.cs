@@ -9,7 +9,7 @@ namespace Vapi
     public enum SmallestAIVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lightning,
     }

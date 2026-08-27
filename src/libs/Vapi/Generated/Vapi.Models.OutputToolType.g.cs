@@ -9,7 +9,7 @@ namespace Vapi
     public enum OutputToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Output,
     }

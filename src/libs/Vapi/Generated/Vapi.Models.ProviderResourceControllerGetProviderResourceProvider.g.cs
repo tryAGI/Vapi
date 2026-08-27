@@ -4,16 +4,16 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ProviderResourceControllerGetProviderResourceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x11labs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cartesia,
     }

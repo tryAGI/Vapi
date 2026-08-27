@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateGoogleCalendarCheckAvailabilityToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleCalendarAvailabilityCheck,
     }

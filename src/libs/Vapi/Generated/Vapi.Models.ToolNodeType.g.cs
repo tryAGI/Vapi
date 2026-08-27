@@ -15,7 +15,7 @@ namespace Vapi
     public enum ToolNodeType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tool,
     }

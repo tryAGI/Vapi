@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BothCustomEndpointingRule
     {
@@ -43,7 +43,7 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.RegexOption>? AssistantRegexOptions { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("customerRegex")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -9,15 +9,15 @@ namespace Vapi
     public enum TwilioPhoneNumberStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Activating,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Blocked,
     }

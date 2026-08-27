@@ -10,7 +10,7 @@ namespace Vapi
     public enum RecordingConsentPlanVerbalType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Verbal,
     }

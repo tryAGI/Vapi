@@ -9,7 +9,7 @@ namespace Vapi
     public enum FallbackInworldVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Inworld,
     }

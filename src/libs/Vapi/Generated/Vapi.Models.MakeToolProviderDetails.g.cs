@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MakeToolProviderDetails
     {
@@ -15,7 +15,7 @@ namespace Vapi
         public string? TemplateUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("setupInstructions")]
         public global::System.Collections.Generic.IList<global::Vapi.ToolTemplateSetup>? SetupInstructions { get; set; }
@@ -28,25 +28,25 @@ namespace Vapi
         public global::Vapi.MakeToolProviderDetailsType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scenarioId")]
         public double? ScenarioId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scenarioName")]
         public string? ScenarioName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("triggerHookId")]
         public double? TriggerHookId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("triggerHookName")]
         public string? TriggerHookName { get; set; }

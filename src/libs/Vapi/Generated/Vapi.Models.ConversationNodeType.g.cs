@@ -15,7 +15,7 @@ namespace Vapi
     public enum ConversationNodeType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Conversation,
     }

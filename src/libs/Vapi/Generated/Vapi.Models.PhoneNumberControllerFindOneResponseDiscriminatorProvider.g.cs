@@ -4,28 +4,28 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PhoneNumberControllerFindOneResponseDiscriminatorProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ByoPhoneNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Telnyx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Twilio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vapi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vonage,
     }

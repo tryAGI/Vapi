@@ -4,20 +4,20 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateToolTemplateDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gohighlevel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Make,
     }

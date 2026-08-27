@@ -10,11 +10,11 @@ namespace Vapi
     public enum FallbackDeepgramVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aura,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aura2,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum PromptInjectionSecurityFilterType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PromptInjection,
     }

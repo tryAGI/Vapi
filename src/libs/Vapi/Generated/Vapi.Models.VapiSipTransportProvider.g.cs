@@ -9,7 +9,7 @@ namespace Vapi
     public enum VapiSipTransportProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VapiSip,
     }

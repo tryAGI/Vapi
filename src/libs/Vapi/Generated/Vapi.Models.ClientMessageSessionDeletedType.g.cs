@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientMessageSessionDeletedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SessionDeleted,
     }

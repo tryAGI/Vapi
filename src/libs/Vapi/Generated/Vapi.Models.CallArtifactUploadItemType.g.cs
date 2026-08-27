@@ -9,31 +9,31 @@ namespace Vapi
     public enum CallArtifactUploadItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndOfCallReport,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Log,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pcap,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RecordingAssistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RecordingCustomer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RecordingMono,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RecordingStereo,
     }

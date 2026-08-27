@@ -4,24 +4,24 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum InsightControllerRemoveResponseDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Line,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pie,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

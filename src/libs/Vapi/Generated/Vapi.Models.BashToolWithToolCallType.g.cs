@@ -9,7 +9,7 @@ namespace Vapi
     public enum BashToolWithToolCallType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bash,
     }

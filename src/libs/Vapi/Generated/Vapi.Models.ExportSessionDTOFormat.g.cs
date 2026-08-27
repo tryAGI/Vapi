@@ -11,11 +11,11 @@ namespace Vapi
     public enum ExportSessionDTOFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Csv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Json,
     }

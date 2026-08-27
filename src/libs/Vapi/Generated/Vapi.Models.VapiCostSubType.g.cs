@@ -9,11 +9,11 @@ namespace Vapi
     public enum VapiCostSubType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Normal,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Overage,
     }

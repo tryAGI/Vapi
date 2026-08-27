@@ -9,7 +9,7 @@ namespace Vapi
     public enum TwilioVoicemailDetectionPlanProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Twilio,
     }

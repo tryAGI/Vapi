@@ -9,7 +9,7 @@ namespace Vapi
     public enum MicrosoftVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Microsoft,
     }

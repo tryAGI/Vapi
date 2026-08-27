@@ -9,11 +9,11 @@ namespace Vapi
     public enum CerebrasModelModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama3370b,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama318b,
     }

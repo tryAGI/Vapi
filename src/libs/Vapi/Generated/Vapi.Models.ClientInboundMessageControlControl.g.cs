@@ -9,23 +9,23 @@ namespace Vapi
     public enum ClientInboundMessageControlControl
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MuteAssistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MuteCustomer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SayFirstMessage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnmuteAssistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnmuteCustomer,
     }

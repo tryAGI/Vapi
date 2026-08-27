@@ -4,32 +4,32 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PhoneNumberCallEndingHookFilterOneOfItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestReturnedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestReturnedForwardingPhoneNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestReturnedInvalidAssistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestReturnedNoAssistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestReturnedUnspeakableError,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum AWSStsAuthenticationPlanType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AwsSts,
     }

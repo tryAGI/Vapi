@@ -9,11 +9,11 @@ namespace Vapi
     public enum GetEvalRunPaginatedDTOSortOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

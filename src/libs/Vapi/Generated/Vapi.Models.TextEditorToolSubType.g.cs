@@ -9,7 +9,7 @@ namespace Vapi
     public enum TextEditorToolSubType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextEditor20241022,
     }

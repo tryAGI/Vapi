@@ -9,35 +9,35 @@ namespace Vapi
     public enum TransferArtifactMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BlindTransfer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BlindTransferAddSummaryToSipHeader,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WarmTransferExperimental,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WarmTransferSayMessage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WarmTransferSaySummary,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WarmTransferTwiml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WarmTransferWaitForOperatorToSpeakFirstAndThenSayMessage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WarmTransferWaitForOperatorToSpeakFirstAndThenSaySummary,
     }

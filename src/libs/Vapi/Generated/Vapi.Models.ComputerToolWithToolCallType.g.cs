@@ -9,7 +9,7 @@ namespace Vapi
     public enum ComputerToolWithToolCallType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Computer,
     }

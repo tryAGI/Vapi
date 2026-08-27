@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GoHighLevelContactCreateToolWithToolCall
     {
@@ -22,7 +22,7 @@ namespace Vapi
         public global::Vapi.GoHighLevelContactCreateToolWithToolCallType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toolCall")]
         [global::System.Text.Json.Serialization.JsonRequired]

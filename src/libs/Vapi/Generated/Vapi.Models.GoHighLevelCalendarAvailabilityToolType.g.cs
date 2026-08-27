@@ -9,7 +9,7 @@ namespace Vapi
     public enum GoHighLevelCalendarAvailabilityToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GohighlevelCalendarAvailabilityCheck,
     }

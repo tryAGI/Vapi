@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageTransferUpdateType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TransferUpdate,
     }

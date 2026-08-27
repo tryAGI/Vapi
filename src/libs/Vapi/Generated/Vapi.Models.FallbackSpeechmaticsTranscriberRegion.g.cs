@@ -12,11 +12,11 @@ namespace Vapi
     public enum FallbackSpeechmaticsTranscriberRegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Us,
     }

@@ -9,11 +9,11 @@ namespace Vapi
     public enum SessionStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Completed,
     }

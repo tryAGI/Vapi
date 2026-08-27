@@ -9,7 +9,7 @@ namespace Vapi
     public enum RCESecurityFilterType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rce,
     }

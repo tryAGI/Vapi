@@ -17,7 +17,7 @@ namespace Vapi
     public enum CustomerCustomEndpointingRuleType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Customer,
     }

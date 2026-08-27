@@ -4,92 +4,92 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum SyncVoiceLibraryDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x11labs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Azure,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cartesia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomVoice,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deepgram,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hume,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Inworld,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lmnt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Microsoft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Minimax,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Neuphonic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Orpheus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Playht,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RimeAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sesame,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SmallestAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tavus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vapi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wellsaid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Xai,
     }

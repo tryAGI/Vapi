@@ -6,7 +6,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Org
     {
@@ -34,7 +34,7 @@ namespace Vapi
         public bool? WorkosRepairQueued { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("subscription")]
         public global::Vapi.Subscription? Subscription { get; set; }

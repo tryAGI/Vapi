@@ -13,11 +13,11 @@ namespace Vapi
     public enum FallbackMinimaxVoiceSubtitleType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sentence,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Word,
     }

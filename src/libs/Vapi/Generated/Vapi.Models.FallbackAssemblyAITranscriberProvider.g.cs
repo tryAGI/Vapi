@@ -9,7 +9,7 @@ namespace Vapi
     public enum FallbackAssemblyAITranscriberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssemblyAi,
     }

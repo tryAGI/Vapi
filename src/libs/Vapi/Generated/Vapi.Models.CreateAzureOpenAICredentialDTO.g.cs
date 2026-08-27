@@ -4,19 +4,19 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAzureOpenAICredentialDTO
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.CreateAzureOpenAICredentialDTOProviderJsonConverter))]
         public global::Vapi.CreateAzureOpenAICredentialDTOProvider Provider { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("region")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.CreateAzureOpenAICredentialDTORegionJsonConverter))]
@@ -45,7 +45,7 @@ namespace Vapi
         public string? OcpApimSubscriptionKey { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("openAIEndpoint")]
         [global::System.Text.Json.Serialization.JsonRequired]

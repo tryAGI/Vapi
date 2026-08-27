@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateLineInsightFromCallTableDTO
     {
@@ -47,7 +47,7 @@ namespace Vapi
         public global::Vapi.LineInsightMetadata? Metadata { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("timeRange")]
         public global::Vapi.InsightTimeRangeWithStep? TimeRange { get; set; }

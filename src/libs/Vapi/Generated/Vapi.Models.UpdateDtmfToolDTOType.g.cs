@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateDtmfToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dtmf,
     }

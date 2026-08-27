@@ -9,251 +9,251 @@ namespace Vapi
     public enum DeepgramVoiceVoiceId
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Alvaro,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Amalthea,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Andromeda,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Angus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Apollo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aquila,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arcas,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aries,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asteria,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Athena,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Atlas,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aurelia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aurora,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Callista,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Carina,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Celeste,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cora,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cordelia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Delia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Diana,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Draco,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Elara,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Electra,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Estrella,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fabian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Harmonia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Helena,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Helios,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hera,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hermes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hyperion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Iris,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Janus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Javier,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Julius,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Juno,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Jupiter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kara,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lara,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Luna,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mars,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Minerva,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Neptune,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nestor,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Odysseus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ophelia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Orion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Orpheus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pandora,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Perseus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Phoebe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pluto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Saturn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Selena,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Selene,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sirio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stella,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Thalia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Theia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vesta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Viktoria,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Zeus,
     }

@@ -10,35 +10,35 @@ namespace Vapi
     public enum MicrosoftVoiceRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Boy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Girl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OlderAdultFemale,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OlderAdultMale,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SeniorFemale,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SeniorMale,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         YoungAdultFemale,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         YoungAdultMale,
     }

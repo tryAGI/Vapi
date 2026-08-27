@@ -4,24 +4,24 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum InsightControllerUpdateRequestDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Line,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pie,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

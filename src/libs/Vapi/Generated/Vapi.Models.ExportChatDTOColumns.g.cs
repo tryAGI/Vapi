@@ -10,43 +10,43 @@ namespace Vapi
     public enum ExportChatDTOColumns
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreatedAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Messages,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Output,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PreviousChatId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SessionId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SquadId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UpdatedAt,
     }

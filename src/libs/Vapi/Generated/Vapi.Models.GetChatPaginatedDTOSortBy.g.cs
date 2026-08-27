@@ -9,15 +9,15 @@ namespace Vapi
     public enum GetChatPaginatedDTOSortBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreatedAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
     }

@@ -11,7 +11,7 @@ namespace Vapi
     public enum EvalUserEditableType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatMockConversation,
     }

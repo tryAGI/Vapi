@@ -9,15 +9,15 @@ namespace Vapi
     public enum ElevenLabsPronunciationDictionaryPermissionOnResource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Admin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Editor,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Viewer,
     }

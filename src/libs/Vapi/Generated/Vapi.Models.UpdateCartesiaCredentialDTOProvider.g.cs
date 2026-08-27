@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UpdateCartesiaCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cartesia,
     }

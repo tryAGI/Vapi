@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateSupabaseCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Supabase,
     }

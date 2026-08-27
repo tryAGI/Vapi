@@ -9,11 +9,11 @@ namespace Vapi
     public enum RecordingConsentType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StayOnLine,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Verbal,
     }

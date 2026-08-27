@@ -10,11 +10,11 @@ namespace Vapi
     public enum SubscriptionStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Frozen,
     }

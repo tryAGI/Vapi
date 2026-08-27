@@ -9,7 +9,7 @@ namespace Vapi
     public enum MakeToolWithToolCallType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Make,
     }

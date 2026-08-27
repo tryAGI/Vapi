@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum MicrosoftCredentialProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Microsoft,
     }

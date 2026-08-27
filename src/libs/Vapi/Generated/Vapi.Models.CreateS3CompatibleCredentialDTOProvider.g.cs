@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateS3CompatibleCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3Compatible,
     }

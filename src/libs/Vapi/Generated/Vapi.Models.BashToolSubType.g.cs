@@ -9,7 +9,7 @@ namespace Vapi
     public enum BashToolSubType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bash20241022,
     }

@@ -12,11 +12,11 @@ namespace Vapi
     public enum SpeechmaticsTranscriberNumeralStyle
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Spoken,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Written,
     }

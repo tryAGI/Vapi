@@ -10,7 +10,7 @@ namespace Vapi
     public enum RegexConditionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Regex,
     }

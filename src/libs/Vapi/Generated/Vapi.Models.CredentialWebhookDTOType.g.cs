@@ -4,20 +4,20 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CredentialWebhookDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auth,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Forward,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sync,
     }

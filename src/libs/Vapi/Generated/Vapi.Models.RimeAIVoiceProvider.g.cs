@@ -9,7 +9,7 @@ namespace Vapi
     public enum RimeAIVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RimeAi,
     }

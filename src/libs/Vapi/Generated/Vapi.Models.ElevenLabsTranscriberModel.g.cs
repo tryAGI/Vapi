@@ -4,20 +4,20 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ElevenLabsTranscriberModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScribeV1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScribeV2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScribeV2Realtime,
     }

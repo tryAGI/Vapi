@@ -9,7 +9,7 @@ namespace Vapi
     public enum HumeVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hume,
     }

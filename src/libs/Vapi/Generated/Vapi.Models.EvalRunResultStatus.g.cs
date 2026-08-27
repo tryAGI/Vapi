@@ -12,11 +12,11 @@ namespace Vapi
     public enum EvalRunResultStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fail,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pass,
     }

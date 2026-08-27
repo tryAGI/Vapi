@@ -4,48 +4,48 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PlayHTVoiceVoiceId
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chris,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Davis,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Donna,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Jack,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Jennifer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Matt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Melissa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Michael,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ruby,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Will,
     }

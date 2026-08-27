@@ -9,7 +9,7 @@ namespace Vapi
     public enum VonageTransportProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vonage,
     }

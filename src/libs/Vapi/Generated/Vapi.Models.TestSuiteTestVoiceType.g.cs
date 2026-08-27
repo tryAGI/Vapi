@@ -9,7 +9,7 @@ namespace Vapi
     public enum TestSuiteTestVoiceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voice,
     }

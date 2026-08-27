@@ -12,11 +12,11 @@ namespace Vapi
     public enum VapiTranscriberVersion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Latest,
     }

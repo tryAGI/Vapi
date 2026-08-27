@@ -9,15 +9,15 @@ namespace Vapi
     public enum GetSessionPaginatedDTOSortBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreatedAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
     }

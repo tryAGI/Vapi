@@ -4,20 +4,20 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GladiaTranscriberModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Accurate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Solaria1,
     }

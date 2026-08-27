@@ -9,7 +9,7 @@ namespace Vapi
     public enum XSSSecurityFilterType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Xss,
     }

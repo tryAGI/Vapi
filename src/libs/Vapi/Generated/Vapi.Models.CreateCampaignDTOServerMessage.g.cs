@@ -4,52 +4,52 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateCampaignDTOServerMessage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignArchived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignCancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignEnded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignJobContinued,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignUnarchived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContactCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContactDispatched,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContactFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContactPredialFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContactSkipped,
     }

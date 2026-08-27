@@ -9,15 +9,15 @@ namespace Vapi
     public enum HMACAuthenticationPlanAlgorithm
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sha1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sha256,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sha512,
     }

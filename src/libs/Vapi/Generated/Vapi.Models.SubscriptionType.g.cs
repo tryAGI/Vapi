@@ -9,27 +9,27 @@ namespace Vapi
     public enum SubscriptionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Agency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enterprise,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Growth,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PayAsYouGo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Scale,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Startup,
     }

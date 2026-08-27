@@ -9,83 +9,83 @@ namespace Vapi
     public enum CartesiaExperimentalControlsEmotion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anger_high,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anger_highest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anger_low,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anger_lowest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Curiosity_high,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Curiosity_highest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Curiosity_low,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Curiosity_lowest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Positivity_high,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Positivity_highest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Positivity_low,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Positivity_lowest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sadness_high,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sadness_highest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sadness_low,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sadness_lowest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Surprise_high,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Surprise_highest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Surprise_low,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Surprise_lowest,
     }

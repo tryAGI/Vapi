@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateEndCallToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndCall,
     }

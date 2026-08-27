@@ -12,7 +12,7 @@ namespace Vapi
     public enum ToolMessageFailedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RequestFailed,
     }

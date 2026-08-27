@@ -10,7 +10,7 @@ namespace Vapi
     public sealed partial class ProviderResourcesClient : global::Vapi.IProviderResourcesClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.vapi.ai/";
 
@@ -37,7 +37,7 @@ namespace Vapi
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Vapi.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {

@@ -4,28 +4,28 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AnalyticsQueryGroupByItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnalysisSuccessEvaluation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndedReason,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Status,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Type,
     }

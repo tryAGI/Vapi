@@ -9,7 +9,7 @@ namespace Vapi
     public enum SesameVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sesame,
     }

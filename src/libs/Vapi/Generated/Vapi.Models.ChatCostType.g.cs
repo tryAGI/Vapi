@@ -9,7 +9,7 @@ namespace Vapi
     public enum ChatCostType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chat,
     }

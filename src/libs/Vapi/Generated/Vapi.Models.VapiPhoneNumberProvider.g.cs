@@ -9,7 +9,7 @@ namespace Vapi
     public enum VapiPhoneNumberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vapi,
     }

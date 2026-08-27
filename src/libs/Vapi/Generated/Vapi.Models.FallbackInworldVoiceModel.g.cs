@@ -10,7 +10,7 @@ namespace Vapi
     public enum FallbackInworldVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InworldTts1,
     }

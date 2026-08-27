@@ -9,11 +9,11 @@ namespace Vapi
     public enum ExportChatDTOSortOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

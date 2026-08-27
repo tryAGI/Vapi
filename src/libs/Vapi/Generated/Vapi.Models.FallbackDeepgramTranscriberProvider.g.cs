@@ -9,7 +9,7 @@ namespace Vapi
     public enum FallbackDeepgramTranscriberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deepgram,
     }

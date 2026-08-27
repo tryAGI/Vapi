@@ -10,11 +10,11 @@ namespace Vapi
     public enum KeypadInputPlanDelimiters
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x_,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Multiply,
     }

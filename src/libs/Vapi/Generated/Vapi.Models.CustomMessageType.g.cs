@@ -9,7 +9,7 @@ namespace Vapi
     public enum CustomMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomMessage,
     }

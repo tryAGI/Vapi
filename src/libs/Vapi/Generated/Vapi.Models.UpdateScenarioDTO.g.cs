@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UpdateScenarioDTO
     {
@@ -42,7 +42,7 @@ namespace Vapi
         public global::Vapi.AssistantOverrides? TargetOverrides { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toolMocks")]
         public global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? ToolMocks { get; set; }

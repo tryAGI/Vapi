@@ -9,7 +9,7 @@ namespace Vapi
     public enum SimulationRunSuiteEntryType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SimulationSuite,
     }

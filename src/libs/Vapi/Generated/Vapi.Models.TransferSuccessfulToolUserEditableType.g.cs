@@ -9,7 +9,7 @@ namespace Vapi
     public enum TransferSuccessfulToolUserEditableType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TransferSuccessful,
     }

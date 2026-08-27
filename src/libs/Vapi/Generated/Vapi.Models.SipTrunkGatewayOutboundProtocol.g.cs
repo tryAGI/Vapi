@@ -10,19 +10,19 @@ namespace Vapi
     public enum SipTrunkGatewayOutboundProtocol
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tcp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tls,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TlsSrtp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Udp,
     }

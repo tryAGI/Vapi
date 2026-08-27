@@ -4,236 +4,236 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UpdateAssistantDraftDTOCredentialDiscriminatorProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anthropic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnthropicBedrock,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anyscale,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssemblyAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Azure,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AzureOpenai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ByoSipTrunk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cartesia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cerebras,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cloudflare,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomCredential,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomLlm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeepSeek,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deepgram,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deepinfra,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Elevenlabs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Email,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gcp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GhlOauth2Authorization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gladia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gohighlevel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Google,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleCalendarOauth2Authorization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleCalendarOauth2Client,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleSheetsOauth2Authorization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Groq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hume,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InflectionAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Inworld,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Langfuse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lmnt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Make,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Microsoft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Minimax,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mistral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Neuphonic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openrouter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PerplexityAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Playht,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RimeAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Runpod,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3Compatible,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SlackWebhook,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SlackOauth2Authorization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SmallestAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Soniox,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Speechmatics,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Supabase,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tavus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TogetherAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Twilio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vonage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Webhook,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wellsaid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Xai,
     }

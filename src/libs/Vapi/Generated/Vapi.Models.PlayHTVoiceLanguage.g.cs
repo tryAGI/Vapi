@@ -9,151 +9,151 @@ namespace Vapi
     public enum PlayHTVoiceLanguage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Afrikaans,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Albanian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Amharic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arabic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bengali,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bulgarian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Catalan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Croatian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Czech,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Danish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dutch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         English,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         French,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Galician,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         German,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Greek,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hebrew,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hindi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hungarian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Indonesian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Italian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Japanese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Korean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Malay,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mandarin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Polish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Portuguese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Russian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Serbian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Spanish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Swedish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tagalog,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Thai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Turkish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ukrainian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Urdu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Xhosa,
     }

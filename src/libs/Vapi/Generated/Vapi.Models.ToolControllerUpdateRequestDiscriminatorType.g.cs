@@ -4,104 +4,104 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ToolControllerUpdateRequestDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApiRequest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bash,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Code,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Computer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dtmf,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GohighlevelCalendarAvailabilityCheck,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GohighlevelCalendarEventCreate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GohighlevelContactCreate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GohighlevelContactGet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleCalendarAvailabilityCheck,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleCalendarEventCreate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleSheetsRowAppend,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Handoff,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KnowledgeBase,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mcp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Query,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SipRequest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SlackMessageSend,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sms,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextEditor,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TransferCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voicemail,
     }

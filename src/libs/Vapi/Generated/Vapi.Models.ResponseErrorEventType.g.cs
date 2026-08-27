@@ -10,7 +10,7 @@ namespace Vapi
     public enum ResponseErrorEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
     }

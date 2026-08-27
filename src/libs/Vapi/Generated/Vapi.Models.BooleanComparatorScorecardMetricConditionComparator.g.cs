@@ -9,7 +9,7 @@ namespace Vapi
     public enum BooleanComparatorScorecardMetricConditionComparator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eq,
     }

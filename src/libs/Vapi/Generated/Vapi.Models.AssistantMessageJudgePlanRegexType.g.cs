@@ -11,7 +11,7 @@ namespace Vapi
     public enum AssistantMessageJudgePlanRegexType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Regex,
     }

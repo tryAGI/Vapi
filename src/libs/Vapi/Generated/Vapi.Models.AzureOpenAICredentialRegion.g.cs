@@ -4,108 +4,108 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AzureOpenAICredentialRegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Australiaeast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Canadacentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Canadaeast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Centralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eastus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         France,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Germanywestcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         India,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Japaneast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Japanwest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Northcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Norway,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Polandcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Southcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Spaincentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Swedencentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Switzerland,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Switzerlandnorth,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Switzerlandwest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uaenorth,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Westeurope,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Westus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Westus3,
     }

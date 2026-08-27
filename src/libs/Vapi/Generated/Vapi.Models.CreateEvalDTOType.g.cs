@@ -11,7 +11,7 @@ namespace Vapi
     public enum CreateEvalDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatMockConversation,
     }

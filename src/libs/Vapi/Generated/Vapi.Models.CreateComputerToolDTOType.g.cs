@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateComputerToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Computer,
     }

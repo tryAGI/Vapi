@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateKnowledgeBaseToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KnowledgeBase,
     }

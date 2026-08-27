@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateSlackSendMessageToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SlackMessageSend,
     }

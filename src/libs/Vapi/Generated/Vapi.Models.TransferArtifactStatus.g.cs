@@ -9,31 +9,31 @@ namespace Vapi
     public enum TransferArtifactStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Busy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Completed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Connected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NoAnswer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voicemail,
     }

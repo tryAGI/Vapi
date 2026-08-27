@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateMcpToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mcp,
     }

@@ -4,68 +4,68 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ChunkPlanPunctuationBoundarie
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArabicComma,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CjkComma,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CjkPeriod,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CloseParen,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Colon,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Comma,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DevanagariDanda,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DevanagariDoubleDanda,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DoublePipe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Exclamation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Period,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pipe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Question,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Semicolon,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UrduPeriod,
     }

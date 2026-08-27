@@ -4,28 +4,28 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GeminiMultimodalLivePrebuiltVoiceConfigVoiceName
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aoede,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Charon,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fenrir,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kore,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Puck,
     }

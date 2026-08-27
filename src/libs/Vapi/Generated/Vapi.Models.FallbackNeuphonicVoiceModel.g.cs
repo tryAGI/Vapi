@@ -10,11 +10,11 @@ namespace Vapi
     public enum FallbackNeuphonicVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NeuFast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NeuHq,
     }

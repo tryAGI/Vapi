@@ -9,7 +9,7 @@ namespace Vapi
     public enum KnowledgeBaseCostType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KnowledgeBase,
     }

@@ -9,15 +9,15 @@ namespace Vapi
     public enum CreateFileDTOPurpose
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComposerAttachment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KnowledgeBaseV2,
     }

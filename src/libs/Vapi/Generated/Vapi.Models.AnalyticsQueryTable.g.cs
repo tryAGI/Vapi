@@ -9,11 +9,11 @@ namespace Vapi
     public enum AnalyticsQueryTable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Call,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Subscription,
     }

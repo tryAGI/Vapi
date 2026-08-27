@@ -11,19 +11,19 @@ namespace Vapi
     public enum FilterStringArrayTypeColumnOnCallTableOperator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         In,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IsEmpty,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IsNotEmpty,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotIn,
     }

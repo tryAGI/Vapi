@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UpdateSlackOAuth2AuthorizationCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SlackOauth2Authorization,
     }

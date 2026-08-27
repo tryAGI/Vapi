@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateComputerToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Computer,
     }

@@ -10,7 +10,7 @@ namespace Vapi
     public enum ResponseCompletedEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseCompleted,
     }

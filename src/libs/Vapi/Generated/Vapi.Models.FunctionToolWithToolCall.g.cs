@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class FunctionToolWithToolCall
     {
@@ -57,7 +57,7 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.ToolParameter>? Parameters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toolCall")]
         [global::System.Text.Json.Serialization.JsonRequired]

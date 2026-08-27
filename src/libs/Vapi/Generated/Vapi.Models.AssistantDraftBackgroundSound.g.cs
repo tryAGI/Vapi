@@ -9,11 +9,11 @@ namespace Vapi
     public enum AssistantDraftBackgroundSound
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Off,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Office,
     }

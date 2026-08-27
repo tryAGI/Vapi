@@ -9,7 +9,7 @@ namespace Vapi
     public enum XAiCredentialProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Xai,
     }

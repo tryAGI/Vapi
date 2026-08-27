@@ -10,11 +10,11 @@ namespace Vapi
     public enum VapiPronunciationDictionaryLocatorProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x11labs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cartesia,
     }

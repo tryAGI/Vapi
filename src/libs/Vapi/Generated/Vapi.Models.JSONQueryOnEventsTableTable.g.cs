@@ -10,7 +10,7 @@ namespace Vapi
     public enum JSONQueryOnEventsTableTable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Events,
     }
