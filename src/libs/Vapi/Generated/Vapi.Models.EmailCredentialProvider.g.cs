@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum EmailCredentialProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Email,
     }

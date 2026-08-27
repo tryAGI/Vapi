@@ -9,7 +9,7 @@ namespace Vapi
     public enum InflectionAIModelModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Inflection3Pi,
     }

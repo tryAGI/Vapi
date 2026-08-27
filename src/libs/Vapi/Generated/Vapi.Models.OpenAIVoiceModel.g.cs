@@ -9,15 +9,15 @@ namespace Vapi
     public enum OpenAIVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMiniTts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tts1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tts1Hd,
     }

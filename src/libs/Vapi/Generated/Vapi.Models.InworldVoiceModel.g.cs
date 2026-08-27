@@ -10,7 +10,7 @@ namespace Vapi
     public enum InworldVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InworldTts1,
     }

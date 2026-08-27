@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientMessageMetadataType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Metadata,
     }

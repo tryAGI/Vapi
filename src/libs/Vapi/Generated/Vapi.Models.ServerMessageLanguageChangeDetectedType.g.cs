@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageLanguageChangeDetectedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LanguageChangeDetected,
     }

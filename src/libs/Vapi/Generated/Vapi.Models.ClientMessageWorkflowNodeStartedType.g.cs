@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientMessageWorkflowNodeStartedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkflowNodeStarted,
     }

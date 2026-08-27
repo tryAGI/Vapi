@@ -11,7 +11,7 @@ namespace Vapi
     public enum EvalRunTargetSquadType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Squad,
     }

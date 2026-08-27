@@ -11,11 +11,11 @@ namespace Vapi
     public enum VapiTranscriberTurnTaking
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Intelligent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manual,
     }

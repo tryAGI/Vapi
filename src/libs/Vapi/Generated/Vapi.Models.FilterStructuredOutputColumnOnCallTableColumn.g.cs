@@ -11,7 +11,7 @@ namespace Vapi
     public enum FilterStructuredOutputColumnOnCallTableColumn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArtifactStructuredOutputsOutputID,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateCloudflareCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cloudflare,
     }

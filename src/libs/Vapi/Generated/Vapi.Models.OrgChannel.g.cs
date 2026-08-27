@@ -9,23 +9,23 @@ namespace Vapi
     public enum OrgChannel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Daily,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hcs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Intuit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Weekly,
     }

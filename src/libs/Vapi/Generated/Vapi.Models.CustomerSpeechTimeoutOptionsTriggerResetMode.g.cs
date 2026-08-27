@@ -10,11 +10,11 @@ namespace Vapi
     public enum CustomerSpeechTimeoutOptionsTriggerResetMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Never,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OnUserSpeech,
     }

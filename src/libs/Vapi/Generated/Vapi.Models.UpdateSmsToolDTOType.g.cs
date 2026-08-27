@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateSmsToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sms,
     }

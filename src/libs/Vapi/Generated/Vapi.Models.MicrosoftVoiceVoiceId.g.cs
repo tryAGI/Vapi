@@ -10,187 +10,187 @@ namespace Vapi
     public enum MicrosoftVoiceVoiceId
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeDeKlaus_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeDeMia_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnAuLisa_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnUsEthan_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnUsGrant_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnUsHarper_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnUsIris_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnUsJasper_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnUsOlivia_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsEsMarta_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsMxAlejo_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsMxValeria_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrFrMarc_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrFrSoleil_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HiInArjun_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HiInDhruv_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HiInKavya_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HiInPriya_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HuHuBence_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HuHuLevente_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HuHuLilla_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HuHuRéka_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItItLuca_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItItRosa_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KoKrHana_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KoKrJunho_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NlNlFleur_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NlNlSander_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PtBrCaio_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PtBrLuana_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PtBrPedro_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PtBrRafael_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PtPtRui_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RoRoAndrei_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RoRoElena_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RoRoIoana_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RoRoRadu_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RuRuLev_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RuRuMasha_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThThKrit_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThThNattapong_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TrTrAydin_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TrTrElif_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhCnBo_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhCnLan_MAIVoice2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhCnMei_MAIVoice2,
     }

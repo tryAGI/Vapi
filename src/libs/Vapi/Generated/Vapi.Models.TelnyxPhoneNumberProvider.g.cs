@@ -9,7 +9,7 @@ namespace Vapi
     public enum TelnyxPhoneNumberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Telnyx,
     }

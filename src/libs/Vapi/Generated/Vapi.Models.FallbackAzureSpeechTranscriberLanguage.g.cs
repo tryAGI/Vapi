@@ -9,575 +9,575 @@ namespace Vapi
     public enum FallbackAzureSpeechTranscriberLanguage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AfZa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AmEt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArAe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArBh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArDz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArEg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArIl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArIq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArJo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArKw,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArLb,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArLy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArMa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArOm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArPs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArQa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArSa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArSy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArTn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArYe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AzAz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BgBg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BsBa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CaEs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CsCz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CyGb,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DaDk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeCh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeDe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ElGr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnAu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnCa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnGb,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnGh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnHk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnIe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnKe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnNg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnNz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnPh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnSg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnTz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnUs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnZa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsAr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsBo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsCl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsCo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsCr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsCu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsDo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsEc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsEs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsGq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsGt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsHn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsMx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsNi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsPa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsPe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsPr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsPy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsSv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsUs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsUy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsVe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EtEe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EuEs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FaIr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FiFi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FilPh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrBe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrCa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrCh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrFr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GaIe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GlEs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GuIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HeIl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HiIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HrHr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HuHu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HyAm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IdId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IsIs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItCh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItIt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JaJp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JvId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KaGe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KkKz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KmKh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KoKr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LoLa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LtLt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LvLv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MkMk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MlIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MnMn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MrIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MsMy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MtMt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MyMm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NbNo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NeNp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NlBe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NlNl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PaIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PlPl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PsAf,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PtBr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PtPt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RoRo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RuRu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SiLk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SkSk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SlSi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SoSo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SqAl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SrRs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SvSe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SwKe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SwTz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TaIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TeIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThTh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TrTr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UkUa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UrIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UzUz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ViVn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WuuCn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         YueCn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhCn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhCnShandong,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhCnSichuan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhHk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhTw,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZuZa,
     }

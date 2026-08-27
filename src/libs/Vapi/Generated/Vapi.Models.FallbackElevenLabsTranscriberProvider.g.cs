@@ -9,7 +9,7 @@ namespace Vapi
     public enum FallbackElevenLabsTranscriberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x11labs,
     }

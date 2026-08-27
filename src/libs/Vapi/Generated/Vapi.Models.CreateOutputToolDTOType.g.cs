@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateOutputToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Output,
     }

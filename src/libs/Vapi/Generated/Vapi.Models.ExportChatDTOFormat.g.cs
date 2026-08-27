@@ -11,11 +11,11 @@ namespace Vapi
     public enum ExportChatDTOFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Csv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Json,
     }

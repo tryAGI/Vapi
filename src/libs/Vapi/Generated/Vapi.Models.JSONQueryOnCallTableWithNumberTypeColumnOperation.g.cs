@@ -15,19 +15,19 @@ namespace Vapi
     public enum JSONQueryOnCallTableWithNumberTypeColumnOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Average,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Max,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Min,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sum,
     }

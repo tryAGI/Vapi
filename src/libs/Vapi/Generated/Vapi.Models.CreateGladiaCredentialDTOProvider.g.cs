@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateGladiaCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gladia,
     }

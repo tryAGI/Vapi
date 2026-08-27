@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class FallbackSpeechmaticsTranscriber
     {
@@ -23,7 +23,7 @@ namespace Vapi
         public global::Vapi.FallbackSpeechmaticsTranscriberModel? Model { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("language")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.FallbackSpeechmaticsTranscriberLanguageJsonConverter))]

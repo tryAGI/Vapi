@@ -11,11 +11,11 @@ namespace Vapi
     public enum MessageTargetRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum TwilioTransportMessageTransport
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Twilio,
     }

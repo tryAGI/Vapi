@@ -4,24 +4,24 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FallbackDeepgramTranscriberRedactionItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Numbers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pci,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Phi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pii,
     }

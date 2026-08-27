@@ -10,11 +10,11 @@ namespace Vapi
     public enum ArtifactPlanRecordingFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mp3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wav_l16,
     }

@@ -9,15 +9,15 @@ namespace Vapi
     public enum UpdateToolDraftDTOVerb
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Info,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Message,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Notify,
     }

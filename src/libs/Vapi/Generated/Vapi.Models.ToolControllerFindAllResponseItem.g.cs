@@ -5,17 +5,17 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct ToolControllerFindAllResponseItem : global::System.IEquatable<ToolControllerFindAllResponseItem>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.ToolControllerFindAllResponseItemDiscriminatorType? Type { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.ApiRequestTool? ApiRequest { get; init; }
@@ -24,7 +24,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ApiRequest))]
@@ -32,7 +32,7 @@ namespace Vapi
         public bool IsApiRequest => ApiRequest != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickApiRequest(
 #if NET6_0_OR_GREATER
@@ -45,14 +45,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.ApiRequestTool PickApiRequest() => IsApiRequest
             ? ApiRequest!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ApiRequest' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.CodeTool? Code { get; init; }
@@ -61,7 +61,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Code))]
@@ -69,7 +69,7 @@ namespace Vapi
         public bool IsCode => Code != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCode(
 #if NET6_0_OR_GREATER
@@ -82,14 +82,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.CodeTool PickCode() => IsCode
             ? Code!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Code' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.DtmfTool? Dtmf { get; init; }
@@ -98,7 +98,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Dtmf))]
@@ -106,7 +106,7 @@ namespace Vapi
         public bool IsDtmf => Dtmf != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickDtmf(
 #if NET6_0_OR_GREATER
@@ -119,14 +119,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.DtmfTool PickDtmf() => IsDtmf
             ? Dtmf!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Dtmf' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.EndCallTool? EndCall { get; init; }
@@ -135,7 +135,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EndCall))]
@@ -143,7 +143,7 @@ namespace Vapi
         public bool IsEndCall => EndCall != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickEndCall(
 #if NET6_0_OR_GREATER
@@ -156,14 +156,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.EndCallTool PickEndCall() => IsEndCall
             ? EndCall!
             : throw new global::System.InvalidOperationException($"Expected union variant 'EndCall' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.FunctionTool? Function { get; init; }
@@ -172,7 +172,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Function))]
@@ -180,7 +180,7 @@ namespace Vapi
         public bool IsFunction => Function != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickFunction(
 #if NET6_0_OR_GREATER
@@ -193,14 +193,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.FunctionTool PickFunction() => IsFunction
             ? Function!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Function' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.KnowledgeBaseTool? KnowledgeBase { get; init; }
@@ -209,7 +209,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(KnowledgeBase))]
@@ -217,7 +217,7 @@ namespace Vapi
         public bool IsKnowledgeBase => KnowledgeBase != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickKnowledgeBase(
 #if NET6_0_OR_GREATER
@@ -230,14 +230,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.KnowledgeBaseTool PickKnowledgeBase() => IsKnowledgeBase
             ? KnowledgeBase!
             : throw new global::System.InvalidOperationException($"Expected union variant 'KnowledgeBase' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GhlTool? Ghl { get; init; }
@@ -246,7 +246,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Ghl))]
@@ -254,7 +254,7 @@ namespace Vapi
         public bool IsGhl => Ghl != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGhl(
 #if NET6_0_OR_GREATER
@@ -267,14 +267,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.GhlTool PickGhl() => IsGhl
             ? Ghl!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Ghl' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.TransferCallTool? TransferCall { get; init; }
@@ -283,7 +283,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TransferCall))]
@@ -291,7 +291,7 @@ namespace Vapi
         public bool IsTransferCall => TransferCall != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTransferCall(
 #if NET6_0_OR_GREATER
@@ -304,14 +304,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.TransferCallTool PickTransferCall() => IsTransferCall
             ? TransferCall!
             : throw new global::System.InvalidOperationException($"Expected union variant 'TransferCall' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.HandoffTool? Handoff { get; init; }
@@ -320,7 +320,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Handoff))]
@@ -328,7 +328,7 @@ namespace Vapi
         public bool IsHandoff => Handoff != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickHandoff(
 #if NET6_0_OR_GREATER
@@ -341,14 +341,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.HandoffTool PickHandoff() => IsHandoff
             ? Handoff!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Handoff' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.BashTool? Bash { get; init; }
@@ -357,7 +357,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Bash))]
@@ -365,7 +365,7 @@ namespace Vapi
         public bool IsBash => Bash != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickBash(
 #if NET6_0_OR_GREATER
@@ -378,14 +378,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.BashTool PickBash() => IsBash
             ? Bash!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Bash' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.ComputerTool? Computer { get; init; }
@@ -394,7 +394,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Computer))]
@@ -402,7 +402,7 @@ namespace Vapi
         public bool IsComputer => Computer != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickComputer(
 #if NET6_0_OR_GREATER
@@ -415,14 +415,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.ComputerTool PickComputer() => IsComputer
             ? Computer!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Computer' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.TextEditorTool? TextEditor { get; init; }
@@ -431,7 +431,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TextEditor))]
@@ -439,7 +439,7 @@ namespace Vapi
         public bool IsTextEditor => TextEditor != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTextEditor(
 #if NET6_0_OR_GREATER
@@ -452,14 +452,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.TextEditorTool PickTextEditor() => IsTextEditor
             ? TextEditor!
             : throw new global::System.InvalidOperationException($"Expected union variant 'TextEditor' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.QueryTool? Query { get; init; }
@@ -468,7 +468,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Query))]
@@ -476,7 +476,7 @@ namespace Vapi
         public bool IsQuery => Query != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickQuery(
 #if NET6_0_OR_GREATER
@@ -489,14 +489,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.QueryTool PickQuery() => IsQuery
             ? Query!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Query' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GoogleCalendarCreateEventTool? GoogleCalendarEventCreate { get; init; }
@@ -505,7 +505,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GoogleCalendarEventCreate))]
@@ -513,7 +513,7 @@ namespace Vapi
         public bool IsGoogleCalendarEventCreate => GoogleCalendarEventCreate != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGoogleCalendarEventCreate(
 #if NET6_0_OR_GREATER
@@ -526,14 +526,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.GoogleCalendarCreateEventTool PickGoogleCalendarEventCreate() => IsGoogleCalendarEventCreate
             ? GoogleCalendarEventCreate!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleCalendarEventCreate' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GoogleSheetsRowAppendTool? GoogleSheetsRowAppend { get; init; }
@@ -542,7 +542,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GoogleSheetsRowAppend))]
@@ -550,7 +550,7 @@ namespace Vapi
         public bool IsGoogleSheetsRowAppend => GoogleSheetsRowAppend != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGoogleSheetsRowAppend(
 #if NET6_0_OR_GREATER
@@ -563,14 +563,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.GoogleSheetsRowAppendTool PickGoogleSheetsRowAppend() => IsGoogleSheetsRowAppend
             ? GoogleSheetsRowAppend!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleSheetsRowAppend' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GoogleCalendarCheckAvailabilityTool? GoogleCalendarAvailabilityCheck { get; init; }
@@ -579,7 +579,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GoogleCalendarAvailabilityCheck))]
@@ -587,7 +587,7 @@ namespace Vapi
         public bool IsGoogleCalendarAvailabilityCheck => GoogleCalendarAvailabilityCheck != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGoogleCalendarAvailabilityCheck(
 #if NET6_0_OR_GREATER
@@ -600,14 +600,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.GoogleCalendarCheckAvailabilityTool PickGoogleCalendarAvailabilityCheck() => IsGoogleCalendarAvailabilityCheck
             ? GoogleCalendarAvailabilityCheck!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleCalendarAvailabilityCheck' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.SlackSendMessageTool? SlackMessageSend { get; init; }
@@ -616,7 +616,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(SlackMessageSend))]
@@ -624,7 +624,7 @@ namespace Vapi
         public bool IsSlackMessageSend => SlackMessageSend != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickSlackMessageSend(
 #if NET6_0_OR_GREATER
@@ -637,14 +637,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.SlackSendMessageTool PickSlackMessageSend() => IsSlackMessageSend
             ? SlackMessageSend!
             : throw new global::System.InvalidOperationException($"Expected union variant 'SlackMessageSend' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.SmsTool? Sms { get; init; }
@@ -653,7 +653,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Sms))]
@@ -661,7 +661,7 @@ namespace Vapi
         public bool IsSms => Sms != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickSms(
 #if NET6_0_OR_GREATER
@@ -674,14 +674,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.SmsTool PickSms() => IsSms
             ? Sms!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Sms' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.McpTool? Mcp { get; init; }
@@ -690,7 +690,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Mcp))]
@@ -698,7 +698,7 @@ namespace Vapi
         public bool IsMcp => Mcp != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMcp(
 #if NET6_0_OR_GREATER
@@ -711,14 +711,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.McpTool PickMcp() => IsMcp
             ? Mcp!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Mcp' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GoHighLevelCalendarAvailabilityTool? GohighlevelCalendarAvailabilityCheck { get; init; }
@@ -727,7 +727,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GohighlevelCalendarAvailabilityCheck))]
@@ -735,7 +735,7 @@ namespace Vapi
         public bool IsGohighlevelCalendarAvailabilityCheck => GohighlevelCalendarAvailabilityCheck != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGohighlevelCalendarAvailabilityCheck(
 #if NET6_0_OR_GREATER
@@ -748,14 +748,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.GoHighLevelCalendarAvailabilityTool PickGohighlevelCalendarAvailabilityCheck() => IsGohighlevelCalendarAvailabilityCheck
             ? GohighlevelCalendarAvailabilityCheck!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelCalendarAvailabilityCheck' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GoHighLevelCalendarEventCreateTool? GohighlevelCalendarEventCreate { get; init; }
@@ -764,7 +764,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GohighlevelCalendarEventCreate))]
@@ -772,7 +772,7 @@ namespace Vapi
         public bool IsGohighlevelCalendarEventCreate => GohighlevelCalendarEventCreate != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGohighlevelCalendarEventCreate(
 #if NET6_0_OR_GREATER
@@ -785,14 +785,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.GoHighLevelCalendarEventCreateTool PickGohighlevelCalendarEventCreate() => IsGohighlevelCalendarEventCreate
             ? GohighlevelCalendarEventCreate!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelCalendarEventCreate' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GoHighLevelContactCreateTool? GohighlevelContactCreate { get; init; }
@@ -801,7 +801,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GohighlevelContactCreate))]
@@ -809,7 +809,7 @@ namespace Vapi
         public bool IsGohighlevelContactCreate => GohighlevelContactCreate != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGohighlevelContactCreate(
 #if NET6_0_OR_GREATER
@@ -822,14 +822,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.GoHighLevelContactCreateTool PickGohighlevelContactCreate() => IsGohighlevelContactCreate
             ? GohighlevelContactCreate!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelContactCreate' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.GoHighLevelContactGetTool? GohighlevelContactGet { get; init; }
@@ -838,7 +838,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GohighlevelContactGet))]
@@ -846,7 +846,7 @@ namespace Vapi
         public bool IsGohighlevelContactGet => GohighlevelContactGet != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGohighlevelContactGet(
 #if NET6_0_OR_GREATER
@@ -859,14 +859,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.GoHighLevelContactGetTool PickGohighlevelContactGet() => IsGohighlevelContactGet
             ? GohighlevelContactGet!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelContactGet' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.SipRequestTool? SipRequest { get; init; }
@@ -875,7 +875,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(SipRequest))]
@@ -883,7 +883,7 @@ namespace Vapi
         public bool IsSipRequest => SipRequest != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickSipRequest(
 #if NET6_0_OR_GREATER
@@ -896,14 +896,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.SipRequestTool PickSipRequest() => IsSipRequest
             ? SipRequest!
             : throw new global::System.InvalidOperationException($"Expected union variant 'SipRequest' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.VoicemailTool? Voicemail { get; init; }
@@ -912,7 +912,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Voicemail))]
@@ -920,7 +920,7 @@ namespace Vapi
         public bool IsVoicemail => Voicemail != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickVoicemail(
 #if NET6_0_OR_GREATER
@@ -933,23 +933,23 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.VoicemailTool PickVoicemail() => IsVoicemail
             ? Voicemail!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Voicemail' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.ApiRequestTool value) => new ToolControllerFindAllResponseItem((global::Vapi.ApiRequestTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.ApiRequestTool?(ToolControllerFindAllResponseItem @this) => @this.ApiRequest;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.ApiRequestTool? value)
         {
@@ -957,22 +957,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromApiRequest(global::Vapi.ApiRequestTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.CodeTool value) => new ToolControllerFindAllResponseItem((global::Vapi.CodeTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.CodeTool?(ToolControllerFindAllResponseItem @this) => @this.Code;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.CodeTool? value)
         {
@@ -980,22 +980,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromCode(global::Vapi.CodeTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.DtmfTool value) => new ToolControllerFindAllResponseItem((global::Vapi.DtmfTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.DtmfTool?(ToolControllerFindAllResponseItem @this) => @this.Dtmf;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.DtmfTool? value)
         {
@@ -1003,22 +1003,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromDtmf(global::Vapi.DtmfTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.EndCallTool value) => new ToolControllerFindAllResponseItem((global::Vapi.EndCallTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.EndCallTool?(ToolControllerFindAllResponseItem @this) => @this.EndCall;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.EndCallTool? value)
         {
@@ -1026,22 +1026,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromEndCall(global::Vapi.EndCallTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.FunctionTool value) => new ToolControllerFindAllResponseItem((global::Vapi.FunctionTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.FunctionTool?(ToolControllerFindAllResponseItem @this) => @this.Function;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.FunctionTool? value)
         {
@@ -1049,22 +1049,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromFunction(global::Vapi.FunctionTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.KnowledgeBaseTool value) => new ToolControllerFindAllResponseItem((global::Vapi.KnowledgeBaseTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.KnowledgeBaseTool?(ToolControllerFindAllResponseItem @this) => @this.KnowledgeBase;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.KnowledgeBaseTool? value)
         {
@@ -1072,22 +1072,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromKnowledgeBase(global::Vapi.KnowledgeBaseTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.GhlTool value) => new ToolControllerFindAllResponseItem((global::Vapi.GhlTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.GhlTool?(ToolControllerFindAllResponseItem @this) => @this.Ghl;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.GhlTool? value)
         {
@@ -1095,22 +1095,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromGhl(global::Vapi.GhlTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.TransferCallTool value) => new ToolControllerFindAllResponseItem((global::Vapi.TransferCallTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.TransferCallTool?(ToolControllerFindAllResponseItem @this) => @this.TransferCall;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.TransferCallTool? value)
         {
@@ -1118,22 +1118,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromTransferCall(global::Vapi.TransferCallTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.HandoffTool value) => new ToolControllerFindAllResponseItem((global::Vapi.HandoffTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.HandoffTool?(ToolControllerFindAllResponseItem @this) => @this.Handoff;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.HandoffTool? value)
         {
@@ -1141,22 +1141,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromHandoff(global::Vapi.HandoffTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.BashTool value) => new ToolControllerFindAllResponseItem((global::Vapi.BashTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.BashTool?(ToolControllerFindAllResponseItem @this) => @this.Bash;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.BashTool? value)
         {
@@ -1164,22 +1164,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromBash(global::Vapi.BashTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.ComputerTool value) => new ToolControllerFindAllResponseItem((global::Vapi.ComputerTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.ComputerTool?(ToolControllerFindAllResponseItem @this) => @this.Computer;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.ComputerTool? value)
         {
@@ -1187,22 +1187,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromComputer(global::Vapi.ComputerTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.TextEditorTool value) => new ToolControllerFindAllResponseItem((global::Vapi.TextEditorTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.TextEditorTool?(ToolControllerFindAllResponseItem @this) => @this.TextEditor;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.TextEditorTool? value)
         {
@@ -1210,22 +1210,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromTextEditor(global::Vapi.TextEditorTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.QueryTool value) => new ToolControllerFindAllResponseItem((global::Vapi.QueryTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.QueryTool?(ToolControllerFindAllResponseItem @this) => @this.Query;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.QueryTool? value)
         {
@@ -1233,22 +1233,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromQuery(global::Vapi.QueryTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.GoogleCalendarCreateEventTool value) => new ToolControllerFindAllResponseItem((global::Vapi.GoogleCalendarCreateEventTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.GoogleCalendarCreateEventTool?(ToolControllerFindAllResponseItem @this) => @this.GoogleCalendarEventCreate;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.GoogleCalendarCreateEventTool? value)
         {
@@ -1256,22 +1256,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromGoogleCalendarEventCreate(global::Vapi.GoogleCalendarCreateEventTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.GoogleSheetsRowAppendTool value) => new ToolControllerFindAllResponseItem((global::Vapi.GoogleSheetsRowAppendTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.GoogleSheetsRowAppendTool?(ToolControllerFindAllResponseItem @this) => @this.GoogleSheetsRowAppend;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.GoogleSheetsRowAppendTool? value)
         {
@@ -1279,22 +1279,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromGoogleSheetsRowAppend(global::Vapi.GoogleSheetsRowAppendTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.GoogleCalendarCheckAvailabilityTool value) => new ToolControllerFindAllResponseItem((global::Vapi.GoogleCalendarCheckAvailabilityTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.GoogleCalendarCheckAvailabilityTool?(ToolControllerFindAllResponseItem @this) => @this.GoogleCalendarAvailabilityCheck;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.GoogleCalendarCheckAvailabilityTool? value)
         {
@@ -1302,22 +1302,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromGoogleCalendarAvailabilityCheck(global::Vapi.GoogleCalendarCheckAvailabilityTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.SlackSendMessageTool value) => new ToolControllerFindAllResponseItem((global::Vapi.SlackSendMessageTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.SlackSendMessageTool?(ToolControllerFindAllResponseItem @this) => @this.SlackMessageSend;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.SlackSendMessageTool? value)
         {
@@ -1325,22 +1325,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromSlackMessageSend(global::Vapi.SlackSendMessageTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.SmsTool value) => new ToolControllerFindAllResponseItem((global::Vapi.SmsTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.SmsTool?(ToolControllerFindAllResponseItem @this) => @this.Sms;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.SmsTool? value)
         {
@@ -1348,22 +1348,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromSms(global::Vapi.SmsTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.McpTool value) => new ToolControllerFindAllResponseItem((global::Vapi.McpTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.McpTool?(ToolControllerFindAllResponseItem @this) => @this.Mcp;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.McpTool? value)
         {
@@ -1371,22 +1371,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromMcp(global::Vapi.McpTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.GoHighLevelCalendarAvailabilityTool value) => new ToolControllerFindAllResponseItem((global::Vapi.GoHighLevelCalendarAvailabilityTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.GoHighLevelCalendarAvailabilityTool?(ToolControllerFindAllResponseItem @this) => @this.GohighlevelCalendarAvailabilityCheck;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.GoHighLevelCalendarAvailabilityTool? value)
         {
@@ -1394,22 +1394,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromGohighlevelCalendarAvailabilityCheck(global::Vapi.GoHighLevelCalendarAvailabilityTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.GoHighLevelCalendarEventCreateTool value) => new ToolControllerFindAllResponseItem((global::Vapi.GoHighLevelCalendarEventCreateTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.GoHighLevelCalendarEventCreateTool?(ToolControllerFindAllResponseItem @this) => @this.GohighlevelCalendarEventCreate;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.GoHighLevelCalendarEventCreateTool? value)
         {
@@ -1417,22 +1417,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromGohighlevelCalendarEventCreate(global::Vapi.GoHighLevelCalendarEventCreateTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.GoHighLevelContactCreateTool value) => new ToolControllerFindAllResponseItem((global::Vapi.GoHighLevelContactCreateTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.GoHighLevelContactCreateTool?(ToolControllerFindAllResponseItem @this) => @this.GohighlevelContactCreate;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.GoHighLevelContactCreateTool? value)
         {
@@ -1440,22 +1440,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromGohighlevelContactCreate(global::Vapi.GoHighLevelContactCreateTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.GoHighLevelContactGetTool value) => new ToolControllerFindAllResponseItem((global::Vapi.GoHighLevelContactGetTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.GoHighLevelContactGetTool?(ToolControllerFindAllResponseItem @this) => @this.GohighlevelContactGet;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.GoHighLevelContactGetTool? value)
         {
@@ -1463,22 +1463,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromGohighlevelContactGet(global::Vapi.GoHighLevelContactGetTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.SipRequestTool value) => new ToolControllerFindAllResponseItem((global::Vapi.SipRequestTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.SipRequestTool?(ToolControllerFindAllResponseItem @this) => @this.SipRequest;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.SipRequestTool? value)
         {
@@ -1486,22 +1486,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromSipRequest(global::Vapi.SipRequestTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolControllerFindAllResponseItem(global::Vapi.VoicemailTool value) => new ToolControllerFindAllResponseItem((global::Vapi.VoicemailTool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.VoicemailTool?(ToolControllerFindAllResponseItem @this) => @this.Voicemail;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(global::Vapi.VoicemailTool? value)
         {
@@ -1509,12 +1509,12 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolControllerFindAllResponseItem FromVoicemail(global::Vapi.VoicemailTool? value) => new ToolControllerFindAllResponseItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolControllerFindAllResponseItem(
             global::Vapi.ToolControllerFindAllResponseItemDiscriminatorType? type,
@@ -1575,7 +1575,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Voicemail as object ??
@@ -1602,11 +1602,11 @@ namespace Vapi
             EndCall as object ??
             Dtmf as object ??
             Code as object ??
-            ApiRequest as object 
+            ApiRequest as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             ApiRequest?.ToString() ??
@@ -1633,11 +1633,11 @@ namespace Vapi
             GohighlevelContactCreate?.ToString() ??
             GohighlevelContactGet?.ToString() ??
             SipRequest?.ToString() ??
-            Voicemail?.ToString() 
+            Voicemail?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -1645,7 +1645,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Vapi.ApiRequestTool, TResult>? apiRequest = null,
@@ -1785,7 +1785,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Vapi.ApiRequestTool>? apiRequest = null,
@@ -1947,7 +1947,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Vapi.ApiRequestTool>? apiRequest = null,
@@ -2085,7 +2085,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -2152,7 +2152,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ToolControllerFindAllResponseItem other)
         {
@@ -2181,12 +2181,12 @@ namespace Vapi
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.GoHighLevelContactCreateTool?>.Default.Equals(GohighlevelContactCreate, other.GohighlevelContactCreate) &&
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.GoHighLevelContactGetTool?>.Default.Equals(GohighlevelContactGet, other.GohighlevelContactGet) &&
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.SipRequestTool?>.Default.Equals(SipRequest, other.SipRequest) &&
-                global::System.Collections.Generic.EqualityComparer<global::Vapi.VoicemailTool?>.Default.Equals(Voicemail, other.Voicemail) 
+                global::System.Collections.Generic.EqualityComparer<global::Vapi.VoicemailTool?>.Default.Equals(Voicemail, other.Voicemail)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ToolControllerFindAllResponseItem obj1, ToolControllerFindAllResponseItem obj2)
         {
@@ -2194,7 +2194,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ToolControllerFindAllResponseItem obj1, ToolControllerFindAllResponseItem obj2)
         {
@@ -2202,7 +2202,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

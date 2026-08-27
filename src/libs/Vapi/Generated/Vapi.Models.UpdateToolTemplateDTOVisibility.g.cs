@@ -9,11 +9,11 @@ namespace Vapi
     public enum UpdateToolTemplateDTOVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

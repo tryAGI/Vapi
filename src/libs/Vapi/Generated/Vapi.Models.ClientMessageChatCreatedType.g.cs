@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientMessageChatCreatedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatCreated,
     }

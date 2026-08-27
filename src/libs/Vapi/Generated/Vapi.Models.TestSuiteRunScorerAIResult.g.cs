@@ -9,11 +9,11 @@ namespace Vapi
     public enum TestSuiteRunScorerAIResult
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fail,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pass,
     }

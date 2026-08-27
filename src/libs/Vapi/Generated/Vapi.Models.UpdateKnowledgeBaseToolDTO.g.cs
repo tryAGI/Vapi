@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UpdateKnowledgeBaseToolDTO
     {
@@ -28,7 +28,7 @@ namespace Vapi
         public global::System.Guid? KnowledgeBaseId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("function")]
         public global::Vapi.KnowledgeBaseToolFunction? Function { get; set; }

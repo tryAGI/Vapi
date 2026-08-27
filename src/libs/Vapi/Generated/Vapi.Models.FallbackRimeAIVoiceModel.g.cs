@@ -10,15 +10,15 @@ namespace Vapi
     public enum FallbackRimeAIVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arcana,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mist,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mistv2,
     }

@@ -17,7 +17,7 @@ namespace Vapi
     public enum BothCustomEndpointingRuleType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Both,
     }

@@ -9,63 +9,63 @@ namespace Vapi
     public enum WorkflowAnthropicBedrockModelModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Claude35Haiku20241022,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Claude35Sonnet20240620,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Claude35Sonnet20241022,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Claude37Sonnet20250219,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Claude3Haiku20240307,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Claude3Opus20240229,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Claude3Sonnet20240229,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClaudeHaiku4520251001,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClaudeOpus420250514,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClaudeOpus4520251101,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClaudeOpus46,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClaudeSonnet420250514,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClaudeSonnet4520250929,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClaudeSonnet46,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GlobalAnthropicClaudeHaiku4520251001V1_0,
     }

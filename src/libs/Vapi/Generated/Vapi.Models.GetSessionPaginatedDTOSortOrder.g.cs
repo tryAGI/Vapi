@@ -9,11 +9,11 @@ namespace Vapi
     public enum GetSessionPaginatedDTOSortOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

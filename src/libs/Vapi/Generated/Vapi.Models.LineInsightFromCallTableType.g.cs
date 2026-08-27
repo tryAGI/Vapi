@@ -10,7 +10,7 @@ namespace Vapi
     public enum LineInsightFromCallTableType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Line,
     }

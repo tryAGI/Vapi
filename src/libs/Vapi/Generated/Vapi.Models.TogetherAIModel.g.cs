@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TogetherAIModel
     {
@@ -44,7 +44,7 @@ namespace Vapi
         public global::Vapi.CreateCustomKnowledgeBaseDTO? KnowledgeBase { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.TogetherAIModelProviderJsonConverter))]

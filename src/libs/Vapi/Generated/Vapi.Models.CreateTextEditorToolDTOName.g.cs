@@ -10,7 +10,7 @@ namespace Vapi
     public enum CreateTextEditorToolDTOName
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StrReplaceEditor,
     }

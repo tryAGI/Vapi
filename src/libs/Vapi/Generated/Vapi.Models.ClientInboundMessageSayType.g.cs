@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientInboundMessageSayType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Say,
     }

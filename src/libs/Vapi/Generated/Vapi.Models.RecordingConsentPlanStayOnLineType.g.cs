@@ -10,7 +10,7 @@ namespace Vapi
     public enum RecordingConsentPlanStayOnLineType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StayOnLine,
     }

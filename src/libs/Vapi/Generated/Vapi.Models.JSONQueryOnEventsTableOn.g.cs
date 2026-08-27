@@ -10,395 +10,395 @@ namespace Vapi
     public enum JSONQueryOnEventsTableOn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantAnalysisStructuredOutputError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantAnalysisStructuredOutputGenerated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantAnalysisStructuredOutputRequest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantAnalysisStructuredOutputResponse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantAnalysisStructuredOutputSkipped,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelCleanup,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelClearing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelConnectionClosed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelConnectionOpened,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelFirstTokenReceived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelReconnecting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelRequestAttemptFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelRequestAttemptStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelRequestAttemptSucceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelRequestFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelRequestStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelRequestSucceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelResponseFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelResponseSucceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelTokenReceived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantModelToolCallsReceived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantToolAsyncCallbackReceived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantToolCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantToolDelayedMessageSent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantToolFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantToolStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantToolTimeout,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberCleanup,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberClearing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberConnectionClosed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberConnectionOpened,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberFinalTranscript,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberKeepAlive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberLanguageSwitched,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberPartialTranscript,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberReconnecting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberRequestFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberRequestStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberRequestSucceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantTranscriberTranscriptIgnored,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceAudioChunkReceived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceCleanup,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceClearing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceConnectionClosed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceConnectionOpened,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceFirstAudioReceived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceGenerationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceGenerationSucceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceReconnecting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceRequestFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceRequestStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceRequestSucceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceTextPushed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVoiceVoiceSwitched,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallAmdDetected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallAssistantStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallAssistantSwapped,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallControlReceived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallCustomerJoined,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallCustomerLeft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallDtmfReceived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallDtmfSent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallEnded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallHandoffCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallHandoffFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallHandoffInitiated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallHookFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallHookSucceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallHookTriggered,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallListenStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallMaxDurationReached,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallMicrophoneTimeout,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallQueued,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallRecordingPaused,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallRecordingResumed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallRecordingStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallSilenceTimeout,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStatusReceived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallTransferCancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallTransferCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallTransferFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallTransferInitiated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallTransportConnected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallTransportDisconnected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallTransportReconnected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallVoicemailDetected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallVoicemailNotDetected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineBotSpeechStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineBotSpeechStopped,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineCleared,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineEndpointingTriggered,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineFirstMessageCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineFirstMessageStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineTurnStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineUserSpeechStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineUserSpeechStopped,
     }

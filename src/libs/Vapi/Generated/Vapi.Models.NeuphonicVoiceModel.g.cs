@@ -10,11 +10,11 @@ namespace Vapi
     public enum NeuphonicVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NeuFast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NeuHq,
     }

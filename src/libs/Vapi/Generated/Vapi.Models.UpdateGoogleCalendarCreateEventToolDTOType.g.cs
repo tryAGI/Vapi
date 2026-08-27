@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateGoogleCalendarCreateEventToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleCalendarEventCreate,
     }

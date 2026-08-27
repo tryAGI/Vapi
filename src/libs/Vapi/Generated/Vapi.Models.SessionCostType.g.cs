@@ -9,7 +9,7 @@ namespace Vapi
     public enum SessionCostType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Session,
     }

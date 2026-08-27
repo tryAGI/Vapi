@@ -9,7 +9,7 @@ namespace Vapi
     public enum TavusVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tavus,
     }

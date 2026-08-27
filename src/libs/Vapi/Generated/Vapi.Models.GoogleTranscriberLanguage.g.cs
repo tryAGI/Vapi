@@ -9,159 +9,159 @@ namespace Vapi
     public enum GoogleTranscriberLanguage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arabic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bengali,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bulgarian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chinese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Croatian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Czech,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Danish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dutch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         English,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Estonian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Finnish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         French,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         German,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Greek,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hebrew,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hindi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hungarian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Indonesian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Italian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Japanese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Korean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Latvian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lithuanian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Multilingual,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Norwegian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Polish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Portuguese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Romanian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Russian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Serbian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slovak,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slovenian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Spanish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Swahili,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Swedish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Thai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Turkish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ukrainian,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vietnamese,
     }

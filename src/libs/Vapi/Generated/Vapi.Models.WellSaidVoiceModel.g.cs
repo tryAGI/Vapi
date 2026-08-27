@@ -9,11 +9,11 @@ namespace Vapi
     public enum WellSaidVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Caruso,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Legacy,
     }

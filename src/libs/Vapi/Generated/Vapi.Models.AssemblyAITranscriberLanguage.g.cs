@@ -9,11 +9,11 @@ namespace Vapi
     public enum AssemblyAITranscriberLanguage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         En,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Multi,
     }

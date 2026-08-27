@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateTelnyxPhoneNumberDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Telnyx,
     }

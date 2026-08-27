@@ -9,7 +9,7 @@ namespace Vapi
     public enum WorkflowAnthropicBedrockModelProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnthropicBedrock,
     }

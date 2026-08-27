@@ -9,71 +9,71 @@ namespace Vapi
     public enum GoogleTranscriberModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini10Pro,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini15Flash,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini15Flash002,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini15Pro,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini15Pro002,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini20Flash,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini20FlashExp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini20FlashLite,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini20FlashRealtimeExp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini20FlashThinkingExp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini20ProExp0205,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini25Flash,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini25FlashLite,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini25Pro,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini3FlashPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini31FlashLite,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini35Flash,
     }

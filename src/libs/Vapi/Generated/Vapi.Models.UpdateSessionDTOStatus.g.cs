@@ -9,11 +9,11 @@ namespace Vapi
     public enum UpdateSessionDTOStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Completed,
     }

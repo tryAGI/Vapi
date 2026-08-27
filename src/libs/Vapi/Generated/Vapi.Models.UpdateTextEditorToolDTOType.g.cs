@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateTextEditorToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextEditor,
     }

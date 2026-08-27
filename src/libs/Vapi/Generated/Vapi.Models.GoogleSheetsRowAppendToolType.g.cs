@@ -9,7 +9,7 @@ namespace Vapi
     public enum GoogleSheetsRowAppendToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleSheetsRowAppend,
     }

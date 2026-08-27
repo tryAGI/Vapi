@@ -4,16 +4,16 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RelayCommandOptionsType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MessageAdd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Say,
     }

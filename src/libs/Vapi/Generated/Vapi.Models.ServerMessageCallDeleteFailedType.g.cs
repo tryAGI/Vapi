@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageCallDeleteFailedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallDeleteFailed,
     }

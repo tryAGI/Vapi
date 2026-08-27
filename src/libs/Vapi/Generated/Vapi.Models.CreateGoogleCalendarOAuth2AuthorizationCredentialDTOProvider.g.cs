@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateGoogleCalendarOAuth2AuthorizationCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleCalendarOauth2Authorization,
     }

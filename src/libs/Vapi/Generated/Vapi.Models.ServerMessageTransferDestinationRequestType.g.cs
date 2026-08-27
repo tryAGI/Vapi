@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageTransferDestinationRequestType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TransferDestinationRequest,
     }

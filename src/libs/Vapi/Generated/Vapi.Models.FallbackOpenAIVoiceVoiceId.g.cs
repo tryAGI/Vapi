@@ -4,40 +4,40 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FallbackOpenAIVoiceVoiceId
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Alloy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cedar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Echo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Onyx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Shimmer,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum EvalGroqModelProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Groq,
     }

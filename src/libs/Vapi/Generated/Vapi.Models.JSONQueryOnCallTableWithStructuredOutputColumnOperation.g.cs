@@ -13,23 +13,23 @@ namespace Vapi
     public enum JSONQueryOnCallTableWithStructuredOutputColumnOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Average,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Count,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Max,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Min,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sum,
     }

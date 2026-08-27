@@ -9,7 +9,7 @@ namespace Vapi
     public enum NeuphonicVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Neuphonic,
     }

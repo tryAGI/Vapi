@@ -9,7 +9,7 @@ namespace Vapi
     public enum ProviderResourceResourceName
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PronunciationDictionary,
     }

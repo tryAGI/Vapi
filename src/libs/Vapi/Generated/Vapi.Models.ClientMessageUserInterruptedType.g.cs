@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientMessageUserInterruptedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserInterrupted,
     }

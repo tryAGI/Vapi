@@ -4,16 +4,16 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CampaignControllerGetCampaignV2ContactsSortBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Position,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Status,
     }

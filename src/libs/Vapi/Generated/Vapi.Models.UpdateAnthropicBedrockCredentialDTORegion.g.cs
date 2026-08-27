@@ -9,31 +9,31 @@ namespace Vapi
     public enum UpdateAnthropicBedrockCredentialDTORegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApNortheast1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApSoutheast2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EuCentral1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EuWest1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EuWest3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UsEast1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UsWest2,
     }

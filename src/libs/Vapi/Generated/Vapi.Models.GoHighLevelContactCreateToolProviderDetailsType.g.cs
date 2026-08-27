@@ -9,7 +9,7 @@ namespace Vapi
     public enum GoHighLevelContactCreateToolProviderDetailsType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GohighlevelContactCreate,
     }

@@ -4,36 +4,36 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TwilioVoicemailDetectionPlanVoicemailDetectionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fax,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Human,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MachineEndBeep,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MachineEndOther,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MachineEndSilence,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MachineStart,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unknown,
     }

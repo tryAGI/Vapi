@@ -9,15 +9,15 @@ namespace Vapi
     public enum GeneratedScenarioCategory
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EdgeCase,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FailureMode,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HappyPath,
     }

@@ -9,11 +9,11 @@ namespace Vapi
     public enum ServerMessagePhoneCallControlRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Forward,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HangUp,
     }

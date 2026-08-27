@@ -10,7 +10,7 @@ namespace Vapi
     public enum CreateBarInsightFromCallTableDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bar,
     }

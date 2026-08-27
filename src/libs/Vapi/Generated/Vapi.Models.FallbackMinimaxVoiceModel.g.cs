@@ -14,15 +14,15 @@ namespace Vapi
     public enum FallbackMinimaxVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Speech02Hd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Speech02Turbo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Speech25TurboPreview,
     }

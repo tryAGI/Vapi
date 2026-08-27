@@ -9,11 +9,11 @@ namespace Vapi
     public enum SubscriptionMinutesIncludedResetFrequency
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annually,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Monthly,
     }

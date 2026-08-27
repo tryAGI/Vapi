@@ -9,7 +9,7 @@ namespace Vapi
     public enum ComputerToolWithToolCallSubType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Computer20241022,
     }

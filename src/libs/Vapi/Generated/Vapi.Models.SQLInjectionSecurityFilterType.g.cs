@@ -9,7 +9,7 @@ namespace Vapi
     public enum SQLInjectionSecurityFilterType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SqlInjection,
     }

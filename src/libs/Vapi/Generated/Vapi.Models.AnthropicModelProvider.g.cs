@@ -9,7 +9,7 @@ namespace Vapi
     public enum AnthropicModelProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anthropic,
     }

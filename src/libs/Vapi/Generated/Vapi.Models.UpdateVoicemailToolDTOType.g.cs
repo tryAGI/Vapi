@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateVoicemailToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voicemail,
     }

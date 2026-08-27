@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageChatDeletedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatDeleted,
     }

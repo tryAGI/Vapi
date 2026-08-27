@@ -4,120 +4,120 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateAssistantDraftDTOServerMessage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantSpeechStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallArtifactUpload,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallDeleteFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallDeleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatCreated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatDeleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationUpdate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndOfCallReport,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FunctionCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HandoffDestinationRequest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hang,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LanguageChangeDetected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LanguageChanged,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ModelOutput,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhoneCallControl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SessionCreated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SessionDeleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SessionUpdated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpeechUpdate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StatusUpdate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolCalls,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Transcript,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TranscripttranscriptType__final_,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TransferDestinationRequest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TransferUpdate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserInterrupted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VoiceInput,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageToolCallsType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolCalls,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum VoicemailDetectionCostType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VoicemailDetection,
     }

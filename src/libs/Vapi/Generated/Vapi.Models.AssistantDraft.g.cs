@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AssistantDraft
     {
@@ -161,7 +161,7 @@ namespace Vapi
         public global::System.Collections.Generic.IList<string>? EndCallPhrases { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("compliancePlan")]
         public global::Vapi.CompliancePlan? CompliancePlan { get; set; }
@@ -246,7 +246,7 @@ namespace Vapi
         public global::Vapi.Server? Server { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("keypadInputPlan")]
         public global::Vapi.KeypadInputPlan? KeypadInputPlan { get; set; }
@@ -286,14 +286,14 @@ namespace Vapi
         public string? CreatedBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]

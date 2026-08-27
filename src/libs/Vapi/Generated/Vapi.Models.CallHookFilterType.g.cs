@@ -9,7 +9,7 @@ namespace Vapi
     public enum CallHookFilterType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OneOf,
     }

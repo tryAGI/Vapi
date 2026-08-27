@@ -9,7 +9,7 @@ namespace Vapi
     public enum MessageAddHookActionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MessageAdd,
     }

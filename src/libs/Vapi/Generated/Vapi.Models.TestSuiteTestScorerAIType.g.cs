@@ -9,7 +9,7 @@ namespace Vapi
     public enum TestSuiteTestScorerAIType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ai,
     }

@@ -9,23 +9,23 @@ namespace Vapi
     public enum CreateOrgDTOChannel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Daily,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hcs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Intuit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Weekly,
     }

@@ -9,59 +9,59 @@ namespace Vapi
     public enum EvalGroqModelModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CompoundBeta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CompoundBetaMini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeepseekR1DistillLlama70b,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemma29bIt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama31405bReasoning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama318bInstant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama3370bVersatile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama370b8192,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama38b8192,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MetaLlamaLlama4Scout17b16eInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MistralSaba24b,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotaiKimiK2Instruct0905,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OpenaiGptOss120b,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OpenaiGptOss20b,
     }

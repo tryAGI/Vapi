@@ -9,7 +9,7 @@ namespace Vapi
     public enum AssistantSpeechWordAlignmentTimingType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WordAlignment,
     }

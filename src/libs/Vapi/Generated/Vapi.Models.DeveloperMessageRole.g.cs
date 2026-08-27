@@ -10,7 +10,7 @@ namespace Vapi
     public enum DeveloperMessageRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Developer,
     }

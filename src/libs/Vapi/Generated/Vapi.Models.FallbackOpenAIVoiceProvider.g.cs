@@ -9,7 +9,7 @@ namespace Vapi
     public enum FallbackOpenAIVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openai,
     }

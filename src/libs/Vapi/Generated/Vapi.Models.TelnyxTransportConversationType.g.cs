@@ -10,7 +10,7 @@ namespace Vapi
     public enum TelnyxTransportConversationType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voice,
     }

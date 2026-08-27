@@ -9,15 +9,15 @@ namespace Vapi
     public enum VapiPhoneNumberStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Activating,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Blocked,
     }

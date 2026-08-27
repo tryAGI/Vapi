@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateGoogleSheetsOAuth2AuthorizationCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleSheetsOauth2Authorization,
     }

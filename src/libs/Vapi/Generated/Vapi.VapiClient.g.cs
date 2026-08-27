@@ -11,7 +11,7 @@ namespace Vapi
     public sealed partial class VapiClient : global::Vapi.IVapiClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.vapi.ai/";
 
@@ -38,7 +38,7 @@ namespace Vapi
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Vapi.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -48,7 +48,7 @@ namespace Vapi
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnalyticsClient Analytics => new AnalyticsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -57,7 +57,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssistantsClient Assistants => new AssistantsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -66,7 +66,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BoardClient Board => new BoardClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -75,7 +75,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CallsClient Calls => new CallsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -84,7 +84,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CampaignsClient Campaigns => new CampaignsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -93,7 +93,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatsClient Chats => new ChatsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -102,7 +102,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EvalClient Eval => new EvalClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -111,7 +111,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FilesClient Files => new FilesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -120,7 +120,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InsightClient Insight => new InsightClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -129,7 +129,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KnowledgeBasesV2Client KnowledgeBasesV2 => new KnowledgeBasesV2Client(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -138,7 +138,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ObservabilityScorecardClient ObservabilityScorecard => new ObservabilityScorecardClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -147,7 +147,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PhoneNumbersClient PhoneNumbers => new PhoneNumbersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -156,7 +156,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ProviderResourcesClient ProviderResources => new ProviderResourcesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -165,7 +165,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SessionsClient Sessions => new SessionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -174,7 +174,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationPersonalitiesClient SimulationPersonalities => new SimulationPersonalitiesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -183,7 +183,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationRunItemsClient SimulationRunItems => new SimulationRunItemsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -192,7 +192,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationRunsClient SimulationRuns => new SimulationRunsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -201,7 +201,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationScenariosClient SimulationScenarios => new SimulationScenariosClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -210,7 +210,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationSuitesClient SimulationSuites => new SimulationSuitesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -219,7 +219,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationsClient Simulations => new SimulationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -228,7 +228,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SquadsClient Squads => new SquadsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -237,7 +237,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public StructuredOutputsClient StructuredOutputs => new StructuredOutputsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -246,7 +246,7 @@ namespace Vapi
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolsClient Tools => new ToolsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

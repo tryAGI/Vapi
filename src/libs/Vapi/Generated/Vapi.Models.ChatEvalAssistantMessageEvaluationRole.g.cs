@@ -12,7 +12,7 @@ namespace Vapi
     public enum ChatEvalAssistantMessageEvaluationRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
     }

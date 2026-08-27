@@ -10,11 +10,11 @@ namespace Vapi
     public enum UpdateCampaignDTOStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ended,
     }

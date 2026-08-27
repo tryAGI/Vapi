@@ -9,7 +9,7 @@ namespace Vapi
     public enum S3CompatibleStorageCredentialProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3Compatible,
     }

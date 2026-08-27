@@ -9,7 +9,7 @@ namespace Vapi
     public enum RelayCommandNoteType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MessageAdd,
     }

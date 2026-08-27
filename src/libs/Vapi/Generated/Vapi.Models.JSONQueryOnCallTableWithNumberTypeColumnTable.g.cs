@@ -9,7 +9,7 @@ namespace Vapi
     public enum JSONQueryOnCallTableWithNumberTypeColumnTable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Call,
     }

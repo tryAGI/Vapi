@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageStatusUpdateType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StatusUpdate,
     }

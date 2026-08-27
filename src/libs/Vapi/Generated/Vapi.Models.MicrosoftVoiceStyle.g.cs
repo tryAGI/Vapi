@@ -10,119 +10,119 @@ namespace Vapi
     public enum MicrosoftVoiceStyle
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Adventurous,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Angry,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Caring,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cheerful,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Confused,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Curious,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Determined,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Disappointed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Disgusted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Embarrassed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Empathy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Encouraging,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Excited,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fearful,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Friendly,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Happy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hopeful,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Jealous,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Joyful,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nostalgic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reflective,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Regretful,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Relieved,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sad,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Serious,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Shouting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Softvoice,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Surprised,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Whispering,
     }

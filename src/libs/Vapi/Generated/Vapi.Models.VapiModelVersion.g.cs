@@ -11,11 +11,11 @@ namespace Vapi
     public enum VapiModelVersion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Latest,
     }

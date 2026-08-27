@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateSupabaseCredentialDTO
     {
@@ -22,7 +22,7 @@ namespace Vapi
         public double? FallbackIndex { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bucketPlan")]
         public global::Vapi.SupabaseBucketPlan? BucketPlan { get; set; }

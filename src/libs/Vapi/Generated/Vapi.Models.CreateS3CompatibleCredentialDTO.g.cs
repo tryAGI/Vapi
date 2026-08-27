@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateS3CompatibleCredentialDTO
     {
@@ -16,7 +16,7 @@ namespace Vapi
         public global::Vapi.CreateS3CompatibleCredentialDTOProvider Provider { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bucketPlan")]
         [global::System.Text.Json.Serialization.JsonRequired]

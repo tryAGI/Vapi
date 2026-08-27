@@ -9,11 +9,11 @@ namespace Vapi
     public enum ClientMessageSpeechUpdateStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Started,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stopped,
     }

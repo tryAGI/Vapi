@@ -15,15 +15,15 @@ namespace Vapi
     public enum AssistantFirstMessageMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantSpeaksFirst,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantSpeaksFirstWithModelGeneratedMessage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantWaitsForUser,
     }

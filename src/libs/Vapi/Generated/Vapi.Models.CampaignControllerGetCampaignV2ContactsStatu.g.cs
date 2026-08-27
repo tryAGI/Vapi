@@ -4,32 +4,32 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CampaignControllerGetCampaignV2ContactsStatu
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContactCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContactDispatched,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContactFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContactPending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContactPredialFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContactSkipped,
     }

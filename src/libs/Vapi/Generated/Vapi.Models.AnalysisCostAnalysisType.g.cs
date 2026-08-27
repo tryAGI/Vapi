@@ -9,19 +9,19 @@ namespace Vapi
     public enum AnalysisCostAnalysisType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StructuredData,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StructuredOutput,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SuccessEvaluation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Summary,
     }

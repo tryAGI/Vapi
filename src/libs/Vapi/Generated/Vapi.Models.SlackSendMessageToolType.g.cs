@@ -9,7 +9,7 @@ namespace Vapi
     public enum SlackSendMessageToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SlackMessageSend,
     }

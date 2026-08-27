@@ -9,7 +9,7 @@ namespace Vapi
     public enum TransportCostType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Transport,
     }

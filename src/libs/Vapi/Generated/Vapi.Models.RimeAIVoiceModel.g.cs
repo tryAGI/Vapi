@@ -10,15 +10,15 @@ namespace Vapi
     public enum RimeAIVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arcana,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mist,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mistv2,
     }

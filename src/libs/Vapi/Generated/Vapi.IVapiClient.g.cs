@@ -40,123 +40,123 @@ namespace Vapi
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnalyticsClient Analytics { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssistantsClient Assistants { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BoardClient Board { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CallsClient Calls { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CampaignsClient Campaigns { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatsClient Chats { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EvalClient Eval { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FilesClient Files { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InsightClient Insight { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KnowledgeBasesV2Client KnowledgeBasesV2 { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ObservabilityScorecardClient ObservabilityScorecard { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PhoneNumbersClient PhoneNumbers { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ProviderResourcesClient ProviderResources { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SessionsClient Sessions { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationPersonalitiesClient SimulationPersonalities { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationRunItemsClient SimulationRunItems { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationRunsClient SimulationRuns { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationScenariosClient SimulationScenarios { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationSuitesClient SimulationSuites { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SimulationsClient Simulations { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SquadsClient Squads { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public StructuredOutputsClient StructuredOutputs { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolsClient Tools { get; }
 

@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OAuth2AuthenticationPlanType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Oauth2,
     }

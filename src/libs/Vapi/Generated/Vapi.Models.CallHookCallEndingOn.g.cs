@@ -9,7 +9,7 @@ namespace Vapi
     public enum CallHookCallEndingOn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallEnding,
     }

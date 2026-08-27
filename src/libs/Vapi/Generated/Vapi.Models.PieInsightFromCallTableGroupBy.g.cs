@@ -12,39 +12,39 @@ namespace Vapi
     public enum PieInsightFromCallTableGroupBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArtifactStructuredOutputsOutputID,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndedReason,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhoneNumberId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SquadId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Type,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkflowId,
     }

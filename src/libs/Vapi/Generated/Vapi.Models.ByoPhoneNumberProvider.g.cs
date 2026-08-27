@@ -9,7 +9,7 @@ namespace Vapi
     public enum ByoPhoneNumberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ByoPhoneNumber,
     }

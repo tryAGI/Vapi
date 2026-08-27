@@ -9,7 +9,7 @@ namespace Vapi
     public enum MinimaxLLMModelModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MiniMaxM27,
     }

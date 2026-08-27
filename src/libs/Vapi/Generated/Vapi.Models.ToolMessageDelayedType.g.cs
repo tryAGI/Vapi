@@ -9,7 +9,7 @@ namespace Vapi
     public enum ToolMessageDelayedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RequestResponseDelayed,
     }

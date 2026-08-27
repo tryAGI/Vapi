@@ -9,11 +9,11 @@ namespace Vapi
     public enum CreateWorkflowDTOBackgroundSound
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Off,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Office,
     }

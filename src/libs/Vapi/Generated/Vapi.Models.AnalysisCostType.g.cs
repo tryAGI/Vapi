@@ -9,7 +9,7 @@ namespace Vapi
     public enum AnalysisCostType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Analysis,
     }

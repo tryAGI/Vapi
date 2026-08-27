@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateToolDraftDTO
     {
@@ -51,13 +51,13 @@ namespace Vapi
         public string? TemplateId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("server")]
         public global::Vapi.Server? Server { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("async")]
         public bool? Async { get; set; }
@@ -161,13 +161,13 @@ namespace Vapi
         public string? CredentialId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("extendedDelayWhenPrecededByTextEnabled")]
         public bool? ExtendedDelayWhenPrecededByTextEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("beepDetectionEnabled")]
         public bool? BeepDetectionEnabled { get; set; }

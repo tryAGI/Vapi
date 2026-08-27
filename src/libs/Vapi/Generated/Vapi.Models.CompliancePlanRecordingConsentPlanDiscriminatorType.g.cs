@@ -4,16 +4,16 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CompliancePlanRecordingConsentPlanDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StayOnLine,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Verbal,
     }

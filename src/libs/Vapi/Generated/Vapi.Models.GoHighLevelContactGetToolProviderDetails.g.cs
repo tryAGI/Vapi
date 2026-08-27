@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GoHighLevelContactGetToolProviderDetails
     {
@@ -15,7 +15,7 @@ namespace Vapi
         public string? TemplateUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("setupInstructions")]
         public global::System.Collections.Generic.IList<global::Vapi.ToolTemplateSetup>? SetupInstructions { get; set; }

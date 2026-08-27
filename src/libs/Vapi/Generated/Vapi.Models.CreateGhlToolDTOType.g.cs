@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateGhlToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ghl,
     }

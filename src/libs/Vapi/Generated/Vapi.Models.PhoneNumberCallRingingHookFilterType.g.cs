@@ -9,7 +9,7 @@ namespace Vapi
     public enum PhoneNumberCallRingingHookFilterType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StartsWith,
     }

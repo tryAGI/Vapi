@@ -9,11 +9,11 @@ namespace Vapi
     public enum TemplateVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

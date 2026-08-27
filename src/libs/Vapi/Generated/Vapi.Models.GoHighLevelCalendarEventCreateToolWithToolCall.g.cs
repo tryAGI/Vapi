@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GoHighLevelCalendarEventCreateToolWithToolCall
     {
@@ -22,7 +22,7 @@ namespace Vapi
         public global::Vapi.GoHighLevelCalendarEventCreateToolWithToolCallType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toolCall")]
         [global::System.Text.Json.Serialization.JsonRequired]

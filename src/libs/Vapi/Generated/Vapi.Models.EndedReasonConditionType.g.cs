@@ -10,7 +10,7 @@ namespace Vapi
     public enum EndedReasonConditionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndedReason,
     }

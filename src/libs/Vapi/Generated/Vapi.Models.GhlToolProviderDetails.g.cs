@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GhlToolProviderDetails
     {
@@ -15,7 +15,7 @@ namespace Vapi
         public string? TemplateUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("setupInstructions")]
         public global::System.Collections.Generic.IList<global::Vapi.ToolTemplateSetup>? SetupInstructions { get; set; }
@@ -28,31 +28,31 @@ namespace Vapi
         public global::Vapi.GhlToolProviderDetailsType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workflowId")]
         public string? WorkflowId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workflowName")]
         public string? WorkflowName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("webhookHookId")]
         public string? WebhookHookId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("webhookHookName")]
         public string? WebhookHookName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("locationId")]
         public string? LocationId { get; set; }

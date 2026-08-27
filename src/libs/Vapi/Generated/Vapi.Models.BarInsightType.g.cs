@@ -10,7 +10,7 @@ namespace Vapi
     public enum BarInsightType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bar,
     }

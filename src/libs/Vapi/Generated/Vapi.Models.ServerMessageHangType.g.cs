@@ -13,7 +13,7 @@ namespace Vapi
     public enum ServerMessageHangType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hang,
     }

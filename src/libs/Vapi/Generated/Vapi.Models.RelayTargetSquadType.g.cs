@@ -9,7 +9,7 @@ namespace Vapi
     public enum RelayTargetSquadType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Squad,
     }

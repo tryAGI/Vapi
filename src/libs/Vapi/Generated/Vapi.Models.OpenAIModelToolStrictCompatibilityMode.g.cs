@@ -12,11 +12,11 @@ namespace Vapi
     public enum OpenAIModelToolStrictCompatibilityMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StripParametersWithUnsupportedValidation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StripUnsupportedValidation,
     }

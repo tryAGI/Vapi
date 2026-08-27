@@ -11,603 +11,603 @@ namespace Vapi
     public enum WorkflowOpenAIModelModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatLatest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chatgpt4oLatest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo0125,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo0125_canadaeast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo0125_northcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo0125_southcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo0613,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo1106,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo1106_canadaeast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo1106_westus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo16k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt40125Preview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt40125Preview_eastus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt40125Preview_northcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt40125Preview_southcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt40613,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt40613_canadaeast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview_australiaeast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview_canadaeast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview_france,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview_india,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview_norway,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview_swedencentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview_uk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview_westus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview_westus3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4Turbo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4Turbo20240409,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4Turbo20240409_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4TurboPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414_eastus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414_germanywestcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414_northcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414_polandcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414_southcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414_spaincentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414_westeurope,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414_westus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414_westus3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414_eastus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414_germanywestcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414_northcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414_polandcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414_southcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414_spaincentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414_westeurope,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414_westus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414_westus3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Nano,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Nano20250414,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Nano20250414_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Nano20250414_northcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Nano20250414_southcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Nano20250414_westus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Nano20250414_westus3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41_australiaeast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240513,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240513_eastus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240513_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240513_northcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240513_southcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240513_westus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240513_westus3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240806,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240806_eastus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240806_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240806_northcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240806_southcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240806_westus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240806_westus3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120_eastus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120_germanywestcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120_polandcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120_southcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120_spaincentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120_swedencentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120_westeurope,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120_westus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120_westus3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMini20240718,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMini20240718_eastus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMini20240718_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMini20240718_northcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMini20240718_southcentralus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMini20240718_westus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMini20240718_westus3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o_australiaeast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5ChatLatest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Mini_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Mini_germanywestcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Mini_polandcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Mini_spaincentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Mini_swedencentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Mini_westeurope,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Nano,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Nano_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Nano_swedencentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt51,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt51ChatLatest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt51_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt51_swedencentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt52,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt52ChatLatest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt52_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt52_swedencentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54Mini_australiaeast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54Mini_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54Mini_swedencentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54Nano,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54Nano_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54Nano_swedencentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54_swedencentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt55,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt56Luna,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt56Luna_westus3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt56Sol,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt56Sol_westus3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt56Terra,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt56Terra_westus3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5_canadaeast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5_eastus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5_eastus2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5_germanywestcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5_polandcentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5_spaincentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5_swedencentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5_westeurope,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         O1Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         O1Mini20240912,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         O3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         O3Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         O4Mini,
     }

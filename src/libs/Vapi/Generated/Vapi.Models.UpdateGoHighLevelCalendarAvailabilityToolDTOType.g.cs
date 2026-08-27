@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateGoHighLevelCalendarAvailabilityToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GohighlevelCalendarAvailabilityCheck,
     }

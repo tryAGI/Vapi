@@ -9,7 +9,7 @@ namespace Vapi
     public enum PhoneNumberCallEndingHookFilterKey
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallEndedReason,
     }

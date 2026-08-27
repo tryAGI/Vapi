@@ -9,7 +9,7 @@ namespace Vapi
     public enum GoogleCalendarCheckAvailabilityToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleCalendarAvailabilityCheck,
     }

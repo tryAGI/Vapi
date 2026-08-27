@@ -9,7 +9,7 @@ namespace Vapi
     public enum PublicKeyEncryptionPlanAlgorithm
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RsaOaep256,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum TestSuitePhoneNumberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TestSuite,
     }

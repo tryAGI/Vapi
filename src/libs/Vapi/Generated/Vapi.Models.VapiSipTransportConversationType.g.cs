@@ -10,7 +10,7 @@ namespace Vapi
     public enum VapiSipTransportConversationType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voice,
     }

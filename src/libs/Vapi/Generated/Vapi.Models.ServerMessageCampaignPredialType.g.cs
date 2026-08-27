@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageCampaignPredialType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignPredial,
     }

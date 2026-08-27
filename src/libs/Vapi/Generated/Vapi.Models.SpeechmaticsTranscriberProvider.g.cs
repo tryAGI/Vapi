@@ -9,7 +9,7 @@ namespace Vapi
     public enum SpeechmaticsTranscriberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Speechmatics,
     }

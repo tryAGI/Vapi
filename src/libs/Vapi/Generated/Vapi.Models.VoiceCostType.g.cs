@@ -9,7 +9,7 @@ namespace Vapi
     public enum VoiceCostType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voice,
     }

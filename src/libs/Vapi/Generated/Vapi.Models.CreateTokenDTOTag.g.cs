@@ -9,11 +9,11 @@ namespace Vapi
     public enum CreateTokenDTOTag
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

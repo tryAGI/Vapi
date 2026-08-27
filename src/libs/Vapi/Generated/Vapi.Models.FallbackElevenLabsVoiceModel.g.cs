@@ -10,31 +10,31 @@ namespace Vapi
     public enum FallbackElevenLabsVoiceModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ElevenFlashV2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ElevenFlashV25,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ElevenMonolingualV1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ElevenMultilingualV2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ElevenTurboV2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ElevenTurboV25,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ElevenV3,
     }

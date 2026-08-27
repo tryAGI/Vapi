@@ -4,16 +4,16 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CartesiaTranscriberModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ink2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InkWhisper,
     }

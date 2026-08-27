@@ -4,20 +4,20 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum BoardMetricWidgetItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AverageCostBreakdownChart,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConcurrencyChart,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FailedCallsList,
     }

@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UpdateGhlToolDTO
     {
@@ -101,7 +101,7 @@ namespace Vapi
         public global::Vapi.ToolRejectionPlan? RejectionPlan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         public global::Vapi.GhlToolMetadata? Metadata { get; set; }

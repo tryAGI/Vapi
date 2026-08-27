@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientMessageSessionCreatedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SessionCreated,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum VapiWebCallTransportProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Daily,
     }

@@ -12,7 +12,7 @@ namespace Vapi
     public enum ChatEvalUserMessageMockRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

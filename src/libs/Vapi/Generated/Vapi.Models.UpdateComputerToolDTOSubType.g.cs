@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateComputerToolDTOSubType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Computer20241022,
     }

@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateBashToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bash,
     }

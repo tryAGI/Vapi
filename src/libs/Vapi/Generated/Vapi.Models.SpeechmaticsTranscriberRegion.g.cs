@@ -12,11 +12,11 @@ namespace Vapi
     public enum SpeechmaticsTranscriberRegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Us,
     }

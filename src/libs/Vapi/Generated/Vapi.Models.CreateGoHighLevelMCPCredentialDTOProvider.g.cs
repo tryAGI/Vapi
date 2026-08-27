@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateGoHighLevelMCPCredentialDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GhlOauth2Authorization,
     }

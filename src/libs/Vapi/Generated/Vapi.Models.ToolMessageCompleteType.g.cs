@@ -12,7 +12,7 @@ namespace Vapi
     public enum ToolMessageCompleteType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RequestComplete,
     }

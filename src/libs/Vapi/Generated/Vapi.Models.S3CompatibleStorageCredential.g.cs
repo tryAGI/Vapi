@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class S3CompatibleStorageCredential
     {
@@ -16,7 +16,7 @@ namespace Vapi
         public global::Vapi.S3CompatibleStorageCredentialProvider Provider { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bucketPlan")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -125,7 +125,7 @@ namespace Vapi
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Vapi.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
@@ -317,7 +317,7 @@ namespace Vapi
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 302)
                             {
                                 string? __content_302 = null;
@@ -349,7 +349,7 @@ namespace Vapi
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 401)
                             {
                                 string? __content_401 = null;
@@ -381,7 +381,7 @@ namespace Vapi
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 404)
                             {
                                 string? __content_404 = null;

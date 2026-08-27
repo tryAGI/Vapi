@@ -9,15 +9,15 @@ namespace Vapi
     public enum FallbackAzureSpeechTranscriberSegmentationStrategy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Semantic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Time,
     }

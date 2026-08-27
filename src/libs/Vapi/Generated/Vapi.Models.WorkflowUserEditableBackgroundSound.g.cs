@@ -9,11 +9,11 @@ namespace Vapi
     public enum WorkflowUserEditableBackgroundSound
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Off,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Office,
     }

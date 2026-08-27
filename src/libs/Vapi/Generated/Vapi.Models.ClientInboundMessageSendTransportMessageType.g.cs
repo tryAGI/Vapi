@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientInboundMessageSendTransportMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SendTransportMessage,
     }

@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateTextInsightFromCallTableDTO
     {
@@ -41,7 +41,7 @@ namespace Vapi
         public object? Formula { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("timeRange")]
         public global::Vapi.InsightTimeRange? TimeRange { get; set; }

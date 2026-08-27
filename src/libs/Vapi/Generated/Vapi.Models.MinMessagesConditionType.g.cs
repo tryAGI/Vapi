@@ -10,7 +10,7 @@ namespace Vapi
     public enum MinMessagesConditionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MinMessages,
     }

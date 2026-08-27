@@ -9,7 +9,7 @@ namespace Vapi
     public enum VapiWebsocketTransportProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VapiWebsocket,
     }

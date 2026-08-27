@@ -9,7 +9,7 @@ namespace Vapi
     public enum CloudflareCredentialProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cloudflare,
     }

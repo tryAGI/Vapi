@@ -23,11 +23,11 @@ namespace Vapi
     public enum ToolMessageCompleteRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         System,
     }

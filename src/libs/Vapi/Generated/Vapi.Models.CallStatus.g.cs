@@ -9,35 +9,35 @@ namespace Vapi
     public enum CallStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeletionFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ended,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Forwarding,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Queued,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ringing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Scheduled,
     }

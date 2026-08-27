@@ -13,11 +13,11 @@ namespace Vapi
     public enum InsightRunFormatPlanFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Raw,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Recharts,
     }

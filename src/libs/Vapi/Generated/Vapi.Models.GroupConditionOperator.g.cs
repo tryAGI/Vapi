@@ -9,11 +9,11 @@ namespace Vapi
     public enum GroupConditionOperator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         And,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Or,
     }

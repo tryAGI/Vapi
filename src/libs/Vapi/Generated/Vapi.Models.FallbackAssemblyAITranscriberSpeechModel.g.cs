@@ -12,15 +12,15 @@ namespace Vapi
     public enum FallbackAssemblyAITranscriberSpeechModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Universal35Pro,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UniversalStreamingEnglish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UniversalStreamingMultilingual,
     }

@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CompliancePlan
     {
@@ -30,7 +30,7 @@ namespace Vapi
         public global::Vapi.SecurityFilterPlan? SecurityFilterPlan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("recordingConsentPlan")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.RecordingConsentPlanJsonConverter))]

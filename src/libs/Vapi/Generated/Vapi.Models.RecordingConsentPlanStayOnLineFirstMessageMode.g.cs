@@ -17,11 +17,11 @@ namespace Vapi
     public enum RecordingConsentPlanStayOnLineFirstMessageMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantSpeaksFirst,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantWaitsForUser,
     }

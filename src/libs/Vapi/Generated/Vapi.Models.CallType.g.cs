@@ -9,19 +9,19 @@ namespace Vapi
     public enum CallType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InboundPhoneCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OutboundPhoneCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VapiWebsocketCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WebCall,
     }

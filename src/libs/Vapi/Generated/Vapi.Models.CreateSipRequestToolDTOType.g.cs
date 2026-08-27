@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateSipRequestToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SipRequest,
     }

@@ -10,7 +10,7 @@ namespace Vapi
     public enum UpdateComputerToolDTOName
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Computer,
     }

@@ -14,7 +14,7 @@ namespace Vapi
     public enum ClientInboundMessageControlType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Control,
     }

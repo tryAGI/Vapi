@@ -4,12 +4,12 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ElevenLabsCredentialProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x11labs,
     }

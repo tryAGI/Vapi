@@ -9,7 +9,7 @@ namespace Vapi
     public enum FunctionToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }

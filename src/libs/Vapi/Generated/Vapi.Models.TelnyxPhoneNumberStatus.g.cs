@@ -9,15 +9,15 @@ namespace Vapi
     public enum TelnyxPhoneNumberStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Activating,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Blocked,
     }

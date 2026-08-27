@@ -9,203 +9,203 @@ namespace Vapi
     public enum FallbackRimeAIVoiceVoiceId
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Albion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Alpine,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Amber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Andromeda,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arcade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Astra,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Atrium,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bond,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Breeze,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cedar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Celeste,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Colin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cove,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Creek,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cupola,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Estelle,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Esther,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eucalyptus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eva,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Falcon,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fern,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Glacier,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hank,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Helen,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Joy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lagoon,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lintel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Luna,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lyra,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marlu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Marsh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Masonry,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Maya,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MesaExtra,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Moon,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Moraine,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nicholas,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Oculus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Orion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Parapet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Peak,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sirius,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Summit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Talon,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Thunder,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Transom,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tundra,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tyler,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vespera,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wildflower,
     }

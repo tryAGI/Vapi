@@ -9,15 +9,15 @@ namespace Vapi
     public enum FallbackDeepgramTranscriberLanguage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Az,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ba,
         /// <summary>
@@ -25,19 +25,19 @@ namespace Vapi
         /// </summary>
         Be,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Br,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bs,
         /// <summary>
@@ -49,11 +49,11 @@ namespace Vapi
         /// </summary>
         Cs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Da,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DaDk,
         /// <summary>
@@ -61,7 +61,7 @@ namespace Vapi
         /// </summary>
         De,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeCh,
         /// <summary>
@@ -69,35 +69,35 @@ namespace Vapi
         /// </summary>
         El,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         En,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnAu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnCa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnGb,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnIe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnNz,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnUs,
         /// <summary>
@@ -105,11 +105,11 @@ namespace Vapi
         /// </summary>
         Es,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Es419,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EsLatam,
         /// <summary>
@@ -117,23 +117,23 @@ namespace Vapi
         /// </summary>
         Et,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrCa,
         /// <summary>
@@ -141,7 +141,7 @@ namespace Vapi
         /// </summary>
         Ha,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Haw,
         /// <summary>
@@ -153,19 +153,19 @@ namespace Vapi
         /// </summary>
         Hi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HiLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id,
         /// <summary>
@@ -173,71 +173,71 @@ namespace Vapi
         /// </summary>
         Is,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         It,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ja,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Jw,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ko,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KoKr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ln,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ms,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Multi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NlBe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         No,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pl,
         /// <summary>
@@ -245,39 +245,39 @@ namespace Vapi
         /// </summary>
         Pt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PtBr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PtPt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ro,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ru,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         So,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sr,
         /// <summary>
@@ -285,23 +285,23 @@ namespace Vapi
         /// </summary>
         Su,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SvSe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Taq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Te,
         /// <summary>
@@ -309,11 +309,11 @@ namespace Vapi
         /// </summary>
         Th,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThTh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tl,
         /// <summary>
@@ -325,11 +325,11 @@ namespace Vapi
         /// </summary>
         Tt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ur,
         /// <summary>
@@ -337,31 +337,31 @@ namespace Vapi
         /// </summary>
         Vi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Yo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Zh,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhCn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhHk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhHans,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhHant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhTw,
     }

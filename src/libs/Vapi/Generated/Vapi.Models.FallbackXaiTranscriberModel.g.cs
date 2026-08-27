@@ -9,7 +9,7 @@ namespace Vapi
     public enum FallbackXaiTranscriberModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
     }

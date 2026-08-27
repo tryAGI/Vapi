@@ -9,67 +9,67 @@ namespace Vapi
     public enum AnalyticsOperationColumn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Concurrency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostBreakdownAnalysisBreakdownSummary,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostBreakdownLlm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostBreakdownLlmCachedPromptTokens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostBreakdownLlmCompletionTokens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostBreakdownLlmPromptTokens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostBreakdownStt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostBreakdownTranscriber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostBreakdownTransport,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostBreakdownTts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostBreakdownTtsCharacters,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostBreakdownVapi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MinutesUsed,
     }

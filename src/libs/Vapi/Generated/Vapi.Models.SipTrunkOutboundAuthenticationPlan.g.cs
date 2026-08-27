@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class SipTrunkOutboundAuthenticationPlan
     {
@@ -15,7 +15,7 @@ namespace Vapi
         public string? AuthPassword { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authUsername")]
         public string? AuthUsername { get; set; }

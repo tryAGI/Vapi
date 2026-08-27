@@ -4,32 +4,32 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TransportCostProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Daily,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Telnyx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Twilio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VapiSip,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VapiWebsocket,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vonage,
     }

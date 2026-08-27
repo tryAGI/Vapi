@@ -9,7 +9,7 @@ namespace Vapi
     public enum CallHookCustomerSpeechInterruptedOn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerSpeechInterrupted,
     }

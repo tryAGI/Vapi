@@ -4,124 +4,124 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateAzureOpenAICredentialDTOModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo0125,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo1106,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt40125Preview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt40613,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4Turbo20240409,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4120250414,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Mini20250414,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41Nano20250414,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240513,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240806,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20241120,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMini20240718,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Nano,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt51,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt51Chat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt52,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt52Chat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54Mini20260317,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt54Nano,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt56Luna20260709,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt56Sol20260709,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt56Terra20260709,
     }

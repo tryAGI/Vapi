@@ -12,11 +12,11 @@ namespace Vapi
     public enum SpeechmaticsTranscriberOperatingPoint
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enhanced,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Standard,
     }

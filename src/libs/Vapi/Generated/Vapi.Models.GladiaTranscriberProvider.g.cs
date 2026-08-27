@@ -9,7 +9,7 @@ namespace Vapi
     public enum GladiaTranscriberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gladia,
     }

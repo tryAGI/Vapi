@@ -9,7 +9,7 @@ namespace Vapi
     public enum FallbackTalkscriberTranscriberProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Talkscriber,
     }

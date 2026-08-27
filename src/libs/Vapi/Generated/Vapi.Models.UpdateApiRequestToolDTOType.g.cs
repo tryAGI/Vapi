@@ -9,7 +9,7 @@ namespace Vapi
     public enum UpdateApiRequestToolDTOType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApiRequest,
     }

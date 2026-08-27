@@ -10,7 +10,7 @@ namespace Vapi
     public enum ResponseOutputMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Message,
     }

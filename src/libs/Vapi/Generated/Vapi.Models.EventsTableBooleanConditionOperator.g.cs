@@ -10,7 +10,7 @@ namespace Vapi
     public enum EventsTableBooleanConditionOperator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eq,
     }

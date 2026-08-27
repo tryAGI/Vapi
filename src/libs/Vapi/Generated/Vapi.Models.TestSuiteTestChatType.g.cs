@@ -9,7 +9,7 @@ namespace Vapi
     public enum TestSuiteTestChatType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chat,
     }

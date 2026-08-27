@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateCustomKnowledgeBaseDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomKnowledgeBase,
     }

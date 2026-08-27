@@ -10,7 +10,7 @@ namespace Vapi
     public enum ToolMessageRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tool,
     }

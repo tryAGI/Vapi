@@ -9,11 +9,11 @@ namespace Vapi
     public enum AssistantOverridesBackgroundSound
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Off,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Office,
     }

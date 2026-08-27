@@ -4,144 +4,144 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FallbackDeepgramTranscriberModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Base,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BaseConversationalai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BaseFinance,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BaseGeneral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BaseMeeting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BasePhonecall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BaseVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BaseVoicemail,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enhanced,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnhancedFinance,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnhancedGeneral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnhancedMeeting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EnhancedPhonecall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FluxGeneralEn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FluxGeneralMulti,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova2Automotive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova2Conversationalai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova2Drivethru,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova2Finance,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova2General,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova2Medical,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova2Meeting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova2Phonecall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova2Video,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova2Voicemail,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova3General,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova3Medical,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NovaGeneral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NovaMedical,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NovaPhonecall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Whisper,
     }

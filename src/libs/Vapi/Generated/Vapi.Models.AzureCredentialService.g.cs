@@ -10,11 +10,11 @@ namespace Vapi
     public enum AzureCredentialService
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BlobStorage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Speech,
     }

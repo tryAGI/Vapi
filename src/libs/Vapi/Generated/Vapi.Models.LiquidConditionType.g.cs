@@ -10,7 +10,7 @@ namespace Vapi
     public enum LiquidConditionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Liquid,
     }

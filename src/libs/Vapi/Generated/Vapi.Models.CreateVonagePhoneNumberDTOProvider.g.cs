@@ -9,7 +9,7 @@ namespace Vapi
     public enum CreateVonagePhoneNumberDTOProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vonage,
     }

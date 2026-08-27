@@ -9,7 +9,7 @@ namespace Vapi
     public enum ModelCostType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
     }

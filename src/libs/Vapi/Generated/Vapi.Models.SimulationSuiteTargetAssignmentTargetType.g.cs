@@ -9,11 +9,11 @@ namespace Vapi
     public enum SimulationSuiteTargetAssignmentTargetType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Squad,
     }

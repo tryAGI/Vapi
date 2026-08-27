@@ -9,7 +9,7 @@ namespace Vapi
     public enum TransferCancelToolUserEditableType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TransferCancel,
     }

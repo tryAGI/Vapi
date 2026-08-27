@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageAssistantRequestType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequest,
     }

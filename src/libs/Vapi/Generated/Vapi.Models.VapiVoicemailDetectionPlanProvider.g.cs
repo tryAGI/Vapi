@@ -9,7 +9,7 @@ namespace Vapi
     public enum VapiVoicemailDetectionPlanProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vapi,
     }

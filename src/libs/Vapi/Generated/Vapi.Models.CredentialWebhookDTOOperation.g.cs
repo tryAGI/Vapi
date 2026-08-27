@@ -4,20 +4,20 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CredentialWebhookDTOOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Creation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Override,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Refresh,
     }

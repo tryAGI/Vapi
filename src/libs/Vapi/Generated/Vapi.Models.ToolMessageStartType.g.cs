@@ -12,7 +12,7 @@ namespace Vapi
     public enum ToolMessageStartType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RequestStart,
     }

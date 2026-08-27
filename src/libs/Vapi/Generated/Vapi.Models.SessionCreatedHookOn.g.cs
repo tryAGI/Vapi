@@ -9,7 +9,7 @@ namespace Vapi
     public enum SessionCreatedHookOn
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SessionCreated,
     }

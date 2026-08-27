@@ -4,32 +4,32 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum SimulationRunPaymentRequiredResponseReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingLimit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InitialPaymentMissing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InsufficientCredits,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PaymentMethodMissing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SubscriptionFrozen,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WalletMissing,
     }

@@ -9,2383 +9,2383 @@ namespace Vapi
     public enum CallEndedReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantEndedCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantEndedCallAfterMessageSpoken,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantEndedCallWithHangupTask,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantForwardedCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantJoinTimedOut,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantNotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantNotValid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestReturnedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestReturnedForwardingPhoneNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestReturnedInvalidAssistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestReturnedNoAssistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantRequestReturnedUnspeakableError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantSaidEndCallPhrase,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallDeleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorNeitherAssistantNorServerSet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallEndingHookExecutedSay,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallEndingHookExecutedTransfer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallForwardingNoAnswer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallForwardingOperatorBusy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorAssistantDidNotReceiveCustomerAudio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorPipelineNoAvailableLlmModel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorPipelineWsModelConnectionFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnthropic500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnthropic503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnthropicBedrock500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnthropicBedrock503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnthropicBedrockLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnthropicLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnthropicVertex500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnthropicVertex503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnthropicVertexLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnyscale500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnyscale503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAnyscaleLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAzureOpenai500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAzureOpenai503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultAzureOpenaiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultBaseten500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultBaseten503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultBasetenLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultCartesia500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultCartesia503ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultCartesia522ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultCerebras500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultCerebras503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultCerebrasLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultCustomLlm500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultCustomLlm503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultCustomLlmLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultDeepSeek500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultDeepSeek503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultDeepSeekLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultDeepgramReturning500InvalidJson,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultDeepgramReturning502BadGatewayEhostunreach,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultDeepgramReturning502NetworkError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultDeepinfra500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultDeepinfra503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultDeepinfraLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultElevenLabs500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultElevenLabs503ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultElevenLabsSystemBusyAndRequestedUpgrade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultGoogle500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultGoogle503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultGoogleLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultGroq500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultGroq503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultGroqLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultInflectionAi500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultInflectionAi503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultInflectionAiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultMinimax500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultMinimax503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultMinimaxLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultMistral500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultMistral503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultMistralLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultOpenai500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultOpenai503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultOpenaiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultOpenrouter500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultOpenrouter503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultOpenrouterLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultOutboundSip403Forbidden,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultOutboundSip407ProxyAuthenticationRequired,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultOutboundSip408RequestTimeout,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultOutboundSip480TemporarilyUnavailable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultOutboundSip503ServiceUnavailable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultPerplexityAi500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultPerplexityAi503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultPerplexityAiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultPlayht502GatewayError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultPlayht504GatewayError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultRunpod500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultRunpod503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultRunpodLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultTogetherAi500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultTogetherAi503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultTogetherAiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultTransportNeverConnected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultVapi500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultVapi503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultVapiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultVapiTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultVapiVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultXai500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultXai503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorProviderfaultXaiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorSipInboundCallFailedToConnect,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorSipOutboundCallFailedToConnect,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorTransferFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropic400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropic401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropic403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropic429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropicBedrock400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropicBedrock401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropicBedrock403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropicBedrock429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropicVertex400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropicVertex401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropicVertex403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnthropicVertex429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnyscale400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnyscale401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnyscale403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAnyscale429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAssemblyAiReturning400InsufficentFunds,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAssemblyAiReturning400PaidOnlyFeature,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAssemblyAiReturning401InvalidCredentials,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAssemblyAiReturning500InvalidSchema,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAssemblyAiReturning500WordBoostParsingFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAssemblyAiTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAzureOpenai400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAzureOpenai401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAzureOpenai403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAzureOpenai429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAzureSpeechTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultAzureVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultBaseten400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultBaseten401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultBaseten403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultBaseten429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCallStartedButConnectionToTransportMissing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCartesiaRequestedPayment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCartesiaSocketHangUp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCartesiaTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCartesiaVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCerebras400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCerebras401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCerebras403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCerebras429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultChatPipelineFailedToStart,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCustomLlm400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCustomLlm401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCustomLlm403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCustomLlm429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultCustomTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepSeek400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepSeek401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepSeek403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepSeek429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepgramReturning400NoSuchModelLanguageTierCombination,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepgramReturning401InvalidCredentials,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepgramReturning403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepgramReturning404NotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepgramTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepgramVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepinfra400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepinfra401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepinfra403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultDeepinfra429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsBlockedAccountInProbation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsBlockedConcurrentRequestsAndRequestedUpgrade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsBlockedContentAgainstTheirPolicy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsBlockedFreePlanAndRequestedUpgrade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsBlockedUsingInstantVoiceCloneAndRequestedUpgrade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsBlockedVoicePotentiallyAgainstTermsOfServiceAndAwaitingVerification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsInvalidApiKey,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsInvalidVoiceSamples,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsMaxCharacterLimitExceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsMissingSamplesForVoiceClone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsProfessionalVoicesOnlyForCreatorPlus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsQuotaExceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsSystemBusyAndRequestedUpgrade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsUnauthorizedAccess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsUnauthorizedToAccessModel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsVoiceDisabledByOwner,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsVoiceNotAllowedForFreeUsers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsVoiceNotFineTuned,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsVoiceNotFineTunedAndCannotBeUsed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultElevenLabsVoiceNotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultGladiaTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultGoogle400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultGoogle401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultGoogle403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultGoogle429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultGoogleTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultGroq400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultGroq401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultGroq403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultGroq429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultHumeVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultInflectionAi400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultInflectionAi401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultInflectionAi403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultInflectionAi429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultInworldVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultLmntVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultMicrosoftVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultMinimax400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultMinimax401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultMinimax403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultMinimax429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultMinimaxVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultMistral400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultMistral401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultMistral403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultMistral429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultNeuphonicVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenai400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenai401AccountNotInOrganization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenai401IncorrectApiKey,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenai401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenai403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenai429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenai429RateLimitReached,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenaiTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenaiVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenrouter400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenrouter401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenrouter403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultOpenrouter429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPerplexityAi400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPerplexityAi401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPerplexityAi403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPerplexityAi429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPlayht401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPlayht403ForbiddenApiAccessNotAvailable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPlayht403ForbiddenOutOfCharacters,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPlayht429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPlayhtInvalidEmotion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPlayhtInvalidVoice,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPlayhtOutOfCredits,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPlayhtRequestTimedOut,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPlayhtUnexpectedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPlayhtVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultPlayhtVoiceMustBeAValidVoiceManifestUri,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultRimeAiVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultRunpod400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultRunpod401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultRunpod403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultRunpod429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultSesameVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultSmallestAiVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultSonioxTranscriberAuthFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultSonioxTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultSonioxTranscriberInvalidConfig,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultSonioxTranscriberRateLimited,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultSonioxTranscriberServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultSpeechmaticsTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultTalkscriberTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultTavusVideoFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultTogetherAi400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultTogetherAi401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultTogetherAi403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultTogetherAi429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultTransportConnectedButCallNotActive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultTransportNeverConnected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultVapi400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultVapi401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultVapi403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultVapi429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultVapiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultVapiTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultVapiVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultWellsaidVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultWorkerDied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultWorkerNotAvailable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultXai400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultXai401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultXai403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultXai429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultXaiTranscriberAuthFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultXaiTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultXaiTranscriberInvalidConfig,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultXaiTranscriberRateLimited,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultXaiTranscriberServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorVapifaultXaiVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorWarmTransferAssistantCancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorWarmTransferMaxDuration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorWarmTransferMicrophoneTimeout,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressErrorWarmTransferSilenceTimeout,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressSipCompletedCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallInProgressTwilioCompletedCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallRingingErrorSipInboundCallFailedToConnect,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallRingingHookExecutedSay,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallRingingHookExecutedTransfer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallRingingSipInboundCallerHungupBeforeCallConnect,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartAssistantVersionErrorValidation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorEnterpriseFeatureNotAvailableRecordingConsent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorFraudCheckFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorGetAssistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorGetCustomer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorGetPhoneNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorGetResourcesValidation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorGetTransport,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorSubscriptionConcurrencyLimitReached,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorSubscriptionFrozen,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorSubscriptionInsufficientCredits,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorSubscriptionUpgradeFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorSubscriptionWalletDoesNotExist,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorVapiNumberInternational,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorVapiNumberOutboundDailyLimit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorVapifaultDatabaseError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorVapifaultGetOrg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallStartErrorVapifaultGetSubscription,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerBusy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerDidNotAnswer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerDidNotGiveMicrophonePermission,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerEndedCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerEndedCallAfterWarmTransferAttempt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerEndedCallBeforeWarmTransfer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomerEndedCallDuringTransfer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ExceededMaxDuration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ManuallyCanceled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhoneCallProviderBypassEnabledButNoCallReceived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhoneCallProviderClosedWebsocket,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropic400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropic401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropic403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropic429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropic500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropic503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicBedrock400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicBedrock401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicBedrock403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicBedrock429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicBedrock500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicBedrock503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicBedrockLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicVertex400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicVertex401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicVertex403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicVertex429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicVertex500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicVertex503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnthropicVertexLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnyscale400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnyscale401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnyscale403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnyscale429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnyscale500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnyscale503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAnyscaleLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAssemblyAiReturning400InsufficentFunds,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAssemblyAiReturning400PaidOnlyFeature,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAssemblyAiReturning401InvalidCredentials,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAssemblyAiReturning500InvalidSchema,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAssemblyAiReturning500WordBoostParsingFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAssemblyAiTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAzureOpenai400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAzureOpenai401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAzureOpenai403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAzureOpenai429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAzureOpenai500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAzureOpenai503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAzureOpenaiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAzureSpeechTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorAzureVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorBaseten400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorBaseten401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorBaseten403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorBaseten429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorBaseten500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorBaseten503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorBasetenLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCartesia500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCartesia502ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCartesia503ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCartesia522ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCartesiaRequestedPayment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCartesiaSocketHangUp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCartesiaTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCartesiaVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCerebras400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCerebras401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCerebras403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCerebras429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCerebras500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCerebras503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCerebrasLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCustomLlm400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCustomLlm401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCustomLlm403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCustomLlm429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCustomLlm500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCustomLlm503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCustomLlmLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCustomTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorCustomVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepSeek400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepSeek401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepSeek403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepSeek429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepSeek500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepSeek503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepSeekLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepgramReturning400NoSuchModelLanguageTierCombination,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepgramReturning401InvalidCredentials,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepgramReturning403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepgramReturning404NotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepgramReturning500InvalidJson,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepgramReturning502BadGatewayEhostunreach,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepgramReturning502NetworkError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepgramReturningEconnreset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepgramTranscriberApiKeyMissing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepgramTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepgramVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepinfra400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepinfra401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepinfra403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepinfra429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepinfra500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepinfra503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorDeepinfraLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabs500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabs503ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsBlockedAccountInProbation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsBlockedConcurrentRequestsAndRequestedUpgrade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsBlockedContentAgainstTheirPolicy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsBlockedFreePlanAndRequestedUpgrade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsBlockedUsingInstantVoiceCloneAndRequestedUpgrade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsBlockedVoicePotentiallyAgainstTermsOfServiceAndAwaitingVerification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsInvalidApiKey,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsInvalidVoiceSamples,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsMaxCharacterLimitExceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsMissingSamplesForVoiceClone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsProfessionalVoicesOnlyForCreatorPlus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsQuotaExceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsSystemBusyAndRequestedUpgrade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsUnauthorizedAccess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsUnauthorizedToAccessModel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsVapiVoiceDisabledByOwner,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsVoiceDisabledByOwner,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsVoiceNotAllowedForFreeUsers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsVoiceNotFineTuned,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsVoiceNotFineTunedAndCannotBeUsed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorElevenLabsVoiceNotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGladiaTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGoogle400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGoogle401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGoogle403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGoogle429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGoogle500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGoogle503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGoogleLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGoogleTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGroq400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGroq401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGroq403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGroq429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGroq500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGroq503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorGroqLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorHumeVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorInflectionAi400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorInflectionAi401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorInflectionAi403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorInflectionAi429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorInflectionAi500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorInflectionAi503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorInflectionAiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorInworldVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorLmntVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMicrosoftVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMicrosoftVoiceRequestCanceled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMinimax400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMinimax401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMinimax403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMinimax429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMinimax500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMinimax503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMinimaxLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMinimaxVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMistral400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMistral401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMistral403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMistral429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMistral500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMistral503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorMistralLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorNeuphonicVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenai400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenai401AccountNotInOrganization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenai401IncorrectApiKey,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenai401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenai403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenai429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenai429RateLimitReached,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenai500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenai503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenaiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenaiTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenaiVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenrouter400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenrouter401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenrouter403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenrouter429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenrouter500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenrouter503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorOpenrouterLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPerplexityAi400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPerplexityAi401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPerplexityAi403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPerplexityAi429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPerplexityAi500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPerplexityAi503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPerplexityAiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayht401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayht403ForbiddenApiAccessNotAvailable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayht403ForbiddenOutOfCharacters,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayht429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayht502GatewayError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayht504GatewayError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayhtInvalidEmotion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayhtInvalidVoice,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayhtOutOfCredits,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayhtRequestTimedOut,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayhtUnexpectedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayhtVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorPlayhtVoiceMustBeAValidVoiceManifestUri,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorRimeAiVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorRunpod400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorRunpod401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorRunpod403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorRunpod429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorRunpod500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorRunpod503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorRunpodLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorSesameVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorSmallestAiVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorSonioxTranscriberAuthFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorSonioxTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorSonioxTranscriberInvalidConfig,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorSonioxTranscriberRateLimited,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorSonioxTranscriberServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorSpeechmaticsTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorTalkscriberTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorTavusVideoFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorTogetherAi400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorTogetherAi401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorTogetherAi403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorTogetherAi429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorTogetherAi500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorTogetherAi503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorTogetherAiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorVapi400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorVapi401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorVapi403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorVapi429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorVapi500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorVapi503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorVapiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorVapiTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorVapiVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorWellsaidVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXai400BadRequestValidationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXai401Unauthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXai403ModelAccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXai429ExceededQuota,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXai500ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXai503ServerOverloadedError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXaiLlmFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXaiTranscriberAuthFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXaiTranscriberFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXaiTranscriberInvalidConfig,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXaiTranscriberRateLimited,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXaiTranscriberServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineErrorXaiVoiceFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScheduledCallDeleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SilenceTimedOut,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TwilioFailedToConnectCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TwilioReportedCustomerMisdialed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voicemail,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VonageCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VonageDisconnected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VonageFailedToConnectCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VonageRejected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkerShutdown,
     }

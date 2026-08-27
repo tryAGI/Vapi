@@ -9,11 +9,11 @@ namespace Vapi
     public enum SonioxTranscriberModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SttRtV4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SttRtV5,
     }

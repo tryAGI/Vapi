@@ -9,11 +9,11 @@ namespace Vapi
     public enum ClientMessageTranscriptType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Transcript,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TranscripttranscriptType__final_,
     }

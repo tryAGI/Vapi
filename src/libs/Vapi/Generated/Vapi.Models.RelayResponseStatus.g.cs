@@ -9,15 +9,15 @@ namespace Vapi
     public enum RelayResponseStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeliveredHeadless,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeliveredLive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
     }

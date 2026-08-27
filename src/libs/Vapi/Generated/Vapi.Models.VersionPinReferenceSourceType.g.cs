@@ -9,15 +9,15 @@ namespace Vapi
     public enum VersionPinReferenceSourceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantVersion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Squad,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolVersion,
     }

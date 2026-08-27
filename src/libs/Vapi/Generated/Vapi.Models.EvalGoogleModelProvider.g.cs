@@ -9,7 +9,7 @@ namespace Vapi
     public enum EvalGoogleModelProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Google,
     }

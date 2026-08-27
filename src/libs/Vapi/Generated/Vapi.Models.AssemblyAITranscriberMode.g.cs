@@ -10,15 +10,15 @@ namespace Vapi
     public enum AssemblyAITranscriberMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Balanced,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaxAccuracy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MinLatency,
     }

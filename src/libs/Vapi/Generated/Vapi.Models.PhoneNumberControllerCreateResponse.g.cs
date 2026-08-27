@@ -5,17 +5,17 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct PhoneNumberControllerCreateResponse : global::System.IEquatable<PhoneNumberControllerCreateResponse>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.PhoneNumberControllerCreateResponseDiscriminatorProvider? Provider { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.ByoPhoneNumber? ByoPhoneNumber { get; init; }
@@ -24,7 +24,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ByoPhoneNumber))]
@@ -32,7 +32,7 @@ namespace Vapi
         public bool IsByoPhoneNumber => ByoPhoneNumber != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickByoPhoneNumber(
 #if NET6_0_OR_GREATER
@@ -45,14 +45,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.ByoPhoneNumber PickByoPhoneNumber() => IsByoPhoneNumber
             ? ByoPhoneNumber!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ByoPhoneNumber' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.TwilioPhoneNumber? Twilio { get; init; }
@@ -61,7 +61,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Twilio))]
@@ -69,7 +69,7 @@ namespace Vapi
         public bool IsTwilio => Twilio != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTwilio(
 #if NET6_0_OR_GREATER
@@ -82,14 +82,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.TwilioPhoneNumber PickTwilio() => IsTwilio
             ? Twilio!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Twilio' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.VonagePhoneNumber? Vonage { get; init; }
@@ -98,7 +98,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Vonage))]
@@ -106,7 +106,7 @@ namespace Vapi
         public bool IsVonage => Vonage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickVonage(
 #if NET6_0_OR_GREATER
@@ -119,14 +119,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.VonagePhoneNumber PickVonage() => IsVonage
             ? Vonage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Vonage' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.VapiPhoneNumber? Vapi { get; init; }
@@ -135,7 +135,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Vapi))]
@@ -143,7 +143,7 @@ namespace Vapi
         public bool IsVapi => Vapi != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickVapi(
 #if NET6_0_OR_GREATER
@@ -156,14 +156,14 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.VapiPhoneNumber PickVapi() => IsVapi
             ? Vapi!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Vapi' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Vapi.TelnyxPhoneNumber? Telnyx { get; init; }
@@ -172,7 +172,7 @@ namespace Vapi
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Telnyx))]
@@ -180,7 +180,7 @@ namespace Vapi
         public bool IsTelnyx => Telnyx != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTelnyx(
 #if NET6_0_OR_GREATER
@@ -193,23 +193,23 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Vapi.TelnyxPhoneNumber PickTelnyx() => IsTelnyx
             ? Telnyx!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Telnyx' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator PhoneNumberControllerCreateResponse(global::Vapi.ByoPhoneNumber value) => new PhoneNumberControllerCreateResponse((global::Vapi.ByoPhoneNumber?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.ByoPhoneNumber?(PhoneNumberControllerCreateResponse @this) => @this.ByoPhoneNumber;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PhoneNumberControllerCreateResponse(global::Vapi.ByoPhoneNumber? value)
         {
@@ -217,22 +217,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static PhoneNumberControllerCreateResponse FromByoPhoneNumber(global::Vapi.ByoPhoneNumber? value) => new PhoneNumberControllerCreateResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator PhoneNumberControllerCreateResponse(global::Vapi.TwilioPhoneNumber value) => new PhoneNumberControllerCreateResponse((global::Vapi.TwilioPhoneNumber?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.TwilioPhoneNumber?(PhoneNumberControllerCreateResponse @this) => @this.Twilio;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PhoneNumberControllerCreateResponse(global::Vapi.TwilioPhoneNumber? value)
         {
@@ -240,22 +240,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static PhoneNumberControllerCreateResponse FromTwilio(global::Vapi.TwilioPhoneNumber? value) => new PhoneNumberControllerCreateResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator PhoneNumberControllerCreateResponse(global::Vapi.VonagePhoneNumber value) => new PhoneNumberControllerCreateResponse((global::Vapi.VonagePhoneNumber?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.VonagePhoneNumber?(PhoneNumberControllerCreateResponse @this) => @this.Vonage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PhoneNumberControllerCreateResponse(global::Vapi.VonagePhoneNumber? value)
         {
@@ -263,22 +263,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static PhoneNumberControllerCreateResponse FromVonage(global::Vapi.VonagePhoneNumber? value) => new PhoneNumberControllerCreateResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator PhoneNumberControllerCreateResponse(global::Vapi.VapiPhoneNumber value) => new PhoneNumberControllerCreateResponse((global::Vapi.VapiPhoneNumber?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.VapiPhoneNumber?(PhoneNumberControllerCreateResponse @this) => @this.Vapi;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PhoneNumberControllerCreateResponse(global::Vapi.VapiPhoneNumber? value)
         {
@@ -286,22 +286,22 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static PhoneNumberControllerCreateResponse FromVapi(global::Vapi.VapiPhoneNumber? value) => new PhoneNumberControllerCreateResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator PhoneNumberControllerCreateResponse(global::Vapi.TelnyxPhoneNumber value) => new PhoneNumberControllerCreateResponse((global::Vapi.TelnyxPhoneNumber?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Vapi.TelnyxPhoneNumber?(PhoneNumberControllerCreateResponse @this) => @this.Telnyx;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PhoneNumberControllerCreateResponse(global::Vapi.TelnyxPhoneNumber? value)
         {
@@ -309,12 +309,12 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static PhoneNumberControllerCreateResponse FromTelnyx(global::Vapi.TelnyxPhoneNumber? value) => new PhoneNumberControllerCreateResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PhoneNumberControllerCreateResponse(
             global::Vapi.PhoneNumberControllerCreateResponseDiscriminatorProvider? provider,
@@ -335,29 +335,29 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Telnyx as object ??
             Vapi as object ??
             Vonage as object ??
             Twilio as object ??
-            ByoPhoneNumber as object 
+            ByoPhoneNumber as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             ByoPhoneNumber?.ToString() ??
             Twilio?.ToString() ??
             Vonage?.ToString() ??
             Vapi?.ToString() ??
-            Telnyx?.ToString() 
+            Telnyx?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -365,7 +365,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Vapi.ByoPhoneNumber, TResult>? byoPhoneNumber = null,
@@ -405,7 +405,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Vapi.ByoPhoneNumber>? byoPhoneNumber = null,
@@ -447,7 +447,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Vapi.ByoPhoneNumber>? byoPhoneNumber = null,
@@ -485,7 +485,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -512,7 +512,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(PhoneNumberControllerCreateResponse other)
         {
@@ -521,12 +521,12 @@ namespace Vapi
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.TwilioPhoneNumber?>.Default.Equals(Twilio, other.Twilio) &&
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.VonagePhoneNumber?>.Default.Equals(Vonage, other.Vonage) &&
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.VapiPhoneNumber?>.Default.Equals(Vapi, other.Vapi) &&
-                global::System.Collections.Generic.EqualityComparer<global::Vapi.TelnyxPhoneNumber?>.Default.Equals(Telnyx, other.Telnyx) 
+                global::System.Collections.Generic.EqualityComparer<global::Vapi.TelnyxPhoneNumber?>.Default.Equals(Telnyx, other.Telnyx)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(PhoneNumberControllerCreateResponse obj1, PhoneNumberControllerCreateResponse obj2)
         {
@@ -534,7 +534,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(PhoneNumberControllerCreateResponse obj1, PhoneNumberControllerCreateResponse obj2)
         {
@@ -542,7 +542,7 @@ namespace Vapi
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

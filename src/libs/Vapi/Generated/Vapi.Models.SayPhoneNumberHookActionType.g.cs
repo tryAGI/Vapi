@@ -9,7 +9,7 @@ namespace Vapi
     public enum SayPhoneNumberHookActionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Say,
     }

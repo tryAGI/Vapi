@@ -9,7 +9,7 @@ namespace Vapi
     public enum ClientMessageCallDeletedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallDeleted,
     }

@@ -9,11 +9,11 @@ namespace Vapi
     public enum SimulationRunTransportConfigurationProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VapiWebchat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VapiWebsocket,
     }

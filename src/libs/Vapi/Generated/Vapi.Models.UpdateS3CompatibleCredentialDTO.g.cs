@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UpdateS3CompatibleCredentialDTO
     {
@@ -22,7 +22,7 @@ namespace Vapi
         public double? FallbackIndex { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bucketPlan")]
         public global::Vapi.UpdateS3CompatibleBucketPlanDTO? BucketPlan { get; set; }

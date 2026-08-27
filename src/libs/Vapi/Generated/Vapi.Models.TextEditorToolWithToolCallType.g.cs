@@ -9,7 +9,7 @@ namespace Vapi
     public enum TextEditorToolWithToolCallType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextEditor,
     }

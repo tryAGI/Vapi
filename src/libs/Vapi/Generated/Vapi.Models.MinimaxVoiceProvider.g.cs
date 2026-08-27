@@ -9,7 +9,7 @@ namespace Vapi
     public enum MinimaxVoiceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Minimax,
     }

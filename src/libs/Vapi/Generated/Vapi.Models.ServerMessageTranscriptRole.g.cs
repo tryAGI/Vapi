@@ -9,11 +9,11 @@ namespace Vapi
     public enum ServerMessageTranscriptRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

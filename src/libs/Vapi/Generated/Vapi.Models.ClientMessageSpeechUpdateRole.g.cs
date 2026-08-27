@@ -9,11 +9,11 @@ namespace Vapi
     public enum ClientMessageSpeechUpdateRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

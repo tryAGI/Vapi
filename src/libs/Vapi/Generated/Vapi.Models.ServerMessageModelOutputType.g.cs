@@ -9,7 +9,7 @@ namespace Vapi
     public enum ServerMessageModelOutputType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ModelOutput,
     }

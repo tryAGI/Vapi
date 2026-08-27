@@ -9,15 +9,15 @@ namespace Vapi
     public enum CampaignSummaryEndedReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignEndedSuccess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignInProgressEndedByUser,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CampaignScheduledEndedByUser,
     }

@@ -9,15 +9,15 @@ namespace Vapi
     public enum AzureSpeechTranscriberSegmentationStrategy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Semantic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Time,
     }

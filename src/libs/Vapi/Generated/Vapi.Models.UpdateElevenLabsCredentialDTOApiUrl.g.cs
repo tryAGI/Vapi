@@ -9,11 +9,11 @@ namespace Vapi
     public enum UpdateElevenLabsCredentialDTOApiUrl
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Https_ApiElevenlabsIo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Https_ApiEuResidencyElevenlabsIo,
     }

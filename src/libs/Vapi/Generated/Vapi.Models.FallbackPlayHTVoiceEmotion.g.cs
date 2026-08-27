@@ -10,51 +10,51 @@ namespace Vapi
     public enum FallbackPlayHTVoiceEmotion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FemaleAngry,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FemaleDisgust,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FemaleFearful,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FemaleHappy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FemaleSad,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FemaleSurprised,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaleAngry,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaleDisgust,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaleFearful,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaleHappy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaleSad,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaleSurprised,
     }

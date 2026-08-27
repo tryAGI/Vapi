@@ -15,23 +15,23 @@ namespace Vapi
     public enum EvalRunEndedReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aborted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MockConversationDone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Timeout,
     }
