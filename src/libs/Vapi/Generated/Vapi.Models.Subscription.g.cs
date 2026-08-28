@@ -30,6 +30,14 @@ namespace Vapi
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
+        /// This is the display name for the subscription, used to tell subscriptions<br/>
+        /// apart in the dashboard. It is unique across all subscriptions and does not<br/>
+        /// appear on invoices, which use the company details on the invoice plan.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
         /// This is the type / tier of the subscription.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
@@ -324,6 +332,11 @@ namespace Vapi
         /// <param name="concurrencyLimitPurchased">
         /// This is the purchased add-on concurrency limit for the subscription.
         /// </param>
+        /// <param name="name">
+        /// This is the display name for the subscription, used to tell subscriptions<br/>
+        /// apart in the dashboard. It is unique across all subscriptions and does not<br/>
+        /// appear on invoices, which use the company details on the invoice plan.
+        /// </param>
         /// <param name="phoneNumbersCounter">
         /// This is the number of free phone numbers the subscription has
         /// </param>
@@ -445,6 +458,7 @@ namespace Vapi
             double concurrencyCounter,
             double concurrencyLimitIncluded,
             double concurrencyLimitPurchased,
+            string? name,
             double? phoneNumbersCounter,
             double? phoneNumbersIncluded,
             double? monthlyChargeScheduleId,
@@ -483,6 +497,7 @@ namespace Vapi
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
+            this.Name = name;
             this.Type = type;
             this.Status = status;
             this.Credits = credits ?? throw new global::System.ArgumentNullException(nameof(credits));

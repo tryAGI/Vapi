@@ -26,7 +26,7 @@ namespace Vapi
 
         /// <summary>
         /// This is the provider-specific ID that will be used.<br/>
-        /// Please note that ash, ballad, coral, sage, and verse may only be used with realtime models.
+        /// Please note that ash, ballad, coral, sage, and verse may only be used with realtime or GPT-Live models.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("voiceId")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.FallbackOpenAIVoiceVoiceId?, string>))]
@@ -72,7 +72,7 @@ namespace Vapi
         /// </summary>
         /// <param name="voiceId">
         /// This is the provider-specific ID that will be used.<br/>
-        /// Please note that ash, ballad, coral, sage, and verse may only be used with realtime models.
+        /// Please note that ash, ballad, coral, sage, and verse may only be used with realtime or GPT-Live models.
         /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>
