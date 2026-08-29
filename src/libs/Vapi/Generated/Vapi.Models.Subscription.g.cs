@@ -121,18 +121,6 @@ namespace Vapi
         public string? StripePaymentMethodId { get; set; }
 
         /// <summary>
-        /// If this flag is true, then the user has purchased slack support.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("slackSupportEnabled")]
-        public bool? SlackSupportEnabled { get; set; }
-
-        /// <summary>
-        /// If this subscription has a slack support subscription, the slack channel's ID will be stored here.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("slackChannelId")]
-        public string? SlackChannelId { get; set; }
-
-        /// <summary>
         /// This is the HIPAA enabled flag for the subscription. It determines whether orgs under this<br/>
         /// subscription have the option to enable HIPAA compliance.
         /// </summary>
@@ -356,12 +344,6 @@ namespace Vapi
         /// <param name="stripePaymentMethodId">
         /// This is the Stripe payment ID.
         /// </param>
-        /// <param name="slackSupportEnabled">
-        /// If this flag is true, then the user has purchased slack support.
-        /// </param>
-        /// <param name="slackChannelId">
-        /// If this subscription has a slack support subscription, the slack channel's ID will be stored here.
-        /// </param>
         /// <param name="hipaaEnabled">
         /// This is the HIPAA enabled flag for the subscription. It determines whether orgs under this<br/>
         /// subscription have the option to enable HIPAA compliance.
@@ -465,8 +447,6 @@ namespace Vapi
             double? monthlyCreditCheckScheduleId,
             string? stripeCustomerId,
             string? stripePaymentMethodId,
-            bool? slackSupportEnabled,
-            string? slackChannelId,
             bool? hipaaEnabled,
             bool? zdrEnabled,
             bool? dataRetentionEnabled,
@@ -510,8 +490,6 @@ namespace Vapi
             this.MonthlyCreditCheckScheduleId = monthlyCreditCheckScheduleId;
             this.StripeCustomerId = stripeCustomerId;
             this.StripePaymentMethodId = stripePaymentMethodId;
-            this.SlackSupportEnabled = slackSupportEnabled;
-            this.SlackChannelId = slackChannelId;
             this.HipaaEnabled = hipaaEnabled;
             this.ZdrEnabled = zdrEnabled;
             this.DataRetentionEnabled = dataRetentionEnabled;
