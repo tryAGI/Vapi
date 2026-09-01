@@ -95,6 +95,14 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        CallInProgressErrorConfigfaultModelUnsupportedInSquad,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressErrorConfigfaultTransportUnsupportedForModel,
+        /// <summary>
+        ///
+        /// </summary>
         CallInProgressErrorPipelineNoAvailableLlmModel,
         /// <summary>
         ///
@@ -2423,6 +2431,8 @@ namespace Vapi
                 ServerMessageEndOfCallReportEndedReason.CallForwardingNoAnswer => "call.forwarding.no-answer",
                 ServerMessageEndOfCallReportEndedReason.CallForwardingOperatorBusy => "call.forwarding.operator-busy",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorAssistantDidNotReceiveCustomerAudio => "call.in-progress.error-assistant-did-not-receive-customer-audio",
+                ServerMessageEndOfCallReportEndedReason.CallInProgressErrorConfigfaultModelUnsupportedInSquad => "call.in-progress.error-configfault-model-unsupported-in-squad",
+                ServerMessageEndOfCallReportEndedReason.CallInProgressErrorConfigfaultTransportUnsupportedForModel => "call.in-progress.error-configfault-transport-unsupported-for-model",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorPipelineNoAvailableLlmModel => "call.in-progress.error-pipeline-no-available-llm-model",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorPipelineWsModelConnectionFailed => "call.in-progress.error-pipeline-ws-model-connection-failed",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultAnthropic500ServerError => "call.in-progress.error-providerfault-anthropic-500-server-error",
@@ -3028,6 +3038,8 @@ namespace Vapi
                 "call.forwarding.no-answer" => ServerMessageEndOfCallReportEndedReason.CallForwardingNoAnswer,
                 "call.forwarding.operator-busy" => ServerMessageEndOfCallReportEndedReason.CallForwardingOperatorBusy,
                 "call.in-progress.error-assistant-did-not-receive-customer-audio" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorAssistantDidNotReceiveCustomerAudio,
+                "call.in-progress.error-configfault-model-unsupported-in-squad" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorConfigfaultModelUnsupportedInSquad,
+                "call.in-progress.error-configfault-transport-unsupported-for-model" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorConfigfaultTransportUnsupportedForModel,
                 "call.in-progress.error-pipeline-no-available-llm-model" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorPipelineNoAvailableLlmModel,
                 "call.in-progress.error-pipeline-ws-model-connection-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorPipelineWsModelConnectionFailed,
                 "call.in-progress.error-providerfault-anthropic-500-server-error" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorProviderfaultAnthropic500ServerError,
