@@ -3,11 +3,11 @@
 
 namespace Vapi
 {
-    public partial class CampaignsClient
+    public partial class SimulationSuitesClient
     {
 
 
-        private static readonly global::Vapi.EndPointSecurityRequirement s_CampaignControllerCreateSecurityRequirement0 =
+        private static readonly global::Vapi.EndPointSecurityRequirement s_SimulationSuiteControllerDuplicateSecurityRequirement0 =
             new global::Vapi.EndPointSecurityRequirement
             {
                 Authorizations = new global::Vapi.EndPointAuthorizationRequirement[]
@@ -21,42 +21,40 @@ namespace Vapi
                     },
                 },
             };
-        private static readonly global::Vapi.EndPointSecurityRequirement[] s_CampaignControllerCreateSecurityRequirements =
+        private static readonly global::Vapi.EndPointSecurityRequirement[] s_SimulationSuiteControllerDuplicateSecurityRequirements =
             new global::Vapi.EndPointSecurityRequirement[]
-            {                s_CampaignControllerCreateSecurityRequirement0,
+            {                s_SimulationSuiteControllerDuplicateSecurityRequirement0,
             };
-        partial void PrepareCampaignControllerCreateArguments(
+        partial void PrepareSimulationSuiteControllerDuplicateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Vapi.CreateCampaignDTO request);
-        partial void PrepareCampaignControllerCreateRequest(
+            ref global::System.Guid id);
+        partial void PrepareSimulationSuiteControllerDuplicateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Vapi.CreateCampaignDTO request);
-        partial void ProcessCampaignControllerCreateResponse(
+            global::System.Guid id);
+        partial void ProcessSimulationSuiteControllerDuplicateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCampaignControllerCreateResponseContent(
+        partial void ProcessSimulationSuiteControllerDuplicateResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Create Campaign
+        /// Duplicate simulation suite
         /// </summary>
-        /// <param name="request"></param>
+        /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateAsync(
-
-            global::Vapi.CreateCampaignDTO request,
+        public async global::System.Threading.Tasks.Task<global::Vapi.SimulationSuite> SimulationSuiteControllerDuplicateAsync(
+            global::System.Guid id,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CampaignControllerCreateAsResponseAsync(
-
-                request: request,
+            var __response = await SimulationSuiteControllerDuplicateAsResponseAsync(
+                id: id,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -64,31 +62,28 @@ namespace Vapi
             return __response.Body;
         }
         /// <summary>
-        /// Create Campaign
+        /// Duplicate simulation suite
         /// </summary>
-        /// <param name="request"></param>
+        /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>> CampaignControllerCreateAsResponseAsync(
-
-            global::Vapi.CreateCampaignDTO request,
+        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.SimulationSuite>> SimulationSuiteControllerDuplicateAsResponseAsync(
+            global::System.Guid id,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareCampaignControllerCreateArguments(
+            PrepareSimulationSuiteControllerDuplicateArguments(
                 httpClient: HttpClient,
-                request: request);
+                id: ref id);
 
 
             var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CampaignControllerCreateSecurityRequirements,
-                operationName: "CampaignControllerCreateAsync");
+                securityRequirements: s_SimulationSuiteControllerDuplicateSecurityRequirements,
+                operationName: "SimulationSuiteControllerDuplicateAsync");
 
             using var __timeoutCancellationTokenSource = global::Vapi.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -108,7 +103,7 @@ namespace Vapi
             {
 
                             var __pathBuilder = new global::Vapi.PathBuilder(
-                                path: "/campaign",
+                                path: $"/eval/simulation/suite/{id}/duplicate",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Vapi.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -139,12 +134,6 @@ namespace Vapi
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json");
-                            __httpRequest.Content = __httpRequestContent;
                 global::Vapi.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -153,10 +142,10 @@ namespace Vapi
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCampaignControllerCreateRequest(
+                PrepareSimulationSuiteControllerDuplicateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    request: request);
+                    id: id!);
 
                 return __httpRequest;
             }
@@ -173,9 +162,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
+                                operationId: "SimulationSuiteControllerDuplicate",
+                                methodName: "SimulationSuiteControllerDuplicateAsync",
+                                pathTemplate: "$\"/eval/simulation/suite/{id}/duplicate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -207,9 +196,9 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
+                                operationId: "SimulationSuiteControllerDuplicate",
+                                methodName: "SimulationSuiteControllerDuplicateAsync",
+                                pathTemplate: "$\"/eval/simulation/suite/{id}/duplicate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -248,9 +237,9 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
+                                operationId: "SimulationSuiteControllerDuplicate",
+                                methodName: "SimulationSuiteControllerDuplicateAsync",
+                                pathTemplate: "$\"/eval/simulation/suite/{id}/duplicate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -288,7 +277,7 @@ namespace Vapi
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCampaignControllerCreateResponse(
+                ProcessSimulationSuiteControllerDuplicateResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -296,9 +285,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
+                                operationId: "SimulationSuiteControllerDuplicate",
+                                methodName: "SimulationSuiteControllerDuplicateAsync",
+                                pathTemplate: "$\"/eval/simulation/suite/{id}/duplicate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -318,9 +307,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CampaignControllerCreate",
-                                methodName: "CampaignControllerCreateAsync",
-                                pathTemplate: "\"/campaign\"",
+                                operationId: "SimulationSuiteControllerDuplicate",
+                                methodName: "SimulationSuiteControllerDuplicateAsync",
+                                pathTemplate: "$\"/eval/simulation/suite/{id}/duplicate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -335,6 +324,70 @@ namespace Vapi
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
+                            //
+                            if ((int)__response.StatusCode == 404)
+                            {
+                                string? __content_404 = null;
+                                global::System.Exception? __exception_404 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                    else
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_404 = __ex;
+                                }
+
+
+                                throw global::Vapi.ApiException.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_404,
+                                    responseBody: __content_404,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            //
+                            if ((int)__response.StatusCode == 409)
+                            {
+                                string? __content_409 = null;
+                                global::System.Exception? __exception_409 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                    else
+                                    {
+                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_409 = __ex;
+                                }
+
+
+                                throw global::Vapi.ApiException.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_409,
+                                    responseBody: __content_409,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -348,7 +401,7 @@ namespace Vapi
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCampaignControllerCreateResponseContent(
+                                ProcessSimulationSuiteControllerDuplicateResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -357,9 +410,9 @@ namespace Vapi
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Vapi.Campaign.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Vapi.SimulationSuite.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.SimulationSuite>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -389,9 +442,9 @@ namespace Vapi
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Vapi.Campaign.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Vapi.SimulationSuite.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.Campaign>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.SimulationSuite>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -430,102 +483,6 @@ namespace Vapi
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// Create Campaign
-        /// </summary>
-        /// <param name="name">
-        /// This is the name of the campaign. This is just for your own reference.<br/>
-        /// Example: Q2 Sales Campaign
-        /// </param>
-        /// <param name="assistantId">
-        /// This is the assistant ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
-        /// </param>
-        /// <param name="workflowId">
-        /// This is the workflow ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
-        /// </param>
-        /// <param name="squadId">
-        /// This is the squad ID that will be used for the campaign calls. Note: Only one of assistantId, workflowId, or squadId can be used.
-        /// </param>
-        /// <param name="phoneNumberId">
-        /// This is the phone number ID that will be used for the campaign calls. Required if dialPlan is not provided. Note: phoneNumberId and dialPlan are mutually exclusive.
-        /// </param>
-        /// <param name="dialPlan">
-        /// This is a list of dial entries, each specifying a phone number and the customers to call using that number. Use this when you want different phone numbers to call different sets of customers. Note: phoneNumberId and dialPlan are mutually exclusive.
-        /// </param>
-        /// <param name="schedulePlan">
-        /// This is the schedule plan for the campaign. Calls will start at startedAt and continue until your organization’s concurrency limit is reached. Any remaining calls will be retried for up to one hour as capacity becomes available. After that hour or after latestAt, whichever comes first, any calls that couldn’t be placed won’t be retried.
-        /// </param>
-        /// <param name="customers">
-        /// These are the customers that will be called in the campaign. Required if dialPlan is not provided. Maximum of 10000 customers per campaign.
-        /// </param>
-        /// <param name="maxConcurrency">
-        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10. Maximum of 500, and may not exceed your organization's concurrency limit.
-        /// </param>
-        /// <param name="assistantOverrides">
-        /// These are the overrides for the assistant's settings and template variables for the campaign. Use this when the campaign targets an `assistantId`.
-        /// </param>
-        /// <param name="squadOverrides">
-        /// These are the overrides for the squad and template variables for the campaign. Use this when the campaign targets a `squadId`. Per-contact `squadOverrides` are deep-merged on top of this at dispatch time.
-        /// </param>
-        /// <param name="server">
-        /// This is the server (URL, auth headers, timeout, etc.) for the campaign webhooks.
-        /// </param>
-        /// <param name="serverMessages">
-        /// These are the messages that will be sent to your Server URL.<br/>
-        /// Example: [campaign.started, contact.dispatched]
-        /// </param>
-        /// <param name="predialPlan">
-        /// This opts the campaign into the blocking `campaign.predial` eligibility webhook. When set, every contact triggers a `campaign.predial` POST to the Server URL before dialing, and the response `{ eligible: boolean }` decides whether the call is placed. Requires `server`. When unset, no pre-dial webhook is sent.
-        /// </param>
-        /// <param name="duplicateFromCampaignId">
-        /// Optional campaign ID to duplicate config from. Provided fields in the request override the source. If `customers` is omitted, contacts are copied from the source.
-        /// </param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.Campaign> CampaignControllerCreateAsync(
-            string name,
-            string? assistantId = default,
-            string? workflowId = default,
-            string? squadId = default,
-            string? phoneNumberId = default,
-            global::System.Collections.Generic.IList<global::Vapi.DialPlanEntry>? dialPlan = default,
-            global::Vapi.SchedulePlan? schedulePlan = default,
-            global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers = default,
-            double? maxConcurrency = default,
-            global::Vapi.AssistantOverrides? assistantOverrides = default,
-            global::Vapi.AssistantOverrides? squadOverrides = default,
-            global::Vapi.Server? server = default,
-            global::System.Collections.Generic.IList<global::Vapi.CreateCampaignDTOServerMessage>? serverMessages = default,
-            global::Vapi.CampaignPredialPlan? predialPlan = default,
-            string? duplicateFromCampaignId = default,
-            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::Vapi.CreateCampaignDTO
-            {
-                Name = name,
-                AssistantId = assistantId,
-                WorkflowId = workflowId,
-                SquadId = squadId,
-                PhoneNumberId = phoneNumberId,
-                DialPlan = dialPlan,
-                SchedulePlan = schedulePlan,
-                Customers = customers,
-                MaxConcurrency = maxConcurrency,
-                AssistantOverrides = assistantOverrides,
-                SquadOverrides = squadOverrides,
-                Server = server,
-                ServerMessages = serverMessages,
-                PredialPlan = predialPlan,
-                DuplicateFromCampaignId = duplicateFromCampaignId,
-            };
-
-            return await CampaignControllerCreateAsync(
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
