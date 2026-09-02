@@ -75,7 +75,7 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? Customers { get; set; }
 
         /// <summary>
-        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10.
+        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10. Maximum of 500, and may not exceed your organization's concurrency limit.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maxConcurrency")]
         public double? MaxConcurrency { get; set; }
@@ -253,7 +253,7 @@ namespace Vapi
         /// These are the customers that will be called in the campaign. Required if dialPlan is not provided. Maximum of 10000 customers per campaign.
         /// </param>
         /// <param name="maxConcurrency">
-        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10.
+        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10. Maximum of 500, and may not exceed your organization's concurrency limit.
         /// </param>
         /// <param name="assistantOverrides">
         /// These are the overrides for the assistant's settings and template variables for the campaign. Use this when the campaign targets an `assistantId`.

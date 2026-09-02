@@ -57,7 +57,7 @@ namespace Vapi
         public global::Vapi.SchedulePlan? SchedulePlan { get; set; }
 
         /// <summary>
-        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10.
+        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10. Maximum of 500, and may not exceed your organization's concurrency limit.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maxConcurrency")]
         public double? MaxConcurrency { get; set; }
@@ -181,7 +181,7 @@ namespace Vapi
         /// This is the schedule plan for the campaign. Calls will start at startedAt and continue until your organization’s concurrency limit is reached. Any remaining calls will be retried for up to one hour as capacity becomes available. After that hour or after latestAt, whichever comes first, any calls that couldn’t be placed won’t be retried.
         /// </param>
         /// <param name="maxConcurrency">
-        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10.
+        /// This is the maximum number of concurrent calls that will be made for the campaign. Defaults to 10. Maximum of 500, and may not exceed your organization's concurrency limit.
         /// </param>
         /// <param name="assistantOverrides">
         /// These are the overrides for the assistant's settings and template variables for the campaign. Use this when the campaign targets an `assistantId`.
