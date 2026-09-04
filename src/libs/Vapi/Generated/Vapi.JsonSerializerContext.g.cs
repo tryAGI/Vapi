@@ -5093,6 +5093,7 @@ namespace Vapi
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
 
+
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
 
         /// <summary>
@@ -5114,13 +5115,8 @@ namespace Vapi
             return Resolver.GetTypeInfo(type, Options);
         }
 
-        private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
+         static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            var options = new global::System.Text.Json.JsonSerializerOptions
-            {
-                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-                TypeInfoResolver = Resolver,
-            };
             options.Converters.Add(new global::Vapi.JsonConverters.RecordingConsentPlanJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItemJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlan2JsonConverter());
@@ -5644,8 +5640,17 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.AllOfJsonConverter<global::Vapi.StructuredOutputRunPreviewResponse, object>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::System.Collections.Generic.IList<global::Vapi.SimulationRun>, global::Vapi.SimulationRunsPaginatedResponse>());
             options.Converters.Add(new global::Vapi.JsonConverters.UnixTimestampJsonConverter());
-
             options.Converters.Add(new LazyEnumJsonConverterFactory());
+        }
+
+        private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
+        {
+            var options = new global::System.Text.Json.JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+                TypeInfoResolver = Resolver,
+            };
+            AddConverters(options);
 
             return options;
         }
