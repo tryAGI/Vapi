@@ -61,6 +61,7 @@ namespace Vapi
         /// - Set to '{{customer.number}}' to always use the customer's number as the caller ID.<br/>
         /// - Set to '{{phoneNumber.number}}' to always use the phone number of the assistant as the caller ID.<br/>
         /// - Set to any E164 number to always use that number as the caller ID. This needs to be a number that is owned or verified by your Transport provider like Twilio.<br/>
+        /// Note: on Twilio, a caller who withheld their number has no caller ID the destination carrier will accept, so the assistant's phone number is presented instead and the transfer goes through. This applies when `callerId` is not provided and when it is set to '{{customer.number}}'.<br/>
         /// For Twilio, you can read up more here: https://www.twilio.com/docs/voice/twiml/dial#callerid
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("callerId")]
@@ -135,6 +136,7 @@ namespace Vapi
         /// - Set to '{{customer.number}}' to always use the customer's number as the caller ID.<br/>
         /// - Set to '{{phoneNumber.number}}' to always use the phone number of the assistant as the caller ID.<br/>
         /// - Set to any E164 number to always use that number as the caller ID. This needs to be a number that is owned or verified by your Transport provider like Twilio.<br/>
+        /// Note: on Twilio, a caller who withheld their number has no caller ID the destination carrier will accept, so the assistant's phone number is presented instead and the transfer goes through. This applies when `callerId` is not provided and when it is set to '{{customer.number}}'.<br/>
         /// For Twilio, you can read up more here: https://www.twilio.com/docs/voice/twiml/dial#callerid
         /// </param>
         /// <param name="transferPlan">
