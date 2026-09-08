@@ -34,7 +34,7 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>? Hooks { get; set; }
 
         /// <summary>
-        /// Overrides to inject into the simulated target assistant or squad<br/>
+        /// Complete override replacement. Omitted credentials and redacted server secrets are preserved when their endpoint URL is unchanged. Send credentials: [] to clear credentials; omit a server container to remove it.<br/>
         /// Example: {"variableValues":{"customerName":"Alice","orderId":"12345"}}
         /// </summary>
         /// <example>{"variableValues":{"customerName":"Alice","orderId":"12345"}}</example>
@@ -78,7 +78,7 @@ namespace Vapi
         /// Hooks to run on simulation lifecycle events
         /// </param>
         /// <param name="targetOverrides">
-        /// Overrides to inject into the simulated target assistant or squad<br/>
+        /// Complete override replacement. Omitted credentials and redacted server secrets are preserved when their endpoint URL is unchanged. Send credentials: [] to clear credentials; omit a server container to remove it.<br/>
         /// Example: {"variableValues":{"customerName":"Alice","orderId":"12345"}}
         /// </param>
         /// <param name="toolMocks"></param>

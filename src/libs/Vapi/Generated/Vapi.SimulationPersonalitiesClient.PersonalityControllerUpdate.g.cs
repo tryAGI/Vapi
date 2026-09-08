@@ -448,7 +448,7 @@ namespace Vapi
         /// This is the name of the personality.
         /// </param>
         /// <param name="assistant">
-        /// This is the full assistant configuration for this personality.
+        /// Complete assistant replacement. Omitted credentials and redacted server secrets are preserved when their endpoint URL is unchanged. Send credentials: [] to clear credentials; omit a server container to remove it.
         /// </param>
         /// <param name="path">
         /// Optional folder path for organizing personalities.<br/>
