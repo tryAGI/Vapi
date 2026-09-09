@@ -464,6 +464,14 @@ namespace Vapi
         /// </param>
         /// <param name="regex">
         /// This is the regex pattern to match against the transcript.<br/>
+        /// Simulation evaluations use a canonical transcript built from recorded messages:<br/>
+        /// User: and AI: dialogue, AI: tool_calls: JSON name/arguments records, and<br/>
+        /// AI: tool_call_results: JSON results. System messages are excluded. These<br/>
+        /// fixed labels apply even when custom artifact transcript labels are configured.<br/>
+        /// Tool payloads participate in first-match and all-match extraction in event order.<br/>
+        /// An empty message array falls back to the supplied transcript verbatim.<br/>
+        /// Production-call extraction and call preview use their existing transcripts,<br/>
+        /// so previewing the same output on a simulation's call can return a different result.<br/>
         /// Only used when type is 'regex'. Supports both raw patterns (e.g. '\d+') and<br/>
         /// regex literal format (e.g. '/\d+/gi'). Uses RE2 syntax for safety.<br/>
         /// The result depends on the schema type:<br/>
