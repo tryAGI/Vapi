@@ -32,6 +32,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        AssistantKnowledgeBaseRequestSucceeded,
+        /// <summary>
+        ///
+        /// </summary>
         AssistantModelCleanup,
         /// <summary>
         ///
@@ -420,6 +424,7 @@ namespace Vapi
                 JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputRequest => "assistant.analysis.structuredOutputRequest",
                 JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputResponse => "assistant.analysis.structuredOutputResponse",
                 JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputSkipped => "assistant.analysis.structuredOutputSkipped",
+                JSONQueryOnEventsTableOn.AssistantKnowledgeBaseRequestSucceeded => "assistant.knowledgeBase.requestSucceeded",
                 JSONQueryOnEventsTableOn.AssistantModelCleanup => "assistant.model.cleanup",
                 JSONQueryOnEventsTableOn.AssistantModelClearing => "assistant.model.clearing",
                 JSONQueryOnEventsTableOn.AssistantModelConnectionClosed => "assistant.model.connectionClosed",
@@ -528,6 +533,7 @@ namespace Vapi
                 "assistant.analysis.structuredOutputRequest" => JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputRequest,
                 "assistant.analysis.structuredOutputResponse" => JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputResponse,
                 "assistant.analysis.structuredOutputSkipped" => JSONQueryOnEventsTableOn.AssistantAnalysisStructuredOutputSkipped,
+                "assistant.knowledgeBase.requestSucceeded" => JSONQueryOnEventsTableOn.AssistantKnowledgeBaseRequestSucceeded,
                 "assistant.model.cleanup" => JSONQueryOnEventsTableOn.AssistantModelCleanup,
                 "assistant.model.clearing" => JSONQueryOnEventsTableOn.AssistantModelClearing,
                 "assistant.model.connectionClosed" => JSONQueryOnEventsTableOn.AssistantModelConnectionClosed,

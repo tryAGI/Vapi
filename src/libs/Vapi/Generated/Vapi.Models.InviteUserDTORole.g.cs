@@ -19,6 +19,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        HipaaSpecial,
+        /// <summary>
+        ///
+        /// </summary>
         Viewer,
     }
 
@@ -36,6 +40,7 @@ namespace Vapi
             {
                 InviteUserDTORole.Admin => "admin",
                 InviteUserDTORole.Editor => "editor",
+                InviteUserDTORole.HipaaSpecial => "hipaa-special",
                 InviteUserDTORole.Viewer => "viewer",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -49,6 +54,7 @@ namespace Vapi
             {
                 "admin" => InviteUserDTORole.Admin,
                 "editor" => InviteUserDTORole.Editor,
+                "hipaa-special" => InviteUserDTORole.HipaaSpecial,
                 "viewer" => InviteUserDTORole.Viewer,
                 _ => null,
             };
