@@ -59,6 +59,14 @@ namespace Vapi
         public required global::Vapi.AnthropicBedrockModelModel Model { get; set; }
 
         /// <summary>
+        /// At most one same-provider Bedrock fallback model, tried if the primary fails. Cannot be combined with thinking in this release. Resolution uses the call's Bedrock credential region (or ANTHROPIC_BEDROCK_AWS_REGION). Names with no inference profile in that region are skipped and warned, never remapped to US or global. On Vapi EU, fallback names without an EU inference profile are rejected at write time.<br/>
+        /// Example: [claude-haiku-4-5-20251001]
+        /// </summary>
+        /// <example>[claude-haiku-4-5-20251001]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fallbackModels")]
+        public global::System.Collections.Generic.IList<global::Vapi.AnthropicBedrockModelFallbackModel>? FallbackModels { get; set; }
+
+        /// <summary>
         /// Optional configuration for Anthropic's thinking feature.<br/>
         /// Only applicable for claude-3-7-sonnet-20250219 model.<br/>
         /// If provided, maxTokens must be greater than thinking.budgetTokens.
@@ -129,6 +137,10 @@ namespace Vapi
         /// <param name="provider">
         /// The provider identifier for Anthropic via AWS Bedrock.
         /// </param>
+        /// <param name="fallbackModels">
+        /// At most one same-provider Bedrock fallback model, tried if the primary fails. Cannot be combined with thinking in this release. Resolution uses the call's Bedrock credential region (or ANTHROPIC_BEDROCK_AWS_REGION). Names with no inference profile in that region are skipped and warned, never remapped to US or global. On Vapi EU, fallback names without an EU inference profile are rejected at write time.<br/>
+        /// Example: [claude-haiku-4-5-20251001]
+        /// </param>
         /// <param name="thinking">
         /// Optional configuration for Anthropic's thinking feature.<br/>
         /// Only applicable for claude-3-7-sonnet-20250219 model.<br/>
@@ -161,6 +173,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.ToolRef>? toolRefs,
             global::Vapi.CreateCustomKnowledgeBaseDTO? knowledgeBase,
             global::Vapi.AnthropicBedrockModelProvider provider,
+            global::System.Collections.Generic.IList<global::Vapi.AnthropicBedrockModelFallbackModel>? fallbackModels,
             global::Vapi.AnthropicThinkingConfig? thinking,
             double? temperature,
             double? maxTokens,
@@ -174,6 +187,7 @@ namespace Vapi
             this.KnowledgeBase = knowledgeBase;
             this.Provider = provider;
             this.Model = model;
+            this.FallbackModels = fallbackModels;
             this.Thinking = thinking;
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;
