@@ -16,6 +16,18 @@ namespace Vapi
         public global::Vapi.ModelCostType Type { get; set; }
 
         /// <summary>
+        /// Provider-reported billable duration in seconds. Currently supplied for GPT-Live; omitted for token-billed models.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("seconds")]
+        public double? Seconds { get; set; }
+
+        /// <summary>
+        /// Whether the reported usage is complete. False means the cost reflects missing or partial usage and may understate provider spend. Omitted when the provider integration does not report completeness.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("usageComplete")]
+        public bool? UsageComplete { get; set; }
+
+        /// <summary>
         /// This is the model that was used during the call.<br/>
         /// This matches one of the following:<br/>
         /// - `call.assistant.model`,<br/>
@@ -94,6 +106,12 @@ namespace Vapi
         /// <param name="type">
         /// This is the type of cost, always 'model' for this class.
         /// </param>
+        /// <param name="seconds">
+        /// Provider-reported billable duration in seconds. Currently supplied for GPT-Live; omitted for token-billed models.
+        /// </param>
+        /// <param name="usageComplete">
+        /// Whether the reported usage is complete. False means the cost reflects missing or partial usage and may understate provider spend. Omitted when the provider integration does not report completeness.
+        /// </param>
         /// <param name="cachedPromptTokens">
         /// This is the number of cached prompt tokens used in the call. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate.
         /// </param>
@@ -110,10 +128,14 @@ namespace Vapi
             double completionTokens,
             double cost,
             global::Vapi.ModelCostType type,
+            double? seconds,
+            bool? usageComplete,
             double? cachedPromptTokens,
             double? reasoningTokens)
         {
             this.Type = type;
+            this.Seconds = seconds;
+            this.UsageComplete = usageComplete;
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.PromptTokens = promptTokens;
             this.CompletionTokens = completionTokens;

@@ -21541,6 +21541,73 @@
           "provider"
         ]
       },
+      "OpenAISpeaker": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Omit to use legacy system messages. An explicit empty string is preserved."
+          },
+          "personalityPacks": {
+            "type": "array",
+            "enum": [
+              "bouncy",
+              "eager-listener",
+              "idle-hummer",
+              "unhurried"
+            ],
+            "items": {
+              "type": "string",
+              "enum": [
+                "bouncy",
+                "eager-listener",
+                "idle-hummer",
+                "unhurried"
+              ]
+            }
+          }
+        }
+      },
+      "OpenAIReasoner": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "description": "The reasoner uses OpenAI. Omit to use OpenAI.",
+            "enum": [
+              "openai"
+            ],
+            "default": "openai"
+          },
+          "model": {
+            "type": "string",
+            "description": "The delegated reasoning model. Omit to use GPT-5.6 Terra.",
+            "enum": [
+              "gpt-5.6-luna",
+              "gpt-5.6-sol",
+              "gpt-5.6-terra"
+            ],
+            "default": "gpt-5.6-terra"
+          },
+          "reasoningEffort": {
+            "type": "string",
+            "description": "Higher effort can increase response time. Omit to use low.",
+            "enum": [
+              "high",
+              "low",
+              "max",
+              "medium",
+              "none",
+              "xhigh"
+            ],
+            "default": "low"
+          },
+          "instructions": {
+            "type": "string",
+            "description": "Complete reasoner instructions. An explicit empty string is preserved.\nOmit to use Vapi's default reasoner instructions. No behavioral instructions\nare appended to a custom prompt."
+          }
+        }
+      },
       "OpenAIModel": {
         "type": "object",
         "properties": {
@@ -21671,6 +21738,22 @@
               {
                 "$ref": "#/components/schemas/CreateCustomKnowledgeBaseDTO",
                 "title": "Custom"
+              }
+            ]
+          },
+          "speaker": {
+            "description": "Configuration for the GPT-Live speaker.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OpenAISpeaker"
+              }
+            ]
+          },
+          "reasoner": {
+            "description": "Configuration for the reasoner supporting the GPT-Live speaker.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OpenAIReasoner"
               }
             ]
           },
@@ -28284,10 +28367,13 @@
                   "arcade",
                   "astra",
                   "atrium",
+                  "bancroft",
+                  "beatty",
                   "bond",
                   "breeze",
                   "cedar",
                   "celeste",
+                  "clementine",
                   "colin",
                   "cove",
                   "creek",
@@ -28296,11 +28382,14 @@
                   "esther",
                   "eucalyptus",
                   "eva",
+                  "eyre",
                   "falcon",
                   "fern",
                   "glacier",
+                  "godfrey",
                   "hank",
                   "helen",
+                  "hesse",
                   "joy",
                   "lagoon",
                   "lintel",
@@ -28326,10 +28415,11 @@
                   "tundra",
                   "tyler",
                   "vespera",
+                  "walnut",
                   "wildflower"
                 ],
                 "title": "Suggested Voice Options",
-                "description": "Popular Rime AI voices across mist, mistv2, and arcana models. Any valid Rime AI voice ID is accepted, not just these suggestions."
+                "description": "Popular Rime AI voices across mist, mistv2, mistv3, arcana, and coda models. Any valid Rime AI voice ID is accepted, not just these suggestions."
               },
               {
                 "type": "string",
@@ -28343,8 +28433,10 @@
             "description": "This is the model that will be used. Defaults to 'arcana' when not specified.",
             "enum": [
               "arcana",
+              "coda",
               "mist",
-              "mistv2"
+              "mistv2",
+              "mistv3"
             ],
             "example": "arcana"
           },
@@ -30734,10 +30826,13 @@
                   "arcade",
                   "astra",
                   "atrium",
+                  "bancroft",
+                  "beatty",
                   "bond",
                   "breeze",
                   "cedar",
                   "celeste",
+                  "clementine",
                   "colin",
                   "cove",
                   "creek",
@@ -30746,11 +30841,14 @@
                   "esther",
                   "eucalyptus",
                   "eva",
+                  "eyre",
                   "falcon",
                   "fern",
                   "glacier",
+                  "godfrey",
                   "hank",
                   "helen",
+                  "hesse",
                   "joy",
                   "lagoon",
                   "lintel",
@@ -30776,10 +30874,11 @@
                   "tundra",
                   "tyler",
                   "vespera",
+                  "walnut",
                   "wildflower"
                 ],
                 "title": "Suggested Voice Options",
-                "description": "Popular Rime AI voices across mist, mistv2, and arcana models. Any valid Rime AI voice ID is accepted, not just these suggestions."
+                "description": "Popular Rime AI voices across mist, mistv2, mistv3, arcana, and coda models. Any valid Rime AI voice ID is accepted, not just these suggestions."
               },
               {
                 "type": "string",
@@ -30793,8 +30892,10 @@
             "description": "This is the model that will be used. Defaults to 'arcana' when not specified.",
             "enum": [
               "arcana",
+              "coda",
               "mist",
-              "mistv2"
+              "mistv2",
+              "mistv3"
             ],
             "example": "arcana"
           },
@@ -43712,6 +43813,14 @@
             "enum": [
               "model"
             ]
+          },
+          "seconds": {
+            "type": "number",
+            "description": "Provider-reported billable duration in seconds. Currently supplied for GPT-Live; omitted for token-billed models."
+          },
+          "usageComplete": {
+            "type": "boolean",
+            "description": "Whether the reported usage is complete. False means the cost reflects missing or partial usage and may understate provider spend. Omitted when the provider integration does not report completeness."
           },
           "model": {
             "type": "object",

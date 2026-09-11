@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// Popular Rime AI voices across mist, mistv2, and arcana models. Any valid Rime AI voice ID is accepted, not just these suggestions.
+    /// Popular Rime AI voices across mist, mistv2, mistv3, arcana, and coda models. Any valid Rime AI voice ID is accepted, not just these suggestions.
     /// </summary>
     public enum RimeAIVoiceVoiceId
     {
@@ -39,6 +39,14 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Bancroft,
+        /// <summary>
+        ///
+        /// </summary>
+        Beatty,
+        /// <summary>
+        ///
+        /// </summary>
         Bond,
         /// <summary>
         ///
@@ -52,6 +60,10 @@ namespace Vapi
         ///
         /// </summary>
         Celeste,
+        /// <summary>
+        ///
+        /// </summary>
+        Clementine,
         /// <summary>
         ///
         /// </summary>
@@ -87,6 +99,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Eyre,
+        /// <summary>
+        ///
+        /// </summary>
         Falcon,
         /// <summary>
         ///
@@ -99,11 +115,19 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Godfrey,
+        /// <summary>
+        ///
+        /// </summary>
         Hank,
         /// <summary>
         ///
         /// </summary>
         Helen,
+        /// <summary>
+        ///
+        /// </summary>
+        Hesse,
         /// <summary>
         ///
         /// </summary>
@@ -207,6 +231,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Walnut,
+        /// <summary>
+        ///
+        /// </summary>
         Wildflower,
     }
 
@@ -229,10 +257,13 @@ namespace Vapi
                 RimeAIVoiceVoiceId.Arcade => "arcade",
                 RimeAIVoiceVoiceId.Astra => "astra",
                 RimeAIVoiceVoiceId.Atrium => "atrium",
+                RimeAIVoiceVoiceId.Bancroft => "bancroft",
+                RimeAIVoiceVoiceId.Beatty => "beatty",
                 RimeAIVoiceVoiceId.Bond => "bond",
                 RimeAIVoiceVoiceId.Breeze => "breeze",
                 RimeAIVoiceVoiceId.Cedar => "cedar",
                 RimeAIVoiceVoiceId.Celeste => "celeste",
+                RimeAIVoiceVoiceId.Clementine => "clementine",
                 RimeAIVoiceVoiceId.Colin => "colin",
                 RimeAIVoiceVoiceId.Cove => "cove",
                 RimeAIVoiceVoiceId.Creek => "creek",
@@ -241,11 +272,14 @@ namespace Vapi
                 RimeAIVoiceVoiceId.Esther => "esther",
                 RimeAIVoiceVoiceId.Eucalyptus => "eucalyptus",
                 RimeAIVoiceVoiceId.Eva => "eva",
+                RimeAIVoiceVoiceId.Eyre => "eyre",
                 RimeAIVoiceVoiceId.Falcon => "falcon",
                 RimeAIVoiceVoiceId.Fern => "fern",
                 RimeAIVoiceVoiceId.Glacier => "glacier",
+                RimeAIVoiceVoiceId.Godfrey => "godfrey",
                 RimeAIVoiceVoiceId.Hank => "hank",
                 RimeAIVoiceVoiceId.Helen => "helen",
+                RimeAIVoiceVoiceId.Hesse => "hesse",
                 RimeAIVoiceVoiceId.Joy => "joy",
                 RimeAIVoiceVoiceId.Lagoon => "lagoon",
                 RimeAIVoiceVoiceId.Lintel => "lintel",
@@ -271,6 +305,7 @@ namespace Vapi
                 RimeAIVoiceVoiceId.Tundra => "tundra",
                 RimeAIVoiceVoiceId.Tyler => "tyler",
                 RimeAIVoiceVoiceId.Vespera => "vespera",
+                RimeAIVoiceVoiceId.Walnut => "walnut",
                 RimeAIVoiceVoiceId.Wildflower => "wildflower",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -289,10 +324,13 @@ namespace Vapi
                 "arcade" => RimeAIVoiceVoiceId.Arcade,
                 "astra" => RimeAIVoiceVoiceId.Astra,
                 "atrium" => RimeAIVoiceVoiceId.Atrium,
+                "bancroft" => RimeAIVoiceVoiceId.Bancroft,
+                "beatty" => RimeAIVoiceVoiceId.Beatty,
                 "bond" => RimeAIVoiceVoiceId.Bond,
                 "breeze" => RimeAIVoiceVoiceId.Breeze,
                 "cedar" => RimeAIVoiceVoiceId.Cedar,
                 "celeste" => RimeAIVoiceVoiceId.Celeste,
+                "clementine" => RimeAIVoiceVoiceId.Clementine,
                 "colin" => RimeAIVoiceVoiceId.Colin,
                 "cove" => RimeAIVoiceVoiceId.Cove,
                 "creek" => RimeAIVoiceVoiceId.Creek,
@@ -301,11 +339,14 @@ namespace Vapi
                 "esther" => RimeAIVoiceVoiceId.Esther,
                 "eucalyptus" => RimeAIVoiceVoiceId.Eucalyptus,
                 "eva" => RimeAIVoiceVoiceId.Eva,
+                "eyre" => RimeAIVoiceVoiceId.Eyre,
                 "falcon" => RimeAIVoiceVoiceId.Falcon,
                 "fern" => RimeAIVoiceVoiceId.Fern,
                 "glacier" => RimeAIVoiceVoiceId.Glacier,
+                "godfrey" => RimeAIVoiceVoiceId.Godfrey,
                 "hank" => RimeAIVoiceVoiceId.Hank,
                 "helen" => RimeAIVoiceVoiceId.Helen,
+                "hesse" => RimeAIVoiceVoiceId.Hesse,
                 "joy" => RimeAIVoiceVoiceId.Joy,
                 "lagoon" => RimeAIVoiceVoiceId.Lagoon,
                 "lintel" => RimeAIVoiceVoiceId.Lintel,
@@ -331,6 +372,7 @@ namespace Vapi
                 "tundra" => RimeAIVoiceVoiceId.Tundra,
                 "tyler" => RimeAIVoiceVoiceId.Tyler,
                 "vespera" => RimeAIVoiceVoiceId.Vespera,
+                "walnut" => RimeAIVoiceVoiceId.Walnut,
                 "wildflower" => RimeAIVoiceVoiceId.Wildflower,
                 _ => null,
             };
