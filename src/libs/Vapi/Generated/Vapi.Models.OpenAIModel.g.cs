@@ -44,6 +44,18 @@ namespace Vapi
         public global::Vapi.CreateCustomKnowledgeBaseDTO? KnowledgeBase { get; set; }
 
         /// <summary>
+        /// Configuration for the GPT-Live speaker.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("speaker")]
+        public global::Vapi.OpenAISpeaker? Speaker { get; set; }
+
+        /// <summary>
+        /// Configuration for the reasoner supporting the GPT-Live speaker.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoner")]
+        public global::Vapi.OpenAIReasoner? Reasoner { get; set; }
+
+        /// <summary>
         /// This is the provider that will be used for the model.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
@@ -171,6 +183,12 @@ namespace Vapi
         /// <param name="knowledgeBase">
         /// These are the options for the knowledge base.
         /// </param>
+        /// <param name="speaker">
+        /// Configuration for the GPT-Live speaker.
+        /// </param>
+        /// <param name="reasoner">
+        /// Configuration for the reasoner supporting the GPT-Live speaker.
+        /// </param>
         /// <param name="provider">
         /// This is the provider that will be used for the model.
         /// </param>
@@ -228,6 +246,8 @@ namespace Vapi
             global::System.Collections.Generic.IList<string>? toolIds,
             global::System.Collections.Generic.IList<global::Vapi.ToolRef>? toolRefs,
             global::Vapi.CreateCustomKnowledgeBaseDTO? knowledgeBase,
+            global::Vapi.OpenAISpeaker? speaker,
+            global::Vapi.OpenAIReasoner? reasoner,
             global::Vapi.OpenAIModelProvider provider,
             global::System.Collections.Generic.IList<global::Vapi.OpenAIModelFallbackModel>? fallbackModels,
             global::Vapi.OpenAIModelToolStrictCompatibilityMode? toolStrictCompatibilityMode,
@@ -244,6 +264,8 @@ namespace Vapi
             this.ToolIds = toolIds;
             this.ToolRefs = toolRefs;
             this.KnowledgeBase = knowledgeBase;
+            this.Speaker = speaker;
+            this.Reasoner = reasoner;
             this.Provider = provider;
             this.Model = model;
             this.FallbackModels = fallbackModels;

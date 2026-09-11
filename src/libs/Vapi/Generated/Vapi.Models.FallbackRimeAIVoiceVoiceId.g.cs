@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// Popular Rime AI voices across mist, mistv2, and arcana models. Any valid Rime AI voice ID is accepted, not just these suggestions.
+    /// Popular Rime AI voices across mist, mistv2, mistv3, arcana, and coda models. Any valid Rime AI voice ID is accepted, not just these suggestions.
     /// </summary>
     public enum FallbackRimeAIVoiceVoiceId
     {
@@ -39,6 +39,14 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Bancroft,
+        /// <summary>
+        ///
+        /// </summary>
+        Beatty,
+        /// <summary>
+        ///
+        /// </summary>
         Bond,
         /// <summary>
         ///
@@ -52,6 +60,10 @@ namespace Vapi
         ///
         /// </summary>
         Celeste,
+        /// <summary>
+        ///
+        /// </summary>
+        Clementine,
         /// <summary>
         ///
         /// </summary>
@@ -87,6 +99,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Eyre,
+        /// <summary>
+        ///
+        /// </summary>
         Falcon,
         /// <summary>
         ///
@@ -99,11 +115,19 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Godfrey,
+        /// <summary>
+        ///
+        /// </summary>
         Hank,
         /// <summary>
         ///
         /// </summary>
         Helen,
+        /// <summary>
+        ///
+        /// </summary>
+        Hesse,
         /// <summary>
         ///
         /// </summary>
@@ -207,6 +231,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Walnut,
+        /// <summary>
+        ///
+        /// </summary>
         Wildflower,
     }
 
@@ -229,10 +257,13 @@ namespace Vapi
                 FallbackRimeAIVoiceVoiceId.Arcade => "arcade",
                 FallbackRimeAIVoiceVoiceId.Astra => "astra",
                 FallbackRimeAIVoiceVoiceId.Atrium => "atrium",
+                FallbackRimeAIVoiceVoiceId.Bancroft => "bancroft",
+                FallbackRimeAIVoiceVoiceId.Beatty => "beatty",
                 FallbackRimeAIVoiceVoiceId.Bond => "bond",
                 FallbackRimeAIVoiceVoiceId.Breeze => "breeze",
                 FallbackRimeAIVoiceVoiceId.Cedar => "cedar",
                 FallbackRimeAIVoiceVoiceId.Celeste => "celeste",
+                FallbackRimeAIVoiceVoiceId.Clementine => "clementine",
                 FallbackRimeAIVoiceVoiceId.Colin => "colin",
                 FallbackRimeAIVoiceVoiceId.Cove => "cove",
                 FallbackRimeAIVoiceVoiceId.Creek => "creek",
@@ -241,11 +272,14 @@ namespace Vapi
                 FallbackRimeAIVoiceVoiceId.Esther => "esther",
                 FallbackRimeAIVoiceVoiceId.Eucalyptus => "eucalyptus",
                 FallbackRimeAIVoiceVoiceId.Eva => "eva",
+                FallbackRimeAIVoiceVoiceId.Eyre => "eyre",
                 FallbackRimeAIVoiceVoiceId.Falcon => "falcon",
                 FallbackRimeAIVoiceVoiceId.Fern => "fern",
                 FallbackRimeAIVoiceVoiceId.Glacier => "glacier",
+                FallbackRimeAIVoiceVoiceId.Godfrey => "godfrey",
                 FallbackRimeAIVoiceVoiceId.Hank => "hank",
                 FallbackRimeAIVoiceVoiceId.Helen => "helen",
+                FallbackRimeAIVoiceVoiceId.Hesse => "hesse",
                 FallbackRimeAIVoiceVoiceId.Joy => "joy",
                 FallbackRimeAIVoiceVoiceId.Lagoon => "lagoon",
                 FallbackRimeAIVoiceVoiceId.Lintel => "lintel",
@@ -271,6 +305,7 @@ namespace Vapi
                 FallbackRimeAIVoiceVoiceId.Tundra => "tundra",
                 FallbackRimeAIVoiceVoiceId.Tyler => "tyler",
                 FallbackRimeAIVoiceVoiceId.Vespera => "vespera",
+                FallbackRimeAIVoiceVoiceId.Walnut => "walnut",
                 FallbackRimeAIVoiceVoiceId.Wildflower => "wildflower",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -289,10 +324,13 @@ namespace Vapi
                 "arcade" => FallbackRimeAIVoiceVoiceId.Arcade,
                 "astra" => FallbackRimeAIVoiceVoiceId.Astra,
                 "atrium" => FallbackRimeAIVoiceVoiceId.Atrium,
+                "bancroft" => FallbackRimeAIVoiceVoiceId.Bancroft,
+                "beatty" => FallbackRimeAIVoiceVoiceId.Beatty,
                 "bond" => FallbackRimeAIVoiceVoiceId.Bond,
                 "breeze" => FallbackRimeAIVoiceVoiceId.Breeze,
                 "cedar" => FallbackRimeAIVoiceVoiceId.Cedar,
                 "celeste" => FallbackRimeAIVoiceVoiceId.Celeste,
+                "clementine" => FallbackRimeAIVoiceVoiceId.Clementine,
                 "colin" => FallbackRimeAIVoiceVoiceId.Colin,
                 "cove" => FallbackRimeAIVoiceVoiceId.Cove,
                 "creek" => FallbackRimeAIVoiceVoiceId.Creek,
@@ -301,11 +339,14 @@ namespace Vapi
                 "esther" => FallbackRimeAIVoiceVoiceId.Esther,
                 "eucalyptus" => FallbackRimeAIVoiceVoiceId.Eucalyptus,
                 "eva" => FallbackRimeAIVoiceVoiceId.Eva,
+                "eyre" => FallbackRimeAIVoiceVoiceId.Eyre,
                 "falcon" => FallbackRimeAIVoiceVoiceId.Falcon,
                 "fern" => FallbackRimeAIVoiceVoiceId.Fern,
                 "glacier" => FallbackRimeAIVoiceVoiceId.Glacier,
+                "godfrey" => FallbackRimeAIVoiceVoiceId.Godfrey,
                 "hank" => FallbackRimeAIVoiceVoiceId.Hank,
                 "helen" => FallbackRimeAIVoiceVoiceId.Helen,
+                "hesse" => FallbackRimeAIVoiceVoiceId.Hesse,
                 "joy" => FallbackRimeAIVoiceVoiceId.Joy,
                 "lagoon" => FallbackRimeAIVoiceVoiceId.Lagoon,
                 "lintel" => FallbackRimeAIVoiceVoiceId.Lintel,
@@ -331,6 +372,7 @@ namespace Vapi
                 "tundra" => FallbackRimeAIVoiceVoiceId.Tundra,
                 "tyler" => FallbackRimeAIVoiceVoiceId.Tyler,
                 "vespera" => FallbackRimeAIVoiceVoiceId.Vespera,
+                "walnut" => FallbackRimeAIVoiceVoiceId.Walnut,
                 "wildflower" => FallbackRimeAIVoiceVoiceId.Wildflower,
                 _ => null,
             };

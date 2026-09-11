@@ -16,11 +16,19 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Coda,
+        /// <summary>
+        ///
+        /// </summary>
         Mist,
         /// <summary>
         ///
         /// </summary>
         Mistv2,
+        /// <summary>
+        ///
+        /// </summary>
+        Mistv3,
     }
 
     /// <summary>
@@ -36,8 +44,10 @@ namespace Vapi
             return value switch
             {
                 FallbackRimeAIVoiceModel.Arcana => "arcana",
+                FallbackRimeAIVoiceModel.Coda => "coda",
                 FallbackRimeAIVoiceModel.Mist => "mist",
                 FallbackRimeAIVoiceModel.Mistv2 => "mistv2",
+                FallbackRimeAIVoiceModel.Mistv3 => "mistv3",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -49,8 +59,10 @@ namespace Vapi
             return value switch
             {
                 "arcana" => FallbackRimeAIVoiceModel.Arcana,
+                "coda" => FallbackRimeAIVoiceModel.Coda,
                 "mist" => FallbackRimeAIVoiceModel.Mist,
                 "mistv2" => FallbackRimeAIVoiceModel.Mistv2,
+                "mistv3" => FallbackRimeAIVoiceModel.Mistv3,
                 _ => null,
             };
         }
