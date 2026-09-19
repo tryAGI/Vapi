@@ -16,6 +16,13 @@ namespace Vapi
         public string? AssistantVersion { get; set; }
 
         /// <summary>
+        /// This is the squad version to use for this call. Supported only with<br/>
+        /// direct `squadId`. Omit to follow the latest version.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("squadVersion")]
+        public string? SquadVersion { get; set; }
+
+        /// <summary>
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("roomDeleteOnUserLeaveEnabled")]
@@ -113,6 +120,10 @@ namespace Vapi
         /// This is the assistant version to use for this call. Supported only with<br/>
         /// direct `assistantId`. Omit to follow the latest version.
         /// </param>
+        /// <param name="squadVersion">
+        /// This is the squad version to use for this call. Supported only with<br/>
+        /// direct `squadId`. Omit to follow the latest version.
+        /// </param>
         /// <param name="roomDeleteOnUserLeaveEnabled">
         /// Default Value: true
         /// </param>
@@ -173,6 +184,7 @@ namespace Vapi
 #endif
         public CreateWebCallDTO(
             string? assistantVersion,
+            string? squadVersion,
             bool? roomDeleteOnUserLeaveEnabled,
             string? assistantId,
             global::Vapi.CreateAssistantDTO? assistant,
@@ -185,6 +197,7 @@ namespace Vapi
             global::Vapi.WorkflowOverrides? workflowOverrides)
         {
             this.AssistantVersion = assistantVersion;
+            this.SquadVersion = squadVersion;
             this.RoomDeleteOnUserLeaveEnabled = roomDeleteOnUserLeaveEnabled;
             this.AssistantId = assistantId;
             this.Assistant = assistant;

@@ -64,6 +64,7 @@ namespace Vapi
 
         /// <summary>
         /// This is the OpenAI model that will be used.<br/>
+        /// For GPT-Live configuration and supported settings, see https://docs.vapi.ai/gpt-live/overview.<br/>
         /// When using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.<br/>
         /// This is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.<br/>
         /// @default undefined
@@ -109,6 +110,18 @@ namespace Vapi
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("promptCacheKey")]
         public string? PromptCacheKey { get; set; }
+
+        /// <summary>
+        /// This is the OpenAI service tier used for chat completions requests.<br/>
+        /// - `fast`: OpenAI's fast processing tier (renamed from `priority` on 2026-07-30; both values are accepted and billed identically) — up to ~2.5x faster inference at 2x the standard token rates. OpenAI may silently downgrade a fast request to standard processing under ramp limits; when that happens the response reports the served tier and the request is billed at standard rates.<br/>
+        /// - `auto`: uses the service tier configured for the OpenAI project.<br/>
+        /// - `default`: standard processing and billing.<br/>
+        /// Only applies to models that support fast processing: gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna, gpt-5.5. Ignored for other models.<br/>
+        /// @default undefined (uses the service tier configured for the OpenAI project)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("serviceTier")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OpenAIModelServiceTierJsonConverter))]
+        public global::Vapi.OpenAIModelServiceTier? ServiceTier { get; set; }
 
         /// <summary>
         /// Reasoning effort for reasoning-capable OpenAI models.<br/>
@@ -159,6 +172,7 @@ namespace Vapi
         /// </summary>
         /// <param name="model">
         /// This is the OpenAI model that will be used.<br/>
+        /// For GPT-Live configuration and supported settings, see https://docs.vapi.ai/gpt-live/overview.<br/>
         /// When using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.<br/>
         /// This is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.<br/>
         /// @default undefined
@@ -214,6 +228,14 @@ namespace Vapi
         /// Providing a cache key allows you to share cached prefixes across requests.<br/>
         /// @default undefined
         /// </param>
+        /// <param name="serviceTier">
+        /// This is the OpenAI service tier used for chat completions requests.<br/>
+        /// - `fast`: OpenAI's fast processing tier (renamed from `priority` on 2026-07-30; both values are accepted and billed identically) — up to ~2.5x faster inference at 2x the standard token rates. OpenAI may silently downgrade a fast request to standard processing under ramp limits; when that happens the response reports the served tier and the request is billed at standard rates.<br/>
+        /// - `auto`: uses the service tier configured for the OpenAI project.<br/>
+        /// - `default`: standard processing and billing.<br/>
+        /// Only applies to models that support fast processing: gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna, gpt-5.5. Ignored for other models.<br/>
+        /// @default undefined (uses the service tier configured for the OpenAI project)
+        /// </param>
         /// <param name="reasoningEffort">
         /// Reasoning effort for reasoning-capable OpenAI models.<br/>
         /// For `gpt-realtime-2`: forwarded to V2 stream's session.update as `reasoning.effort`.<br/>
@@ -253,6 +275,7 @@ namespace Vapi
             global::Vapi.OpenAIModelToolStrictCompatibilityMode? toolStrictCompatibilityMode,
             global::Vapi.OpenAIModelPromptCacheRetention? promptCacheRetention,
             string? promptCacheKey,
+            global::Vapi.OpenAIModelServiceTier? serviceTier,
             global::Vapi.OpenAIModelReasoningEffort? reasoningEffort,
             double? temperature,
             double? maxTokens,
@@ -272,6 +295,7 @@ namespace Vapi
             this.ToolStrictCompatibilityMode = toolStrictCompatibilityMode;
             this.PromptCacheRetention = promptCacheRetention;
             this.PromptCacheKey = promptCacheKey;
+            this.ServiceTier = serviceTier;
             this.ReasoningEffort = reasoningEffort;
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;

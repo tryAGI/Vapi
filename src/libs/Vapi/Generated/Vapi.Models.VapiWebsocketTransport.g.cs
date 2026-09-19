@@ -24,7 +24,10 @@ namespace Vapi
         public global::Vapi.VapiWebsocketTransportProvider Provider { get; set; }
 
         /// <summary>
-        /// This is the audio format of the call. Defaults to 16KHz raw pcm_s16le
+        /// This is the audio format of the call. Defaults to 16KHz raw pcm_s16le.<br/>
+        /// For GPT-Live calls using Vapi's custom WebSocket transport, explicitly set<br/>
+        /// `{ format: pcm_s16le, sampleRate: 24000 }`. This requirement is specific<br/>
+        /// to Vapi's WebSocket transport and does not apply to phone or web calls.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("audioFormat")]
         public global::Vapi.AudioFormat? AudioFormat { get; set; }
@@ -46,7 +49,10 @@ namespace Vapi
         /// Vapi websocket transport provider
         /// </param>
         /// <param name="audioFormat">
-        /// This is the audio format of the call. Defaults to 16KHz raw pcm_s16le
+        /// This is the audio format of the call. Defaults to 16KHz raw pcm_s16le.<br/>
+        /// For GPT-Live calls using Vapi's custom WebSocket transport, explicitly set<br/>
+        /// `{ format: pcm_s16le, sampleRate: 24000 }`. This requirement is specific<br/>
+        /// to Vapi's WebSocket transport and does not apply to phone or web calls.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

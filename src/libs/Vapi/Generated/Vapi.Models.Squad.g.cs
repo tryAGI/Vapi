@@ -9,6 +9,20 @@ namespace Vapi
     public sealed partial class Squad
     {
         /// <summary>
+        /// This is the latest version label (e.g. `v3`) of the squad in the version<br/>
+        /// history. `null` while the org is not yet onboarded to versioning, or for<br/>
+        /// squads that have not yet been published under it.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latestVersion")]
+        public string? LatestVersion { get; set; }
+
+        /// <summary>
+        /// Read-only. Present only when a model this configuration uses is deprecated or retired in Vapi's model deprecation registry, judged on the day of the response. Each entry names the slot that carries the model (for example `model` or `model.fallbackModels[1]`), the deprecation and retirement dates as `YYYY-MM-DD` in UTC, and the recommended replacement model: the registry's replacement, followed through any further retirements as of the response date, so it names a model that is alive on that day. Ignored if sent back in a create or update request.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modelDeprecations")]
+        public global::System.Collections.Generic.IList<global::Vapi.ModelDeprecationNotice>? ModelDeprecations { get; set; }
+
+        /// <summary>
         /// This is the name of the squad.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
@@ -82,6 +96,14 @@ namespace Vapi
         /// <param name="updatedAt">
         /// This is the ISO 8601 date-time string of when the squad was last updated.
         /// </param>
+        /// <param name="latestVersion">
+        /// This is the latest version label (e.g. `v3`) of the squad in the version<br/>
+        /// history. `null` while the org is not yet onboarded to versioning, or for<br/>
+        /// squads that have not yet been published under it.
+        /// </param>
+        /// <param name="modelDeprecations">
+        /// Read-only. Present only when a model this configuration uses is deprecated or retired in Vapi's model deprecation registry, judged on the day of the response. Each entry names the slot that carries the model (for example `model` or `model.fallbackModels[1]`), the deprecation and retirement dates as `YYYY-MM-DD` in UTC, and the recommended replacement model: the registry's replacement, followed through any further retirements as of the response date, so it names a model that is alive on that day. Ignored if sent back in a create or update request.
+        /// </param>
         /// <param name="name">
         /// This is the name of the squad.
         /// </param>
@@ -98,9 +120,13 @@ namespace Vapi
             string orgId,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
+            string? latestVersion,
+            global::System.Collections.Generic.IList<global::Vapi.ModelDeprecationNotice>? modelDeprecations,
             string? name,
             global::Vapi.AssistantOverrides? membersOverrides)
         {
+            this.LatestVersion = latestVersion;
+            this.ModelDeprecations = modelDeprecations;
             this.Name = name;
             this.Members = members ?? throw new global::System.ArgumentNullException(nameof(members));
             this.MembersOverrides = membersOverrides;
