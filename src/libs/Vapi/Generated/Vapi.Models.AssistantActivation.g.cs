@@ -10,12 +10,21 @@ namespace Vapi
     {
         /// <summary>
         /// This is the version label (e.g. `v3`) of the assistant active when<br/>
-        /// the activation row was recorded. `null` for inline assistants,<br/>
+        /// the activation row was recorded. Absent for inline assistants,<br/>
         /// orgs not on assistant versioning, and parent assistants that have<br/>
         /// not yet been published under it.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
         public string? AssistantVersion { get; set; }
+
+        /// <summary>
+        /// This is the version label (e.g. `v3`) of the squad that was governing the<br/>
+        /// call when this activation was recorded. Absent for activations that no<br/>
+        /// squad version governs: standalone-assistant calls, flag-off orgs, squads<br/>
+        /// with no published version, and hops to an assistant outside the squad.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("squadVersion")]
+        public string? SquadVersion { get; set; }
 
         /// <summary>
         /// This is the name of the assistant that was active during the call.
@@ -44,9 +53,15 @@ namespace Vapi
         /// </param>
         /// <param name="assistantVersion">
         /// This is the version label (e.g. `v3`) of the assistant active when<br/>
-        /// the activation row was recorded. `null` for inline assistants,<br/>
+        /// the activation row was recorded. Absent for inline assistants,<br/>
         /// orgs not on assistant versioning, and parent assistants that have<br/>
         /// not yet been published under it.
+        /// </param>
+        /// <param name="squadVersion">
+        /// This is the version label (e.g. `v3`) of the squad that was governing the<br/>
+        /// call when this activation was recorded. Absent for activations that no<br/>
+        /// squad version governs: standalone-assistant calls, flag-off orgs, squads<br/>
+        /// with no published version, and hops to an assistant outside the squad.
         /// </param>
         /// <param name="assistantId">
         /// This is the ID of the assistant that was active during the call.
@@ -57,9 +72,11 @@ namespace Vapi
         public AssistantActivation(
             string assistantName,
             string? assistantVersion,
+            string? squadVersion,
             string? assistantId)
         {
             this.AssistantVersion = assistantVersion;
+            this.SquadVersion = squadVersion;
             this.AssistantName = assistantName ?? throw new global::System.ArgumentNullException(nameof(assistantName));
             this.AssistantId = assistantId;
         }

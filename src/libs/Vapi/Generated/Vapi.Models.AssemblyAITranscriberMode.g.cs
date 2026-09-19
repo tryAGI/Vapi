@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// This is the transcription mode used by the `universal-3-5-pro` speech model. Only applies to the `universal-3-5-pro` speech model.<br/>
+    /// This is the transcription mode used by the Universal Pro speech models. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.<br/>
     /// @default 'balanced'
     /// </summary>
     public enum AssemblyAITranscriberMode

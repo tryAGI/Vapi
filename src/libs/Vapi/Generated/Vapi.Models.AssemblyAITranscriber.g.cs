@@ -95,7 +95,7 @@ namespace Vapi
         public bool? VadAssistedEndpointingEnabled { get; set; }
 
         /// <summary>
-        /// This is the transcription mode used by the `universal-3-5-pro` speech model. Only applies to the `universal-3-5-pro` speech model.<br/>
+        /// This is the transcription mode used by the Universal Pro speech models. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.<br/>
         /// @default 'balanced'
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
@@ -103,27 +103,38 @@ namespace Vapi
         public global::Vapi.AssemblyAITranscriberMode? Mode { get; set; }
 
         /// <summary>
-        /// This is a prompt that provides additional context to the transcription model. Only applies to the `universal-3-5-pro` speech model.
+        /// This is a prompt that provides additional context to the transcription model. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt")]
         public string? Prompt { get; set; }
 
         /// <summary>
-        /// This is context about the voice agent that guides the transcription model. Only applies to the `universal-3-5-pro` speech model.
+        /// This is context about the voice agent that guides the transcription model. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agentContext")]
         public string? AgentContext { get; set; }
 
         /// <summary>
-        /// These are language codes used to steer automatic language detection. Only applies to the `universal-3-5-pro` speech model.
+        /// When true, the text the assistant just spoke is sent to AssemblyAI as `agent_context` after every assistant turn, replacing the previous value, so the user's reply is transcribed in the context of the question it answers.<br/>
+        /// `agentContext` still seeds the first turn. Text longer than 1750 characters keeps its last 1750 characters. Turns the user interrupted are not sent when the interruption is detected by voice activity (the default, `stopSpeakingPlan.numWords: 0`).<br/>
+        /// Only applies to `universal-3-5-pro` and `universal-3-6-pro`.<br/>
+        /// @default false<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agentContextAutoUpdateEnabled")]
+        public bool? AgentContextAutoUpdateEnabled { get; set; }
+
+        /// <summary>
+        /// These are language codes used to steer automatic language detection. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.<br/>
+        /// `ur`, `ru`, `ko`, `ca`, `gl`, `ro`, `et`, `fa`, `yue`, `af`, `mr`, `zu`, `xh` and `nn` were added with `universal-3-6-pro`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("languageCodes")]
         public global::System.Collections.Generic.IList<global::Vapi.AssemblyAITranscriberLanguageCode>? LanguageCodes { get; set; }
 
         /// <summary>
         /// This is the speech model used for the streaming session.<br/>
-        /// Keyterms prompting is supported on universal-streaming-english and universal-3-5-pro.<br/>
-        /// universal-3-5-pro is AssemblyAI's most accurate voice-agent model.<br/>
+        /// Keyterms prompting is supported on universal-streaming-english, universal-3-5-pro and universal-3-6-pro.<br/>
+        /// universal-3-6-pro is AssemblyAI's newest and most accurate voice-agent model.<br/>
         /// @default 'universal-streaming-english'
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("speechModel")]
@@ -145,7 +156,7 @@ namespace Vapi
         /// <summary>
         /// Keyterms prompting improves recognition accuracy for specific words and phrases.<br/>
         /// Can include up to 100 keyterms, each up to 50 characters.<br/>
-        /// Costs an additional $0.04/hour on universal-streaming-english and is included at no extra cost on universal-3-5-pro.
+        /// Costs an additional $0.04/hour on universal-streaming-english and is included at no extra cost on the Universal Pro models (universal-3-5-pro, universal-3-6-pro).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("keytermsPrompt")]
         public global::System.Collections.Generic.IList<string>? KeytermsPrompt { get; set; }
@@ -223,22 +234,30 @@ namespace Vapi
         /// Example: true
         /// </param>
         /// <param name="mode">
-        /// This is the transcription mode used by the `universal-3-5-pro` speech model. Only applies to the `universal-3-5-pro` speech model.<br/>
+        /// This is the transcription mode used by the Universal Pro speech models. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.<br/>
         /// @default 'balanced'
         /// </param>
         /// <param name="prompt">
-        /// This is a prompt that provides additional context to the transcription model. Only applies to the `universal-3-5-pro` speech model.
+        /// This is a prompt that provides additional context to the transcription model. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.
         /// </param>
         /// <param name="agentContext">
-        /// This is context about the voice agent that guides the transcription model. Only applies to the `universal-3-5-pro` speech model.
+        /// This is context about the voice agent that guides the transcription model. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.
+        /// </param>
+        /// <param name="agentContextAutoUpdateEnabled">
+        /// When true, the text the assistant just spoke is sent to AssemblyAI as `agent_context` after every assistant turn, replacing the previous value, so the user's reply is transcribed in the context of the question it answers.<br/>
+        /// `agentContext` still seeds the first turn. Text longer than 1750 characters keeps its last 1750 characters. Turns the user interrupted are not sent when the interruption is detected by voice activity (the default, `stopSpeakingPlan.numWords: 0`).<br/>
+        /// Only applies to `universal-3-5-pro` and `universal-3-6-pro`.<br/>
+        /// @default false<br/>
+        /// Default Value: false
         /// </param>
         /// <param name="languageCodes">
-        /// These are language codes used to steer automatic language detection. Only applies to the `universal-3-5-pro` speech model.
+        /// These are language codes used to steer automatic language detection. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.<br/>
+        /// `ur`, `ru`, `ko`, `ca`, `gl`, `ro`, `et`, `fa`, `yue`, `af`, `mr`, `zu`, `xh` and `nn` were added with `universal-3-6-pro`.
         /// </param>
         /// <param name="speechModel">
         /// This is the speech model used for the streaming session.<br/>
-        /// Keyterms prompting is supported on universal-streaming-english and universal-3-5-pro.<br/>
-        /// universal-3-5-pro is AssemblyAI's most accurate voice-agent model.<br/>
+        /// Keyterms prompting is supported on universal-streaming-english, universal-3-5-pro and universal-3-6-pro.<br/>
+        /// universal-3-6-pro is AssemblyAI's newest and most accurate voice-agent model.<br/>
         /// @default 'universal-streaming-english'
         /// </param>
         /// <param name="realtimeUrl">
@@ -250,7 +269,7 @@ namespace Vapi
         /// <param name="keytermsPrompt">
         /// Keyterms prompting improves recognition accuracy for specific words and phrases.<br/>
         /// Can include up to 100 keyterms, each up to 50 characters.<br/>
-        /// Costs an additional $0.04/hour on universal-streaming-english and is included at no extra cost on universal-3-5-pro.
+        /// Costs an additional $0.04/hour on universal-streaming-english and is included at no extra cost on the Universal Pro models (universal-3-5-pro, universal-3-6-pro).
         /// </param>
         /// <param name="endUtteranceSilenceThreshold">
         /// The duration of the end utterance silence threshold in milliseconds.
@@ -277,6 +296,7 @@ namespace Vapi
             global::Vapi.AssemblyAITranscriberMode? mode,
             string? prompt,
             string? agentContext,
+            bool? agentContextAutoUpdateEnabled,
             global::System.Collections.Generic.IList<global::Vapi.AssemblyAITranscriberLanguageCode>? languageCodes,
             global::Vapi.AssemblyAITranscriberSpeechModel? speechModel,
             string? realtimeUrl,
@@ -297,6 +317,7 @@ namespace Vapi
             this.Mode = mode;
             this.Prompt = prompt;
             this.AgentContext = agentContext;
+            this.AgentContextAutoUpdateEnabled = agentContextAutoUpdateEnabled;
             this.LanguageCodes = languageCodes;
             this.SpeechModel = speechModel;
             this.RealtimeUrl = realtimeUrl;

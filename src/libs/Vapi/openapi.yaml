@@ -4564,6 +4564,16 @@
                 }
               }
             }
+          },
+          "409": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ToolWriteConflictResponseDTO"
+                }
+              }
+            }
           }
         },
         "tags": [
@@ -4737,7 +4747,21 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ToolPinnedConflictResponseDTO"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ToolPinnedConflictResponseDTO"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ToolWriteConflictResponseDTO"
+                    }
+                  ],
+                  "discriminator": {
+                    "propertyName": "error",
+                    "mapping": {
+                      "tool_pinned": "#/components/schemas/ToolPinnedConflictResponseDTO",
+                      "tool_write_conflict": "#/components/schemas/ToolWriteConflictResponseDTO"
+                    }
+                  }
                 }
               }
             }
@@ -10361,7 +10385,7 @@
           },
           "mode": {
             "type": "string",
-            "description": "This is the transcription mode used by the `universal-3-5-pro` speech model. Only applies to the `universal-3-5-pro` speech model.\n\n@default 'balanced'",
+            "description": "This is the transcription mode used by the Universal Pro speech models. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.\n\n@default 'balanced'",
             "enum": [
               "balanced",
               "max_accuracy",
@@ -10370,66 +10394,66 @@
           },
           "prompt": {
             "type": "string",
-            "description": "This is a prompt that provides additional context to the transcription model. Only applies to the `universal-3-5-pro` speech model.",
+            "description": "This is a prompt that provides additional context to the transcription model. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.",
             "maxLength": 1750
           },
           "agentContext": {
             "type": "string",
-            "description": "This is context about the voice agent that guides the transcription model. Only applies to the `universal-3-5-pro` speech model.",
+            "description": "This is context about the voice agent that guides the transcription model. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.",
             "maxLength": 1750
+          },
+          "agentContextAutoUpdateEnabled": {
+            "type": "boolean",
+            "description": "When true, the text the assistant just spoke is sent to AssemblyAI as `agent_context` after every assistant turn, replacing the previous value, so the user's reply is transcribed in the context of the question it answers.\n`agentContext` still seeds the first turn. Text longer than 1750 characters keeps its last 1750 characters. Turns the user interrupted are not sent when the interruption is detected by voice activity (the default, `stopSpeakingPlan.numWords: 0`).\nOnly applies to `universal-3-5-pro` and `universal-3-6-pro`.\n\n@default false",
+            "default": false
           },
           "languageCodes": {
             "type": "array",
-            "description": "These are language codes used to steer automatic language detection. Only applies to the `universal-3-5-pro` speech model.",
-            "enum": [
-              "ar",
-              "da",
-              "de",
-              "en",
-              "es",
-              "fi",
-              "fr",
-              "he",
-              "hi",
-              "it",
-              "ja",
-              "nl",
-              "no",
-              "pt",
-              "sv",
-              "tr",
-              "vi",
-              "zh"
-            ],
+            "description": "These are language codes used to steer automatic language detection. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.\n`ur`, `ru`, `ko`, `ca`, `gl`, `ro`, `et`, `fa`, `yue`, `af`, `mr`, `zu`, `xh` and `nn` were added with `universal-3-6-pro`.",
             "items": {
               "type": "string",
               "enum": [
+                "af",
                 "ar",
+                "ca",
                 "da",
                 "de",
                 "en",
                 "es",
+                "et",
+                "fa",
                 "fi",
                 "fr",
+                "gl",
                 "he",
                 "hi",
                 "it",
                 "ja",
+                "ko",
+                "mr",
                 "nl",
+                "nn",
                 "no",
                 "pt",
+                "ro",
+                "ru",
                 "sv",
                 "tr",
+                "ur",
                 "vi",
-                "zh"
+                "xh",
+                "yue",
+                "zh",
+                "zu"
               ]
             }
           },
           "speechModel": {
             "type": "string",
-            "description": "This is the speech model used for the streaming session.\nKeyterms prompting is supported on universal-streaming-english and universal-3-5-pro.\nuniversal-3-5-pro is AssemblyAI's most accurate voice-agent model.\n@default 'universal-streaming-english'",
+            "description": "This is the speech model used for the streaming session.\nKeyterms prompting is supported on universal-streaming-english, universal-3-5-pro and universal-3-6-pro.\nuniversal-3-6-pro is AssemblyAI's newest and most accurate voice-agent model.\n@default 'universal-streaming-english'",
             "enum": [
               "universal-3-5-pro",
+              "universal-3-6-pro",
               "universal-streaming-english",
               "universal-streaming-multilingual"
             ]
@@ -10447,7 +10471,7 @@
             }
           },
           "keytermsPrompt": {
-            "description": "Keyterms prompting improves recognition accuracy for specific words and phrases.\nCan include up to 100 keyterms, each up to 50 characters.\nCosts an additional $0.04/hour on universal-streaming-english and is included at no extra cost on universal-3-5-pro.",
+            "description": "Keyterms prompting improves recognition accuracy for specific words and phrases.\nCan include up to 100 keyterms, each up to 50 characters.\nCosts an additional $0.04/hour on universal-streaming-english and is included at no extra cost on the Universal Pro models (universal-3-5-pro, universal-3-6-pro).",
             "type": "array",
             "items": {
               "type": "string",
@@ -11169,7 +11193,7 @@
           },
           "mipOptOut": {
             "type": "boolean",
-            "description": "If set to true, this will add mip_opt_out=true as a query parameter of all API requests. See https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program#want-to-opt-out\n\nThis will only be used if you are using your own Deepgram API key.\n\n@default false",
+            "description": "If set to true, this will add mip_opt_out=true as a query parameter of all API requests. See https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program#want-to-opt-out\n\nThis only applies to your own Deepgram API key. Requests on Vapi's key always opt out, whatever this is set to.\n\n@default false",
             "example": false,
             "default": false
           },
@@ -13621,7 +13645,7 @@
           },
           "mode": {
             "type": "string",
-            "description": "This is the transcription mode used by the `universal-3-5-pro` speech model. Only applies to the `universal-3-5-pro` speech model.\n\n@default 'balanced'",
+            "description": "This is the transcription mode used by the Universal Pro speech models. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.\n\n@default 'balanced'",
             "enum": [
               "balanced",
               "max_accuracy",
@@ -13630,66 +13654,66 @@
           },
           "prompt": {
             "type": "string",
-            "description": "This is a prompt that provides additional context to the transcription model. Only applies to the `universal-3-5-pro` speech model.",
+            "description": "This is a prompt that provides additional context to the transcription model. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.",
             "maxLength": 1750
           },
           "agentContext": {
             "type": "string",
-            "description": "This is context about the voice agent that guides the transcription model. Only applies to the `universal-3-5-pro` speech model.",
+            "description": "This is context about the voice agent that guides the transcription model. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.",
             "maxLength": 1750
+          },
+          "agentContextAutoUpdateEnabled": {
+            "type": "boolean",
+            "description": "When true, the text the assistant just spoke is sent to AssemblyAI as `agent_context` after every assistant turn, replacing the previous value, so the user's reply is transcribed in the context of the question it answers.\n`agentContext` still seeds the first turn. Text longer than 1750 characters keeps its last 1750 characters. Turns the user interrupted are not sent when the interruption is detected by voice activity (the default, `stopSpeakingPlan.numWords: 0`).\nOnly applies to `universal-3-5-pro` and `universal-3-6-pro`.\n\n@default false",
+            "default": false
           },
           "languageCodes": {
             "type": "array",
-            "description": "These are language codes used to steer automatic language detection. Only applies to the `universal-3-5-pro` speech model.",
-            "enum": [
-              "ar",
-              "da",
-              "de",
-              "en",
-              "es",
-              "fi",
-              "fr",
-              "he",
-              "hi",
-              "it",
-              "ja",
-              "nl",
-              "no",
-              "pt",
-              "sv",
-              "tr",
-              "vi",
-              "zh"
-            ],
+            "description": "These are language codes used to steer automatic language detection. Only applies to `universal-3-5-pro` and `universal-3-6-pro`.\n`ur`, `ru`, `ko`, `ca`, `gl`, `ro`, `et`, `fa`, `yue`, `af`, `mr`, `zu`, `xh` and `nn` were added with `universal-3-6-pro`.",
             "items": {
               "type": "string",
               "enum": [
+                "af",
                 "ar",
+                "ca",
                 "da",
                 "de",
                 "en",
                 "es",
+                "et",
+                "fa",
                 "fi",
                 "fr",
+                "gl",
                 "he",
                 "hi",
                 "it",
                 "ja",
+                "ko",
+                "mr",
                 "nl",
+                "nn",
                 "no",
                 "pt",
+                "ro",
+                "ru",
                 "sv",
                 "tr",
+                "ur",
                 "vi",
-                "zh"
+                "xh",
+                "yue",
+                "zh",
+                "zu"
               ]
             }
           },
           "speechModel": {
             "type": "string",
-            "description": "This is the speech model used for the streaming session.\nKeyterms prompting is supported on universal-streaming-english and universal-3-5-pro.\nuniversal-3-5-pro is AssemblyAI's most accurate voice-agent model.\n@default 'universal-streaming-english'",
+            "description": "This is the speech model used for the streaming session.\nKeyterms prompting is supported on universal-streaming-english, universal-3-5-pro and universal-3-6-pro.\nuniversal-3-6-pro is AssemblyAI's newest and most accurate voice-agent model.\n@default 'universal-streaming-english'",
             "enum": [
               "universal-3-5-pro",
+              "universal-3-6-pro",
               "universal-streaming-english",
               "universal-streaming-multilingual"
             ]
@@ -13707,7 +13731,7 @@
             }
           },
           "keytermsPrompt": {
-            "description": "Keyterms prompting improves recognition accuracy for specific words and phrases.\nCan include up to 100 keyterms, each up to 50 characters.\nCosts an additional $0.04/hour on universal-streaming-english and is included at no extra cost on universal-3-5-pro.",
+            "description": "Keyterms prompting improves recognition accuracy for specific words and phrases.\nCan include up to 100 keyterms, each up to 50 characters.\nCosts an additional $0.04/hour on universal-streaming-english and is included at no extra cost on the Universal Pro models (universal-3-5-pro, universal-3-6-pro).",
             "type": "array",
             "items": {
               "type": "string",
@@ -14306,7 +14330,7 @@
           },
           "mipOptOut": {
             "type": "boolean",
-            "description": "If set to true, this will add mip_opt_out=true as a query parameter of all API requests. See https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program#want-to-opt-out\n\nThis will only be used if you are using your own Deepgram API key.\n\n@default false",
+            "description": "If set to true, this will add mip_opt_out=true as a query parameter of all API requests. See https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program#want-to-opt-out\n\nThis only applies to your own Deepgram API key. Requests on Vapi's key always opt out, whatever this is set to.\n\n@default false",
             "example": false,
             "default": false
           },
@@ -21570,16 +21594,11 @@
         "properties": {
           "instructions": {
             "type": "string",
-            "description": "Omit to use legacy system messages. An explicit empty string is preserved."
+            "description": "Omit to use model.systemPrompt, or system-role messages when systemPrompt is absent. An explicit empty string is preserved."
           },
           "personalityPacks": {
             "type": "array",
-            "enum": [
-              "bouncy",
-              "eager-listener",
-              "idle-hummer",
-              "unhurried"
-            ],
+            "description": "Personality packs append speaking-style guidance to the speaker prompt. Set to an array of pack IDs and test one pack at a time. These are prompt instructions, not fixed speed controls.",
             "items": {
               "type": "string",
               "enum": [
@@ -21790,7 +21809,7 @@
           },
           "model": {
             "type": "string",
-            "description": "This is the OpenAI model that will be used.\n\nWhen using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.\nThis is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.\n\n@default undefined",
+            "description": "This is the OpenAI model that will be used.\nFor GPT-Live configuration and supported settings, see https://docs.vapi.ai/gpt-live/overview.\n\nWhen using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.\nThis is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.\n\n@default undefined",
             "enum": [
               "chat-latest",
               "chatgpt-4o-latest",
@@ -21940,6 +21959,7 @@
               "gpt-5:spaincentral",
               "gpt-5:swedencentral",
               "gpt-5:westeurope",
+              "gpt-live-1",
               "gpt-realtime-2",
               "gpt-realtime-2025-08-28",
               "gpt-realtime-mini-2025-12-15",
@@ -22139,6 +22159,16 @@
             "type": "string",
             "description": "This is the prompt cache key for models that support extended caching (GPT-4.1, GPT-5 series).\n\nProviding a cache key allows you to share cached prefixes across requests.\n\n@default undefined",
             "maxLength": 64
+          },
+          "serviceTier": {
+            "type": "string",
+            "description": "This is the OpenAI service tier used for chat completions requests.\n\n- `fast`: OpenAI's fast processing tier (renamed from `priority` on 2026-07-30; both values are accepted and billed identically) — up to ~2.5x faster inference at 2x the standard token rates. OpenAI may silently downgrade a fast request to standard processing under ramp limits; when that happens the response reports the served tier and the request is billed at standard rates.\n- `auto`: uses the service tier configured for the OpenAI project.\n- `default`: standard processing and billing.\n\nOnly applies to models that support fast processing: gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna, gpt-5.5. Ignored for other models.\n\n@default undefined (uses the service tier configured for the OpenAI project)",
+            "enum": [
+              "auto",
+              "default",
+              "fast",
+              "priority"
+            ]
           },
           "reasoningEffort": {
             "type": "string",
@@ -27433,7 +27463,7 @@
           },
           "mipOptOut": {
             "type": "boolean",
-            "description": "If set to true, this will add mip_opt_out=true as a query parameter of all API requests. See https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program#want-to-opt-out\n\nThis will only be used if you are using your own Deepgram API key.\n\n@default false",
+            "description": "If set to true, this will add mip_opt_out=true as a query parameter of all API requests. See https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program#want-to-opt-out\n\nThis only applies to your own Deepgram API key. Requests on Vapi's key always opt out, whatever this is set to.\n\n@default false",
             "example": false,
             "default": false
           },
@@ -28127,8 +28157,8 @@
             ]
           },
           "voiceId": {
-            "description": "This is the provider-specific ID that will be used.\nPlease note that ash, ballad, coral, sage, and verse may only be used with realtime or GPT-Live models.\nquartz, ripple, vesper, willow, stone, gleam, meridian, bossa, tempo, beacon, delta, cinder are only supported with GPT-Live models.",
-            "oneOf": [
+            "description": "This is the provider-specific ID that will be used.\nVoice availability depends on the selected model.\nquartz, ripple, vesper, willow, stone, gleam, meridian, bossa, tempo, beacon, delta, cinder are only supported with GPT-Live models.",
+            "anyOf": [
               {
                 "type": "string",
                 "enum": [
@@ -30044,7 +30074,7 @@
           },
           "mipOptOut": {
             "type": "boolean",
-            "description": "If set to true, this will add mip_opt_out=true as a query parameter of all API requests. See https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program#want-to-opt-out\n\nThis will only be used if you are using your own Deepgram API key.\n\n@default false",
+            "description": "If set to true, this will add mip_opt_out=true as a query parameter of all API requests. See https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program#want-to-opt-out\n\nThis only applies to your own Deepgram API key. Requests on Vapi's key always opt out, whatever this is set to.\n\n@default false",
             "example": false,
             "default": false
           },
@@ -30619,8 +30649,8 @@
             ]
           },
           "voiceId": {
-            "description": "This is the provider-specific ID that will be used.\nPlease note that ash, ballad, coral, sage, and verse may only be used with realtime or GPT-Live models.\nquartz, ripple, vesper, willow, stone, gleam, meridian, bossa, tempo, beacon, delta, cinder are only supported with GPT-Live models.",
-            "oneOf": [
+            "description": "This is the provider-specific ID that will be used.\nVoice availability depends on the selected model.\nquartz, ripple, vesper, willow, stone, gleam, meridian, bossa, tempo, beacon, delta, cinder are only supported with GPT-Live models.",
+            "anyOf": [
               {
                 "type": "string",
                 "enum": [
@@ -35544,6 +35574,49 @@
           }
         }
       },
+      "ModelDeprecationNotice": {
+        "type": "object",
+        "properties": {
+          "slot": {
+            "type": "string",
+            "description": "Path of the slot that carries the model, relative to the response root,\ne.g. `model`, `model.fallbackModels[1]`, `transcriber`, `voice`, or\n`members[2].assistantOverrides.model` on a squad.",
+            "example": "model.fallbackModels[1]"
+          },
+          "provider": {
+            "type": "string",
+            "description": "Provider as stored on the slot.",
+            "example": "openai"
+          },
+          "model": {
+            "type": "string",
+            "description": "Model name as stored on the slot.",
+            "example": "gpt-4-1106-preview"
+          },
+          "deprecationDate": {
+            "type": "string",
+            "description": "Day the model became deprecated, `YYYY-MM-DD` in UTC.",
+            "example": "2025-09-26"
+          },
+          "retirementDate": {
+            "type": "string",
+            "description": "Day the model is or was retired, `YYYY-MM-DD` in UTC. On and after this\nday Vapi no longer runs the model as configured.",
+            "example": "2026-03-26"
+          },
+          "replacementModel": {
+            "type": "string",
+            "description": "The recommended migration target for the slot's model: the registry's\nreplacement, followed through any further retirements as of the response\ndate, so it names a model that is alive on that day. A `<model>:<region>`\npin on the slot's model is kept on the target.",
+            "example": "gpt-5"
+          }
+        },
+        "required": [
+          "deprecationDate",
+          "model",
+          "provider",
+          "replacementModel",
+          "retirementDate",
+          "slot"
+        ]
+      },
       "Assistant": {
         "type": "object",
         "properties": {
@@ -36342,6 +36415,13 @@
             "type": "string",
             "nullable": true,
             "description": "This is the latest version label (e.g. `v3`) of the assistant in the\nversion history. `null` while the org is not yet\nonboarded to versioning, or for assistants that have not yet been\npublished under it."
+          },
+          "modelDeprecations": {
+            "description": "Read-only. Present only when a model this configuration uses is deprecated or retired in Vapi's model deprecation registry, judged on the day of the response. Each entry names the slot that carries the model (for example `model` or `model.fallbackModels[1]`), the deprecation and retirement dates as `YYYY-MM-DD` in UTC, and the recommended replacement model: the registry's replacement, followed through any further retirements as of the response date, so it names a model that is alive on that day. Ignored if sent back in a create or update request.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModelDeprecationNotice"
+            }
           },
           "name": {
             "type": "string",
@@ -37371,6 +37451,13 @@
                   "title": "SessionCreatedHook"
                 }
               ]
+            }
+          },
+          "modelDeprecations": {
+            "description": "Read-only. Present only when a model this configuration uses is deprecated or retired in Vapi's model deprecation registry, judged on the day of the response. Each entry names the slot that carries the model (for example `model` or `model.fallbackModels[1]`), the deprecation and retirement dates as `YYYY-MM-DD` in UTC, and the recommended replacement model: the registry's replacement, followed through any further retirements as of the response date, so it names a model that is alive on that day. Ignored if sent back in a create or update request.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModelDeprecationNotice"
             }
           },
           "name": {
@@ -38452,6 +38539,13 @@
             "description": "This is the ISO 8601 date-time string of when the version was created.",
             "format": "date-time"
           },
+          "modelDeprecations": {
+            "description": "Read-only. Present only when a model this configuration uses is deprecated or retired in Vapi's model deprecation registry, judged on the day of the response. Each entry names the slot that carries the model (for example `model` or `model.fallbackModels[1]`), the deprecation and retirement dates as `YYYY-MM-DD` in UTC, and the recommended replacement model: the registry's replacement, followed through any further retirements as of the response date, so it names a model that is alive on that day. Ignored if sent back in a create or update request.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModelDeprecationNotice"
+            }
+          },
           "name": {
             "type": "string",
             "description": "This is the name of the assistant.\n\nThis is required when you want to transfer between assistants in a call.",
@@ -38622,6 +38716,7 @@
             "enum": [
               "assistant_version",
               "squad",
+              "squad_version",
               "tool_version"
             ],
             "description": "Kind of source row the pin originates from."
@@ -41392,6 +41487,18 @@
       "Squad": {
         "type": "object",
         "properties": {
+          "latestVersion": {
+            "type": "string",
+            "nullable": true,
+            "description": "This is the latest version label (e.g. `v3`) of the squad in the version\nhistory. `null` while the org is not yet onboarded to versioning, or for\nsquads that have not yet been published under it."
+          },
+          "modelDeprecations": {
+            "description": "Read-only. Present only when a model this configuration uses is deprecated or retired in Vapi's model deprecation registry, judged on the day of the response. Each entry names the slot that carries the model (for example `model` or `model.fallbackModels[1]`), the deprecation and retirement dates as `YYYY-MM-DD` in UTC, and the recommended replacement model: the registry's replacement, followed through any further retirements as of the response date, so it names a model that is alive on that day. Ignored if sent back in a create or update request.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModelDeprecationNotice"
+            }
+          },
           "name": {
             "type": "string",
             "description": "This is the name of the squad."
@@ -41436,6 +41543,138 @@
           "members",
           "orgId",
           "updatedAt"
+        ]
+      },
+      "SquadVersion": {
+        "type": "object",
+        "properties": {
+          "versionName": {
+            "type": "string",
+            "nullable": true,
+            "description": "Optional human-readable label for this version. Set when the version is published.",
+            "maxLength": 80
+          },
+          "versionDescription": {
+            "type": "string",
+            "nullable": true,
+            "description": "Optional description for this version. Set when the version is published.",
+            "maxLength": 500
+          },
+          "id": {
+            "type": "string",
+            "description": "This is the unique identifier for the version row.",
+            "format": "uuid"
+          },
+          "orgId": {
+            "type": "string",
+            "description": "This is the unique identifier for the org that owns this version.",
+            "format": "uuid"
+          },
+          "squadId": {
+            "type": "string",
+            "description": "This is the unique identifier for the squad this version was snapshotted from.",
+            "format": "uuid"
+          },
+          "version": {
+            "type": "string",
+            "description": "This is the public monotonic version label, e.g. \"v1\".\nSystem-owned and incremented per squad; never user-supplied.",
+            "example": "v1"
+          },
+          "configHash": {
+            "type": "string",
+            "description": "This is the SHA-256 hex of the snapshotted content used for no-op detection."
+          },
+          "parentVersion": {
+            "type": "string",
+            "nullable": true,
+            "description": "This is the prior version label (vN-1). Null on v1 or for branch roots."
+          },
+          "restoredFromVersion": {
+            "type": "string",
+            "nullable": true,
+            "description": "The version this version was restored from. Null when it was not restored."
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true,
+            "description": "This is the actor that wrote this version. Email when created via JWT; null\nwhen created via API key, and null for a baseline version authored by nobody."
+          },
+          "deletedAt": {
+            "type": "string",
+            "nullable": true,
+            "description": "This is the soft-delete timestamp. Null when active.",
+            "format": "date-time"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "This is the ISO 8601 date-time string of when the version was created.",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string",
+            "description": "This is the name of the squad."
+          },
+          "members": {
+            "description": "This is the list of assistants that make up the squad.\n\nThe call will start with the first assistant in the list.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SquadMemberDTO"
+            }
+          },
+          "membersOverrides": {
+            "description": "This can be used to override all the assistants' settings and provide values for their template variables.\n\nBoth `membersOverrides` and `members[n].assistantOverrides` can be used together. First, `members[n].assistantOverrides` is applied. Then, `membersOverrides` is applied as a global override.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AssistantOverrides"
+              }
+            ]
+          }
+        },
+        "required": [
+          "configHash",
+          "createdAt",
+          "id",
+          "members",
+          "orgId",
+          "squadId",
+          "version"
+        ]
+      },
+      "SquadVersionPaginatedMetadata": {
+        "type": "object",
+        "properties": {
+          "nextCursor": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          },
+          "limit": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "hasNextPage",
+          "limit"
+        ]
+      },
+      "SquadVersionPaginatedResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SquadVersion"
+            }
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/SquadVersionPaginatedMetadata"
+          }
+        },
+        "required": [
+          "metadata",
+          "results"
         ]
       },
       "UpdateSquadDTO": {
@@ -44156,7 +44395,7 @@
             "maximum": 192000
           },
           "format": {
-            "type": "object",
+            "type": "string",
             "description": "This is the audio format of the call.\n\n@default 'pcm_s16le'",
             "enum": [
               "mulaw",
@@ -44195,7 +44434,7 @@
             ]
           },
           "audioFormat": {
-            "description": "This is the audio format of the call. Defaults to 16KHz raw pcm_s16le",
+            "description": "This is the audio format of the call. Defaults to 16KHz raw pcm_s16le.\n\nFor GPT-Live calls using Vapi's custom WebSocket transport, explicitly set\n`{ format: pcm_s16le, sampleRate: 24000 }`. This requirement is specific\nto Vapi's WebSocket transport and does not apply to phone or web calls.",
             "allOf": [
               {
                 "$ref": "#/components/schemas/AudioFormat"
@@ -44774,7 +45013,12 @@
           "assistantVersion": {
             "type": "string",
             "nullable": true,
-            "description": "This is the version label (e.g. `v3`) of the assistant active when\nthe activation row was recorded. `null` for inline assistants,\norgs not on assistant versioning, and parent assistants that have\nnot yet been published under it."
+            "description": "This is the version label (e.g. `v3`) of the assistant active when\nthe activation row was recorded. Absent for inline assistants,\norgs not on assistant versioning, and parent assistants that have\nnot yet been published under it."
+          },
+          "squadVersion": {
+            "type": "string",
+            "nullable": true,
+            "description": "This is the version label (e.g. `v3`) of the squad that was governing the\ncall when this activation was recorded. Absent for activations that no\nsquad version governs: standalone-assistant calls, flag-off orgs, squads\nwith no published version, and hops to an assistant outside the squad."
           },
           "assistantName": {
             "type": "string",
@@ -45886,6 +46130,7 @@
               "call.start.error-vapifault-database-error",
               "call.start.error-vapifault-get-org",
               "call.start.error-vapifault-get-subscription",
+              "call.start.squad-version-error-validation",
               "customer-busy",
               "customer-did-not-answer",
               "customer-did-not-give-microphone-permission",
@@ -46185,6 +46430,11 @@
             "type": "string",
             "nullable": true,
             "description": "This is the assistant version to use for this call. Supported only with\ndirect `assistantId`. Omit to follow the latest version."
+          },
+          "squadVersion": {
+            "type": "string",
+            "nullable": true,
+            "description": "This is the squad version to use for this call. Supported only with\ndirect `squadId`. Omit to follow the latest version."
           },
           "transport": {
             "description": "This is the transport of the call.",
@@ -46564,6 +46814,11 @@
             "nullable": true,
             "description": "This is the assistant version to use for this call. Supported only with\ndirect `assistantId`. Omit to follow the latest version."
           },
+          "squadVersion": {
+            "type": "string",
+            "nullable": true,
+            "description": "This is the squad version to use for this call. Supported only with\ndirect `squadId`. Omit to follow the latest version."
+          },
           "transport": {
             "description": "This is the transport of the call.",
             "oneOf": [
@@ -46762,6 +47017,11 @@
             "nullable": true,
             "description": "This is the assistant version to use for this call. Supported only with\ndirect `assistantId`. Omit to follow the latest version."
           },
+          "squadVersion": {
+            "type": "string",
+            "nullable": true,
+            "description": "This is the squad version to use for this call. Supported only with\ndirect `squadId`. Omit to follow the latest version."
+          },
           "transport": {
             "description": "This is the transport of the call.",
             "oneOf": [
@@ -46904,6 +47164,11 @@
             "type": "string",
             "nullable": true,
             "description": "This is the assistant version to use for this call. Supported only with\ndirect `assistantId`. Omit to follow the latest version."
+          },
+          "squadVersion": {
+            "type": "string",
+            "nullable": true,
+            "description": "This is the squad version to use for this call. Supported only with\ndirect `squadId`. Omit to follow the latest version."
           },
           "roomDeleteOnUserLeaveEnabled": {
             "type": "boolean",
@@ -57319,23 +57584,6 @@
           }
         }
       },
-      "UpdateToolVersionMetadataDTO": {
-        "type": "object",
-        "properties": {
-          "versionName": {
-            "type": "string",
-            "nullable": true,
-            "description": "Optional human-readable label for this version. Pass `null` to clear.",
-            "maxLength": 80
-          },
-          "versionDescription": {
-            "type": "string",
-            "nullable": true,
-            "description": "Optional description for this version. Pass `null` to clear.",
-            "maxLength": 500
-          }
-        }
-      },
       "ToolPinnedConflictResponseDTO": {
         "type": "object",
         "properties": {
@@ -57354,6 +57602,42 @@
           "error",
           "message"
         ]
+      },
+      "ToolWriteConflictResponseDTO": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "enum": [
+              "tool_write_conflict"
+            ]
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable reason the tool write was rejected."
+          }
+        },
+        "required": [
+          "error",
+          "message"
+        ]
+      },
+      "UpdateToolVersionMetadataDTO": {
+        "type": "object",
+        "properties": {
+          "versionName": {
+            "type": "string",
+            "nullable": true,
+            "description": "Optional human-readable label for this version. Pass `null` to clear.",
+            "maxLength": 80
+          },
+          "versionDescription": {
+            "type": "string",
+            "nullable": true,
+            "description": "Optional description for this version. Pass `null` to clear.",
+            "maxLength": 500
+          }
+        }
       },
       "CreateFileDTO": {
         "type": "object",
@@ -57473,6 +57757,24 @@
             "maxLength": 40
           }
         }
+      },
+      "FilePaginatedResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/File"
+            }
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/PaginationMeta"
+          }
+        },
+        "required": [
+          "metadata",
+          "results"
+        ]
       },
       "CustomKnowledgeBase": {
         "type": "object",
@@ -75795,6 +76097,7 @@
               "call.start.error-vapifault-database-error",
               "call.start.error-vapifault-get-org",
               "call.start.error-vapifault-get-subscription",
+              "call.start.squad-version-error-validation",
               "customer-busy",
               "customer-did-not-answer",
               "customer-did-not-give-microphone-permission",
@@ -77215,6 +77518,7 @@
               "call.start.error-vapifault-database-error",
               "call.start.error-vapifault-get-org",
               "call.start.error-vapifault-get-subscription",
+              "call.start.squad-version-error-validation",
               "customer-busy",
               "customer-did-not-answer",
               "customer-did-not-give-microphone-permission",
