@@ -16,6 +16,13 @@ namespace Vapi
         public string? AssistantVersion { get; set; }
 
         /// <summary>
+        /// This is the squad version to use for this call. Supported only with<br/>
+        /// direct `squadId`. Omit to follow the latest version.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("squadVersion")]
+        public string? SquadVersion { get; set; }
+
+        /// <summary>
         /// This is the transport of the call.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("transport")]
@@ -161,6 +168,10 @@ namespace Vapi
         /// This is the assistant version to use for this call. Supported only with<br/>
         /// direct `assistantId`. Omit to follow the latest version.
         /// </param>
+        /// <param name="squadVersion">
+        /// This is the squad version to use for this call. Supported only with<br/>
+        /// direct `squadId`. Omit to follow the latest version.
+        /// </param>
         /// <param name="transport">
         /// This is the transport of the call.
         /// </param>
@@ -247,6 +258,7 @@ namespace Vapi
 #endif
         public CreateOutboundCallDTO(
             string? assistantVersion,
+            string? squadVersion,
             global::Vapi.OneOf<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>? transport,
             global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>? customers,
             string? name,
@@ -266,6 +278,7 @@ namespace Vapi
             global::Vapi.CreateCustomerDTO? customer)
         {
             this.AssistantVersion = assistantVersion;
+            this.SquadVersion = squadVersion;
             this.Transport = transport;
             this.Customers = customers;
             this.Name = name;

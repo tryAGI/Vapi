@@ -12,9 +12,9 @@ namespace Vapi
         /// These are the messages that can be sent from client-side SDKs to control the call.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("message")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.ClientInboundMessageAddMessage, global::Vapi.ClientInboundMessageControl, global::Vapi.ClientInboundMessageSay, global::Vapi.ClientInboundMessageEndCall, global::Vapi.ClientInboundMessageTransfer, global::Vapi.ClientInboundMessageSendTransportMessage>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.ClientInboundMessageAddMessage, global::Vapi.ClientInboundMessageAppendContext, global::Vapi.ClientInboundMessageControl, global::Vapi.ClientInboundMessageSay, global::Vapi.ClientInboundMessageEndCall, global::Vapi.ClientInboundMessageTransfer, global::Vapi.ClientInboundMessageSendTransportMessage>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Vapi.OneOf<global::Vapi.ClientInboundMessageAddMessage, global::Vapi.ClientInboundMessageControl, global::Vapi.ClientInboundMessageSay, global::Vapi.ClientInboundMessageEndCall, global::Vapi.ClientInboundMessageTransfer, global::Vapi.ClientInboundMessageSendTransportMessage> Message { get; set; }
+        public required global::Vapi.OneOf<global::Vapi.ClientInboundMessageAddMessage, global::Vapi.ClientInboundMessageAppendContext, global::Vapi.ClientInboundMessageControl, global::Vapi.ClientInboundMessageSay, global::Vapi.ClientInboundMessageEndCall, global::Vapi.ClientInboundMessageTransfer, global::Vapi.ClientInboundMessageSendTransportMessage> Message { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -32,7 +32,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ClientInboundMessage(
-            global::Vapi.OneOf<global::Vapi.ClientInboundMessageAddMessage, global::Vapi.ClientInboundMessageControl, global::Vapi.ClientInboundMessageSay, global::Vapi.ClientInboundMessageEndCall, global::Vapi.ClientInboundMessageTransfer, global::Vapi.ClientInboundMessageSendTransportMessage> message)
+            global::Vapi.OneOf<global::Vapi.ClientInboundMessageAddMessage, global::Vapi.ClientInboundMessageAppendContext, global::Vapi.ClientInboundMessageControl, global::Vapi.ClientInboundMessageSay, global::Vapi.ClientInboundMessageEndCall, global::Vapi.ClientInboundMessageTransfer, global::Vapi.ClientInboundMessageSendTransportMessage> message)
         {
             this.Message = message;
         }

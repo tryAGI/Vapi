@@ -1295,6 +1295,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        CallStartSquadVersionErrorValidation,
+        /// <summary>
+        ///
+        /// </summary>
         CustomerBusy,
         /// <summary>
         ///
@@ -2731,6 +2735,7 @@ namespace Vapi
                 ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultDatabaseError => "call.start.error-vapifault-database-error",
                 ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultGetOrg => "call.start.error-vapifault-get-org",
                 ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultGetSubscription => "call.start.error-vapifault-get-subscription",
+                ServerMessageStatusUpdateEndedReason.CallStartSquadVersionErrorValidation => "call.start.squad-version-error-validation",
                 ServerMessageStatusUpdateEndedReason.CustomerBusy => "customer-busy",
                 ServerMessageStatusUpdateEndedReason.CustomerDidNotAnswer => "customer-did-not-answer",
                 ServerMessageStatusUpdateEndedReason.CustomerDidNotGiveMicrophonePermission => "customer-did-not-give-microphone-permission",
@@ -3338,6 +3343,7 @@ namespace Vapi
                 "call.start.error-vapifault-database-error" => ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultDatabaseError,
                 "call.start.error-vapifault-get-org" => ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultGetOrg,
                 "call.start.error-vapifault-get-subscription" => ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultGetSubscription,
+                "call.start.squad-version-error-validation" => ServerMessageStatusUpdateEndedReason.CallStartSquadVersionErrorValidation,
                 "customer-busy" => ServerMessageStatusUpdateEndedReason.CustomerBusy,
                 "customer-did-not-answer" => ServerMessageStatusUpdateEndedReason.CustomerDidNotAnswer,
                 "customer-did-not-give-microphone-permission" => ServerMessageStatusUpdateEndedReason.CustomerDidNotGiveMicrophonePermission,

@@ -215,6 +215,12 @@ namespace Vapi
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
+        /// Read-only. Present only when a model this configuration uses is deprecated or retired in Vapi's model deprecation registry, judged on the day of the response. Each entry names the slot that carries the model (for example `model` or `model.fallbackModels[1]`), the deprecation and retirement dates as `YYYY-MM-DD` in UTC, and the recommended replacement model: the registry's replacement, followed through any further retirements as of the response date, so it names a model that is alive on that day. Ignored if sent back in a create or update request.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modelDeprecations")]
+        public global::System.Collections.Generic.IList<global::Vapi.ModelDeprecationNotice>? ModelDeprecations { get; set; }
+
+        /// <summary>
         /// This is the name of the assistant.<br/>
         /// This is required when you want to transfer between assistants in a call.
         /// </summary>
@@ -444,6 +450,9 @@ namespace Vapi
         /// <param name="deletedAt">
         /// This is the soft-delete timestamp. Null when active.
         /// </param>
+        /// <param name="modelDeprecations">
+        /// Read-only. Present only when a model this configuration uses is deprecated or retired in Vapi's model deprecation registry, judged on the day of the response. Each entry names the slot that carries the model (for example `model` or `model.fallbackModels[1]`), the deprecation and retirement dates as `YYYY-MM-DD` in UTC, and the recommended replacement model: the registry's replacement, followed through any further retirements as of the response date, so it names a model that is alive on that day. Ignored if sent back in a create or update request.
+        /// </param>
         /// <param name="name">
         /// This is the name of the assistant.<br/>
         /// This is required when you want to transfer between assistants in a call.
@@ -542,6 +551,7 @@ namespace Vapi
             string? restoredFromVersion,
             string? createdBy,
             global::System.DateTime? deletedAt,
+            global::System.Collections.Generic.IList<global::Vapi.ModelDeprecationNotice>? modelDeprecations,
             string? name,
             string? voicemailMessage,
             string? endCallMessage,
@@ -585,6 +595,7 @@ namespace Vapi
             this.CreatedBy = createdBy;
             this.DeletedAt = deletedAt;
             this.CreatedAt = createdAt;
+            this.ModelDeprecations = modelDeprecations;
             this.Name = name;
             this.VoicemailMessage = voicemailMessage;
             this.EndCallMessage = endCallMessage;
