@@ -27,10 +27,9 @@ namespace Vapi
             };
         partial void PrepareEvalControllerGetRunsPaginatedArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string? id,
-            ref double? page,
-            ref global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder,
             ref global::Vapi.EvalControllerGetRunsPaginatedSortBy? sortBy,
+            ref string? search,
+            ref string? id,
             ref double? limit,
             ref global::System.DateTime? createdAtGt,
             ref global::System.DateTime? createdAtLt,
@@ -39,14 +38,15 @@ namespace Vapi
             ref global::System.DateTime? updatedAtGt,
             ref global::System.DateTime? updatedAtLt,
             ref global::System.DateTime? updatedAtGe,
-            ref global::System.DateTime? updatedAtLe);
+            ref global::System.DateTime? updatedAtLe,
+            ref double? page,
+            ref global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder);
         partial void PrepareEvalControllerGetRunsPaginatedRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string? id,
-            double? page,
-            global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder,
             global::Vapi.EvalControllerGetRunsPaginatedSortBy? sortBy,
+            string? search,
+            string? id,
             double? limit,
             global::System.DateTime? createdAtGt,
             global::System.DateTime? createdAtLt,
@@ -55,7 +55,9 @@ namespace Vapi
             global::System.DateTime? updatedAtGt,
             global::System.DateTime? updatedAtLt,
             global::System.DateTime? updatedAtGe,
-            global::System.DateTime? updatedAtLe);
+            global::System.DateTime? updatedAtLe,
+            double? page,
+            global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder);
         partial void ProcessEvalControllerGetRunsPaginatedResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -68,10 +70,9 @@ namespace Vapi
         /// <summary>
         /// List Eval Runs
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="page"></param>
-        /// <param name="sortOrder"></param>
         /// <param name="sortBy"></param>
+        /// <param name="search"></param>
+        /// <param name="id"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -81,14 +82,15 @@ namespace Vapi
         /// <param name="updatedAtLt"></param>
         /// <param name="updatedAtGe"></param>
         /// <param name="updatedAtLe"></param>
+        /// <param name="page"></param>
+        /// <param name="sortOrder"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.EvalRunPaginatedResponse> EvalControllerGetRunsPaginatedAsync(
-            string? id = default,
-            double? page = default,
-            global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder = default,
             global::Vapi.EvalControllerGetRunsPaginatedSortBy? sortBy = default,
+            string? search = default,
+            string? id = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -98,14 +100,15 @@ namespace Vapi
             global::System.DateTime? updatedAtLt = default,
             global::System.DateTime? updatedAtGe = default,
             global::System.DateTime? updatedAtLe = default,
+            double? page = default,
+            global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await EvalControllerGetRunsPaginatedAsResponseAsync(
-                id: id,
-                page: page,
-                sortOrder: sortOrder,
                 sortBy: sortBy,
+                search: search,
+                id: id,
                 limit: limit,
                 createdAtGt: createdAtGt,
                 createdAtLt: createdAtLt,
@@ -115,6 +118,8 @@ namespace Vapi
                 updatedAtLt: updatedAtLt,
                 updatedAtGe: updatedAtGe,
                 updatedAtLe: updatedAtLe,
+                page: page,
+                sortOrder: sortOrder,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -124,10 +129,9 @@ namespace Vapi
         /// <summary>
         /// List Eval Runs
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="page"></param>
-        /// <param name="sortOrder"></param>
         /// <param name="sortBy"></param>
+        /// <param name="search"></param>
+        /// <param name="id"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -137,14 +141,15 @@ namespace Vapi
         /// <param name="updatedAtLt"></param>
         /// <param name="updatedAtGe"></param>
         /// <param name="updatedAtLe"></param>
+        /// <param name="page"></param>
+        /// <param name="sortOrder"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.EvalRunPaginatedResponse>> EvalControllerGetRunsPaginatedAsResponseAsync(
-            string? id = default,
-            double? page = default,
-            global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder = default,
             global::Vapi.EvalControllerGetRunsPaginatedSortBy? sortBy = default,
+            string? search = default,
+            string? id = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -154,6 +159,8 @@ namespace Vapi
             global::System.DateTime? updatedAtLt = default,
             global::System.DateTime? updatedAtGe = default,
             global::System.DateTime? updatedAtLe = default,
+            double? page = default,
+            global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -161,10 +168,9 @@ namespace Vapi
                 client: HttpClient);
             PrepareEvalControllerGetRunsPaginatedArguments(
                 httpClient: HttpClient,
-                id: ref id,
-                page: ref page,
-                sortOrder: ref sortOrder,
                 sortBy: ref sortBy,
+                search: ref search,
+                id: ref id,
                 limit: ref limit,
                 createdAtGt: ref createdAtGt,
                 createdAtLt: ref createdAtLt,
@@ -173,7 +179,9 @@ namespace Vapi
                 updatedAtGt: ref updatedAtGt,
                 updatedAtLt: ref updatedAtLt,
                 updatedAtGe: ref updatedAtGe,
-                updatedAtLe: ref updatedAtLe);
+                updatedAtLe: ref updatedAtLe,
+                page: ref page,
+                sortOrder: ref sortOrder);
 
 
             var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
@@ -202,10 +210,9 @@ namespace Vapi
                                 path: "/eval/run",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("id", id)
-                                .AddOptionalParameter("page", page?.ToString())
-                                .AddOptionalParameter("sortOrder", sortOrder?.ToValueString())
                                 .AddOptionalParameter("sortBy", sortBy?.ToValueString())
+                                .AddOptionalParameter("search", search)
+                                .AddOptionalParameter("id", id)
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("createdAtGt", createdAtGt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("createdAtLt", createdAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
@@ -215,6 +222,8 @@ namespace Vapi
                                 .AddOptionalParameter("updatedAtLt", updatedAtLt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("updatedAtGe", updatedAtGe?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("updatedAtLe", updatedAtLe?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("page", page?.ToString())
+                                .AddOptionalParameter("sortOrder", sortOrder?.ToValueString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Vapi.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -256,10 +265,9 @@ namespace Vapi
                 PrepareEvalControllerGetRunsPaginatedRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    page: page,
-                    sortOrder: sortOrder,
                     sortBy: sortBy,
+                    search: search,
+                    id: id,
                     limit: limit,
                     createdAtGt: createdAtGt,
                     createdAtLt: createdAtLt,
@@ -268,7 +276,9 @@ namespace Vapi
                     updatedAtGt: updatedAtGt,
                     updatedAtLt: updatedAtLt,
                     updatedAtGe: updatedAtGe,
-                    updatedAtLe: updatedAtLe);
+                    updatedAtLe: updatedAtLe,
+                    page: page,
+                    sortOrder: sortOrder);
 
                 return __httpRequest;
             }

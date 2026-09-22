@@ -11,15 +11,7 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        Cost,
-        /// <summary>
-        ///
-        /// </summary>
         CreatedAt,
-        /// <summary>
-        ///
-        /// </summary>
-        Duration,
     }
 
     /// <summary>
@@ -34,9 +26,7 @@ namespace Vapi
         {
             return value switch
             {
-                EvalControllerGetRunsPaginatedSortBy.Cost => "cost",
                 EvalControllerGetRunsPaginatedSortBy.CreatedAt => "createdAt",
-                EvalControllerGetRunsPaginatedSortBy.Duration => "duration",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -47,9 +37,7 @@ namespace Vapi
         {
             return value switch
             {
-                "cost" => EvalControllerGetRunsPaginatedSortBy.Cost,
                 "createdAt" => EvalControllerGetRunsPaginatedSortBy.CreatedAt,
-                "duration" => EvalControllerGetRunsPaginatedSortBy.Duration,
                 _ => null,
             };
         }

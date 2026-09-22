@@ -26,13 +26,13 @@ namespace Vapi
 
         /// <summary>
         /// This is the provider-specific ID that will be used.<br/>
-        /// Please note that ash, ballad, coral, sage, and verse may only be used with realtime or GPT-Live models.<br/>
+        /// Voice availability depends on the selected model.<br/>
         /// quartz, ripple, vesper, willow, stone, gleam, meridian, bossa, tempo, beacon, delta, cinder are only supported with GPT-Live models.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("voiceId")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.FallbackOpenAIVoiceVoiceId?, string>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AnyOfJsonConverter<global::Vapi.FallbackOpenAIVoiceVoiceId?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Vapi.OneOf<global::Vapi.FallbackOpenAIVoiceVoiceId?, string> VoiceId { get; set; }
+        public required global::Vapi.AnyOf<global::Vapi.FallbackOpenAIVoiceVoiceId?, string> VoiceId { get; set; }
 
         /// <summary>
         /// This is the model that will be used for text-to-speech.
@@ -73,7 +73,7 @@ namespace Vapi
         /// </summary>
         /// <param name="voiceId">
         /// This is the provider-specific ID that will be used.<br/>
-        /// Please note that ash, ballad, coral, sage, and verse may only be used with realtime or GPT-Live models.<br/>
+        /// Voice availability depends on the selected model.<br/>
         /// quartz, ripple, vesper, willow, stone, gleam, meridian, bossa, tempo, beacon, delta, cinder are only supported with GPT-Live models.
         /// </param>
         /// <param name="cachingEnabled">
@@ -102,7 +102,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public FallbackOpenAIVoice(
-            global::Vapi.OneOf<global::Vapi.FallbackOpenAIVoiceVoiceId?, string> voiceId,
+            global::Vapi.AnyOf<global::Vapi.FallbackOpenAIVoiceVoiceId?, string> voiceId,
             bool? cachingEnabled,
             global::Vapi.FallbackOpenAIVoiceProvider provider,
             global::Vapi.FallbackOpenAIVoiceModel? model,

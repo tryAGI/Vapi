@@ -11,28 +11,21 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
-        public string? Id { get; set; }
-
-        /// <summary>
-        /// This is the page number to return. Defaults to 1.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("page")]
-        public double? Page { get; set; }
-
-        /// <summary>
-        /// This is the sort order for pagination. Defaults to 'DESC'.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("sortOrder")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.GetEvalRunPaginatedDTOSortOrderJsonConverter))]
-        public global::Vapi.GetEvalRunPaginatedDTOSortOrder? SortOrder { get; set; }
-
-        /// <summary>
-        /// This is the column to sort by. Defaults to 'createdAt'.
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sortBy")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.GetEvalRunPaginatedDTOSortByJsonConverter))]
         public global::Vapi.GetEvalRunPaginatedDTOSortBy? SortBy { get; set; }
+
+        /// <summary>
+        /// Literal, case-insensitive search across eval and assistant names.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("search")]
+        public string? Search { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string? Id { get; set; }
 
         /// <summary>
         /// This is the maximum number of items to return. Defaults to 100.
@@ -89,6 +82,19 @@ namespace Vapi
         public global::System.DateTime? UpdatedAtLe { get; set; }
 
         /// <summary>
+        /// This is the page number to return. Defaults to 1.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("page")]
+        public double? Page { get; set; }
+
+        /// <summary>
+        /// This is the sort order for pagination. Defaults to 'DESC'.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sortOrder")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.GetEvalRunPaginatedDTOSortOrderJsonConverter))]
+        public global::Vapi.GetEvalRunPaginatedDTOSortOrder? SortOrder { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -97,16 +103,11 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="GetEvalRunPaginatedDTO" /> class.
         /// </summary>
+        /// <param name="sortBy"></param>
+        /// <param name="search">
+        /// Literal, case-insensitive search across eval and assistant names.
+        /// </param>
         /// <param name="id"></param>
-        /// <param name="page">
-        /// This is the page number to return. Defaults to 1.
-        /// </param>
-        /// <param name="sortOrder">
-        /// This is the sort order for pagination. Defaults to 'DESC'.
-        /// </param>
-        /// <param name="sortBy">
-        /// This is the column to sort by. Defaults to 'createdAt'.
-        /// </param>
         /// <param name="limit">
         /// This is the maximum number of items to return. Defaults to 100.
         /// </param>
@@ -134,14 +135,19 @@ namespace Vapi
         /// <param name="updatedAtLe">
         /// This will return items where the updatedAt is less than or equal to the specified value.
         /// </param>
+        /// <param name="page">
+        /// This is the page number to return. Defaults to 1.
+        /// </param>
+        /// <param name="sortOrder">
+        /// This is the sort order for pagination. Defaults to 'DESC'.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetEvalRunPaginatedDTO(
-            string? id,
-            double? page,
-            global::Vapi.GetEvalRunPaginatedDTOSortOrder? sortOrder,
             global::Vapi.GetEvalRunPaginatedDTOSortBy? sortBy,
+            string? search,
+            string? id,
             double? limit,
             global::System.DateTime? createdAtGt,
             global::System.DateTime? createdAtLt,
@@ -150,12 +156,13 @@ namespace Vapi
             global::System.DateTime? updatedAtGt,
             global::System.DateTime? updatedAtLt,
             global::System.DateTime? updatedAtGe,
-            global::System.DateTime? updatedAtLe)
+            global::System.DateTime? updatedAtLe,
+            double? page,
+            global::Vapi.GetEvalRunPaginatedDTOSortOrder? sortOrder)
         {
-            this.Id = id;
-            this.Page = page;
-            this.SortOrder = sortOrder;
             this.SortBy = sortBy;
+            this.Search = search;
+            this.Id = id;
             this.Limit = limit;
             this.CreatedAtGt = createdAtGt;
             this.CreatedAtLt = createdAtLt;
@@ -165,6 +172,8 @@ namespace Vapi
             this.UpdatedAtLt = updatedAtLt;
             this.UpdatedAtGe = updatedAtGe;
             this.UpdatedAtLe = updatedAtLe;
+            this.Page = page;
+            this.SortOrder = sortOrder;
         }
 
         /// <summary>

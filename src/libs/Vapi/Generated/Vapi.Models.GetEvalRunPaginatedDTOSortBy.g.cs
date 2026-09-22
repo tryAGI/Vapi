@@ -4,22 +4,14 @@
 namespace Vapi
 {
     /// <summary>
-    /// This is the column to sort by. Defaults to 'createdAt'.
+    ///
     /// </summary>
     public enum GetEvalRunPaginatedDTOSortBy
     {
         /// <summary>
         ///
         /// </summary>
-        Cost,
-        /// <summary>
-        ///
-        /// </summary>
         CreatedAt,
-        /// <summary>
-        ///
-        /// </summary>
-        Duration,
     }
 
     /// <summary>
@@ -34,9 +26,7 @@ namespace Vapi
         {
             return value switch
             {
-                GetEvalRunPaginatedDTOSortBy.Cost => "cost",
                 GetEvalRunPaginatedDTOSortBy.CreatedAt => "createdAt",
-                GetEvalRunPaginatedDTOSortBy.Duration => "duration",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -47,9 +37,7 @@ namespace Vapi
         {
             return value switch
             {
-                "cost" => GetEvalRunPaginatedDTOSortBy.Cost,
                 "createdAt" => GetEvalRunPaginatedDTOSortBy.CreatedAt,
-                "duration" => GetEvalRunPaginatedDTOSortBy.Duration,
                 _ => null,
             };
         }

@@ -5,6 +5,7 @@ namespace Vapi
 {
     /// <summary>
     /// This is the OpenAI model that will be used.<br/>
+    /// For GPT-Live configuration and supported settings, see https://docs.vapi.ai/gpt-live/overview.<br/>
     /// When using Vapi OpenAI or your own Azure Credentials, you have the option to specify the region for the selected model. This shouldn't be specified unless you have a specific reason to do so. Vapi will automatically find the fastest region that make sense.<br/>
     /// This is helpful when you are required to comply with Data Residency rules. Learn more about Azure regions here https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency/.<br/>
     /// @default undefined
@@ -606,6 +607,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        GptLive1,
+        /// <summary>
+        ///
+        /// </summary>
         GptRealtime2,
         /// <summary>
         ///
@@ -797,6 +802,7 @@ namespace Vapi
                 OpenAIModelModel.Gpt5_spaincentral => "gpt-5:spaincentral",
                 OpenAIModelModel.Gpt5_swedencentral => "gpt-5:swedencentral",
                 OpenAIModelModel.Gpt5_westeurope => "gpt-5:westeurope",
+                OpenAIModelModel.GptLive1 => "gpt-live-1",
                 OpenAIModelModel.GptRealtime2 => "gpt-realtime-2",
                 OpenAIModelModel.GptRealtime20250828 => "gpt-realtime-2025-08-28",
                 OpenAIModelModel.GptRealtimeMini20251215 => "gpt-realtime-mini-2025-12-15",
@@ -963,6 +969,7 @@ namespace Vapi
                 "gpt-5:spaincentral" => OpenAIModelModel.Gpt5_spaincentral,
                 "gpt-5:swedencentral" => OpenAIModelModel.Gpt5_swedencentral,
                 "gpt-5:westeurope" => OpenAIModelModel.Gpt5_westeurope,
+                "gpt-live-1" => OpenAIModelModel.GptLive1,
                 "gpt-realtime-2" => OpenAIModelModel.GptRealtime2,
                 "gpt-realtime-2025-08-28" => OpenAIModelModel.GptRealtime20250828,
                 "gpt-realtime-mini-2025-12-15" => OpenAIModelModel.GptRealtimeMini20251215,

@@ -21,8 +21,9 @@ namespace Vapi
         /// @default 'pcm_s16le'
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("format")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AudioFormatFormatJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Format { get; set; }
+        public required global::Vapi.AudioFormatFormat Format { get; set; }
 
         /// <summary>
         /// This is the container format of the call.<br/>
@@ -58,11 +59,11 @@ namespace Vapi
 #endif
         public AudioFormat(
             double sampleRate,
-            object format,
+            global::Vapi.AudioFormatFormat format,
             global::Vapi.AudioFormatContainer? container)
         {
             this.SampleRate = sampleRate;
-            this.Format = format ?? throw new global::System.ArgumentNullException(nameof(format));
+            this.Format = format;
             this.Container = container;
         }
 

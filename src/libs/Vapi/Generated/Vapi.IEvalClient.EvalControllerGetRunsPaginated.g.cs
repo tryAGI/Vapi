@@ -7,10 +7,9 @@ namespace Vapi
         /// <summary>
         /// List Eval Runs
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="page"></param>
-        /// <param name="sortOrder"></param>
         /// <param name="sortBy"></param>
+        /// <param name="search"></param>
+        /// <param name="id"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -20,14 +19,15 @@ namespace Vapi
         /// <param name="updatedAtLt"></param>
         /// <param name="updatedAtGe"></param>
         /// <param name="updatedAtLe"></param>
+        /// <param name="page"></param>
+        /// <param name="sortOrder"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.EvalRunPaginatedResponse> EvalControllerGetRunsPaginatedAsync(
-            string? id = default,
-            double? page = default,
-            global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder = default,
             global::Vapi.EvalControllerGetRunsPaginatedSortBy? sortBy = default,
+            string? search = default,
+            string? id = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -37,15 +37,16 @@ namespace Vapi
             global::System.DateTime? updatedAtLt = default,
             global::System.DateTime? updatedAtGe = default,
             global::System.DateTime? updatedAtLe = default,
+            double? page = default,
+            global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// List Eval Runs
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="page"></param>
-        /// <param name="sortOrder"></param>
         /// <param name="sortBy"></param>
+        /// <param name="search"></param>
+        /// <param name="id"></param>
         /// <param name="limit"></param>
         /// <param name="createdAtGt"></param>
         /// <param name="createdAtLt"></param>
@@ -55,14 +56,15 @@ namespace Vapi
         /// <param name="updatedAtLt"></param>
         /// <param name="updatedAtGe"></param>
         /// <param name="updatedAtLe"></param>
+        /// <param name="page"></param>
+        /// <param name="sortOrder"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.EvalRunPaginatedResponse>> EvalControllerGetRunsPaginatedAsResponseAsync(
-            string? id = default,
-            double? page = default,
-            global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder = default,
             global::Vapi.EvalControllerGetRunsPaginatedSortBy? sortBy = default,
+            string? search = default,
+            string? id = default,
             double? limit = default,
             global::System.DateTime? createdAtGt = default,
             global::System.DateTime? createdAtLt = default,
@@ -72,6 +74,8 @@ namespace Vapi
             global::System.DateTime? updatedAtLt = default,
             global::System.DateTime? updatedAtGe = default,
             global::System.DateTime? updatedAtLe = default,
+            double? page = default,
+            global::Vapi.EvalControllerGetRunsPaginatedSortOrder? sortOrder = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

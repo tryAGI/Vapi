@@ -134,6 +134,12 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CallHookCallEnding, global::Vapi.CallHookAssistantSpeechInterrupted, global::Vapi.CallHookCustomerSpeechInterrupted, global::Vapi.CallHookCustomerSpeechTimeout, global::Vapi.SessionCreatedHook>>? Hooks { get; set; }
 
         /// <summary>
+        /// Read-only. Present only when a model this configuration uses is deprecated or retired in Vapi's model deprecation registry, judged on the day of the response. Each entry names the slot that carries the model (for example `model` or `model.fallbackModels[1]`), the deprecation and retirement dates as `YYYY-MM-DD` in UTC, and the recommended replacement model: the registry's replacement, followed through any further retirements as of the response date, so it names a model that is alive on that day. Ignored if sent back in a create or update request.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modelDeprecations")]
+        public global::System.Collections.Generic.IList<global::Vapi.ModelDeprecationNotice>? ModelDeprecations { get; set; }
+
+        /// <summary>
         /// This is the name of the assistant.<br/>
         /// This is required when you want to transfer between assistants in a call.
         /// </summary>
@@ -387,6 +393,9 @@ namespace Vapi
         /// <param name="hooks">
         /// This is a set of actions that will be performed on certain events.
         /// </param>
+        /// <param name="modelDeprecations">
+        /// Read-only. Present only when a model this configuration uses is deprecated or retired in Vapi's model deprecation registry, judged on the day of the response. Each entry names the slot that carries the model (for example `model` or `model.fallbackModels[1]`), the deprecation and retirement dates as `YYYY-MM-DD` in UTC, and the recommended replacement model: the registry's replacement, followed through any further retirements as of the response date, so it names a model that is alive on that day. Ignored if sent back in a create or update request.
+        /// </param>
         /// <param name="name">
         /// This is the name of the assistant.<br/>
         /// This is required when you want to transfer between assistants in a call.
@@ -482,6 +491,7 @@ namespace Vapi
             global::Vapi.LangfuseObservabilityPlan? observabilityPlan,
             global::System.Collections.Generic.IList<global::Vapi.CredentialsItem5>? credentials,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CallHookCallEnding, global::Vapi.CallHookAssistantSpeechInterrupted, global::Vapi.CallHookCustomerSpeechInterrupted, global::Vapi.CallHookCustomerSpeechTimeout, global::Vapi.SessionCreatedHook>>? hooks,
+            global::System.Collections.Generic.IList<global::Vapi.ModelDeprecationNotice>? modelDeprecations,
             string? name,
             string? voicemailMessage,
             string? endCallMessage,
@@ -514,6 +524,7 @@ namespace Vapi
             this.ObservabilityPlan = observabilityPlan;
             this.Credentials = credentials;
             this.Hooks = hooks;
+            this.ModelDeprecations = modelDeprecations;
             this.Name = name;
             this.VoicemailMessage = voicemailMessage;
             this.EndCallMessage = endCallMessage;

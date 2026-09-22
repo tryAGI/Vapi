@@ -19,6 +19,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        SquadVersion,
+        /// <summary>
+        ///
+        /// </summary>
         ToolVersion,
     }
 
@@ -36,6 +40,7 @@ namespace Vapi
             {
                 VersionPinReferenceSourceType.AssistantVersion => "assistant_version",
                 VersionPinReferenceSourceType.Squad => "squad",
+                VersionPinReferenceSourceType.SquadVersion => "squad_version",
                 VersionPinReferenceSourceType.ToolVersion => "tool_version",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -49,6 +54,7 @@ namespace Vapi
             {
                 "assistant_version" => VersionPinReferenceSourceType.AssistantVersion,
                 "squad" => VersionPinReferenceSourceType.Squad,
+                "squad_version" => VersionPinReferenceSourceType.SquadVersion,
                 "tool_version" => VersionPinReferenceSourceType.ToolVersion,
                 _ => null,
             };
