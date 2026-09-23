@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// This is the model that will be used. Defaults to 'aura-2' when not specified.<br/>
+    /// This is the model that will be used. Defaults to 'aura' when not specified.<br/>
     /// Example: aura-2
     /// </summary>
     public enum FallbackDeepgramVoiceModel
@@ -17,6 +17,10 @@ namespace Vapi
         ///
         /// </summary>
         Aura2,
+        /// <summary>
+        ///
+        /// </summary>
+        Flux,
     }
 
     /// <summary>
@@ -33,6 +37,7 @@ namespace Vapi
             {
                 FallbackDeepgramVoiceModel.Aura => "aura",
                 FallbackDeepgramVoiceModel.Aura2 => "aura-2",
+                FallbackDeepgramVoiceModel.Flux => "flux",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -45,6 +50,7 @@ namespace Vapi
             {
                 "aura" => FallbackDeepgramVoiceModel.Aura,
                 "aura-2" => FallbackDeepgramVoiceModel.Aura2,
+                "flux" => FallbackDeepgramVoiceModel.Flux,
                 _ => null,
             };
         }
