@@ -33,7 +33,7 @@ namespace Vapi
         public required global::Vapi.DeepgramVoiceVoiceId VoiceId { get; set; }
 
         /// <summary>
-        /// This is the model that will be used. Defaults to 'aura-2' when not specified.<br/>
+        /// This is the model that will be used. Defaults to 'aura' when not specified.<br/>
         /// Example: aura-2
         /// </summary>
         /// <example>aura-2</example>
@@ -51,6 +51,26 @@ namespace Vapi
         /// <example>false</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("mipOptOut")]
         public bool? MipOptOut { get; set; }
+
+        /// <summary>
+        /// This is the speed multiplier that will be used. Aura-2 accepts 0.7 to 1.5; Flux accepts 0.5 to 1.5 in steps of 0.05. Aura does not support speed.<br/>
+        /// @default 1<br/>
+        /// Default Value: 1<br/>
+        /// Example: 1.1F
+        /// </summary>
+        /// <example>1.1F</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("speed")]
+        public double? Speed { get; set; }
+
+        /// <summary>
+        /// This is the expressivity level for Flux voices, from -2 (flat) to 2 (lively). Deepgram marks this control as beta and may retune the scale. Aura and Aura-2 do not support it.<br/>
+        /// @default 0<br/>
+        /// Default Value: 0<br/>
+        /// Example: 1
+        /// </summary>
+        /// <example>1</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expressivity")]
+        public double? Expressivity { get; set; }
 
         /// <summary>
         /// This is the plan for chunking the model output before it is sent to the voice provider.
@@ -85,7 +105,7 @@ namespace Vapi
         /// This is the voice provider that will be used.
         /// </param>
         /// <param name="model">
-        /// This is the model that will be used. Defaults to 'aura-2' when not specified.<br/>
+        /// This is the model that will be used. Defaults to 'aura' when not specified.<br/>
         /// Example: aura-2
         /// </param>
         /// <param name="mipOptOut">
@@ -94,6 +114,18 @@ namespace Vapi
         /// @default false<br/>
         /// Default Value: false<br/>
         /// Example: false
+        /// </param>
+        /// <param name="speed">
+        /// This is the speed multiplier that will be used. Aura-2 accepts 0.7 to 1.5; Flux accepts 0.5 to 1.5 in steps of 0.05. Aura does not support speed.<br/>
+        /// @default 1<br/>
+        /// Default Value: 1<br/>
+        /// Example: 1.1F
+        /// </param>
+        /// <param name="expressivity">
+        /// This is the expressivity level for Flux voices, from -2 (flat) to 2 (lively). Deepgram marks this control as beta and may retune the scale. Aura and Aura-2 do not support it.<br/>
+        /// @default 0<br/>
+        /// Default Value: 0<br/>
+        /// Example: 1
         /// </param>
         /// <param name="chunkPlan">
         /// This is the plan for chunking the model output before it is sent to the voice provider.
@@ -110,6 +142,8 @@ namespace Vapi
             global::Vapi.DeepgramVoiceProvider provider,
             global::Vapi.DeepgramVoiceModel? model,
             bool? mipOptOut,
+            double? speed,
+            double? expressivity,
             global::Vapi.ChunkPlan? chunkPlan,
             global::Vapi.FallbackPlan? fallbackPlan)
         {
@@ -118,6 +152,8 @@ namespace Vapi
             this.VoiceId = voiceId;
             this.Model = model;
             this.MipOptOut = mipOptOut;
+            this.Speed = speed;
+            this.Expressivity = expressivity;
             this.ChunkPlan = chunkPlan;
             this.FallbackPlan = fallbackPlan;
         }
