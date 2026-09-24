@@ -60,7 +60,8 @@ namespace Vapi
         /// The recommended migration target for the slot's model: the registry's<br/>
         /// replacement, followed through any further retirements as of the response<br/>
         /// date, so it names a model that is alive on that day. A `&lt;model&gt;:&lt;region&gt;`<br/>
-        /// pin on the slot's model is kept on the target.<br/>
+        /// pin on the slot's model is kept on the target when the pinned name is<br/>
+        /// itself a settable model; otherwise the bare replacement is named.<br/>
         /// Example: gpt-5
         /// </summary>
         /// <example>gpt-5</example>
@@ -104,7 +105,8 @@ namespace Vapi
         /// The recommended migration target for the slot's model: the registry's<br/>
         /// replacement, followed through any further retirements as of the response<br/>
         /// date, so it names a model that is alive on that day. A `&lt;model&gt;:&lt;region&gt;`<br/>
-        /// pin on the slot's model is kept on the target.<br/>
+        /// pin on the slot's model is kept on the target when the pinned name is<br/>
+        /// itself a settable model; otherwise the bare replacement is named.<br/>
         /// Example: gpt-5
         /// </param>
 #if NET7_0_OR_GREATER

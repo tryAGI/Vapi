@@ -283,6 +283,14 @@ namespace Vapi
         public double? PlatformFee { get; set; }
 
         /// <summary>
+        /// This is how payment is collected for the subscription: charged to the card<br/>
+        /// on file, or invoiced.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("billingCollectionMethod")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.SubscriptionBillingCollectionMethodJsonConverter))]
+        public global::Vapi.SubscriptionBillingCollectionMethod? BillingCollectionMethod { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -427,6 +435,10 @@ namespace Vapi
         /// <param name="platformFee">
         /// This is the platform fee for the subscription.
         /// </param>
+        /// <param name="billingCollectionMethod">
+        /// This is how payment is collected for the subscription: charged to the card<br/>
+        /// on file, or invoiced.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -472,7 +484,8 @@ namespace Vapi
             double? chatRetentionDays,
             global::Vapi.SubscriptionMinutesIncludedResetFrequency? minutesIncludedResetFrequency,
             bool? rbacEnabled,
-            double? platformFee)
+            double? platformFee,
+            global::Vapi.SubscriptionBillingCollectionMethod? billingCollectionMethod)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
@@ -516,6 +529,7 @@ namespace Vapi
             this.MinutesIncludedResetFrequency = minutesIncludedResetFrequency;
             this.RbacEnabled = rbacEnabled;
             this.PlatformFee = platformFee;
+            this.BillingCollectionMethod = billingCollectionMethod;
         }
 
         /// <summary>

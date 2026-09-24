@@ -84,6 +84,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        AssistantModelResponseEmpty,
+        /// <summary>
+        ///
+        /// </summary>
         AssistantModelResponseFailed,
         /// <summary>
         ///
@@ -437,6 +441,7 @@ namespace Vapi
                 JSONQueryOnEventsTableOn.AssistantModelRequestFailed => "assistant.model.requestFailed",
                 JSONQueryOnEventsTableOn.AssistantModelRequestStarted => "assistant.model.requestStarted",
                 JSONQueryOnEventsTableOn.AssistantModelRequestSucceeded => "assistant.model.requestSucceeded",
+                JSONQueryOnEventsTableOn.AssistantModelResponseEmpty => "assistant.model.responseEmpty",
                 JSONQueryOnEventsTableOn.AssistantModelResponseFailed => "assistant.model.responseFailed",
                 JSONQueryOnEventsTableOn.AssistantModelResponseSucceeded => "assistant.model.responseSucceeded",
                 JSONQueryOnEventsTableOn.AssistantModelTokenReceived => "assistant.model.tokenReceived",
@@ -546,6 +551,7 @@ namespace Vapi
                 "assistant.model.requestFailed" => JSONQueryOnEventsTableOn.AssistantModelRequestFailed,
                 "assistant.model.requestStarted" => JSONQueryOnEventsTableOn.AssistantModelRequestStarted,
                 "assistant.model.requestSucceeded" => JSONQueryOnEventsTableOn.AssistantModelRequestSucceeded,
+                "assistant.model.responseEmpty" => JSONQueryOnEventsTableOn.AssistantModelResponseEmpty,
                 "assistant.model.responseFailed" => JSONQueryOnEventsTableOn.AssistantModelResponseFailed,
                 "assistant.model.responseSucceeded" => JSONQueryOnEventsTableOn.AssistantModelResponseSucceeded,
                 "assistant.model.tokenReceived" => JSONQueryOnEventsTableOn.AssistantModelTokenReceived,
