@@ -31,12 +31,14 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FileStatus), TypeInfoPropertyName = "FileStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateFileDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.File>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FileControllerFindAllPurpose), TypeInfoPropertyName = "FileControllerFindAllPurpose2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateFileDTOPurpose?), TypeInfoPropertyName = "NullableCreateFileDTOPurpose2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FileObject?), TypeInfoPropertyName = "NullableFileObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FileStatus?), TypeInfoPropertyName = "NullableFileStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FileControllerFindAllPurpose?), TypeInfoPropertyName = "NullableFileControllerFindAllPurpose2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.File>))]
     internal sealed partial class FilesSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
@@ -121,7 +123,11 @@ namespace Vapi
 
                     || typeToConvert == typeof(global::Vapi.FileStatus)
 
-                    || typeToConvert == typeof(global::Vapi.FileStatus?);
+                    || typeToConvert == typeof(global::Vapi.FileStatus?)
+
+                    || typeToConvert == typeof(global::Vapi.FileControllerFindAllPurpose)
+
+                    || typeToConvert == typeof(global::Vapi.FileControllerFindAllPurpose?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -156,6 +162,16 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.FileStatus?))
                 {
                     return new global::Vapi.JsonConverters.FileStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.FileControllerFindAllPurpose))
+                {
+                    return new global::Vapi.JsonConverters.FileControllerFindAllPurposeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.FileControllerFindAllPurpose?))
+                {
+                    return new global::Vapi.JsonConverters.FileControllerFindAllPurposeNullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }
