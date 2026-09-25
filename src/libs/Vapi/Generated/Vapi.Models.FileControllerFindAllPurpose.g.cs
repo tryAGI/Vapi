@@ -4,53 +4,52 @@
 namespace Vapi
 {
     /// <summary>
-    /// This is the model that will be used. Defaults to 'aura' when not specified.<br/>
-    /// Example: aura-2
+    ///
     /// </summary>
-    public enum DeepgramVoiceModel
+    public enum FileControllerFindAllPurpose
     {
         /// <summary>
         ///
         /// </summary>
-        Aura,
+        Assistant,
         /// <summary>
         ///
         /// </summary>
-        Aura2,
+        ComposerAttachment,
         /// <summary>
         ///
         /// </summary>
-        Flux,
+        KnowledgeBaseV2,
     }
 
     /// <summary>
     /// Enum extensions to do fast conversions without the reflection.
     /// </summary>
-    public static class DeepgramVoiceModelExtensions
+    public static class FileControllerFindAllPurposeExtensions
     {
         /// <summary>
         /// Converts an enum to a string.
         /// </summary>
-        public static string ToValueString(this DeepgramVoiceModel value)
+        public static string ToValueString(this FileControllerFindAllPurpose value)
         {
             return value switch
             {
-                DeepgramVoiceModel.Aura => "aura",
-                DeepgramVoiceModel.Aura2 => "aura-2",
-                DeepgramVoiceModel.Flux => "flux",
+                FileControllerFindAllPurpose.Assistant => "assistant",
+                FileControllerFindAllPurpose.ComposerAttachment => "composer-attachment",
+                FileControllerFindAllPurpose.KnowledgeBaseV2 => "knowledge-base-v2",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
         /// <summary>
         /// Converts an string to a enum.
         /// </summary>
-        public static DeepgramVoiceModel? ToEnum(string value)
+        public static FileControllerFindAllPurpose? ToEnum(string value)
         {
             return value switch
             {
-                "aura" => DeepgramVoiceModel.Aura,
-                "aura-2" => DeepgramVoiceModel.Aura2,
-                "flux" => DeepgramVoiceModel.Flux,
+                "assistant" => FileControllerFindAllPurpose.Assistant,
+                "composer-attachment" => FileControllerFindAllPurpose.ComposerAttachment,
+                "knowledge-base-v2" => FileControllerFindAllPurpose.KnowledgeBaseV2,
                 _ => null,
             };
         }

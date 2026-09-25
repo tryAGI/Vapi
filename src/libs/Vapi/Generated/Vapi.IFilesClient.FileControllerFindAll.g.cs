@@ -12,7 +12,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Vapi.File>> FileControllerFindAllAsync(
-            string purpose,
+            global::Vapi.FileControllerFindAllPurpose? purpose = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -23,7 +23,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.File>>> FileControllerFindAllAsResponseAsync(
-            string purpose,
+            global::Vapi.FileControllerFindAllPurpose? purpose = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
