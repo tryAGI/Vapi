@@ -2371,6 +2371,14 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        SipOutboundCarrierReleasedCall,
+        /// <summary>
+        ///
+        /// </summary>
+        SipOutboundUnallocatedNumber,
+        /// <summary>
+        ///
+        /// </summary>
         TwilioFailedToConnectCall,
         /// <summary>
         ///
@@ -3004,6 +3012,8 @@ namespace Vapi
                 CallEndedReason.PipelineErrorXaiVoiceFailed => "pipeline-error-xai-voice-failed",
                 CallEndedReason.ScheduledCallDeleted => "scheduled-call-deleted",
                 CallEndedReason.SilenceTimedOut => "silence-timed-out",
+                CallEndedReason.SipOutboundCarrierReleasedCall => "sip-outbound-carrier-released-call",
+                CallEndedReason.SipOutboundUnallocatedNumber => "sip-outbound-unallocated-number",
                 CallEndedReason.TwilioFailedToConnectCall => "twilio-failed-to-connect-call",
                 CallEndedReason.TwilioReportedCustomerMisdialed => "twilio-reported-customer-misdialed",
                 CallEndedReason.Voicemail => "voicemail",
@@ -3612,6 +3622,8 @@ namespace Vapi
                 "pipeline-error-xai-voice-failed" => CallEndedReason.PipelineErrorXaiVoiceFailed,
                 "scheduled-call-deleted" => CallEndedReason.ScheduledCallDeleted,
                 "silence-timed-out" => CallEndedReason.SilenceTimedOut,
+                "sip-outbound-carrier-released-call" => CallEndedReason.SipOutboundCarrierReleasedCall,
+                "sip-outbound-unallocated-number" => CallEndedReason.SipOutboundUnallocatedNumber,
                 "twilio-failed-to-connect-call" => CallEndedReason.TwilioFailedToConnectCall,
                 "twilio-reported-customer-misdialed" => CallEndedReason.TwilioReportedCustomerMisdialed,
                 "voicemail" => CallEndedReason.Voicemail,
