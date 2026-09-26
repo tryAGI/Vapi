@@ -2371,6 +2371,14 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        SipOutboundCarrierReleasedCall,
+        /// <summary>
+        ///
+        /// </summary>
+        SipOutboundUnallocatedNumber,
+        /// <summary>
+        ///
+        /// </summary>
         TwilioFailedToConnectCall,
         /// <summary>
         ///
@@ -3004,6 +3012,8 @@ namespace Vapi
                 ServerMessageStatusUpdateEndedReason.PipelineErrorXaiVoiceFailed => "pipeline-error-xai-voice-failed",
                 ServerMessageStatusUpdateEndedReason.ScheduledCallDeleted => "scheduled-call-deleted",
                 ServerMessageStatusUpdateEndedReason.SilenceTimedOut => "silence-timed-out",
+                ServerMessageStatusUpdateEndedReason.SipOutboundCarrierReleasedCall => "sip-outbound-carrier-released-call",
+                ServerMessageStatusUpdateEndedReason.SipOutboundUnallocatedNumber => "sip-outbound-unallocated-number",
                 ServerMessageStatusUpdateEndedReason.TwilioFailedToConnectCall => "twilio-failed-to-connect-call",
                 ServerMessageStatusUpdateEndedReason.TwilioReportedCustomerMisdialed => "twilio-reported-customer-misdialed",
                 ServerMessageStatusUpdateEndedReason.Voicemail => "voicemail",
@@ -3612,6 +3622,8 @@ namespace Vapi
                 "pipeline-error-xai-voice-failed" => ServerMessageStatusUpdateEndedReason.PipelineErrorXaiVoiceFailed,
                 "scheduled-call-deleted" => ServerMessageStatusUpdateEndedReason.ScheduledCallDeleted,
                 "silence-timed-out" => ServerMessageStatusUpdateEndedReason.SilenceTimedOut,
+                "sip-outbound-carrier-released-call" => ServerMessageStatusUpdateEndedReason.SipOutboundCarrierReleasedCall,
+                "sip-outbound-unallocated-number" => ServerMessageStatusUpdateEndedReason.SipOutboundUnallocatedNumber,
                 "twilio-failed-to-connect-call" => ServerMessageStatusUpdateEndedReason.TwilioFailedToConnectCall,
                 "twilio-reported-customer-misdialed" => ServerMessageStatusUpdateEndedReason.TwilioReportedCustomerMisdialed,
                 "voicemail" => ServerMessageStatusUpdateEndedReason.Voicemail,
