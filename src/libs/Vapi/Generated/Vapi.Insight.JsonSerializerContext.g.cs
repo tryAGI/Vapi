@@ -1,19 +1,14 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-#pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
-
 namespace Vapi
 {
     /// <summary>
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.JSONQueryOnCallTableWithStringTypeColumn, global::Vapi.JSONQueryOnCallTableWithNumberTypeColumn, global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumn, global::Vapi.JSONQueryOnEventsTable>>), TypeInfoPropertyName = "JSONQueryOnEventsTable_2fe08885d7d10f9c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.JSONQueryOnCallTableWithStringTypeColumn, global::Vapi.JSONQueryOnCallTableWithNumberTypeColumn, global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumn, global::Vapi.JSONQueryOnEventsTable>), TypeInfoPropertyName = "JSONQueryOnEventsTable_453699d266424d39")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.JSONQueryOnCallTableWithStringTypeColumn, global::Vapi.JSONQueryOnCallTableWithNumberTypeColumn, global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumn>>), TypeInfoPropertyName = "JSONQueryOnCallTableWithStructuredOutputColumn_e946a20b4e1d81a6")]
