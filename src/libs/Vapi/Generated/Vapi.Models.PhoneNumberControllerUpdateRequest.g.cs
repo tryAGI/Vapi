@@ -47,8 +47,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.UpdateByoPhoneNumberDTO PickByoPhoneNumber() => IsByoPhoneNumber
-            ? ByoPhoneNumber!
+        public global::Vapi.UpdateByoPhoneNumberDTO PickByoPhoneNumber() => ByoPhoneNumber is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ByoPhoneNumber' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.UpdateTwilioPhoneNumberDTO PickTwilio() => IsTwilio
-            ? Twilio!
+        public global::Vapi.UpdateTwilioPhoneNumberDTO PickTwilio() => Twilio is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Twilio' but the value was {ToString()}.");
 
         /// <summary>
@@ -121,8 +121,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.UpdateVonagePhoneNumberDTO PickVonage() => IsVonage
-            ? Vonage!
+        public global::Vapi.UpdateVonagePhoneNumberDTO PickVonage() => Vonage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Vonage' but the value was {ToString()}.");
 
         /// <summary>
@@ -158,8 +158,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.UpdateVapiPhoneNumberDTO PickVapi() => IsVapi
-            ? Vapi!
+        public global::Vapi.UpdateVapiPhoneNumberDTO PickVapi() => Vapi is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Vapi' but the value was {ToString()}.");
 
         /// <summary>
@@ -195,8 +195,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.UpdateTelnyxPhoneNumberDTO PickTelnyx() => IsTelnyx
-            ? Telnyx!
+        public global::Vapi.UpdateTelnyxPhoneNumberDTO PickTelnyx() => Telnyx is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Telnyx' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -380,25 +380,25 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsByoPhoneNumber && byoPhoneNumber != null)
+            if (ByoPhoneNumber is { } __value0 && byoPhoneNumber != null)
             {
-                return byoPhoneNumber(ByoPhoneNumber!);
+                return byoPhoneNumber(__value0);
             }
-            else if (IsTwilio && twilio != null)
+            else if (Twilio is { } __value1 && twilio != null)
             {
-                return twilio(Twilio!);
+                return twilio(__value1);
             }
-            else if (IsVonage && vonage != null)
+            else if (Vonage is { } __value2 && vonage != null)
             {
-                return vonage(Vonage!);
+                return vonage(__value2);
             }
-            else if (IsVapi && vapi != null)
+            else if (Vapi is { } __value3 && vapi != null)
             {
-                return vapi(Vapi!);
+                return vapi(__value3);
             }
-            else if (IsTelnyx && telnyx != null)
+            else if (Telnyx is { } __value4 && telnyx != null)
             {
-                return telnyx(Telnyx!);
+                return telnyx(__value4);
             }
 
             return default(TResult);
@@ -424,25 +424,25 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsByoPhoneNumber)
+            if (ByoPhoneNumber is { } __value0)
             {
-                byoPhoneNumber?.Invoke(ByoPhoneNumber!);
+                byoPhoneNumber?.Invoke(__value0);
             }
-            else if (IsTwilio)
+            else if (Twilio is { } __value1)
             {
-                twilio?.Invoke(Twilio!);
+                twilio?.Invoke(__value1);
             }
-            else if (IsVonage)
+            else if (Vonage is { } __value2)
             {
-                vonage?.Invoke(Vonage!);
+                vonage?.Invoke(__value2);
             }
-            else if (IsVapi)
+            else if (Vapi is { } __value3)
             {
-                vapi?.Invoke(Vapi!);
+                vapi?.Invoke(__value3);
             }
-            else if (IsTelnyx)
+            else if (Telnyx is { } __value4)
             {
-                telnyx?.Invoke(Telnyx!);
+                telnyx?.Invoke(__value4);
             }
         }
 
@@ -462,25 +462,25 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsByoPhoneNumber)
+            if (ByoPhoneNumber is { } __value0)
             {
-                byoPhoneNumber?.Invoke(ByoPhoneNumber!);
+                byoPhoneNumber?.Invoke(__value0);
             }
-            else if (IsTwilio)
+            else if (Twilio is { } __value1)
             {
-                twilio?.Invoke(Twilio!);
+                twilio?.Invoke(__value1);
             }
-            else if (IsVonage)
+            else if (Vonage is { } __value2)
             {
-                vonage?.Invoke(Vonage!);
+                vonage?.Invoke(__value2);
             }
-            else if (IsVapi)
+            else if (Vapi is { } __value3)
             {
-                vapi?.Invoke(Vapi!);
+                vapi?.Invoke(__value3);
             }
-            else if (IsTelnyx)
+            else if (Telnyx is { } __value4)
             {
-                telnyx?.Invoke(Telnyx!);
+                telnyx?.Invoke(__value4);
             }
         }
 

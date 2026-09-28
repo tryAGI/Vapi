@@ -47,8 +47,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.ApiRequestTool PickApiRequest() => IsApiRequest
-            ? ApiRequest!
+        public global::Vapi.ApiRequestTool PickApiRequest() => ApiRequest is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ApiRequest' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.CodeTool PickCode() => IsCode
-            ? Code!
+        public global::Vapi.CodeTool PickCode() => Code is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Code' but the value was {ToString()}.");
 
         /// <summary>
@@ -121,8 +121,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.DtmfTool PickDtmf() => IsDtmf
-            ? Dtmf!
+        public global::Vapi.DtmfTool PickDtmf() => Dtmf is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Dtmf' but the value was {ToString()}.");
 
         /// <summary>
@@ -158,8 +158,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.EndCallTool PickEndCall() => IsEndCall
-            ? EndCall!
+        public global::Vapi.EndCallTool PickEndCall() => EndCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'EndCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -195,8 +195,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.FunctionTool PickFunction() => IsFunction
-            ? Function!
+        public global::Vapi.FunctionTool PickFunction() => Function is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Function' but the value was {ToString()}.");
 
         /// <summary>
@@ -232,8 +232,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.KnowledgeBaseTool PickKnowledgeBase() => IsKnowledgeBase
-            ? KnowledgeBase!
+        public global::Vapi.KnowledgeBaseTool PickKnowledgeBase() => KnowledgeBase is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'KnowledgeBase' but the value was {ToString()}.");
 
         /// <summary>
@@ -269,8 +269,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.GhlTool PickGhl() => IsGhl
-            ? Ghl!
+        public global::Vapi.GhlTool PickGhl() => Ghl is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Ghl' but the value was {ToString()}.");
 
         /// <summary>
@@ -306,8 +306,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.TransferCallTool PickTransferCall() => IsTransferCall
-            ? TransferCall!
+        public global::Vapi.TransferCallTool PickTransferCall() => TransferCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TransferCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -343,8 +343,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.HandoffTool PickHandoff() => IsHandoff
-            ? Handoff!
+        public global::Vapi.HandoffTool PickHandoff() => Handoff is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Handoff' but the value was {ToString()}.");
 
         /// <summary>
@@ -380,8 +380,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.BashTool PickBash() => IsBash
-            ? Bash!
+        public global::Vapi.BashTool PickBash() => Bash is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Bash' but the value was {ToString()}.");
 
         /// <summary>
@@ -417,8 +417,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.ComputerTool PickComputer() => IsComputer
-            ? Computer!
+        public global::Vapi.ComputerTool PickComputer() => Computer is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Computer' but the value was {ToString()}.");
 
         /// <summary>
@@ -454,8 +454,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.TextEditorTool PickTextEditor() => IsTextEditor
-            ? TextEditor!
+        public global::Vapi.TextEditorTool PickTextEditor() => TextEditor is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TextEditor' but the value was {ToString()}.");
 
         /// <summary>
@@ -491,8 +491,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.QueryTool PickQuery() => IsQuery
-            ? Query!
+        public global::Vapi.QueryTool PickQuery() => Query is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Query' but the value was {ToString()}.");
 
         /// <summary>
@@ -528,8 +528,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.GoogleCalendarCreateEventTool PickGoogleCalendarEventCreate() => IsGoogleCalendarEventCreate
-            ? GoogleCalendarEventCreate!
+        public global::Vapi.GoogleCalendarCreateEventTool PickGoogleCalendarEventCreate() => GoogleCalendarEventCreate is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleCalendarEventCreate' but the value was {ToString()}.");
 
         /// <summary>
@@ -565,8 +565,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.GoogleSheetsRowAppendTool PickGoogleSheetsRowAppend() => IsGoogleSheetsRowAppend
-            ? GoogleSheetsRowAppend!
+        public global::Vapi.GoogleSheetsRowAppendTool PickGoogleSheetsRowAppend() => GoogleSheetsRowAppend is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleSheetsRowAppend' but the value was {ToString()}.");
 
         /// <summary>
@@ -602,8 +602,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.GoogleCalendarCheckAvailabilityTool PickGoogleCalendarAvailabilityCheck() => IsGoogleCalendarAvailabilityCheck
-            ? GoogleCalendarAvailabilityCheck!
+        public global::Vapi.GoogleCalendarCheckAvailabilityTool PickGoogleCalendarAvailabilityCheck() => GoogleCalendarAvailabilityCheck is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GoogleCalendarAvailabilityCheck' but the value was {ToString()}.");
 
         /// <summary>
@@ -639,8 +639,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.SlackSendMessageTool PickSlackMessageSend() => IsSlackMessageSend
-            ? SlackMessageSend!
+        public global::Vapi.SlackSendMessageTool PickSlackMessageSend() => SlackMessageSend is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'SlackMessageSend' but the value was {ToString()}.");
 
         /// <summary>
@@ -676,8 +676,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.SmsTool PickSms() => IsSms
-            ? Sms!
+        public global::Vapi.SmsTool PickSms() => Sms is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Sms' but the value was {ToString()}.");
 
         /// <summary>
@@ -713,8 +713,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.McpTool PickMcp() => IsMcp
-            ? Mcp!
+        public global::Vapi.McpTool PickMcp() => Mcp is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Mcp' but the value was {ToString()}.");
 
         /// <summary>
@@ -750,8 +750,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarAvailabilityTool PickGohighlevelCalendarAvailabilityCheck() => IsGohighlevelCalendarAvailabilityCheck
-            ? GohighlevelCalendarAvailabilityCheck!
+        public global::Vapi.GoHighLevelCalendarAvailabilityTool PickGohighlevelCalendarAvailabilityCheck() => GohighlevelCalendarAvailabilityCheck is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelCalendarAvailabilityCheck' but the value was {ToString()}.");
 
         /// <summary>
@@ -787,8 +787,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.GoHighLevelCalendarEventCreateTool PickGohighlevelCalendarEventCreate() => IsGohighlevelCalendarEventCreate
-            ? GohighlevelCalendarEventCreate!
+        public global::Vapi.GoHighLevelCalendarEventCreateTool PickGohighlevelCalendarEventCreate() => GohighlevelCalendarEventCreate is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelCalendarEventCreate' but the value was {ToString()}.");
 
         /// <summary>
@@ -824,8 +824,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.GoHighLevelContactCreateTool PickGohighlevelContactCreate() => IsGohighlevelContactCreate
-            ? GohighlevelContactCreate!
+        public global::Vapi.GoHighLevelContactCreateTool PickGohighlevelContactCreate() => GohighlevelContactCreate is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelContactCreate' but the value was {ToString()}.");
 
         /// <summary>
@@ -861,8 +861,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.GoHighLevelContactGetTool PickGohighlevelContactGet() => IsGohighlevelContactGet
-            ? GohighlevelContactGet!
+        public global::Vapi.GoHighLevelContactGetTool PickGohighlevelContactGet() => GohighlevelContactGet is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GohighlevelContactGet' but the value was {ToString()}.");
 
         /// <summary>
@@ -898,8 +898,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.SipRequestTool PickSipRequest() => IsSipRequest
-            ? SipRequest!
+        public global::Vapi.SipRequestTool PickSipRequest() => SipRequest is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'SipRequest' but the value was {ToString()}.");
 
         /// <summary>
@@ -935,8 +935,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.VoicemailTool PickVoicemail() => IsVoicemail
-            ? Voicemail!
+        public global::Vapi.VoicemailTool PickVoicemail() => Voicemail is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Voicemail' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -1680,105 +1680,105 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsApiRequest && apiRequest != null)
+            if (ApiRequest is { } __value0 && apiRequest != null)
             {
-                return apiRequest(ApiRequest!);
+                return apiRequest(__value0);
             }
-            else if (IsCode && code != null)
+            else if (Code is { } __value1 && code != null)
             {
-                return code(Code!);
+                return code(__value1);
             }
-            else if (IsDtmf && dtmf != null)
+            else if (Dtmf is { } __value2 && dtmf != null)
             {
-                return dtmf(Dtmf!);
+                return dtmf(__value2);
             }
-            else if (IsEndCall && endCall != null)
+            else if (EndCall is { } __value3 && endCall != null)
             {
-                return endCall(EndCall!);
+                return endCall(__value3);
             }
-            else if (IsFunction && function != null)
+            else if (Function is { } __value4 && function != null)
             {
-                return function(Function!);
+                return function(__value4);
             }
-            else if (IsKnowledgeBase && knowledgeBase != null)
+            else if (KnowledgeBase is { } __value5 && knowledgeBase != null)
             {
-                return knowledgeBase(KnowledgeBase!);
+                return knowledgeBase(__value5);
             }
-            else if (IsGhl && ghl != null)
+            else if (Ghl is { } __value6 && ghl != null)
             {
-                return ghl(Ghl!);
+                return ghl(__value6);
             }
-            else if (IsTransferCall && transferCall != null)
+            else if (TransferCall is { } __value7 && transferCall != null)
             {
-                return transferCall(TransferCall!);
+                return transferCall(__value7);
             }
-            else if (IsHandoff && handoff != null)
+            else if (Handoff is { } __value8 && handoff != null)
             {
-                return handoff(Handoff!);
+                return handoff(__value8);
             }
-            else if (IsBash && bash != null)
+            else if (Bash is { } __value9 && bash != null)
             {
-                return bash(Bash!);
+                return bash(__value9);
             }
-            else if (IsComputer && computer != null)
+            else if (Computer is { } __value10 && computer != null)
             {
-                return computer(Computer!);
+                return computer(__value10);
             }
-            else if (IsTextEditor && textEditor != null)
+            else if (TextEditor is { } __value11 && textEditor != null)
             {
-                return textEditor(TextEditor!);
+                return textEditor(__value11);
             }
-            else if (IsQuery && query != null)
+            else if (Query is { } __value12 && query != null)
             {
-                return query(Query!);
+                return query(__value12);
             }
-            else if (IsGoogleCalendarEventCreate && googleCalendarEventCreate != null)
+            else if (GoogleCalendarEventCreate is { } __value13 && googleCalendarEventCreate != null)
             {
-                return googleCalendarEventCreate(GoogleCalendarEventCreate!);
+                return googleCalendarEventCreate(__value13);
             }
-            else if (IsGoogleSheetsRowAppend && googleSheetsRowAppend != null)
+            else if (GoogleSheetsRowAppend is { } __value14 && googleSheetsRowAppend != null)
             {
-                return googleSheetsRowAppend(GoogleSheetsRowAppend!);
+                return googleSheetsRowAppend(__value14);
             }
-            else if (IsGoogleCalendarAvailabilityCheck && googleCalendarAvailabilityCheck != null)
+            else if (GoogleCalendarAvailabilityCheck is { } __value15 && googleCalendarAvailabilityCheck != null)
             {
-                return googleCalendarAvailabilityCheck(GoogleCalendarAvailabilityCheck!);
+                return googleCalendarAvailabilityCheck(__value15);
             }
-            else if (IsSlackMessageSend && slackMessageSend != null)
+            else if (SlackMessageSend is { } __value16 && slackMessageSend != null)
             {
-                return slackMessageSend(SlackMessageSend!);
+                return slackMessageSend(__value16);
             }
-            else if (IsSms && sms != null)
+            else if (Sms is { } __value17 && sms != null)
             {
-                return sms(Sms!);
+                return sms(__value17);
             }
-            else if (IsMcp && mcp != null)
+            else if (Mcp is { } __value18 && mcp != null)
             {
-                return mcp(Mcp!);
+                return mcp(__value18);
             }
-            else if (IsGohighlevelCalendarAvailabilityCheck && gohighlevelCalendarAvailabilityCheck != null)
+            else if (GohighlevelCalendarAvailabilityCheck is { } __value19 && gohighlevelCalendarAvailabilityCheck != null)
             {
-                return gohighlevelCalendarAvailabilityCheck(GohighlevelCalendarAvailabilityCheck!);
+                return gohighlevelCalendarAvailabilityCheck(__value19);
             }
-            else if (IsGohighlevelCalendarEventCreate && gohighlevelCalendarEventCreate != null)
+            else if (GohighlevelCalendarEventCreate is { } __value20 && gohighlevelCalendarEventCreate != null)
             {
-                return gohighlevelCalendarEventCreate(GohighlevelCalendarEventCreate!);
+                return gohighlevelCalendarEventCreate(__value20);
             }
-            else if (IsGohighlevelContactCreate && gohighlevelContactCreate != null)
+            else if (GohighlevelContactCreate is { } __value21 && gohighlevelContactCreate != null)
             {
-                return gohighlevelContactCreate(GohighlevelContactCreate!);
+                return gohighlevelContactCreate(__value21);
             }
-            else if (IsGohighlevelContactGet && gohighlevelContactGet != null)
+            else if (GohighlevelContactGet is { } __value22 && gohighlevelContactGet != null)
             {
-                return gohighlevelContactGet(GohighlevelContactGet!);
+                return gohighlevelContactGet(__value22);
             }
-            else if (IsSipRequest && sipRequest != null)
+            else if (SipRequest is { } __value23 && sipRequest != null)
             {
-                return sipRequest(SipRequest!);
+                return sipRequest(__value23);
             }
-            else if (IsVoicemail && voicemail != null)
+            else if (Voicemail is { } __value24 && voicemail != null)
             {
-                return voicemail(Voicemail!);
+                return voicemail(__value24);
             }
 
             return default(TResult);
@@ -1844,105 +1844,105 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsApiRequest)
+            if (ApiRequest is { } __value0)
             {
-                apiRequest?.Invoke(ApiRequest!);
+                apiRequest?.Invoke(__value0);
             }
-            else if (IsCode)
+            else if (Code is { } __value1)
             {
-                code?.Invoke(Code!);
+                code?.Invoke(__value1);
             }
-            else if (IsDtmf)
+            else if (Dtmf is { } __value2)
             {
-                dtmf?.Invoke(Dtmf!);
+                dtmf?.Invoke(__value2);
             }
-            else if (IsEndCall)
+            else if (EndCall is { } __value3)
             {
-                endCall?.Invoke(EndCall!);
+                endCall?.Invoke(__value3);
             }
-            else if (IsFunction)
+            else if (Function is { } __value4)
             {
-                function?.Invoke(Function!);
+                function?.Invoke(__value4);
             }
-            else if (IsKnowledgeBase)
+            else if (KnowledgeBase is { } __value5)
             {
-                knowledgeBase?.Invoke(KnowledgeBase!);
+                knowledgeBase?.Invoke(__value5);
             }
-            else if (IsGhl)
+            else if (Ghl is { } __value6)
             {
-                ghl?.Invoke(Ghl!);
+                ghl?.Invoke(__value6);
             }
-            else if (IsTransferCall)
+            else if (TransferCall is { } __value7)
             {
-                transferCall?.Invoke(TransferCall!);
+                transferCall?.Invoke(__value7);
             }
-            else if (IsHandoff)
+            else if (Handoff is { } __value8)
             {
-                handoff?.Invoke(Handoff!);
+                handoff?.Invoke(__value8);
             }
-            else if (IsBash)
+            else if (Bash is { } __value9)
             {
-                bash?.Invoke(Bash!);
+                bash?.Invoke(__value9);
             }
-            else if (IsComputer)
+            else if (Computer is { } __value10)
             {
-                computer?.Invoke(Computer!);
+                computer?.Invoke(__value10);
             }
-            else if (IsTextEditor)
+            else if (TextEditor is { } __value11)
             {
-                textEditor?.Invoke(TextEditor!);
+                textEditor?.Invoke(__value11);
             }
-            else if (IsQuery)
+            else if (Query is { } __value12)
             {
-                query?.Invoke(Query!);
+                query?.Invoke(__value12);
             }
-            else if (IsGoogleCalendarEventCreate)
+            else if (GoogleCalendarEventCreate is { } __value13)
             {
-                googleCalendarEventCreate?.Invoke(GoogleCalendarEventCreate!);
+                googleCalendarEventCreate?.Invoke(__value13);
             }
-            else if (IsGoogleSheetsRowAppend)
+            else if (GoogleSheetsRowAppend is { } __value14)
             {
-                googleSheetsRowAppend?.Invoke(GoogleSheetsRowAppend!);
+                googleSheetsRowAppend?.Invoke(__value14);
             }
-            else if (IsGoogleCalendarAvailabilityCheck)
+            else if (GoogleCalendarAvailabilityCheck is { } __value15)
             {
-                googleCalendarAvailabilityCheck?.Invoke(GoogleCalendarAvailabilityCheck!);
+                googleCalendarAvailabilityCheck?.Invoke(__value15);
             }
-            else if (IsSlackMessageSend)
+            else if (SlackMessageSend is { } __value16)
             {
-                slackMessageSend?.Invoke(SlackMessageSend!);
+                slackMessageSend?.Invoke(__value16);
             }
-            else if (IsSms)
+            else if (Sms is { } __value17)
             {
-                sms?.Invoke(Sms!);
+                sms?.Invoke(__value17);
             }
-            else if (IsMcp)
+            else if (Mcp is { } __value18)
             {
-                mcp?.Invoke(Mcp!);
+                mcp?.Invoke(__value18);
             }
-            else if (IsGohighlevelCalendarAvailabilityCheck)
+            else if (GohighlevelCalendarAvailabilityCheck is { } __value19)
             {
-                gohighlevelCalendarAvailabilityCheck?.Invoke(GohighlevelCalendarAvailabilityCheck!);
+                gohighlevelCalendarAvailabilityCheck?.Invoke(__value19);
             }
-            else if (IsGohighlevelCalendarEventCreate)
+            else if (GohighlevelCalendarEventCreate is { } __value20)
             {
-                gohighlevelCalendarEventCreate?.Invoke(GohighlevelCalendarEventCreate!);
+                gohighlevelCalendarEventCreate?.Invoke(__value20);
             }
-            else if (IsGohighlevelContactCreate)
+            else if (GohighlevelContactCreate is { } __value21)
             {
-                gohighlevelContactCreate?.Invoke(GohighlevelContactCreate!);
+                gohighlevelContactCreate?.Invoke(__value21);
             }
-            else if (IsGohighlevelContactGet)
+            else if (GohighlevelContactGet is { } __value22)
             {
-                gohighlevelContactGet?.Invoke(GohighlevelContactGet!);
+                gohighlevelContactGet?.Invoke(__value22);
             }
-            else if (IsSipRequest)
+            else if (SipRequest is { } __value23)
             {
-                sipRequest?.Invoke(SipRequest!);
+                sipRequest?.Invoke(__value23);
             }
-            else if (IsVoicemail)
+            else if (Voicemail is { } __value24)
             {
-                voicemail?.Invoke(Voicemail!);
+                voicemail?.Invoke(__value24);
             }
         }
 
@@ -1982,105 +1982,105 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsApiRequest)
+            if (ApiRequest is { } __value0)
             {
-                apiRequest?.Invoke(ApiRequest!);
+                apiRequest?.Invoke(__value0);
             }
-            else if (IsCode)
+            else if (Code is { } __value1)
             {
-                code?.Invoke(Code!);
+                code?.Invoke(__value1);
             }
-            else if (IsDtmf)
+            else if (Dtmf is { } __value2)
             {
-                dtmf?.Invoke(Dtmf!);
+                dtmf?.Invoke(__value2);
             }
-            else if (IsEndCall)
+            else if (EndCall is { } __value3)
             {
-                endCall?.Invoke(EndCall!);
+                endCall?.Invoke(__value3);
             }
-            else if (IsFunction)
+            else if (Function is { } __value4)
             {
-                function?.Invoke(Function!);
+                function?.Invoke(__value4);
             }
-            else if (IsKnowledgeBase)
+            else if (KnowledgeBase is { } __value5)
             {
-                knowledgeBase?.Invoke(KnowledgeBase!);
+                knowledgeBase?.Invoke(__value5);
             }
-            else if (IsGhl)
+            else if (Ghl is { } __value6)
             {
-                ghl?.Invoke(Ghl!);
+                ghl?.Invoke(__value6);
             }
-            else if (IsTransferCall)
+            else if (TransferCall is { } __value7)
             {
-                transferCall?.Invoke(TransferCall!);
+                transferCall?.Invoke(__value7);
             }
-            else if (IsHandoff)
+            else if (Handoff is { } __value8)
             {
-                handoff?.Invoke(Handoff!);
+                handoff?.Invoke(__value8);
             }
-            else if (IsBash)
+            else if (Bash is { } __value9)
             {
-                bash?.Invoke(Bash!);
+                bash?.Invoke(__value9);
             }
-            else if (IsComputer)
+            else if (Computer is { } __value10)
             {
-                computer?.Invoke(Computer!);
+                computer?.Invoke(__value10);
             }
-            else if (IsTextEditor)
+            else if (TextEditor is { } __value11)
             {
-                textEditor?.Invoke(TextEditor!);
+                textEditor?.Invoke(__value11);
             }
-            else if (IsQuery)
+            else if (Query is { } __value12)
             {
-                query?.Invoke(Query!);
+                query?.Invoke(__value12);
             }
-            else if (IsGoogleCalendarEventCreate)
+            else if (GoogleCalendarEventCreate is { } __value13)
             {
-                googleCalendarEventCreate?.Invoke(GoogleCalendarEventCreate!);
+                googleCalendarEventCreate?.Invoke(__value13);
             }
-            else if (IsGoogleSheetsRowAppend)
+            else if (GoogleSheetsRowAppend is { } __value14)
             {
-                googleSheetsRowAppend?.Invoke(GoogleSheetsRowAppend!);
+                googleSheetsRowAppend?.Invoke(__value14);
             }
-            else if (IsGoogleCalendarAvailabilityCheck)
+            else if (GoogleCalendarAvailabilityCheck is { } __value15)
             {
-                googleCalendarAvailabilityCheck?.Invoke(GoogleCalendarAvailabilityCheck!);
+                googleCalendarAvailabilityCheck?.Invoke(__value15);
             }
-            else if (IsSlackMessageSend)
+            else if (SlackMessageSend is { } __value16)
             {
-                slackMessageSend?.Invoke(SlackMessageSend!);
+                slackMessageSend?.Invoke(__value16);
             }
-            else if (IsSms)
+            else if (Sms is { } __value17)
             {
-                sms?.Invoke(Sms!);
+                sms?.Invoke(__value17);
             }
-            else if (IsMcp)
+            else if (Mcp is { } __value18)
             {
-                mcp?.Invoke(Mcp!);
+                mcp?.Invoke(__value18);
             }
-            else if (IsGohighlevelCalendarAvailabilityCheck)
+            else if (GohighlevelCalendarAvailabilityCheck is { } __value19)
             {
-                gohighlevelCalendarAvailabilityCheck?.Invoke(GohighlevelCalendarAvailabilityCheck!);
+                gohighlevelCalendarAvailabilityCheck?.Invoke(__value19);
             }
-            else if (IsGohighlevelCalendarEventCreate)
+            else if (GohighlevelCalendarEventCreate is { } __value20)
             {
-                gohighlevelCalendarEventCreate?.Invoke(GohighlevelCalendarEventCreate!);
+                gohighlevelCalendarEventCreate?.Invoke(__value20);
             }
-            else if (IsGohighlevelContactCreate)
+            else if (GohighlevelContactCreate is { } __value21)
             {
-                gohighlevelContactCreate?.Invoke(GohighlevelContactCreate!);
+                gohighlevelContactCreate?.Invoke(__value21);
             }
-            else if (IsGohighlevelContactGet)
+            else if (GohighlevelContactGet is { } __value22)
             {
-                gohighlevelContactGet?.Invoke(GohighlevelContactGet!);
+                gohighlevelContactGet?.Invoke(__value22);
             }
-            else if (IsSipRequest)
+            else if (SipRequest is { } __value23)
             {
-                sipRequest?.Invoke(SipRequest!);
+                sipRequest?.Invoke(__value23);
             }
-            else if (IsVoicemail)
+            else if (Voicemail is { } __value24)
             {
-                voicemail?.Invoke(Voicemail!);
+                voicemail?.Invoke(__value24);
             }
         }
 

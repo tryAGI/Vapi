@@ -47,8 +47,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.ToolPinnedConflictResponseDTO PickToolPinned() => IsToolPinned
-            ? ToolPinned!
+        public global::Vapi.ToolPinnedConflictResponseDTO PickToolPinned() => ToolPinned is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolPinned' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.ToolWriteConflictResponseDTO PickToolWriteConflict() => IsToolWriteConflict
-            ? ToolWriteConflict!
+        public global::Vapi.ToolWriteConflictResponseDTO PickToolWriteConflict() => ToolWriteConflict is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolWriteConflict' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -185,13 +185,13 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsToolPinned && toolPinned != null)
+            if (ToolPinned is { } __value0 && toolPinned != null)
             {
-                return toolPinned(ToolPinned!);
+                return toolPinned(__value0);
             }
-            else if (IsToolWriteConflict && toolWriteConflict != null)
+            else if (ToolWriteConflict is { } __value1 && toolWriteConflict != null)
             {
-                return toolWriteConflict(ToolWriteConflict!);
+                return toolWriteConflict(__value1);
             }
 
             return default(TResult);
@@ -211,13 +211,13 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsToolPinned)
+            if (ToolPinned is { } __value0)
             {
-                toolPinned?.Invoke(ToolPinned!);
+                toolPinned?.Invoke(__value0);
             }
-            else if (IsToolWriteConflict)
+            else if (ToolWriteConflict is { } __value1)
             {
-                toolWriteConflict?.Invoke(ToolWriteConflict!);
+                toolWriteConflict?.Invoke(__value1);
             }
         }
 
@@ -234,13 +234,13 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsToolPinned)
+            if (ToolPinned is { } __value0)
             {
-                toolPinned?.Invoke(ToolPinned!);
+                toolPinned?.Invoke(__value0);
             }
-            else if (IsToolWriteConflict)
+            else if (ToolWriteConflict is { } __value1)
             {
-                toolWriteConflict?.Invoke(ToolWriteConflict!);
+                toolWriteConflict?.Invoke(__value1);
             }
         }
 
