@@ -59,13 +59,13 @@ namespace Vapi.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.ToolPinnedConflictResponseDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.ToolPinnedConflictResponseDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.ToolPinnedConflictResponseDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolPinned!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickToolPinned(), typeInfo);
             }
             else if (value.IsToolWriteConflict)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.ToolWriteConflictResponseDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.ToolWriteConflictResponseDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.ToolWriteConflictResponseDTO).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolWriteConflict!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickToolWriteConflict(), typeInfo);
             }
         }
     }

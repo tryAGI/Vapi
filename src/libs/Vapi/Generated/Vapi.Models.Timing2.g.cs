@@ -59,8 +59,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.AssistantSpeechWordAlignmentTiming PickWordAlignment() => IsWordAlignment
-            ? WordAlignment!
+        public global::Vapi.AssistantSpeechWordAlignmentTiming PickWordAlignment() => WordAlignment is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'WordAlignment' but the value was {ToString()}.");
 
         /// <summary>
@@ -96,8 +96,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.AssistantSpeechWordProgressTiming PickWordProgress() => IsWordProgress
-            ? WordProgress!
+        public global::Vapi.AssistantSpeechWordProgressTiming PickWordProgress() => WordProgress is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'WordProgress' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -197,13 +197,13 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsWordAlignment && wordAlignment != null)
+            if (WordAlignment is { } __value0 && wordAlignment != null)
             {
-                return wordAlignment(WordAlignment!);
+                return wordAlignment(__value0);
             }
-            else if (IsWordProgress && wordProgress != null)
+            else if (WordProgress is { } __value1 && wordProgress != null)
             {
-                return wordProgress(WordProgress!);
+                return wordProgress(__value1);
             }
 
             return default(TResult);
@@ -223,13 +223,13 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsWordAlignment)
+            if (WordAlignment is { } __value0)
             {
-                wordAlignment?.Invoke(WordAlignment!);
+                wordAlignment?.Invoke(__value0);
             }
-            else if (IsWordProgress)
+            else if (WordProgress is { } __value1)
             {
-                wordProgress?.Invoke(WordProgress!);
+                wordProgress?.Invoke(__value1);
             }
         }
 
@@ -246,13 +246,13 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsWordAlignment)
+            if (WordAlignment is { } __value0)
             {
-                wordAlignment?.Invoke(WordAlignment!);
+                wordAlignment?.Invoke(__value0);
             }
-            else if (IsWordProgress)
+            else if (WordProgress is { } __value1)
             {
-                wordProgress?.Invoke(WordProgress!);
+                wordProgress?.Invoke(__value1);
             }
         }
 

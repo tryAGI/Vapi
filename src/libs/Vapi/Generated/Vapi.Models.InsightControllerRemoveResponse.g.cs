@@ -47,8 +47,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.BarInsight PickBar() => IsBar
-            ? Bar!
+        public global::Vapi.BarInsight PickBar() => Bar is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Bar' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.PieInsight PickPie() => IsPie
-            ? Pie!
+        public global::Vapi.PieInsight PickPie() => Pie is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Pie' but the value was {ToString()}.");
 
         /// <summary>
@@ -121,8 +121,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.LineInsight PickLine() => IsLine
-            ? Line!
+        public global::Vapi.LineInsight PickLine() => Line is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Line' but the value was {ToString()}.");
 
         /// <summary>
@@ -158,8 +158,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.TextInsight PickText() => IsText
-            ? Text!
+        public global::Vapi.TextInsight PickText() => Text is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -315,21 +315,21 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsBar && bar != null)
+            if (Bar is { } __value0 && bar != null)
             {
-                return bar(Bar!);
+                return bar(__value0);
             }
-            else if (IsPie && pie != null)
+            else if (Pie is { } __value1 && pie != null)
             {
-                return pie(Pie!);
+                return pie(__value1);
             }
-            else if (IsLine && line != null)
+            else if (Line is { } __value2 && line != null)
             {
-                return line(Line!);
+                return line(__value2);
             }
-            else if (IsText && text != null)
+            else if (Text is { } __value3 && text != null)
             {
-                return text(Text!);
+                return text(__value3);
             }
 
             return default(TResult);
@@ -353,21 +353,21 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsBar)
+            if (Bar is { } __value0)
             {
-                bar?.Invoke(Bar!);
+                bar?.Invoke(__value0);
             }
-            else if (IsPie)
+            else if (Pie is { } __value1)
             {
-                pie?.Invoke(Pie!);
+                pie?.Invoke(__value1);
             }
-            else if (IsLine)
+            else if (Line is { } __value2)
             {
-                line?.Invoke(Line!);
+                line?.Invoke(__value2);
             }
-            else if (IsText)
+            else if (Text is { } __value3)
             {
-                text?.Invoke(Text!);
+                text?.Invoke(__value3);
             }
         }
 
@@ -386,21 +386,21 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsBar)
+            if (Bar is { } __value0)
             {
-                bar?.Invoke(Bar!);
+                bar?.Invoke(__value0);
             }
-            else if (IsPie)
+            else if (Pie is { } __value1)
             {
-                pie?.Invoke(Pie!);
+                pie?.Invoke(__value1);
             }
-            else if (IsLine)
+            else if (Line is { } __value2)
             {
-                line?.Invoke(Line!);
+                line?.Invoke(__value2);
             }
-            else if (IsText)
+            else if (Text is { } __value3)
             {
-                text?.Invoke(Text!);
+                text?.Invoke(__value3);
             }
         }
 

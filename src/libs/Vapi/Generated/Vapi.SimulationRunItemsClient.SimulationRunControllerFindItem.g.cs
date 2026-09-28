@@ -153,8 +153,8 @@ namespace Vapi
                 PrepareSimulationRunControllerFindItemRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id!,
-                    itemId: itemId!);
+                    id: id,
+                    itemId: itemId);
 
                 return __httpRequest;
             }
@@ -176,7 +176,7 @@ namespace Vapi
                                 pathTemplate: "$\"/eval/simulation/run/{id}/item/{itemId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -210,7 +210,7 @@ namespace Vapi
                                 pathTemplate: "$\"/eval/simulation/run/{id}/item/{itemId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -251,7 +251,7 @@ namespace Vapi
                                 pathTemplate: "$\"/eval/simulation/run/{id}/item/{itemId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -299,7 +299,7 @@ namespace Vapi
                                 pathTemplate: "$\"/eval/simulation/run/{id}/item/{itemId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -321,7 +321,7 @@ namespace Vapi
                                 pathTemplate: "$\"/eval/simulation/run/{id}/item/{itemId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

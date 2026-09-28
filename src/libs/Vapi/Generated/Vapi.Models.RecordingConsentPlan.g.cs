@@ -47,8 +47,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.RecordingConsentPlanStayOnLine PickStayOnLine() => IsStayOnLine
-            ? StayOnLine!
+        public global::Vapi.RecordingConsentPlanStayOnLine PickStayOnLine() => StayOnLine is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'StayOnLine' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.RecordingConsentPlanVerbal PickVerbal() => IsVerbal
-            ? Verbal!
+        public global::Vapi.RecordingConsentPlanVerbal PickVerbal() => Verbal is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Verbal' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -185,13 +185,13 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsStayOnLine && stayOnLine != null)
+            if (StayOnLine is { } __value0 && stayOnLine != null)
             {
-                return stayOnLine(StayOnLine!);
+                return stayOnLine(__value0);
             }
-            else if (IsVerbal && verbal != null)
+            else if (Verbal is { } __value1 && verbal != null)
             {
-                return verbal(Verbal!);
+                return verbal(__value1);
             }
 
             return default(TResult);
@@ -211,13 +211,13 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsStayOnLine)
+            if (StayOnLine is { } __value0)
             {
-                stayOnLine?.Invoke(StayOnLine!);
+                stayOnLine?.Invoke(__value0);
             }
-            else if (IsVerbal)
+            else if (Verbal is { } __value1)
             {
-                verbal?.Invoke(Verbal!);
+                verbal?.Invoke(__value1);
             }
         }
 
@@ -234,13 +234,13 @@ namespace Vapi
                 Validate();
             }
 
-            if (IsStayOnLine)
+            if (StayOnLine is { } __value0)
             {
-                stayOnLine?.Invoke(StayOnLine!);
+                stayOnLine?.Invoke(__value0);
             }
-            else if (IsVerbal)
+            else if (Verbal is { } __value1)
             {
-                verbal?.Invoke(Verbal!);
+                verbal?.Invoke(__value1);
             }
         }
 
