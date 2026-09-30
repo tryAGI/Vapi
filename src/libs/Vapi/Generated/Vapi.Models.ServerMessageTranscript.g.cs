@@ -125,6 +125,34 @@ namespace Vapi
         public string? OriginalTranscript { get; set; }
 
         /// <summary>
+        /// The transcriber's confidence score for this transcript, in [0, 1]. Only<br/>
+        /// ever set alongside `confidenceSource` — see there for why an unmarked<br/>
+        /// score is never included. Set only on final user-role transcripts: each<br/>
+        /// live message carries the score of the one fragment it was built from, and<br/>
+        /// `artifact.messages` agrees with it per fragment. A stored message built<br/>
+        /// from several consecutive fragments reports the minimum across them as<br/>
+        /// 'derived', so it can differ from the individual live messages that fed<br/>
+        /// it. Partials never carry a score, because nothing stored exists for a<br/>
+        /// partial's score to agree with.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence")]
+        public double? Confidence { get; set; }
+
+        /// <summary>
+        /// Whether `confidence` came directly from the transcriber ('provider') or<br/>
+        /// was computed by Vapi ('derived').<br/>
+        /// 'derived' means Vapi computed the score from the transcriber's per-word<br/>
+        /// scores; the exact aggregation is provider-specific (an average, a median<br/>
+        /// or a minimum, depending on the transcriber).<br/>
+        /// Absent means no trustworthy score was available for this transcript:<br/>
+        /// either the transcriber does not report one, or the value it reported was<br/>
+        /// invalid and was dropped.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidenceSource")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.ServerMessageTranscriptConfidenceSourceJsonConverter))]
+        public global::Vapi.ServerMessageTranscriptConfidenceSource? ConfidenceSource { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -190,6 +218,27 @@ namespace Vapi
         /// <param name="originalTranscript">
         /// The original transcript before filtering (only included if content was filtered).
         /// </param>
+        /// <param name="confidence">
+        /// The transcriber's confidence score for this transcript, in [0, 1]. Only<br/>
+        /// ever set alongside `confidenceSource` — see there for why an unmarked<br/>
+        /// score is never included. Set only on final user-role transcripts: each<br/>
+        /// live message carries the score of the one fragment it was built from, and<br/>
+        /// `artifact.messages` agrees with it per fragment. A stored message built<br/>
+        /// from several consecutive fragments reports the minimum across them as<br/>
+        /// 'derived', so it can differ from the individual live messages that fed<br/>
+        /// it. Partials never carry a score, because nothing stored exists for a<br/>
+        /// partial's score to agree with.
+        /// </param>
+        /// <param name="confidenceSource">
+        /// Whether `confidence` came directly from the transcriber ('provider') or<br/>
+        /// was computed by Vapi ('derived').<br/>
+        /// 'derived' means Vapi computed the score from the transcriber's per-word<br/>
+        /// scores; the exact aggregation is provider-specific (an average, a median<br/>
+        /// or a minimum, depending on the transcriber).<br/>
+        /// Absent means no trustworthy score was available for this transcript:<br/>
+        /// either the transcriber does not report one, or the value it reported was<br/>
+        /// invalid and was dropped.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -210,7 +259,9 @@ namespace Vapi
             string? assistantName,
             bool? isFiltered,
             global::System.Collections.Generic.IList<string>? detectedThreats,
-            string? originalTranscript)
+            string? originalTranscript,
+            double? confidence,
+            global::Vapi.ServerMessageTranscriptConfidenceSource? confidenceSource)
         {
             this.PhoneNumber = phoneNumber;
             this.AssistantVersion = assistantVersion;
@@ -229,6 +280,8 @@ namespace Vapi
             this.IsFiltered = isFiltered;
             this.DetectedThreats = detectedThreats;
             this.OriginalTranscript = originalTranscript;
+            this.Confidence = confidence;
+            this.ConfidenceSource = confidenceSource;
         }
 
         /// <summary>

@@ -39,6 +39,22 @@ namespace Vapi
         public string? Regex { get; set; }
 
         /// <summary>
+        /// Compliance configuration for this output. Only enable overrides if no sensitive data will be stored.<br/>
+        /// Example: {"forceStoreOnHipaaEnabled":false}
+        /// </summary>
+        /// <example>{"forceStoreOnHipaaEnabled":false}</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("compliancePlan")]
+        public global::Vapi.ComplianceOverride? CompliancePlan { get; set; }
+
+        /// <summary>
+        /// These are the conditions that gate the execution of this structured output. Every condition must pass for the structured output to run (AND semantics). When omitted or empty, no user-defined conditions gate this output. Send null to clear a previously saved gate.<br/>
+        /// Example: [{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]
+        /// </summary>
+        /// <example>[{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>>? Conditions { get; set; }
+
+        /// <summary>
         /// This is the model that will be used to extract the structured output.<br/>
         /// To provide your own custom system and user prompts for structured output extraction, populate the messages array with your system and user messages. You can specify liquid templating in your system and user messages.<br/>
         /// Between the system or user messages, you must reference either 'transcript' or 'messages' with the `{{}}` syntax to access the conversation history.<br/>
@@ -54,22 +70,6 @@ namespace Vapi
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>))]
         public global::Vapi.OneOf<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>? Model { get; set; }
-
-        /// <summary>
-        /// Compliance configuration for this output. Only enable overrides if no sensitive data will be stored.<br/>
-        /// Example: {"forceStoreOnHipaaEnabled":false}
-        /// </summary>
-        /// <example>{"forceStoreOnHipaaEnabled":false}</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("compliancePlan")]
-        public global::Vapi.ComplianceOverride? CompliancePlan { get; set; }
-
-        /// <summary>
-        /// These are the conditions that gate the execution of this structured output. Every condition must pass for the structured output to run (AND semantics). When omitted or empty, no user-defined conditions gate this output. Send null to clear a previously saved gate.<br/>
-        /// Example: [{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]
-        /// </summary>
-        /// <example>[{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
-        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>>? Conditions { get; set; }
 
         /// <summary>
         /// This is the name of the structured output.
@@ -143,6 +143,14 @@ namespace Vapi
         /// - number/integer: the first match parsed as a number<br/>
         /// - array: all matches
         /// </param>
+        /// <param name="compliancePlan">
+        /// Compliance configuration for this output. Only enable overrides if no sensitive data will be stored.<br/>
+        /// Example: {"forceStoreOnHipaaEnabled":false}
+        /// </param>
+        /// <param name="conditions">
+        /// These are the conditions that gate the execution of this structured output. Every condition must pass for the structured output to run (AND semantics). When omitted or empty, no user-defined conditions gate this output. Send null to clear a previously saved gate.<br/>
+        /// Example: [{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]
+        /// </param>
         /// <param name="model">
         /// This is the model that will be used to extract the structured output.<br/>
         /// To provide your own custom system and user prompts for structured output extraction, populate the messages array with your system and user messages. You can specify liquid templating in your system and user messages.<br/>
@@ -155,14 +163,6 @@ namespace Vapi
         /// `{{structuredOutput.schema}}`<br/>
         /// If model is not specified, GPT-4.1 will be used by default for extraction, utilizing default system and user prompts.<br/>
         /// If messages or required fields are not specified, the default system and user prompts will be used.
-        /// </param>
-        /// <param name="compliancePlan">
-        /// Compliance configuration for this output. Only enable overrides if no sensitive data will be stored.<br/>
-        /// Example: {"forceStoreOnHipaaEnabled":false}
-        /// </param>
-        /// <param name="conditions">
-        /// These are the conditions that gate the execution of this structured output. Every condition must pass for the structured output to run (AND semantics). When omitted or empty, no user-defined conditions gate this output. Send null to clear a previously saved gate.<br/>
-        /// Example: [{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]
         /// </param>
         /// <param name="name">
         /// This is the name of the structured output.
@@ -195,9 +195,9 @@ namespace Vapi
         public UpdateStructuredOutputDTO(
             global::Vapi.UpdateStructuredOutputDTOType? type,
             string? regex,
-            global::Vapi.OneOf<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>? model,
             global::Vapi.ComplianceOverride? compliancePlan,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>>? conditions,
+            global::Vapi.OneOf<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>? model,
             string? name,
             string? description,
             global::System.Collections.Generic.IList<string>? assistantIds,
@@ -206,9 +206,9 @@ namespace Vapi
         {
             this.Type = type;
             this.Regex = regex;
-            this.Model = model;
             this.CompliancePlan = compliancePlan;
             this.Conditions = conditions;
+            this.Model = model;
             this.Name = name;
             this.Description = description;
             this.AssistantIds = assistantIds;

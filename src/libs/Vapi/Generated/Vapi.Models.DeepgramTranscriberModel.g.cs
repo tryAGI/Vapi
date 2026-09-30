@@ -131,6 +131,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Nova3Pharma,
+        /// <summary>
+        ///
+        /// </summary>
         NovaGeneral,
         /// <summary>
         ///
@@ -188,6 +192,7 @@ namespace Vapi
                 DeepgramTranscriberModel.Nova3 => "nova-3",
                 DeepgramTranscriberModel.Nova3General => "nova-3-general",
                 DeepgramTranscriberModel.Nova3Medical => "nova-3-medical",
+                DeepgramTranscriberModel.Nova3Pharma => "nova-3-pharma",
                 DeepgramTranscriberModel.NovaGeneral => "nova-general",
                 DeepgramTranscriberModel.NovaMedical => "nova-medical",
                 DeepgramTranscriberModel.NovaPhonecall => "nova-phonecall",
@@ -232,6 +237,7 @@ namespace Vapi
                 "nova-3" => DeepgramTranscriberModel.Nova3,
                 "nova-3-general" => DeepgramTranscriberModel.Nova3General,
                 "nova-3-medical" => DeepgramTranscriberModel.Nova3Medical,
+                "nova-3-pharma" => DeepgramTranscriberModel.Nova3Pharma,
                 "nova-general" => DeepgramTranscriberModel.NovaGeneral,
                 "nova-medical" => DeepgramTranscriberModel.NovaMedical,
                 "nova-phonecall" => DeepgramTranscriberModel.NovaPhonecall,
