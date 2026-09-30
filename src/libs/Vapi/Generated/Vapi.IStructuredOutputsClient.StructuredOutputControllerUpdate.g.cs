@@ -64,6 +64,14 @@ namespace Vapi
         /// - number/integer: the first match parsed as a number<br/>
         /// - array: all matches
         /// </param>
+        /// <param name="compliancePlan">
+        /// Compliance configuration for this output. Only enable overrides if no sensitive data will be stored.<br/>
+        /// Example: {"forceStoreOnHipaaEnabled":false}
+        /// </param>
+        /// <param name="conditions">
+        /// These are the conditions that gate the execution of this structured output. Every condition must pass for the structured output to run (AND semantics). When omitted or empty, no user-defined conditions gate this output. Send null to clear a previously saved gate.<br/>
+        /// Example: [{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]
+        /// </param>
         /// <param name="model">
         /// This is the model that will be used to extract the structured output.<br/>
         /// To provide your own custom system and user prompts for structured output extraction, populate the messages array with your system and user messages. You can specify liquid templating in your system and user messages.<br/>
@@ -76,14 +84,6 @@ namespace Vapi
         /// `{{structuredOutput.schema}}`<br/>
         /// If model is not specified, GPT-4.1 will be used by default for extraction, utilizing default system and user prompts.<br/>
         /// If messages or required fields are not specified, the default system and user prompts will be used.
-        /// </param>
-        /// <param name="compliancePlan">
-        /// Compliance configuration for this output. Only enable overrides if no sensitive data will be stored.<br/>
-        /// Example: {"forceStoreOnHipaaEnabled":false}
-        /// </param>
-        /// <param name="conditions">
-        /// These are the conditions that gate the execution of this structured output. Every condition must pass for the structured output to run (AND semantics). When omitted or empty, no user-defined conditions gate this output. Send null to clear a previously saved gate.<br/>
-        /// Example: [{"type":"minMessages","count":4}, {"type":"minCallDuration","seconds":10}]
         /// </param>
         /// <param name="name">
         /// This is the name of the structured output.
@@ -118,9 +118,9 @@ namespace Vapi
             string schemaOverride,
             global::Vapi.UpdateStructuredOutputDTOType? type = default,
             string? regex = default,
-            global::Vapi.OneOf<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>? model = default,
             global::Vapi.ComplianceOverride? compliancePlan = default,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>>? conditions = default,
+            global::Vapi.OneOf<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>? model = default,
             string? name = default,
             string? description = default,
             global::System.Collections.Generic.IList<string>? assistantIds = default,

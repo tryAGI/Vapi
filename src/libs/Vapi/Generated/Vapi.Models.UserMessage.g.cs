@@ -68,10 +68,35 @@ namespace Vapi
         public string? OriginalMessage { get; set; }
 
         /// <summary>
+        /// The transcriber's confidence score for this message, in [0, 1]. Only<br/>
+        /// ever set alongside `confidenceSource` — see there for why an unmarked<br/>
+        /// or out-of-range score is never stored.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence")]
+        public double? Confidence { get; set; }
+
+        /// <summary>
+        /// Whether `confidence` came directly from the transcriber ('provider') or<br/>
+        /// was computed by Vapi ('derived').<br/>
+        /// 'derived' means Vapi computed the score from the transcriber's per-word<br/>
+        /// scores; the exact aggregation is provider-specific (an average, a median<br/>
+        /// or a minimum, depending on the transcriber). It is also 'derived' when<br/>
+        /// consecutive transcript fragments were merged into one message, where the<br/>
+        /// score is the minimum across the fragments.<br/>
+        /// Absent means no trustworthy score was available for this message: either<br/>
+        /// the transcriber does not report one, or the value it reported was invalid<br/>
+        /// and was dropped. A merged message is unmarked whenever any fragment it<br/>
+        /// contains was unmarked.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidenceSource")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.UserMessageConfidenceSourceJsonConverter))]
+        public global::Vapi.UserMessageConfidenceSource? ConfidenceSource { get; set; }
+
+        /// <summary>
         /// The metadata associated with the message. Currently used to store the transcriber's word level confidence.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
-        public object? Metadata { get; set; }
+        public global::Vapi.UserMessageMetadata? Metadata { get; set; }
 
         /// <summary>
         /// Stable speaker label for diarized user speakers (e.g., "Speaker 1").
@@ -115,6 +140,24 @@ namespace Vapi
         /// <param name="originalMessage">
         /// The original message before filtering (only included if content was filtered).
         /// </param>
+        /// <param name="confidence">
+        /// The transcriber's confidence score for this message, in [0, 1]. Only<br/>
+        /// ever set alongside `confidenceSource` — see there for why an unmarked<br/>
+        /// or out-of-range score is never stored.
+        /// </param>
+        /// <param name="confidenceSource">
+        /// Whether `confidence` came directly from the transcriber ('provider') or<br/>
+        /// was computed by Vapi ('derived').<br/>
+        /// 'derived' means Vapi computed the score from the transcriber's per-word<br/>
+        /// scores; the exact aggregation is provider-specific (an average, a median<br/>
+        /// or a minimum, depending on the transcriber). It is also 'derived' when<br/>
+        /// consecutive transcript fragments were merged into one message, where the<br/>
+        /// score is the minimum across the fragments.<br/>
+        /// Absent means no trustworthy score was available for this message: either<br/>
+        /// the transcriber does not report one, or the value it reported was invalid<br/>
+        /// and was dropped. A merged message is unmarked whenever any fragment it<br/>
+        /// contains was unmarked.
+        /// </param>
         /// <param name="metadata">
         /// The metadata associated with the message. Currently used to store the transcriber's word level confidence.
         /// </param>
@@ -134,7 +177,9 @@ namespace Vapi
             bool? isFiltered,
             global::System.Collections.Generic.IList<string>? detectedThreats,
             string? originalMessage,
-            object? metadata,
+            double? confidence,
+            global::Vapi.UserMessageConfidenceSource? confidenceSource,
+            global::Vapi.UserMessageMetadata? metadata,
             string? speakerLabel)
         {
             this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
@@ -146,6 +191,8 @@ namespace Vapi
             this.IsFiltered = isFiltered;
             this.DetectedThreats = detectedThreats;
             this.OriginalMessage = originalMessage;
+            this.Confidence = confidence;
+            this.ConfidenceSource = confidenceSource;
             this.Metadata = metadata;
             this.SpeakerLabel = speakerLabel;
         }
