@@ -255,6 +255,15 @@ namespace Vapi
         };
 
         /// <summary>
+        ///
+        /// </summary>
+        public TrafficAllocationsClient TrafficAllocations => new TrafficAllocationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+        };
+
+        /// <summary>
         /// Creates a new instance of the VapiClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.

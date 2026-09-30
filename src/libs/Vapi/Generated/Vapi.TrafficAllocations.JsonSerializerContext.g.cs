@@ -17,48 +17,46 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMeta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMetaSortOrder), TypeInfoPropertyName = "PaginationMetaSortOrder2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.InsightTimeRangeWithStep))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.InsightTimeRangeWithStepStep), TypeInfoPropertyName = "InsightTimeRangeWithStepStep2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardLayout))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.Board))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>), TypeInfoPropertyName = "OneOfBoardInsightItemBoardMetricWidgetItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardInsightItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardMetricWidgetItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardItemPosition))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardItemSize))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardInsightItemType), TypeInfoPropertyName = "BoardInsightItemType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardMetricWidgetItemType), TypeInfoPropertyName = "BoardMetricWidgetItemType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateBoardDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateBoardDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardPaginatedResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.Board>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardControllerFindAllSortOrder), TypeInfoPropertyName = "BoardControllerFindAllSortOrder2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardControllerFindAllSortBy), TypeInfoPropertyName = "BoardControllerFindAllSortBy2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationTarget))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocation))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationAllocationIntent), TypeInfoPropertyName = "TrafficAllocationAllocationIntent2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationActorType), TypeInfoPropertyName = "TrafficAllocationActorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TrafficAllocationTarget>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTrafficAllocationTargetDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTrafficAllocationDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTrafficAllocationDTOAllocationIntent), TypeInfoPropertyName = "CreateTrafficAllocationDTOAllocationIntent2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CreateTrafficAllocationTargetDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationPaginatedResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TrafficAllocation>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationLatestResponseDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTOError), TypeInfoPropertyName = "TrafficAllocationStaleConflictResponseDTOError2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder), TypeInfoPropertyName = "TrafficAllocationControllerFindAllPaginatedSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMetaSortOrder?), TypeInfoPropertyName = "NullablePaginationMetaSortOrder2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.InsightTimeRangeWithStepStep?), TypeInfoPropertyName = "NullableInsightTimeRangeWithStepStep2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>?), TypeInfoPropertyName = "NullableOneOfBoardInsightItemBoardMetricWidgetItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardInsightItemType?), TypeInfoPropertyName = "NullableBoardInsightItemType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardMetricWidgetItemType?), TypeInfoPropertyName = "NullableBoardMetricWidgetItemType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardControllerFindAllSortOrder?), TypeInfoPropertyName = "NullableBoardControllerFindAllSortOrder2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BoardControllerFindAllSortBy?), TypeInfoPropertyName = "NullableBoardControllerFindAllSortBy2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Board>))]
-    internal sealed partial class BoardSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationAllocationIntent?), TypeInfoPropertyName = "NullableTrafficAllocationAllocationIntent2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationActorType?), TypeInfoPropertyName = "NullableTrafficAllocationActorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTrafficAllocationDTOAllocationIntent?), TypeInfoPropertyName = "NullableCreateTrafficAllocationDTOAllocationIntent2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTOError?), TypeInfoPropertyName = "NullableTrafficAllocationStaleConflictResponseDTOError2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder?), TypeInfoPropertyName = "NullableTrafficAllocationControllerFindAllPaginatedSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrafficAllocationTarget>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CreateTrafficAllocationTargetDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrafficAllocation>))]
+    internal sealed partial class TrafficAllocationsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
     /// <summary>
     ///
     /// </summary>
-    public sealed partial class BoardSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
+    public sealed partial class TrafficAllocationsSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
 
@@ -71,9 +69,9 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static BoardSourceGenerationContext Default { get; } = new(DefaultOptions);
+        public static TrafficAllocationsSourceGenerationContext Default { get; } = new(DefaultOptions);
 
-        private BoardSourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
+        private TrafficAllocationsSourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
             : base(options)
         {
         }
@@ -105,9 +103,6 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<double?, string, bool?>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<double?, string, bool?, object>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<double?, string, bool?>());
-            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>());
-            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>());
-            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.BoardInsightItem, global::Vapi.BoardMetricWidgetItem>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, double?>());
             options.Converters.Add(new global::Vapi.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
@@ -135,25 +130,25 @@ namespace Vapi
 
                     || typeToConvert == typeof(global::Vapi.PaginationMetaSortOrder?)
 
-                    || typeToConvert == typeof(global::Vapi.InsightTimeRangeWithStepStep)
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationAllocationIntent)
 
-                    || typeToConvert == typeof(global::Vapi.InsightTimeRangeWithStepStep?)
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationAllocationIntent?)
 
-                    || typeToConvert == typeof(global::Vapi.BoardInsightItemType)
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationActorType)
 
-                    || typeToConvert == typeof(global::Vapi.BoardInsightItemType?)
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationActorType?)
 
-                    || typeToConvert == typeof(global::Vapi.BoardMetricWidgetItemType)
+                    || typeToConvert == typeof(global::Vapi.CreateTrafficAllocationDTOAllocationIntent)
 
-                    || typeToConvert == typeof(global::Vapi.BoardMetricWidgetItemType?)
+                    || typeToConvert == typeof(global::Vapi.CreateTrafficAllocationDTOAllocationIntent?)
 
-                    || typeToConvert == typeof(global::Vapi.BoardControllerFindAllSortOrder)
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTOError)
 
-                    || typeToConvert == typeof(global::Vapi.BoardControllerFindAllSortOrder?)
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTOError?)
 
-                    || typeToConvert == typeof(global::Vapi.BoardControllerFindAllSortBy)
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder)
 
-                    || typeToConvert == typeof(global::Vapi.BoardControllerFindAllSortBy?);
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -170,54 +165,54 @@ namespace Vapi
                     return new global::Vapi.JsonConverters.PaginationMetaSortOrderNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.InsightTimeRangeWithStepStep))
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationAllocationIntent))
                 {
-                    return new global::Vapi.JsonConverters.InsightTimeRangeWithStepStepJsonConverter();
+                    return new global::Vapi.JsonConverters.TrafficAllocationAllocationIntentJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.InsightTimeRangeWithStepStep?))
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationAllocationIntent?))
                 {
-                    return new global::Vapi.JsonConverters.InsightTimeRangeWithStepStepNullableJsonConverter();
+                    return new global::Vapi.JsonConverters.TrafficAllocationAllocationIntentNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.BoardInsightItemType))
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationActorType))
                 {
-                    return new global::Vapi.JsonConverters.BoardInsightItemTypeJsonConverter();
+                    return new global::Vapi.JsonConverters.TrafficAllocationActorTypeJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.BoardInsightItemType?))
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationActorType?))
                 {
-                    return new global::Vapi.JsonConverters.BoardInsightItemTypeNullableJsonConverter();
+                    return new global::Vapi.JsonConverters.TrafficAllocationActorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.BoardMetricWidgetItemType))
+                if (typeToConvert == typeof(global::Vapi.CreateTrafficAllocationDTOAllocationIntent))
                 {
-                    return new global::Vapi.JsonConverters.BoardMetricWidgetItemTypeJsonConverter();
+                    return new global::Vapi.JsonConverters.CreateTrafficAllocationDTOAllocationIntentJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.BoardMetricWidgetItemType?))
+                if (typeToConvert == typeof(global::Vapi.CreateTrafficAllocationDTOAllocationIntent?))
                 {
-                    return new global::Vapi.JsonConverters.BoardMetricWidgetItemTypeNullableJsonConverter();
+                    return new global::Vapi.JsonConverters.CreateTrafficAllocationDTOAllocationIntentNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.BoardControllerFindAllSortOrder))
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTOError))
                 {
-                    return new global::Vapi.JsonConverters.BoardControllerFindAllSortOrderJsonConverter();
+                    return new global::Vapi.JsonConverters.TrafficAllocationStaleConflictResponseDTOErrorJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.BoardControllerFindAllSortOrder?))
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTOError?))
                 {
-                    return new global::Vapi.JsonConverters.BoardControllerFindAllSortOrderNullableJsonConverter();
+                    return new global::Vapi.JsonConverters.TrafficAllocationStaleConflictResponseDTOErrorNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.BoardControllerFindAllSortBy))
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder))
                 {
-                    return new global::Vapi.JsonConverters.BoardControllerFindAllSortByJsonConverter();
+                    return new global::Vapi.JsonConverters.TrafficAllocationControllerFindAllPaginatedSortOrderJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.BoardControllerFindAllSortBy?))
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder?))
                 {
-                    return new global::Vapi.JsonConverters.BoardControllerFindAllSortByNullableJsonConverter();
+                    return new global::Vapi.JsonConverters.TrafficAllocationControllerFindAllPaginatedSortOrderNullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }
@@ -262,7 +257,7 @@ namespace Vapi
             {
                 return index switch
                 {
-                    0 => new BoardSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => new TrafficAllocationsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }

@@ -160,5 +160,10 @@ namespace Vapi
         /// </summary>
         public ToolsClient Tools { get; }
 
+        /// <summary>
+        ///
+        /// </summary>
+        public TrafficAllocationsClient TrafficAllocations { get; }
+
     }
 }
