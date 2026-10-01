@@ -41,7 +41,7 @@ namespace Vapi
         public double? Stability { get; set; }
 
         /// <summary>
-        /// Defines the similarity boost for voice settings.<br/>
+        /// Defines the similarity boost for voice settings. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: 0.75F
         /// </summary>
         /// <example>0.75F</example>
@@ -49,7 +49,7 @@ namespace Vapi
         public double? SimilarityBoost { get; set; }
 
         /// <summary>
-        /// Defines the style for voice settings.<br/>
+        /// Defines the style for voice settings. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: 0
         /// </summary>
         /// <example>0</example>
@@ -57,7 +57,7 @@ namespace Vapi
         public double? Style { get; set; }
 
         /// <summary>
-        /// Defines the use speaker boost for voice settings.<br/>
+        /// Defines the use speaker boost for voice settings. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: false
         /// </summary>
         /// <example>false</example>
@@ -65,7 +65,7 @@ namespace Vapi
         public bool? UseSpeakerBoost { get; set; }
 
         /// <summary>
-        /// Defines the speed for voice settings.<br/>
+        /// Defines the speed for voice settings. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: 0.9F
         /// </summary>
         /// <example>0.9F</example>
@@ -73,7 +73,7 @@ namespace Vapi
         public double? Speed { get; set; }
 
         /// <summary>
-        /// Defines the optimize streaming latency for voice settings. Defaults to 3.<br/>
+        /// Defines the optimize streaming latency for voice settings. Defaults to 3. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: 3
         /// </summary>
         /// <example>3</example>
@@ -81,7 +81,7 @@ namespace Vapi
         public double? OptimizeStreamingLatency { get; set; }
 
         /// <summary>
-        /// This enables the use of https://elevenlabs.io/docs/speech-synthesis/prompting#pronunciation. Defaults to false to save latency.<br/>
+        /// This enables the use of https://elevenlabs.io/docs/speech-synthesis/prompting#pronunciation. Defaults to false to save latency. Ignored by `eleven_v4_turbo`.<br/>
         /// @default false<br/>
         /// Example: false
         /// </summary>
@@ -90,7 +90,7 @@ namespace Vapi
         public bool? EnableSsmlParsing { get; set; }
 
         /// <summary>
-        /// Defines the auto mode for voice settings. Defaults to false.<br/>
+        /// Defines the auto mode for voice settings. Defaults to false. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: false
         /// </summary>
         /// <example>false</example>
@@ -107,7 +107,7 @@ namespace Vapi
         public global::Vapi.ElevenLabsVoiceModel? Model { get; set; }
 
         /// <summary>
-        /// This is the language (ISO 639-1) that is enforced for the model. Currently only Turbo v2.5 supports language enforcement. For other models, an error will be returned if language code is provided.
+        /// This is the language (ISO 639-1) that is enforced for the model. Currently only Turbo v2.5, Flash v2.5 and v4 Turbo support language enforcement; other models ignore it.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("language")]
         public string? Language { get; set; }
@@ -155,32 +155,32 @@ namespace Vapi
         /// Example: 0.5F
         /// </param>
         /// <param name="similarityBoost">
-        /// Defines the similarity boost for voice settings.<br/>
+        /// Defines the similarity boost for voice settings. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: 0.75F
         /// </param>
         /// <param name="style">
-        /// Defines the style for voice settings.<br/>
+        /// Defines the style for voice settings. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: 0
         /// </param>
         /// <param name="useSpeakerBoost">
-        /// Defines the use speaker boost for voice settings.<br/>
+        /// Defines the use speaker boost for voice settings. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: false
         /// </param>
         /// <param name="speed">
-        /// Defines the speed for voice settings.<br/>
+        /// Defines the speed for voice settings. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: 0.9F
         /// </param>
         /// <param name="optimizeStreamingLatency">
-        /// Defines the optimize streaming latency for voice settings. Defaults to 3.<br/>
+        /// Defines the optimize streaming latency for voice settings. Defaults to 3. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: 3
         /// </param>
         /// <param name="enableSsmlParsing">
-        /// This enables the use of https://elevenlabs.io/docs/speech-synthesis/prompting#pronunciation. Defaults to false to save latency.<br/>
+        /// This enables the use of https://elevenlabs.io/docs/speech-synthesis/prompting#pronunciation. Defaults to false to save latency. Ignored by `eleven_v4_turbo`.<br/>
         /// @default false<br/>
         /// Example: false
         /// </param>
         /// <param name="autoMode">
-        /// Defines the auto mode for voice settings. Defaults to false.<br/>
+        /// Defines the auto mode for voice settings. Defaults to false. Ignored by `eleven_v4_turbo`.<br/>
         /// Example: false
         /// </param>
         /// <param name="model">
@@ -188,7 +188,7 @@ namespace Vapi
         /// Example: eleven_turbo_v2_5
         /// </param>
         /// <param name="language">
-        /// This is the language (ISO 639-1) that is enforced for the model. Currently only Turbo v2.5 supports language enforcement. For other models, an error will be returned if language code is provided.
+        /// This is the language (ISO 639-1) that is enforced for the model. Currently only Turbo v2.5, Flash v2.5 and v4 Turbo support language enforcement; other models ignore it.
         /// </param>
         /// <param name="chunkPlan">
         /// This is the plan for chunking the model output before it is sent to the voice provider.

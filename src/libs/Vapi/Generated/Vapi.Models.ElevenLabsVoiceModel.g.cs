@@ -37,6 +37,10 @@ namespace Vapi
         ///
         /// </summary>
         ElevenV3,
+        /// <summary>
+        ///
+        /// </summary>
+        ElevenV4Turbo,
     }
 
     /// <summary>
@@ -58,6 +62,7 @@ namespace Vapi
                 ElevenLabsVoiceModel.ElevenTurboV2 => "eleven_turbo_v2",
                 ElevenLabsVoiceModel.ElevenTurboV25 => "eleven_turbo_v2_5",
                 ElevenLabsVoiceModel.ElevenV3 => "eleven_v3",
+                ElevenLabsVoiceModel.ElevenV4Turbo => "eleven_v4_turbo",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -75,6 +80,7 @@ namespace Vapi
                 "eleven_turbo_v2" => ElevenLabsVoiceModel.ElevenTurboV2,
                 "eleven_turbo_v2_5" => ElevenLabsVoiceModel.ElevenTurboV25,
                 "eleven_v3" => ElevenLabsVoiceModel.ElevenV3,
+                "eleven_v4_turbo" => ElevenLabsVoiceModel.ElevenV4Turbo,
                 _ => null,
             };
         }
