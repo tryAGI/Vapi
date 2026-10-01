@@ -263,7 +263,19 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        CallInProgressErrorProviderfaultElevenLabsBlockedConcurrentRequestsAndRequestedUpgrade,
+        /// <summary>
+        ///
+        /// </summary>
         CallInProgressErrorProviderfaultElevenLabsSystemBusyAndRequestedUpgrade,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressErrorProviderfaultElevenLabsVapiVoiceDisabledByOwner,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressErrorProviderfaultElevenLabsVoiceDisabledByOwner,
         /// <summary>
         ///
         /// </summary>
@@ -2485,7 +2497,10 @@ namespace Vapi
                 CallEndedReason.CallInProgressErrorProviderfaultDeepinfraLlmFailed => "call.in-progress.error-providerfault-deepinfra-llm-failed",
                 CallEndedReason.CallInProgressErrorProviderfaultElevenLabs500ServerError => "call.in-progress.error-providerfault-eleven-labs-500-server-error",
                 CallEndedReason.CallInProgressErrorProviderfaultElevenLabs503ServerError => "call.in-progress.error-providerfault-eleven-labs-503-server-error",
+                CallEndedReason.CallInProgressErrorProviderfaultElevenLabsBlockedConcurrentRequestsAndRequestedUpgrade => "call.in-progress.error-providerfault-eleven-labs-blocked-concurrent-requests-and-requested-upgrade",
                 CallEndedReason.CallInProgressErrorProviderfaultElevenLabsSystemBusyAndRequestedUpgrade => "call.in-progress.error-providerfault-eleven-labs-system-busy-and-requested-upgrade",
+                CallEndedReason.CallInProgressErrorProviderfaultElevenLabsVapiVoiceDisabledByOwner => "call.in-progress.error-providerfault-eleven-labs-vapi-voice-disabled-by-owner",
+                CallEndedReason.CallInProgressErrorProviderfaultElevenLabsVoiceDisabledByOwner => "call.in-progress.error-providerfault-eleven-labs-voice-disabled-by-owner",
                 CallEndedReason.CallInProgressErrorProviderfaultGoogle500ServerError => "call.in-progress.error-providerfault-google-500-server-error",
                 CallEndedReason.CallInProgressErrorProviderfaultGoogle503ServerOverloadedError => "call.in-progress.error-providerfault-google-503-server-overloaded-error",
                 CallEndedReason.CallInProgressErrorProviderfaultGoogleLlmFailed => "call.in-progress.error-providerfault-google-llm-failed",
@@ -3095,7 +3110,10 @@ namespace Vapi
                 "call.in-progress.error-providerfault-deepinfra-llm-failed" => CallEndedReason.CallInProgressErrorProviderfaultDeepinfraLlmFailed,
                 "call.in-progress.error-providerfault-eleven-labs-500-server-error" => CallEndedReason.CallInProgressErrorProviderfaultElevenLabs500ServerError,
                 "call.in-progress.error-providerfault-eleven-labs-503-server-error" => CallEndedReason.CallInProgressErrorProviderfaultElevenLabs503ServerError,
+                "call.in-progress.error-providerfault-eleven-labs-blocked-concurrent-requests-and-requested-upgrade" => CallEndedReason.CallInProgressErrorProviderfaultElevenLabsBlockedConcurrentRequestsAndRequestedUpgrade,
                 "call.in-progress.error-providerfault-eleven-labs-system-busy-and-requested-upgrade" => CallEndedReason.CallInProgressErrorProviderfaultElevenLabsSystemBusyAndRequestedUpgrade,
+                "call.in-progress.error-providerfault-eleven-labs-vapi-voice-disabled-by-owner" => CallEndedReason.CallInProgressErrorProviderfaultElevenLabsVapiVoiceDisabledByOwner,
+                "call.in-progress.error-providerfault-eleven-labs-voice-disabled-by-owner" => CallEndedReason.CallInProgressErrorProviderfaultElevenLabsVoiceDisabledByOwner,
                 "call.in-progress.error-providerfault-google-500-server-error" => CallEndedReason.CallInProgressErrorProviderfaultGoogle500ServerError,
                 "call.in-progress.error-providerfault-google-503-server-overloaded-error" => CallEndedReason.CallInProgressErrorProviderfaultGoogle503ServerOverloadedError,
                 "call.in-progress.error-providerfault-google-llm-failed" => CallEndedReason.CallInProgressErrorProviderfaultGoogleLlmFailed,

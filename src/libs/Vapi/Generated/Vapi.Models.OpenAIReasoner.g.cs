@@ -35,10 +35,17 @@ namespace Vapi
         /// <summary>
         /// Complete reasoner instructions. An explicit empty string is preserved.<br/>
         /// Omit to use Vapi's default reasoner instructions. No behavioral instructions<br/>
-        /// are appended to a custom prompt.
+        /// are appended unless skills are configured; skill loading guidance and active<br/>
+        /// skill content are then composed with these instructions.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("instructions")]
         public string? Instructions { get; set; }
+
+        /// <summary>
+        /// Inline skills whose instructions and tools the GPT-Live reasoner loads on demand.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("skills")]
+        public global::System.Collections.Generic.IList<global::Vapi.OpenAIReasonerSkill>? Skills { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -64,7 +71,11 @@ namespace Vapi
         /// <param name="instructions">
         /// Complete reasoner instructions. An explicit empty string is preserved.<br/>
         /// Omit to use Vapi's default reasoner instructions. No behavioral instructions<br/>
-        /// are appended to a custom prompt.
+        /// are appended unless skills are configured; skill loading guidance and active<br/>
+        /// skill content are then composed with these instructions.
+        /// </param>
+        /// <param name="skills">
+        /// Inline skills whose instructions and tools the GPT-Live reasoner loads on demand.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -73,12 +84,14 @@ namespace Vapi
             global::Vapi.OpenAIReasonerProvider? provider,
             global::Vapi.OpenAIReasonerModel? model,
             global::Vapi.OpenAIReasonerReasoningEffort? reasoningEffort,
-            string? instructions)
+            string? instructions,
+            global::System.Collections.Generic.IList<global::Vapi.OpenAIReasonerSkill>? skills)
         {
             this.Provider = provider;
             this.Model = model;
             this.ReasoningEffort = reasoningEffort;
             this.Instructions = instructions;
+            this.Skills = skills;
         }
 
         /// <summary>

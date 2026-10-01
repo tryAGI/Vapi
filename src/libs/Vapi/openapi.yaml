@@ -21922,6 +21922,70 @@
           }
         }
       },
+      "OpenAIReasonerSkill": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Unique name within this assistant.",
+            "maxLength": 64,
+            "pattern": "/^[a-z][a-z0-9_-]*$/"
+          },
+          "description": {
+            "type": "string",
+            "description": "Explain when the reasoner should load this skill. Always visible in its catalog.",
+            "maxLength": 1024,
+            "pattern": "/\\S/"
+          },
+          "content": {
+            "type": "string",
+            "description": "Full skill instructions, loaded only while this skill is active.",
+            "maxLength": 32000,
+            "pattern": "/\\S/"
+          },
+          "tools": {
+            "type": "array",
+            "description": "Tools available only after loading this skill. Can be combined with toolIds.",
+            "maxItems": 20,
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/CreateFunctionToolDTO"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateApiRequestToolDTO"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateMcpToolDTO"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateEndCallToolDTO"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateDtmfToolDTO"
+                },
+                {
+                  "$ref": "#/components/schemas/CreateTransferCallToolDTO"
+                }
+              ]
+            }
+          },
+          "toolIds": {
+            "type": "array",
+            "description": "Existing organization-owned tools available only after loading this skill.",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "maxItems": 20
+          }
+        },
+        "required": [
+          "content",
+          "description",
+          "name"
+        ]
+      },
       "OpenAIReasoner": {
         "type": "object",
         "properties": {
@@ -21958,7 +22022,15 @@
           },
           "instructions": {
             "type": "string",
-            "description": "Complete reasoner instructions. An explicit empty string is preserved.\nOmit to use Vapi's default reasoner instructions. No behavioral instructions\nare appended to a custom prompt."
+            "description": "Complete reasoner instructions. An explicit empty string is preserved.\nOmit to use Vapi's default reasoner instructions. No behavioral instructions\nare appended unless skills are configured; skill loading guidance and active\nskill content are then composed with these instructions."
+          },
+          "skills": {
+            "description": "Inline skills whose instructions and tools the GPT-Live reasoner loads on demand.",
+            "maxItems": 20,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OpenAIReasonerSkill"
+            }
           }
         }
       },
@@ -27926,45 +27998,45 @@
           },
           "similarityBoost": {
             "type": "number",
-            "description": "Defines the similarity boost for voice settings.",
+            "description": "Defines the similarity boost for voice settings. Ignored by `eleven_v4_turbo`.",
             "minimum": 0,
             "maximum": 1,
             "example": 0.75
           },
           "style": {
             "type": "number",
-            "description": "Defines the style for voice settings.",
+            "description": "Defines the style for voice settings. Ignored by `eleven_v4_turbo`.",
             "minimum": 0,
             "maximum": 1,
             "example": 0
           },
           "useSpeakerBoost": {
             "type": "boolean",
-            "description": "Defines the use speaker boost for voice settings.",
+            "description": "Defines the use speaker boost for voice settings. Ignored by `eleven_v4_turbo`.",
             "example": false
           },
           "speed": {
             "type": "number",
-            "description": "Defines the speed for voice settings.",
+            "description": "Defines the speed for voice settings. Ignored by `eleven_v4_turbo`.",
             "minimum": 0.7,
             "maximum": 1.2,
             "example": 0.9
           },
           "optimizeStreamingLatency": {
             "type": "number",
-            "description": "Defines the optimize streaming latency for voice settings. Defaults to 3.",
+            "description": "Defines the optimize streaming latency for voice settings. Defaults to 3. Ignored by `eleven_v4_turbo`.",
             "minimum": 0,
             "maximum": 4,
             "example": 3
           },
           "enableSsmlParsing": {
             "type": "boolean",
-            "description": "This enables the use of https://elevenlabs.io/docs/speech-synthesis/prompting#pronunciation. Defaults to false to save latency.\n\n@default false",
+            "description": "This enables the use of https://elevenlabs.io/docs/speech-synthesis/prompting#pronunciation. Defaults to false to save latency. Ignored by `eleven_v4_turbo`.\n\n@default false",
             "example": false
           },
           "autoMode": {
             "type": "boolean",
-            "description": "Defines the auto mode for voice settings. Defaults to false.",
+            "description": "Defines the auto mode for voice settings. Defaults to false. Ignored by `eleven_v4_turbo`.",
             "example": false
           },
           "model": {
@@ -27977,13 +28049,14 @@
               "eleven_multilingual_v2",
               "eleven_turbo_v2",
               "eleven_turbo_v2_5",
-              "eleven_v3"
+              "eleven_v3",
+              "eleven_v4_turbo"
             ],
             "example": "eleven_turbo_v2_5"
           },
           "language": {
             "type": "string",
-            "description": "This is the language (ISO 639-1) that is enforced for the model. Currently only Turbo v2.5 supports language enforcement. For other models, an error will be returned if language code is provided."
+            "description": "This is the language (ISO 639-1) that is enforced for the model. Currently only Turbo v2.5, Flash v2.5 and v4 Turbo support language enforcement; other models ignore it."
           },
           "chunkPlan": {
             "description": "This is the plan for chunking the model output before it is sent to the voice provider.",
@@ -30564,45 +30637,45 @@
           },
           "similarityBoost": {
             "type": "number",
-            "description": "Defines the similarity boost for voice settings.",
+            "description": "Defines the similarity boost for voice settings. Ignored by `eleven_v4_turbo`.",
             "minimum": 0,
             "maximum": 1,
             "example": 0.75
           },
           "style": {
             "type": "number",
-            "description": "Defines the style for voice settings.",
+            "description": "Defines the style for voice settings. Ignored by `eleven_v4_turbo`.",
             "minimum": 0,
             "maximum": 1,
             "example": 0
           },
           "useSpeakerBoost": {
             "type": "boolean",
-            "description": "Defines the use speaker boost for voice settings.",
+            "description": "Defines the use speaker boost for voice settings. Ignored by `eleven_v4_turbo`.",
             "example": false
           },
           "speed": {
             "type": "number",
-            "description": "Defines the speed for voice settings.",
+            "description": "Defines the speed for voice settings. Ignored by `eleven_v4_turbo`.",
             "minimum": 0.7,
             "maximum": 1.2,
             "example": 0.9
           },
           "optimizeStreamingLatency": {
             "type": "number",
-            "description": "Defines the optimize streaming latency for voice settings. Defaults to 3.",
+            "description": "Defines the optimize streaming latency for voice settings. Defaults to 3. Ignored by `eleven_v4_turbo`.",
             "minimum": 0,
             "maximum": 4,
             "example": 3
           },
           "enableSsmlParsing": {
             "type": "boolean",
-            "description": "This enables the use of https://elevenlabs.io/docs/speech-synthesis/prompting#pronunciation. Defaults to false to save latency.\n\n@default false",
+            "description": "This enables the use of https://elevenlabs.io/docs/speech-synthesis/prompting#pronunciation. Defaults to false to save latency. Ignored by `eleven_v4_turbo`.\n\n@default false",
             "example": false
           },
           "autoMode": {
             "type": "boolean",
-            "description": "Defines the auto mode for voice settings. Defaults to false.",
+            "description": "Defines the auto mode for voice settings. Defaults to false. Ignored by `eleven_v4_turbo`.",
             "example": false
           },
           "model": {
@@ -30615,13 +30688,14 @@
               "eleven_multilingual_v2",
               "eleven_turbo_v2",
               "eleven_turbo_v2_5",
-              "eleven_v3"
+              "eleven_v3",
+              "eleven_v4_turbo"
             ],
             "example": "eleven_turbo_v2_5"
           },
           "language": {
             "type": "string",
-            "description": "This is the language (ISO 639-1) that is enforced for the model. Currently only Turbo v2.5 supports language enforcement. For other models, an error will be returned if language code is provided."
+            "description": "This is the language (ISO 639-1) that is enforced for the model. Currently only Turbo v2.5, Flash v2.5 and v4 Turbo support language enforcement; other models ignore it."
           },
           "pronunciationDictionaryLocators": {
             "description": "This is the pronunciation dictionary locators to use.",
@@ -46317,7 +46391,10 @@
               "call.in-progress.error-providerfault-deepinfra-llm-failed",
               "call.in-progress.error-providerfault-eleven-labs-500-server-error",
               "call.in-progress.error-providerfault-eleven-labs-503-server-error",
+              "call.in-progress.error-providerfault-eleven-labs-blocked-concurrent-requests-and-requested-upgrade",
               "call.in-progress.error-providerfault-eleven-labs-system-busy-and-requested-upgrade",
+              "call.in-progress.error-providerfault-eleven-labs-vapi-voice-disabled-by-owner",
+              "call.in-progress.error-providerfault-eleven-labs-voice-disabled-by-owner",
               "call.in-progress.error-providerfault-google-500-server-error",
               "call.in-progress.error-providerfault-google-503-server-overloaded-error",
               "call.in-progress.error-providerfault-google-llm-failed",
@@ -76555,7 +76632,10 @@
               "call.in-progress.error-providerfault-deepinfra-llm-failed",
               "call.in-progress.error-providerfault-eleven-labs-500-server-error",
               "call.in-progress.error-providerfault-eleven-labs-503-server-error",
+              "call.in-progress.error-providerfault-eleven-labs-blocked-concurrent-requests-and-requested-upgrade",
               "call.in-progress.error-providerfault-eleven-labs-system-busy-and-requested-upgrade",
+              "call.in-progress.error-providerfault-eleven-labs-vapi-voice-disabled-by-owner",
+              "call.in-progress.error-providerfault-eleven-labs-voice-disabled-by-owner",
               "call.in-progress.error-providerfault-google-500-server-error",
               "call.in-progress.error-providerfault-google-503-server-overloaded-error",
               "call.in-progress.error-providerfault-google-llm-failed",
@@ -77978,7 +78058,10 @@
               "call.in-progress.error-providerfault-deepinfra-llm-failed",
               "call.in-progress.error-providerfault-eleven-labs-500-server-error",
               "call.in-progress.error-providerfault-eleven-labs-503-server-error",
+              "call.in-progress.error-providerfault-eleven-labs-blocked-concurrent-requests-and-requested-upgrade",
               "call.in-progress.error-providerfault-eleven-labs-system-busy-and-requested-upgrade",
+              "call.in-progress.error-providerfault-eleven-labs-vapi-voice-disabled-by-owner",
+              "call.in-progress.error-providerfault-eleven-labs-voice-disabled-by-owner",
               "call.in-progress.error-providerfault-google-500-server-error",
               "call.in-progress.error-providerfault-google-503-server-overloaded-error",
               "call.in-progress.error-providerfault-google-llm-failed",
