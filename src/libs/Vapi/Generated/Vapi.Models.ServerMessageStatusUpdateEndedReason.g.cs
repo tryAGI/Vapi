@@ -1307,6 +1307,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        CallStartErrorVapifaultWorkerNotAvailable,
+        /// <summary>
+        ///
+        /// </summary>
         CallStartSquadVersionErrorValidation,
         /// <summary>
         ///
@@ -2758,6 +2762,7 @@ namespace Vapi
                 ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultDatabaseError => "call.start.error-vapifault-database-error",
                 ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultGetOrg => "call.start.error-vapifault-get-org",
                 ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultGetSubscription => "call.start.error-vapifault-get-subscription",
+                ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultWorkerNotAvailable => "call.start.error-vapifault-worker-not-available",
                 ServerMessageStatusUpdateEndedReason.CallStartSquadVersionErrorValidation => "call.start.squad-version-error-validation",
                 ServerMessageStatusUpdateEndedReason.CustomerBusy => "customer-busy",
                 ServerMessageStatusUpdateEndedReason.CustomerDidNotAnswer => "customer-did-not-answer",
@@ -3371,6 +3376,7 @@ namespace Vapi
                 "call.start.error-vapifault-database-error" => ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultDatabaseError,
                 "call.start.error-vapifault-get-org" => ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultGetOrg,
                 "call.start.error-vapifault-get-subscription" => ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultGetSubscription,
+                "call.start.error-vapifault-worker-not-available" => ServerMessageStatusUpdateEndedReason.CallStartErrorVapifaultWorkerNotAvailable,
                 "call.start.squad-version-error-validation" => ServerMessageStatusUpdateEndedReason.CallStartSquadVersionErrorValidation,
                 "customer-busy" => ServerMessageStatusUpdateEndedReason.CustomerBusy,
                 "customer-did-not-answer" => ServerMessageStatusUpdateEndedReason.CustomerDidNotAnswer,

@@ -1307,6 +1307,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        CallStartErrorVapifaultWorkerNotAvailable,
+        /// <summary>
+        ///
+        /// </summary>
         CallStartSquadVersionErrorValidation,
         /// <summary>
         ///
@@ -2758,6 +2762,7 @@ namespace Vapi
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorVapifaultDatabaseError => "call.start.error-vapifault-database-error",
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorVapifaultGetOrg => "call.start.error-vapifault-get-org",
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorVapifaultGetSubscription => "call.start.error-vapifault-get-subscription",
+                ServerMessageEndOfCallReportEndedReason.CallStartErrorVapifaultWorkerNotAvailable => "call.start.error-vapifault-worker-not-available",
                 ServerMessageEndOfCallReportEndedReason.CallStartSquadVersionErrorValidation => "call.start.squad-version-error-validation",
                 ServerMessageEndOfCallReportEndedReason.CustomerBusy => "customer-busy",
                 ServerMessageEndOfCallReportEndedReason.CustomerDidNotAnswer => "customer-did-not-answer",
@@ -3371,6 +3376,7 @@ namespace Vapi
                 "call.start.error-vapifault-database-error" => ServerMessageEndOfCallReportEndedReason.CallStartErrorVapifaultDatabaseError,
                 "call.start.error-vapifault-get-org" => ServerMessageEndOfCallReportEndedReason.CallStartErrorVapifaultGetOrg,
                 "call.start.error-vapifault-get-subscription" => ServerMessageEndOfCallReportEndedReason.CallStartErrorVapifaultGetSubscription,
+                "call.start.error-vapifault-worker-not-available" => ServerMessageEndOfCallReportEndedReason.CallStartErrorVapifaultWorkerNotAvailable,
                 "call.start.squad-version-error-validation" => ServerMessageEndOfCallReportEndedReason.CallStartSquadVersionErrorValidation,
                 "customer-busy" => ServerMessageEndOfCallReportEndedReason.CustomerBusy,
                 "customer-did-not-answer" => ServerMessageEndOfCallReportEndedReason.CustomerDidNotAnswer,
