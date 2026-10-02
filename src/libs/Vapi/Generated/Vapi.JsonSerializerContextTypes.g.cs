@@ -6813,11 +6813,11 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.UpdateSimulationDTO? Type1695 { get; set; }
+        public global::Vapi.SimulationConcurrencyResponse? Type1695 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.SimulationConcurrencyResponse? Type1696 { get; set; }
+        public global::Vapi.UpdateSimulationDTO? Type1696 { get; set; }
         /// <summary>
         ///
         /// </summary>
