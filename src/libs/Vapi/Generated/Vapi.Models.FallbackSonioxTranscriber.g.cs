@@ -78,6 +78,14 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.SonioxContextGeneralItem>? ContextGeneral { get; set; }
 
         /// <summary>
+        /// Transcripts below this confidence are discarded. For a discarded final, an `assistant.transcriber.endpointedSpeechLowConfidence` hook whose range covers the confidence runs (by default `[threshold - 0.2, threshold)`); if none does, the assistant does not respond to that utterance. Confidence is the mean of the per-token scores, and a transcript with an unscored token counts as 1. When unset, nothing is discarded by this setting.<br/>
+        /// Example: 0.4F
+        /// </summary>
+        /// <example>0.4F</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidenceThreshold")]
+        public double? ConfidenceThreshold { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -117,6 +125,10 @@ namespace Vapi
         /// General context key-value pairs that guide the AI model during transcription. Helps adapt vocabulary to the correct domain, improving accuracy. Recommended: 10 or fewer pairs. Maps to Soniox context.general.<br/>
         /// Example: [{"key":"domain","value":"Healthcare"}, {"key":"topic","value":"Diabetes management consultation"}]
         /// </param>
+        /// <param name="confidenceThreshold">
+        /// Transcripts below this confidence are discarded. For a discarded final, an `assistant.transcriber.endpointedSpeechLowConfidence` hook whose range covers the confidence runs (by default `[threshold - 0.2, threshold)`); if none does, the assistant does not respond to that utterance. Confidence is the mean of the per-token scores, and a transcript with an unscored token counts as 1. When unset, nothing is discarded by this setting.<br/>
+        /// Example: 0.4F
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -130,7 +142,8 @@ namespace Vapi
             double? endpointSensitivity,
             double? endpointLatencyAdjustmentLevel,
             global::System.Collections.Generic.IList<string>? customVocabulary,
-            global::System.Collections.Generic.IList<global::Vapi.SonioxContextGeneralItem>? contextGeneral)
+            global::System.Collections.Generic.IList<global::Vapi.SonioxContextGeneralItem>? contextGeneral,
+            double? confidenceThreshold)
         {
             this.Provider = provider;
             this.Model = model;
@@ -142,6 +155,7 @@ namespace Vapi
             this.EndpointLatencyAdjustmentLevel = endpointLatencyAdjustmentLevel;
             this.CustomVocabulary = customVocabulary;
             this.ContextGeneral = contextGeneral;
+            this.ConfidenceThreshold = confidenceThreshold;
         }
 
         /// <summary>

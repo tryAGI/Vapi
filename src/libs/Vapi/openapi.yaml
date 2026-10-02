@@ -7966,6 +7966,33 @@
         ]
       }
     },
+    "/eval/simulation/concurrency": {
+      "get": {
+        "operationId": "SimulationController_getConcurrency",
+        "summary": "Get Simulation Concurrency",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimulationConcurrencyResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Simulations"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
     "/eval/simulation/{id}": {
       "get": {
         "operationId": "SimulationController_findOne",
@@ -8071,33 +8098,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Simulation"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "Simulations"
-        ],
-        "security": [
-          {
-            "bearer": []
-          }
-        ]
-      }
-    },
-    "/eval/simulation/concurrency": {
-      "get": {
-        "operationId": "SimulationController_getConcurrency",
-        "summary": "Get Simulation Concurrency",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SimulationConcurrencyResponse"
                 }
               }
             }
@@ -12687,6 +12687,13 @@
               "$ref": "#/components/schemas/SonioxContextGeneralItem"
             }
           },
+          "confidenceThreshold": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "example": 0.4,
+            "description": "Transcripts below this confidence are discarded. For a discarded final, an `assistant.transcriber.endpointedSpeechLowConfidence` hook whose range covers the confidence runs (by default `[threshold - 0.2, threshold)`); if none does, the assistant does not respond to that utterance. Confidence is the mean of the per-token scores, and a transcript with an unscored token counts as 1. When unset, nothing is discarded by this setting."
+          },
           "fallbackPlan": {
             "description": "This is the plan for transcriber provider fallbacks in the event that the primary transcriber provider fails.",
             "allOf": [
@@ -15779,6 +15786,13 @@
             "items": {
               "$ref": "#/components/schemas/SonioxContextGeneralItem"
             }
+          },
+          "confidenceThreshold": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "example": 0.4,
+            "description": "Transcripts below this confidence are discarded. For a discarded final, an `assistant.transcriber.endpointedSpeechLowConfidence` hook whose range covers the confidence runs (by default `[threshold - 0.2, threshold)`); if none does, the assistant does not respond to that utterance. Confidence is the mean of the per-token scores, and a transcript with an unscored token counts as 1. When unset, nothing is discarded by this setting."
           }
         },
         "required": [
@@ -62026,33 +62040,6 @@
           "updatedAt"
         ]
       },
-      "UpdateSimulationDTO": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "This is an optional friendly name for the simulation.",
-            "maxLength": 80
-          },
-          "scenarioId": {
-            "type": "string",
-            "description": "This is the ID of the scenario to use for this simulation.",
-            "format": "uuid"
-          },
-          "personalityId": {
-            "type": "string",
-            "description": "This is the ID of the personality to use for this simulation.",
-            "format": "uuid"
-          },
-          "path": {
-            "type": "string",
-            "nullable": true,
-            "description": "Optional folder path for organizing simulations.\nSupports up to 3 levels (e.g., \"dept/feature/variant\").\nSet to null to remove from folder.",
-            "maxLength": 255,
-            "pattern": "/^[a-zA-Z0-9][a-zA-Z0-9._-]*(?:\\/[a-zA-Z0-9][a-zA-Z0-9._-]*){0,2}$/"
-          }
-        }
-      },
       "SimulationConcurrencyResponse": {
         "type": "object",
         "properties": {
@@ -62095,6 +62082,33 @@
           "orgId",
           "updatedAt"
         ]
+      },
+      "UpdateSimulationDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "This is an optional friendly name for the simulation.",
+            "maxLength": 80
+          },
+          "scenarioId": {
+            "type": "string",
+            "description": "This is the ID of the scenario to use for this simulation.",
+            "format": "uuid"
+          },
+          "personalityId": {
+            "type": "string",
+            "description": "This is the ID of the personality to use for this simulation.",
+            "format": "uuid"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true,
+            "description": "Optional folder path for organizing simulations.\nSupports up to 3 levels (e.g., \"dept/feature/variant\").\nSet to null to remove from folder.",
+            "maxLength": 255,
+            "pattern": "/^[a-zA-Z0-9][a-zA-Z0-9._-]*(?:\\/[a-zA-Z0-9][a-zA-Z0-9._-]*){0,2}$/"
+          }
+        }
       },
       "BarInsightMetadata": {
         "type": "object",
