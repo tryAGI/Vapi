@@ -95,6 +95,13 @@ namespace Vapi
         public global::Vapi.OneOf<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>? Transport { get; set; }
 
         /// <summary>
+        /// This is the phone number that will be used for the call. To use an existing number, use `phoneNumberId` instead.<br/>
+        /// Only relevant for `outboundPhoneCall` and `inboundPhoneCall` type.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("phoneNumber")]
+        public global::Vapi.TransientTwilioPhoneNumber? PhoneNumber { get; set; }
+
+        /// <summary>
         /// This is the unique identifier for the call.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
@@ -277,13 +284,6 @@ namespace Vapi
         public string? PhoneNumberId { get; set; }
 
         /// <summary>
-        /// This is the phone number that will be used for the call. To use an existing number, use `phoneNumberId` instead.<br/>
-        /// Only relevant for `outboundPhoneCall` and `inboundPhoneCall` type.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("phoneNumber")]
-        public global::Vapi.ImportTwilioPhoneNumberDTO? PhoneNumber { get; set; }
-
-        /// <summary>
         /// This is the customer that will be called. To call a transient customer , use `customer` instead.<br/>
         /// Only relevant for `outboundPhoneCall` and `inboundPhoneCall` type.
         /// </summary>
@@ -363,6 +363,10 @@ namespace Vapi
         /// </param>
         /// <param name="transport">
         /// This is the transport of the call.
+        /// </param>
+        /// <param name="phoneNumber">
+        /// This is the phone number that will be used for the call. To use an existing number, use `phoneNumberId` instead.<br/>
+        /// Only relevant for `outboundPhoneCall` and `inboundPhoneCall` type.
         /// </param>
         /// <param name="startedAt">
         /// This is the ISO 8601 date-time string of when the call was started.
@@ -450,10 +454,6 @@ namespace Vapi
         /// This is the phone number that will be used for the call. To use a transient number, use `phoneNumber` instead.<br/>
         /// Only relevant for `outboundPhoneCall` and `inboundPhoneCall` type.
         /// </param>
-        /// <param name="phoneNumber">
-        /// This is the phone number that will be used for the call. To use an existing number, use `phoneNumberId` instead.<br/>
-        /// Only relevant for `outboundPhoneCall` and `inboundPhoneCall` type.
-        /// </param>
         /// <param name="customerId">
         /// This is the customer that will be called. To call a transient customer , use `customer` instead.<br/>
         /// Only relevant for `outboundPhoneCall` and `inboundPhoneCall` type.
@@ -487,6 +487,7 @@ namespace Vapi
             string? assistantVersion,
             string? squadVersion,
             global::Vapi.OneOf<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>? transport,
+            global::Vapi.TransientTwilioPhoneNumber? phoneNumber,
             global::System.DateTime? startedAt,
             global::System.DateTime? endedAt,
             double? cost,
@@ -507,7 +508,6 @@ namespace Vapi
             global::Vapi.CreateWorkflowDTO? workflow,
             global::Vapi.WorkflowOverrides? workflowOverrides,
             string? phoneNumberId,
-            global::Vapi.ImportTwilioPhoneNumberDTO? phoneNumber,
             string? customerId,
             global::Vapi.CreateCustomerDTO? customer,
             string? name,
@@ -524,6 +524,7 @@ namespace Vapi
             this.AssistantVersion = assistantVersion;
             this.SquadVersion = squadVersion;
             this.Transport = transport;
+            this.PhoneNumber = phoneNumber;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
@@ -548,7 +549,6 @@ namespace Vapi
             this.Workflow = workflow;
             this.WorkflowOverrides = workflowOverrides;
             this.PhoneNumberId = phoneNumberId;
-            this.PhoneNumber = phoneNumber;
             this.CustomerId = customerId;
             this.Customer = customer;
             this.Name = name;

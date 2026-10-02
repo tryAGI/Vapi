@@ -48,6 +48,10 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMeta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMetaSortOrder), TypeInfoPropertyName = "PaginationMetaSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>), TypeInfoPropertyName = "OneOfPhoneNumberHookCallRingingPhoneNumberHookCallEnding2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallRinging))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallEnding))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransferPhoneNumberHookAction))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransferPhoneNumberHookActionType), TypeInfoPropertyName = "TransferPhoneNumberHookActionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SayPhoneNumberHookAction))]
@@ -55,7 +59,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilter))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilterType), TypeInfoPropertyName = "PhoneNumberCallRingingHookFilterType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilterKey), TypeInfoPropertyName = "PhoneNumberCallRingingHookFilterKey2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallRinging))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallRingingOn), TypeInfoPropertyName = "PhoneNumberHookCallRingingOn2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.PhoneNumberCallRingingHookFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>>))]
@@ -65,11 +68,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterKey), TypeInfoPropertyName = "PhoneNumberCallEndingHookFilterKey2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem), TypeInfoPropertyName = "PhoneNumberCallEndingHookFilterOneOfItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallEnding))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallEndingOn), TypeInfoPropertyName = "PhoneNumberHookCallEndingOn2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.PhoneNumberCallEndingHookFilter>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>), TypeInfoPropertyName = "OneOfPhoneNumberHookCallRingingPhoneNumberHookCallEnding2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ByoPhoneNumber))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ByoPhoneNumberProvider), TypeInfoPropertyName = "ByoPhoneNumberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ByoPhoneNumberStatus), TypeInfoPropertyName = "ByoPhoneNumberStatus2")]
@@ -150,6 +150,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>?), TypeInfoPropertyName = "NullableOneOfTransferDestinationNumberTransferDestinationSip2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMetaSortOrder?), TypeInfoPropertyName = "NullablePaginationMetaSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>?), TypeInfoPropertyName = "NullableOneOfPhoneNumberHookCallRingingPhoneNumberHookCallEnding2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransferPhoneNumberHookActionType?), TypeInfoPropertyName = "NullableTransferPhoneNumberHookActionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SayPhoneNumberHookActionType?), TypeInfoPropertyName = "NullableSayPhoneNumberHookActionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilterType?), TypeInfoPropertyName = "NullablePhoneNumberCallRingingHookFilterType2")]
@@ -160,7 +161,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterKey?), TypeInfoPropertyName = "NullablePhoneNumberCallEndingHookFilterKey2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem?), TypeInfoPropertyName = "NullablePhoneNumberCallEndingHookFilterOneOfItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallEndingOn?), TypeInfoPropertyName = "NullablePhoneNumberHookCallEndingOn2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>?), TypeInfoPropertyName = "NullableOneOfPhoneNumberHookCallRingingPhoneNumberHookCallEnding2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ByoPhoneNumberProvider?), TypeInfoPropertyName = "NullableByoPhoneNumberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ByoPhoneNumberStatus?), TypeInfoPropertyName = "NullableByoPhoneNumberStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TwilioPhoneNumberProvider?), TypeInfoPropertyName = "NullableTwilioPhoneNumberProvider2")]
@@ -200,11 +200,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberControllerRemoveResponseDiscriminatorProvider?), TypeInfoPropertyName = "NullablePhoneNumberControllerRemoveResponseDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TextContent>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberCallRingingHookFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberCallEndingHookFilter>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ByoPhoneNumber, global::Vapi.TwilioPhoneNumber, global::Vapi.VonagePhoneNumber, global::Vapi.VapiPhoneNumber, global::Vapi.TelnyxPhoneNumber>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberControllerFindAllResponseItem>))]
     internal sealed partial class PhoneNumbersSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
@@ -271,12 +271,14 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>());
-            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());

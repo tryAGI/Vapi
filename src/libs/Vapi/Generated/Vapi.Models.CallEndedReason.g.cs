@@ -1307,6 +1307,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        CallStartErrorVapifaultWorkerNotAvailable,
+        /// <summary>
+        ///
+        /// </summary>
         CallStartSquadVersionErrorValidation,
         /// <summary>
         ///
@@ -2758,6 +2762,7 @@ namespace Vapi
                 CallEndedReason.CallStartErrorVapifaultDatabaseError => "call.start.error-vapifault-database-error",
                 CallEndedReason.CallStartErrorVapifaultGetOrg => "call.start.error-vapifault-get-org",
                 CallEndedReason.CallStartErrorVapifaultGetSubscription => "call.start.error-vapifault-get-subscription",
+                CallEndedReason.CallStartErrorVapifaultWorkerNotAvailable => "call.start.error-vapifault-worker-not-available",
                 CallEndedReason.CallStartSquadVersionErrorValidation => "call.start.squad-version-error-validation",
                 CallEndedReason.CustomerBusy => "customer-busy",
                 CallEndedReason.CustomerDidNotAnswer => "customer-did-not-answer",
@@ -3371,6 +3376,7 @@ namespace Vapi
                 "call.start.error-vapifault-database-error" => CallEndedReason.CallStartErrorVapifaultDatabaseError,
                 "call.start.error-vapifault-get-org" => CallEndedReason.CallStartErrorVapifaultGetOrg,
                 "call.start.error-vapifault-get-subscription" => CallEndedReason.CallStartErrorVapifaultGetSubscription,
+                "call.start.error-vapifault-worker-not-available" => CallEndedReason.CallStartErrorVapifaultWorkerNotAvailable,
                 "call.start.squad-version-error-validation" => CallEndedReason.CallStartSquadVersionErrorValidation,
                 "customer-busy" => CallEndedReason.CustomerBusy,
                 "customer-did-not-answer" => CallEndedReason.CustomerDidNotAnswer,

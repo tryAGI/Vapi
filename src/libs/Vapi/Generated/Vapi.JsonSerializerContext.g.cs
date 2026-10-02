@@ -1420,6 +1420,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VonageTransport))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VonageTransportConversationType), TypeInfoPropertyName = "VonageTransportConversationType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VonageTransportProvider), TypeInfoPropertyName = "VonageTransportProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransientTwilioPhoneNumber))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>), TypeInfoPropertyName = "OneOfPhoneNumberHookCallRingingPhoneNumberHookCallEnding2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallRinging))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallEnding))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AnalysisCostBreakdown))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CostBreakdown))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.Analysis))]
@@ -1448,29 +1453,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.RecordingConsentType), TypeInfoPropertyName = "RecordingConsentType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.Compliance))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOverrides))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransferPhoneNumberHookAction))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransferPhoneNumberHookActionType), TypeInfoPropertyName = "TransferPhoneNumberHookActionType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SayPhoneNumberHookAction))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SayPhoneNumberHookActionType), TypeInfoPropertyName = "SayPhoneNumberHookActionType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilter))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilterType), TypeInfoPropertyName = "PhoneNumberCallRingingHookFilterType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilterKey), TypeInfoPropertyName = "PhoneNumberCallRingingHookFilterKey2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallRinging))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallRingingOn), TypeInfoPropertyName = "PhoneNumberHookCallRingingOn2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.PhoneNumberCallRingingHookFilter>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>), TypeInfoPropertyName = "OneOfTransferPhoneNumberHookActionSayPhoneNumberHookAction2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilter))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterType), TypeInfoPropertyName = "PhoneNumberCallEndingHookFilterType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterKey), TypeInfoPropertyName = "PhoneNumberCallEndingHookFilterKey2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem), TypeInfoPropertyName = "PhoneNumberCallEndingHookFilterOneOfItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallEnding))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallEndingOn), TypeInfoPropertyName = "PhoneNumberHookCallEndingOn2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.PhoneNumberCallEndingHookFilter>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ImportTwilioPhoneNumberDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>), TypeInfoPropertyName = "OneOfPhoneNumberHookCallRingingPhoneNumberHookCallEnding2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomerDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SchedulePlan))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.Call))]
@@ -1496,6 +1478,25 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantSpeechWordProgressTiming))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantSpeechWordProgressTimingType), TypeInfoPropertyName = "AssistantSpeechWordProgressTimingType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.AssistantSpeechWordTimestamp>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransferPhoneNumberHookAction))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransferPhoneNumberHookActionType), TypeInfoPropertyName = "TransferPhoneNumberHookActionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SayPhoneNumberHookAction))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SayPhoneNumberHookActionType), TypeInfoPropertyName = "SayPhoneNumberHookActionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilter))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilterType), TypeInfoPropertyName = "PhoneNumberCallRingingHookFilterType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilterKey), TypeInfoPropertyName = "PhoneNumberCallRingingHookFilterKey2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallRingingOn), TypeInfoPropertyName = "PhoneNumberHookCallRingingOn2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.PhoneNumberCallRingingHookFilter>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>), TypeInfoPropertyName = "OneOfTransferPhoneNumberHookActionSayPhoneNumberHookAction2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilter))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterType), TypeInfoPropertyName = "PhoneNumberCallEndingHookFilterType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterKey), TypeInfoPropertyName = "PhoneNumberCallEndingHookFilterKey2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem), TypeInfoPropertyName = "PhoneNumberCallEndingHookFilterOneOfItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallEndingOn), TypeInfoPropertyName = "PhoneNumberHookCallEndingOn2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.PhoneNumberCallEndingHookFilter>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ImportTwilioPhoneNumberDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCallDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutputFilterDTO))]
@@ -1534,7 +1535,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOColumns), TypeInfoPropertyName = "ExportChatDTOColumns2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOFormat), TypeInfoPropertyName = "ExportChatDTOFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOSortOrder), TypeInfoPropertyName = "ExportChatDTOSortOrder2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOSortBy), TypeInfoPropertyName = "ExportChatDTOSortBy2")]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1634,6 +1634,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOSortBy), TypeInfoPropertyName = "ExportChatDTOSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ResponseOutputText))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ResponseOutputTextType), TypeInfoPropertyName = "ResponseOutputTextType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ResponseOutputMessage))]
@@ -2044,7 +2045,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.Scenario))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateScenarioDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ScenarioInUseConflictResponseDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ScenarioInUseConflictResponseDTOError), TypeInfoPropertyName = "ScenarioInUseConflictResponseDTOError2")]
     internal sealed partial class SourceGenerationContextChunk3 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -2144,6 +2144,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ScenarioInUseConflictResponseDTOError), TypeInfoPropertyName = "ScenarioInUseConflictResponseDTOError2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunSimulationEntry))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunSimulationEntryType), TypeInfoPropertyName = "SimulationRunSimulationEntryType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunSuiteEntry))]
@@ -2554,7 +2555,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialAuthenticationPlanDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialAuthenticationPlanDiscriminatorType), TypeInfoPropertyName = "CustomCredentialAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialEncryptionPlanDiscriminator))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialEncryptionPlanDiscriminatorType), TypeInfoPropertyName = "CustomCredentialEncryptionPlanDiscriminatorType2")]
     internal sealed partial class SourceGenerationContextChunk4 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -2654,6 +2654,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialEncryptionPlanDiscriminatorType), TypeInfoPropertyName = "CustomCredentialEncryptionPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.XAiCredential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.XAiCredentialProvider), TypeInfoPropertyName = "XAiCredentialProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GoogleCalendarOAuth2ClientCredential))]
@@ -3064,7 +3065,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientInboundMessageTransfer))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientInboundMessageTransferType), TypeInfoPropertyName = "ClientInboundMessageTransferType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientInboundMessageSendTransportMessage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientInboundMessageSendTransportMessageType), TypeInfoPropertyName = "ClientInboundMessageSendTransportMessageType2")]
     internal sealed partial class SourceGenerationContextChunk5 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -3164,6 +3164,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientInboundMessageSendTransportMessageType), TypeInfoPropertyName = "ClientInboundMessageSendTransportMessageType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.VapiSipTransportMessage, global::Vapi.TwilioTransportMessage>), TypeInfoPropertyName = "OneOfVapiSipTransportMessageTwilioTransportMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiSipTransportMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TwilioTransportMessage))]
@@ -3576,7 +3577,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCustomModelMetadataSendMode?), TypeInfoPropertyName = "NullableWorkflowCustomModelMetadataSendMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ConversationNodeType?), TypeInfoPropertyName = "NullableConversationNodeType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ToolNodeType?), TypeInfoPropertyName = "NullableToolNodeType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GoogleVoicemailDetectionPlanProvider?), TypeInfoPropertyName = "NullableGoogleVoicemailDetectionPlanProvider2")]
     internal sealed partial class SourceGenerationContextChunk6 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -3676,6 +3676,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GoogleVoicemailDetectionPlanProvider?), TypeInfoPropertyName = "NullableGoogleVoicemailDetectionPlanProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GoogleVoicemailDetectionPlanType?), TypeInfoPropertyName = "NullableGoogleVoicemailDetectionPlanType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OpenAIVoicemailDetectionPlanProvider?), TypeInfoPropertyName = "NullableOpenAIVoicemailDetectionPlanProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OpenAIVoicemailDetectionPlanType?), TypeInfoPropertyName = "NullableOpenAIVoicemailDetectionPlanType2")]
@@ -4051,21 +4052,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiSipTransportProvider?), TypeInfoPropertyName = "NullableVapiSipTransportProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VonageTransportConversationType?), TypeInfoPropertyName = "NullableVonageTransportConversationType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VonageTransportProvider?), TypeInfoPropertyName = "NullableVonageTransportProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>?), TypeInfoPropertyName = "NullableOneOfPhoneNumberHookCallRingingPhoneNumberHookCallEnding2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransferArtifactMode?), TypeInfoPropertyName = "NullableTransferArtifactMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransferArtifactStatus?), TypeInfoPropertyName = "NullableTransferArtifactStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.UserMessage, global::Vapi.SystemMessage, global::Vapi.BotMessage, global::Vapi.ToolCallMessage, global::Vapi.ToolCallResultMessage>?), TypeInfoPropertyName = "NullableOneOfUserMessageSystemMessageBotMessageToolCallMessageToolCallResultMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.RecordingConsentType?), TypeInfoPropertyName = "NullableRecordingConsentType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransferPhoneNumberHookActionType?), TypeInfoPropertyName = "NullableTransferPhoneNumberHookActionType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SayPhoneNumberHookActionType?), TypeInfoPropertyName = "NullableSayPhoneNumberHookActionType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilterType?), TypeInfoPropertyName = "NullablePhoneNumberCallRingingHookFilterType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilterKey?), TypeInfoPropertyName = "NullablePhoneNumberCallRingingHookFilterKey2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallRingingOn?), TypeInfoPropertyName = "NullablePhoneNumberHookCallRingingOn2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>?), TypeInfoPropertyName = "NullableOneOfTransferPhoneNumberHookActionSayPhoneNumberHookAction2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterType?), TypeInfoPropertyName = "NullablePhoneNumberCallEndingHookFilterType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterKey?), TypeInfoPropertyName = "NullablePhoneNumberCallEndingHookFilterKey2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem?), TypeInfoPropertyName = "NullablePhoneNumberCallEndingHookFilterOneOfItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallEndingOn?), TypeInfoPropertyName = "NullablePhoneNumberHookCallEndingOn2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>?), TypeInfoPropertyName = "NullableOneOfPhoneNumberHookCallRingingPhoneNumberHookCallEnding2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallType?), TypeInfoPropertyName = "NullableCallType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.TransportCost, global::Vapi.TranscriberCost, global::Vapi.ModelCost, global::Vapi.VoiceCost, global::Vapi.VapiCost, global::Vapi.VoicemailDetectionCost, global::Vapi.AnalysisCost, global::Vapi.KnowledgeBaseCost>?), TypeInfoPropertyName = "NullableOneOfTransportCostTranscriberCostModelCostVoiceCostVapiCostVoicemailDetectionCostAnalysisCostKnowledgeBaseCost2")]
     #pragma warning disable CS0618 // This registration names a deprecated API model.
@@ -4077,6 +4068,16 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>?), TypeInfoPropertyName = "NullableOneOfVapiWebsocketTransportVonageTransportTwilioTransportVapiSipTransportTelnyxTransportVapiWebCallTransport2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantSpeechWordAlignmentTimingType?), TypeInfoPropertyName = "NullableAssistantSpeechWordAlignmentTimingType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantSpeechWordProgressTimingType?), TypeInfoPropertyName = "NullableAssistantSpeechWordProgressTimingType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransferPhoneNumberHookActionType?), TypeInfoPropertyName = "NullableTransferPhoneNumberHookActionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SayPhoneNumberHookActionType?), TypeInfoPropertyName = "NullableSayPhoneNumberHookActionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilterType?), TypeInfoPropertyName = "NullablePhoneNumberCallRingingHookFilterType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallRingingHookFilterKey?), TypeInfoPropertyName = "NullablePhoneNumberCallRingingHookFilterKey2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallRingingOn?), TypeInfoPropertyName = "NullablePhoneNumberHookCallRingingOn2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>?), TypeInfoPropertyName = "NullableOneOfTransferPhoneNumberHookActionSayPhoneNumberHookAction2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterType?), TypeInfoPropertyName = "NullablePhoneNumberCallEndingHookFilterType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterKey?), TypeInfoPropertyName = "NullablePhoneNumberCallEndingHookFilterKey2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem?), TypeInfoPropertyName = "NullablePhoneNumberCallEndingHookFilterOneOfItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PhoneNumberHookCallEndingOn?), TypeInfoPropertyName = "NullablePhoneNumberHookCallEndingOn2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeveloperMessageRole?), TypeInfoPropertyName = "NullableDeveloperMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantMessageRole?), TypeInfoPropertyName = "NullableAssistantMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ToolMessageRole?), TypeInfoPropertyName = "NullableToolMessageRole2")]
@@ -4088,7 +4089,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOColumns?), TypeInfoPropertyName = "NullableExportChatDTOColumns2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOFormat?), TypeInfoPropertyName = "NullableExportChatDTOFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOSortOrder?), TypeInfoPropertyName = "NullableExportChatDTOSortOrder2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOSortBy?), TypeInfoPropertyName = "NullableExportChatDTOSortBy2")]
     internal sealed partial class SourceGenerationContextChunk7 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -4188,6 +4188,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ExportChatDTOSortBy?), TypeInfoPropertyName = "NullableExportChatDTOSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ResponseOutputTextType?), TypeInfoPropertyName = "NullableResponseOutputTextType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ResponseOutputMessageRole?), TypeInfoPropertyName = "NullableResponseOutputMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ResponseOutputMessageStatus?), TypeInfoPropertyName = "NullableResponseOutputMessageStatus2")]
@@ -4598,7 +4599,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateCustomCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan6?), TypeInfoPropertyName = "NullableAuthenticationPlan62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType?), TypeInfoPropertyName = "NullableCreateCustomCredentialDTOAuthenticationPlanDiscriminatorType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOEncryptionPlanDiscriminatorType?), TypeInfoPropertyName = "NullableCreateCustomCredentialDTOEncryptionPlanDiscriminatorType2")]
     internal sealed partial class SourceGenerationContextChunk8 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -4698,6 +4698,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOEncryptionPlanDiscriminatorType?), TypeInfoPropertyName = "NullableCreateCustomCredentialDTOEncryptionPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateGoHighLevelMCPCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateGoHighLevelMCPCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateInworldCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateInworldCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateEmailCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateEmailCredentialDTOProvider2")]
@@ -5108,7 +5109,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SquadVersion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem10>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem11>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem12>))]
     internal sealed partial class SourceGenerationContextChunk9 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -5208,25 +5208,26 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem12>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TranscriptWordConfidence>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ToolCallResultMessageWarning>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.StructuredOutputCostBreakdown>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.MonitorResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.UserMessage, global::Vapi.SystemMessage, global::Vapi.BotMessage, global::Vapi.ToolCallMessage, global::Vapi.ToolCallResultMessage>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TurnLatency>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TransferArtifact>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.NodeArtifact>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantActivation>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberCallRingingHookFilter>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberCallEndingHookFilter>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.TransportCost, global::Vapi.TranscriberCost, global::Vapi.ModelCost, global::Vapi.VoiceCost, global::Vapi.VapiCost, global::Vapi.VoicemailDetectionCost, global::Vapi.AnalysisCost, global::Vapi.KnowledgeBaseCost>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Call>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CallBatchError>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<double>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantSpeechWordTimestamp>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberCallRingingHookFilter>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberCallEndingHookFilterOneOfItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberCallEndingHookFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CreateCustomerDTO>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ToolCall>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ModelCost, global::Vapi.ChatCost>>))]
@@ -5573,20 +5574,22 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.UpdateWorkflowDTOBackgroundSound?, string>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.CallHookCallEnding, global::Vapi.CallHookAssistantSpeechInterrupted, global::Vapi.CallHookCustomerSpeechInterrupted, global::Vapi.CallHookCustomerSpeechTimeout, global::Vapi.CallHookModelResponseTimeout>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.UpdateWorkflowDTOVoicemailDetection?, global::Vapi.GoogleVoicemailDetectionPlan, global::Vapi.OpenAIVoicemailDetectionPlan, global::Vapi.TwilioVoicemailDetectionPlan, global::Vapi.VapiVoicemailDetectionPlan>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.UserMessage, global::Vapi.SystemMessage, global::Vapi.BotMessage, global::Vapi.ToolCallMessage, global::Vapi.ToolCallResultMessage>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.UserMessage, global::Vapi.SystemMessage, global::Vapi.BotMessage, global::Vapi.ToolCallMessage, global::Vapi.ToolCallResultMessage>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.UserMessage, global::Vapi.SystemMessage, global::Vapi.BotMessage, global::Vapi.ToolCallMessage, global::Vapi.ToolCallResultMessage>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransportCost, global::Vapi.TranscriberCost, global::Vapi.ModelCost, global::Vapi.VoiceCost, global::Vapi.VapiCost, global::Vapi.VoicemailDetectionCost, global::Vapi.AnalysisCost, global::Vapi.KnowledgeBaseCost>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.UserMessage, global::Vapi.SystemMessage, global::Vapi.BotMessage, global::Vapi.ToolCallMessage, global::Vapi.ToolCallResultMessage>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferPhoneNumberHookAction, global::Vapi.SayPhoneNumberHookAction>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.PhoneNumberHookCallRinging, global::Vapi.PhoneNumberHookCallEnding>());
-            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransportCost, global::Vapi.TranscriberCost, global::Vapi.ModelCost, global::Vapi.VoiceCost, global::Vapi.VapiCost, global::Vapi.VoicemailDetectionCost, global::Vapi.AnalysisCost, global::Vapi.KnowledgeBaseCost>());
-            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.UserMessage, global::Vapi.SystemMessage, global::Vapi.BotMessage, global::Vapi.ToolCallMessage, global::Vapi.ToolCallResultMessage>());
-            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.TransferDestinationNumber, global::Vapi.TransferDestinationSip>());
-            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.VapiWebsocketTransport, global::Vapi.VonageTransport, global::Vapi.TwilioTransport, global::Vapi.VapiSipTransport, global::Vapi.TelnyxTransport, global::Vapi.VapiWebCallTransport>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SystemMessage, global::Vapi.UserMessage, global::Vapi.AssistantMessage, global::Vapi.ToolMessage, global::Vapi.DeveloperMessage>>>());
@@ -8056,6 +8059,34 @@ namespace Vapi
 
                     || typeToConvert == typeof(global::Vapi.RecordingConsentType?)
 
+                    || typeToConvert == typeof(global::Vapi.CallType)
+
+                    || typeToConvert == typeof(global::Vapi.CallType?)
+
+                    || typeToConvert == typeof(global::Vapi.CallPhoneCallProvider)
+
+                    || typeToConvert == typeof(global::Vapi.CallPhoneCallProvider?)
+
+                    || typeToConvert == typeof(global::Vapi.CallPhoneCallTransport)
+
+                    || typeToConvert == typeof(global::Vapi.CallPhoneCallTransport?)
+
+                    || typeToConvert == typeof(global::Vapi.CallStatus)
+
+                    || typeToConvert == typeof(global::Vapi.CallStatus?)
+
+                    || typeToConvert == typeof(global::Vapi.CallEndedReason)
+
+                    || typeToConvert == typeof(global::Vapi.CallEndedReason?)
+
+                    || typeToConvert == typeof(global::Vapi.AssistantSpeechWordAlignmentTimingType)
+
+                    || typeToConvert == typeof(global::Vapi.AssistantSpeechWordAlignmentTimingType?)
+
+                    || typeToConvert == typeof(global::Vapi.AssistantSpeechWordProgressTimingType)
+
+                    || typeToConvert == typeof(global::Vapi.AssistantSpeechWordProgressTimingType?)
+
                     || typeToConvert == typeof(global::Vapi.TransferPhoneNumberHookActionType)
 
                     || typeToConvert == typeof(global::Vapi.TransferPhoneNumberHookActionType?)
@@ -8091,34 +8122,6 @@ namespace Vapi
                     || typeToConvert == typeof(global::Vapi.PhoneNumberHookCallEndingOn)
 
                     || typeToConvert == typeof(global::Vapi.PhoneNumberHookCallEndingOn?)
-
-                    || typeToConvert == typeof(global::Vapi.CallType)
-
-                    || typeToConvert == typeof(global::Vapi.CallType?)
-
-                    || typeToConvert == typeof(global::Vapi.CallPhoneCallProvider)
-
-                    || typeToConvert == typeof(global::Vapi.CallPhoneCallProvider?)
-
-                    || typeToConvert == typeof(global::Vapi.CallPhoneCallTransport)
-
-                    || typeToConvert == typeof(global::Vapi.CallPhoneCallTransport?)
-
-                    || typeToConvert == typeof(global::Vapi.CallStatus)
-
-                    || typeToConvert == typeof(global::Vapi.CallStatus?)
-
-                    || typeToConvert == typeof(global::Vapi.CallEndedReason)
-
-                    || typeToConvert == typeof(global::Vapi.CallEndedReason?)
-
-                    || typeToConvert == typeof(global::Vapi.AssistantSpeechWordAlignmentTimingType)
-
-                    || typeToConvert == typeof(global::Vapi.AssistantSpeechWordAlignmentTimingType?)
-
-                    || typeToConvert == typeof(global::Vapi.AssistantSpeechWordProgressTimingType)
-
-                    || typeToConvert == typeof(global::Vapi.AssistantSpeechWordProgressTimingType?)
 
                     || typeToConvert == typeof(global::Vapi.DeveloperMessageRole)
 
@@ -16263,6 +16266,76 @@ namespace Vapi
                     return new global::Vapi.JsonConverters.RecordingConsentTypeNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Vapi.CallType))
+                {
+                    return new global::Vapi.JsonConverters.CallTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.CallType?))
+                {
+                    return new global::Vapi.JsonConverters.CallTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.CallPhoneCallProvider))
+                {
+                    return new global::Vapi.JsonConverters.CallPhoneCallProviderJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.CallPhoneCallProvider?))
+                {
+                    return new global::Vapi.JsonConverters.CallPhoneCallProviderNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.CallPhoneCallTransport))
+                {
+                    return new global::Vapi.JsonConverters.CallPhoneCallTransportJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.CallPhoneCallTransport?))
+                {
+                    return new global::Vapi.JsonConverters.CallPhoneCallTransportNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.CallStatus))
+                {
+                    return new global::Vapi.JsonConverters.CallStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.CallStatus?))
+                {
+                    return new global::Vapi.JsonConverters.CallStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.CallEndedReason))
+                {
+                    return new global::Vapi.JsonConverters.CallEndedReasonJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.CallEndedReason?))
+                {
+                    return new global::Vapi.JsonConverters.CallEndedReasonNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.AssistantSpeechWordAlignmentTimingType))
+                {
+                    return new global::Vapi.JsonConverters.AssistantSpeechWordAlignmentTimingTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.AssistantSpeechWordAlignmentTimingType?))
+                {
+                    return new global::Vapi.JsonConverters.AssistantSpeechWordAlignmentTimingTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.AssistantSpeechWordProgressTimingType))
+                {
+                    return new global::Vapi.JsonConverters.AssistantSpeechWordProgressTimingTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.AssistantSpeechWordProgressTimingType?))
+                {
+                    return new global::Vapi.JsonConverters.AssistantSpeechWordProgressTimingTypeNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Vapi.TransferPhoneNumberHookActionType))
                 {
                     return new global::Vapi.JsonConverters.TransferPhoneNumberHookActionTypeJsonConverter();
@@ -16351,76 +16424,6 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.PhoneNumberHookCallEndingOn?))
                 {
                     return new global::Vapi.JsonConverters.PhoneNumberHookCallEndingOnNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CallType))
-                {
-                    return new global::Vapi.JsonConverters.CallTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CallType?))
-                {
-                    return new global::Vapi.JsonConverters.CallTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CallPhoneCallProvider))
-                {
-                    return new global::Vapi.JsonConverters.CallPhoneCallProviderJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CallPhoneCallProvider?))
-                {
-                    return new global::Vapi.JsonConverters.CallPhoneCallProviderNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CallPhoneCallTransport))
-                {
-                    return new global::Vapi.JsonConverters.CallPhoneCallTransportJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CallPhoneCallTransport?))
-                {
-                    return new global::Vapi.JsonConverters.CallPhoneCallTransportNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CallStatus))
-                {
-                    return new global::Vapi.JsonConverters.CallStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CallStatus?))
-                {
-                    return new global::Vapi.JsonConverters.CallStatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CallEndedReason))
-                {
-                    return new global::Vapi.JsonConverters.CallEndedReasonJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CallEndedReason?))
-                {
-                    return new global::Vapi.JsonConverters.CallEndedReasonNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.AssistantSpeechWordAlignmentTimingType))
-                {
-                    return new global::Vapi.JsonConverters.AssistantSpeechWordAlignmentTimingTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.AssistantSpeechWordAlignmentTimingType?))
-                {
-                    return new global::Vapi.JsonConverters.AssistantSpeechWordAlignmentTimingTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.AssistantSpeechWordProgressTimingType))
-                {
-                    return new global::Vapi.JsonConverters.AssistantSpeechWordProgressTimingTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.AssistantSpeechWordProgressTimingType?))
-                {
-                    return new global::Vapi.JsonConverters.AssistantSpeechWordProgressTimingTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Vapi.DeveloperMessageRole))
