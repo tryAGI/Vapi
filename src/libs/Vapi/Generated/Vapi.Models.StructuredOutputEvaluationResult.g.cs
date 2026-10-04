@@ -45,9 +45,8 @@ namespace Vapi
         /// This is the value extracted from the call by the structured output.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("extractedValue")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<double?, string, bool?, object>))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Vapi.OneOf<double?, string, bool?, object> ExtractedValue { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OneOfJsonConverter<double?, string, bool?>))]
+        public global::Vapi.OneOf<double?, string, bool?>? ExtractedValue { get; set; }
 
         /// <summary>
         /// This is the expected value that was defined in the evaluation plan.
@@ -113,9 +112,6 @@ namespace Vapi
         /// <param name="name">
         /// This is the name of the structured output.
         /// </param>
-        /// <param name="extractedValue">
-        /// This is the value extracted from the call by the structured output.
-        /// </param>
         /// <param name="expectedValue">
         /// This is the expected value that was defined in the evaluation plan.
         /// </param>
@@ -137,6 +133,9 @@ namespace Vapi
         /// <param name="schema">
         /// This is the structured output schema captured when the evaluation ran.
         /// </param>
+        /// <param name="extractedValue">
+        /// This is the value extracted from the call by the structured output.
+        /// </param>
         /// <param name="error">
         /// This contains any error that occurred during extraction.
         /// </param>
@@ -152,7 +151,6 @@ namespace Vapi
         public StructuredOutputEvaluationResult(
             string structuredOutputId,
             string name,
-            global::Vapi.OneOf<double?, string, bool?, object> extractedValue,
             global::Vapi.OneOf<double?, string, bool?> expectedValue,
             global::Vapi.StructuredOutputEvaluationResultComparator comparator,
             bool passed,
@@ -160,6 +158,7 @@ namespace Vapi
             string? path,
             string? description,
             global::Vapi.JsonSchema? schema,
+            global::Vapi.OneOf<double?, string, bool?>? extractedValue,
             string? error,
             bool? isSkipped,
             string? skipReason)
