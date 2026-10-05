@@ -83,6 +83,16 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? ToolMocks { get; set; }
 
         /// <summary>
+        /// Latency ceilings for voice simulations. Each expectation aggregates the<br/>
+        /// target call's per-turn latencies and fails the simulation (when required)<br/>
+        /// if the aggregated value exceeds its threshold. Skipped for chat simulations<br/>
+        /// and GPT Live targets; on any other voice simulation, a metric that no turn<br/>
+        /// measured fails.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latencyExpectations")]
+        public global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? LatencyExpectations { get; set; }
+
+        /// <summary>
         /// Optional folder path for organizing scenarios.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
         /// Maps to GitOps resource folder structure.
@@ -133,6 +143,13 @@ namespace Vapi
         /// <param name="toolMocks">
         /// Scenario-level tool call mocks to use during simulations.
         /// </param>
+        /// <param name="latencyExpectations">
+        /// Latency ceilings for voice simulations. Each expectation aggregates the<br/>
+        /// target call's per-turn latencies and fails the simulation (when required)<br/>
+        /// if the aggregated value exceeds its threshold. Skipped for chat simulations<br/>
+        /// and GPT Live targets; on any other voice simulation, a metric that no turn<br/>
+        /// measured fails.
+        /// </param>
         /// <param name="path">
         /// Optional folder path for organizing scenarios.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
@@ -152,6 +169,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>? hooks,
             global::Vapi.AssistantOverrides? targetOverrides,
             global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? toolMocks,
+            global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? latencyExpectations,
             string? path)
         {
             this.Id = id;
@@ -164,6 +182,7 @@ namespace Vapi
             this.Hooks = hooks;
             this.TargetOverrides = targetOverrides;
             this.ToolMocks = toolMocks;
+            this.LatencyExpectations = latencyExpectations;
             this.Path = path;
         }
 

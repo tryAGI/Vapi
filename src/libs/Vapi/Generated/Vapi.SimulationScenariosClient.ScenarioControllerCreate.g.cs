@@ -456,6 +456,13 @@ namespace Vapi
         /// <param name="toolMocks">
         /// Scenario-level tool call mocks to use during simulations.
         /// </param>
+        /// <param name="latencyExpectations">
+        /// Latency ceilings for voice simulations. Each expectation aggregates the<br/>
+        /// target call's per-turn latencies and fails the simulation (when required)<br/>
+        /// if the aggregated value exceeds its threshold. Skipped for chat simulations<br/>
+        /// and GPT Live targets; on any other voice simulation, a metric that no turn<br/>
+        /// measured fails.
+        /// </param>
         /// <param name="path">
         /// Optional folder path for organizing scenarios.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
@@ -471,6 +478,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>? hooks = default,
             global::Vapi.AssistantOverrides? targetOverrides = default,
             global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? toolMocks = default,
+            global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? latencyExpectations = default,
             string? path = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -483,6 +491,7 @@ namespace Vapi
                 Hooks = hooks,
                 TargetOverrides = targetOverrides,
                 ToolMocks = toolMocks,
+                LatencyExpectations = latencyExpectations,
                 Path = path,
             };
 
