@@ -593,6 +593,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Gpt6Luna,
+        /// <summary>
+        ///
+        /// </summary>
         O1Mini,
         /// <summary>
         ///
@@ -769,6 +773,7 @@ namespace Vapi
                 EvalOpenAIModelModel.Gpt5_spaincentral => "gpt-5:spaincentral",
                 EvalOpenAIModelModel.Gpt5_swedencentral => "gpt-5:swedencentral",
                 EvalOpenAIModelModel.Gpt5_westeurope => "gpt-5:westeurope",
+                EvalOpenAIModelModel.Gpt6Luna => "gpt-6-luna",
                 EvalOpenAIModelModel.O1Mini => "o1-mini",
                 EvalOpenAIModelModel.O1Mini20240912 => "o1-mini-2024-09-12",
                 EvalOpenAIModelModel.O3 => "o3",
@@ -929,6 +934,7 @@ namespace Vapi
                 "gpt-5:spaincentral" => EvalOpenAIModelModel.Gpt5_spaincentral,
                 "gpt-5:swedencentral" => EvalOpenAIModelModel.Gpt5_swedencentral,
                 "gpt-5:westeurope" => EvalOpenAIModelModel.Gpt5_westeurope,
+                "gpt-6-luna" => EvalOpenAIModelModel.Gpt6Luna,
                 "o1-mini" => EvalOpenAIModelModel.O1Mini,
                 "o1-mini-2024-09-12" => EvalOpenAIModelModel.O1Mini20240912,
                 "o3" => EvalOpenAIModelModel.O3,

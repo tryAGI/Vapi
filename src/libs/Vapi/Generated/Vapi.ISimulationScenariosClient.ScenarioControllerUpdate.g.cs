@@ -54,6 +54,10 @@ namespace Vapi
         /// Example: {"variableValues":{"customerName":"Alice","orderId":"12345"}}
         /// </param>
         /// <param name="toolMocks"></param>
+        /// <param name="latencyExpectations">
+        /// Latency ceilings for voice simulations. Omit to leave unchanged; send an<br/>
+        /// empty array to remove all latency expectations.
+        /// </param>
         /// <param name="path">
         /// Optional folder path for organizing scenarios.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
@@ -70,6 +74,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>? hooks = default,
             global::Vapi.AssistantOverrides? targetOverrides = default,
             global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? toolMocks = default,
+            global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? latencyExpectations = default,
             string? path = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

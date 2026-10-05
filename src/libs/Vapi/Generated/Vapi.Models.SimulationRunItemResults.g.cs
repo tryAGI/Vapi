@@ -16,7 +16,7 @@ namespace Vapi
         public required global::System.Collections.Generic.IList<global::Vapi.StructuredOutputEvaluationResult> Evaluations { get; set; }
 
         /// <summary>
-        /// This indicates whether all required evaluations passed.
+        /// This indicates whether all required, non-skipped structured output evaluations and latency expectations passed.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("passed")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -27,6 +27,13 @@ namespace Vapi
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("latencyMetrics")]
         public global::Vapi.LatencyMetrics? LatencyMetrics { get; set; }
+
+        /// <summary>
+        /// This is the list of results from the scenario's latency expectations.<br/>
+        /// Absent when the scenario has no latency expectations.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latencyEvaluations")]
+        public global::System.Collections.Generic.IList<global::Vapi.LatencyEvaluationResult>? LatencyEvaluations { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -41,10 +48,14 @@ namespace Vapi
         /// This is the list of results from structured output evaluations.
         /// </param>
         /// <param name="passed">
-        /// This indicates whether all required evaluations passed.
+        /// This indicates whether all required, non-skipped structured output evaluations and latency expectations passed.
         /// </param>
         /// <param name="latencyMetrics">
         /// This contains the latency metrics collected from the call.
+        /// </param>
+        /// <param name="latencyEvaluations">
+        /// This is the list of results from the scenario's latency expectations.<br/>
+        /// Absent when the scenario has no latency expectations.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -52,11 +63,13 @@ namespace Vapi
         public SimulationRunItemResults(
             global::System.Collections.Generic.IList<global::Vapi.StructuredOutputEvaluationResult> evaluations,
             bool passed,
-            global::Vapi.LatencyMetrics? latencyMetrics)
+            global::Vapi.LatencyMetrics? latencyMetrics,
+            global::System.Collections.Generic.IList<global::Vapi.LatencyEvaluationResult>? latencyEvaluations)
         {
             this.Evaluations = evaluations ?? throw new global::System.ArgumentNullException(nameof(evaluations));
             this.Passed = passed;
             this.LatencyMetrics = latencyMetrics;
+            this.LatencyEvaluations = latencyEvaluations;
         }
 
         /// <summary>

@@ -48,6 +48,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? ToolMocks { get; set; }
 
         /// <summary>
+        /// Latency ceilings for voice simulations. Omit to leave unchanged; send an<br/>
+        /// empty array to remove all latency expectations.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latencyExpectations")]
+        public global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? LatencyExpectations { get; set; }
+
+        /// <summary>
         /// Optional folder path for organizing scenarios.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
         /// Set to null to remove from folder.
@@ -82,6 +89,10 @@ namespace Vapi
         /// Example: {"variableValues":{"customerName":"Alice","orderId":"12345"}}
         /// </param>
         /// <param name="toolMocks"></param>
+        /// <param name="latencyExpectations">
+        /// Latency ceilings for voice simulations. Omit to leave unchanged; send an<br/>
+        /// empty array to remove all latency expectations.
+        /// </param>
         /// <param name="path">
         /// Optional folder path for organizing scenarios.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
@@ -97,6 +108,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>? hooks,
             global::Vapi.AssistantOverrides? targetOverrides,
             global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? toolMocks,
+            global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? latencyExpectations,
             string? path)
         {
             this.Name = name;
@@ -105,6 +117,7 @@ namespace Vapi
             this.Hooks = hooks;
             this.TargetOverrides = targetOverrides;
             this.ToolMocks = toolMocks;
+            this.LatencyExpectations = latencyExpectations;
             this.Path = path;
         }
 
