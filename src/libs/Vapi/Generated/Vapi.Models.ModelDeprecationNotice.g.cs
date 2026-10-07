@@ -57,17 +57,25 @@ namespace Vapi
         public required string RetirementDate { get; set; }
 
         /// <summary>
-        /// The recommended migration target for the slot's model: the registry's<br/>
-        /// replacement, followed through any further retirements as of the response<br/>
-        /// date, so it names a model that is alive on that day. A `&lt;model&gt;:&lt;region&gt;`<br/>
-        /// pin on the slot's model is kept on the target when the pinned name is<br/>
-        /// itself a settable model; otherwise the bare replacement is named.<br/>
+        /// Whether a replacement can be recommended for this configuration.<br/>
+        /// Example: manual-action-required
+        /// </summary>
+        /// <example>manual-action-required</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("replacementStatus")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.ModelDeprecationNoticeReplacementStatusJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Vapi.ModelDeprecationNoticeReplacementStatus ReplacementStatus { get; set; }
+
+        /// <summary>
+        /// Recommended model when replacementStatus is available. Omitted when<br/>
+        /// eligibility cannot be established or no eligible replacement exists.<br/>
+        /// A recommendation reflects the response-time decision; it neither<br/>
+        /// confirms a completed swap nor authorizes a future execution.<br/>
         /// Example: gpt-5
         /// </summary>
         /// <example>gpt-5</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("replacementModel")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string ReplacementModel { get; set; }
+        public string? ReplacementModel { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -101,12 +109,15 @@ namespace Vapi
         /// day Vapi no longer runs the model as configured.<br/>
         /// Example: 2026-03-26
         /// </param>
+        /// <param name="replacementStatus">
+        /// Whether a replacement can be recommended for this configuration.<br/>
+        /// Example: manual-action-required
+        /// </param>
         /// <param name="replacementModel">
-        /// The recommended migration target for the slot's model: the registry's<br/>
-        /// replacement, followed through any further retirements as of the response<br/>
-        /// date, so it names a model that is alive on that day. A `&lt;model&gt;:&lt;region&gt;`<br/>
-        /// pin on the slot's model is kept on the target when the pinned name is<br/>
-        /// itself a settable model; otherwise the bare replacement is named.<br/>
+        /// Recommended model when replacementStatus is available. Omitted when<br/>
+        /// eligibility cannot be established or no eligible replacement exists.<br/>
+        /// A recommendation reflects the response-time decision; it neither<br/>
+        /// confirms a completed swap nor authorizes a future execution.<br/>
         /// Example: gpt-5
         /// </param>
 #if NET7_0_OR_GREATER
@@ -118,14 +129,16 @@ namespace Vapi
             string model,
             string deprecationDate,
             string retirementDate,
-            string replacementModel)
+            global::Vapi.ModelDeprecationNoticeReplacementStatus replacementStatus,
+            string? replacementModel)
         {
             this.Slot = slot ?? throw new global::System.ArgumentNullException(nameof(slot));
             this.Provider = provider ?? throw new global::System.ArgumentNullException(nameof(provider));
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.DeprecationDate = deprecationDate ?? throw new global::System.ArgumentNullException(nameof(deprecationDate));
             this.RetirementDate = retirementDate ?? throw new global::System.ArgumentNullException(nameof(retirementDate));
-            this.ReplacementModel = replacementModel ?? throw new global::System.ArgumentNullException(nameof(replacementModel));
+            this.ReplacementStatus = replacementStatus;
+            this.ReplacementModel = replacementModel;
         }
 
         /// <summary>
