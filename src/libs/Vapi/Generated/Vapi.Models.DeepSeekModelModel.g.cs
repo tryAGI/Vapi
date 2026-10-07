@@ -15,6 +15,14 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        DeepseekFlash,
+        /// <summary>
+        ///
+        /// </summary>
+        DeepseekFlashThinking,
+        /// <summary>
+        ///
+        /// </summary>
         DeepseekReasoner,
     }
 
@@ -31,6 +39,8 @@ namespace Vapi
             return value switch
             {
                 DeepSeekModelModel.DeepseekChat => "deepseek-chat",
+                DeepSeekModelModel.DeepseekFlash => "deepseek-flash",
+                DeepSeekModelModel.DeepseekFlashThinking => "deepseek-flash-thinking",
                 DeepSeekModelModel.DeepseekReasoner => "deepseek-reasoner",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -43,6 +53,8 @@ namespace Vapi
             return value switch
             {
                 "deepseek-chat" => DeepSeekModelModel.DeepseekChat,
+                "deepseek-flash" => DeepSeekModelModel.DeepseekFlash,
+                "deepseek-flash-thinking" => DeepSeekModelModel.DeepseekFlashThinking,
                 "deepseek-reasoner" => DeepSeekModelModel.DeepseekReasoner,
                 _ => null,
             };
