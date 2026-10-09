@@ -19916,7 +19916,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -20101,6 +20101,7 @@
               "claude-3-opus-20240229",
               "claude-3-sonnet-20240229",
               "claude-haiku-4-5-20251001",
+              "claude-haiku-5-5",
               "claude-opus-4-20250514",
               "claude-opus-4-5-20251101",
               "claude-opus-4-6",
@@ -20108,6 +20109,18 @@
               "claude-sonnet-4-5-20250929",
               "claude-sonnet-4-6",
               "claude-sonnet-5"
+            ]
+          },
+          "reasoningEffort": {
+            "type": "string",
+            "description": "Reasoning effort for claude-haiku-5-5. `none` turns thinking off. `low` to `max`\nuse adaptive thinking at that effort; higher effort can add latency before the\nmodel speaks. Unset means `none`. Rejected for every other model.",
+            "enum": [
+              "high",
+              "low",
+              "max",
+              "medium",
+              "none",
+              "xhigh"
             ]
           },
           "provider": {
@@ -20133,7 +20146,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -20304,6 +20317,7 @@
               "claude-3-opus-20240229",
               "claude-3-sonnet-20240229",
               "claude-haiku-4-5-20251001",
+              "claude-haiku-5-5",
               "claude-opus-4-20250514",
               "claude-opus-4-5-20251101",
               "claude-opus-4-6",
@@ -20325,6 +20339,7 @@
               "claude-3-opus-20240229",
               "claude-3-sonnet-20240229",
               "claude-haiku-4-5-20251001",
+              "claude-haiku-5-5",
               "claude-opus-4-20250514",
               "claude-opus-4-5-20251101",
               "claude-opus-4-6",
@@ -20348,6 +20363,7 @@
                 "claude-3-opus-20240229",
                 "claude-3-sonnet-20240229",
                 "claude-haiku-4-5-20251001",
+                "claude-haiku-5-5",
                 "claude-opus-4-20250514",
                 "claude-opus-4-5-20251101",
                 "claude-opus-4-6",
@@ -20357,6 +20373,18 @@
                 "global.anthropic.claude-haiku-4-5-20251001-v1:0"
               ]
             }
+          },
+          "reasoningEffort": {
+            "type": "string",
+            "description": "Reasoning effort for claude-haiku-5-5. `none` turns thinking off. `low` to `max`\nuse adaptive thinking at that effort; higher effort can add latency before the\nmodel speaks. Unset means `none`. Rejected for every other model.",
+            "enum": [
+              "high",
+              "low",
+              "max",
+              "medium",
+              "none",
+              "xhigh"
+            ]
           },
           "thinking": {
             "description": "Optional configuration for Anthropic's thinking feature.\nOnly applicable for claude-3-7-sonnet-20250219 model.\nIf provided, maxTokens must be greater than thinking.budgetTokens.",
@@ -20374,7 +20402,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -20548,7 +20576,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -20752,7 +20780,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -20923,7 +20951,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -21099,7 +21127,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -21365,7 +21393,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -21551,7 +21579,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -21724,7 +21752,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -21897,7 +21925,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -22591,7 +22619,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -22761,7 +22789,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -22931,7 +22959,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -23101,7 +23129,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -23370,6 +23398,7 @@
               "claude-3-opus-20240229",
               "claude-3-sonnet-20240229",
               "claude-haiku-4-5-20251001",
+              "claude-haiku-5-5",
               "claude-opus-4-20250514",
               "claude-opus-4-5-20251101",
               "claude-opus-4-6",
@@ -23435,6 +23464,7 @@
               "claude-3-opus-20240229",
               "claude-3-sonnet-20240229",
               "claude-haiku-4-5-20251001",
+              "claude-haiku-5-5",
               "claude-opus-4-20250514",
               "claude-opus-4-5-20251101",
               "claude-opus-4-6",
@@ -27097,7 +27127,7 @@
           },
           "maxTokens": {
             "type": "number",
-            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.",
+            "description": "This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.",
             "minimum": 50,
             "maximum": 10000
           },
@@ -27621,6 +27651,8 @@
               "sonic-3-2026-01-12",
               "sonic-3.5",
               "sonic-3.5-2026-05-04",
+              "sonic-3.6",
+              "sonic-3.6-2026-08-27",
               "sonic-english",
               "sonic-multilingual",
               "sonic-preview"
@@ -27658,6 +27690,7 @@
               "ms",
               "nl",
               "no",
+              "or",
               "pa",
               "pl",
               "pt",
@@ -27671,6 +27704,7 @@
               "tl",
               "tr",
               "uk",
+              "ur",
               "vi",
               "zh"
             ],
@@ -30302,6 +30336,8 @@
               "sonic-3-2026-01-12",
               "sonic-3.5",
               "sonic-3.5-2026-05-04",
+              "sonic-3.6",
+              "sonic-3.6-2026-08-27",
               "sonic-english",
               "sonic-multilingual",
               "sonic-preview"
@@ -30339,6 +30375,7 @@
               "ms",
               "nl",
               "no",
+              "or",
               "pa",
               "pl",
               "pt",
@@ -30352,6 +30389,7 @@
               "tl",
               "tr",
               "uk",
+              "ur",
               "vi",
               "zh"
             ],
@@ -65457,6 +65495,7 @@
               "claude-3-opus-20240229",
               "claude-3-sonnet-20240229",
               "claude-haiku-4-5-20251001",
+              "claude-haiku-5-5",
               "claude-opus-4-20250514",
               "claude-opus-4-5-20251101",
               "claude-opus-4-6",

@@ -43,6 +43,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        ClaudeHaiku55,
+        /// <summary>
+        ///
+        /// </summary>
         ClaudeOpus420250514,
         /// <summary>
         ///
@@ -90,6 +94,7 @@ namespace Vapi
                 AnthropicBedrockModelModel.Claude3Opus20240229 => "claude-3-opus-20240229",
                 AnthropicBedrockModelModel.Claude3Sonnet20240229 => "claude-3-sonnet-20240229",
                 AnthropicBedrockModelModel.ClaudeHaiku4520251001 => "claude-haiku-4-5-20251001",
+                AnthropicBedrockModelModel.ClaudeHaiku55 => "claude-haiku-5-5",
                 AnthropicBedrockModelModel.ClaudeOpus420250514 => "claude-opus-4-20250514",
                 AnthropicBedrockModelModel.ClaudeOpus4520251101 => "claude-opus-4-5-20251101",
                 AnthropicBedrockModelModel.ClaudeOpus46 => "claude-opus-4-6",
@@ -115,6 +120,7 @@ namespace Vapi
                 "claude-3-opus-20240229" => AnthropicBedrockModelModel.Claude3Opus20240229,
                 "claude-3-sonnet-20240229" => AnthropicBedrockModelModel.Claude3Sonnet20240229,
                 "claude-haiku-4-5-20251001" => AnthropicBedrockModelModel.ClaudeHaiku4520251001,
+                "claude-haiku-5-5" => AnthropicBedrockModelModel.ClaudeHaiku55,
                 "claude-opus-4-20250514" => AnthropicBedrockModelModel.ClaudeOpus420250514,
                 "claude-opus-4-5-20251101" => AnthropicBedrockModelModel.ClaudeOpus4520251101,
                 "claude-opus-4-6" => AnthropicBedrockModelModel.ClaudeOpus46,
