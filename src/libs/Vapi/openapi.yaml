@@ -63724,6 +63724,7 @@
               "pipeline.botSpeechStarted",
               "pipeline.botSpeechStopped",
               "pipeline.cleared",
+              "pipeline.denoiserFailed",
               "pipeline.endpointingTriggered",
               "pipeline.firstMessageCompleted",
               "pipeline.firstMessageStarted",

@@ -388,6 +388,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        PipelineDenoiserFailed,
+        /// <summary>
+        ///
+        /// </summary>
         PipelineEndpointingTriggered,
         /// <summary>
         ///
@@ -517,6 +521,7 @@ namespace Vapi
                 JSONQueryOnEventsTableOn.PipelineBotSpeechStarted => "pipeline.botSpeechStarted",
                 JSONQueryOnEventsTableOn.PipelineBotSpeechStopped => "pipeline.botSpeechStopped",
                 JSONQueryOnEventsTableOn.PipelineCleared => "pipeline.cleared",
+                JSONQueryOnEventsTableOn.PipelineDenoiserFailed => "pipeline.denoiserFailed",
                 JSONQueryOnEventsTableOn.PipelineEndpointingTriggered => "pipeline.endpointingTriggered",
                 JSONQueryOnEventsTableOn.PipelineFirstMessageCompleted => "pipeline.firstMessageCompleted",
                 JSONQueryOnEventsTableOn.PipelineFirstMessageStarted => "pipeline.firstMessageStarted",
@@ -627,6 +632,7 @@ namespace Vapi
                 "pipeline.botSpeechStarted" => JSONQueryOnEventsTableOn.PipelineBotSpeechStarted,
                 "pipeline.botSpeechStopped" => JSONQueryOnEventsTableOn.PipelineBotSpeechStopped,
                 "pipeline.cleared" => JSONQueryOnEventsTableOn.PipelineCleared,
+                "pipeline.denoiserFailed" => JSONQueryOnEventsTableOn.PipelineDenoiserFailed,
                 "pipeline.endpointingTriggered" => JSONQueryOnEventsTableOn.PipelineEndpointingTriggered,
                 "pipeline.firstMessageCompleted" => JSONQueryOnEventsTableOn.PipelineFirstMessageCompleted,
                 "pipeline.firstMessageStarted" => JSONQueryOnEventsTableOn.PipelineFirstMessageStarted,
