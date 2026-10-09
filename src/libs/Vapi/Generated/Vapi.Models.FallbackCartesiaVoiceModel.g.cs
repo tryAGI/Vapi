@@ -44,6 +44,14 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Sonic36,
+        /// <summary>
+        ///
+        /// </summary>
+        Sonic3620260827,
+        /// <summary>
+        ///
+        /// </summary>
         SonicEnglish,
         /// <summary>
         ///
@@ -75,6 +83,8 @@ namespace Vapi
                 FallbackCartesiaVoiceModel.Sonic320260112 => "sonic-3-2026-01-12",
                 FallbackCartesiaVoiceModel.Sonic35 => "sonic-3.5",
                 FallbackCartesiaVoiceModel.Sonic3520260504 => "sonic-3.5-2026-05-04",
+                FallbackCartesiaVoiceModel.Sonic36 => "sonic-3.6",
+                FallbackCartesiaVoiceModel.Sonic3620260827 => "sonic-3.6-2026-08-27",
                 FallbackCartesiaVoiceModel.SonicEnglish => "sonic-english",
                 FallbackCartesiaVoiceModel.SonicMultilingual => "sonic-multilingual",
                 FallbackCartesiaVoiceModel.SonicPreview => "sonic-preview",
@@ -96,6 +106,8 @@ namespace Vapi
                 "sonic-3-2026-01-12" => FallbackCartesiaVoiceModel.Sonic320260112,
                 "sonic-3.5" => FallbackCartesiaVoiceModel.Sonic35,
                 "sonic-3.5-2026-05-04" => FallbackCartesiaVoiceModel.Sonic3520260504,
+                "sonic-3.6" => FallbackCartesiaVoiceModel.Sonic36,
+                "sonic-3.6-2026-08-27" => FallbackCartesiaVoiceModel.Sonic3620260827,
                 "sonic-english" => FallbackCartesiaVoiceModel.SonicEnglish,
                 "sonic-multilingual" => FallbackCartesiaVoiceModel.SonicMultilingual,
                 "sonic-preview" => FallbackCartesiaVoiceModel.SonicPreview,

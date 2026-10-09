@@ -52,6 +52,15 @@ namespace Vapi
         public required global::Vapi.AnthropicModelModel Model { get; set; }
 
         /// <summary>
+        /// Reasoning effort for claude-haiku-5-5. `none` turns thinking off. `low` to `max`<br/>
+        /// use adaptive thinking at that effort; higher effort can add latency before the<br/>
+        /// model speaks. Unset means `none`. Rejected for every other model.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningEffort")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AnthropicModelReasoningEffortJsonConverter))]
+        public global::Vapi.AnthropicModelReasoningEffort? ReasoningEffort { get; set; }
+
+        /// <summary>
         /// The provider identifier for Anthropic.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
@@ -73,7 +82,7 @@ namespace Vapi
         public double? Temperature { get; set; }
 
         /// <summary>
-        /// This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.
+        /// This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maxTokens")]
         public double? MaxTokens { get; set; }
@@ -126,6 +135,11 @@ namespace Vapi
         /// <param name="knowledgeBase">
         /// These are the options for the knowledge base.
         /// </param>
+        /// <param name="reasoningEffort">
+        /// Reasoning effort for claude-haiku-5-5. `none` turns thinking off. `low` to `max`<br/>
+        /// use adaptive thinking at that effort; higher effort can add latency before the<br/>
+        /// model speaks. Unset means `none`. Rejected for every other model.
+        /// </param>
         /// <param name="provider">
         /// The provider identifier for Anthropic.
         /// </param>
@@ -138,7 +152,7 @@ namespace Vapi
         /// This is the temperature that will be used for calls. Default is 0.5.
         /// </param>
         /// <param name="maxTokens">
-        /// This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna no cap is applied unless you set one, because reasoning uses output tokens and a small cap can leave the reply empty.
+        /// This is the max number of tokens that the assistant will be allowed to generate in each turn of the conversation. Default is 250. On gpt-6-luna and claude-haiku-5-5 no cap is applied unless you set one (claude-haiku-5-5 sends its 128,000-token maximum), because reasoning uses output tokens and a small cap can leave the reply empty.
         /// </param>
         /// <param name="emotionRecognitionEnabled">
         /// This determines whether we detect user's emotion while they speak and send it as an additional info to model.<br/>
@@ -160,6 +174,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<string>? toolIds,
             global::System.Collections.Generic.IList<global::Vapi.ToolRef>? toolRefs,
             global::Vapi.CreateCustomKnowledgeBaseDTO? knowledgeBase,
+            global::Vapi.AnthropicModelReasoningEffort? reasoningEffort,
             global::Vapi.AnthropicModelProvider provider,
             global::Vapi.AnthropicThinkingConfig? thinking,
             double? temperature,
@@ -173,6 +188,7 @@ namespace Vapi
             this.ToolRefs = toolRefs;
             this.KnowledgeBase = knowledgeBase;
             this.Model = model;
+            this.ReasoningEffort = reasoningEffort;
             this.Provider = provider;
             this.Thinking = thinking;
             this.Temperature = temperature;

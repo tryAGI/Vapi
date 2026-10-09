@@ -120,6 +120,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Or,
+        /// <summary>
+        ///
+        /// </summary>
         Pa,
         /// <summary>
         ///
@@ -172,6 +176,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Ur,
+        /// <summary>
+        ///
+        /// </summary>
         Vi,
         /// <summary>
         ///
@@ -218,6 +226,7 @@ namespace Vapi
                 FallbackCartesiaVoiceLanguage.Ms => "ms",
                 FallbackCartesiaVoiceLanguage.Nl => "nl",
                 FallbackCartesiaVoiceLanguage.No => "no",
+                FallbackCartesiaVoiceLanguage.Or => "or",
                 FallbackCartesiaVoiceLanguage.Pa => "pa",
                 FallbackCartesiaVoiceLanguage.Pl => "pl",
                 FallbackCartesiaVoiceLanguage.Pt => "pt",
@@ -231,6 +240,7 @@ namespace Vapi
                 FallbackCartesiaVoiceLanguage.Tl => "tl",
                 FallbackCartesiaVoiceLanguage.Tr => "tr",
                 FallbackCartesiaVoiceLanguage.Uk => "uk",
+                FallbackCartesiaVoiceLanguage.Ur => "ur",
                 FallbackCartesiaVoiceLanguage.Vi => "vi",
                 FallbackCartesiaVoiceLanguage.Zh => "zh",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -270,6 +280,7 @@ namespace Vapi
                 "ms" => FallbackCartesiaVoiceLanguage.Ms,
                 "nl" => FallbackCartesiaVoiceLanguage.Nl,
                 "no" => FallbackCartesiaVoiceLanguage.No,
+                "or" => FallbackCartesiaVoiceLanguage.Or,
                 "pa" => FallbackCartesiaVoiceLanguage.Pa,
                 "pl" => FallbackCartesiaVoiceLanguage.Pl,
                 "pt" => FallbackCartesiaVoiceLanguage.Pt,
@@ -283,6 +294,7 @@ namespace Vapi
                 "tl" => FallbackCartesiaVoiceLanguage.Tl,
                 "tr" => FallbackCartesiaVoiceLanguage.Tr,
                 "uk" => FallbackCartesiaVoiceLanguage.Uk,
+                "ur" => FallbackCartesiaVoiceLanguage.Ur,
                 "vi" => FallbackCartesiaVoiceLanguage.Vi,
                 "zh" => FallbackCartesiaVoiceLanguage.Zh,
                 _ => null,

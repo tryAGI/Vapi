@@ -120,6 +120,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Or,
+        /// <summary>
+        ///
+        /// </summary>
         Pa,
         /// <summary>
         ///
@@ -172,6 +176,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Ur,
+        /// <summary>
+        ///
+        /// </summary>
         Vi,
         /// <summary>
         ///
@@ -218,6 +226,7 @@ namespace Vapi
                 CartesiaVoiceLanguage.Ms => "ms",
                 CartesiaVoiceLanguage.Nl => "nl",
                 CartesiaVoiceLanguage.No => "no",
+                CartesiaVoiceLanguage.Or => "or",
                 CartesiaVoiceLanguage.Pa => "pa",
                 CartesiaVoiceLanguage.Pl => "pl",
                 CartesiaVoiceLanguage.Pt => "pt",
@@ -231,6 +240,7 @@ namespace Vapi
                 CartesiaVoiceLanguage.Tl => "tl",
                 CartesiaVoiceLanguage.Tr => "tr",
                 CartesiaVoiceLanguage.Uk => "uk",
+                CartesiaVoiceLanguage.Ur => "ur",
                 CartesiaVoiceLanguage.Vi => "vi",
                 CartesiaVoiceLanguage.Zh => "zh",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -270,6 +280,7 @@ namespace Vapi
                 "ms" => CartesiaVoiceLanguage.Ms,
                 "nl" => CartesiaVoiceLanguage.Nl,
                 "no" => CartesiaVoiceLanguage.No,
+                "or" => CartesiaVoiceLanguage.Or,
                 "pa" => CartesiaVoiceLanguage.Pa,
                 "pl" => CartesiaVoiceLanguage.Pl,
                 "pt" => CartesiaVoiceLanguage.Pt,
@@ -283,6 +294,7 @@ namespace Vapi
                 "tl" => CartesiaVoiceLanguage.Tl,
                 "tr" => CartesiaVoiceLanguage.Tr,
                 "uk" => CartesiaVoiceLanguage.Uk,
+                "ur" => CartesiaVoiceLanguage.Ur,
                 "vi" => CartesiaVoiceLanguage.Vi,
                 "zh" => CartesiaVoiceLanguage.Zh,
                 _ => null,
