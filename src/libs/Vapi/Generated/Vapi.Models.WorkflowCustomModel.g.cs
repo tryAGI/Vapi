@@ -10,11 +10,11 @@ namespace Vapi
     {
         /// <summary>
         /// These are the messages used to customize the prompt used for structured output extraction.<br/>
-        /// When provided, these messages replace the default prompts. Message contents support LiquidJS templating with the following variables:<br/>
-        /// - `{{transcript}}` or `{{messages}}` to reference the conversation (one is required)<br/>
+        /// When provided, these messages replace the default prompts. For text extraction, message contents support LiquidJS templating with the following variables:<br/>
+        /// - `{{transcript}}`, `{{messages}}`, or `{{messagesWithConfidence}}` to reference the conversation (one is required)<br/>
         /// - `{{structuredOutput.name}}`, `{{structuredOutput.description}}`, or `{{structuredOutput.schema}}` to reference the structured output definition (one is required)<br/>
         /// - `{{systemPrompt}}`, `{{callEndedReason}}`, `{{duration}}`, `{{startedAt}}`, `{{endedAt}}`, and any `assistantOverrides.variableValues`<br/>
-        /// `{{messages}}` is the full message history including tool calls; `{{transcript}}` is the spoken text only, which uses significantly fewer tokens.<br/>
+        /// In structured outputs, `{{messages}}` includes conversation text and tool calls/results, but omits caller transcription-confidence fields. For text extraction, `{{messagesWithConfidence}}` includes the original message history with transcription confidence for outputs that explicitly need it. These variables also apply in structured-output schema descriptions. Audio-targeted (`messages-with-audio`) extraction ignores custom messages. Stored call artifacts and API messages retain their confidence data. `{{transcript}}` is the spoken text only, which uses significantly fewer tokens.<br/>
         /// If not provided, default system and user prompts are used.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
@@ -94,11 +94,11 @@ namespace Vapi
         /// </param>
         /// <param name="messages">
         /// These are the messages used to customize the prompt used for structured output extraction.<br/>
-        /// When provided, these messages replace the default prompts. Message contents support LiquidJS templating with the following variables:<br/>
-        /// - `{{transcript}}` or `{{messages}}` to reference the conversation (one is required)<br/>
+        /// When provided, these messages replace the default prompts. For text extraction, message contents support LiquidJS templating with the following variables:<br/>
+        /// - `{{transcript}}`, `{{messages}}`, or `{{messagesWithConfidence}}` to reference the conversation (one is required)<br/>
         /// - `{{structuredOutput.name}}`, `{{structuredOutput.description}}`, or `{{structuredOutput.schema}}` to reference the structured output definition (one is required)<br/>
         /// - `{{systemPrompt}}`, `{{callEndedReason}}`, `{{duration}}`, `{{startedAt}}`, `{{endedAt}}`, and any `assistantOverrides.variableValues`<br/>
-        /// `{{messages}}` is the full message history including tool calls; `{{transcript}}` is the spoken text only, which uses significantly fewer tokens.<br/>
+        /// In structured outputs, `{{messages}}` includes conversation text and tool calls/results, but omits caller transcription-confidence fields. For text extraction, `{{messagesWithConfidence}}` includes the original message history with transcription confidence for outputs that explicitly need it. These variables also apply in structured-output schema descriptions. Audio-targeted (`messages-with-audio`) extraction ignores custom messages. Stored call artifacts and API messages retain their confidence data. `{{transcript}}` is the spoken text only, which uses significantly fewer tokens.<br/>
         /// If not provided, default system and user prompts are used.
         /// </param>
         /// <param name="provider">

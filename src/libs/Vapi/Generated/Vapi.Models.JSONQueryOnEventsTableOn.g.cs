@@ -413,6 +413,14 @@ namespace Vapi
         ///
         /// </summary>
         PipelineUserSpeechStopped,
+        /// <summary>
+        ///
+        /// </summary>
+        ServerMessageRequestFailed,
+        /// <summary>
+        ///
+        /// </summary>
+        ServerMessageRequestSucceeded,
     }
 
     /// <summary>
@@ -528,6 +536,8 @@ namespace Vapi
                 JSONQueryOnEventsTableOn.PipelineTurnStarted => "pipeline.turnStarted",
                 JSONQueryOnEventsTableOn.PipelineUserSpeechStarted => "pipeline.userSpeechStarted",
                 JSONQueryOnEventsTableOn.PipelineUserSpeechStopped => "pipeline.userSpeechStopped",
+                JSONQueryOnEventsTableOn.ServerMessageRequestFailed => "serverMessage.requestFailed",
+                JSONQueryOnEventsTableOn.ServerMessageRequestSucceeded => "serverMessage.requestSucceeded",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -639,6 +649,8 @@ namespace Vapi
                 "pipeline.turnStarted" => JSONQueryOnEventsTableOn.PipelineTurnStarted,
                 "pipeline.userSpeechStarted" => JSONQueryOnEventsTableOn.PipelineUserSpeechStarted,
                 "pipeline.userSpeechStopped" => JSONQueryOnEventsTableOn.PipelineUserSpeechStopped,
+                "serverMessage.requestFailed" => JSONQueryOnEventsTableOn.ServerMessageRequestFailed,
+                "serverMessage.requestSucceeded" => JSONQueryOnEventsTableOn.ServerMessageRequestSucceeded,
                 _ => null,
             };
         }
