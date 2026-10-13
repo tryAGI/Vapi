@@ -324,24 +324,24 @@ namespace Vapi
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            //
+                            // One of its versions is pinned (see AssistantPinnedConflictResponseDTO), or Vapi Agents manages the assistant (see AssistantManagedConflictResponseDTO).
                             if ((int)__response.StatusCode == 409)
                             {
                                 string? __content_409 = null;
                                 global::System.Exception? __exception_409 = null;
-                                global::Vapi.AssistantPinnedConflictResponseDTO? __value_409 = null;
+                                global::Vapi.AssistantControllerRemoveResponse? __value_409 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_409 = global::Vapi.AssistantPinnedConflictResponseDTO.FromJson(__content_409, JsonSerializerContext);
+                                        __value_409 = global::Vapi.AssistantControllerRemoveResponse.FromJson(__content_409, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_409 = global::Vapi.AssistantPinnedConflictResponseDTO.FromJson(__content_409, JsonSerializerContext);
+                                        __value_409 = global::Vapi.AssistantControllerRemoveResponse.FromJson(__content_409, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -350,7 +350,7 @@ namespace Vapi
                                 }
 
 
-                                throw global::Vapi.ApiException<global::Vapi.AssistantPinnedConflictResponseDTO>.Create(
+                                throw global::Vapi.ApiException<global::Vapi.AssistantControllerRemoveResponse?>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_409,
