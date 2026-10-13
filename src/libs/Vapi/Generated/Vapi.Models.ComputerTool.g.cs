@@ -15,6 +15,13 @@ namespace Vapi
         public string? LatestVersion { get; set; }
 
         /// <summary>
+        /// Display-only baseline label returned by the tool list before a version is stored. Fetch version history to initialize it before using it as a pin.<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("baselineVersion")]
+        public string? BaselineVersion { get; set; }
+
+        /// <summary>
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
@@ -210,6 +217,10 @@ namespace Vapi
         /// The display height in pixels
         /// </param>
         /// <param name="latestVersion"></param>
+        /// <param name="baselineVersion">
+        /// Display-only baseline label returned by the tool list before a version is stored. Fetch version history to initialize it before using it as a pin.<br/>
+        /// Included only in responses
+        /// </param>
         /// <param name="messages">
         /// Messages spoken while the tool is running. Multiple request-start messages are variants. For request-response-delayed, same timing means variants and different timings mean staged updates.
         /// </param>
@@ -322,6 +333,7 @@ namespace Vapi
             double displayWidthPx,
             double displayHeightPx,
             string? latestVersion,
+            string? baselineVersion,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.ToolMessageStart, global::Vapi.ToolMessageComplete, global::Vapi.ToolMessageFailed, global::Vapi.ToolMessageDelayed>>? messages,
             global::Vapi.ComputerToolType type,
             global::Vapi.ComputerToolSubType subType,
@@ -331,6 +343,7 @@ namespace Vapi
             global::Vapi.ComputerToolName name = global::Vapi.ComputerToolName.Computer)
         {
             this.LatestVersion = latestVersion;
+            this.BaselineVersion = baselineVersion;
             this.Messages = messages;
             this.Type = type;
             this.SubType = subType;

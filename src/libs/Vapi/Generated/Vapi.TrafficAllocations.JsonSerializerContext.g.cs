@@ -15,6 +15,10 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantPinnedConflictResponseDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantManagedVapiAgentsDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantManagedConflictResponseDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantManagedConflictResponseDTOError), TypeInfoPropertyName = "AssistantManagedConflictResponseDTOError2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
@@ -36,7 +40,12 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTOError), TypeInfoPropertyName = "TrafficAllocationStaleConflictResponseDTOError2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder), TypeInfoPropertyName = "TrafficAllocationControllerFindAllPaginatedSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantControllerRemoveResponse), TypeInfoPropertyName = "AssistantControllerRemoveResponse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerCreateResponse), TypeInfoPropertyName = "TrafficAllocationControllerCreateResponse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerCreateResponseDiscriminator))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerCreateResponseDiscriminatorError), TypeInfoPropertyName = "TrafficAllocationControllerCreateResponseDiscriminatorError2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantManagedConflictResponseDTOError?), TypeInfoPropertyName = "NullableAssistantManagedConflictResponseDTOError2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
@@ -47,6 +56,9 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTrafficAllocationDTOAllocationIntent?), TypeInfoPropertyName = "NullableCreateTrafficAllocationDTOAllocationIntent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTOError?), TypeInfoPropertyName = "NullableTrafficAllocationStaleConflictResponseDTOError2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder?), TypeInfoPropertyName = "NullableTrafficAllocationControllerFindAllPaginatedSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantControllerRemoveResponse?), TypeInfoPropertyName = "NullableAssistantControllerRemoveResponse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerCreateResponse?), TypeInfoPropertyName = "NullableTrafficAllocationControllerCreateResponse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerCreateResponseDiscriminatorError?), TypeInfoPropertyName = "NullableTrafficAllocationControllerCreateResponseDiscriminatorError2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrafficAllocationTarget>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CreateTrafficAllocationTargetDTO>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrafficAllocation>))]
@@ -97,6 +109,8 @@ namespace Vapi
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
+            options.Converters.Add(new global::Vapi.JsonConverters.AssistantControllerRemoveResponseJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.TrafficAllocationControllerCreateResponseJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, double?, bool?, object, byte[]>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, double?, bool?, object, byte[]>());
@@ -126,7 +140,11 @@ namespace Vapi
             public override bool CanConvert(global::System.Type typeToConvert)
             {
                 return
-                    typeToConvert == typeof(global::Vapi.PaginationMetaSortOrder)
+                    typeToConvert == typeof(global::Vapi.AssistantManagedConflictResponseDTOError)
+
+                    || typeToConvert == typeof(global::Vapi.AssistantManagedConflictResponseDTOError?)
+
+                    || typeToConvert == typeof(global::Vapi.PaginationMetaSortOrder)
 
                     || typeToConvert == typeof(global::Vapi.PaginationMetaSortOrder?)
 
@@ -148,13 +166,27 @@ namespace Vapi
 
                     || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder)
 
-                    || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder?);
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder?)
+
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerCreateResponseDiscriminatorError)
+
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerCreateResponseDiscriminatorError?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
                 global::System.Type typeToConvert,
                 global::System.Text.Json.JsonSerializerOptions options)
             {
+                if (typeToConvert == typeof(global::Vapi.AssistantManagedConflictResponseDTOError))
+                {
+                    return new global::Vapi.JsonConverters.AssistantManagedConflictResponseDTOErrorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.AssistantManagedConflictResponseDTOError?))
+                {
+                    return new global::Vapi.JsonConverters.AssistantManagedConflictResponseDTOErrorNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Vapi.PaginationMetaSortOrder))
                 {
                     return new global::Vapi.JsonConverters.PaginationMetaSortOrderJsonConverter();
@@ -213,6 +245,16 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder?))
                 {
                     return new global::Vapi.JsonConverters.TrafficAllocationControllerFindAllPaginatedSortOrderNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationControllerCreateResponseDiscriminatorError))
+                {
+                    return new global::Vapi.JsonConverters.TrafficAllocationControllerCreateResponseDiscriminatorErrorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationControllerCreateResponseDiscriminatorError?))
+                {
+                    return new global::Vapi.JsonConverters.TrafficAllocationControllerCreateResponseDiscriminatorErrorNullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }
