@@ -2,7 +2,7 @@
 
 namespace Vapi
 {
-    public sealed partial class User
+    public sealed partial class UserWithRole
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -47,20 +47,20 @@ namespace Vapi
         /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerContext.
         /// </summary>
-        public static global::Vapi.User? FromJson(
+        public static global::Vapi.UserWithRole? FromJson(
             string json,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
-                typeof(global::Vapi.User),
-                jsonSerializerContext) as global::Vapi.User;
+                typeof(global::Vapi.UserWithRole),
+                jsonSerializerContext) as global::Vapi.UserWithRole;
         }
 
         /// <summary>
         /// Deserializes a JSON string using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::Vapi.User? FromJson(
+        public static global::Vapi.UserWithRole? FromJson(
             string json)
         {
             return FromJson(
@@ -75,7 +75,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::Vapi.User? FromJson(
+        public static global::Vapi.UserWithRole? FromJson(
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -86,7 +86,7 @@ namespace Vapi
                     global::Vapi.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.User>(
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::Vapi.UserWithRole>(
                 json,
                 jsonSerializerOptions);
         }
@@ -94,20 +94,20 @@ namespace Vapi
         /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerContext.
         /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::Vapi.User?> FromJsonStreamAsync(
+        public static async global::System.Threading.Tasks.ValueTask<global::Vapi.UserWithRole?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
-                typeof(global::Vapi.User),
-                jsonSerializerContext).ConfigureAwait(false)) as global::Vapi.User;
+                typeof(global::Vapi.UserWithRole),
+                jsonSerializerContext).ConfigureAwait(false)) as global::Vapi.UserWithRole;
         }
 
         /// <summary>
         /// Deserializes a JSON stream using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::System.Threading.Tasks.ValueTask<global::Vapi.User?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::Vapi.UserWithRole?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream)
         {
             return FromJsonStreamAsync(
@@ -122,7 +122,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::System.Threading.Tasks.ValueTask<global::Vapi.User?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::Vapi.UserWithRole?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -133,7 +133,7 @@ namespace Vapi
                     global::Vapi.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Vapi.User?>(
+            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Vapi.UserWithRole?>(
                 jsonStream,
                 jsonSerializerOptions);
         }

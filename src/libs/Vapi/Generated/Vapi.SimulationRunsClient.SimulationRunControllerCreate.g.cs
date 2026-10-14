@@ -27,11 +27,13 @@ namespace Vapi
             };
         partial void PrepareSimulationRunControllerCreateArguments(
             global::System.Net.Http.HttpClient httpClient,
+            ref string? idempotencyKey,
             ref string? userAgent,
             global::Vapi.CreateSimulationRunDTO request);
         partial void PrepareSimulationRunControllerCreateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string? idempotencyKey,
             string? userAgent,
             global::Vapi.CreateSimulationRunDTO request);
         partial void ProcessSimulationRunControllerCreateResponse(
@@ -46,6 +48,9 @@ namespace Vapi
         /// <summary>
         /// Create Simulation Run
         /// </summary>
+        /// <param name="idempotencyKey">
+        /// Optional idempotency key. When omitted, the SDK generates one for this request.
+        /// </param>
         /// <param name="userAgent"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -54,6 +59,7 @@ namespace Vapi
         public async global::System.Threading.Tasks.Task<global::Vapi.CreateSimulationRunResponse> SimulationRunControllerCreateAsync(
 
             global::Vapi.CreateSimulationRunDTO request,
+            string? idempotencyKey = default,
             string? userAgent = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -61,6 +67,7 @@ namespace Vapi
             var __response = await SimulationRunControllerCreateAsResponseAsync(
 
                 request: request,
+                idempotencyKey: idempotencyKey,
                 userAgent: userAgent,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
@@ -71,6 +78,9 @@ namespace Vapi
         /// <summary>
         /// Create Simulation Run
         /// </summary>
+        /// <param name="idempotencyKey">
+        /// Optional idempotency key. When omitted, the SDK generates one for this request.
+        /// </param>
         /// <param name="userAgent"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -79,6 +89,7 @@ namespace Vapi
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.CreateSimulationRunResponse>> SimulationRunControllerCreateAsResponseAsync(
 
             global::Vapi.CreateSimulationRunDTO request,
+            string? idempotencyKey = default,
             string? userAgent = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -89,6 +100,7 @@ namespace Vapi
                 client: HttpClient);
             PrepareSimulationRunControllerCreateArguments(
                 httpClient: HttpClient,
+                idempotencyKey: ref idempotencyKey,
                 userAgent: ref userAgent,
                 request: request);
 
@@ -152,6 +164,10 @@ namespace Vapi
             {
                 __httpRequest.Headers.TryAddWithoutValidation("user-agent", userAgent.ToString());
             }
+            var __idempotencyKey = global::System.String.IsNullOrWhiteSpace(idempotencyKey)
+                ? CreateIdempotencyKey()
+                : idempotencyKey;
+            __httpRequest.Headers.TryAddWithoutValidation("Idempotency-Key", __idempotencyKey);
 
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -170,6 +186,7 @@ namespace Vapi
                 PrepareSimulationRunControllerCreateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    idempotencyKey: idempotencyKey,
                     userAgent: userAgent,
                     request: request);
 
@@ -387,6 +404,38 @@ namespace Vapi
                                         h => h.Key,
                                         h => h.Value));
                             }
+                            //
+                            if ((int)__response.StatusCode == 409)
+                            {
+                                string? __content_409 = null;
+                                global::System.Exception? __exception_409 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                    else
+                                    {
+                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_409 = __ex;
+                                }
+
+
+                                throw global::Vapi.ApiException.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_409,
+                                    responseBody: __content_409,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -486,6 +535,9 @@ namespace Vapi
         /// <summary>
         /// Create Simulation Run
         /// </summary>
+        /// <param name="idempotencyKey">
+        /// Optional idempotency key. When omitted, the SDK generates one for this request.
+        /// </param>
         /// <param name="userAgent"></param>
         /// <param name="simulations">
         /// Array of simulations and/or suites to run
@@ -506,6 +558,7 @@ namespace Vapi
         public async global::System.Threading.Tasks.Task<global::Vapi.CreateSimulationRunResponse> SimulationRunControllerCreateAsync(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationRunSimulationEntry, global::Vapi.SimulationRunSuiteEntry>> simulations,
             global::Vapi.OneOf<global::Vapi.SimulationRunTargetAssistant, global::Vapi.SimulationRunTargetSquad> target,
+            string? idempotencyKey = default,
             string? userAgent = default,
             double? iterations = default,
             global::Vapi.SimulationRunTransportConfiguration? transport = default,
@@ -521,6 +574,7 @@ namespace Vapi
             };
 
             return await SimulationRunControllerCreateAsync(
+                idempotencyKey: idempotencyKey,
                 userAgent: userAgent,
                 request: __request,
                 requestOptions: requestOptions,
