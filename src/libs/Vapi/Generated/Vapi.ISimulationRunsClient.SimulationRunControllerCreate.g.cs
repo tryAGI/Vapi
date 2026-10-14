@@ -7,6 +7,9 @@ namespace Vapi
         /// <summary>
         /// Create Simulation Run
         /// </summary>
+        /// <param name="idempotencyKey">
+        /// Optional idempotency key. When omitted, the SDK generates one for this request.
+        /// </param>
         /// <param name="userAgent"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -15,12 +18,16 @@ namespace Vapi
         global::System.Threading.Tasks.Task<global::Vapi.CreateSimulationRunResponse> SimulationRunControllerCreateAsync(
 
             global::Vapi.CreateSimulationRunDTO request,
+            string? idempotencyKey = default,
             string? userAgent = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Simulation Run
         /// </summary>
+        /// <param name="idempotencyKey">
+        /// Optional idempotency key. When omitted, the SDK generates one for this request.
+        /// </param>
         /// <param name="userAgent"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -29,12 +36,16 @@ namespace Vapi
         global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.CreateSimulationRunResponse>> SimulationRunControllerCreateAsResponseAsync(
 
             global::Vapi.CreateSimulationRunDTO request,
+            string? idempotencyKey = default,
             string? userAgent = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Simulation Run
         /// </summary>
+        /// <param name="idempotencyKey">
+        /// Optional idempotency key. When omitted, the SDK generates one for this request.
+        /// </param>
         /// <param name="userAgent"></param>
         /// <param name="simulations">
         /// Array of simulations and/or suites to run
@@ -55,6 +66,7 @@ namespace Vapi
         global::System.Threading.Tasks.Task<global::Vapi.CreateSimulationRunResponse> SimulationRunControllerCreateAsync(
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SimulationRunSimulationEntry, global::Vapi.SimulationRunSuiteEntry>> simulations,
             global::Vapi.OneOf<global::Vapi.SimulationRunTargetAssistant, global::Vapi.SimulationRunTargetSquad> target,
+            string? idempotencyKey = default,
             string? userAgent = default,
             double? iterations = default,
             global::Vapi.SimulationRunTransportConfiguration? transport = default,

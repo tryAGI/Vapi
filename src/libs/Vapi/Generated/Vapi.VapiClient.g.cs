@@ -35,6 +35,10 @@ namespace Vapi
         /// <inheritdoc/>
         public global::Vapi.AutoSDKClientOptions Options { get; }
 
+
+        /// <inheritdoc/>
+        public global::System.Func<string> CreateIdempotencyKey { get; set; } = () => global::System.Guid.NewGuid().ToString("D");
+
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Vapi.SourceGenerationContext.Default);
 
         /// <summary>
@@ -53,6 +57,7 @@ namespace Vapi
         public AnalyticsClient Analytics => new AnalyticsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -62,6 +67,7 @@ namespace Vapi
         public AssistantsClient Assistants => new AssistantsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -71,6 +77,7 @@ namespace Vapi
         public BoardClient Board => new BoardClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -80,6 +87,7 @@ namespace Vapi
         public CallsClient Calls => new CallsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -89,6 +97,7 @@ namespace Vapi
         public CampaignsClient Campaigns => new CampaignsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -98,6 +107,7 @@ namespace Vapi
         public ChatsClient Chats => new ChatsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -107,6 +117,7 @@ namespace Vapi
         public EvalClient Eval => new EvalClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -116,6 +127,7 @@ namespace Vapi
         public FilesClient Files => new FilesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -125,6 +137,7 @@ namespace Vapi
         public InsightClient Insight => new InsightClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -134,6 +147,7 @@ namespace Vapi
         public KnowledgeBasesV2Client KnowledgeBasesV2 => new KnowledgeBasesV2Client(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -143,6 +157,7 @@ namespace Vapi
         public ObservabilityScorecardClient ObservabilityScorecard => new ObservabilityScorecardClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -152,6 +167,7 @@ namespace Vapi
         public PhoneNumbersClient PhoneNumbers => new PhoneNumbersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -161,6 +177,7 @@ namespace Vapi
         public ProviderResourcesClient ProviderResources => new ProviderResourcesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -170,6 +187,7 @@ namespace Vapi
         public SessionsClient Sessions => new SessionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -179,6 +197,7 @@ namespace Vapi
         public SimulationPersonalitiesClient SimulationPersonalities => new SimulationPersonalitiesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -188,6 +207,7 @@ namespace Vapi
         public SimulationRunItemsClient SimulationRunItems => new SimulationRunItemsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -197,6 +217,7 @@ namespace Vapi
         public SimulationRunsClient SimulationRuns => new SimulationRunsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -206,6 +227,7 @@ namespace Vapi
         public SimulationScenariosClient SimulationScenarios => new SimulationScenariosClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -215,6 +237,7 @@ namespace Vapi
         public SimulationSuitesClient SimulationSuites => new SimulationSuitesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -224,6 +247,7 @@ namespace Vapi
         public SimulationsClient Simulations => new SimulationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -233,6 +257,7 @@ namespace Vapi
         public SquadsClient Squads => new SquadsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -242,6 +267,7 @@ namespace Vapi
         public StructuredOutputsClient StructuredOutputs => new StructuredOutputsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -251,6 +277,7 @@ namespace Vapi
         public ToolsClient Tools => new ToolsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
@@ -260,6 +287,7 @@ namespace Vapi
         public TrafficAllocationsClient TrafficAllocations => new TrafficAllocationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 

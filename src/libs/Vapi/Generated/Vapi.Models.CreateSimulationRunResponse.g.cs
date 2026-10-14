@@ -124,6 +124,12 @@ namespace Vapi
         public required string Url { get; set; }
 
         /// <summary>
+        /// True when the request carried an `Idempotency-Key` that an earlier request already used with the same body: this is the run that request created, and no new run was started. False or absent when this request created the run.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reused")]
+        public bool? Reused { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -184,6 +190,9 @@ namespace Vapi
         /// <param name="message">
         /// Additional information about how the run will execute
         /// </param>
+        /// <param name="reused">
+        /// True when the request carried an `Idempotency-Key` that an earlier request already used with the same body: this is the run that request created, and no new run was started. False or absent when this request created the run.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -204,7 +213,8 @@ namespace Vapi
             global::Vapi.SimulationRunItemCounts? itemCounts,
             double? iterations,
             global::Vapi.SimulationRunTransportConfiguration? transport,
-            string? message)
+            string? message,
+            bool? reused)
         {
             this.Id = id;
             this.OrgId = orgId;
@@ -223,6 +233,7 @@ namespace Vapi
             this.SimulationRunItemIds = simulationRunItemIds ?? throw new global::System.ArgumentNullException(nameof(simulationRunItemIds));
             this.Message = message;
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.Reused = reused;
         }
 
         /// <summary>

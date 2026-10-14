@@ -112,12 +112,13 @@ namespace Vapi
         public string? PromptCacheKey { get; set; }
 
         /// <summary>
-        /// This is the OpenAI service tier used for chat completions requests.<br/>
-        /// - `fast`: OpenAI's fast processing tier (renamed from `priority` on 2026-07-30; both values are accepted and billed identically) — up to ~2.5x faster inference at 2x the standard token rates. OpenAI may silently downgrade a fast request to standard processing under ramp limits; when that happens the response reports the served tier and the request is billed at standard rates.<br/>
-        /// - `auto`: uses the service tier configured for the OpenAI project.<br/>
-        /// - `default`: standard processing and billing.<br/>
-        /// Only applies to models that support fast processing: gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna, gpt-5.5. Ignored for other models.<br/>
-        /// @default undefined (uses the service tier configured for the OpenAI project)
+        /// This is the OpenAI service tier to request.<br/>
+        /// - `fast`: requests Fast mode, which gives faster responses at a higher per-token rate. How much faster depends on the model.<br/>
+        /// - `priority`: the old name for `fast`, accepted and billed the same.<br/>
+        /// - `default`: standard processing.<br/>
+        /// - `auto`: the default when unset. On Vapi's OpenAI keys this is standard processing; on your own OpenAI key, OpenAI applies your project's default tier.<br/>
+        /// OpenAI sets Fast mode rates per model, and they are not a fixed multiple of the standard rates. Vapi bills them only when OpenAI reports that it served the request in Fast mode. Otherwise the request is billed at standard rates, for example when Fast mode isn't available for the model on Vapi, OpenAI downgrades the request, or the request runs on Azure OpenAI.<br/>
+        /// Supported models and their Fast mode rates: https://docs.vapi.ai/providers/model/openai
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serviceTier")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.OpenAIModelServiceTierJsonConverter))]
@@ -229,12 +230,13 @@ namespace Vapi
         /// @default undefined
         /// </param>
         /// <param name="serviceTier">
-        /// This is the OpenAI service tier used for chat completions requests.<br/>
-        /// - `fast`: OpenAI's fast processing tier (renamed from `priority` on 2026-07-30; both values are accepted and billed identically) — up to ~2.5x faster inference at 2x the standard token rates. OpenAI may silently downgrade a fast request to standard processing under ramp limits; when that happens the response reports the served tier and the request is billed at standard rates.<br/>
-        /// - `auto`: uses the service tier configured for the OpenAI project.<br/>
-        /// - `default`: standard processing and billing.<br/>
-        /// Only applies to models that support fast processing: gpt-5.6-sol, gpt-5.6-terra, gpt-5.6-luna, gpt-5.5. Ignored for other models.<br/>
-        /// @default undefined (uses the service tier configured for the OpenAI project)
+        /// This is the OpenAI service tier to request.<br/>
+        /// - `fast`: requests Fast mode, which gives faster responses at a higher per-token rate. How much faster depends on the model.<br/>
+        /// - `priority`: the old name for `fast`, accepted and billed the same.<br/>
+        /// - `default`: standard processing.<br/>
+        /// - `auto`: the default when unset. On Vapi's OpenAI keys this is standard processing; on your own OpenAI key, OpenAI applies your project's default tier.<br/>
+        /// OpenAI sets Fast mode rates per model, and they are not a fixed multiple of the standard rates. Vapi bills them only when OpenAI reports that it served the request in Fast mode. Otherwise the request is billed at standard rates, for example when Fast mode isn't available for the model on Vapi, OpenAI downgrades the request, or the request runs on Azure OpenAI.<br/>
+        /// Supported models and their Fast mode rates: https://docs.vapi.ai/providers/model/openai
         /// </param>
         /// <param name="reasoningEffort">
         /// Reasoning effort for reasoning-capable OpenAI models.<br/>

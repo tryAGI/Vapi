@@ -69,6 +69,13 @@ namespace Vapi
         public double? ReasoningTokens { get; set; }
 
         /// <summary>
+        /// This is the cost split by OpenAI service tier. It is only set on call costs, and only when OpenAI reported the tier it served for a request that asked for Fast mode.<br/>
+        /// There is one row per reported tier, plus one row without `serviceTier` for usage with no reported tier. The rows add up to the token counts above, and to `cost` within rounding.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("serviceTierBreakdown")]
+        public global::System.Collections.Generic.IList<global::Vapi.ModelCostServiceTierBreakdown>? ServiceTierBreakdown { get; set; }
+
+        /// <summary>
         /// This is the cost of the component in USD.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cost")]
@@ -119,6 +126,10 @@ namespace Vapi
         /// This is the number of reasoning tokens generated in the call. This is only applicable to reasoning models (e.g., OpenAI o-series, GPT-5) on providers that report them.<br/>
         /// This is a **subset of `completionTokens`**, not an addition to it: reasoning tokens are already counted in `completionTokens` and are already billed at the output-token rate. It is reported separately for visibility only and does not affect `cost`.
         /// </param>
+        /// <param name="serviceTierBreakdown">
+        /// This is the cost split by OpenAI service tier. It is only set on call costs, and only when OpenAI reported the tier it served for a request that asked for Fast mode.<br/>
+        /// There is one row per reported tier, plus one row without `serviceTier` for usage with no reported tier. The rows add up to the token counts above, and to `cost` within rounding.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -131,7 +142,8 @@ namespace Vapi
             double? seconds,
             bool? usageComplete,
             double? cachedPromptTokens,
-            double? reasoningTokens)
+            double? reasoningTokens,
+            global::System.Collections.Generic.IList<global::Vapi.ModelCostServiceTierBreakdown>? serviceTierBreakdown)
         {
             this.Type = type;
             this.Seconds = seconds;
@@ -141,6 +153,7 @@ namespace Vapi
             this.CompletionTokens = completionTokens;
             this.CachedPromptTokens = cachedPromptTokens;
             this.ReasoningTokens = reasoningTokens;
+            this.ServiceTierBreakdown = serviceTierBreakdown;
             this.Cost = cost;
         }
 
