@@ -27,6 +27,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Vapi.JsonSchema>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.JsonSchemaFormat), TypeInfoPropertyName = "JsonSchemaFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMeta))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMetaSortOrder), TypeInfoPropertyName = "PaginationMetaSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationHookInclude))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationHookWebhookAction))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationHookWebhookActionType), TypeInfoPropertyName = "SimulationHookWebhookActionType2")]
@@ -58,16 +60,19 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunConfiguration))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemStatus), TypeInfoPropertyName = "SimulationRunItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemsPaginatedResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunControllerFindItemsStatus), TypeInfoPropertyName = "SimulationRunControllerFindItemsStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunControllerFindItemsSortOrder), TypeInfoPropertyName = "SimulationRunControllerFindItemsSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunControllerFindItemsSortBy), TypeInfoPropertyName = "SimulationRunControllerFindItemsSortBy2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>), TypeInfoPropertyName = "OneOfIListSimulationRunItemSimulationRunItemsPaginatedResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.JsonSchemaType?), TypeInfoPropertyName = "NullableJsonSchemaType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.JsonSchemaFormat?), TypeInfoPropertyName = "NullableJsonSchemaFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMetaSortOrder?), TypeInfoPropertyName = "NullablePaginationMetaSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationHookWebhookActionType?), TypeInfoPropertyName = "NullableSimulationHookWebhookActionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationHookCallStartedOn?), TypeInfoPropertyName = "NullableSimulationHookCallStartedOn2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationHookCallEndedOn?), TypeInfoPropertyName = "NullableSimulationHookCallEndedOn2")]
@@ -81,6 +86,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunControllerFindItemsStatus?), TypeInfoPropertyName = "NullableSimulationRunControllerFindItemsStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunControllerFindItemsSortOrder?), TypeInfoPropertyName = "NullableSimulationRunControllerFindItemsSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunControllerFindItemsSortBy?), TypeInfoPropertyName = "NullableSimulationRunControllerFindItemsSortBy2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>?), TypeInfoPropertyName = "NullableOneOfIListSimulationRunItemSimulationRunItemsPaginatedResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationHookWebhookAction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>))]
@@ -88,6 +94,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.LatencyEvaluationResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationRunItemImprovementSuggestion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationRunItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.List<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>))]
     internal sealed partial class SimulationRunItemsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -149,6 +156,7 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<double?, string, bool?>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, double?>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>());
             options.Converters.Add(new global::Vapi.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
@@ -178,6 +186,10 @@ namespace Vapi
                     || typeToConvert == typeof(global::Vapi.JsonSchemaFormat)
 
                     || typeToConvert == typeof(global::Vapi.JsonSchemaFormat?)
+
+                    || typeToConvert == typeof(global::Vapi.PaginationMetaSortOrder)
+
+                    || typeToConvert == typeof(global::Vapi.PaginationMetaSortOrder?)
 
                     || typeToConvert == typeof(global::Vapi.SimulationHookWebhookActionType)
 
@@ -246,6 +258,16 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.JsonSchemaFormat?))
                 {
                     return new global::Vapi.JsonConverters.JsonSchemaFormatNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.PaginationMetaSortOrder))
+                {
+                    return new global::Vapi.JsonConverters.PaginationMetaSortOrderJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.PaginationMetaSortOrder?))
+                {
+                    return new global::Vapi.JsonConverters.PaginationMetaSortOrderNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Vapi.SimulationHookWebhookActionType))

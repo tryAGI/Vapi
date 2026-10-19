@@ -27,6 +27,7 @@ namespace Vapi
             };
         partial void PrepareSimulationRunControllerFindAllArguments(
             global::System.Net.Http.HttpClient httpClient,
+            global::System.Collections.Generic.IList<global::System.Guid>? suiteId,
             ref global::Vapi.SimulationRunControllerFindAllStatus? status,
             ref global::Vapi.SimulationRunControllerFindAllFilterStatus? filterStatus,
             ref global::Vapi.SimulationRunControllerFindAllTargetType? targetType,
@@ -46,6 +47,7 @@ namespace Vapi
         partial void PrepareSimulationRunControllerFindAllRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            global::System.Collections.Generic.IList<global::System.Guid>? suiteId,
             global::Vapi.SimulationRunControllerFindAllStatus? status,
             global::Vapi.SimulationRunControllerFindAllFilterStatus? filterStatus,
             global::Vapi.SimulationRunControllerFindAllTargetType? targetType,
@@ -74,6 +76,7 @@ namespace Vapi
         /// <summary>
         /// List Simulation Runs
         /// </summary>
+        /// <param name="suiteId"></param>
         /// <param name="status"></param>
         /// <param name="filterStatus"></param>
         /// <param name="targetType"></param>
@@ -94,6 +97,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRun>, global::Vapi.SimulationRunsPaginatedResponse>> SimulationRunControllerFindAllAsync(
+            global::System.Collections.Generic.IList<global::System.Guid>? suiteId = default,
             global::Vapi.SimulationRunControllerFindAllStatus? status = default,
             global::Vapi.SimulationRunControllerFindAllFilterStatus? filterStatus = default,
             global::Vapi.SimulationRunControllerFindAllTargetType? targetType = default,
@@ -114,6 +118,7 @@ namespace Vapi
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await SimulationRunControllerFindAllAsResponseAsync(
+                suiteId: suiteId,
                 status: status,
                 filterStatus: filterStatus,
                 targetType: targetType,
@@ -139,6 +144,7 @@ namespace Vapi
         /// <summary>
         /// List Simulation Runs
         /// </summary>
+        /// <param name="suiteId"></param>
         /// <param name="status"></param>
         /// <param name="filterStatus"></param>
         /// <param name="targetType"></param>
@@ -159,6 +165,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRun>, global::Vapi.SimulationRunsPaginatedResponse>>> SimulationRunControllerFindAllAsResponseAsync(
+            global::System.Collections.Generic.IList<global::System.Guid>? suiteId = default,
             global::Vapi.SimulationRunControllerFindAllStatus? status = default,
             global::Vapi.SimulationRunControllerFindAllFilterStatus? filterStatus = default,
             global::Vapi.SimulationRunControllerFindAllTargetType? targetType = default,
@@ -182,6 +189,7 @@ namespace Vapi
                 client: HttpClient);
             PrepareSimulationRunControllerFindAllArguments(
                 httpClient: HttpClient,
+                suiteId: suiteId,
                 status: ref status,
                 filterStatus: ref filterStatus,
                 targetType: ref targetType,
@@ -226,6 +234,7 @@ namespace Vapi
                                 path: "/eval/simulation/run",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
+                                .AddOptionalParameter("suiteId", suiteId, selector: static x => x.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."), delimiter: ",", explode: true)
                                 .AddOptionalParameter("status", status?.ToValueString())
                                 .AddOptionalParameter("filterStatus", filterStatus?.ToValueString())
                                 .AddOptionalParameter("targetType", targetType?.ToValueString())
@@ -283,6 +292,7 @@ namespace Vapi
                 PrepareSimulationRunControllerFindAllRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    suiteId: suiteId,
                     status: status,
                     filterStatus: filterStatus,
                     targetType: targetType,

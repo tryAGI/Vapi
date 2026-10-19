@@ -27,6 +27,8 @@ namespace Vapi
             };
         partial void PrepareSimulationSuiteControllerFindAllArguments(
             global::System.Net.Http.HttpClient httpClient,
+            global::System.Collections.Generic.IList<global::System.Guid>? assistantId,
+            global::System.Collections.Generic.IList<global::System.Guid>? squadId,
             ref string? name,
             ref double? page,
             ref global::Vapi.SimulationSuiteControllerFindAllSortOrder? sortOrder,
@@ -43,6 +45,8 @@ namespace Vapi
         partial void PrepareSimulationSuiteControllerFindAllRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            global::System.Collections.Generic.IList<global::System.Guid>? assistantId,
+            global::System.Collections.Generic.IList<global::System.Guid>? squadId,
             string? name,
             double? page,
             global::Vapi.SimulationSuiteControllerFindAllSortOrder? sortOrder,
@@ -66,8 +70,11 @@ namespace Vapi
             ref string content);
 
         /// <summary>
-        /// List Simulation Suites
+        /// List Simulation Suites<br/>
+        /// Returns a pagination envelope when page, limit, name, assistantId, or squadId is supplied; otherwise returns the legacy array.
         /// </summary>
+        /// <param name="assistantId"></param>
+        /// <param name="squadId"></param>
         /// <param name="name"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
@@ -84,7 +91,9 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>> SimulationSuiteControllerFindAllAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>> SimulationSuiteControllerFindAllAsync(
+            global::System.Collections.Generic.IList<global::System.Guid>? assistantId = default,
+            global::System.Collections.Generic.IList<global::System.Guid>? squadId = default,
             string? name = default,
             double? page = default,
             global::Vapi.SimulationSuiteControllerFindAllSortOrder? sortOrder = default,
@@ -102,6 +111,8 @@ namespace Vapi
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await SimulationSuiteControllerFindAllAsResponseAsync(
+                assistantId: assistantId,
+                squadId: squadId,
                 name: name,
                 page: page,
                 sortOrder: sortOrder,
@@ -122,8 +133,11 @@ namespace Vapi
             return __response.Body;
         }
         /// <summary>
-        /// List Simulation Suites
+        /// List Simulation Suites<br/>
+        /// Returns a pagination envelope when page, limit, name, assistantId, or squadId is supplied; otherwise returns the legacy array.
         /// </summary>
+        /// <param name="assistantId"></param>
+        /// <param name="squadId"></param>
         /// <param name="name"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
@@ -140,7 +154,9 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>>> SimulationSuiteControllerFindAllAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>>> SimulationSuiteControllerFindAllAsResponseAsync(
+            global::System.Collections.Generic.IList<global::System.Guid>? assistantId = default,
+            global::System.Collections.Generic.IList<global::System.Guid>? squadId = default,
             string? name = default,
             double? page = default,
             global::Vapi.SimulationSuiteControllerFindAllSortOrder? sortOrder = default,
@@ -161,6 +177,8 @@ namespace Vapi
                 client: HttpClient);
             PrepareSimulationSuiteControllerFindAllArguments(
                 httpClient: HttpClient,
+                assistantId: assistantId,
+                squadId: squadId,
                 name: ref name,
                 page: ref page,
                 sortOrder: ref sortOrder,
@@ -202,6 +220,8 @@ namespace Vapi
                                 path: "/eval/simulation/suite",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
+                                .AddOptionalParameter("assistantId", assistantId, selector: static x => x.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."), delimiter: ",", explode: true)
+                                .AddOptionalParameter("squadId", squadId, selector: static x => x.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."), delimiter: ",", explode: true)
                                 .AddOptionalParameter("name", name)
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("sortOrder", sortOrder?.ToValueString())
@@ -256,6 +276,8 @@ namespace Vapi
                 PrepareSimulationSuiteControllerFindAllRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    assistantId: assistantId,
+                    squadId: squadId,
                     name: name,
                     page: page,
                     sortOrder: sortOrder,
@@ -469,9 +491,9 @@ namespace Vapi
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = (global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>), JsonSerializerContext) ??
+                                    var __value = global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -501,9 +523,9 @@ namespace Vapi
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = (global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>), JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
