@@ -40,6 +40,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        ElevenV3Conversational,
+        /// <summary>
+        ///
+        /// </summary>
         ElevenV4Turbo,
     }
 
@@ -62,6 +66,7 @@ namespace Vapi
                 FallbackElevenLabsVoiceModel.ElevenTurboV2 => "eleven_turbo_v2",
                 FallbackElevenLabsVoiceModel.ElevenTurboV25 => "eleven_turbo_v2_5",
                 FallbackElevenLabsVoiceModel.ElevenV3 => "eleven_v3",
+                FallbackElevenLabsVoiceModel.ElevenV3Conversational => "eleven_v3_conversational",
                 FallbackElevenLabsVoiceModel.ElevenV4Turbo => "eleven_v4_turbo",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -80,6 +85,7 @@ namespace Vapi
                 "eleven_turbo_v2" => FallbackElevenLabsVoiceModel.ElevenTurboV2,
                 "eleven_turbo_v2_5" => FallbackElevenLabsVoiceModel.ElevenTurboV25,
                 "eleven_v3" => FallbackElevenLabsVoiceModel.ElevenV3,
+                "eleven_v3_conversational" => FallbackElevenLabsVoiceModel.ElevenV3Conversational,
                 "eleven_v4_turbo" => FallbackElevenLabsVoiceModel.ElevenV4Turbo,
                 _ => null,
             };

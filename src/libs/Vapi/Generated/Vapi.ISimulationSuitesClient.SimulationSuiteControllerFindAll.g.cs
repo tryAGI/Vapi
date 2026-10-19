@@ -5,8 +5,11 @@ namespace Vapi
     public partial interface ISimulationSuitesClient
     {
         /// <summary>
-        /// List Simulation Suites
+        /// List Simulation Suites<br/>
+        /// Returns a pagination envelope when page, limit, name, assistantId, or squadId is supplied; otherwise returns the legacy array.
         /// </summary>
+        /// <param name="assistantId"></param>
+        /// <param name="squadId"></param>
         /// <param name="name"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
@@ -23,7 +26,9 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>> SimulationSuiteControllerFindAllAsync(
+        global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>> SimulationSuiteControllerFindAllAsync(
+            global::System.Collections.Generic.IList<global::System.Guid>? assistantId = default,
+            global::System.Collections.Generic.IList<global::System.Guid>? squadId = default,
             string? name = default,
             double? page = default,
             global::Vapi.SimulationSuiteControllerFindAllSortOrder? sortOrder = default,
@@ -40,8 +45,11 @@ namespace Vapi
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// List Simulation Suites
+        /// List Simulation Suites<br/>
+        /// Returns a pagination envelope when page, limit, name, assistantId, or squadId is supplied; otherwise returns the legacy array.
         /// </summary>
+        /// <param name="assistantId"></param>
+        /// <param name="squadId"></param>
         /// <param name="name"></param>
         /// <param name="page"></param>
         /// <param name="sortOrder"></param>
@@ -58,7 +66,9 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>>> SimulationSuiteControllerFindAllAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>>> SimulationSuiteControllerFindAllAsResponseAsync(
+            global::System.Collections.Generic.IList<global::System.Guid>? assistantId = default,
+            global::System.Collections.Generic.IList<global::System.Guid>? squadId = default,
             string? name = default,
             double? page = default,
             global::Vapi.SimulationSuiteControllerFindAllSortOrder? sortOrder = default,

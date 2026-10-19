@@ -4,18 +4,23 @@
 namespace Vapi
 {
     /// <summary>
-    /// This is the model that will be used for the transcription.
+    /// This is the model that will be used for the transcription.<br/>
+    /// Digit formatting can differ by model: `gpt-transcribe` may write spoken digit strings as words (for example, "four seven two"), where `gpt-4o-transcribe` and `gpt-4o-mini-transcribe` may write them as digits ("472"). Do not rely on either format.
     /// </summary>
     public enum OpenAITranscriberModel
     {
         /// <summary>
-        ///
+        /// `gpt-transcribe` may write spoken digit strings as words (for example, "four seven two"), where `gpt-4o-transcribe` and `gpt-4o-mini-transcribe` may write them as digits ("472"). Do not rely on either format.
         /// </summary>
         Gpt4oMiniTranscribe,
         /// <summary>
-        ///
+        /// `gpt-transcribe` may write spoken digit strings as words (for example, "four seven two"), where `gpt-4o-transcribe` and `gpt-4o-mini-transcribe` may write them as digits ("472"). Do not rely on either format.
         /// </summary>
         Gpt4oTranscribe,
+        /// <summary>
+        /// `gpt-transcribe` may write spoken digit strings as words (for example, "four seven two"), where `gpt-4o-transcribe` and `gpt-4o-mini-transcribe` may write them as digits ("472"). Do not rely on either format.
+        /// </summary>
+        GptTranscribe,
     }
 
     /// <summary>
@@ -32,6 +37,7 @@ namespace Vapi
             {
                 OpenAITranscriberModel.Gpt4oMiniTranscribe => "gpt-4o-mini-transcribe",
                 OpenAITranscriberModel.Gpt4oTranscribe => "gpt-4o-transcribe",
+                OpenAITranscriberModel.GptTranscribe => "gpt-transcribe",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +50,7 @@ namespace Vapi
             {
                 "gpt-4o-mini-transcribe" => OpenAITranscriberModel.Gpt4oMiniTranscribe,
                 "gpt-4o-transcribe" => OpenAITranscriberModel.Gpt4oTranscribe,
+                "gpt-transcribe" => OpenAITranscriberModel.GptTranscribe,
                 _ => null,
             };
         }

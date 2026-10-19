@@ -7,6 +7,7 @@ namespace Vapi
         /// <summary>
         /// List Simulation Runs
         /// </summary>
+        /// <param name="suiteId"></param>
         /// <param name="status"></param>
         /// <param name="filterStatus"></param>
         /// <param name="targetType"></param>
@@ -27,6 +28,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRun>, global::Vapi.SimulationRunsPaginatedResponse>> SimulationRunControllerFindAllAsync(
+            global::System.Collections.Generic.IList<global::System.Guid>? suiteId = default,
             global::Vapi.SimulationRunControllerFindAllStatus? status = default,
             global::Vapi.SimulationRunControllerFindAllFilterStatus? filterStatus = default,
             global::Vapi.SimulationRunControllerFindAllTargetType? targetType = default,
@@ -48,6 +50,7 @@ namespace Vapi
         /// <summary>
         /// List Simulation Runs
         /// </summary>
+        /// <param name="suiteId"></param>
         /// <param name="status"></param>
         /// <param name="filterStatus"></param>
         /// <param name="targetType"></param>
@@ -68,6 +71,7 @@ namespace Vapi
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRun>, global::Vapi.SimulationRunsPaginatedResponse>>> SimulationRunControllerFindAllAsResponseAsync(
+            global::System.Collections.Generic.IList<global::System.Guid>? suiteId = default,
             global::Vapi.SimulationRunControllerFindAllStatus? status = default,
             global::Vapi.SimulationRunControllerFindAllFilterStatus? filterStatus = default,
             global::Vapi.SimulationRunControllerFindAllTargetType? targetType = default,

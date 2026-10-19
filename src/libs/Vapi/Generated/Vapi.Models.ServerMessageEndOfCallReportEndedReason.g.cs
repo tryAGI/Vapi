@@ -783,6 +783,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        CallInProgressErrorVapifaultElevenLabsUnsupportedModel,
+        /// <summary>
+        ///
+        /// </summary>
         CallInProgressErrorVapifaultElevenLabsVoiceDisabledByOwner,
         /// <summary>
         ///
@@ -1827,6 +1831,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        PipelineErrorElevenLabsUnsupportedModel,
+        /// <summary>
+        ///
+        /// </summary>
         PipelineErrorElevenLabsVapiVoiceDisabledByOwner,
         /// <summary>
         ///
@@ -2631,6 +2639,7 @@ namespace Vapi
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsTranscriberFailed => "call.in-progress.error-vapifault-eleven-labs-transcriber-failed",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsUnauthorizedAccess => "call.in-progress.error-vapifault-eleven-labs-unauthorized-access",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsUnauthorizedToAccessModel => "call.in-progress.error-vapifault-eleven-labs-unauthorized-to-access-model",
+                ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsUnsupportedModel => "call.in-progress.error-vapifault-eleven-labs-unsupported-model",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsVoiceDisabledByOwner => "call.in-progress.error-vapifault-eleven-labs-voice-disabled-by-owner",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsVoiceFailed => "call.in-progress.error-vapifault-eleven-labs-voice-failed",
                 ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsVoiceNotAllowedForFreeUsers => "call.in-progress.error-vapifault-eleven-labs-voice-not-allowed-for-free-users",
@@ -2892,6 +2901,7 @@ namespace Vapi
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsTranscriberFailed => "pipeline-error-eleven-labs-transcriber-failed",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsUnauthorizedAccess => "pipeline-error-eleven-labs-unauthorized-access",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsUnauthorizedToAccessModel => "pipeline-error-eleven-labs-unauthorized-to-access-model",
+                ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsUnsupportedModel => "pipeline-error-eleven-labs-unsupported-model",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsVapiVoiceDisabledByOwner => "pipeline-error-eleven-labs-vapi-voice-disabled-by-owner",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsVoiceDisabledByOwner => "pipeline-error-eleven-labs-voice-disabled-by-owner",
                 ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsVoiceFailed => "pipeline-error-eleven-labs-voice-failed",
@@ -3245,6 +3255,7 @@ namespace Vapi
                 "call.in-progress.error-vapifault-eleven-labs-transcriber-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsTranscriberFailed,
                 "call.in-progress.error-vapifault-eleven-labs-unauthorized-access" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsUnauthorizedAccess,
                 "call.in-progress.error-vapifault-eleven-labs-unauthorized-to-access-model" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsUnauthorizedToAccessModel,
+                "call.in-progress.error-vapifault-eleven-labs-unsupported-model" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsUnsupportedModel,
                 "call.in-progress.error-vapifault-eleven-labs-voice-disabled-by-owner" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsVoiceDisabledByOwner,
                 "call.in-progress.error-vapifault-eleven-labs-voice-failed" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsVoiceFailed,
                 "call.in-progress.error-vapifault-eleven-labs-voice-not-allowed-for-free-users" => ServerMessageEndOfCallReportEndedReason.CallInProgressErrorVapifaultElevenLabsVoiceNotAllowedForFreeUsers,
@@ -3506,6 +3517,7 @@ namespace Vapi
                 "pipeline-error-eleven-labs-transcriber-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsTranscriberFailed,
                 "pipeline-error-eleven-labs-unauthorized-access" => ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsUnauthorizedAccess,
                 "pipeline-error-eleven-labs-unauthorized-to-access-model" => ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsUnauthorizedToAccessModel,
+                "pipeline-error-eleven-labs-unsupported-model" => ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsUnsupportedModel,
                 "pipeline-error-eleven-labs-vapi-voice-disabled-by-owner" => ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsVapiVoiceDisabledByOwner,
                 "pipeline-error-eleven-labs-voice-disabled-by-owner" => ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsVoiceDisabledByOwner,
                 "pipeline-error-eleven-labs-voice-failed" => ServerMessageEndOfCallReportEndedReason.PipelineErrorElevenLabsVoiceFailed,

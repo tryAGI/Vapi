@@ -93,7 +93,7 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>> SimulationRunControllerFindItemsAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>> SimulationRunControllerFindItemsAsync(
             global::System.Guid id,
             global::System.Guid? simulationId = default,
             global::System.Guid? runId = default,
@@ -158,7 +158,7 @@ namespace Vapi
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>>> SimulationRunControllerFindItemsAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>>> SimulationRunControllerFindItemsAsResponseAsync(
             global::System.Guid id,
             global::System.Guid? simulationId = default,
             global::System.Guid? runId = default,
@@ -498,9 +498,9 @@ namespace Vapi
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = (global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>), JsonSerializerContext) ??
+                                    var __value = global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -530,9 +530,9 @@ namespace Vapi
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = (global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>), JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
