@@ -21,6 +21,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantManagedConflictResponseDTOError), TypeInfoPropertyName = "AssistantManagedConflictResponseDTOError2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(byte[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMeta))]
@@ -39,7 +40,28 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationLatestResponseDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTOError), TypeInfoPropertyName = "TrafficAllocationStaleConflictResponseDTOError2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabMetricsWindowDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabMetricsWindowDTOBucket), TypeInfoPropertyName = "TrafficTabMetricsWindowDTOBucket2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabDurationSecondsDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabCostBreakdownPerMinuteDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabCostPerMinuteDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabLatencyStatsDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabLatencyMsDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabEndedReasonCountDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabTimeseriesPointDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabStructuredOutputNumericDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabStructuredOutputValueCountDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabStructuredOutputDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabStructuredOutputDTOType), TypeInfoPropertyName = "TrafficTabStructuredOutputDTOType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TrafficTabStructuredOutputValueCountDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabVersionMetricsDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TrafficTabEndedReasonCountDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TrafficTabTimeseriesPointDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TrafficTabStructuredOutputDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabMetricsDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TrafficTabVersionMetricsDTO>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder), TypeInfoPropertyName = "TrafficAllocationControllerFindAllPaginatedSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerMetricsGetBucket), TypeInfoPropertyName = "TrafficAllocationControllerMetricsGetBucket2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantControllerRemoveResponse), TypeInfoPropertyName = "AssistantControllerRemoveResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerCreateResponse), TypeInfoPropertyName = "TrafficAllocationControllerCreateResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerCreateResponseDiscriminator))]
@@ -55,13 +77,21 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationActorType?), TypeInfoPropertyName = "NullableTrafficAllocationActorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTrafficAllocationDTOAllocationIntent?), TypeInfoPropertyName = "NullableCreateTrafficAllocationDTOAllocationIntent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTOError?), TypeInfoPropertyName = "NullableTrafficAllocationStaleConflictResponseDTOError2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabMetricsWindowDTOBucket?), TypeInfoPropertyName = "NullableTrafficTabMetricsWindowDTOBucket2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficTabStructuredOutputDTOType?), TypeInfoPropertyName = "NullableTrafficTabStructuredOutputDTOType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder?), TypeInfoPropertyName = "NullableTrafficAllocationControllerFindAllPaginatedSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerMetricsGetBucket?), TypeInfoPropertyName = "NullableTrafficAllocationControllerMetricsGetBucket2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantControllerRemoveResponse?), TypeInfoPropertyName = "NullableAssistantControllerRemoveResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerCreateResponse?), TypeInfoPropertyName = "NullableTrafficAllocationControllerCreateResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TrafficAllocationControllerCreateResponseDiscriminatorError?), TypeInfoPropertyName = "NullableTrafficAllocationControllerCreateResponseDiscriminatorError2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrafficAllocationTarget>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CreateTrafficAllocationTargetDTO>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrafficAllocation>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrafficTabStructuredOutputValueCountDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrafficTabEndedReasonCountDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrafficTabTimeseriesPointDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrafficTabStructuredOutputDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TrafficTabVersionMetricsDTO>))]
     internal sealed partial class TrafficAllocationsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -164,9 +194,21 @@ namespace Vapi
 
                     || typeToConvert == typeof(global::Vapi.TrafficAllocationStaleConflictResponseDTOError?)
 
+                    || typeToConvert == typeof(global::Vapi.TrafficTabMetricsWindowDTOBucket)
+
+                    || typeToConvert == typeof(global::Vapi.TrafficTabMetricsWindowDTOBucket?)
+
+                    || typeToConvert == typeof(global::Vapi.TrafficTabStructuredOutputDTOType)
+
+                    || typeToConvert == typeof(global::Vapi.TrafficTabStructuredOutputDTOType?)
+
                     || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder)
 
                     || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder?)
+
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerMetricsGetBucket)
+
+                    || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerMetricsGetBucket?)
 
                     || typeToConvert == typeof(global::Vapi.TrafficAllocationControllerCreateResponseDiscriminatorError)
 
@@ -237,6 +279,26 @@ namespace Vapi
                     return new global::Vapi.JsonConverters.TrafficAllocationStaleConflictResponseDTOErrorNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Vapi.TrafficTabMetricsWindowDTOBucket))
+                {
+                    return new global::Vapi.JsonConverters.TrafficTabMetricsWindowDTOBucketJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TrafficTabMetricsWindowDTOBucket?))
+                {
+                    return new global::Vapi.JsonConverters.TrafficTabMetricsWindowDTOBucketNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TrafficTabStructuredOutputDTOType))
+                {
+                    return new global::Vapi.JsonConverters.TrafficTabStructuredOutputDTOTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TrafficTabStructuredOutputDTOType?))
+                {
+                    return new global::Vapi.JsonConverters.TrafficTabStructuredOutputDTOTypeNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder))
                 {
                     return new global::Vapi.JsonConverters.TrafficAllocationControllerFindAllPaginatedSortOrderJsonConverter();
@@ -245,6 +307,16 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.TrafficAllocationControllerFindAllPaginatedSortOrder?))
                 {
                     return new global::Vapi.JsonConverters.TrafficAllocationControllerFindAllPaginatedSortOrderNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationControllerMetricsGetBucket))
+                {
+                    return new global::Vapi.JsonConverters.TrafficAllocationControllerMetricsGetBucketJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TrafficAllocationControllerMetricsGetBucket?))
+                {
+                    return new global::Vapi.JsonConverters.TrafficAllocationControllerMetricsGetBucketNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Vapi.TrafficAllocationControllerCreateResponseDiscriminatorError))
