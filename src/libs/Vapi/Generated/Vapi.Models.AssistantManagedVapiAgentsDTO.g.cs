@@ -9,21 +9,21 @@ namespace Vapi
     public sealed partial class AssistantManagedVapiAgentsDTO
     {
         /// <summary>
-        /// The Vapi Agents agent that manages the assistant.
+        /// The Vapi for CX agent that manages the assistant.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agentId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Guid AgentId { get; set; }
 
         /// <summary>
-        /// The agent's page in Vapi Agents.
+        /// The agent's page in Vapi for CX.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agentUrl")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AgentUrl { get; set; }
 
         /// <summary>
-        /// The Vapi Agents MCP server, where an AI client makes the change instead.
+        /// The Vapi for CX MCP server, where an AI client makes the change instead.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mcpUrl")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -39,13 +39,13 @@ namespace Vapi
         /// Initializes a new instance of the <see cref="AssistantManagedVapiAgentsDTO" /> class.
         /// </summary>
         /// <param name="agentId">
-        /// The Vapi Agents agent that manages the assistant.
+        /// The Vapi for CX agent that manages the assistant.
         /// </param>
         /// <param name="agentUrl">
-        /// The agent's page in Vapi Agents.
+        /// The agent's page in Vapi for CX.
         /// </param>
         /// <param name="mcpUrl">
-        /// The Vapi Agents MCP server, where an AI client makes the change instead.
+        /// The Vapi for CX MCP server, where an AI client makes the change instead.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

@@ -439,7 +439,7 @@ namespace Vapi
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // The provided expectedCurrentAllocationId no longer matches the allocation currently in effect (see TrafficAllocationStaleConflictResponseDTO; omitting the field never conflicts), or Vapi Agents manages the assistant (see AssistantManagedConflictResponseDTO).
+                            // The provided expectedCurrentAllocationId no longer matches the allocation currently in effect (see TrafficAllocationStaleConflictResponseDTO; omitting the field never conflicts), or Vapi for CX manages the assistant (see AssistantManagedConflictResponseDTO).
                             if ((int)__response.StatusCode == 409)
                             {
                                 string? __content_409 = null;

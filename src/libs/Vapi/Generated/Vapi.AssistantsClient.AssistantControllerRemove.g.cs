@@ -324,7 +324,7 @@ namespace Vapi
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // One of its versions is pinned (see AssistantPinnedConflictResponseDTO), or Vapi Agents manages the assistant (see AssistantManagedConflictResponseDTO).
+                            // One of its versions is pinned (see AssistantPinnedConflictResponseDTO), or Vapi for CX manages the assistant (see AssistantManagedConflictResponseDTO).
                             if ((int)__response.StatusCode == 409)
                             {
                                 string? __content_409 = null;
