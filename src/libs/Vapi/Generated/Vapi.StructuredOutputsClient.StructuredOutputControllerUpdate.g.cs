@@ -356,7 +356,7 @@ namespace Vapi
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // The write links or unlinks an assistant managed by Vapi Agents, which would rewrite its artifact plan.
+                            // The write links or unlinks an assistant managed by Vapi for CX, which would rewrite its artifact plan.
                             if ((int)__response.StatusCode == 409)
                             {
                                 string? __content_409 = null;
