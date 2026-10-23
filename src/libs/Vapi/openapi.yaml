@@ -27986,7 +27986,7 @@
               "sonic-multilingual",
               "sonic-preview"
             ],
-            "example": "sonic-english"
+            "example": "sonic-3.5"
           },
           "language": {
             "type": "string",
@@ -30672,7 +30672,7 @@
               "sonic-multilingual",
               "sonic-preview"
             ],
-            "example": "sonic-english"
+            "example": "sonic-3.5"
           },
           "language": {
             "type": "string",
