@@ -5,7 +5,7 @@ namespace Vapi
 {
     /// <summary>
     /// This is the model that will be used. This is optional and will default to the correct model for the voiceId.<br/>
-    /// Example: sonic-english
+    /// Example: sonic-3.5
     /// </summary>
     public enum FallbackCartesiaVoiceModel
     {

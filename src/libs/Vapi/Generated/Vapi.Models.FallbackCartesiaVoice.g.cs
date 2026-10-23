@@ -33,9 +33,9 @@ namespace Vapi
 
         /// <summary>
         /// This is the model that will be used. This is optional and will default to the correct model for the voiceId.<br/>
-        /// Example: sonic-english
+        /// Example: sonic-3.5
         /// </summary>
-        /// <example>sonic-english</example>
+        /// <example>sonic-3.5</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.FallbackCartesiaVoiceModelJsonConverter))]
         public global::Vapi.FallbackCartesiaVoiceModel? Model { get; set; }
@@ -97,7 +97,7 @@ namespace Vapi
         /// </param>
         /// <param name="model">
         /// This is the model that will be used. This is optional and will default to the correct model for the voiceId.<br/>
-        /// Example: sonic-english
+        /// Example: sonic-3.5
         /// </param>
         /// <param name="language">
         /// This is the language that will be used. This is optional and will default to the correct language for the voiceId.<br/>
