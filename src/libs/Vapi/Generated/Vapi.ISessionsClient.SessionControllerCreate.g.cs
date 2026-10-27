@@ -83,7 +83,7 @@ namespace Vapi
             global::Vapi.CreateSessionDTOStatus? status = default,
             double? expirationSeconds = default,
             string? assistantId = default,
-            global::Vapi.CreateAssistantDTO? assistant = default,
+            global::Vapi.TransientAssistantDTO? assistant = default,
             global::Vapi.AssistantOverrides? assistantOverrides = default,
             string? squadId = default,
             global::Vapi.CreateSquadDTO? squad = default,

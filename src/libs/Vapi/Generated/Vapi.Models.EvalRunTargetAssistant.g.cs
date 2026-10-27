@@ -12,7 +12,7 @@ namespace Vapi
         /// This is the transient assistant that will be run against the eval
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistant")]
-        public global::Vapi.CreateAssistantDTO? Assistant { get; set; }
+        public global::Vapi.TransientAssistantDTO? Assistant { get; set; }
 
         /// <summary>
         /// This is the overrides that will be applied to the assistant.<br/>
@@ -69,7 +69,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public EvalRunTargetAssistant(
-            global::Vapi.CreateAssistantDTO? assistant,
+            global::Vapi.TransientAssistantDTO? assistant,
             global::Vapi.AssistantOverrides? assistantOverrides,
             global::Vapi.EvalRunTargetAssistantType type,
             string? assistantId)

@@ -18,7 +18,7 @@ namespace Vapi
         /// This is the transient assistant configuration for this chat. To use an existing assistant, use `assistantId` instead.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistant")]
-        public global::Vapi.CreateAssistantDTO? Assistant { get; set; }
+        public global::Vapi.TransientAssistantDTO? Assistant { get; set; }
 
         /// <summary>
         /// This is the ID of the session that will be used for the chat.<br/>
@@ -126,7 +126,7 @@ namespace Vapi
         public OpenAIWebChatRequest(
             global::Vapi.OneOf<string, global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SystemMessage, global::Vapi.UserMessage, global::Vapi.AssistantMessage, global::Vapi.ToolMessage, global::Vapi.DeveloperMessage>>> input,
             string? assistantId,
-            global::Vapi.CreateAssistantDTO? assistant,
+            global::Vapi.TransientAssistantDTO? assistant,
             string? sessionId,
             double? sessionExpirationSeconds,
             global::Vapi.ChatAssistantOverrides? assistantOverrides,

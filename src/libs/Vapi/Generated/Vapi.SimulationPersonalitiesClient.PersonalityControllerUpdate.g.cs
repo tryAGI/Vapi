@@ -461,7 +461,7 @@ namespace Vapi
         public async global::System.Threading.Tasks.Task<global::Vapi.Personality> PersonalityControllerUpdateAsync(
             global::System.Guid id,
             string? name = default,
-            global::Vapi.CreateAssistantDTO? assistant = default,
+            global::Vapi.TransientAssistantDTO? assistant = default,
             string? path = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

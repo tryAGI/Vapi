@@ -13,7 +13,7 @@ namespace Vapi
         /// Make sure to write a detailed system prompt for a test assistant, and use the {{test.script}} variable to access the test script.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistant")]
-        public global::Vapi.CreateAssistantDTO? Assistant { get; set; }
+        public global::Vapi.TransientAssistantDTO? Assistant { get; set; }
 
         /// <summary>
         /// Pass an assistant id that can be access<br/>
@@ -56,7 +56,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public TesterPlan(
-            global::Vapi.CreateAssistantDTO? assistant,
+            global::Vapi.TransientAssistantDTO? assistant,
             string? assistantId,
             global::Vapi.AssistantOverrides? assistantOverrides)
         {

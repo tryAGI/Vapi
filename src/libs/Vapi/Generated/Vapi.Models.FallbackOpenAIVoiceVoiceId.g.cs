@@ -31,6 +31,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Brise,
+        /// <summary>
+        ///
+        /// </summary>
         Cedar,
         /// <summary>
         ///
@@ -55,7 +59,19 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Flitz,
+        /// <summary>
+        ///
+        /// </summary>
         Gleam,
+        /// <summary>
+        ///
+        /// </summary>
+        Harema,
+        /// <summary>
+        ///
+        /// </summary>
+        Juni,
         /// <summary>
         ///
         /// </summary>
@@ -67,7 +83,19 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Nira,
+        /// <summary>
+        ///
+        /// </summary>
+        Noeul,
+        /// <summary>
+        ///
+        /// </summary>
         Nova,
+        /// <summary>
+        ///
+        /// </summary>
+        Nuri,
         /// <summary>
         ///
         /// </summary>
@@ -87,7 +115,15 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Shida,
+        /// <summary>
+        ///
+        /// </summary>
         Shimmer,
+        /// <summary>
+        ///
+        /// </summary>
+        Sillage,
         /// <summary>
         ///
         /// </summary>
@@ -127,21 +163,30 @@ namespace Vapi
                 FallbackOpenAIVoiceVoiceId.Ballad => "ballad",
                 FallbackOpenAIVoiceVoiceId.Beacon => "beacon",
                 FallbackOpenAIVoiceVoiceId.Bossa => "bossa",
+                FallbackOpenAIVoiceVoiceId.Brise => "brise",
                 FallbackOpenAIVoiceVoiceId.Cedar => "cedar",
                 FallbackOpenAIVoiceVoiceId.Cinder => "cinder",
                 FallbackOpenAIVoiceVoiceId.Coral => "coral",
                 FallbackOpenAIVoiceVoiceId.Delta => "delta",
                 FallbackOpenAIVoiceVoiceId.Echo => "echo",
                 FallbackOpenAIVoiceVoiceId.Fable => "fable",
+                FallbackOpenAIVoiceVoiceId.Flitz => "flitz",
                 FallbackOpenAIVoiceVoiceId.Gleam => "gleam",
+                FallbackOpenAIVoiceVoiceId.Harema => "harema",
+                FallbackOpenAIVoiceVoiceId.Juni => "juni",
                 FallbackOpenAIVoiceVoiceId.Marin => "marin",
                 FallbackOpenAIVoiceVoiceId.Meridian => "meridian",
+                FallbackOpenAIVoiceVoiceId.Nira => "nira",
+                FallbackOpenAIVoiceVoiceId.Noeul => "noeul",
                 FallbackOpenAIVoiceVoiceId.Nova => "nova",
+                FallbackOpenAIVoiceVoiceId.Nuri => "nuri",
                 FallbackOpenAIVoiceVoiceId.Onyx => "onyx",
                 FallbackOpenAIVoiceVoiceId.Quartz => "quartz",
                 FallbackOpenAIVoiceVoiceId.Ripple => "ripple",
                 FallbackOpenAIVoiceVoiceId.Sage => "sage",
+                FallbackOpenAIVoiceVoiceId.Shida => "shida",
                 FallbackOpenAIVoiceVoiceId.Shimmer => "shimmer",
+                FallbackOpenAIVoiceVoiceId.Sillage => "sillage",
                 FallbackOpenAIVoiceVoiceId.Stone => "stone",
                 FallbackOpenAIVoiceVoiceId.Tempo => "tempo",
                 FallbackOpenAIVoiceVoiceId.Verse => "verse",
@@ -162,21 +207,30 @@ namespace Vapi
                 "ballad" => FallbackOpenAIVoiceVoiceId.Ballad,
                 "beacon" => FallbackOpenAIVoiceVoiceId.Beacon,
                 "bossa" => FallbackOpenAIVoiceVoiceId.Bossa,
+                "brise" => FallbackOpenAIVoiceVoiceId.Brise,
                 "cedar" => FallbackOpenAIVoiceVoiceId.Cedar,
                 "cinder" => FallbackOpenAIVoiceVoiceId.Cinder,
                 "coral" => FallbackOpenAIVoiceVoiceId.Coral,
                 "delta" => FallbackOpenAIVoiceVoiceId.Delta,
                 "echo" => FallbackOpenAIVoiceVoiceId.Echo,
                 "fable" => FallbackOpenAIVoiceVoiceId.Fable,
+                "flitz" => FallbackOpenAIVoiceVoiceId.Flitz,
                 "gleam" => FallbackOpenAIVoiceVoiceId.Gleam,
+                "harema" => FallbackOpenAIVoiceVoiceId.Harema,
+                "juni" => FallbackOpenAIVoiceVoiceId.Juni,
                 "marin" => FallbackOpenAIVoiceVoiceId.Marin,
                 "meridian" => FallbackOpenAIVoiceVoiceId.Meridian,
+                "nira" => FallbackOpenAIVoiceVoiceId.Nira,
+                "noeul" => FallbackOpenAIVoiceVoiceId.Noeul,
                 "nova" => FallbackOpenAIVoiceVoiceId.Nova,
+                "nuri" => FallbackOpenAIVoiceVoiceId.Nuri,
                 "onyx" => FallbackOpenAIVoiceVoiceId.Onyx,
                 "quartz" => FallbackOpenAIVoiceVoiceId.Quartz,
                 "ripple" => FallbackOpenAIVoiceVoiceId.Ripple,
                 "sage" => FallbackOpenAIVoiceVoiceId.Sage,
+                "shida" => FallbackOpenAIVoiceVoiceId.Shida,
                 "shimmer" => FallbackOpenAIVoiceVoiceId.Shimmer,
+                "sillage" => FallbackOpenAIVoiceVoiceId.Sillage,
                 "stone" => FallbackOpenAIVoiceVoiceId.Stone,
                 "tempo" => FallbackOpenAIVoiceVoiceId.Tempo,
                 "verse" => FallbackOpenAIVoiceVoiceId.Verse,
