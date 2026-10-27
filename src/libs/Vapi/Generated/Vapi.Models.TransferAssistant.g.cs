@@ -89,6 +89,19 @@ namespace Vapi
         public double? MaxDurationSeconds { get; set; }
 
         /// <summary>
+        /// This decides whether the transfer assistant runs the main assistant's hooks on the operator leg of a `warm-transfer-experimental` transfer. The operator is the "customer" there. When unset or `true`, the transfer assistant runs all of the main assistant's hooks, plus `hooks`. When `false`, it runs only `hooks`, plus the main assistant's `call.ending` hooks. An `endCall` in an inherited `customer.speech.timeout` hook ends the whole call when the operator is silent, so set this to `false` to stop that.<br/>
+        /// Default Value: true
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantHooksInheritEnabled")]
+        public bool? AssistantHooksInheritEnabled { get; set; }
+
+        /// <summary>
+        /// These are the hooks the transfer assistant runs on the operator leg of a `warm-transfer-experimental` transfer. The operator is the "customer" there, so `customer.speech.timeout` fires on operator silence. Whether the main assistant's other hooks also run on the operator leg depends on `assistantHooksInheritEnabled`. These hooks run after them. `call.ending` and `call.timeElapsed` are not allowed here. The main assistant's `call.ending` hooks are kept automatically. Time-elapsed hooks are not armed on the operator leg. An `endCall` tool in these hooks ends the whole call, not only the operator leg. A `tool` action must carry an inline `tool`, because `toolId` is not resolved for the transfer assistant.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hooks")]
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CallHookAssistantSpeechInterrupted, global::Vapi.CallHookCustomerSpeechInterrupted, global::Vapi.CallHookCustomerSpeechTimeout, global::Vapi.CallHookModelResponseTimeout, global::Vapi.CallHookTranscriberEndpointedSpeechLowConfidence>>? Hooks { get; set; }
+
+        /// <summary>
         /// This enables filtering of noise and background speech while the user is talking.<br/>
         /// Features:<br/>
         /// - Smart denoising using Krisp<br/>
@@ -161,6 +174,13 @@ namespace Vapi
         /// @default 120<br/>
         /// Example: 120
         /// </param>
+        /// <param name="assistantHooksInheritEnabled">
+        /// This decides whether the transfer assistant runs the main assistant's hooks on the operator leg of a `warm-transfer-experimental` transfer. The operator is the "customer" there. When unset or `true`, the transfer assistant runs all of the main assistant's hooks, plus `hooks`. When `false`, it runs only `hooks`, plus the main assistant's `call.ending` hooks. An `endCall` in an inherited `customer.speech.timeout` hook ends the whole call when the operator is silent, so set this to `false` to stop that.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="hooks">
+        /// These are the hooks the transfer assistant runs on the operator leg of a `warm-transfer-experimental` transfer. The operator is the "customer" there, so `customer.speech.timeout` fires on operator silence. Whether the main assistant's other hooks also run on the operator leg depends on `assistantHooksInheritEnabled`. These hooks run after them. `call.ending` and `call.timeElapsed` are not allowed here. The main assistant's `call.ending` hooks are kept automatically. Time-elapsed hooks are not armed on the operator leg. An `endCall` tool in these hooks ends the whole call, not only the operator leg. A `tool` action must carry an inline `tool`, because `toolId` is not resolved for the transfer assistant.
+        /// </param>
         /// <param name="backgroundSpeechDenoisingPlan">
         /// This enables filtering of noise and background speech while the user is talking.<br/>
         /// Features:<br/>
@@ -188,6 +208,8 @@ namespace Vapi
             global::Vapi.StartSpeakingPlan? startSpeakingPlan,
             global::Vapi.TransferAssistantFirstMessageMode? firstMessageMode,
             double? maxDurationSeconds,
+            bool? assistantHooksInheritEnabled,
+            global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CallHookAssistantSpeechInterrupted, global::Vapi.CallHookCustomerSpeechInterrupted, global::Vapi.CallHookCustomerSpeechTimeout, global::Vapi.CallHookModelResponseTimeout, global::Vapi.CallHookTranscriberEndpointedSpeechLowConfidence>>? hooks,
             global::Vapi.BackgroundSpeechDenoisingPlan? backgroundSpeechDenoisingPlan,
             double? silenceTimeoutSeconds)
         {
@@ -200,6 +222,8 @@ namespace Vapi
             this.StartSpeakingPlan = startSpeakingPlan;
             this.FirstMessageMode = firstMessageMode;
             this.MaxDurationSeconds = maxDurationSeconds;
+            this.AssistantHooksInheritEnabled = assistantHooksInheritEnabled;
+            this.Hooks = hooks;
             this.BackgroundSpeechDenoisingPlan = backgroundSpeechDenoisingPlan;
             this.SilenceTimeoutSeconds = silenceTimeoutSeconds;
         }

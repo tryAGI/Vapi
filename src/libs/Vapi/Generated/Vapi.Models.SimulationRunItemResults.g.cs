@@ -9,6 +9,24 @@ namespace Vapi
     public sealed partial class SimulationRunItemResults
     {
         /// <summary>
+        /// Retention-permitted target extraction values, present only when enabled.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("structuredOutputs")]
+        public global::System.Collections.Generic.Dictionary<string, global::Vapi.SimulationRunItemResultsStructuredOutputs2>? StructuredOutputs { get; set; }
+
+        /// <summary>
+        /// Condition-gated outputs or audio outputs unsupported by chat.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("skippedStructuredOutputs")]
+        public global::System.Collections.Generic.Dictionary<string, global::Vapi.SimulationRunItemResultsSkippedStructuredOutputs2>? SkippedStructuredOutputs { get; set; }
+
+        /// <summary>
+        /// Sanitized diagnostic; optional target extraction never changes pass/fail.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("structuredOutputError")]
+        public string? StructuredOutputError { get; set; }
+
+        /// <summary>
         /// This is the list of results from structured output evaluations.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluations")]
@@ -50,6 +68,15 @@ namespace Vapi
         /// <param name="passed">
         /// This indicates whether all required, non-skipped structured output evaluations and latency expectations passed.
         /// </param>
+        /// <param name="structuredOutputs">
+        /// Retention-permitted target extraction values, present only when enabled.
+        /// </param>
+        /// <param name="skippedStructuredOutputs">
+        /// Condition-gated outputs or audio outputs unsupported by chat.
+        /// </param>
+        /// <param name="structuredOutputError">
+        /// Sanitized diagnostic; optional target extraction never changes pass/fail.
+        /// </param>
         /// <param name="latencyMetrics">
         /// This contains the latency metrics collected from the call.
         /// </param>
@@ -63,9 +90,15 @@ namespace Vapi
         public SimulationRunItemResults(
             global::System.Collections.Generic.IList<global::Vapi.StructuredOutputEvaluationResult> evaluations,
             bool passed,
+            global::System.Collections.Generic.Dictionary<string, global::Vapi.SimulationRunItemResultsStructuredOutputs2>? structuredOutputs,
+            global::System.Collections.Generic.Dictionary<string, global::Vapi.SimulationRunItemResultsSkippedStructuredOutputs2>? skippedStructuredOutputs,
+            string? structuredOutputError,
             global::Vapi.LatencyMetrics? latencyMetrics,
             global::System.Collections.Generic.IList<global::Vapi.LatencyEvaluationResult>? latencyEvaluations)
         {
+            this.StructuredOutputs = structuredOutputs;
+            this.SkippedStructuredOutputs = skippedStructuredOutputs;
+            this.StructuredOutputError = structuredOutputError;
             this.Evaluations = evaluations ?? throw new global::System.ArgumentNullException(nameof(evaluations));
             this.Passed = passed;
             this.LatencyMetrics = latencyMetrics;

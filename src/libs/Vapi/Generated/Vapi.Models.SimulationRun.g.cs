@@ -76,6 +76,13 @@ namespace Vapi
         public global::Vapi.SimulationRunItemCounts? ItemCounts { get; set; }
 
         /// <summary>
+        /// Generate directly attached target structured outputs. Default false. Enabled extraction may incur additional model charges.<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("includeTargetStructuredOutputs")]
+        public bool? IncludeTargetStructuredOutputs { get; set; }
+
+        /// <summary>
         /// Array of simulations and/or suites to run
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("simulations")]
@@ -148,6 +155,10 @@ namespace Vapi
         /// <param name="itemCounts">
         /// Aggregate counts of run items by status
         /// </param>
+        /// <param name="includeTargetStructuredOutputs">
+        /// Generate directly attached target structured outputs. Default false. Enabled extraction may incur additional model charges.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="iterations">
         /// Number of times to run each simulation (default: 1)<br/>
         /// Default Value: 1
@@ -171,6 +182,7 @@ namespace Vapi
             global::System.DateTime? endedAt,
             string? endedReason,
             global::Vapi.SimulationRunItemCounts? itemCounts,
+            bool? includeTargetStructuredOutputs,
             double? iterations,
             global::Vapi.SimulationRunTransportConfiguration? transport)
         {
@@ -184,6 +196,7 @@ namespace Vapi
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.ItemCounts = itemCounts;
+            this.IncludeTargetStructuredOutputs = includeTargetStructuredOutputs;
             this.Simulations = simulations ?? throw new global::System.ArgumentNullException(nameof(simulations));
             this.Target = target;
             this.Iterations = iterations;
