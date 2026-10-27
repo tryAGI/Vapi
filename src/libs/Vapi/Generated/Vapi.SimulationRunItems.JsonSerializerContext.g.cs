@@ -53,6 +53,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LatencyEvaluationResultMetric), TypeInfoPropertyName = "LatencyEvaluationResultMetric2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LatencyEvaluationResultAggregation), TypeInfoPropertyName = "LatencyEvaluationResultAggregation2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemResults))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Vapi.SimulationRunItemResultsStructuredOutputs2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemResultsStructuredOutputs2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Vapi.SimulationRunItemResultsSkippedStructuredOutputs2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemResultsSkippedStructuredOutputs2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemResultsSkippedStructuredOutputsReason), TypeInfoPropertyName = "SimulationRunItemResultsSkippedStructuredOutputsReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.StructuredOutputEvaluationResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.LatencyEvaluationResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemImprovementSuggestion))]
@@ -83,6 +88,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutputEvaluationResultComparator?), TypeInfoPropertyName = "NullableStructuredOutputEvaluationResultComparator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LatencyEvaluationResultMetric?), TypeInfoPropertyName = "NullableLatencyEvaluationResultMetric2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LatencyEvaluationResultAggregation?), TypeInfoPropertyName = "NullableLatencyEvaluationResultAggregation2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemResultsSkippedStructuredOutputsReason?), TypeInfoPropertyName = "NullableSimulationRunItemResultsSkippedStructuredOutputsReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemStatus?), TypeInfoPropertyName = "NullableSimulationRunItemStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunControllerFindItemsStatus?), TypeInfoPropertyName = "NullableSimulationRunControllerFindItemsStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunControllerFindItemsSortOrder?), TypeInfoPropertyName = "NullableSimulationRunControllerFindItemsSortOrder2")]
@@ -220,6 +226,10 @@ namespace Vapi
 
                     || typeToConvert == typeof(global::Vapi.LatencyEvaluationResultAggregation?)
 
+                    || typeToConvert == typeof(global::Vapi.SimulationRunItemResultsSkippedStructuredOutputsReason)
+
+                    || typeToConvert == typeof(global::Vapi.SimulationRunItemResultsSkippedStructuredOutputsReason?)
+
                     || typeToConvert == typeof(global::Vapi.SimulationRunItemStatus)
 
                     || typeToConvert == typeof(global::Vapi.SimulationRunItemStatus?)
@@ -339,6 +349,16 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.LatencyEvaluationResultAggregation?))
                 {
                     return new global::Vapi.JsonConverters.LatencyEvaluationResultAggregationNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.SimulationRunItemResultsSkippedStructuredOutputsReason))
+                {
+                    return new global::Vapi.JsonConverters.SimulationRunItemResultsSkippedStructuredOutputsReasonJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.SimulationRunItemResultsSkippedStructuredOutputsReason?))
+                {
+                    return new global::Vapi.JsonConverters.SimulationRunItemResultsSkippedStructuredOutputsReasonNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Vapi.SimulationRunItemStatus))

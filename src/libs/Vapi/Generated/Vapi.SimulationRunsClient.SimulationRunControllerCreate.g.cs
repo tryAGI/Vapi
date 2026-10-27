@@ -539,6 +539,10 @@ namespace Vapi
         /// Optional idempotency key. When omitted, the SDK generates one for this request.
         /// </param>
         /// <param name="userAgent"></param>
+        /// <param name="includeTargetStructuredOutputs">
+        /// Generate directly attached target structured outputs. Default false. Enabled extraction may incur additional model charges.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="simulations">
         /// Array of simulations and/or suites to run
         /// </param>
@@ -560,6 +564,7 @@ namespace Vapi
             global::Vapi.OneOf<global::Vapi.SimulationRunTargetAssistant, global::Vapi.SimulationRunTargetSquad> target,
             string? idempotencyKey = default,
             string? userAgent = default,
+            bool? includeTargetStructuredOutputs = default,
             double? iterations = default,
             global::Vapi.SimulationRunTransportConfiguration? transport = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
@@ -567,6 +572,7 @@ namespace Vapi
         {
             var __request = new global::Vapi.CreateSimulationRunDTO
             {
+                IncludeTargetStructuredOutputs = includeTargetStructuredOutputs,
                 Simulations = simulations,
                 Target = target,
                 Iterations = iterations,

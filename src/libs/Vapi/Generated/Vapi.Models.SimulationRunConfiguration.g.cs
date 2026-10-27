@@ -9,6 +9,13 @@ namespace Vapi
     public sealed partial class SimulationRunConfiguration
     {
         /// <summary>
+        /// Generate directly attached target structured outputs. Default false. Enabled extraction may incur additional model charges.<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("includeTargetStructuredOutputs")]
+        public bool? IncludeTargetStructuredOutputs { get; set; }
+
+        /// <summary>
         /// Transport configuration for the simulation run
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("transport")]
@@ -23,6 +30,10 @@ namespace Vapi
         /// <summary>
         /// Initializes a new instance of the <see cref="SimulationRunConfiguration" /> class.
         /// </summary>
+        /// <param name="includeTargetStructuredOutputs">
+        /// Generate directly attached target structured outputs. Default false. Enabled extraction may incur additional model charges.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="transport">
         /// Transport configuration for the simulation run
         /// </param>
@@ -30,8 +41,10 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public SimulationRunConfiguration(
+            bool? includeTargetStructuredOutputs,
             global::Vapi.SimulationRunTransportConfiguration? transport)
         {
+            this.IncludeTargetStructuredOutputs = includeTargetStructuredOutputs;
             this.Transport = transport;
         }
 
