@@ -84,7 +84,7 @@ namespace Vapi
         global::System.Threading.Tasks.Task<global::Vapi.OneOf<global::Vapi.Chat, global::Vapi.CreateChatStreamResponse>> ChatControllerCreateChatAsync(
             global::Vapi.OneOf<string, global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.SystemMessage, global::Vapi.UserMessage, global::Vapi.AssistantMessage, global::Vapi.ToolMessage, global::Vapi.DeveloperMessage>>> input,
             string? assistantId = default,
-            global::Vapi.CreateAssistantDTO? assistant = default,
+            global::Vapi.TransientAssistantDTO? assistant = default,
             global::Vapi.AssistantOverrides? assistantOverrides = default,
             string? squadId = default,
             global::Vapi.CreateSquadDTO? squad = default,

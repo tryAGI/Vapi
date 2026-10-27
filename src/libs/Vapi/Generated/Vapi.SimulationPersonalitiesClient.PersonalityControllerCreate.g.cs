@@ -451,7 +451,7 @@ namespace Vapi
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Vapi.Personality> PersonalityControllerCreateAsync(
             string name,
-            global::Vapi.CreateAssistantDTO assistant,
+            global::Vapi.TransientAssistantDTO assistant,
             string? path = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

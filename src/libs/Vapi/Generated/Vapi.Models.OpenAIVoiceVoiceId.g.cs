@@ -31,6 +31,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Brise,
+        /// <summary>
+        ///
+        /// </summary>
         Cedar,
         /// <summary>
         ///
@@ -55,7 +59,19 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Flitz,
+        /// <summary>
+        ///
+        /// </summary>
         Gleam,
+        /// <summary>
+        ///
+        /// </summary>
+        Harema,
+        /// <summary>
+        ///
+        /// </summary>
+        Juni,
         /// <summary>
         ///
         /// </summary>
@@ -67,7 +83,19 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Nira,
+        /// <summary>
+        ///
+        /// </summary>
+        Noeul,
+        /// <summary>
+        ///
+        /// </summary>
         Nova,
+        /// <summary>
+        ///
+        /// </summary>
+        Nuri,
         /// <summary>
         ///
         /// </summary>
@@ -87,7 +115,15 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Shida,
+        /// <summary>
+        ///
+        /// </summary>
         Shimmer,
+        /// <summary>
+        ///
+        /// </summary>
+        Sillage,
         /// <summary>
         ///
         /// </summary>
@@ -127,21 +163,30 @@ namespace Vapi
                 OpenAIVoiceVoiceId.Ballad => "ballad",
                 OpenAIVoiceVoiceId.Beacon => "beacon",
                 OpenAIVoiceVoiceId.Bossa => "bossa",
+                OpenAIVoiceVoiceId.Brise => "brise",
                 OpenAIVoiceVoiceId.Cedar => "cedar",
                 OpenAIVoiceVoiceId.Cinder => "cinder",
                 OpenAIVoiceVoiceId.Coral => "coral",
                 OpenAIVoiceVoiceId.Delta => "delta",
                 OpenAIVoiceVoiceId.Echo => "echo",
                 OpenAIVoiceVoiceId.Fable => "fable",
+                OpenAIVoiceVoiceId.Flitz => "flitz",
                 OpenAIVoiceVoiceId.Gleam => "gleam",
+                OpenAIVoiceVoiceId.Harema => "harema",
+                OpenAIVoiceVoiceId.Juni => "juni",
                 OpenAIVoiceVoiceId.Marin => "marin",
                 OpenAIVoiceVoiceId.Meridian => "meridian",
+                OpenAIVoiceVoiceId.Nira => "nira",
+                OpenAIVoiceVoiceId.Noeul => "noeul",
                 OpenAIVoiceVoiceId.Nova => "nova",
+                OpenAIVoiceVoiceId.Nuri => "nuri",
                 OpenAIVoiceVoiceId.Onyx => "onyx",
                 OpenAIVoiceVoiceId.Quartz => "quartz",
                 OpenAIVoiceVoiceId.Ripple => "ripple",
                 OpenAIVoiceVoiceId.Sage => "sage",
+                OpenAIVoiceVoiceId.Shida => "shida",
                 OpenAIVoiceVoiceId.Shimmer => "shimmer",
+                OpenAIVoiceVoiceId.Sillage => "sillage",
                 OpenAIVoiceVoiceId.Stone => "stone",
                 OpenAIVoiceVoiceId.Tempo => "tempo",
                 OpenAIVoiceVoiceId.Verse => "verse",
@@ -162,21 +207,30 @@ namespace Vapi
                 "ballad" => OpenAIVoiceVoiceId.Ballad,
                 "beacon" => OpenAIVoiceVoiceId.Beacon,
                 "bossa" => OpenAIVoiceVoiceId.Bossa,
+                "brise" => OpenAIVoiceVoiceId.Brise,
                 "cedar" => OpenAIVoiceVoiceId.Cedar,
                 "cinder" => OpenAIVoiceVoiceId.Cinder,
                 "coral" => OpenAIVoiceVoiceId.Coral,
                 "delta" => OpenAIVoiceVoiceId.Delta,
                 "echo" => OpenAIVoiceVoiceId.Echo,
                 "fable" => OpenAIVoiceVoiceId.Fable,
+                "flitz" => OpenAIVoiceVoiceId.Flitz,
                 "gleam" => OpenAIVoiceVoiceId.Gleam,
+                "harema" => OpenAIVoiceVoiceId.Harema,
+                "juni" => OpenAIVoiceVoiceId.Juni,
                 "marin" => OpenAIVoiceVoiceId.Marin,
                 "meridian" => OpenAIVoiceVoiceId.Meridian,
+                "nira" => OpenAIVoiceVoiceId.Nira,
+                "noeul" => OpenAIVoiceVoiceId.Noeul,
                 "nova" => OpenAIVoiceVoiceId.Nova,
+                "nuri" => OpenAIVoiceVoiceId.Nuri,
                 "onyx" => OpenAIVoiceVoiceId.Onyx,
                 "quartz" => OpenAIVoiceVoiceId.Quartz,
                 "ripple" => OpenAIVoiceVoiceId.Ripple,
                 "sage" => OpenAIVoiceVoiceId.Sage,
+                "shida" => OpenAIVoiceVoiceId.Shida,
                 "shimmer" => OpenAIVoiceVoiceId.Shimmer,
+                "sillage" => OpenAIVoiceVoiceId.Sillage,
                 "stone" => OpenAIVoiceVoiceId.Stone,
                 "tempo" => OpenAIVoiceVoiceId.Tempo,
                 "verse" => OpenAIVoiceVoiceId.Verse,

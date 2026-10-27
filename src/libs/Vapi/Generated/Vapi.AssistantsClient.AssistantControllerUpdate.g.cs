@@ -631,7 +631,7 @@ namespace Vapi
             bool? modelOutputInMessagesEnabled = default,
             global::System.Collections.Generic.IList<global::Vapi.TransportConfigurationTwilio>? transportConfigurations = default,
             global::Vapi.LangfuseObservabilityPlan? observabilityPlan = default,
-            global::System.Collections.Generic.IList<global::Vapi.CredentialsItem9>? credentials = default,
+            global::System.Collections.Generic.IList<global::Vapi.CredentialsItem10>? credentials = default,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CallHookCallEnding, global::Vapi.CallHookAssistantSpeechInterrupted, global::Vapi.CallHookCustomerSpeechInterrupted, global::Vapi.CallHookCustomerSpeechTimeout, global::Vapi.SessionCreatedHook>>? hooks = default,
             string? name = default,
             string? voicemailMessage = default,

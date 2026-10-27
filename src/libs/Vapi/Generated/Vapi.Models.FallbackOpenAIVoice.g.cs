@@ -26,8 +26,7 @@ namespace Vapi
 
         /// <summary>
         /// This is the provider-specific ID that will be used.<br/>
-        /// Voice availability depends on the selected model.<br/>
-        /// quartz, ripple, vesper, willow, stone, gleam, meridian, bossa, tempo, beacon, delta, cinder are only supported with GPT-Live models.
+        /// Voice availability depends on the selected model: voices offered only by GPT-Live are rejected for other models.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("voiceId")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AnyOfJsonConverter<global::Vapi.FallbackOpenAIVoiceVoiceId?, string>))]
@@ -73,8 +72,7 @@ namespace Vapi
         /// </summary>
         /// <param name="voiceId">
         /// This is the provider-specific ID that will be used.<br/>
-        /// Voice availability depends on the selected model.<br/>
-        /// quartz, ripple, vesper, willow, stone, gleam, meridian, bossa, tempo, beacon, delta, cinder are only supported with GPT-Live models.
+        /// Voice availability depends on the selected model: voices offered only by GPT-Live are rejected for other models.
         /// </param>
         /// <param name="cachingEnabled">
         /// This is the flag to toggle voice caching for the assistant.<br/>

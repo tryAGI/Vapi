@@ -38,7 +38,7 @@ namespace Vapi
         /// This is a transient assistant to transfer the call to. You may provide a transient assistant in the response  `handoff-destination-request` in a dynamic handoff.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistant")]
-        public global::Vapi.CreateAssistantDTO? Assistant { get; set; }
+        public global::Vapi.TransientAssistantDTO? Assistant { get; set; }
 
         /// <summary>
         /// This is the variable extraction plan for the handoff tool.
@@ -97,7 +97,7 @@ namespace Vapi
             global::Vapi.OneOf<global::Vapi.ContextEngineeringPlanLastNMessages, global::Vapi.ContextEngineeringPlanNone, global::Vapi.ContextEngineeringPlanAll, global::Vapi.ContextEngineeringPlanUserAndAssistantMessages, global::Vapi.ContextEngineeringPlanPreviousAssistantMessages>? contextEngineeringPlan,
             string? assistantName,
             string? assistantId,
-            global::Vapi.CreateAssistantDTO? assistant,
+            global::Vapi.TransientAssistantDTO? assistant,
             global::Vapi.VariableExtractionPlan? variableExtractionPlan,
             global::Vapi.AssistantOverrides? assistantOverrides,
             string? description)

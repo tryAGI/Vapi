@@ -18,7 +18,7 @@ namespace Vapi
         /// This is the assistant that will be used for the chat. To use an existing assistant, use `assistantId` instead.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistant")]
-        public global::Vapi.CreateAssistantDTO? Assistant { get; set; }
+        public global::Vapi.TransientAssistantDTO? Assistant { get; set; }
 
         /// <summary>
         /// These are the variable values that will be used to replace template variables in the assistant messages.<br/>
@@ -209,7 +209,7 @@ namespace Vapi
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             string? assistantId,
-            global::Vapi.CreateAssistantDTO? assistant,
+            global::Vapi.TransientAssistantDTO? assistant,
             global::Vapi.AssistantOverrides? assistantOverrides,
             string? squadId,
             global::Vapi.CreateSquadDTO? squad,

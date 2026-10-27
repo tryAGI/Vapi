@@ -32,7 +32,7 @@ namespace Vapi
         /// This is the assistant that will be used for the call. To use an existing assistant, use `assistantId` instead.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistant")]
-        public global::Vapi.CreateAssistantDTO? Assistant { get; set; }
+        public global::Vapi.TransientAssistantDTO? Assistant { get; set; }
 
         /// <summary>
         /// This can be used to override the assistant's settings and provide values for it's template variables.
@@ -71,7 +71,7 @@ namespace Vapi
             string? assistantVersion,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.TransferDestinationAssistant, global::Vapi.HandoffDestinationAssistant>>? assistantDestinations,
             string? assistantId,
-            global::Vapi.CreateAssistantDTO? assistant,
+            global::Vapi.TransientAssistantDTO? assistant,
             global::Vapi.AssistantOverrides? assistantOverrides)
         {
             this.AssistantVersion = assistantVersion;

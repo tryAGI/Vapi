@@ -21,7 +21,7 @@ namespace Vapi
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistant")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Vapi.CreateAssistantDTO Assistant { get; set; }
+        public required global::Vapi.TransientAssistantDTO Assistant { get; set; }
 
         /// <summary>
         /// Optional folder path for organizing personalities.<br/>
@@ -57,7 +57,7 @@ namespace Vapi
 #endif
         public CreatePersonalityDTO(
             string name,
-            global::Vapi.CreateAssistantDTO assistant,
+            global::Vapi.TransientAssistantDTO assistant,
             string? path)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));

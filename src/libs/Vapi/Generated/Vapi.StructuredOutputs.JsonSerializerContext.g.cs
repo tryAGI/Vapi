@@ -31,27 +31,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.JsonSchemaFormat), TypeInfoPropertyName = "JsonSchemaFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<string, double?, bool?, object, byte[]>), TypeInfoPropertyName = "OneOfStringDoubleBooleanObjectByteArray2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(byte[]))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OpenAIMessage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OpenAIMessageRole), TypeInfoPropertyName = "OpenAIMessageRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AnthropicThinkingConfig))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AnthropicThinkingConfigType), TypeInfoPropertyName = "AnthropicThinkingConfigType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModel))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModelProvider), TypeInfoPropertyName = "WorkflowOpenAIModelProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModelModel), TypeInfoPropertyName = "WorkflowOpenAIModelModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicModel))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicModelProvider), TypeInfoPropertyName = "WorkflowAnthropicModelProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicModelModel), TypeInfoPropertyName = "WorkflowAnthropicModelModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicBedrockModel))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicBedrockModelProvider), TypeInfoPropertyName = "WorkflowAnthropicBedrockModelProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicBedrockModelModel), TypeInfoPropertyName = "WorkflowAnthropicBedrockModelModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowGoogleModel))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowGoogleModelProvider), TypeInfoPropertyName = "WorkflowGoogleModelProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowGoogleModelModel), TypeInfoPropertyName = "WorkflowGoogleModelModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCustomModel))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCustomModelProvider), TypeInfoPropertyName = "WorkflowCustomModelProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCustomModelMetadataSendMode), TypeInfoPropertyName = "WorkflowCustomModelMetadataSendMode2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>), TypeInfoPropertyName = "OneOfWorkflowOpenAIModelWorkflowAnthropicModelWorkflowAnthropicBedrockModelWorkflowGoogleModelWorkflowCustomModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.MinMessagesCondition))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.MinMessagesConditionType), TypeInfoPropertyName = "MinMessagesConditionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.MinCallDurationCondition))]
@@ -62,8 +41,29 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ComplianceOverride))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateStructuredOutputDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateStructuredOutputDTOType), TypeInfoPropertyName = "CreateStructuredOutputDTOType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>), TypeInfoPropertyName = "OneOfWorkflowOpenAIModelWorkflowAnthropicModelWorkflowAnthropicBedrockModelWorkflowGoogleModelWorkflowCustomModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModel))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicModel))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicBedrockModel))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowGoogleModel))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCustomModel))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>), TypeInfoPropertyName = "OneOfMinMessagesConditionMinCallDurationConditionEndedReasonCondition2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OpenAIMessage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OpenAIMessageRole), TypeInfoPropertyName = "OpenAIMessageRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AnthropicThinkingConfig))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AnthropicThinkingConfigType), TypeInfoPropertyName = "AnthropicThinkingConfigType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModelProvider), TypeInfoPropertyName = "WorkflowOpenAIModelProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModelModel), TypeInfoPropertyName = "WorkflowOpenAIModelModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicModelProvider), TypeInfoPropertyName = "WorkflowAnthropicModelProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicModelModel), TypeInfoPropertyName = "WorkflowAnthropicModelModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicBedrockModelProvider), TypeInfoPropertyName = "WorkflowAnthropicBedrockModelProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicBedrockModelModel), TypeInfoPropertyName = "WorkflowAnthropicBedrockModelModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowGoogleModelProvider), TypeInfoPropertyName = "WorkflowGoogleModelProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowGoogleModelModel), TypeInfoPropertyName = "WorkflowGoogleModelModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCustomModelProvider), TypeInfoPropertyName = "WorkflowCustomModelProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCustomModelMetadataSendMode), TypeInfoPropertyName = "WorkflowCustomModelMetadataSendMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMeta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMetaSortOrder), TypeInfoPropertyName = "PaginationMetaSortOrder2")]
@@ -93,6 +93,12 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.JsonSchemaType?), TypeInfoPropertyName = "NullableJsonSchemaType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.JsonSchemaFormat?), TypeInfoPropertyName = "NullableJsonSchemaFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<string, double?, bool?, object, byte[]>?), TypeInfoPropertyName = "NullableOneOfStringDoubleBooleanObjectByteArray2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.MinMessagesConditionType?), TypeInfoPropertyName = "NullableMinMessagesConditionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.MinCallDurationConditionType?), TypeInfoPropertyName = "NullableMinCallDurationConditionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.EndedReasonConditionType?), TypeInfoPropertyName = "NullableEndedReasonConditionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.EndedReasonConditionOperator?), TypeInfoPropertyName = "NullableEndedReasonConditionOperator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateStructuredOutputDTOType?), TypeInfoPropertyName = "NullableCreateStructuredOutputDTOType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>?), TypeInfoPropertyName = "NullableOneOfMinMessagesConditionMinCallDurationConditionEndedReasonCondition2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OpenAIMessageRole?), TypeInfoPropertyName = "NullableOpenAIMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AnthropicThinkingConfigType?), TypeInfoPropertyName = "NullableAnthropicThinkingConfigType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModelProvider?), TypeInfoPropertyName = "NullableWorkflowOpenAIModelProvider2")]
@@ -105,12 +111,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowGoogleModelModel?), TypeInfoPropertyName = "NullableWorkflowGoogleModelModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCustomModelProvider?), TypeInfoPropertyName = "NullableWorkflowCustomModelProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCustomModelMetadataSendMode?), TypeInfoPropertyName = "NullableWorkflowCustomModelMetadataSendMode2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.MinMessagesConditionType?), TypeInfoPropertyName = "NullableMinMessagesConditionType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.MinCallDurationConditionType?), TypeInfoPropertyName = "NullableMinCallDurationConditionType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.EndedReasonConditionType?), TypeInfoPropertyName = "NullableEndedReasonConditionType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.EndedReasonConditionOperator?), TypeInfoPropertyName = "NullableEndedReasonConditionOperator2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateStructuredOutputDTOType?), TypeInfoPropertyName = "NullableCreateStructuredOutputDTOType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>?), TypeInfoPropertyName = "NullableOneOfMinMessagesConditionMinCallDurationConditionEndedReasonCondition2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMetaSortOrder?), TypeInfoPropertyName = "NullablePaginationMetaSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutputType?), TypeInfoPropertyName = "NullableStructuredOutputType2")]
@@ -122,8 +122,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.AllOf<global::Vapi.StructuredOutputRunPreviewResponse, object>?, global::Vapi.StructuredOutputRerunResponse>?), TypeInfoPropertyName = "NullableOneOfAllOfStructuredOutputRunPreviewResponseObjectStructuredOutputRerunResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AllOf<global::Vapi.StructuredOutputRunPreviewResponse, object>?), TypeInfoPropertyName = "NullableAllOfStructuredOutputRunPreviewResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OpenAIMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OpenAIMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.StructuredOutput>))]
     internal sealed partial class StructuredOutputsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
@@ -176,9 +176,9 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.TrafficAllocationControllerCreateResponseJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, double?, bool?, object, byte[]>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>());
-            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.MinMessagesCondition, global::Vapi.MinCallDurationCondition, global::Vapi.EndedReasonCondition>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.WorkflowOpenAIModel, global::Vapi.WorkflowAnthropicModel, global::Vapi.WorkflowAnthropicBedrockModel, global::Vapi.WorkflowGoogleModel, global::Vapi.WorkflowCustomModel>());
@@ -232,6 +232,26 @@ namespace Vapi
 
                     || typeToConvert == typeof(global::Vapi.JsonSchemaFormat?)
 
+                    || typeToConvert == typeof(global::Vapi.MinMessagesConditionType)
+
+                    || typeToConvert == typeof(global::Vapi.MinMessagesConditionType?)
+
+                    || typeToConvert == typeof(global::Vapi.MinCallDurationConditionType)
+
+                    || typeToConvert == typeof(global::Vapi.MinCallDurationConditionType?)
+
+                    || typeToConvert == typeof(global::Vapi.EndedReasonConditionType)
+
+                    || typeToConvert == typeof(global::Vapi.EndedReasonConditionType?)
+
+                    || typeToConvert == typeof(global::Vapi.EndedReasonConditionOperator)
+
+                    || typeToConvert == typeof(global::Vapi.EndedReasonConditionOperator?)
+
+                    || typeToConvert == typeof(global::Vapi.CreateStructuredOutputDTOType)
+
+                    || typeToConvert == typeof(global::Vapi.CreateStructuredOutputDTOType?)
+
                     || typeToConvert == typeof(global::Vapi.OpenAIMessageRole)
 
                     || typeToConvert == typeof(global::Vapi.OpenAIMessageRole?)
@@ -279,26 +299,6 @@ namespace Vapi
                     || typeToConvert == typeof(global::Vapi.WorkflowCustomModelMetadataSendMode)
 
                     || typeToConvert == typeof(global::Vapi.WorkflowCustomModelMetadataSendMode?)
-
-                    || typeToConvert == typeof(global::Vapi.MinMessagesConditionType)
-
-                    || typeToConvert == typeof(global::Vapi.MinMessagesConditionType?)
-
-                    || typeToConvert == typeof(global::Vapi.MinCallDurationConditionType)
-
-                    || typeToConvert == typeof(global::Vapi.MinCallDurationConditionType?)
-
-                    || typeToConvert == typeof(global::Vapi.EndedReasonConditionType)
-
-                    || typeToConvert == typeof(global::Vapi.EndedReasonConditionType?)
-
-                    || typeToConvert == typeof(global::Vapi.EndedReasonConditionOperator)
-
-                    || typeToConvert == typeof(global::Vapi.EndedReasonConditionOperator?)
-
-                    || typeToConvert == typeof(global::Vapi.CreateStructuredOutputDTOType)
-
-                    || typeToConvert == typeof(global::Vapi.CreateStructuredOutputDTOType?)
 
                     || typeToConvert == typeof(global::Vapi.PaginationMetaSortOrder)
 
@@ -353,6 +353,56 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.JsonSchemaFormat?))
                 {
                     return new global::Vapi.JsonConverters.JsonSchemaFormatNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.MinMessagesConditionType))
+                {
+                    return new global::Vapi.JsonConverters.MinMessagesConditionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.MinMessagesConditionType?))
+                {
+                    return new global::Vapi.JsonConverters.MinMessagesConditionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.MinCallDurationConditionType))
+                {
+                    return new global::Vapi.JsonConverters.MinCallDurationConditionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.MinCallDurationConditionType?))
+                {
+                    return new global::Vapi.JsonConverters.MinCallDurationConditionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.EndedReasonConditionType))
+                {
+                    return new global::Vapi.JsonConverters.EndedReasonConditionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.EndedReasonConditionType?))
+                {
+                    return new global::Vapi.JsonConverters.EndedReasonConditionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.EndedReasonConditionOperator))
+                {
+                    return new global::Vapi.JsonConverters.EndedReasonConditionOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.EndedReasonConditionOperator?))
+                {
+                    return new global::Vapi.JsonConverters.EndedReasonConditionOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.CreateStructuredOutputDTOType))
+                {
+                    return new global::Vapi.JsonConverters.CreateStructuredOutputDTOTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.CreateStructuredOutputDTOType?))
+                {
+                    return new global::Vapi.JsonConverters.CreateStructuredOutputDTOTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Vapi.OpenAIMessageRole))
@@ -473,56 +523,6 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.WorkflowCustomModelMetadataSendMode?))
                 {
                     return new global::Vapi.JsonConverters.WorkflowCustomModelMetadataSendModeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.MinMessagesConditionType))
-                {
-                    return new global::Vapi.JsonConverters.MinMessagesConditionTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.MinMessagesConditionType?))
-                {
-                    return new global::Vapi.JsonConverters.MinMessagesConditionTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.MinCallDurationConditionType))
-                {
-                    return new global::Vapi.JsonConverters.MinCallDurationConditionTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.MinCallDurationConditionType?))
-                {
-                    return new global::Vapi.JsonConverters.MinCallDurationConditionTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.EndedReasonConditionType))
-                {
-                    return new global::Vapi.JsonConverters.EndedReasonConditionTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.EndedReasonConditionType?))
-                {
-                    return new global::Vapi.JsonConverters.EndedReasonConditionTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.EndedReasonConditionOperator))
-                {
-                    return new global::Vapi.JsonConverters.EndedReasonConditionOperatorJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.EndedReasonConditionOperator?))
-                {
-                    return new global::Vapi.JsonConverters.EndedReasonConditionOperatorNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CreateStructuredOutputDTOType))
-                {
-                    return new global::Vapi.JsonConverters.CreateStructuredOutputDTOTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.CreateStructuredOutputDTOType?))
-                {
-                    return new global::Vapi.JsonConverters.CreateStructuredOutputDTOTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Vapi.PaginationMetaSortOrder))

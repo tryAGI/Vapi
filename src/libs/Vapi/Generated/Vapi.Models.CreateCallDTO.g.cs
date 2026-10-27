@@ -66,7 +66,7 @@ namespace Vapi
         /// - Workflow, use `workflow`
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistant")]
-        public global::Vapi.CreateAssistantDTO? Assistant { get; set; }
+        public global::Vapi.TransientAssistantDTO? Assistant { get; set; }
 
         /// <summary>
         /// These are the overrides for the `assistant` or `assistantId`'s settings and template variables.
@@ -264,7 +264,7 @@ namespace Vapi
             string? name,
             global::Vapi.SchedulePlan? schedulePlan,
             string? assistantId,
-            global::Vapi.CreateAssistantDTO? assistant,
+            global::Vapi.TransientAssistantDTO? assistant,
             global::Vapi.AssistantOverrides? assistantOverrides,
             string? squadId,
             global::Vapi.CreateSquadDTO? squad,

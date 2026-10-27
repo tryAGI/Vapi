@@ -18,7 +18,7 @@ namespace Vapi
         /// Complete assistant replacement. Omitted credentials and redacted server secrets are preserved when their endpoint URL is unchanged. Send credentials: [] to clear credentials; omit a server container to remove it.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistant")]
-        public global::Vapi.CreateAssistantDTO? Assistant { get; set; }
+        public global::Vapi.TransientAssistantDTO? Assistant { get; set; }
 
         /// <summary>
         /// Optional folder path for organizing personalities.<br/>
@@ -53,7 +53,7 @@ namespace Vapi
 #endif
         public UpdatePersonalityDTO(
             string? name,
-            global::Vapi.CreateAssistantDTO? assistant,
+            global::Vapi.TransientAssistantDTO? assistant,
             string? path)
         {
             this.Name = name;

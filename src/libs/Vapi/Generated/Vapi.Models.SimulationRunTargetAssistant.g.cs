@@ -25,7 +25,7 @@ namespace Vapi
         /// Inline assistant configuration to test against. Cannot be combined with assistantId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assistant")]
-        public global::Vapi.CreateAssistantDTO? Assistant { get; set; }
+        public global::Vapi.TransientAssistantDTO? Assistant { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -51,7 +51,7 @@ namespace Vapi
         public SimulationRunTargetAssistant(
             global::Vapi.SimulationRunTargetAssistantType type,
             global::System.Guid? assistantId,
-            global::Vapi.CreateAssistantDTO? assistant)
+            global::Vapi.TransientAssistantDTO? assistant)
         {
             this.Type = type;
             this.AssistantId = assistantId;
