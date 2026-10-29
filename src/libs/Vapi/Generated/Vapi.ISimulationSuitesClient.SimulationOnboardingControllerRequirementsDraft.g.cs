@@ -2,15 +2,13 @@
 
 namespace Vapi
 {
-    public partial interface ISimulationsClient
+    public partial interface ISimulationSuitesClient
     {
         /// <summary>
         /// Draft simulation requirements<br/>
-        /// Drafts the behaviours an assistant must get right, as numbered requirements plus open questions, from its prompt, tools and handoffs. This is the first step of building a simulation suite.<br/>
-        /// 1. Show the draft to your user and ask its open questions.<br/>
-        /// 2. To revise it, call again with `previousDraft` set to the draft and `feedback` set to what the user said, verbatim. Repeat until they agree.<br/>
-        /// 3. Generate the suite from the agreed requirements with `POST /eval/simulation/onboarding/suite`.<br/>
-        /// Takes up to 2 minutes. Each org can draft 60 times per UTC day, shared with the dashboard. On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, don't retry: tell your user the limit resets at 00:00 UTC.
+        /// Generate draft test requirements from an assistant's prompt, tools, and handoff configuration. The response includes numbered requirements describing expected behavior and open questions about behavior that needs clarification. Use this endpoint before generating a simulation suite.<br/>
+        /// Review the requirements and resolve any open questions. To revise a draft, send it as `previousDraft` together with natural-language `feedback` describing the changes or answers. Once the requirements are ready, pass them to `POST /eval/simulation/onboarding/suite`.<br/>
+        /// Requests can take up to 2 minutes. Each organization can draft requirements 60 times per UTC day, shared with the dashboard. A 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED` response means the daily limit has been reached. Wait until the limit resets at 00:00 UTC before retrying.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -23,11 +21,9 @@ namespace Vapi
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Draft simulation requirements<br/>
-        /// Drafts the behaviours an assistant must get right, as numbered requirements plus open questions, from its prompt, tools and handoffs. This is the first step of building a simulation suite.<br/>
-        /// 1. Show the draft to your user and ask its open questions.<br/>
-        /// 2. To revise it, call again with `previousDraft` set to the draft and `feedback` set to what the user said, verbatim. Repeat until they agree.<br/>
-        /// 3. Generate the suite from the agreed requirements with `POST /eval/simulation/onboarding/suite`.<br/>
-        /// Takes up to 2 minutes. Each org can draft 60 times per UTC day, shared with the dashboard. On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, don't retry: tell your user the limit resets at 00:00 UTC.
+        /// Generate draft test requirements from an assistant's prompt, tools, and handoff configuration. The response includes numbered requirements describing expected behavior and open questions about behavior that needs clarification. Use this endpoint before generating a simulation suite.<br/>
+        /// Review the requirements and resolve any open questions. To revise a draft, send it as `previousDraft` together with natural-language `feedback` describing the changes or answers. Once the requirements are ready, pass them to `POST /eval/simulation/onboarding/suite`.<br/>
+        /// Requests can take up to 2 minutes. Each organization can draft requirements 60 times per UTC day, shared with the dashboard. A 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED` response means the daily limit has been reached. Wait until the limit resets at 00:00 UTC before retrying.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -40,11 +36,9 @@ namespace Vapi
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Draft simulation requirements<br/>
-        /// Drafts the behaviours an assistant must get right, as numbered requirements plus open questions, from its prompt, tools and handoffs. This is the first step of building a simulation suite.<br/>
-        /// 1. Show the draft to your user and ask its open questions.<br/>
-        /// 2. To revise it, call again with `previousDraft` set to the draft and `feedback` set to what the user said, verbatim. Repeat until they agree.<br/>
-        /// 3. Generate the suite from the agreed requirements with `POST /eval/simulation/onboarding/suite`.<br/>
-        /// Takes up to 2 minutes. Each org can draft 60 times per UTC day, shared with the dashboard. On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, don't retry: tell your user the limit resets at 00:00 UTC.
+        /// Generate draft test requirements from an assistant's prompt, tools, and handoff configuration. The response includes numbered requirements describing expected behavior and open questions about behavior that needs clarification. Use this endpoint before generating a simulation suite.<br/>
+        /// Review the requirements and resolve any open questions. To revise a draft, send it as `previousDraft` together with natural-language `feedback` describing the changes or answers. Once the requirements are ready, pass them to `POST /eval/simulation/onboarding/suite`.<br/>
+        /// Requests can take up to 2 minutes. Each organization can draft requirements 60 times per UTC day, shared with the dashboard. A 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED` response means the daily limit has been reached. Wait until the limit resets at 00:00 UTC before retrying.
         /// </summary>
         /// <param name="assistantId">
         /// Assistant to draft requirements for.
@@ -53,7 +47,7 @@ namespace Vapi
         /// The draft being revised, exactly as this endpoint returned it. Send it with `feedback`.
         /// </param>
         /// <param name="feedback">
-        /// What your user wants changed in `previousDraft`, in the user's own words. Send it with `previousDraft`.
+        /// Natural-language instructions for revising the requirements in `previousDraft`, including answers to open questions. Required when `previousDraft` is provided.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

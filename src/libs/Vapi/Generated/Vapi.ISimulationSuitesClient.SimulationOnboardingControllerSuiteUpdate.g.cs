@@ -2,13 +2,14 @@
 
 namespace Vapi
 {
-    public partial interface ISimulationsClient
+    public partial interface ISimulationSuitesClient
     {
         /// <summary>
         /// Edit a generated simulation suite<br/>
-        /// Edits a generated suite: removes simulations, rewrites a simulation's scenario from your user's instruction, or regenerates the scenarios that failed or did not fit (`retryFailed`). Takes up to 2 minutes.<br/>
+        /// Revise a suite created by `POST /eval/simulation/onboarding/suite`. Remove simulations, rewrite scenarios using natural-language instructions, or set `retryFailed` to regenerate scenarios that failed or exceeded generation limits. The response includes the updated suite and requirement coverage.<br/>
+        /// Requests can take up to 2 minutes.<br/>
         /// Send a new `patchKey` for each edit. Replaying an applied key changes nothing and returns the current suite, with `failedEditSimulationIds` listing the simulations that edit could not rewrite, so retry a timeout or a 5xx with the same key. A suite remembers its last 50 keys, so never reuse one.<br/>
-        /// Each org can make 60 edits per UTC day, shared with the dashboard. Removals and replays don't count. On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, don't retry: the limit resets at 00:00 UTC.
+        /// Each organization can make 60 edits per UTC day, shared with the dashboard. Requests that only remove simulations and replays of applied edits do not count toward this limit. On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, wait until the daily limit resets at 00:00 UTC before retrying.
         /// </summary>
         /// <param name="suiteId"></param>
         /// <param name="request"></param>
@@ -23,9 +24,10 @@ namespace Vapi
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Edit a generated simulation suite<br/>
-        /// Edits a generated suite: removes simulations, rewrites a simulation's scenario from your user's instruction, or regenerates the scenarios that failed or did not fit (`retryFailed`). Takes up to 2 minutes.<br/>
+        /// Revise a suite created by `POST /eval/simulation/onboarding/suite`. Remove simulations, rewrite scenarios using natural-language instructions, or set `retryFailed` to regenerate scenarios that failed or exceeded generation limits. The response includes the updated suite and requirement coverage.<br/>
+        /// Requests can take up to 2 minutes.<br/>
         /// Send a new `patchKey` for each edit. Replaying an applied key changes nothing and returns the current suite, with `failedEditSimulationIds` listing the simulations that edit could not rewrite, so retry a timeout or a 5xx with the same key. A suite remembers its last 50 keys, so never reuse one.<br/>
-        /// Each org can make 60 edits per UTC day, shared with the dashboard. Removals and replays don't count. On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, don't retry: the limit resets at 00:00 UTC.
+        /// Each organization can make 60 edits per UTC day, shared with the dashboard. Requests that only remove simulations and replays of applied edits do not count toward this limit. On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, wait until the daily limit resets at 00:00 UTC before retrying.
         /// </summary>
         /// <param name="suiteId"></param>
         /// <param name="request"></param>
@@ -40,9 +42,10 @@ namespace Vapi
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Edit a generated simulation suite<br/>
-        /// Edits a generated suite: removes simulations, rewrites a simulation's scenario from your user's instruction, or regenerates the scenarios that failed or did not fit (`retryFailed`). Takes up to 2 minutes.<br/>
+        /// Revise a suite created by `POST /eval/simulation/onboarding/suite`. Remove simulations, rewrite scenarios using natural-language instructions, or set `retryFailed` to regenerate scenarios that failed or exceeded generation limits. The response includes the updated suite and requirement coverage.<br/>
+        /// Requests can take up to 2 minutes.<br/>
         /// Send a new `patchKey` for each edit. Replaying an applied key changes nothing and returns the current suite, with `failedEditSimulationIds` listing the simulations that edit could not rewrite, so retry a timeout or a 5xx with the same key. A suite remembers its last 50 keys, so never reuse one.<br/>
-        /// Each org can make 60 edits per UTC day, shared with the dashboard. Removals and replays don't count. On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, don't retry: the limit resets at 00:00 UTC.
+        /// Each organization can make 60 edits per UTC day, shared with the dashboard. Requests that only remove simulations and replays of applied edits do not count toward this limit. On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, wait until the daily limit resets at 00:00 UTC before retrying.
         /// </summary>
         /// <param name="suiteId"></param>
         /// <param name="patchKey">

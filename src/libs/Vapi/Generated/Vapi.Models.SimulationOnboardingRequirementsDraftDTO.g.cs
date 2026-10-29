@@ -29,14 +29,14 @@ namespace Vapi
         public required global::System.Collections.Generic.IList<string> Sources { get; set; }
 
         /// <summary>
-        /// The requirements, for your user to review.
+        /// Draft test requirements describing the expected assistant behavior. Review and refine these before generating a simulation suite.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requirements")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::Vapi.SimulationOnboardingRequirementDTO> Requirements { get; set; }
 
         /// <summary>
-        /// Questions to ask your user before they agree.
+        /// Questions about ambiguous or missing assistant behavior to resolve before generating a simulation suite.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("openQuestions")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -58,10 +58,10 @@ namespace Vapi
         /// What the draft was based on, e.g. the prompt and tools.
         /// </param>
         /// <param name="requirements">
-        /// The requirements, for your user to review.
+        /// Draft test requirements describing the expected assistant behavior. Review and refine these before generating a simulation suite.
         /// </param>
         /// <param name="openQuestions">
-        /// Questions to ask your user before they agree.
+        /// Questions about ambiguous or missing assistant behavior to resolve before generating a simulation suite.
         /// </param>
         /// <param name="changeNote">
         /// What changed since the previous draft.

@@ -16,7 +16,7 @@ namespace Vapi
         public required global::System.Guid SimulationId { get; set; }
 
         /// <summary>
-        /// The user's requested change, in their own words.
+        /// Natural-language instructions for revising this simulation's scenario, such as "Have the caller ask for a refund after 30 days."
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("instruction")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -35,7 +35,7 @@ namespace Vapi
         /// Simulation in the suite whose scenario is rewritten.
         /// </param>
         /// <param name="instruction">
-        /// The user's requested change, in their own words.
+        /// Natural-language instructions for revising this simulation's scenario, such as "Have the caller ask for a refund after 30 days."
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

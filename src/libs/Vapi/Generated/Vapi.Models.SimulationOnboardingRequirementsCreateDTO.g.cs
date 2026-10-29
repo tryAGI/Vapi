@@ -22,7 +22,7 @@ namespace Vapi
         public global::Vapi.SimulationOnboardingRequirementsDraftDTO? PreviousDraft { get; set; }
 
         /// <summary>
-        /// What your user wants changed in `previousDraft`, in the user's own words. Send it with `previousDraft`.
+        /// Natural-language instructions for revising the requirements in `previousDraft`, including answers to open questions. Required when `previousDraft` is provided.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedback")]
         public string? Feedback { get; set; }
@@ -43,7 +43,7 @@ namespace Vapi
         /// The draft being revised, exactly as this endpoint returned it. Send it with `feedback`.
         /// </param>
         /// <param name="feedback">
-        /// What your user wants changed in `previousDraft`, in the user's own words. Send it with `previousDraft`.
+        /// Natural-language instructions for revising the requirements in `previousDraft`, including answers to open questions. Required when `previousDraft` is provided.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

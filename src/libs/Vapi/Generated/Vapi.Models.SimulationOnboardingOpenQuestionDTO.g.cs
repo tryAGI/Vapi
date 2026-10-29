@@ -16,7 +16,7 @@ namespace Vapi
         public required string Id { get; set; }
 
         /// <summary>
-        /// The question to ask your user.
+        /// A question about expected assistant behavior that needs clarification.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -42,7 +42,7 @@ namespace Vapi
         /// Question id within its draft, e.g. `Q1`.
         /// </param>
         /// <param name="text">
-        /// The question to ask your user.
+        /// A question about expected assistant behavior that needs clarification.
         /// </param>
         /// <param name="why">
         /// Which requirement the answer changes, and how.

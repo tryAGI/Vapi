@@ -16,14 +16,14 @@ namespace Vapi
         public required global::System.Guid AssistantId { get; set; }
 
         /// <summary>
-        /// One key per agreed draft. Retrying with the same key returns the suite already saved, or a 409 while it is still generating, instead of generating another.
+        /// A unique key for this suite generation request. Retrying with the same key returns the saved suite, or a 409 while generation is in progress. Use a new key for a different assistant or requirements.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("idempotencyKey")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string IdempotencyKey { get; set; }
 
         /// <summary>
-        /// The requirements your user agreed to, from the requirements draft. Each id at most once.
+        /// The reviewed test requirements to generate simulations for, from the requirements draft. Each requirement must have a unique id.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requirements")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -42,10 +42,10 @@ namespace Vapi
         /// Assistant the suite tests and is assigned to.
         /// </param>
         /// <param name="idempotencyKey">
-        /// One key per agreed draft. Retrying with the same key returns the suite already saved, or a 409 while it is still generating, instead of generating another.
+        /// A unique key for this suite generation request. Retrying with the same key returns the saved suite, or a 409 while generation is in progress. Use a new key for a different assistant or requirements.
         /// </param>
         /// <param name="requirements">
-        /// The requirements your user agreed to, from the requirements draft. Each id at most once.
+        /// The reviewed test requirements to generate simulations for, from the requirements draft. Each requirement must have a unique id.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

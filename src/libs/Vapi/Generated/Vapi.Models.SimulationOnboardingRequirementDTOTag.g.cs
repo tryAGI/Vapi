@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// Why this requirement needs the user's attention, when it does.
+    /// Indicates an assumption, a requirement that needs a voice simulation, or a requirement that cannot be tested.
     /// </summary>
     public enum SimulationOnboardingRequirementDTOTag
     {
