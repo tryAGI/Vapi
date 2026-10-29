@@ -23,7 +23,7 @@ namespace Vapi
         public required string Text { get; set; }
 
         /// <summary>
-        /// Why this requirement needs the user's attention, when it does.
+        /// Indicates an assumption, a requirement that needs a voice simulation, or a requirement that cannot be tested.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tag")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.SimulationOnboardingRequirementDTOTagJsonConverter))]
@@ -51,7 +51,7 @@ namespace Vapi
         /// One observable behaviour the assistant must get right.
         /// </param>
         /// <param name="tag">
-        /// Why this requirement needs the user's attention, when it does.
+        /// Indicates an assumption, a requirement that needs a voice simulation, or a requirement that cannot be tested.
         /// </param>
         /// <param name="note">
         /// What was assumed, why only a voice run can check it, or why it cannot be tested.

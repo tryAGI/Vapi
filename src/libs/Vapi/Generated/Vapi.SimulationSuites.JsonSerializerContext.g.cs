@@ -31,22 +31,66 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationSuitesPaginatedResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateSimulationSuiteDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingErrorDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingErrorDTOCode), TypeInfoPropertyName = "SimulationOnboardingErrorDTOCode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingRequirementDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingRequirementDTOTag), TypeInfoPropertyName = "SimulationOnboardingRequirementDTOTag2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingOpenQuestionDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingRequirementsDraftDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationOnboardingRequirementDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationOnboardingOpenQuestionDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingRequirementsCreateDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingSuiteCreateDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingSuiteRefDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingSuiteSimulationDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingCoverageGapDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingCoverageGapDTOReason), TypeInfoPropertyName = "SimulationOnboardingCoverageGapDTOReason2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingSuiteCoverageDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationOnboardingCoverageGapDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingSuiteDocsDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingToolGapDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingToolGapDTOReason), TypeInfoPropertyName = "SimulationOnboardingToolGapDTOReason2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingSuiteViewDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationOnboardingSuiteSimulationDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationOnboardingToolGapDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingSuiteEditDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingSuiteUpdateDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SimulationOnboardingSuiteEditDTO>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationSuiteControllerFindAllSortOrder), TypeInfoPropertyName = "SimulationSuiteControllerFindAllSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationSuiteControllerFindAllSortBy), TypeInfoPropertyName = "SimulationSuiteControllerFindAllSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>), TypeInfoPropertyName = "OneOfIListSimulationSuiteSimulationSuitesPaginatedResponse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerRequirementsDraftResponse2>), TypeInfoPropertyName = "OneOfSimulationOnboardingErrorDTOSimulationOnboardingControllerRequirementsDraftResponse22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingControllerRequirementsDraftResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerSuiteCreateResponse2>), TypeInfoPropertyName = "OneOfSimulationOnboardingErrorDTOSimulationOnboardingControllerSuiteCreateResponse22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingControllerSuiteCreateResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerSuiteUpdateResponse2>), TypeInfoPropertyName = "OneOfSimulationOnboardingErrorDTOSimulationOnboardingControllerSuiteUpdateResponse22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingControllerSuiteUpdateResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PaginationMetaSortOrder?), TypeInfoPropertyName = "NullablePaginationMetaSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationSuiteTargetAssignmentTargetType?), TypeInfoPropertyName = "NullableSimulationSuiteTargetAssignmentTargetType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingErrorDTOCode?), TypeInfoPropertyName = "NullableSimulationOnboardingErrorDTOCode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingRequirementDTOTag?), TypeInfoPropertyName = "NullableSimulationOnboardingRequirementDTOTag2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingCoverageGapDTOReason?), TypeInfoPropertyName = "NullableSimulationOnboardingCoverageGapDTOReason2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationOnboardingToolGapDTOReason?), TypeInfoPropertyName = "NullableSimulationOnboardingToolGapDTOReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationSuiteControllerFindAllSortOrder?), TypeInfoPropertyName = "NullableSimulationSuiteControllerFindAllSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationSuiteControllerFindAllSortBy?), TypeInfoPropertyName = "NullableSimulationSuiteControllerFindAllSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>?), TypeInfoPropertyName = "NullableOneOfIListSimulationSuiteSimulationSuitesPaginatedResponse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerRequirementsDraftResponse2>?), TypeInfoPropertyName = "NullableOneOfSimulationOnboardingErrorDTOSimulationOnboardingControllerRequirementsDraftResponse22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerSuiteCreateResponse2>?), TypeInfoPropertyName = "NullableOneOfSimulationOnboardingErrorDTOSimulationOnboardingControllerSuiteCreateResponse22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerSuiteUpdateResponse2>?), TypeInfoPropertyName = "NullableOneOfSimulationOnboardingErrorDTOSimulationOnboardingControllerSuiteUpdateResponse22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Guid>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationSuiteTargetAssignment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationSuite>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationOnboardingRequirementDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationOnboardingOpenQuestionDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationOnboardingCoverageGapDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationOnboardingSuiteSimulationDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationOnboardingToolGapDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationOnboardingSuiteEditDTO>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.List<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>))]
     internal sealed partial class SimulationSuitesSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
@@ -103,6 +147,9 @@ namespace Vapi
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<double?, string, bool?>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, double?>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::System.Collections.Generic.IList<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerRequirementsDraftResponse2>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerSuiteCreateResponse2>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerSuiteUpdateResponse2>());
             options.Converters.Add(new global::Vapi.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
@@ -132,6 +179,22 @@ namespace Vapi
                     || typeToConvert == typeof(global::Vapi.SimulationSuiteTargetAssignmentTargetType)
 
                     || typeToConvert == typeof(global::Vapi.SimulationSuiteTargetAssignmentTargetType?)
+
+                    || typeToConvert == typeof(global::Vapi.SimulationOnboardingErrorDTOCode)
+
+                    || typeToConvert == typeof(global::Vapi.SimulationOnboardingErrorDTOCode?)
+
+                    || typeToConvert == typeof(global::Vapi.SimulationOnboardingRequirementDTOTag)
+
+                    || typeToConvert == typeof(global::Vapi.SimulationOnboardingRequirementDTOTag?)
+
+                    || typeToConvert == typeof(global::Vapi.SimulationOnboardingCoverageGapDTOReason)
+
+                    || typeToConvert == typeof(global::Vapi.SimulationOnboardingCoverageGapDTOReason?)
+
+                    || typeToConvert == typeof(global::Vapi.SimulationOnboardingToolGapDTOReason)
+
+                    || typeToConvert == typeof(global::Vapi.SimulationOnboardingToolGapDTOReason?)
 
                     || typeToConvert == typeof(global::Vapi.SimulationSuiteControllerFindAllSortOrder)
 
@@ -164,6 +227,46 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.SimulationSuiteTargetAssignmentTargetType?))
                 {
                     return new global::Vapi.JsonConverters.SimulationSuiteTargetAssignmentTargetTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.SimulationOnboardingErrorDTOCode))
+                {
+                    return new global::Vapi.JsonConverters.SimulationOnboardingErrorDTOCodeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.SimulationOnboardingErrorDTOCode?))
+                {
+                    return new global::Vapi.JsonConverters.SimulationOnboardingErrorDTOCodeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.SimulationOnboardingRequirementDTOTag))
+                {
+                    return new global::Vapi.JsonConverters.SimulationOnboardingRequirementDTOTagJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.SimulationOnboardingRequirementDTOTag?))
+                {
+                    return new global::Vapi.JsonConverters.SimulationOnboardingRequirementDTOTagNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.SimulationOnboardingCoverageGapDTOReason))
+                {
+                    return new global::Vapi.JsonConverters.SimulationOnboardingCoverageGapDTOReasonJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.SimulationOnboardingCoverageGapDTOReason?))
+                {
+                    return new global::Vapi.JsonConverters.SimulationOnboardingCoverageGapDTOReasonNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.SimulationOnboardingToolGapDTOReason))
+                {
+                    return new global::Vapi.JsonConverters.SimulationOnboardingToolGapDTOReasonJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.SimulationOnboardingToolGapDTOReason?))
+                {
+                    return new global::Vapi.JsonConverters.SimulationOnboardingToolGapDTOReasonNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Vapi.SimulationSuiteControllerFindAllSortOrder))

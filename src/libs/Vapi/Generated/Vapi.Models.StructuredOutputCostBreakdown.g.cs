@@ -50,6 +50,12 @@ namespace Vapi
         public double? CachedPromptTokens { get; set; }
 
         /// <summary>
+        /// This is the number of reasoning tokens the model generated for this structured output. This is a subset of `completionTokens`, not an addition to it: reasoning tokens are already billed at the output-token rate, so this is for visibility only and does not affect `cost`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningTokens")]
+        public double? ReasoningTokens { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -76,6 +82,9 @@ namespace Vapi
         /// <param name="cachedPromptTokens">
         /// This is the number of cached prompt tokens used to evaluate this structured output. This is a subset of `promptTokens`, not an addition to it.
         /// </param>
+        /// <param name="reasoningTokens">
+        /// This is the number of reasoning tokens the model generated for this structured output. This is a subset of `completionTokens`, not an addition to it: reasoning tokens are already billed at the output-token rate, so this is for visibility only and does not affect `cost`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -85,7 +94,8 @@ namespace Vapi
             double cost,
             double promptTokens,
             double completionTokens,
-            double? cachedPromptTokens)
+            double? cachedPromptTokens,
+            double? reasoningTokens)
         {
             this.StructuredOutputId = structuredOutputId ?? throw new global::System.ArgumentNullException(nameof(structuredOutputId));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
@@ -93,6 +103,7 @@ namespace Vapi
             this.PromptTokens = promptTokens;
             this.CompletionTokens = completionTokens;
             this.CachedPromptTokens = cachedPromptTokens;
+            this.ReasoningTokens = reasoningTokens;
         }
 
         /// <summary>

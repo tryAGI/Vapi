@@ -56,6 +56,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AnthropicThinkingConfigType), TypeInfoPropertyName = "AnthropicThinkingConfigType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModelProvider), TypeInfoPropertyName = "WorkflowOpenAIModelProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModelModel), TypeInfoPropertyName = "WorkflowOpenAIModelModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModelReasoningEffort), TypeInfoPropertyName = "WorkflowOpenAIModelReasoningEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicModelProvider), TypeInfoPropertyName = "WorkflowAnthropicModelProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicModelModel), TypeInfoPropertyName = "WorkflowAnthropicModelModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicBedrockModelProvider), TypeInfoPropertyName = "WorkflowAnthropicBedrockModelProvider2")]
@@ -103,6 +104,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AnthropicThinkingConfigType?), TypeInfoPropertyName = "NullableAnthropicThinkingConfigType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModelProvider?), TypeInfoPropertyName = "NullableWorkflowOpenAIModelProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModelModel?), TypeInfoPropertyName = "NullableWorkflowOpenAIModelModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowOpenAIModelReasoningEffort?), TypeInfoPropertyName = "NullableWorkflowOpenAIModelReasoningEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicModelProvider?), TypeInfoPropertyName = "NullableWorkflowAnthropicModelProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicModelModel?), TypeInfoPropertyName = "NullableWorkflowAnthropicModelModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowAnthropicBedrockModelProvider?), TypeInfoPropertyName = "NullableWorkflowAnthropicBedrockModelProvider2")]
@@ -267,6 +269,10 @@ namespace Vapi
                     || typeToConvert == typeof(global::Vapi.WorkflowOpenAIModelModel)
 
                     || typeToConvert == typeof(global::Vapi.WorkflowOpenAIModelModel?)
+
+                    || typeToConvert == typeof(global::Vapi.WorkflowOpenAIModelReasoningEffort)
+
+                    || typeToConvert == typeof(global::Vapi.WorkflowOpenAIModelReasoningEffort?)
 
                     || typeToConvert == typeof(global::Vapi.WorkflowAnthropicModelProvider)
 
@@ -443,6 +449,16 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.WorkflowOpenAIModelModel?))
                 {
                     return new global::Vapi.JsonConverters.WorkflowOpenAIModelModelNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.WorkflowOpenAIModelReasoningEffort))
+                {
+                    return new global::Vapi.JsonConverters.WorkflowOpenAIModelReasoningEffortJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.WorkflowOpenAIModelReasoningEffort?))
+                {
+                    return new global::Vapi.JsonConverters.WorkflowOpenAIModelReasoningEffortNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Vapi.WorkflowAnthropicModelProvider))

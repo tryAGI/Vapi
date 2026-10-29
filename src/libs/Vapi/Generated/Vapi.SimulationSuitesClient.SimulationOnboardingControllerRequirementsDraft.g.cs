@@ -3,11 +3,11 @@
 
 namespace Vapi
 {
-    public partial class SimulationsClient
+    public partial class SimulationSuitesClient
     {
 
 
-        private static readonly global::Vapi.EndPointSecurityRequirement s_SimulationOnboardingControllerSuiteCreateSecurityRequirement0 =
+        private static readonly global::Vapi.EndPointSecurityRequirement s_SimulationOnboardingControllerRequirementsDraftSecurityRequirement0 =
             new global::Vapi.EndPointSecurityRequirement
             {
                 Authorizations = new global::Vapi.EndPointAuthorizationRequirement[]
@@ -21,47 +21,43 @@ namespace Vapi
                     },
                 },
             };
-        private static readonly global::Vapi.EndPointSecurityRequirement[] s_SimulationOnboardingControllerSuiteCreateSecurityRequirements =
+        private static readonly global::Vapi.EndPointSecurityRequirement[] s_SimulationOnboardingControllerRequirementsDraftSecurityRequirements =
             new global::Vapi.EndPointSecurityRequirement[]
-            {                s_SimulationOnboardingControllerSuiteCreateSecurityRequirement0,
+            {                s_SimulationOnboardingControllerRequirementsDraftSecurityRequirement0,
             };
-        partial void PrepareSimulationOnboardingControllerSuiteCreateArguments(
+        partial void PrepareSimulationOnboardingControllerRequirementsDraftArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Vapi.SimulationOnboardingSuiteCreateDTO request);
-        partial void PrepareSimulationOnboardingControllerSuiteCreateRequest(
+            global::Vapi.SimulationOnboardingRequirementsCreateDTO request);
+        partial void PrepareSimulationOnboardingControllerRequirementsDraftRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Vapi.SimulationOnboardingSuiteCreateDTO request);
-        partial void ProcessSimulationOnboardingControllerSuiteCreateResponse(
+            global::Vapi.SimulationOnboardingRequirementsCreateDTO request);
+        partial void ProcessSimulationOnboardingControllerRequirementsDraftResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessSimulationOnboardingControllerSuiteCreateResponseContent(
+        partial void ProcessSimulationOnboardingControllerRequirementsDraftResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Generate a simulation suite<br/>
-        /// Generates a simulation suite from requirements your user agreed to, saves it and assigns it to the assistant. Takes up to 3 minutes, so set a client timeout of at least 200 seconds.<br/>
-        /// Send one `idempotencyKey` per agreed draft. Retrying with the same key never generates a second suite:<br/>
-        /// - On a timeout or a 5xx (502, 504, 524), retry with the same key. You get the saved suite, a 409 while it is still generating, or a fresh generation if the first one never saved.<br/>
-        /// - On a 409 `SIMULATION_ONBOARDING_GENERATION_IN_PROGRESS`, the first request is still generating. Wait `Retry-After` seconds (15) and retry with the same key.<br/>
-        /// - On a 409 `SIMULATION_ONBOARDING_IDEMPOTENCY_KEY_REUSED`, the key was used for other requirements. Send a new key.<br/>
-        /// Then review the suite with your user, edit it with `PATCH /eval/simulation/onboarding/suite/{suiteId}`, and run it with `POST /eval/simulation/run`.<br/>
-        /// Each org can generate 20 suites per UTC day, shared with the dashboard, and 2 at a time. A retry that returns a saved suite doesn't count. On a 429 `SIMULATION_ONBOARDING_CONCURRENCY_LIMITED`, wait `Retry-After` seconds (30). On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, don't retry: the limit resets at 00:00 UTC.
+        /// Draft simulation requirements<br/>
+        /// Generate draft test requirements from an assistant's prompt, tools, and handoff configuration. The response includes numbered requirements describing expected behavior and open questions about behavior that needs clarification. Use this endpoint before generating a simulation suite.<br/>
+        /// Review the requirements and resolve any open questions. To revise a draft, send it as `previousDraft` together with natural-language `feedback` describing the changes or answers. Once the requirements are ready, pass them to `POST /eval/simulation/onboarding/suite`.<br/>
+        /// Requests can take up to 2 minutes. Each organization can draft requirements 60 times per UTC day, shared with the dashboard. A 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED` response means the daily limit has been reached. Wait until the limit resets at 00:00 UTC before retrying.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.SimulationOnboardingSuiteViewDTO> SimulationOnboardingControllerSuiteCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.SimulationOnboardingRequirementsDraftDTO> SimulationOnboardingControllerRequirementsDraftAsync(
 
-            global::Vapi.SimulationOnboardingSuiteCreateDTO request,
+            global::Vapi.SimulationOnboardingRequirementsCreateDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await SimulationOnboardingControllerSuiteCreateAsResponseAsync(
+            var __response = await SimulationOnboardingControllerRequirementsDraftAsResponseAsync(
 
                 request: request,
                 requestOptions: requestOptions,
@@ -71,22 +67,18 @@ namespace Vapi
             return __response.Body;
         }
         /// <summary>
-        /// Generate a simulation suite<br/>
-        /// Generates a simulation suite from requirements your user agreed to, saves it and assigns it to the assistant. Takes up to 3 minutes, so set a client timeout of at least 200 seconds.<br/>
-        /// Send one `idempotencyKey` per agreed draft. Retrying with the same key never generates a second suite:<br/>
-        /// - On a timeout or a 5xx (502, 504, 524), retry with the same key. You get the saved suite, a 409 while it is still generating, or a fresh generation if the first one never saved.<br/>
-        /// - On a 409 `SIMULATION_ONBOARDING_GENERATION_IN_PROGRESS`, the first request is still generating. Wait `Retry-After` seconds (15) and retry with the same key.<br/>
-        /// - On a 409 `SIMULATION_ONBOARDING_IDEMPOTENCY_KEY_REUSED`, the key was used for other requirements. Send a new key.<br/>
-        /// Then review the suite with your user, edit it with `PATCH /eval/simulation/onboarding/suite/{suiteId}`, and run it with `POST /eval/simulation/run`.<br/>
-        /// Each org can generate 20 suites per UTC day, shared with the dashboard, and 2 at a time. A retry that returns a saved suite doesn't count. On a 429 `SIMULATION_ONBOARDING_CONCURRENCY_LIMITED`, wait `Retry-After` seconds (30). On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, don't retry: the limit resets at 00:00 UTC.
+        /// Draft simulation requirements<br/>
+        /// Generate draft test requirements from an assistant's prompt, tools, and handoff configuration. The response includes numbered requirements describing expected behavior and open questions about behavior that needs clarification. Use this endpoint before generating a simulation suite.<br/>
+        /// Review the requirements and resolve any open questions. To revise a draft, send it as `previousDraft` together with natural-language `feedback` describing the changes or answers. Once the requirements are ready, pass them to `POST /eval/simulation/onboarding/suite`.<br/>
+        /// Requests can take up to 2 minutes. Each organization can draft requirements 60 times per UTC day, shared with the dashboard. A 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED` response means the daily limit has been reached. Wait until the limit resets at 00:00 UTC before retrying.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Vapi.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.SimulationOnboardingSuiteViewDTO>> SimulationOnboardingControllerSuiteCreateAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::Vapi.SimulationOnboardingRequirementsDraftDTO>> SimulationOnboardingControllerRequirementsDraftAsResponseAsync(
 
-            global::Vapi.SimulationOnboardingSuiteCreateDTO request,
+            global::Vapi.SimulationOnboardingRequirementsCreateDTO request,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -94,15 +86,15 @@ namespace Vapi
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareSimulationOnboardingControllerSuiteCreateArguments(
+            PrepareSimulationOnboardingControllerRequirementsDraftArguments(
                 httpClient: HttpClient,
                 request: request);
 
 
             var __authorizations = global::Vapi.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_SimulationOnboardingControllerSuiteCreateSecurityRequirements,
-                operationName: "SimulationOnboardingControllerSuiteCreateAsync");
+                securityRequirements: s_SimulationOnboardingControllerRequirementsDraftSecurityRequirements,
+                operationName: "SimulationOnboardingControllerRequirementsDraftAsync");
 
             using var __timeoutCancellationTokenSource = global::Vapi.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -122,7 +114,7 @@ namespace Vapi
             {
 
                             var __pathBuilder = new global::Vapi.PathBuilder(
-                                path: "/eval/simulation/onboarding/suite",
+                                path: "/eval/simulation/onboarding/requirements",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Vapi.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -167,7 +159,7 @@ namespace Vapi
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareSimulationOnboardingControllerSuiteCreateRequest(
+                PrepareSimulationOnboardingControllerRequirementsDraftRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     request: request);
@@ -187,9 +179,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "SimulationOnboardingControllerSuiteCreate",
-                                methodName: "SimulationOnboardingControllerSuiteCreateAsync",
-                                pathTemplate: "\"/eval/simulation/onboarding/suite\"",
+                                operationId: "SimulationOnboardingControllerRequirementsDraft",
+                                methodName: "SimulationOnboardingControllerRequirementsDraftAsync",
+                                pathTemplate: "\"/eval/simulation/onboarding/requirements\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
@@ -221,9 +213,9 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "SimulationOnboardingControllerSuiteCreate",
-                                methodName: "SimulationOnboardingControllerSuiteCreateAsync",
-                                pathTemplate: "\"/eval/simulation/onboarding/suite\"",
+                                operationId: "SimulationOnboardingControllerRequirementsDraft",
+                                methodName: "SimulationOnboardingControllerRequirementsDraftAsync",
+                                pathTemplate: "\"/eval/simulation/onboarding/requirements\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
@@ -262,9 +254,9 @@ namespace Vapi
                         await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "SimulationOnboardingControllerSuiteCreate",
-                                methodName: "SimulationOnboardingControllerSuiteCreateAsync",
-                                pathTemplate: "\"/eval/simulation/onboarding/suite\"",
+                                operationId: "SimulationOnboardingControllerRequirementsDraft",
+                                methodName: "SimulationOnboardingControllerRequirementsDraftAsync",
+                                pathTemplate: "\"/eval/simulation/onboarding/requirements\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
@@ -302,7 +294,7 @@ namespace Vapi
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessSimulationOnboardingControllerSuiteCreateResponse(
+                ProcessSimulationOnboardingControllerRequirementsDraftResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -310,9 +302,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "SimulationOnboardingControllerSuiteCreate",
-                                methodName: "SimulationOnboardingControllerSuiteCreateAsync",
-                                pathTemplate: "\"/eval/simulation/onboarding/suite\"",
+                                operationId: "SimulationOnboardingControllerRequirementsDraft",
+                                methodName: "SimulationOnboardingControllerRequirementsDraftAsync",
+                                pathTemplate: "\"/eval/simulation/onboarding/requirements\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
@@ -332,9 +324,9 @@ namespace Vapi
                     await global::Vapi.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Vapi.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "SimulationOnboardingControllerSuiteCreate",
-                                methodName: "SimulationOnboardingControllerSuiteCreateAsync",
-                                pathTemplate: "\"/eval/simulation/onboarding/suite\"",
+                                operationId: "SimulationOnboardingControllerRequirementsDraft",
+                                methodName: "SimulationOnboardingControllerRequirementsDraftAsync",
+                                pathTemplate: "\"/eval/simulation/onboarding/requirements\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
@@ -445,76 +437,7 @@ namespace Vapi
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // `SIMULATION_ONBOARDING_GENERATION_IN_PROGRESS`: a request with this key is still generating; retry with the same key after `Retry-After`. `SIMULATION_ONBOARDING_IDEMPOTENCY_KEY_REUSED`: the key was used for other requirements; send a new key.
-                            if ((int)__response.StatusCode == 409)
-                            {
-                                string? __content_409 = null;
-                                global::System.Exception? __exception_409 = null;
-                                global::Vapi.SimulationOnboardingErrorDTO? __value_409 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_409 = global::Vapi.SimulationOnboardingErrorDTO.FromJson(__content_409, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_409 = global::Vapi.SimulationOnboardingErrorDTO.FromJson(__content_409, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_409 = __ex;
-                                }
-
-
-                                throw global::Vapi.ApiException<global::Vapi.SimulationOnboardingErrorDTO>.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_409,
-                                    responseBody: __content_409,
-                                    responseObject: __value_409,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
-                            //
-                            if ((int)__response.StatusCode == 422)
-                            {
-                                string? __content_422 = null;
-                                global::System.Exception? __exception_422 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                    }
-                                    else
-                                    {
-                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_422 = __ex;
-                                }
-
-
-                                throw global::Vapi.ApiException.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_422,
-                                    responseBody: __content_422,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
-                            // `SIMULATION_ONBOARDING_CONCURRENCY_LIMITED`: the org already has 2 suites generating; retry after `Retry-After`. `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`: the org generated 20 suites today; don't retry, the limit resets at 00:00 UTC.
+                            // `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`: the org drafted 60 times today. Don't retry; the limit resets at 00:00 UTC (`Retry-After`).
                             if ((int)__response.StatusCode == 429)
                             {
                                 string? __content_429 = null;
@@ -588,19 +511,19 @@ namespace Vapi
                             {
                                 string? __content_503 = null;
                                 global::System.Exception? __exception_503 = null;
-                                global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerSuiteCreateResponse2>? __value_503 = null;
+                                global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerRequirementsDraftResponse2>? __value_503 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_503 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_503 = global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerSuiteCreateResponse2>.FromJson(__content_503, JsonSerializerContext);
+                                        __value_503 = global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerRequirementsDraftResponse2>.FromJson(__content_503, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_503 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_503 = global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerSuiteCreateResponse2>.FromJson(__content_503, JsonSerializerContext);
+                                        __value_503 = global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerRequirementsDraftResponse2>.FromJson(__content_503, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -609,7 +532,7 @@ namespace Vapi
                                 }
 
 
-                                throw global::Vapi.ApiException<global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerSuiteCreateResponse2>?>.Create(
+                                throw global::Vapi.ApiException<global::Vapi.OneOf<global::Vapi.SimulationOnboardingErrorDTO, global::Vapi.SimulationOnboardingControllerRequirementsDraftResponse2>?>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_503 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_503,
@@ -665,7 +588,7 @@ namespace Vapi
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessSimulationOnboardingControllerSuiteCreateResponseContent(
+                                ProcessSimulationOnboardingControllerRequirementsDraftResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -674,9 +597,9 @@ namespace Vapi
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Vapi.SimulationOnboardingSuiteViewDTO.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Vapi.SimulationOnboardingRequirementsDraftDTO.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.SimulationOnboardingSuiteViewDTO>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.SimulationOnboardingRequirementsDraftDTO>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -706,9 +629,9 @@ namespace Vapi
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Vapi.SimulationOnboardingSuiteViewDTO.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Vapi.SimulationOnboardingRequirementsDraftDTO.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.SimulationOnboardingSuiteViewDTO>(
+                                    return new global::Vapi.AutoSDKHttpResponse<global::Vapi.SimulationOnboardingRequirementsDraftDTO>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Vapi.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -749,42 +672,38 @@ namespace Vapi
             }
         }
         /// <summary>
-        /// Generate a simulation suite<br/>
-        /// Generates a simulation suite from requirements your user agreed to, saves it and assigns it to the assistant. Takes up to 3 minutes, so set a client timeout of at least 200 seconds.<br/>
-        /// Send one `idempotencyKey` per agreed draft. Retrying with the same key never generates a second suite:<br/>
-        /// - On a timeout or a 5xx (502, 504, 524), retry with the same key. You get the saved suite, a 409 while it is still generating, or a fresh generation if the first one never saved.<br/>
-        /// - On a 409 `SIMULATION_ONBOARDING_GENERATION_IN_PROGRESS`, the first request is still generating. Wait `Retry-After` seconds (15) and retry with the same key.<br/>
-        /// - On a 409 `SIMULATION_ONBOARDING_IDEMPOTENCY_KEY_REUSED`, the key was used for other requirements. Send a new key.<br/>
-        /// Then review the suite with your user, edit it with `PATCH /eval/simulation/onboarding/suite/{suiteId}`, and run it with `POST /eval/simulation/run`.<br/>
-        /// Each org can generate 20 suites per UTC day, shared with the dashboard, and 2 at a time. A retry that returns a saved suite doesn't count. On a 429 `SIMULATION_ONBOARDING_CONCURRENCY_LIMITED`, wait `Retry-After` seconds (30). On a 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED`, don't retry: the limit resets at 00:00 UTC.
+        /// Draft simulation requirements<br/>
+        /// Generate draft test requirements from an assistant's prompt, tools, and handoff configuration. The response includes numbered requirements describing expected behavior and open questions about behavior that needs clarification. Use this endpoint before generating a simulation suite.<br/>
+        /// Review the requirements and resolve any open questions. To revise a draft, send it as `previousDraft` together with natural-language `feedback` describing the changes or answers. Once the requirements are ready, pass them to `POST /eval/simulation/onboarding/suite`.<br/>
+        /// Requests can take up to 2 minutes. Each organization can draft requirements 60 times per UTC day, shared with the dashboard. A 429 `SIMULATION_ONBOARDING_QUOTA_EXCEEDED` response means the daily limit has been reached. Wait until the limit resets at 00:00 UTC before retrying.
         /// </summary>
         /// <param name="assistantId">
-        /// Assistant the suite tests and is assigned to.
+        /// Assistant to draft requirements for.
         /// </param>
-        /// <param name="idempotencyKey">
-        /// One key per agreed draft. Retrying with the same key returns the suite already saved, or a 409 while it is still generating, instead of generating another.
+        /// <param name="previousDraft">
+        /// The draft being revised, exactly as this endpoint returned it. Send it with `feedback`.
         /// </param>
-        /// <param name="requirements">
-        /// The requirements your user agreed to, from the requirements draft. Each id at most once.
+        /// <param name="feedback">
+        /// Natural-language instructions for revising the requirements in `previousDraft`, including answers to open questions. Required when `previousDraft` is provided.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Vapi.SimulationOnboardingSuiteViewDTO> SimulationOnboardingControllerSuiteCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Vapi.SimulationOnboardingRequirementsDraftDTO> SimulationOnboardingControllerRequirementsDraftAsync(
             global::System.Guid assistantId,
-            string idempotencyKey,
-            global::System.Collections.Generic.IList<global::Vapi.SimulationOnboardingRequirementDTO> requirements,
+            global::Vapi.SimulationOnboardingRequirementsDraftDTO? previousDraft = default,
+            string? feedback = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Vapi.SimulationOnboardingSuiteCreateDTO
+            var __request = new global::Vapi.SimulationOnboardingRequirementsCreateDTO
             {
                 AssistantId = assistantId,
-                IdempotencyKey = idempotencyKey,
-                Requirements = requirements,
+                PreviousDraft = previousDraft,
+                Feedback = feedback,
             };
 
-            return await SimulationOnboardingControllerSuiteCreateAsync(
+            return await SimulationOnboardingControllerRequirementsDraftAsync(
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

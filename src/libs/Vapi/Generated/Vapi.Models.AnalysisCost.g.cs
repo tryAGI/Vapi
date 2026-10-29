@@ -51,6 +51,12 @@ namespace Vapi
         public double? CachedPromptTokens { get; set; }
 
         /// <summary>
+        /// This is the number of reasoning tokens generated in the analysis, reported only by reasoning models (e.g., GPT-5) on providers that report them. This is a subset of `completionTokens`, not an addition to it: reasoning tokens are already billed at the output-token rate, so this is for visibility only and does not affect `cost`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningTokens")]
+        public double? ReasoningTokens { get; set; }
+
+        /// <summary>
         /// This is the per-structured-output breakdown of this cost. The `cost`, `promptTokens`, `completionTokens` and `cachedPromptTokens` above are the sums of these rows.<br/>
         /// This is only set when `analysisType` is `structuredOutput`, and it is omitted entirely rather than partially populated, so when it is present the rows always reconcile to the totals above.<br/>
         /// A structured output that was skipped, or that extracts via regex, makes no LLM call and so has no row here — this is not a complete list of the call's configured structured outputs. There is one row per evaluation, so a `structuredOutputId` can appear more than once if it was evaluated more than once; sum the rows rather than indexing them by id.
@@ -95,6 +101,9 @@ namespace Vapi
         /// <param name="cachedPromptTokens">
         /// This is the number of cached prompt tokens used in the analysis. This is only applicable to certain providers (e.g., OpenAI, Azure OpenAI) that support prompt caching. Cached tokens are billed at a discounted rate.
         /// </param>
+        /// <param name="reasoningTokens">
+        /// This is the number of reasoning tokens generated in the analysis, reported only by reasoning models (e.g., GPT-5) on providers that report them. This is a subset of `completionTokens`, not an addition to it: reasoning tokens are already billed at the output-token rate, so this is for visibility only and does not affect `cost`.
+        /// </param>
         /// <param name="structuredOutputBreakdown">
         /// This is the per-structured-output breakdown of this cost. The `cost`, `promptTokens`, `completionTokens` and `cachedPromptTokens` above are the sums of these rows.<br/>
         /// This is only set when `analysisType` is `structuredOutput`, and it is omitted entirely rather than partially populated, so when it is present the rows always reconcile to the totals above.<br/>
@@ -111,6 +120,7 @@ namespace Vapi
             double cost,
             global::Vapi.AnalysisCostType type,
             double? cachedPromptTokens,
+            double? reasoningTokens,
             global::System.Collections.Generic.IList<global::Vapi.StructuredOutputCostBreakdown>? structuredOutputBreakdown)
         {
             this.Type = type;
@@ -119,6 +129,7 @@ namespace Vapi
             this.PromptTokens = promptTokens;
             this.CompletionTokens = completionTokens;
             this.CachedPromptTokens = cachedPromptTokens;
+            this.ReasoningTokens = reasoningTokens;
             this.StructuredOutputBreakdown = structuredOutputBreakdown;
             this.Cost = cost;
         }

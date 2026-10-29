@@ -9,7 +9,7 @@ namespace Vapi
     public sealed partial class SimulationOnboardingSuiteViewDTO
     {
         /// <summary>
-        /// The suite.
+        /// The generated simulation suite id and name.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("suite")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -30,21 +30,21 @@ namespace Vapi
         public required global::System.Collections.Generic.IList<global::Vapi.SimulationOnboardingSuiteSimulationDTO> Simulations { get; set; }
 
         /// <summary>
-        /// Coverage of the agreed requirements.
+        /// Counts of covered and total requirements, uncovered requirements, and scenarios available to retry.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("coverage")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Vapi.SimulationOnboardingSuiteCoverageDTO Coverage { get; set; }
 
         /// <summary>
-        /// The agreed requirements the suite was generated from, to name the gaps.
+        /// The test requirements used to generate the suite. Match their ids to `coverage.gaps` to identify uncovered requirements.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requirements")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::Vapi.SimulationOnboardingRequirementDTO> Requirements { get; set; }
 
         /// <summary>
-        /// Documentation to link when you summarize the suite.
+        /// Links to simulation testing best practices and tool mocking documentation.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("docs")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -79,7 +79,7 @@ namespace Vapi
         /// Initializes a new instance of the <see cref="SimulationOnboardingSuiteViewDTO" /> class.
         /// </summary>
         /// <param name="suite">
-        /// The suite.
+        /// The generated simulation suite id and name.
         /// </param>
         /// <param name="assistantId">
         /// Assistant the suite is assigned to.
@@ -88,13 +88,13 @@ namespace Vapi
         /// The suite's simulations, in order.
         /// </param>
         /// <param name="coverage">
-        /// Coverage of the agreed requirements.
+        /// Counts of covered and total requirements, uncovered requirements, and scenarios available to retry.
         /// </param>
         /// <param name="requirements">
-        /// The agreed requirements the suite was generated from, to name the gaps.
+        /// The test requirements used to generate the suite. Match their ids to `coverage.gaps` to identify uncovered requirements.
         /// </param>
         /// <param name="docs">
-        /// Documentation to link when you summarize the suite.
+        /// Links to simulation testing best practices and tool mocking documentation.
         /// </param>
         /// <param name="reused">
         /// True when the request matched one already applied (same `idempotencyKey` or `patchKey`) and nothing changed.

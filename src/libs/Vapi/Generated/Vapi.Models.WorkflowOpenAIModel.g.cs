@@ -38,6 +38,15 @@ namespace Vapi
         public required global::Vapi.WorkflowOpenAIModelModel Model { get; set; }
 
         /// <summary>
+        /// This is the reasoning effort for structured output extraction. It applies to the primary extraction attempt only; the GPT-4.1 and Gemini fallbacks run without it. Other features that use this model type ignore it.<br/>
+        /// Only reasoning models accept it, and each accepts only the efforts OpenAI supports for it (for example `none` and `xhigh` on gpt-5.6, `minimal` on gpt-5). When unset, OpenAI's default effort for the model applies, except on GPT-6 models, which Vapi sends with `none`.<br/>
+        /// Reasoning tokens are billed as output tokens.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningEffort")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.WorkflowOpenAIModelReasoningEffortJsonConverter))]
+        public global::Vapi.WorkflowOpenAIModelReasoningEffort? ReasoningEffort { get; set; }
+
+        /// <summary>
         /// This is the temperature of the model.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("temperature")]
@@ -75,6 +84,11 @@ namespace Vapi
         /// <param name="provider">
         /// This is the provider of the model (`openai`).
         /// </param>
+        /// <param name="reasoningEffort">
+        /// This is the reasoning effort for structured output extraction. It applies to the primary extraction attempt only; the GPT-4.1 and Gemini fallbacks run without it. Other features that use this model type ignore it.<br/>
+        /// Only reasoning models accept it, and each accepts only the efforts OpenAI supports for it (for example `none` and `xhigh` on gpt-5.6, `minimal` on gpt-5). When unset, OpenAI's default effort for the model applies, except on GPT-6 models, which Vapi sends with `none`.<br/>
+        /// Reasoning tokens are billed as output tokens.
+        /// </param>
         /// <param name="temperature">
         /// This is the temperature of the model.
         /// </param>
@@ -88,12 +102,14 @@ namespace Vapi
             global::Vapi.WorkflowOpenAIModelModel model,
             global::System.Collections.Generic.IList<global::Vapi.OpenAIMessage>? messages,
             global::Vapi.WorkflowOpenAIModelProvider provider,
+            global::Vapi.WorkflowOpenAIModelReasoningEffort? reasoningEffort,
             double? temperature,
             double? maxTokens)
         {
             this.Messages = messages;
             this.Provider = provider;
             this.Model = model;
+            this.ReasoningEffort = reasoningEffort;
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;
         }
