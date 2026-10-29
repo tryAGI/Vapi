@@ -92,6 +92,18 @@ namespace Vapi
         public double? ConfidenceThreshold { get; set; }
 
         /// <summary>
+        /// Controls whether Vapi filters user transcripts that repeat text from the<br/>
+        /// assistant's recent transcript. Disable this only when legitimate caller<br/>
+        /// responses are being mistaken for assistant audio feedback.<br/>
+        /// @default true<br/>
+        /// Default Value: true<br/>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("feedbackFilterEnabled")]
+        public bool? FeedbackFilterEnabled { get; set; }
+
+        /// <summary>
         /// End-of-turn confidence required to finish a turn. Only used with Flux models.<br/>
         /// @default 0.7<br/>
         /// Example: 0.7F
@@ -204,6 +216,14 @@ namespace Vapi
         /// @default 0.4<br/>
         /// Example: 0.4F
         /// </param>
+        /// <param name="feedbackFilterEnabled">
+        /// Controls whether Vapi filters user transcripts that repeat text from the<br/>
+        /// assistant's recent transcript. Disable this only when legitimate caller<br/>
+        /// responses are being mistaken for assistant audio feedback.<br/>
+        /// @default true<br/>
+        /// Default Value: true<br/>
+        /// Example: true
+        /// </param>
         /// <param name="eotThreshold">
         /// End-of-turn confidence required to finish a turn. Only used with Flux models.<br/>
         /// @default 0.7<br/>
@@ -250,6 +270,7 @@ namespace Vapi
             bool? profanityFilter,
             global::System.Collections.Generic.IList<global::Vapi.DeepgramTranscriberRedactionItem>? redaction,
             double? confidenceThreshold,
+            bool? feedbackFilterEnabled,
             double? eotThreshold,
             double? eotTimeoutMs,
             global::System.Collections.Generic.IList<string>? languages,
@@ -267,6 +288,7 @@ namespace Vapi
             this.ProfanityFilter = profanityFilter;
             this.Redaction = redaction;
             this.ConfidenceThreshold = confidenceThreshold;
+            this.FeedbackFilterEnabled = feedbackFilterEnabled;
             this.EotThreshold = eotThreshold;
             this.EotTimeoutMs = eotTimeoutMs;
             this.Languages = languages;
