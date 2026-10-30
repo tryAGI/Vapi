@@ -29,6 +29,25 @@ namespace Vapi
         public bool? RoomDeleteOnUserLeaveEnabled { get; set; }
 
         /// <summary>
+        /// This determines who starts the video recording. Only applies when video<br/>
+        /// recording is enabled (`artifactPlan.videoRecordingEnabled`).<br/>
+        /// - `client`: the web client starts the recording when it joins.<br/>
+        /// - `server`: Vapi starts the recording once when the user first joins, so a<br/>
+        ///   weak client connection can't stop it from starting. The returned<br/>
+        ///   `transport.callToken` doesn't start the recording, and the client should<br/>
+        ///   not start it either. If Vapi can't set up the server-side start, no token<br/>
+        ///   is returned. If the start itself fails, the client is told during the<br/>
+        ///   call.<br/>
+        /// Defaults to `client`.<br/>
+        /// Default Value: client<br/>
+        /// Example: server
+        /// </summary>
+        /// <example>server</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("videoRecordingStartMode")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.CreateWebCallDTOVideoRecordingStartModeJsonConverter))]
+        public global::Vapi.CreateWebCallDTOVideoRecordingStartMode? VideoRecordingStartMode { get; set; }
+
+        /// <summary>
         /// This is the assistant ID that will be used for the call. To use a transient assistant, use `assistant` instead.<br/>
         /// To start a call with:<br/>
         /// - Assistant, use `assistantId` or `assistant`<br/>
@@ -127,6 +146,20 @@ namespace Vapi
         /// <param name="roomDeleteOnUserLeaveEnabled">
         /// Default Value: true
         /// </param>
+        /// <param name="videoRecordingStartMode">
+        /// This determines who starts the video recording. Only applies when video<br/>
+        /// recording is enabled (`artifactPlan.videoRecordingEnabled`).<br/>
+        /// - `client`: the web client starts the recording when it joins.<br/>
+        /// - `server`: Vapi starts the recording once when the user first joins, so a<br/>
+        ///   weak client connection can't stop it from starting. The returned<br/>
+        ///   `transport.callToken` doesn't start the recording, and the client should<br/>
+        ///   not start it either. If Vapi can't set up the server-side start, no token<br/>
+        ///   is returned. If the start itself fails, the client is told during the<br/>
+        ///   call.<br/>
+        /// Defaults to `client`.<br/>
+        /// Default Value: client<br/>
+        /// Example: server
+        /// </param>
         /// <param name="assistantId">
         /// This is the assistant ID that will be used for the call. To use a transient assistant, use `assistant` instead.<br/>
         /// To start a call with:<br/>
@@ -186,6 +219,7 @@ namespace Vapi
             string? assistantVersion,
             string? squadVersion,
             bool? roomDeleteOnUserLeaveEnabled,
+            global::Vapi.CreateWebCallDTOVideoRecordingStartMode? videoRecordingStartMode,
             string? assistantId,
             global::Vapi.TransientAssistantDTO? assistant,
             global::Vapi.AssistantOverrides? assistantOverrides,
@@ -199,6 +233,7 @@ namespace Vapi
             this.AssistantVersion = assistantVersion;
             this.SquadVersion = squadVersion;
             this.RoomDeleteOnUserLeaveEnabled = roomDeleteOnUserLeaveEnabled;
+            this.VideoRecordingStartMode = videoRecordingStartMode;
             this.AssistantId = assistantId;
             this.Assistant = assistant;
             this.AssistantOverrides = assistantOverrides;

@@ -46410,7 +46410,7 @@
           },
           "callToken": {
             "type": "string",
-            "description": "This is the meeting token the web client should join the call with.\nWhen video recording is enabled, joining with this token starts the cloud\nrecording automatically server-side, which is more reliable than the\nclient starting it after joining. Set by the server; only present when\nvideo recording is enabled."
+            "description": "This is the meeting token the web client should join the call with.\nWhen video recording is enabled, joining with this token starts the cloud\nrecording automatically server-side, which is more reliable than the\nclient starting it after joining. Set by the server; only present when\nvideo recording is enabled.\n\nWith `videoRecordingStartMode: 'server'`, joining with the token doesn't\nstart the recording: Vapi starts it once the user joins, and the client\nmust not start it either."
           },
           "callUrl": {
             "type": "string",
@@ -47659,6 +47659,7 @@
               "call.in-progress.error-vapifault-assembly-ai-returning-500-invalid-schema",
               "call.in-progress.error-vapifault-assembly-ai-returning-500-word-boost-parsing-failed",
               "call.in-progress.error-vapifault-assembly-ai-transcriber-failed",
+              "call.in-progress.error-vapifault-assistant-handoff-start-failed",
               "call.in-progress.error-vapifault-azure-openai-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-azure-openai-401-unauthorized",
               "call.in-progress.error-vapifault-azure-openai-403-model-access-denied",
@@ -47669,6 +47670,7 @@
               "call.in-progress.error-vapifault-baseten-401-unauthorized",
               "call.in-progress.error-vapifault-baseten-403-model-access-denied",
               "call.in-progress.error-vapifault-baseten-429-exceeded-quota",
+              "call.in-progress.error-vapifault-call-start-failed",
               "call.in-progress.error-vapifault-call-started-but-connection-to-transport-missing",
               "call.in-progress.error-vapifault-cartesia-requested-payment",
               "call.in-progress.error-vapifault-cartesia-socket-hang-up",
@@ -47731,6 +47733,8 @@
               "call.in-progress.error-vapifault-groq-401-unauthorized",
               "call.in-progress.error-vapifault-groq-403-model-access-denied",
               "call.in-progress.error-vapifault-groq-429-exceeded-quota",
+              "call.in-progress.error-vapifault-guardrail-evaluation-failed",
+              "call.in-progress.error-vapifault-guardrail-playback-timeout",
               "call.in-progress.error-vapifault-hume-voice-failed",
               "call.in-progress.error-vapifault-inflection-ai-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-inflection-ai-401-unauthorized",
@@ -47822,6 +47826,7 @@
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",
               "call.in-progress.error-warm-transfer-silence-timeout",
+              "call.in-progress.guardrail-blocked",
               "call.in-progress.sip-completed-call",
               "call.in-progress.twilio-completed-call",
               "call.ringing.error-sip-inbound-call-failed-to-connect",
@@ -49196,6 +49201,16 @@
           "roomDeleteOnUserLeaveEnabled": {
             "type": "boolean",
             "default": true
+          },
+          "videoRecordingStartMode": {
+            "type": "string",
+            "description": "This determines who starts the video recording. Only applies when video\nrecording is enabled (`artifactPlan.videoRecordingEnabled`).\n\n- `client`: the web client starts the recording when it joins.\n- `server`: Vapi starts the recording once when the user first joins, so a\n  weak client connection can't stop it from starting. The returned\n  `transport.callToken` doesn't start the recording, and the client should\n  not start it either. If Vapi can't set up the server-side start, no token\n  is returned. If the start itself fails, the client is told during the\n  call.\n\nDefaults to `client`.",
+            "example": "server",
+            "enum": [
+              "client",
+              "server"
+            ],
+            "default": "client"
           },
           "assistantId": {
             "type": "string",
@@ -79654,6 +79669,7 @@
               "call.in-progress.error-vapifault-assembly-ai-returning-500-invalid-schema",
               "call.in-progress.error-vapifault-assembly-ai-returning-500-word-boost-parsing-failed",
               "call.in-progress.error-vapifault-assembly-ai-transcriber-failed",
+              "call.in-progress.error-vapifault-assistant-handoff-start-failed",
               "call.in-progress.error-vapifault-azure-openai-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-azure-openai-401-unauthorized",
               "call.in-progress.error-vapifault-azure-openai-403-model-access-denied",
@@ -79664,6 +79680,7 @@
               "call.in-progress.error-vapifault-baseten-401-unauthorized",
               "call.in-progress.error-vapifault-baseten-403-model-access-denied",
               "call.in-progress.error-vapifault-baseten-429-exceeded-quota",
+              "call.in-progress.error-vapifault-call-start-failed",
               "call.in-progress.error-vapifault-call-started-but-connection-to-transport-missing",
               "call.in-progress.error-vapifault-cartesia-requested-payment",
               "call.in-progress.error-vapifault-cartesia-socket-hang-up",
@@ -79726,6 +79743,8 @@
               "call.in-progress.error-vapifault-groq-401-unauthorized",
               "call.in-progress.error-vapifault-groq-403-model-access-denied",
               "call.in-progress.error-vapifault-groq-429-exceeded-quota",
+              "call.in-progress.error-vapifault-guardrail-evaluation-failed",
+              "call.in-progress.error-vapifault-guardrail-playback-timeout",
               "call.in-progress.error-vapifault-hume-voice-failed",
               "call.in-progress.error-vapifault-inflection-ai-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-inflection-ai-401-unauthorized",
@@ -79817,6 +79836,7 @@
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",
               "call.in-progress.error-warm-transfer-silence-timeout",
+              "call.in-progress.guardrail-blocked",
               "call.in-progress.sip-completed-call",
               "call.in-progress.twilio-completed-call",
               "call.ringing.error-sip-inbound-call-failed-to-connect",
@@ -81083,6 +81103,7 @@
               "call.in-progress.error-vapifault-assembly-ai-returning-500-invalid-schema",
               "call.in-progress.error-vapifault-assembly-ai-returning-500-word-boost-parsing-failed",
               "call.in-progress.error-vapifault-assembly-ai-transcriber-failed",
+              "call.in-progress.error-vapifault-assistant-handoff-start-failed",
               "call.in-progress.error-vapifault-azure-openai-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-azure-openai-401-unauthorized",
               "call.in-progress.error-vapifault-azure-openai-403-model-access-denied",
@@ -81093,6 +81114,7 @@
               "call.in-progress.error-vapifault-baseten-401-unauthorized",
               "call.in-progress.error-vapifault-baseten-403-model-access-denied",
               "call.in-progress.error-vapifault-baseten-429-exceeded-quota",
+              "call.in-progress.error-vapifault-call-start-failed",
               "call.in-progress.error-vapifault-call-started-but-connection-to-transport-missing",
               "call.in-progress.error-vapifault-cartesia-requested-payment",
               "call.in-progress.error-vapifault-cartesia-socket-hang-up",
@@ -81155,6 +81177,8 @@
               "call.in-progress.error-vapifault-groq-401-unauthorized",
               "call.in-progress.error-vapifault-groq-403-model-access-denied",
               "call.in-progress.error-vapifault-groq-429-exceeded-quota",
+              "call.in-progress.error-vapifault-guardrail-evaluation-failed",
+              "call.in-progress.error-vapifault-guardrail-playback-timeout",
               "call.in-progress.error-vapifault-hume-voice-failed",
               "call.in-progress.error-vapifault-inflection-ai-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-inflection-ai-401-unauthorized",
@@ -81246,6 +81270,7 @@
               "call.in-progress.error-warm-transfer-max-duration",
               "call.in-progress.error-warm-transfer-microphone-timeout",
               "call.in-progress.error-warm-transfer-silence-timeout",
+              "call.in-progress.guardrail-blocked",
               "call.in-progress.sip-completed-call",
               "call.in-progress.twilio-completed-call",
               "call.ringing.error-sip-inbound-call-failed-to-connect",

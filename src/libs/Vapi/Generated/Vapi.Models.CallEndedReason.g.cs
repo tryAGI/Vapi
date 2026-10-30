@@ -563,6 +563,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        CallInProgressErrorVapifaultAssistantHandoffStartFailed,
+        /// <summary>
+        ///
+        /// </summary>
         CallInProgressErrorVapifaultAzureOpenai400BadRequestValidationFailed,
         /// <summary>
         ///
@@ -600,6 +604,10 @@ namespace Vapi
         ///
         /// </summary>
         CallInProgressErrorVapifaultBaseten429ExceededQuota,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressErrorVapifaultCallStartFailed,
         /// <summary>
         ///
         /// </summary>
@@ -848,6 +856,14 @@ namespace Vapi
         ///
         /// </summary>
         CallInProgressErrorVapifaultGroq429ExceededQuota,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressErrorVapifaultGuardrailEvaluationFailed,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressErrorVapifaultGuardrailPlaybackTimeout,
         /// <summary>
         ///
         /// </summary>
@@ -1212,6 +1228,10 @@ namespace Vapi
         ///
         /// </summary>
         CallInProgressErrorWarmTransferSilenceTimeout,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressGuardrailBlocked,
         /// <summary>
         ///
         /// </summary>
@@ -2584,6 +2604,7 @@ namespace Vapi
                 CallEndedReason.CallInProgressErrorVapifaultAssemblyAiReturning500InvalidSchema => "call.in-progress.error-vapifault-assembly-ai-returning-500-invalid-schema",
                 CallEndedReason.CallInProgressErrorVapifaultAssemblyAiReturning500WordBoostParsingFailed => "call.in-progress.error-vapifault-assembly-ai-returning-500-word-boost-parsing-failed",
                 CallEndedReason.CallInProgressErrorVapifaultAssemblyAiTranscriberFailed => "call.in-progress.error-vapifault-assembly-ai-transcriber-failed",
+                CallEndedReason.CallInProgressErrorVapifaultAssistantHandoffStartFailed => "call.in-progress.error-vapifault-assistant-handoff-start-failed",
                 CallEndedReason.CallInProgressErrorVapifaultAzureOpenai400BadRequestValidationFailed => "call.in-progress.error-vapifault-azure-openai-400-bad-request-validation-failed",
                 CallEndedReason.CallInProgressErrorVapifaultAzureOpenai401Unauthorized => "call.in-progress.error-vapifault-azure-openai-401-unauthorized",
                 CallEndedReason.CallInProgressErrorVapifaultAzureOpenai403ModelAccessDenied => "call.in-progress.error-vapifault-azure-openai-403-model-access-denied",
@@ -2594,6 +2615,7 @@ namespace Vapi
                 CallEndedReason.CallInProgressErrorVapifaultBaseten401Unauthorized => "call.in-progress.error-vapifault-baseten-401-unauthorized",
                 CallEndedReason.CallInProgressErrorVapifaultBaseten403ModelAccessDenied => "call.in-progress.error-vapifault-baseten-403-model-access-denied",
                 CallEndedReason.CallInProgressErrorVapifaultBaseten429ExceededQuota => "call.in-progress.error-vapifault-baseten-429-exceeded-quota",
+                CallEndedReason.CallInProgressErrorVapifaultCallStartFailed => "call.in-progress.error-vapifault-call-start-failed",
                 CallEndedReason.CallInProgressErrorVapifaultCallStartedButConnectionToTransportMissing => "call.in-progress.error-vapifault-call-started-but-connection-to-transport-missing",
                 CallEndedReason.CallInProgressErrorVapifaultCartesiaRequestedPayment => "call.in-progress.error-vapifault-cartesia-requested-payment",
                 CallEndedReason.CallInProgressErrorVapifaultCartesiaSocketHangUp => "call.in-progress.error-vapifault-cartesia-socket-hang-up",
@@ -2656,6 +2678,8 @@ namespace Vapi
                 CallEndedReason.CallInProgressErrorVapifaultGroq401Unauthorized => "call.in-progress.error-vapifault-groq-401-unauthorized",
                 CallEndedReason.CallInProgressErrorVapifaultGroq403ModelAccessDenied => "call.in-progress.error-vapifault-groq-403-model-access-denied",
                 CallEndedReason.CallInProgressErrorVapifaultGroq429ExceededQuota => "call.in-progress.error-vapifault-groq-429-exceeded-quota",
+                CallEndedReason.CallInProgressErrorVapifaultGuardrailEvaluationFailed => "call.in-progress.error-vapifault-guardrail-evaluation-failed",
+                CallEndedReason.CallInProgressErrorVapifaultGuardrailPlaybackTimeout => "call.in-progress.error-vapifault-guardrail-playback-timeout",
                 CallEndedReason.CallInProgressErrorVapifaultHumeVoiceFailed => "call.in-progress.error-vapifault-hume-voice-failed",
                 CallEndedReason.CallInProgressErrorVapifaultInflectionAi400BadRequestValidationFailed => "call.in-progress.error-vapifault-inflection-ai-400-bad-request-validation-failed",
                 CallEndedReason.CallInProgressErrorVapifaultInflectionAi401Unauthorized => "call.in-progress.error-vapifault-inflection-ai-401-unauthorized",
@@ -2747,6 +2771,7 @@ namespace Vapi
                 CallEndedReason.CallInProgressErrorWarmTransferMaxDuration => "call.in-progress.error-warm-transfer-max-duration",
                 CallEndedReason.CallInProgressErrorWarmTransferMicrophoneTimeout => "call.in-progress.error-warm-transfer-microphone-timeout",
                 CallEndedReason.CallInProgressErrorWarmTransferSilenceTimeout => "call.in-progress.error-warm-transfer-silence-timeout",
+                CallEndedReason.CallInProgressGuardrailBlocked => "call.in-progress.guardrail-blocked",
                 CallEndedReason.CallInProgressSipCompletedCall => "call.in-progress.sip-completed-call",
                 CallEndedReason.CallInProgressTwilioCompletedCall => "call.in-progress.twilio-completed-call",
                 CallEndedReason.CallRingingErrorSipInboundCallFailedToConnect => "call.ringing.error-sip-inbound-call-failed-to-connect",
@@ -3200,6 +3225,7 @@ namespace Vapi
                 "call.in-progress.error-vapifault-assembly-ai-returning-500-invalid-schema" => CallEndedReason.CallInProgressErrorVapifaultAssemblyAiReturning500InvalidSchema,
                 "call.in-progress.error-vapifault-assembly-ai-returning-500-word-boost-parsing-failed" => CallEndedReason.CallInProgressErrorVapifaultAssemblyAiReturning500WordBoostParsingFailed,
                 "call.in-progress.error-vapifault-assembly-ai-transcriber-failed" => CallEndedReason.CallInProgressErrorVapifaultAssemblyAiTranscriberFailed,
+                "call.in-progress.error-vapifault-assistant-handoff-start-failed" => CallEndedReason.CallInProgressErrorVapifaultAssistantHandoffStartFailed,
                 "call.in-progress.error-vapifault-azure-openai-400-bad-request-validation-failed" => CallEndedReason.CallInProgressErrorVapifaultAzureOpenai400BadRequestValidationFailed,
                 "call.in-progress.error-vapifault-azure-openai-401-unauthorized" => CallEndedReason.CallInProgressErrorVapifaultAzureOpenai401Unauthorized,
                 "call.in-progress.error-vapifault-azure-openai-403-model-access-denied" => CallEndedReason.CallInProgressErrorVapifaultAzureOpenai403ModelAccessDenied,
@@ -3210,6 +3236,7 @@ namespace Vapi
                 "call.in-progress.error-vapifault-baseten-401-unauthorized" => CallEndedReason.CallInProgressErrorVapifaultBaseten401Unauthorized,
                 "call.in-progress.error-vapifault-baseten-403-model-access-denied" => CallEndedReason.CallInProgressErrorVapifaultBaseten403ModelAccessDenied,
                 "call.in-progress.error-vapifault-baseten-429-exceeded-quota" => CallEndedReason.CallInProgressErrorVapifaultBaseten429ExceededQuota,
+                "call.in-progress.error-vapifault-call-start-failed" => CallEndedReason.CallInProgressErrorVapifaultCallStartFailed,
                 "call.in-progress.error-vapifault-call-started-but-connection-to-transport-missing" => CallEndedReason.CallInProgressErrorVapifaultCallStartedButConnectionToTransportMissing,
                 "call.in-progress.error-vapifault-cartesia-requested-payment" => CallEndedReason.CallInProgressErrorVapifaultCartesiaRequestedPayment,
                 "call.in-progress.error-vapifault-cartesia-socket-hang-up" => CallEndedReason.CallInProgressErrorVapifaultCartesiaSocketHangUp,
@@ -3272,6 +3299,8 @@ namespace Vapi
                 "call.in-progress.error-vapifault-groq-401-unauthorized" => CallEndedReason.CallInProgressErrorVapifaultGroq401Unauthorized,
                 "call.in-progress.error-vapifault-groq-403-model-access-denied" => CallEndedReason.CallInProgressErrorVapifaultGroq403ModelAccessDenied,
                 "call.in-progress.error-vapifault-groq-429-exceeded-quota" => CallEndedReason.CallInProgressErrorVapifaultGroq429ExceededQuota,
+                "call.in-progress.error-vapifault-guardrail-evaluation-failed" => CallEndedReason.CallInProgressErrorVapifaultGuardrailEvaluationFailed,
+                "call.in-progress.error-vapifault-guardrail-playback-timeout" => CallEndedReason.CallInProgressErrorVapifaultGuardrailPlaybackTimeout,
                 "call.in-progress.error-vapifault-hume-voice-failed" => CallEndedReason.CallInProgressErrorVapifaultHumeVoiceFailed,
                 "call.in-progress.error-vapifault-inflection-ai-400-bad-request-validation-failed" => CallEndedReason.CallInProgressErrorVapifaultInflectionAi400BadRequestValidationFailed,
                 "call.in-progress.error-vapifault-inflection-ai-401-unauthorized" => CallEndedReason.CallInProgressErrorVapifaultInflectionAi401Unauthorized,
@@ -3363,6 +3392,7 @@ namespace Vapi
                 "call.in-progress.error-warm-transfer-max-duration" => CallEndedReason.CallInProgressErrorWarmTransferMaxDuration,
                 "call.in-progress.error-warm-transfer-microphone-timeout" => CallEndedReason.CallInProgressErrorWarmTransferMicrophoneTimeout,
                 "call.in-progress.error-warm-transfer-silence-timeout" => CallEndedReason.CallInProgressErrorWarmTransferSilenceTimeout,
+                "call.in-progress.guardrail-blocked" => CallEndedReason.CallInProgressGuardrailBlocked,
                 "call.in-progress.sip-completed-call" => CallEndedReason.CallInProgressSipCompletedCall,
                 "call.in-progress.twilio-completed-call" => CallEndedReason.CallInProgressTwilioCompletedCall,
                 "call.ringing.error-sip-inbound-call-failed-to-connect" => CallEndedReason.CallRingingErrorSipInboundCallFailedToConnect,

@@ -40,7 +40,10 @@ namespace Vapi
         /// When video recording is enabled, joining with this token starts the cloud<br/>
         /// recording automatically server-side, which is more reliable than the<br/>
         /// client starting it after joining. Set by the server; only present when<br/>
-        /// video recording is enabled.
+        /// video recording is enabled.<br/>
+        /// With `videoRecordingStartMode: 'server'`, joining with the token doesn't<br/>
+        /// start the recording: Vapi starts it once the user joins, and the client<br/>
+        /// must not start it either.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("callToken")]
         public string? CallToken { get; set; }
@@ -86,7 +89,10 @@ namespace Vapi
         /// When video recording is enabled, joining with this token starts the cloud<br/>
         /// recording automatically server-side, which is more reliable than the<br/>
         /// client starting it after joining. Set by the server; only present when<br/>
-        /// video recording is enabled.
+        /// video recording is enabled.<br/>
+        /// With `videoRecordingStartMode: 'server'`, joining with the token doesn't<br/>
+        /// start the recording: Vapi starts it once the user joins, and the client<br/>
+        /// must not start it either.
         /// </param>
         /// <param name="callUrl">
         /// This is the URL of the web call.
