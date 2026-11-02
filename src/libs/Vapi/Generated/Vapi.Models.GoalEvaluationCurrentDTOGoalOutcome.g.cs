@@ -19,7 +19,7 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        Ineligible,
+        NotApplicable,
     }
 
     /// <summary>
@@ -36,7 +36,7 @@ namespace Vapi
             {
                 GoalEvaluationCurrentDTOGoalOutcome.GoalMet => "goal_met",
                 GoalEvaluationCurrentDTOGoalOutcome.GoalNotMet => "goal_not_met",
-                GoalEvaluationCurrentDTOGoalOutcome.Ineligible => "ineligible",
+                GoalEvaluationCurrentDTOGoalOutcome.NotApplicable => "not_applicable",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -49,7 +49,7 @@ namespace Vapi
             {
                 "goal_met" => GoalEvaluationCurrentDTOGoalOutcome.GoalMet,
                 "goal_not_met" => GoalEvaluationCurrentDTOGoalOutcome.GoalNotMet,
-                "ineligible" => GoalEvaluationCurrentDTOGoalOutcome.Ineligible,
+                "not_applicable" => GoalEvaluationCurrentDTOGoalOutcome.NotApplicable,
                 _ => null,
             };
         }

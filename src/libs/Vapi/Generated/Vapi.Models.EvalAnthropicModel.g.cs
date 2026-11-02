@@ -24,7 +24,17 @@ namespace Vapi
         public required global::Vapi.EvalAnthropicModelModel Model { get; set; }
 
         /// <summary>
+        /// Reasoning effort for the judge on claude-haiku-5-5. `none` turns thinking<br/>
+        /// off. `low` to `max` let the judge think before it submits its verdict.<br/>
+        /// Unset means `none`. Rejected for every other model.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningEffort")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.EvalAnthropicModelReasoningEffortJsonConverter))]
+        public global::Vapi.EvalAnthropicModelReasoningEffort? ReasoningEffort { get; set; }
+
+        /// <summary>
         /// This is the optional configuration for Anthropic's thinking feature.<br/>
+        /// claude-haiku-5-5 uses `reasoningEffort` instead.<br/>
         /// - If provided, `maxTokens` must be greater than `thinking.budgetTokens`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("thinking")]
@@ -79,8 +89,14 @@ namespace Vapi
         /// <param name="provider">
         /// This is the provider of the model (`anthropic`).
         /// </param>
+        /// <param name="reasoningEffort">
+        /// Reasoning effort for the judge on claude-haiku-5-5. `none` turns thinking<br/>
+        /// off. `low` to `max` let the judge think before it submits its verdict.<br/>
+        /// Unset means `none`. Rejected for every other model.
+        /// </param>
         /// <param name="thinking">
         /// This is the optional configuration for Anthropic's thinking feature.<br/>
+        /// claude-haiku-5-5 uses `reasoningEffort` instead.<br/>
         /// - If provided, `maxTokens` must be greater than `thinking.budgetTokens`.
         /// </param>
         /// <param name="temperature">
@@ -97,12 +113,14 @@ namespace Vapi
             global::Vapi.EvalAnthropicModelModel model,
             global::System.Collections.Generic.IList<object> messages,
             global::Vapi.EvalAnthropicModelProvider provider,
+            global::Vapi.EvalAnthropicModelReasoningEffort? reasoningEffort,
             global::Vapi.AnthropicThinkingConfig? thinking,
             double? temperature,
             double? maxTokens)
         {
             this.Provider = provider;
             this.Model = model;
+            this.ReasoningEffort = reasoningEffort;
             this.Thinking = thinking;
             this.Temperature = temperature;
             this.MaxTokens = maxTokens;
