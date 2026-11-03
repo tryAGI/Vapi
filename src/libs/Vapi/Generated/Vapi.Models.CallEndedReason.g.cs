@@ -187,6 +187,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        CallInProgressErrorProviderfaultCartesia502ServerError,
+        /// <summary>
+        ///
+        /// </summary>
         CallInProgressErrorProviderfaultCartesia503ServerError,
         /// <summary>
         ///
@@ -1048,6 +1052,26 @@ namespace Vapi
         ///
         /// </summary>
         CallInProgressErrorVapifaultPlayhtVoiceMustBeAValidVoiceManifestUri,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressErrorVapifaultReson8TranscriberAuthFailed,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressErrorVapifaultReson8TranscriberClosed,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressErrorVapifaultReson8TranscriberFailed,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressErrorVapifaultReson8TranscriberInvalidConfig,
+        /// <summary>
+        ///
+        /// </summary>
+        CallInProgressErrorVapifaultReson8TranscriberRateLimited,
         /// <summary>
         ///
         /// </summary>
@@ -2215,6 +2239,26 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        PipelineErrorReson8TranscriberAuthFailed,
+        /// <summary>
+        ///
+        /// </summary>
+        PipelineErrorReson8TranscriberClosed,
+        /// <summary>
+        ///
+        /// </summary>
+        PipelineErrorReson8TranscriberFailed,
+        /// <summary>
+        ///
+        /// </summary>
+        PipelineErrorReson8TranscriberInvalidConfig,
+        /// <summary>
+        ///
+        /// </summary>
+        PipelineErrorReson8TranscriberRateLimited,
+        /// <summary>
+        ///
+        /// </summary>
         PipelineErrorRimeAiVoiceFailed,
         /// <summary>
         ///
@@ -2510,6 +2554,7 @@ namespace Vapi
                 CallEndedReason.CallInProgressErrorProviderfaultBaseten503ServerOverloadedError => "call.in-progress.error-providerfault-baseten-503-server-overloaded-error",
                 CallEndedReason.CallInProgressErrorProviderfaultBasetenLlmFailed => "call.in-progress.error-providerfault-baseten-llm-failed",
                 CallEndedReason.CallInProgressErrorProviderfaultCartesia500ServerError => "call.in-progress.error-providerfault-cartesia-500-server-error",
+                CallEndedReason.CallInProgressErrorProviderfaultCartesia502ServerError => "call.in-progress.error-providerfault-cartesia-502-server-error",
                 CallEndedReason.CallInProgressErrorProviderfaultCartesia503ServerError => "call.in-progress.error-providerfault-cartesia-503-server-error",
                 CallEndedReason.CallInProgressErrorProviderfaultCartesia522ServerError => "call.in-progress.error-providerfault-cartesia-522-server-error",
                 CallEndedReason.CallInProgressErrorProviderfaultCerebras500ServerError => "call.in-progress.error-providerfault-cerebras-500-server-error",
@@ -2726,6 +2771,11 @@ namespace Vapi
                 CallEndedReason.CallInProgressErrorVapifaultPlayhtUnexpectedError => "call.in-progress.error-vapifault-playht-unexpected-error",
                 CallEndedReason.CallInProgressErrorVapifaultPlayhtVoiceFailed => "call.in-progress.error-vapifault-playht-voice-failed",
                 CallEndedReason.CallInProgressErrorVapifaultPlayhtVoiceMustBeAValidVoiceManifestUri => "call.in-progress.error-vapifault-playht-voice-must-be-a-valid-voice-manifest-uri",
+                CallEndedReason.CallInProgressErrorVapifaultReson8TranscriberAuthFailed => "call.in-progress.error-vapifault-reson8-transcriber-auth-failed",
+                CallEndedReason.CallInProgressErrorVapifaultReson8TranscriberClosed => "call.in-progress.error-vapifault-reson8-transcriber-closed",
+                CallEndedReason.CallInProgressErrorVapifaultReson8TranscriberFailed => "call.in-progress.error-vapifault-reson8-transcriber-failed",
+                CallEndedReason.CallInProgressErrorVapifaultReson8TranscriberInvalidConfig => "call.in-progress.error-vapifault-reson8-transcriber-invalid-config",
+                CallEndedReason.CallInProgressErrorVapifaultReson8TranscriberRateLimited => "call.in-progress.error-vapifault-reson8-transcriber-rate-limited",
                 CallEndedReason.CallInProgressErrorVapifaultRimeAiVoiceFailed => "call.in-progress.error-vapifault-rime-ai-voice-failed",
                 CallEndedReason.CallInProgressErrorVapifaultRunpod400BadRequestValidationFailed => "call.in-progress.error-vapifault-runpod-400-bad-request-validation-failed",
                 CallEndedReason.CallInProgressErrorVapifaultRunpod401Unauthorized => "call.in-progress.error-vapifault-runpod-401-unauthorized",
@@ -3017,6 +3067,11 @@ namespace Vapi
                 CallEndedReason.PipelineErrorPlayhtUnexpectedError => "pipeline-error-playht-unexpected-error",
                 CallEndedReason.PipelineErrorPlayhtVoiceFailed => "pipeline-error-playht-voice-failed",
                 CallEndedReason.PipelineErrorPlayhtVoiceMustBeAValidVoiceManifestUri => "pipeline-error-playht-voice-must-be-a-valid-voice-manifest-uri",
+                CallEndedReason.PipelineErrorReson8TranscriberAuthFailed => "pipeline-error-reson8-transcriber-auth-failed",
+                CallEndedReason.PipelineErrorReson8TranscriberClosed => "pipeline-error-reson8-transcriber-closed",
+                CallEndedReason.PipelineErrorReson8TranscriberFailed => "pipeline-error-reson8-transcriber-failed",
+                CallEndedReason.PipelineErrorReson8TranscriberInvalidConfig => "pipeline-error-reson8-transcriber-invalid-config",
+                CallEndedReason.PipelineErrorReson8TranscriberRateLimited => "pipeline-error-reson8-transcriber-rate-limited",
                 CallEndedReason.PipelineErrorRimeAiVoiceFailed => "pipeline-error-rime-ai-voice-failed",
                 CallEndedReason.PipelineErrorRunpod400BadRequestValidationFailed => "pipeline-error-runpod-400-bad-request-validation-failed",
                 CallEndedReason.PipelineErrorRunpod401Unauthorized => "pipeline-error-runpod-401-unauthorized",
@@ -3131,6 +3186,7 @@ namespace Vapi
                 "call.in-progress.error-providerfault-baseten-503-server-overloaded-error" => CallEndedReason.CallInProgressErrorProviderfaultBaseten503ServerOverloadedError,
                 "call.in-progress.error-providerfault-baseten-llm-failed" => CallEndedReason.CallInProgressErrorProviderfaultBasetenLlmFailed,
                 "call.in-progress.error-providerfault-cartesia-500-server-error" => CallEndedReason.CallInProgressErrorProviderfaultCartesia500ServerError,
+                "call.in-progress.error-providerfault-cartesia-502-server-error" => CallEndedReason.CallInProgressErrorProviderfaultCartesia502ServerError,
                 "call.in-progress.error-providerfault-cartesia-503-server-error" => CallEndedReason.CallInProgressErrorProviderfaultCartesia503ServerError,
                 "call.in-progress.error-providerfault-cartesia-522-server-error" => CallEndedReason.CallInProgressErrorProviderfaultCartesia522ServerError,
                 "call.in-progress.error-providerfault-cerebras-500-server-error" => CallEndedReason.CallInProgressErrorProviderfaultCerebras500ServerError,
@@ -3347,6 +3403,11 @@ namespace Vapi
                 "call.in-progress.error-vapifault-playht-unexpected-error" => CallEndedReason.CallInProgressErrorVapifaultPlayhtUnexpectedError,
                 "call.in-progress.error-vapifault-playht-voice-failed" => CallEndedReason.CallInProgressErrorVapifaultPlayhtVoiceFailed,
                 "call.in-progress.error-vapifault-playht-voice-must-be-a-valid-voice-manifest-uri" => CallEndedReason.CallInProgressErrorVapifaultPlayhtVoiceMustBeAValidVoiceManifestUri,
+                "call.in-progress.error-vapifault-reson8-transcriber-auth-failed" => CallEndedReason.CallInProgressErrorVapifaultReson8TranscriberAuthFailed,
+                "call.in-progress.error-vapifault-reson8-transcriber-closed" => CallEndedReason.CallInProgressErrorVapifaultReson8TranscriberClosed,
+                "call.in-progress.error-vapifault-reson8-transcriber-failed" => CallEndedReason.CallInProgressErrorVapifaultReson8TranscriberFailed,
+                "call.in-progress.error-vapifault-reson8-transcriber-invalid-config" => CallEndedReason.CallInProgressErrorVapifaultReson8TranscriberInvalidConfig,
+                "call.in-progress.error-vapifault-reson8-transcriber-rate-limited" => CallEndedReason.CallInProgressErrorVapifaultReson8TranscriberRateLimited,
                 "call.in-progress.error-vapifault-rime-ai-voice-failed" => CallEndedReason.CallInProgressErrorVapifaultRimeAiVoiceFailed,
                 "call.in-progress.error-vapifault-runpod-400-bad-request-validation-failed" => CallEndedReason.CallInProgressErrorVapifaultRunpod400BadRequestValidationFailed,
                 "call.in-progress.error-vapifault-runpod-401-unauthorized" => CallEndedReason.CallInProgressErrorVapifaultRunpod401Unauthorized,
@@ -3638,6 +3699,11 @@ namespace Vapi
                 "pipeline-error-playht-unexpected-error" => CallEndedReason.PipelineErrorPlayhtUnexpectedError,
                 "pipeline-error-playht-voice-failed" => CallEndedReason.PipelineErrorPlayhtVoiceFailed,
                 "pipeline-error-playht-voice-must-be-a-valid-voice-manifest-uri" => CallEndedReason.PipelineErrorPlayhtVoiceMustBeAValidVoiceManifestUri,
+                "pipeline-error-reson8-transcriber-auth-failed" => CallEndedReason.PipelineErrorReson8TranscriberAuthFailed,
+                "pipeline-error-reson8-transcriber-closed" => CallEndedReason.PipelineErrorReson8TranscriberClosed,
+                "pipeline-error-reson8-transcriber-failed" => CallEndedReason.PipelineErrorReson8TranscriberFailed,
+                "pipeline-error-reson8-transcriber-invalid-config" => CallEndedReason.PipelineErrorReson8TranscriberInvalidConfig,
+                "pipeline-error-reson8-transcriber-rate-limited" => CallEndedReason.PipelineErrorReson8TranscriberRateLimited,
                 "pipeline-error-rime-ai-voice-failed" => CallEndedReason.PipelineErrorRimeAiVoiceFailed,
                 "pipeline-error-runpod-400-bad-request-validation-failed" => CallEndedReason.PipelineErrorRunpod400BadRequestValidationFailed,
                 "pipeline-error-runpod-401-unauthorized" => CallEndedReason.PipelineErrorRunpod401Unauthorized,
