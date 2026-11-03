@@ -171,6 +171,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Reson8,
+        /// <summary>
+        ///
+        /// </summary>
         RimeAi,
         /// <summary>
         ///
@@ -290,6 +294,7 @@ namespace Vapi
                 AssistantCredentialDiscriminatorProvider.Openrouter => "openrouter",
                 AssistantCredentialDiscriminatorProvider.PerplexityAi => "perplexity-ai",
                 AssistantCredentialDiscriminatorProvider.Playht => "playht",
+                AssistantCredentialDiscriminatorProvider.Reson8 => "reson8",
                 AssistantCredentialDiscriminatorProvider.RimeAi => "rime-ai",
                 AssistantCredentialDiscriminatorProvider.Runpod => "runpod",
                 AssistantCredentialDiscriminatorProvider.S3 => "s3",
@@ -357,6 +362,7 @@ namespace Vapi
                 "openrouter" => AssistantCredentialDiscriminatorProvider.Openrouter,
                 "perplexity-ai" => AssistantCredentialDiscriminatorProvider.PerplexityAi,
                 "playht" => AssistantCredentialDiscriminatorProvider.Playht,
+                "reson8" => AssistantCredentialDiscriminatorProvider.Reson8,
                 "rime-ai" => AssistantCredentialDiscriminatorProvider.RimeAi,
                 "runpod" => AssistantCredentialDiscriminatorProvider.Runpod,
                 "s3" => AssistantCredentialDiscriminatorProvider.S3,

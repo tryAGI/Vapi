@@ -6,7 +6,7 @@ namespace Vapi
     /// <summary>
     ///
     /// </summary>
-    public readonly partial struct OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> : global::System.IEquatable<OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>>
+    public readonly partial struct OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> : global::System.IEquatable<OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>>
     {
         /// <summary>
         ///
@@ -488,15 +488,89 @@ namespace Vapi
         public T13 PickValue13() => Value13 is { } value
             ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Value13' but the value was {ToString()}.");
-        /// <summary>
-        ///
-        /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T1 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T1?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T1?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value1;
+#if NET6_0_OR_GREATER
+        public T14? Value14 { get; init; }
+#else
+        public T14? Value14 { get; }
+#endif
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value14))]
+#endif
+        public bool IsValue14 => Value14 != null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public bool TryPickValue14(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out T14? value)
+        {
+            value = Value14;
+            return IsValue14;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public T14 PickValue14() => Value14 is { } value
+            ? value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Value14' but the value was {ToString()}.");
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public T15? Value15 { get; init; }
+#else
+        public T15? Value15 { get; }
+#endif
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value15))]
+#endif
+        public bool IsValue15 => Value15 != null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public bool TryPickValue15(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out T15? value)
+        {
+            value = Value15;
+            return IsValue15;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public T15 PickValue15() => Value15 is { } value
+            ? value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Value15' but the value was {ToString()}.");
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T1 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T1?)value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator T1?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value1;
 
         /// <summary>
         ///
@@ -509,17 +583,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue1(T1? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue1(T1? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T2 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T2?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T2 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T2?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T2?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value2;
+        public static implicit operator T2?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value2;
 
         /// <summary>
         ///
@@ -532,17 +606,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue2(T2? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue2(T2? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T3 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T3?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T3 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T3?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T3?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value3;
+        public static implicit operator T3?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value3;
 
         /// <summary>
         ///
@@ -555,17 +629,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue3(T3? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue3(T3? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T4 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T4?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T4 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T4?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T4?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value4;
+        public static implicit operator T4?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value4;
 
         /// <summary>
         ///
@@ -578,17 +652,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue4(T4? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue4(T4? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T5 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T5?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T5 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T5?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T5?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value5;
+        public static implicit operator T5?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value5;
 
         /// <summary>
         ///
@@ -601,17 +675,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue5(T5? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue5(T5? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T6 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T6?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T6 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T6?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T6?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value6;
+        public static implicit operator T6?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value6;
 
         /// <summary>
         ///
@@ -624,17 +698,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue6(T6? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue6(T6? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T7 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T7?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T7 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T7?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T7?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value7;
+        public static implicit operator T7?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value7;
 
         /// <summary>
         ///
@@ -647,17 +721,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue7(T7? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue7(T7? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T8 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T8?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T8 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T8?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T8?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value8;
+        public static implicit operator T8?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value8;
 
         /// <summary>
         ///
@@ -670,17 +744,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue8(T8? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue8(T8? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T9 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T9?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T9 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T9?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T9?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value9;
+        public static implicit operator T9?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value9;
 
         /// <summary>
         ///
@@ -693,17 +767,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue9(T9? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue9(T9? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T10 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T10?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T10 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T10?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T10?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value10;
+        public static implicit operator T10?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value10;
 
         /// <summary>
         ///
@@ -716,17 +790,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue10(T10? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue10(T10? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T11 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T11?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T11 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T11?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T11?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value11;
+        public static implicit operator T11?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value11;
 
         /// <summary>
         ///
@@ -739,17 +813,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue11(T11? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue11(T11? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T12 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T12?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T12 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T12?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T12?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value12;
+        public static implicit operator T12?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value12;
 
         /// <summary>
         ///
@@ -762,17 +836,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue12(T12? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue12(T12? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T13 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>((T13?)value);
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T13 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T13?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator T13?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> @this) => @this.Value13;
+        public static implicit operator T13?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value13;
 
         /// <summary>
         ///
@@ -785,7 +859,53 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> FromValue13(T13? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(value);
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue13(T13? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T14 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T14?)value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator T14?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value14;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public OneOf(T14? value)
+        {
+            Value14 = value;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue14(T14? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T15 value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>((T15?)value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator T15?(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> @this) => @this.Value15;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public OneOf(T15? value)
+        {
+            Value15 = value;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> FromValue15(T15? value) => new OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(value);
 
         /// <summary>
         ///
@@ -803,7 +923,9 @@ namespace Vapi
             T10? value10,
             T11? value11,
             T12? value12,
-            T13? value13
+            T13? value13,
+            T14? value14,
+            T15? value15
             )
         {
             Value1 = value1;
@@ -819,12 +941,16 @@ namespace Vapi
             Value11 = value11;
             Value12 = value12;
             Value13 = value13;
+            Value14 = value14;
+            Value15 = value15;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
+            Value15 as object ??
+            Value14 as object ??
             Value13 as object ??
             Value12 as object ??
             Value11 as object ??
@@ -856,7 +982,9 @@ namespace Vapi
             Value10?.ToString() ??
             Value11?.ToString() ??
             Value12?.ToString() ??
-            Value13?.ToString()
+            Value13?.ToString() ??
+            Value14?.ToString() ??
+            Value15?.ToString()
             ;
 
         /// <summary>
@@ -864,7 +992,7 @@ namespace Vapi
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 || !IsValue1 && IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 || !IsValue1 && !IsValue2 && IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 || !IsValue1 && !IsValue2 && !IsValue3 && IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && IsValue11 && !IsValue12 && !IsValue13 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && IsValue12 && !IsValue13 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && IsValue13;
+            return IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && IsValue13 && !IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && IsValue14 && !IsValue15 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && IsValue15;
         }
 
         /// <summary>
@@ -884,6 +1012,8 @@ namespace Vapi
             global::System.Func<T11, TResult>? value11 = null,
             global::System.Func<T12, TResult>? value12 = null,
             global::System.Func<T13, TResult>? value13 = null,
+            global::System.Func<T14, TResult>? value14 = null,
+            global::System.Func<T15, TResult>? value15 = null,
             bool validate = true)
         {
             if (validate)
@@ -943,6 +1073,14 @@ namespace Vapi
             {
                 return value13(__value12);
             }
+            else if (Value14 is { } __value13 && value14 != null)
+            {
+                return value14(__value13);
+            }
+            else if (Value15 is { } __value14 && value15 != null)
+            {
+                return value15(__value14);
+            }
 
             return default(TResult);
         }
@@ -976,6 +1114,10 @@ namespace Vapi
             global::System.Action<T12>? value12 = null,
 
             global::System.Action<T13>? value13 = null,
+
+            global::System.Action<T14>? value14 = null,
+
+            global::System.Action<T15>? value15 = null,
             bool validate = true)
         {
             if (validate)
@@ -1034,6 +1176,14 @@ namespace Vapi
             else if (Value13 is { } __value12)
             {
                 value13?.Invoke(__value12);
+            }
+            else if (Value14 is { } __value13)
+            {
+                value14?.Invoke(__value13);
+            }
+            else if (Value15 is { } __value14)
+            {
+                value15?.Invoke(__value14);
             }
         }
 
@@ -1054,6 +1204,8 @@ namespace Vapi
             global::System.Action<T11>? value11 = null,
             global::System.Action<T12>? value12 = null,
             global::System.Action<T13>? value13 = null,
+            global::System.Action<T14>? value14 = null,
+            global::System.Action<T15>? value15 = null,
             bool validate = true)
         {
             if (validate)
@@ -1112,6 +1264,14 @@ namespace Vapi
             else if (Value13 is { } __value12)
             {
                 value13?.Invoke(__value12);
+            }
+            else if (Value14 is { } __value13)
+            {
+                value14?.Invoke(__value13);
+            }
+            else if (Value15 is { } __value14)
+            {
+                value15?.Invoke(__value14);
             }
         }
 
@@ -1148,6 +1308,10 @@ namespace Vapi
                 typeof(T12),
                 Value13,
                 typeof(T13),
+                Value14,
+                typeof(T14),
+                Value15,
+                typeof(T15),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -1161,7 +1325,7 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public bool Equals(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> other)
+        public bool Equals(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<T1?>.Default.Equals(Value1, other.Value1) &&
@@ -1176,22 +1340,24 @@ namespace Vapi
                 global::System.Collections.Generic.EqualityComparer<T10?>.Default.Equals(Value10, other.Value10) &&
                 global::System.Collections.Generic.EqualityComparer<T11?>.Default.Equals(Value11, other.Value11) &&
                 global::System.Collections.Generic.EqualityComparer<T12?>.Default.Equals(Value12, other.Value12) &&
-                global::System.Collections.Generic.EqualityComparer<T13?>.Default.Equals(Value13, other.Value13)
+                global::System.Collections.Generic.EqualityComparer<T13?>.Default.Equals(Value13, other.Value13) &&
+                global::System.Collections.Generic.EqualityComparer<T14?>.Default.Equals(Value14, other.Value14) &&
+                global::System.Collections.Generic.EqualityComparer<T15?>.Default.Equals(Value15, other.Value15)
                 ;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static bool operator ==(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> obj1, OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> obj2)
+        public static bool operator ==(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> obj1, OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> obj2)
         {
-            return global::System.Collections.Generic.EqualityComparer<OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>>.Default.Equals(obj1, obj2);
+            return global::System.Collections.Generic.EqualityComparer<OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>>.Default.Equals(obj1, obj2);
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static bool operator !=(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> obj1, OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> obj2)
+        public static bool operator !=(OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> obj1, OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> obj2)
         {
             return !(obj1 == obj2);
         }
@@ -1201,7 +1367,7 @@ namespace Vapi
         /// </summary>
         public override bool Equals(object? obj)
         {
-            return obj is OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> o && Equals(o);
+            return obj is OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> o && Equals(o);
         }
     }
 }

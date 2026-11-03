@@ -3,10 +3,10 @@
 namespace Vapi.JsonConverters
 {
     /// <inheritdoc />
-    public class OneOfJsonConverter<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>>
+    public class OneOfJsonConverter<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>>
     {
         /// <inheritdoc />
-        public override global::Vapi.OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> Read(
+        public override global::Vapi.OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -169,6 +169,28 @@ namespace Vapi.JsonConverters
                     }
                 }
             }
+            var __score13 = 0;
+            {
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(T14), options);
+                if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
+                {
+                    foreach (var __prop in __ti.Properties)
+                    {
+                        if (__jsonProps.Contains(__prop.Name)) __score13++;
+                    }
+                }
+            }
+            var __score14 = 0;
+            {
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(T15), options);
+                if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
+                {
+                    foreach (var __prop in __ti.Properties)
+                    {
+                        if (__jsonProps.Contains(__prop.Name)) __score14++;
+                    }
+                }
+            }
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
@@ -184,6 +206,8 @@ namespace Vapi.JsonConverters
             if (__score10 > __bestScore) { __bestScore = __score10; __bestIndex = 10; }
             if (__score11 > __bestScore) { __bestScore = __score11; __bestIndex = 11; }
             if (__score12 > __bestScore) { __bestScore = __score12; __bestIndex = 12; }
+            if (__score13 > __bestScore) { __bestScore = __score13; __bestIndex = 13; }
+            if (__score14 > __bestScore) { __bestScore = __score14; __bestIndex = 14; }
 
             T1? value1 = default;
             T2? value2 = default;
@@ -198,6 +222,8 @@ namespace Vapi.JsonConverters
             T11? value11 = default;
             T12? value12 = default;
             T13? value13 = default;
+            T14? value14 = default;
+            T15? value15 = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -472,9 +498,51 @@ namespace Vapi.JsonConverters
                         // Legacy enum converters signal an incompatible JSON token with this exception.
                     }
                 }
+
+                else if (__bestIndex == 13)
+                {
+                    try
+                    {
+
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(T14), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<T14> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(T14).Name}");
+                        value14 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                    catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+                    {
+                        // Legacy enum converters signal an incompatible JSON token with this exception.
+                    }
+                }
+
+                else if (__bestIndex == 14)
+                {
+                    try
+                    {
+
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(T15), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<T15> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(T15).Name}");
+                        value15 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                    catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+                    {
+                        // Legacy enum converters signal an incompatible JSON token with this exception.
+                    }
+                }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -495,7 +563,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -516,7 +584,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -537,7 +605,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -558,7 +626,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -579,7 +647,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -600,7 +668,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -621,7 +689,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -642,7 +710,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -663,7 +731,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -684,7 +752,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -705,7 +773,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -726,7 +794,7 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
             {
                 try
                 {
@@ -747,7 +815,49 @@ namespace Vapi.JsonConverters
                 }
             }
 
-            var __value = new global::Vapi.OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
+            {
+                try
+                {
+
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(T14), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<T14> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(T14).Name}");
+                    value14 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+                catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+                {
+                    // Legacy enum converters signal an incompatible JSON token with this exception.
+                }
+            }
+
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null && value9 == null && value10 == null && value11 == null && value12 == null && value13 == null && value14 == null && value15 == null)
+            {
+                try
+                {
+
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(T15), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<T15> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(T15).Name}");
+                    value15 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+                catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+                {
+                    // Legacy enum converters signal an incompatible JSON token with this exception.
+                }
+            }
+
+            var __value = new global::Vapi.OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(
                 value1,
 
                 value2,
@@ -772,7 +882,11 @@ namespace Vapi.JsonConverters
 
                 value12,
 
-                value13
+                value13,
+
+                value14,
+
+                value15
                 );
 
             return __value;
@@ -781,7 +895,7 @@ namespace Vapi.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Vapi.OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> value,
+            global::Vapi.OneOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
@@ -864,6 +978,18 @@ namespace Vapi.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(T13), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<T13?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(T13).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickValue13(), typeInfo);
+            }
+            else if (value.IsValue14)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(T14), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<T14?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(T14).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickValue14(), typeInfo);
+            }
+            else if (value.IsValue15)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(T15), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<T15?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(T15).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickValue15(), typeInfo);
             }
         }
     }

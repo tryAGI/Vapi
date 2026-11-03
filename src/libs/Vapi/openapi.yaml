@@ -11216,6 +11216,10 @@
                 {
                   "$ref": "#/components/schemas/FallbackXaiTranscriber",
                   "title": "xAI"
+                },
+                {
+                  "$ref": "#/components/schemas/FallbackReson8Transcriber",
+                  "title": "Reson8"
                 }
               ]
             }
@@ -13888,6 +13892,73 @@
               "th",
               "tr",
               "vi"
+            ]
+          },
+          "fallbackPlan": {
+            "description": "This is the plan for transcriber provider fallbacks in the event that the primary transcriber provider fails.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FallbackTranscriberPlan"
+              }
+            ]
+          }
+        },
+        "required": [
+          "provider"
+        ]
+      },
+      "Reson8Transcriber": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "reson8"
+            ]
+          },
+          "model": {
+            "type": "string",
+            "description": "The Reson8 speech-to-text endpoint to use. `turns` is Reson8's turn-detection endpoint.",
+            "enum": [
+              "turns"
+            ]
+          },
+          "language": {
+            "type": "string",
+            "description": "Language for transcription (e.g. `nl`), or a comma-separated candidate list such as `nl,en` which constrains auto-detection. When omitted, Reson8 auto-detects the language per utterance. Supported: de, en, es, fr, fy, it, nl, pl, pt, sv.",
+            "pattern": "^(de|en|es|fr|fy|it|nl|pl|pt|sv)(,(de|en|es|fr|fy|it|nl|pl|pt|sv))*$"
+          },
+          "keyterms": {
+            "description": "Domain-specific terms to boost recognition (brand names, product codes, jargon). Sent to Reson8 as the `phrases` parameter. Max 250 phrases.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 255
+            }
+          },
+          "customModelId": {
+            "type": "string",
+            "description": "A stored Reson8 phrase collection (custom model) id, managed via the Reson8 API or console."
+          },
+          "eagerTurnProbability": {
+            "type": "number",
+            "description": "Threshold (0-1) at which Reson8 emits an eager turn-end candidate. Provider default 0.5.",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "finalTurnProbability": {
+            "type": "number",
+            "description": "Threshold (0-1) at which Reson8 confirms the end of a turn. Provider default 0.92.",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "fillerMode": {
+            "type": "string",
+            "description": "How Reson8 renders filler words in transcripts. Provider default `natural`.",
+            "enum": [
+              "clean",
+              "natural",
+              "verbatim"
             ]
           },
           "fallbackPlan": {
@@ -16953,6 +17024,65 @@
           "provider"
         ]
       },
+      "FallbackReson8Transcriber": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "reson8"
+            ]
+          },
+          "model": {
+            "type": "string",
+            "description": "The Reson8 speech-to-text endpoint to use. `turns` is Reson8's turn-detection endpoint.",
+            "enum": [
+              "turns"
+            ]
+          },
+          "language": {
+            "type": "string",
+            "description": "Language for transcription (e.g. `nl`), or a comma-separated candidate list such as `nl,en` which constrains auto-detection. When omitted, Reson8 auto-detects the language per utterance. Supported: de, en, es, fr, fy, it, nl, pl, pt, sv.",
+            "pattern": "^(de|en|es|fr|fy|it|nl|pl|pt|sv)(,(de|en|es|fr|fy|it|nl|pl|pt|sv))*$"
+          },
+          "keyterms": {
+            "description": "Domain-specific terms to boost recognition (brand names, product codes, jargon). Sent to Reson8 as the `phrases` parameter. Max 250 phrases.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 255
+            }
+          },
+          "customModelId": {
+            "type": "string",
+            "description": "A stored Reson8 phrase collection (custom model) id, managed via the Reson8 API or console."
+          },
+          "eagerTurnProbability": {
+            "type": "number",
+            "description": "Threshold (0-1) at which Reson8 emits an eager turn-end candidate. Provider default 0.5.",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "finalTurnProbability": {
+            "type": "number",
+            "description": "Threshold (0-1) at which Reson8 confirms the end of a turn. Provider default 0.92.",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "fillerMode": {
+            "type": "string",
+            "description": "How Reson8 renders filler words in transcripts. Provider default `natural`.",
+            "enum": [
+              "clean",
+              "natural",
+              "verbatim"
+            ]
+          }
+        },
+        "required": [
+          "provider"
+        ]
+      },
       "LangfuseObservabilityPlan": {
         "type": "object",
         "properties": {
@@ -18841,6 +18971,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -20627,6 +20761,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -21190,6 +21328,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -21315,6 +21457,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -21517,6 +21660,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -22080,6 +22227,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -22205,6 +22356,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -27427,6 +27579,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -28745,6 +28901,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -29049,6 +29209,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -29174,6 +29338,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -36650,6 +36815,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -37213,6 +37382,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -37338,6 +37511,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -37592,6 +37766,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -38155,6 +38333,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -38280,6 +38462,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -38630,6 +38813,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -39193,6 +39380,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -39318,6 +39509,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -39650,6 +39842,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -40213,6 +40409,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -40338,6 +40538,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -40671,6 +40872,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -41234,6 +41439,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -41359,6 +41568,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -41585,6 +41795,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -42148,6 +42362,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -42273,6 +42491,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -42475,6 +42694,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -43038,6 +43261,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -43163,6 +43390,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -43625,6 +43853,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -43929,6 +44161,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -44054,6 +44290,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -44325,6 +44562,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -44629,6 +44870,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -44754,6 +44999,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -45007,6 +45253,10 @@
                 "title": "XaiTranscriber"
               },
               {
+                "$ref": "#/components/schemas/Reson8Transcriber",
+                "title": "Reson8Transcriber"
+              },
+              {
                 "$ref": "#/components/schemas/VapiTranscriber",
                 "title": "VapiTranscriber"
               }
@@ -45311,6 +45561,10 @@
                   "title": "SonioxCredential"
                 },
                 {
+                  "$ref": "#/components/schemas/CreateReson8CredentialDTO",
+                  "title": "Reson8Credential"
+                },
+                {
                   "$ref": "#/components/schemas/CreateSupabaseCredentialDTO",
                   "title": "SupabaseCredential"
                 },
@@ -45436,6 +45690,7 @@
                   "mistral": "#/components/schemas/CreateMistralCredentialDTO",
                   "speechmatics": "#/components/schemas/CreateSpeechmaticsCredentialDTO",
                   "soniox": "#/components/schemas/CreateSonioxCredentialDTO",
+                  "reson8": "#/components/schemas/CreateReson8CredentialDTO",
                   "google.calendar.oauth2-client": "#/components/schemas/CreateGoogleCalendarOAuth2ClientCredentialDTO",
                   "google.calendar.oauth2-authorization": "#/components/schemas/CreateGoogleCalendarOAuth2AuthorizationCredentialDTO",
                   "google.sheets.oauth2-authorization": "#/components/schemas/CreateGoogleSheetsOAuth2AuthorizationCredentialDTO",
@@ -47565,6 +47820,7 @@
               "call.in-progress.error-providerfault-baseten-503-server-overloaded-error",
               "call.in-progress.error-providerfault-baseten-llm-failed",
               "call.in-progress.error-providerfault-cartesia-500-server-error",
+              "call.in-progress.error-providerfault-cartesia-502-server-error",
               "call.in-progress.error-providerfault-cartesia-503-server-error",
               "call.in-progress.error-providerfault-cartesia-522-server-error",
               "call.in-progress.error-providerfault-cerebras-500-server-error",
@@ -47781,6 +48037,11 @@
               "call.in-progress.error-vapifault-playht-unexpected-error",
               "call.in-progress.error-vapifault-playht-voice-failed",
               "call.in-progress.error-vapifault-playht-voice-must-be-a-valid-voice-manifest-uri",
+              "call.in-progress.error-vapifault-reson8-transcriber-auth-failed",
+              "call.in-progress.error-vapifault-reson8-transcriber-closed",
+              "call.in-progress.error-vapifault-reson8-transcriber-failed",
+              "call.in-progress.error-vapifault-reson8-transcriber-invalid-config",
+              "call.in-progress.error-vapifault-reson8-transcriber-rate-limited",
               "call.in-progress.error-vapifault-rime-ai-voice-failed",
               "call.in-progress.error-vapifault-runpod-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-runpod-401-unauthorized",
@@ -48072,6 +48333,11 @@
               "pipeline-error-playht-unexpected-error",
               "pipeline-error-playht-voice-failed",
               "pipeline-error-playht-voice-must-be-a-valid-voice-manifest-uri",
+              "pipeline-error-reson8-transcriber-auth-failed",
+              "pipeline-error-reson8-transcriber-closed",
+              "pipeline-error-reson8-transcriber-failed",
+              "pipeline-error-reson8-transcriber-invalid-config",
+              "pipeline-error-reson8-transcriber-rate-limited",
               "pipeline-error-rime-ai-voice-failed",
               "pipeline-error-runpod-400-bad-request-validation-failed",
               "pipeline-error-runpod-401-unauthorized",
@@ -69770,6 +70036,62 @@
           "results"
         ]
       },
+      "CallHealthDashboardAffectedCallDTO": {
+        "type": "object",
+        "properties": {
+          "callId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "assistantId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "callTime": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.(\\d{1,6}))?(?:Z|[+-](?:[01]\\d|2[0-3]):[0-5]\\d)$",
+            "description": "Call completion time (endedAt), never startedAt."
+          },
+          "callAvailability": {
+            "type": "string",
+            "enum": [
+              "available",
+              "unavailable"
+            ]
+          }
+        },
+        "required": [
+          "assistantId",
+          "callAvailability",
+          "callId",
+          "callTime"
+        ]
+      },
+      "CallHealthDashboardAffectedCallsResponseDTO": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CallHealthDashboardAffectedCallDTO"
+            }
+          },
+          "nextCursor": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048,
+            "pattern": "^[A-Za-z0-9_-]+$"
+          },
+          "coverage": {
+            "$ref": "#/components/schemas/CallHealthDashboardCoverageDTO"
+          }
+        },
+        "required": [
+          "coverage",
+          "results"
+        ]
+      },
       "CreateOrgDTO": {
         "type": "object",
         "properties": {
@@ -72944,6 +73266,54 @@
           "updatedAt"
         ]
       },
+      "Reson8Credential": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "reson8"
+            ]
+          },
+          "apiKey": {
+            "type": "string",
+            "pattern": "\\S",
+            "description": "This is not returned in the API."
+          },
+          "id": {
+            "type": "string",
+            "description": "This is the unique identifier for the credential."
+          },
+          "orgId": {
+            "type": "string",
+            "description": "This is the unique identifier for the org that this credential belongs to."
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "This is the ISO 8601 date-time string of when the credential was created."
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string",
+            "description": "This is the ISO 8601 date-time string of when the assistant was last updated."
+          },
+          "name": {
+            "type": "string",
+            "description": "This is the name of credential. This is just for your reference.",
+            "minLength": 1,
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "apiKey",
+          "createdAt",
+          "id",
+          "orgId",
+          "provider",
+          "updatedAt"
+        ]
+      },
       "SonioxCredential": {
         "type": "object",
         "properties": {
@@ -74210,6 +74580,32 @@
         },
         "required": [
           "bucketPlan",
+          "provider"
+        ]
+      },
+      "CreateReson8CredentialDTO": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "reson8"
+            ]
+          },
+          "apiKey": {
+            "type": "string",
+            "pattern": "\\S",
+            "description": "This is not returned in the API."
+          },
+          "name": {
+            "type": "string",
+            "description": "This is the name of credential. This is just for your reference.",
+            "minLength": 1,
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "apiKey",
           "provider"
         ]
       },
@@ -75939,6 +76335,28 @@
           "webhookUrl": {
             "type": "string",
             "description": "Slack incoming webhook URL. See https://api.slack.com/messaging/webhooks for setup instructions. This is not returned in the API."
+          },
+          "name": {
+            "type": "string",
+            "description": "This is the name of credential. This is just for your reference.",
+            "minLength": 1,
+            "maxLength": 40
+          }
+        }
+      },
+      "UpdateReson8CredentialDTO": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "enum": [
+              "reson8"
+            ]
+          },
+          "apiKey": {
+            "type": "string",
+            "pattern": "\\S",
+            "description": "This is not returned in the API."
           },
           "name": {
             "type": "string",
@@ -80160,6 +80578,7 @@
               "call.in-progress.error-providerfault-baseten-503-server-overloaded-error",
               "call.in-progress.error-providerfault-baseten-llm-failed",
               "call.in-progress.error-providerfault-cartesia-500-server-error",
+              "call.in-progress.error-providerfault-cartesia-502-server-error",
               "call.in-progress.error-providerfault-cartesia-503-server-error",
               "call.in-progress.error-providerfault-cartesia-522-server-error",
               "call.in-progress.error-providerfault-cerebras-500-server-error",
@@ -80376,6 +80795,11 @@
               "call.in-progress.error-vapifault-playht-unexpected-error",
               "call.in-progress.error-vapifault-playht-voice-failed",
               "call.in-progress.error-vapifault-playht-voice-must-be-a-valid-voice-manifest-uri",
+              "call.in-progress.error-vapifault-reson8-transcriber-auth-failed",
+              "call.in-progress.error-vapifault-reson8-transcriber-closed",
+              "call.in-progress.error-vapifault-reson8-transcriber-failed",
+              "call.in-progress.error-vapifault-reson8-transcriber-invalid-config",
+              "call.in-progress.error-vapifault-reson8-transcriber-rate-limited",
               "call.in-progress.error-vapifault-rime-ai-voice-failed",
               "call.in-progress.error-vapifault-runpod-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-runpod-401-unauthorized",
@@ -80667,6 +81091,11 @@
               "pipeline-error-playht-unexpected-error",
               "pipeline-error-playht-voice-failed",
               "pipeline-error-playht-voice-must-be-a-valid-voice-manifest-uri",
+              "pipeline-error-reson8-transcriber-auth-failed",
+              "pipeline-error-reson8-transcriber-closed",
+              "pipeline-error-reson8-transcriber-failed",
+              "pipeline-error-reson8-transcriber-invalid-config",
+              "pipeline-error-reson8-transcriber-rate-limited",
               "pipeline-error-rime-ai-voice-failed",
               "pipeline-error-runpod-400-bad-request-validation-failed",
               "pipeline-error-runpod-401-unauthorized",
@@ -81594,6 +82023,7 @@
               "call.in-progress.error-providerfault-baseten-503-server-overloaded-error",
               "call.in-progress.error-providerfault-baseten-llm-failed",
               "call.in-progress.error-providerfault-cartesia-500-server-error",
+              "call.in-progress.error-providerfault-cartesia-502-server-error",
               "call.in-progress.error-providerfault-cartesia-503-server-error",
               "call.in-progress.error-providerfault-cartesia-522-server-error",
               "call.in-progress.error-providerfault-cerebras-500-server-error",
@@ -81810,6 +82240,11 @@
               "call.in-progress.error-vapifault-playht-unexpected-error",
               "call.in-progress.error-vapifault-playht-voice-failed",
               "call.in-progress.error-vapifault-playht-voice-must-be-a-valid-voice-manifest-uri",
+              "call.in-progress.error-vapifault-reson8-transcriber-auth-failed",
+              "call.in-progress.error-vapifault-reson8-transcriber-closed",
+              "call.in-progress.error-vapifault-reson8-transcriber-failed",
+              "call.in-progress.error-vapifault-reson8-transcriber-invalid-config",
+              "call.in-progress.error-vapifault-reson8-transcriber-rate-limited",
               "call.in-progress.error-vapifault-rime-ai-voice-failed",
               "call.in-progress.error-vapifault-runpod-400-bad-request-validation-failed",
               "call.in-progress.error-vapifault-runpod-401-unauthorized",
@@ -82101,6 +82536,11 @@
               "pipeline-error-playht-unexpected-error",
               "pipeline-error-playht-voice-failed",
               "pipeline-error-playht-voice-must-be-a-valid-voice-manifest-uri",
+              "pipeline-error-reson8-transcriber-auth-failed",
+              "pipeline-error-reson8-transcriber-closed",
+              "pipeline-error-reson8-transcriber-failed",
+              "pipeline-error-reson8-transcriber-invalid-config",
+              "pipeline-error-reson8-transcriber-rate-limited",
               "pipeline-error-rime-ai-voice-failed",
               "pipeline-error-runpod-400-bad-request-validation-failed",
               "pipeline-error-runpod-401-unauthorized",

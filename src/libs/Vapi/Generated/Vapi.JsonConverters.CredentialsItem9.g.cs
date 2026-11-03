@@ -287,6 +287,13 @@ namespace Vapi.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateSonioxCredentialDTO)}");
                 soniox = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+            global::Vapi.CreateReson8CredentialDTO? reson8 = default;
+            if (discriminator?.Provider == global::Vapi.UpdateAssistantDraftDTOCredentialDiscriminatorProvider.Reson8)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateReson8CredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateReson8CredentialDTO> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateReson8CredentialDTO)}");
+                reson8 = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
             global::Vapi.CreateSupabaseCredentialDTO? supabase = default;
             if (discriminator?.Provider == global::Vapi.UpdateAssistantDraftDTOCredentialDiscriminatorProvider.Supabase)
             {
@@ -498,6 +505,8 @@ namespace Vapi.JsonConverters
                 speechmatics,
 
                 soniox,
+
+                reson8,
 
                 supabase,
 
@@ -777,6 +786,12 @@ namespace Vapi.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateSonioxCredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateSonioxCredentialDTO?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateSonioxCredentialDTO).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickSoniox(), typeInfo);
+            }
+            else if (value.IsReson8)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateReson8CredentialDTO), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateReson8CredentialDTO?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Vapi.CreateReson8CredentialDTO).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickReson8(), typeInfo);
             }
             else if (value.IsSupabase)
             {

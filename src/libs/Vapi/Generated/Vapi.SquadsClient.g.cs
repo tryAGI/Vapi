@@ -45,7 +45,7 @@ namespace Vapi
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
-            get => JsonSerializerContextProvider?.Value ?? global::Vapi.SquadsSourceGenerationContext.Default;
+            get => JsonSerializerContextProvider?.Value ?? global::Vapi.SourceGenerationContext.Default;
             set => JsonSerializerContextProvider = new(() => value);
         }
 
