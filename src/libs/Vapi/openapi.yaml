@@ -49562,6 +49562,697 @@
           }
         }
       },
+      "CallHealthDashboardApiErrorDTO": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1
+          },
+          "requestId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "retryable": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "requestId",
+          "retryable"
+        ]
+      },
+      "CallHealthDashboardAssistantReferenceDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "latestVersion": {
+            "type": "string",
+            "description": "Current assistant.latest_version label; omitted when unavailable, never a goal revision.",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "CallHealthDashboardGoalDefinitionDTO": {
+        "type": "object",
+        "properties": {
+          "goalId": {
+            "type": "string",
+            "description": "Explicit selected goal identity, stable across its revisions.",
+            "format": "uuid"
+          },
+          "succeedsWhen": {
+            "type": "string",
+            "description": "Current visible revision of the selected goal.",
+            "minLength": 1,
+            "maxLength": 600
+          },
+          "leaveOut": {
+            "type": "string",
+            "description": "Current optional semantic exclusions.",
+            "minLength": 1,
+            "maxLength": 300
+          }
+        },
+        "required": [
+          "goalId",
+          "succeedsWhen"
+        ]
+      },
+      "CallHealthDashboardGoalSummaryDTO": {
+        "type": "object",
+        "properties": {
+          "registeredCallCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "eligibleCallCount": {
+            "type": "integer",
+            "description": "Calls with an accepted semantic eligibility decision and binary goal outcome.",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "ineligibleCallCount": {
+            "type": "integer",
+            "description": "Accepted semantic exclusions; absent from the goal denominator.",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "unassessedCallCount": {
+            "type": "integer",
+            "description": "No accepted eligibility decision, including technical or privacy exclusions.",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "goalMetCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "goalNotMetCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "evaluatedCallCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "analyzedCallCount": {
+            "type": "integer",
+            "description": "Accepted current-goal results, including ineligible; independent of issue processing.",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "goalMetRate": {
+            "type": "number",
+            "description": "Goal-met / evaluatedCallCount; omitted when there are no binary outcomes.",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "goalNotMetRate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": [
+          "analyzedCallCount",
+          "eligibleCallCount",
+          "evaluatedCallCount",
+          "goalMetCount",
+          "goalNotMetCount",
+          "ineligibleCallCount",
+          "registeredCallCount",
+          "unassessedCallCount"
+        ]
+      },
+      "CallHealthDashboardAssistantOverviewDTO": {
+        "type": "object",
+        "properties": {
+          "assistant": {
+            "description": "Current permitted assistant metadata, fetched in a batch.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallHealthDashboardAssistantReferenceDTO"
+              }
+            ]
+          },
+          "goalDefinition": {
+            "description": "Every row represents an explicitly selected, tenant-owned assistant goal.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallHealthDashboardGoalDefinitionDTO"
+              }
+            ]
+          },
+          "goal": {
+            "description": "Window totals for the selected goal, including zero-result assistants.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallHealthDashboardGoalSummaryDTO"
+              }
+            ]
+          }
+        },
+        "required": [
+          "assistant",
+          "goal",
+          "goalDefinition"
+        ]
+      },
+      "CallHealthDashboardIntakeCoverageDTO": {
+        "type": "object",
+        "properties": {
+          "deliveryMode": {
+            "type": "string",
+            "enum": [
+              "bestEffort"
+            ]
+          },
+          "endToEndCoverage": {
+            "type": "string",
+            "enum": [
+              "unknown"
+            ]
+          }
+        },
+        "required": [
+          "deliveryMode",
+          "endToEndCoverage"
+        ]
+      },
+      "CallHealthDashboardGoalGapsDTO": {
+        "type": "object",
+        "properties": {
+          "pending": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "unavailable": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "skipped": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "error": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "excluded": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "error",
+          "excluded",
+          "pending",
+          "skipped",
+          "unavailable"
+        ]
+      },
+      "CallHealthDashboardClassificationCoverageDTO": {
+        "type": "object",
+        "properties": {
+          "pending": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "unavailable": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "skipped": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "error": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "excluded": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "complete": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "partial": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "complete",
+          "error",
+          "excluded",
+          "partial",
+          "pending",
+          "skipped",
+          "unavailable"
+        ]
+      },
+      "CallHealthDashboardAssignmentCoverageDTO": {
+        "type": "object",
+        "properties": {
+          "pending": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "unmatched": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "skipped": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "unavailable": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "error": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "coverageGapCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "coverageGapCount",
+          "error",
+          "pending",
+          "skipped",
+          "unavailable",
+          "unmatched"
+        ]
+      },
+      "CallHealthDashboardDiscoveryCoverageDTO": {
+        "type": "object",
+        "properties": {
+          "pendingIssueCategoryCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "blockedIssueCategoryCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "blockedIssueCategoryCount",
+          "pendingIssueCategoryCount"
+        ]
+      },
+      "CallHealthDashboardSweepCoverageDTO": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "string",
+            "enum": [
+              "blocked",
+              "deduplicating",
+              "enumerating",
+              "idle",
+              "processing"
+            ]
+          }
+        },
+        "required": [
+          "state"
+        ]
+      },
+      "CallHealthDashboardCoverageDTO": {
+        "type": "object",
+        "properties": {
+          "asOf": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.(\\d{1,6}))?(?:Z|[+-](?:[01]\\d|2[0-3]):[0-5]\\d)$"
+          },
+          "intake": {
+            "$ref": "#/components/schemas/CallHealthDashboardIntakeCoverageDTO"
+          },
+          "goal": {
+            "$ref": "#/components/schemas/CallHealthDashboardGoalGapsDTO"
+          },
+          "classification": {
+            "$ref": "#/components/schemas/CallHealthDashboardClassificationCoverageDTO"
+          },
+          "assignment": {
+            "$ref": "#/components/schemas/CallHealthDashboardAssignmentCoverageDTO"
+          },
+          "discovery": {
+            "$ref": "#/components/schemas/CallHealthDashboardDiscoveryCoverageDTO"
+          },
+          "sweep": {
+            "$ref": "#/components/schemas/CallHealthDashboardSweepCoverageDTO"
+          },
+          "countsComplete": {
+            "type": "boolean",
+            "description": "Completeness of received authorized work only; never source delivery coverage."
+          }
+        },
+        "required": [
+          "asOf",
+          "assignment",
+          "classification",
+          "countsComplete",
+          "discovery",
+          "goal",
+          "intake",
+          "sweep"
+        ]
+      },
+      "CallHealthDashboardAssistantListResponseDTO": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "description": "Visible nondeleted assistants in ascending ID transport order; sort the exhausted result in the frontend.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CallHealthDashboardAssistantOverviewDTO"
+            }
+          },
+          "nextCursor": {
+            "type": "string",
+            "description": "Opaque ID continuation bound to tenant, completion window and filters.",
+            "minLength": 1,
+            "maxLength": 2048,
+            "pattern": "^[A-Za-z0-9_-]+$"
+          },
+          "coverage": {
+            "description": "Received-work processing coverage, separate from analyzed goal results.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallHealthDashboardCoverageDTO"
+              }
+            ]
+          }
+        },
+        "required": [
+          "coverage",
+          "results"
+        ]
+      },
+      "CallHealthDashboardGoalOptionDTO": {
+        "type": "object",
+        "properties": {
+          "goalId": {
+            "type": "string",
+            "description": "Explicit selected goal identity, stable across its revisions.",
+            "format": "uuid"
+          },
+          "succeedsWhen": {
+            "type": "string",
+            "description": "Current visible revision of the selected goal.",
+            "minLength": 1,
+            "maxLength": 600
+          },
+          "leaveOut": {
+            "type": "string",
+            "description": "Current optional semantic exclusions.",
+            "minLength": 1,
+            "maxLength": 300
+          },
+          "goalVersion": {
+            "type": "string",
+            "description": "Current revision for display; clients select by stable goalId, never by this version.",
+            "pattern": "^[1-9]\\d{0,18}$",
+            "minLength": 1,
+            "maxLength": 19
+          }
+        },
+        "required": [
+          "goalId",
+          "goalVersion",
+          "succeedsWhen"
+        ]
+      },
+      "CallHealthDashboardAssistantGoalsDTO": {
+        "type": "object",
+        "properties": {
+          "assistantId": {
+            "type": "string",
+            "description": "Requested assistant identity whose current published row remains visible.",
+            "format": "uuid"
+          },
+          "goals": {
+            "description": "Empty when this visible assistant has no goals; no goal is automatically selected.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CallHealthDashboardGoalOptionDTO"
+            }
+          }
+        },
+        "required": [
+          "assistantId",
+          "goals"
+        ]
+      },
+      "CallHealthDashboardAssistantGoalsResponseDTO": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "description": "Complete requested visible assistant cohort, including assistants with no goal options.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CallHealthDashboardAssistantGoalsDTO"
+            }
+          }
+        },
+        "required": [
+          "results"
+        ]
+      },
+      "CallHealthDashboardGoalDailyDTO": {
+        "type": "object",
+        "properties": {
+          "registeredCallCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "eligibleCallCount": {
+            "type": "integer",
+            "description": "Calls with an accepted semantic eligibility decision and binary goal outcome.",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "ineligibleCallCount": {
+            "type": "integer",
+            "description": "Accepted semantic exclusions; absent from the goal denominator.",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "unassessedCallCount": {
+            "type": "integer",
+            "description": "No accepted eligibility decision, including technical or privacy exclusions.",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "goalMetCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "goalNotMetCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "evaluatedCallCount": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "analyzedCallCount": {
+            "type": "integer",
+            "description": "Accepted current-goal results, including ineligible; independent of issue processing.",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "goalMetRate": {
+            "type": "number",
+            "description": "Goal-met / evaluatedCallCount; omitted when there are no binary outcomes.",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "goalNotMetRate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "date": {
+            "type": "string",
+            "description": "UTC calendar date; the first and last buckets are clipped to the requested window.",
+            "format": "date"
+          }
+        },
+        "required": [
+          "analyzedCallCount",
+          "date",
+          "eligibleCallCount",
+          "evaluatedCallCount",
+          "goalMetCount",
+          "goalNotMetCount",
+          "ineligibleCallCount",
+          "registeredCallCount",
+          "unassessedCallCount"
+        ]
+      },
+      "CallHealthDashboardWindowDTO": {
+        "type": "object",
+        "properties": {
+          "callTimeGte": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.(\\d{1,6}))?(?:Z|[+-](?:[01]\\d|2[0-3]):[0-5]\\d)$"
+          },
+          "callTimeLt": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.(\\d{1,6}))?(?:Z|[+-](?:[01]\\d|2[0-3]):[0-5]\\d)$"
+          }
+        },
+        "required": [
+          "callTimeGte",
+          "callTimeLt"
+        ]
+      },
+      "CallHealthDashboardSeriesPageDTO": {
+        "type": "object",
+        "properties": {
+          "window": {
+            "description": "Full resolved completion window used by every total, rate and coverage count.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallHealthDashboardWindowDTO"
+              }
+            ]
+          },
+          "pageWindow": {
+            "description": "Clipped completion window represented by this page's daily buckets.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallHealthDashboardWindowDTO"
+              }
+            ]
+          },
+          "nextCursor": {
+            "type": "string",
+            "description": "Continue chart dates only; independent of the issue-row nextCursor.",
+            "minLength": 1,
+            "maxLength": 2048,
+            "pattern": "^[A-Za-z0-9_-]+$"
+          }
+        },
+        "required": [
+          "pageWindow",
+          "window"
+        ]
+      },
+      "CallHealthDashboardAssistantSummaryResponseDTO": {
+        "type": "object",
+        "properties": {
+          "assistant": {
+            "description": "Current permitted assistant metadata, fetched in a batch.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallHealthDashboardAssistantReferenceDTO"
+              }
+            ]
+          },
+          "goalDefinition": {
+            "description": "Every row represents an explicitly selected, tenant-owned assistant goal.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallHealthDashboardGoalDefinitionDTO"
+              }
+            ]
+          },
+          "goal": {
+            "description": "Window totals for the selected goal, including zero-result assistants.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallHealthDashboardGoalSummaryDTO"
+              }
+            ]
+          },
+          "results": {
+            "description": "One ascending contiguous page of UTC dates, including empty buckets.",
+            "minItems": 1,
+            "maxItems": 100,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CallHealthDashboardGoalDailyDTO"
+            }
+          },
+          "seriesPage": {
+            "$ref": "#/components/schemas/CallHealthDashboardSeriesPageDTO"
+          },
+          "coverage": {
+            "description": "Received-work processing coverage, separate from success rates.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CallHealthDashboardCoverageDTO"
+              }
+            ]
+          }
+        },
+        "required": [
+          "assistant",
+          "coverage",
+          "goal",
+          "goalDefinition",
+          "results",
+          "seriesPage"
+        ]
+      },
       "DeveloperMessage": {
         "type": "object",
         "properties": {
@@ -61103,53 +61794,6 @@
           "updatedAt"
         ]
       },
-      "CallHealthDashboardApiErrorDTO": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "string",
-            "minLength": 1
-          },
-          "message": {
-            "type": "string",
-            "minLength": 1
-          },
-          "requestId": {
-            "type": "string",
-            "minLength": 1
-          },
-          "retryable": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "code",
-          "message",
-          "requestId",
-          "retryable"
-        ]
-      },
-      "CallHealthDashboardAssistantReferenceDTO": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string",
-            "minLength": 1
-          },
-          "latestVersion": {
-            "type": "string",
-            "description": "Current assistant.latest_version label; omitted when unavailable, never a goal revision.",
-            "minLength": 1
-          }
-        },
-        "required": [
-          "id"
-        ]
-      },
       "CallHealthDashboardIssueDailyDTO": {
         "type": "object",
         "properties": {
@@ -61291,57 +61935,6 @@
           "summary"
         ]
       },
-      "CallHealthDashboardWindowDTO": {
-        "type": "object",
-        "properties": {
-          "callTimeGte": {
-            "type": "string",
-            "format": "date-time",
-            "pattern": "^\\d{4}-\\d{2}-\\d{2}T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.(\\d{1,6}))?(?:Z|[+-](?:[01]\\d|2[0-3]):[0-5]\\d)$"
-          },
-          "callTimeLt": {
-            "type": "string",
-            "format": "date-time",
-            "pattern": "^\\d{4}-\\d{2}-\\d{2}T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.(\\d{1,6}))?(?:Z|[+-](?:[01]\\d|2[0-3]):[0-5]\\d)$"
-          }
-        },
-        "required": [
-          "callTimeGte",
-          "callTimeLt"
-        ]
-      },
-      "CallHealthDashboardSeriesPageDTO": {
-        "type": "object",
-        "properties": {
-          "window": {
-            "description": "Full resolved completion window used by every total, rate and coverage count.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CallHealthDashboardWindowDTO"
-              }
-            ]
-          },
-          "pageWindow": {
-            "description": "Clipped completion window represented by this page's daily buckets.",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CallHealthDashboardWindowDTO"
-              }
-            ]
-          },
-          "nextCursor": {
-            "type": "string",
-            "description": "Continue chart dates only; independent of the issue-row nextCursor.",
-            "minLength": 1,
-            "maxLength": 2048,
-            "pattern": "^[A-Za-z0-9_-]+$"
-          }
-        },
-        "required": [
-          "pageWindow",
-          "window"
-        ]
-      },
       "CallHealthDashboardFacetsDTO": {
         "type": "object",
         "properties": {
@@ -61359,235 +61952,6 @@
         },
         "required": [
           "statuses"
-        ]
-      },
-      "CallHealthDashboardIntakeCoverageDTO": {
-        "type": "object",
-        "properties": {
-          "deliveryMode": {
-            "type": "string",
-            "enum": [
-              "bestEffort"
-            ]
-          },
-          "endToEndCoverage": {
-            "type": "string",
-            "enum": [
-              "unknown"
-            ]
-          }
-        },
-        "required": [
-          "deliveryMode",
-          "endToEndCoverage"
-        ]
-      },
-      "CallHealthDashboardGoalGapsDTO": {
-        "type": "object",
-        "properties": {
-          "pending": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "unavailable": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "skipped": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "error": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "excluded": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          }
-        },
-        "required": [
-          "error",
-          "excluded",
-          "pending",
-          "skipped",
-          "unavailable"
-        ]
-      },
-      "CallHealthDashboardClassificationCoverageDTO": {
-        "type": "object",
-        "properties": {
-          "pending": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "unavailable": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "skipped": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "error": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "excluded": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "complete": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "partial": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          }
-        },
-        "required": [
-          "complete",
-          "error",
-          "excluded",
-          "partial",
-          "pending",
-          "skipped",
-          "unavailable"
-        ]
-      },
-      "CallHealthDashboardAssignmentCoverageDTO": {
-        "type": "object",
-        "properties": {
-          "pending": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "unmatched": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "skipped": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "unavailable": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "error": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "coverageGapCount": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          }
-        },
-        "required": [
-          "coverageGapCount",
-          "error",
-          "pending",
-          "skipped",
-          "unavailable",
-          "unmatched"
-        ]
-      },
-      "CallHealthDashboardDiscoveryCoverageDTO": {
-        "type": "object",
-        "properties": {
-          "pendingIssueCategoryCount": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "blockedIssueCategoryCount": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          }
-        },
-        "required": [
-          "blockedIssueCategoryCount",
-          "pendingIssueCategoryCount"
-        ]
-      },
-      "CallHealthDashboardSweepCoverageDTO": {
-        "type": "object",
-        "properties": {
-          "state": {
-            "type": "string",
-            "enum": [
-              "blocked",
-              "deduplicating",
-              "enumerating",
-              "idle",
-              "processing"
-            ]
-          }
-        },
-        "required": [
-          "state"
-        ]
-      },
-      "CallHealthDashboardCoverageDTO": {
-        "type": "object",
-        "properties": {
-          "asOf": {
-            "type": "string",
-            "format": "date-time",
-            "pattern": "^\\d{4}-\\d{2}-\\d{2}T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.(\\d{1,6}))?(?:Z|[+-](?:[01]\\d|2[0-3]):[0-5]\\d)$"
-          },
-          "intake": {
-            "$ref": "#/components/schemas/CallHealthDashboardIntakeCoverageDTO"
-          },
-          "goal": {
-            "$ref": "#/components/schemas/CallHealthDashboardGoalGapsDTO"
-          },
-          "classification": {
-            "$ref": "#/components/schemas/CallHealthDashboardClassificationCoverageDTO"
-          },
-          "assignment": {
-            "$ref": "#/components/schemas/CallHealthDashboardAssignmentCoverageDTO"
-          },
-          "discovery": {
-            "$ref": "#/components/schemas/CallHealthDashboardDiscoveryCoverageDTO"
-          },
-          "sweep": {
-            "$ref": "#/components/schemas/CallHealthDashboardSweepCoverageDTO"
-          },
-          "countsComplete": {
-            "type": "boolean",
-            "description": "Completeness of received authorized work only; never source delivery coverage."
-          }
-        },
-        "required": [
-          "asOf",
-          "assignment",
-          "classification",
-          "countsComplete",
-          "discovery",
-          "goal",
-          "intake",
-          "sweep"
         ]
       },
       "CallHealthDashboardIssueListResponseDTO": {
