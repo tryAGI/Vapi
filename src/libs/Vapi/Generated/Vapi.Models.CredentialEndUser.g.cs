@@ -25,8 +25,7 @@ namespace Vapi
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("organizationId")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string OrganizationId { get; set; }
+        public string? OrganizationId { get; set; }
 
         /// <summary>
         ///
@@ -44,21 +43,21 @@ namespace Vapi
         /// Initializes a new instance of the <see cref="CredentialEndUser" /> class.
         /// </summary>
         /// <param name="endUserId"></param>
-        /// <param name="organizationId"></param>
         /// <param name="endUserEmail"></param>
+        /// <param name="organizationId"></param>
         /// <param name="tags"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CredentialEndUser(
             string endUserId,
-            string organizationId,
             string? endUserEmail,
+            string? organizationId,
             object? tags)
         {
             this.EndUserEmail = endUserEmail;
             this.EndUserId = endUserId ?? throw new global::System.ArgumentNullException(nameof(endUserId));
-            this.OrganizationId = organizationId ?? throw new global::System.ArgumentNullException(nameof(organizationId));
+            this.OrganizationId = organizationId;
             this.Tags = tags;
         }
 
