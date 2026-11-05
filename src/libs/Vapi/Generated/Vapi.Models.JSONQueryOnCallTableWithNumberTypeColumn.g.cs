@@ -46,6 +46,7 @@ namespace Vapi
         /// <summary>
         /// This is the aggregation operation to perform on the column.<br/>
         /// When the column is a number type, the operation must be one of the following:<br/>
+        /// - count<br/>
         /// - average<br/>
         /// - sum<br/>
         /// - min<br/>
@@ -85,6 +86,7 @@ namespace Vapi
         /// <param name="operation">
         /// This is the aggregation operation to perform on the column.<br/>
         /// When the column is a number type, the operation must be one of the following:<br/>
+        /// - count<br/>
         /// - average<br/>
         /// - sum<br/>
         /// - min<br/>

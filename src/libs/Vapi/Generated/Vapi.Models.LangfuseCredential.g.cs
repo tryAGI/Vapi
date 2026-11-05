@@ -37,6 +37,12 @@ namespace Vapi
         public required string ApiUrl { get; set; }
 
         /// <summary>
+        /// The semver version of your Langfuse server, e.g. 3.63.0, as its /api/public/health endpoint reports it. Optional.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("serverVersion")]
+        public string? ServerVersion { get; set; }
+
+        /// <summary>
         /// This is the unique identifier for the credential.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
@@ -101,6 +107,9 @@ namespace Vapi
         /// This is the ISO 8601 date-time string of when the assistant was last updated.
         /// </param>
         /// <param name="provider"></param>
+        /// <param name="serverVersion">
+        /// The semver version of your Langfuse server, e.g. 3.63.0, as its /api/public/health endpoint reports it. Optional.
+        /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -116,12 +125,14 @@ namespace Vapi
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             global::Vapi.LangfuseCredentialProvider provider,
+            string? serverVersion,
             string? name)
         {
             this.Provider = provider;
             this.PublicKey = publicKey ?? throw new global::System.ArgumentNullException(nameof(publicKey));
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
             this.ApiUrl = apiUrl ?? throw new global::System.ArgumentNullException(nameof(apiUrl));
+            this.ServerVersion = serverVersion;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;

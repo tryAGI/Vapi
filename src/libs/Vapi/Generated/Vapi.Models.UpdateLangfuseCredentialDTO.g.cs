@@ -34,6 +34,12 @@ namespace Vapi
         public string? ApiUrl { get; set; }
 
         /// <summary>
+        /// The semver version of your Langfuse server, e.g. 3.63.0, as its /api/public/health endpoint reports it. Optional.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("serverVersion")]
+        public string? ServerVersion { get; set; }
+
+        /// <summary>
         /// This is the name of credential. This is just for your reference.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
@@ -58,6 +64,9 @@ namespace Vapi
         /// <param name="apiUrl">
         /// The host URL for Langfuse project. Eg: https://cloud.langfuse.com
         /// </param>
+        /// <param name="serverVersion">
+        /// The semver version of your Langfuse server, e.g. 3.63.0, as its /api/public/health endpoint reports it. Optional.
+        /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
@@ -69,12 +78,14 @@ namespace Vapi
             string? publicKey,
             string? apiKey,
             string? apiUrl,
+            string? serverVersion,
             string? name)
         {
             this.Provider = provider;
             this.PublicKey = publicKey;
             this.ApiKey = apiKey;
             this.ApiUrl = apiUrl;
+            this.ServerVersion = serverVersion;
             this.Name = name;
         }
 

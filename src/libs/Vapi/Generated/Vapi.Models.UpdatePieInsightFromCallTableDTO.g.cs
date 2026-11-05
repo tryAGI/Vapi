@@ -61,7 +61,7 @@ namespace Vapi
         /// These are the queries to run to generate the insight.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("queries")]
-        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.JSONQueryOnCallTableWithStringTypeColumn, global::Vapi.JSONQueryOnCallTableWithNumberTypeColumn, global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumn>>? Queries { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.JSONQueryOnCallTableWithStringTypeColumn, global::Vapi.JSONQueryOnCallTableWithNumberTypeColumn, global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumn, global::Vapi.JSONQueryOnEventsTable>>? Queries { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -113,7 +113,7 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.InsightFormula>? formulas,
             global::Vapi.InsightTimeRange? timeRange,
             global::Vapi.UpdatePieInsightFromCallTableDTOGroupBy? groupBy,
-            global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.JSONQueryOnCallTableWithStringTypeColumn, global::Vapi.JSONQueryOnCallTableWithNumberTypeColumn, global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumn>>? queries)
+            global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.JSONQueryOnCallTableWithStringTypeColumn, global::Vapi.JSONQueryOnCallTableWithNumberTypeColumn, global::Vapi.JSONQueryOnCallTableWithStructuredOutputColumn, global::Vapi.JSONQueryOnEventsTable>>? queries)
         {
             this.Name = name;
             this.Type = type;

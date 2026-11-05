@@ -36,6 +36,14 @@ namespace Vapi
         public required global::Vapi.JSONQueryOnEventsTableOn On { get; set; }
 
         /// <summary>
+        /// The structured output an evaluation monitor tracks, as artifact.structuredOutputs[OutputID]<br/>
+        /// Example: artifact.structuredOutputs[1016c445-5a16-410d-a744-3bc07d8b1508]
+        /// </summary>
+        /// <example>artifact.structuredOutputs[1016c445-5a16-410d-a744-3bc07d8b1508]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("column")]
+        public string? Column { get; set; }
+
+        /// <summary>
         /// This is the operation to perform on matching events.<br/>
         /// - "count": Returns the raw count of matching events<br/>
         /// - "percentage": Returns (count of matching events / total calls) * 100<br/>
@@ -90,6 +98,10 @@ namespace Vapi
         /// This is the table that will be queried.<br/>
         /// Must be "events" for event-based insights.
         /// </param>
+        /// <param name="column">
+        /// The structured output an evaluation monitor tracks, as artifact.structuredOutputs[OutputID]<br/>
+        /// Example: artifact.structuredOutputs[1016c445-5a16-410d-a744-3bc07d8b1508]
+        /// </param>
         /// <param name="filters">
         /// These are the filters to apply to the events query.<br/>
         /// Each filter filters on a field specific to the event type.
@@ -107,12 +119,14 @@ namespace Vapi
             global::Vapi.JSONQueryOnEventsTableOperation operation,
             global::Vapi.JSONQueryOnEventsTableType type,
             global::Vapi.JSONQueryOnEventsTableTable table,
+            string? column,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.EventsTableStringCondition, global::Vapi.EventsTableNumberCondition, global::Vapi.EventsTableBooleanCondition>>? filters,
             string? name)
         {
             this.Type = type;
             this.Table = table;
             this.On = on;
+            this.Column = column;
             this.Operation = operation;
             this.Filters = filters;
             this.Name = name;

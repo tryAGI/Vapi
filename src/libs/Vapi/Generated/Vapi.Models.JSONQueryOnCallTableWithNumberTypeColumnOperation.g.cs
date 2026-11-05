@@ -6,6 +6,7 @@ namespace Vapi
     /// <summary>
     /// This is the aggregation operation to perform on the column.<br/>
     /// When the column is a number type, the operation must be one of the following:<br/>
+    /// - count<br/>
     /// - average<br/>
     /// - sum<br/>
     /// - min<br/>
@@ -18,6 +19,10 @@ namespace Vapi
         ///
         /// </summary>
         Average,
+        /// <summary>
+        ///
+        /// </summary>
+        Count,
         /// <summary>
         ///
         /// </summary>
@@ -45,6 +50,7 @@ namespace Vapi
             return value switch
             {
                 JSONQueryOnCallTableWithNumberTypeColumnOperation.Average => "average",
+                JSONQueryOnCallTableWithNumberTypeColumnOperation.Count => "count",
                 JSONQueryOnCallTableWithNumberTypeColumnOperation.Max => "max",
                 JSONQueryOnCallTableWithNumberTypeColumnOperation.Min => "min",
                 JSONQueryOnCallTableWithNumberTypeColumnOperation.Sum => "sum",
@@ -59,6 +65,7 @@ namespace Vapi
             return value switch
             {
                 "average" => JSONQueryOnCallTableWithNumberTypeColumnOperation.Average,
+                "count" => JSONQueryOnCallTableWithNumberTypeColumnOperation.Count,
                 "max" => JSONQueryOnCallTableWithNumberTypeColumnOperation.Max,
                 "min" => JSONQueryOnCallTableWithNumberTypeColumnOperation.Min,
                 "sum" => JSONQueryOnCallTableWithNumberTypeColumnOperation.Sum,
