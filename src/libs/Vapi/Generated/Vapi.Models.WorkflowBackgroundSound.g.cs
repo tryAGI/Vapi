@@ -11,11 +11,27 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        City,
+        /// <summary>
+        ///
+        /// </summary>
+        Crowd,
+        /// <summary>
+        ///
+        /// </summary>
+        Farm,
+        /// <summary>
+        ///
+        /// </summary>
         Off,
         /// <summary>
         ///
         /// </summary>
         Office,
+        /// <summary>
+        ///
+        /// </summary>
+        WhiteNoise,
     }
 
     /// <summary>
@@ -30,8 +46,12 @@ namespace Vapi
         {
             return value switch
             {
+                WorkflowBackgroundSound.City => "city",
+                WorkflowBackgroundSound.Crowd => "crowd",
+                WorkflowBackgroundSound.Farm => "farm",
                 WorkflowBackgroundSound.Off => "off",
                 WorkflowBackgroundSound.Office => "office",
+                WorkflowBackgroundSound.WhiteNoise => "white-noise",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +62,12 @@ namespace Vapi
         {
             return value switch
             {
+                "city" => WorkflowBackgroundSound.City,
+                "crowd" => WorkflowBackgroundSound.Crowd,
+                "farm" => WorkflowBackgroundSound.Farm,
                 "off" => WorkflowBackgroundSound.Off,
                 "office" => WorkflowBackgroundSound.Office,
+                "white-noise" => WorkflowBackgroundSound.WhiteNoise,
                 _ => null,
             };
         }

@@ -16,6 +16,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Blocked,
+        /// <summary>
+        ///
+        /// </summary>
         Frozen,
     }
 
@@ -32,6 +36,7 @@ namespace Vapi
             return value switch
             {
                 SubscriptionStatus.Active => "active",
+                SubscriptionStatus.Blocked => "blocked",
                 SubscriptionStatus.Frozen => "frozen",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -44,6 +49,7 @@ namespace Vapi
             return value switch
             {
                 "active" => SubscriptionStatus.Active,
+                "blocked" => SubscriptionStatus.Blocked,
                 "frozen" => SubscriptionStatus.Frozen,
                 _ => null,
             };

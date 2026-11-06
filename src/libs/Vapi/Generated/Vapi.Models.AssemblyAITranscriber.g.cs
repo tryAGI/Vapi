@@ -26,7 +26,8 @@ namespace Vapi
 
         /// <summary>
         /// Transcripts below this confidence threshold will be discarded.<br/>
-        /// @default 0.4<br/>
+        /// Defaults to 0.4 for legacy streaming models. Universal Pro models do not<br/>
+        /// filter by confidence unless this field is explicitly set.<br/>
         /// Example: 0.4F
         /// </summary>
         /// <example>0.4F</example>
@@ -197,7 +198,8 @@ namespace Vapi
         /// </param>
         /// <param name="confidenceThreshold">
         /// Transcripts below this confidence threshold will be discarded.<br/>
-        /// @default 0.4<br/>
+        /// Defaults to 0.4 for legacy streaming models. Universal Pro models do not<br/>
+        /// filter by confidence unless this field is explicitly set.<br/>
         /// Example: 0.4F
         /// </param>
         /// <param name="formatTurns">
