@@ -50,6 +50,7 @@ namespace Vapi
 
         /// <summary>
         /// This is the background sound in the transfer assistant call. Default for phone calls is 'office' and default for web calls is 'off'.<br/>
+        /// Bundled sounds: 'office', 'white-noise', 'city', 'crowd' and 'farm'. GPT Live assistants don't play 'office'.<br/>
         /// You can also provide a custom sound by providing a URL to an audio file.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("backgroundSound")]
@@ -152,6 +153,7 @@ namespace Vapi
         /// </param>
         /// <param name="backgroundSound">
         /// This is the background sound in the transfer assistant call. Default for phone calls is 'office' and default for web calls is 'off'.<br/>
+        /// Bundled sounds: 'office', 'white-noise', 'city', 'crowd' and 'farm'. GPT Live assistants don't play 'office'.<br/>
         /// You can also provide a custom sound by providing a URL to an audio file.
         /// </param>
         /// <param name="startSpeakingPlan">

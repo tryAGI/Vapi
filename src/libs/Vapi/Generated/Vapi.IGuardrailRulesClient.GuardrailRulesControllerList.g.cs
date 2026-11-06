@@ -1,0 +1,74 @@
+#nullable enable
+
+namespace Vapi
+{
+    public partial interface IGuardrailRulesClient
+    {
+        /// <summary>
+        /// List guardrail rules
+        /// </summary>
+        /// <param name="limit">
+        /// Default Value: 100
+        /// </param>
+        /// <param name="search"></param>
+        /// <param name="packId"></param>
+        /// <param name="createdAtGt"></param>
+        /// <param name="createdAtLt"></param>
+        /// <param name="createdAtGe"></param>
+        /// <param name="createdAtLe"></param>
+        /// <param name="updatedAtGt"></param>
+        /// <param name="updatedAtLt"></param>
+        /// <param name="updatedAtGe"></param>
+        /// <param name="updatedAtLe"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Vapi.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Vapi.GuardrailRule>> GuardrailRulesControllerListAsync(
+            double? limit = default,
+            string? search = default,
+            global::System.Guid? packId = default,
+            global::System.DateTime? createdAtGt = default,
+            global::System.DateTime? createdAtLt = default,
+            global::System.DateTime? createdAtGe = default,
+            global::System.DateTime? createdAtLe = default,
+            global::System.DateTime? updatedAtGt = default,
+            global::System.DateTime? updatedAtLt = default,
+            global::System.DateTime? updatedAtGe = default,
+            global::System.DateTime? updatedAtLe = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// List guardrail rules
+        /// </summary>
+        /// <param name="limit">
+        /// Default Value: 100
+        /// </param>
+        /// <param name="search"></param>
+        /// <param name="packId"></param>
+        /// <param name="createdAtGt"></param>
+        /// <param name="createdAtLt"></param>
+        /// <param name="createdAtGe"></param>
+        /// <param name="createdAtLe"></param>
+        /// <param name="updatedAtGt"></param>
+        /// <param name="updatedAtLt"></param>
+        /// <param name="updatedAtGe"></param>
+        /// <param name="updatedAtLe"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Vapi.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Vapi.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Vapi.GuardrailRule>>> GuardrailRulesControllerListAsResponseAsync(
+            double? limit = default,
+            string? search = default,
+            global::System.Guid? packId = default,
+            global::System.DateTime? createdAtGt = default,
+            global::System.DateTime? createdAtLt = default,
+            global::System.DateTime? createdAtGe = default,
+            global::System.DateTime? createdAtLe = default,
+            global::System.DateTime? updatedAtGt = default,
+            global::System.DateTime? updatedAtLt = default,
+            global::System.DateTime? updatedAtGe = default,
+            global::System.DateTime? updatedAtLe = default,
+            global::Vapi.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

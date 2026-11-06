@@ -11,11 +11,27 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        City,
+        /// <summary>
+        ///
+        /// </summary>
+        Crowd,
+        /// <summary>
+        ///
+        /// </summary>
+        Farm,
+        /// <summary>
+        ///
+        /// </summary>
         Off,
         /// <summary>
         ///
         /// </summary>
         Office,
+        /// <summary>
+        ///
+        /// </summary>
+        WhiteNoise,
     }
 
     /// <summary>
@@ -30,8 +46,12 @@ namespace Vapi
         {
             return value switch
             {
+                CreateAssistantDraftDTOBackgroundSound.City => "city",
+                CreateAssistantDraftDTOBackgroundSound.Crowd => "crowd",
+                CreateAssistantDraftDTOBackgroundSound.Farm => "farm",
                 CreateAssistantDraftDTOBackgroundSound.Off => "off",
                 CreateAssistantDraftDTOBackgroundSound.Office => "office",
+                CreateAssistantDraftDTOBackgroundSound.WhiteNoise => "white-noise",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +62,12 @@ namespace Vapi
         {
             return value switch
             {
+                "city" => CreateAssistantDraftDTOBackgroundSound.City,
+                "crowd" => CreateAssistantDraftDTOBackgroundSound.Crowd,
+                "farm" => CreateAssistantDraftDTOBackgroundSound.Farm,
                 "off" => CreateAssistantDraftDTOBackgroundSound.Off,
                 "office" => CreateAssistantDraftDTOBackgroundSound.Office,
+                "white-noise" => CreateAssistantDraftDTOBackgroundSound.WhiteNoise,
                 _ => null,
             };
         }
