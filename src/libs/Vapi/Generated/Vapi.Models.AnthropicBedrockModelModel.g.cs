@@ -72,6 +72,10 @@ namespace Vapi
         ///
         /// </summary>
         GlobalAnthropicClaudeHaiku4520251001V1_0,
+        /// <summary>
+        ///
+        /// </summary>
+        GlobalAnthropicClaudeSonnet46,
     }
 
     /// <summary>
@@ -102,6 +106,7 @@ namespace Vapi
                 AnthropicBedrockModelModel.ClaudeSonnet4520250929 => "claude-sonnet-4-5-20250929",
                 AnthropicBedrockModelModel.ClaudeSonnet46 => "claude-sonnet-4-6",
                 AnthropicBedrockModelModel.GlobalAnthropicClaudeHaiku4520251001V1_0 => "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+                AnthropicBedrockModelModel.GlobalAnthropicClaudeSonnet46 => "global.anthropic.claude-sonnet-4-6",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -128,6 +133,7 @@ namespace Vapi
                 "claude-sonnet-4-5-20250929" => AnthropicBedrockModelModel.ClaudeSonnet4520250929,
                 "claude-sonnet-4-6" => AnthropicBedrockModelModel.ClaudeSonnet46,
                 "global.anthropic.claude-haiku-4-5-20251001-v1:0" => AnthropicBedrockModelModel.GlobalAnthropicClaudeHaiku4520251001V1_0,
+                "global.anthropic.claude-sonnet-4-6" => AnthropicBedrockModelModel.GlobalAnthropicClaudeSonnet46,
                 _ => null,
             };
         }

@@ -23,6 +23,12 @@ namespace Vapi
         public global::Vapi.SonioxTranscriberModel? Model { get; set; }
 
         /// <summary>
+        /// Sends the assistant's speech to Soniox as context, which improves caller transcription and filters out echo. Only supported on stt-rt-v6. Defaults to on; set to false to disable.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agentTextInputEnabled")]
+        public bool? AgentTextInputEnabled { get; set; }
+
+        /// <summary>
         /// Single language for transcription as an ISO 639-1 code (e.g., `en`, `es`). For multi-language hints or to enable Soniox auto-detect, use `languages` instead — when `languages` is set (including to an empty array), this field is ignored when building the Soniox request. Defaults to `en` if neither this nor `languages` is set.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("language")]
@@ -48,7 +54,7 @@ namespace Vapi
         public double? MaxEndpointDelayMs { get; set; }
 
         /// <summary>
-        /// How likely Soniox is to emit an endpoint (end the caller turn). Higher values make endpoints more likely for faster turn-taking; negative values make them less likely, which helps when callers pause mid-sentence (e.g. reading numbers group by group). Range: -1.0 to 1.0. Default: 0.3 (the platform low-latency voice profile; Soniox's own default is 0.0). Supported by stt-rt-v5; omitted from the Soniox request on explicit stt-rt-v4. Soniox recommends tuning endpointLatencyAdjustmentLevel first, and advises against negative sensitivity while the level is above 0 (the settings work against each other).<br/>
+        /// How likely Soniox is to emit an endpoint (end the caller turn). Higher values make endpoints more likely for faster turn-taking; negative values make them less likely, which helps when callers pause mid-sentence (e.g. reading numbers group by group). Range: -1.0 to 1.0. Default: 0.3 (the platform low-latency voice profile; Soniox's own default is 0.0). Supported by stt-rt-v5 and stt-rt-v6; omitted from the Soniox request on explicit stt-rt-v4. Soniox recommends tuning endpointLatencyAdjustmentLevel first, and advises against negative sensitivity while the level is above 0 (the settings work against each other).<br/>
         /// Example: 0.3F
         /// </summary>
         /// <example>0.3F</example>
@@ -56,7 +62,7 @@ namespace Vapi
         public double? EndpointSensitivity { get; set; }
 
         /// <summary>
-        /// How aggressively Soniox reduces endpoint latency. 0 is Soniox's default semantic endpointing; 3 is the most aggressive. Higher levels return endpoints sooner but may split speech into more segments and slightly reduce accuracy. Integer. Range: 0-3. Default: 2 (the platform low-latency voice profile; Soniox's own default is 0). Supported by stt-rt-v5; omitted from the Soniox request on explicit stt-rt-v4.<br/>
+        /// How aggressively Soniox reduces endpoint latency. 0 is Soniox's default semantic endpointing; 3 is the most aggressive. Higher levels return endpoints sooner but may split speech into more segments and slightly reduce accuracy. Integer. Range: 0-3. Default: 2 (the platform low-latency voice profile; Soniox's own default is 0). Supported by stt-rt-v5 and stt-rt-v6; omitted from the Soniox request on explicit stt-rt-v4.<br/>
         /// Example: 2
         /// </summary>
         /// <example>2</example>
@@ -104,6 +110,9 @@ namespace Vapi
         /// <param name="model">
         /// The Soniox model to use for transcription.
         /// </param>
+        /// <param name="agentTextInputEnabled">
+        /// Sends the assistant's speech to Soniox as context, which improves caller transcription and filters out echo. Only supported on stt-rt-v6. Defaults to on; set to false to disable.
+        /// </param>
         /// <param name="language">
         /// Single language for transcription as an ISO 639-1 code (e.g., `en`, `es`). For multi-language hints or to enable Soniox auto-detect, use `languages` instead — when `languages` is set (including to an empty array), this field is ignored when building the Soniox request. Defaults to `en` if neither this nor `languages` is set.
         /// </param>
@@ -117,11 +126,11 @@ namespace Vapi
         /// Maximum delay in milliseconds between when the speaker stops and when the endpoint is detected. Lower values mean faster turn-taking but more false endpoints. Range: 500-3000. Default: 500.
         /// </param>
         /// <param name="endpointSensitivity">
-        /// How likely Soniox is to emit an endpoint (end the caller turn). Higher values make endpoints more likely for faster turn-taking; negative values make them less likely, which helps when callers pause mid-sentence (e.g. reading numbers group by group). Range: -1.0 to 1.0. Default: 0.3 (the platform low-latency voice profile; Soniox's own default is 0.0). Supported by stt-rt-v5; omitted from the Soniox request on explicit stt-rt-v4. Soniox recommends tuning endpointLatencyAdjustmentLevel first, and advises against negative sensitivity while the level is above 0 (the settings work against each other).<br/>
+        /// How likely Soniox is to emit an endpoint (end the caller turn). Higher values make endpoints more likely for faster turn-taking; negative values make them less likely, which helps when callers pause mid-sentence (e.g. reading numbers group by group). Range: -1.0 to 1.0. Default: 0.3 (the platform low-latency voice profile; Soniox's own default is 0.0). Supported by stt-rt-v5 and stt-rt-v6; omitted from the Soniox request on explicit stt-rt-v4. Soniox recommends tuning endpointLatencyAdjustmentLevel first, and advises against negative sensitivity while the level is above 0 (the settings work against each other).<br/>
         /// Example: 0.3F
         /// </param>
         /// <param name="endpointLatencyAdjustmentLevel">
-        /// How aggressively Soniox reduces endpoint latency. 0 is Soniox's default semantic endpointing; 3 is the most aggressive. Higher levels return endpoints sooner but may split speech into more segments and slightly reduce accuracy. Integer. Range: 0-3. Default: 2 (the platform low-latency voice profile; Soniox's own default is 0). Supported by stt-rt-v5; omitted from the Soniox request on explicit stt-rt-v4.<br/>
+        /// How aggressively Soniox reduces endpoint latency. 0 is Soniox's default semantic endpointing; 3 is the most aggressive. Higher levels return endpoints sooner but may split speech into more segments and slightly reduce accuracy. Integer. Range: 0-3. Default: 2 (the platform low-latency voice profile; Soniox's own default is 0). Supported by stt-rt-v5 and stt-rt-v6; omitted from the Soniox request on explicit stt-rt-v4.<br/>
         /// Example: 2
         /// </param>
         /// <param name="customVocabulary">
@@ -144,6 +153,7 @@ namespace Vapi
         public SonioxTranscriber(
             global::Vapi.SonioxTranscriberProvider provider,
             global::Vapi.SonioxTranscriberModel? model,
+            bool? agentTextInputEnabled,
             global::Vapi.SonioxTranscriberLanguage? language,
             global::System.Collections.Generic.IList<global::Vapi.SonioxTranscriberLanguage2>? languages,
             bool? languageHintsStrict,
@@ -157,6 +167,7 @@ namespace Vapi
         {
             this.Provider = provider;
             this.Model = model;
+            this.AgentTextInputEnabled = agentTextInputEnabled;
             this.Language = language;
             this.Languages = languages;
             this.LanguageHintsStrict = languageHintsStrict;

@@ -72,6 +72,13 @@ namespace Vapi
         public double? NumAssistantInterrupted { get; set; }
 
         /// <summary>
+        /// This is `true` when the call was recorded with `TurnLatency.unmeasured`, so a turn without that list had every component measured.<br/>
+        /// Absent on calls recorded before `unmeasured` existed, where a 0 latency may mean either 0ms or "not measured".
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("turnLatencyUnmeasuredTracked")]
+        public bool? TurnLatencyUnmeasuredTracked { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -113,6 +120,10 @@ namespace Vapi
         /// <param name="numAssistantInterrupted">
         /// This is the number of times the assistant was interrupted by the user during the call.
         /// </param>
+        /// <param name="turnLatencyUnmeasuredTracked">
+        /// This is `true` when the call was recorded with `TurnLatency.unmeasured`, so a turn without that list had every component measured.<br/>
+        /// Absent on calls recorded before `unmeasured` existed, where a 0 latency may mean either 0ms or "not measured".
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -126,7 +137,8 @@ namespace Vapi
             double? fromTransportLatencyAverage,
             double? toTransportLatencyAverage,
             double? numUserInterrupted,
-            double? numAssistantInterrupted)
+            double? numAssistantInterrupted,
+            bool? turnLatencyUnmeasuredTracked)
         {
             this.TurnLatencies = turnLatencies;
             this.ModelLatencyAverage = modelLatencyAverage;
@@ -138,6 +150,7 @@ namespace Vapi
             this.ToTransportLatencyAverage = toTransportLatencyAverage;
             this.NumUserInterrupted = numUserInterrupted;
             this.NumAssistantInterrupted = numAssistantInterrupted;
+            this.TurnLatencyUnmeasuredTracked = turnLatencyUnmeasuredTracked;
         }
 
         /// <summary>

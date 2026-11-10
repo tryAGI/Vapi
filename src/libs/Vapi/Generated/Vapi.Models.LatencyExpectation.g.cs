@@ -13,6 +13,9 @@ namespace Vapi
         /// - turn: total time from the end of user speech to the start of assistant speech<br/>
         /// - model: LLM time to first token<br/>
         /// - voice: TTS time to first audio<br/>
+        /// - transcriber: time from the end of user speech to the transcript's words being known<br/>
+        /// - endpointing: time from the transcript's words being known to deciding the user finished their turn<br/>
+        /// Turns where a component was not measured are left out of that metric.<br/>
         /// Example: turn
         /// </summary>
         /// <example>turn</example>
@@ -67,6 +70,9 @@ namespace Vapi
         /// - turn: total time from the end of user speech to the start of assistant speech<br/>
         /// - model: LLM time to first token<br/>
         /// - voice: TTS time to first audio<br/>
+        /// - transcriber: time from the end of user speech to the transcript's words being known<br/>
+        /// - endpointing: time from the transcript's words being known to deciding the user finished their turn<br/>
+        /// Turns where a component was not measured are left out of that metric.<br/>
         /// Example: turn
         /// </param>
         /// <param name="aggregation">

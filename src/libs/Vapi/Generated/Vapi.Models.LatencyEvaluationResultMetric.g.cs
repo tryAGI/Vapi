@@ -11,7 +11,15 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Endpointing,
+        /// <summary>
+        ///
+        /// </summary>
         Model,
+        /// <summary>
+        ///
+        /// </summary>
+        Transcriber,
         /// <summary>
         ///
         /// </summary>
@@ -34,7 +42,9 @@ namespace Vapi
         {
             return value switch
             {
+                LatencyEvaluationResultMetric.Endpointing => "endpointing",
                 LatencyEvaluationResultMetric.Model => "model",
+                LatencyEvaluationResultMetric.Transcriber => "transcriber",
                 LatencyEvaluationResultMetric.Turn => "turn",
                 LatencyEvaluationResultMetric.Voice => "voice",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -47,7 +57,9 @@ namespace Vapi
         {
             return value switch
             {
+                "endpointing" => LatencyEvaluationResultMetric.Endpointing,
                 "model" => LatencyEvaluationResultMetric.Model,
+                "transcriber" => LatencyEvaluationResultMetric.Transcriber,
                 "turn" => LatencyEvaluationResultMetric.Turn,
                 "voice" => LatencyEvaluationResultMetric.Voice,
                 _ => null,
