@@ -16,6 +16,10 @@ namespace Vapi
         ///
         /// </summary>
         SttRtV5,
+        /// <summary>
+        ///
+        /// </summary>
+        SttRtV6,
     }
 
     /// <summary>
@@ -32,6 +36,7 @@ namespace Vapi
             {
                 FallbackSonioxTranscriberModel.SttRtV4 => "stt-rt-v4",
                 FallbackSonioxTranscriberModel.SttRtV5 => "stt-rt-v5",
+                FallbackSonioxTranscriberModel.SttRtV6 => "stt-rt-v6",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +49,7 @@ namespace Vapi
             {
                 "stt-rt-v4" => FallbackSonioxTranscriberModel.SttRtV4,
                 "stt-rt-v5" => FallbackSonioxTranscriberModel.SttRtV5,
+                "stt-rt-v6" => FallbackSonioxTranscriberModel.SttRtV6,
                 _ => null,
             };
         }

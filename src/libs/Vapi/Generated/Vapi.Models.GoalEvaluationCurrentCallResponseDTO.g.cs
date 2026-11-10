@@ -23,7 +23,7 @@ namespace Vapi
         public required global::System.Guid GoalId { get; set; }
 
         /// <summary>
-        /// Current revision of the requested goal for a visible call. Absent when that goal does not belong to the source assistant or the source is hidden. An absent evaluation does not imply queued or pending work.
+        /// Current revision of the requested goal for a visible call with a registered evaluation. Absent when the call has no registered evaluation, when that goal does not belong to the source assistant, or when the source is hidden. An absent evaluation does not imply queued or pending work.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("currentGoalVersion")]
         public string? CurrentGoalVersion { get; set; }
@@ -46,7 +46,7 @@ namespace Vapi
         /// <param name="callId"></param>
         /// <param name="goalId"></param>
         /// <param name="currentGoalVersion">
-        /// Current revision of the requested goal for a visible call. Absent when that goal does not belong to the source assistant or the source is hidden. An absent evaluation does not imply queued or pending work.
+        /// Current revision of the requested goal for a visible call with a registered evaluation. Absent when the call has no registered evaluation, when that goal does not belong to the source assistant, or when the source is hidden. An absent evaluation does not imply queued or pending work.
         /// </param>
         /// <param name="currentEvaluation"></param>
 #if NET7_0_OR_GREATER

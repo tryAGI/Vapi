@@ -69,8 +69,8 @@ namespace Vapi
 
         /// <summary>
         /// Optional configuration for Anthropic's thinking feature.<br/>
-        /// Only applicable for claude-3-7-sonnet-20250219 model.<br/>
-        /// If provided, maxTokens must be greater than thinking.budgetTokens.
+        /// Only applicable for models that support a thinking budget.<br/>
+        /// Set maxTokens greater than thinking.budgetTokens; the default cap is too small.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("thinking")]
         public global::Vapi.AnthropicThinkingConfig? Thinking { get; set; }
@@ -145,8 +145,8 @@ namespace Vapi
         /// </param>
         /// <param name="thinking">
         /// Optional configuration for Anthropic's thinking feature.<br/>
-        /// Only applicable for claude-3-7-sonnet-20250219 model.<br/>
-        /// If provided, maxTokens must be greater than thinking.budgetTokens.
+        /// Only applicable for models that support a thinking budget.<br/>
+        /// Set maxTokens greater than thinking.budgetTokens; the default cap is too small.
         /// </param>
         /// <param name="temperature">
         /// This is the temperature that will be used for calls. Default is 0.5.
