@@ -151,6 +151,7 @@ namespace Vapi
         {
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, double?, bool?, object, byte[]>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, global::Vapi.JsonSchema>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, global::Vapi.JsonSchema>());
             options.Converters.Add(new global::Vapi.JsonConverters.OneOfJsonConverter<string, global::Vapi.JsonSchema>());
