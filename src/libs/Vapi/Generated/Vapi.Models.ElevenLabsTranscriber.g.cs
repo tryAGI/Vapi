@@ -30,6 +30,12 @@ namespace Vapi
         public global::Vapi.ElevenLabsTranscriberLanguage? Language { get; set; }
 
         /// <summary>
+        /// Words or phrases to bias the transcription towards, such as product names. Supported on scribe_v2 (up to 100 terms of 50 characters each) and scribe_v2_realtime (up to 50 terms of 20 characters each). Each term has at most 5 words and none of `&lt; &gt; { } [ ] \`. Adds ElevenLabs' keyterm prompting rate to the transcriber cost.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("keyterms")]
+        public global::System.Collections.Generic.IList<string>? Keyterms { get; set; }
+
+        /// <summary>
         /// This is the number of seconds of silence before VAD commits (0.3-3.0).<br/>
         /// Example: 1.5F
         /// </summary>
@@ -85,6 +91,9 @@ namespace Vapi
         /// <param name="language">
         /// This is the language that will be used for the transcription.
         /// </param>
+        /// <param name="keyterms">
+        /// Words or phrases to bias the transcription towards, such as product names. Supported on scribe_v2 (up to 100 terms of 50 characters each) and scribe_v2_realtime (up to 50 terms of 20 characters each). Each term has at most 5 words and none of `&lt; &gt; { } [ ] \`. Adds ElevenLabs' keyterm prompting rate to the transcriber cost.
+        /// </param>
         /// <param name="silenceThresholdSeconds">
         /// This is the number of seconds of silence before VAD commits (0.3-3.0).<br/>
         /// Example: 1.5F
@@ -111,6 +120,7 @@ namespace Vapi
             global::Vapi.ElevenLabsTranscriberProvider provider,
             global::Vapi.ElevenLabsTranscriberModel? model,
             global::Vapi.ElevenLabsTranscriberLanguage? language,
+            global::System.Collections.Generic.IList<string>? keyterms,
             double? silenceThresholdSeconds,
             double? confidenceThreshold,
             double? minSpeechDurationMs,
@@ -120,6 +130,7 @@ namespace Vapi
             this.Provider = provider;
             this.Model = model;
             this.Language = language;
+            this.Keyterms = keyterms;
             this.SilenceThresholdSeconds = silenceThresholdSeconds;
             this.ConfidenceThreshold = confidenceThreshold;
             this.MinSpeechDurationMs = minSpeechDurationMs;
