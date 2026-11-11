@@ -92,16 +92,6 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public GuardrailPacksClient GuardrailPacks { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public GuardrailRulesClient GuardrailRules { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
         public InsightClient Insight { get; }
 
         /// <summary>
