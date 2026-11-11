@@ -3,10 +3,10 @@
 namespace Vapi.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class GuardrailRulesControllerPaginatedSortByNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.GuardrailRulesControllerPaginatedSortBy?>
+    public sealed class GuardrailPackConflictResponseDTOErrorJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.GuardrailPackConflictResponseDTOError>
     {
         /// <inheritdoc />
-        public override global::Vapi.GuardrailRulesControllerPaginatedSortBy? Read(
+        public override global::Vapi.GuardrailPackConflictResponseDTOError Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Vapi.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Vapi.GuardrailRulesControllerPaginatedSortByExtensions.ToEnum(stringValue);
+                        return global::Vapi.GuardrailPackConflictResponseDTOErrorExtensions.ToEnum(stringValue) ?? default;
                     }
 
                     break;
@@ -26,11 +26,11 @@ namespace Vapi.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Vapi.GuardrailRulesControllerPaginatedSortBy)numValue;
+                    return (global::Vapi.GuardrailPackConflictResponseDTOError)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Vapi.GuardrailRulesControllerPaginatedSortBy?);
+                    return default(global::Vapi.GuardrailPackConflictResponseDTOError);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,19 +42,12 @@ namespace Vapi.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Vapi.GuardrailRulesControllerPaginatedSortBy? value,
+            global::Vapi.GuardrailPackConflictResponseDTOError value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            if (value == null)
-            {
-                writer.WriteNullValue();
-            }
-            else
-            {
-                writer.WriteStringValue(global::Vapi.GuardrailRulesControllerPaginatedSortByExtensions.ToValueString(value.Value));
-            }
+            writer.WriteStringValue(global::Vapi.GuardrailPackConflictResponseDTOErrorExtensions.ToValueString(value));
         }
     }
 }
