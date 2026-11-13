@@ -34,7 +34,7 @@ namespace Vapi
         public string? ApiUrl { get; set; }
 
         /// <summary>
-        /// The semver version of your Langfuse server, e.g. 3.63.0, as its /api/public/health endpoint reports it. Optional.
+        /// The semver version of your Langfuse server, e.g. 3.63.0. Detected from your server's /api/public/health endpoint at save time whenever possible, and a detected version always wins; supply it only when that endpoint is not reachable from Vapi.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("serverVersion")]
         public string? ServerVersion { get; set; }
@@ -65,7 +65,7 @@ namespace Vapi
         /// The host URL for Langfuse project. Eg: https://cloud.langfuse.com
         /// </param>
         /// <param name="serverVersion">
-        /// The semver version of your Langfuse server, e.g. 3.63.0, as its /api/public/health endpoint reports it. Optional.
+        /// The semver version of your Langfuse server, e.g. 3.63.0. Detected from your server's /api/public/health endpoint at save time whenever possible, and a detected version always wins; supply it only when that endpoint is not reachable from Vapi.
         /// </param>
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
