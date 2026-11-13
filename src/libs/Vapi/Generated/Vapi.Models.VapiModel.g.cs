@@ -44,25 +44,10 @@ namespace Vapi
         public global::Vapi.CreateCustomKnowledgeBaseDTO? KnowledgeBase { get; set; }
 
         /// <summary>
-        /// White-label Vapi models are selected by `version`, not a model name, so<br/>
-        /// `model` is optional here (the runtime already accepts a version-only Vapi<br/>
-        /// payload). Overriding the required `ModelBase.model`: the declared type stays<br/>
-        /// `string` to match the base (avoids TS2416) and the `= undefined!` initializer<br/>
-        /// satisfies TS2612 for the field override, while `@IsOptional` +<br/>
-        /// `@ApiPropertyOptional` make validation and the generated OpenAPI schema treat<br/>
-        /// it as optional (so `VapiModel.required` is `['provider']`).
+        /// This is the Vapi model: `sapien` or `sapien-lite`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         public string? Model { get; set; }
-
-        /// <summary>
-        /// Vapi-managed model version (update channel). When set, this is a Vapi-managed<br/>
-        /// LLM routed by the registry; when absent, this is the legacy workflow form<br/>
-        /// below (`steps` / `workflow`).
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.VapiModelVersionJsonConverter))]
-        public global::Vapi.VapiModelVersion? Version { get; set; }
 
         /// <summary>
         ///
@@ -135,18 +120,7 @@ namespace Vapi
         /// These are the options for the knowledge base.
         /// </param>
         /// <param name="model">
-        /// White-label Vapi models are selected by `version`, not a model name, so<br/>
-        /// `model` is optional here (the runtime already accepts a version-only Vapi<br/>
-        /// payload). Overriding the required `ModelBase.model`: the declared type stays<br/>
-        /// `string` to match the base (avoids TS2416) and the `= undefined!` initializer<br/>
-        /// satisfies TS2612 for the field override, while `@IsOptional` +<br/>
-        /// `@ApiPropertyOptional` make validation and the generated OpenAPI schema treat<br/>
-        /// it as optional (so `VapiModel.required` is `['provider']`).
-        /// </param>
-        /// <param name="version">
-        /// Vapi-managed model version (update channel). When set, this is a Vapi-managed<br/>
-        /// LLM routed by the registry; when absent, this is the legacy workflow form<br/>
-        /// below (`steps` / `workflow`).
+        /// This is the Vapi model: `sapien` or `sapien-lite`.
         /// </param>
         /// <param name="provider"></param>
         /// <param name="workflowId">
@@ -178,7 +152,6 @@ namespace Vapi
             global::System.Collections.Generic.IList<global::Vapi.ToolRef>? toolRefs,
             global::Vapi.CreateCustomKnowledgeBaseDTO? knowledgeBase,
             string? model,
-            global::Vapi.VapiModelVersion? version,
             global::Vapi.VapiModelProvider provider,
             string? workflowId,
             global::Vapi.WorkflowUserEditable? workflow,
@@ -192,7 +165,6 @@ namespace Vapi
             this.ToolRefs = toolRefs;
             this.KnowledgeBase = knowledgeBase;
             this.Model = model;
-            this.Version = version;
             this.Provider = provider;
             this.WorkflowId = workflowId;
             this.Workflow = workflow;
