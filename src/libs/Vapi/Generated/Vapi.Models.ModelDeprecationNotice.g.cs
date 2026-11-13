@@ -38,7 +38,7 @@ namespace Vapi
         public required string Model { get; set; }
 
         /// <summary>
-        /// Day the model became deprecated, `YYYY-MM-DD` in UTC.<br/>
+        /// Registry effective deprecation day, `YYYY-MM-DD` in UTC.<br/>
         /// Example: 2025-09-26
         /// </summary>
         /// <example>2025-09-26</example>
@@ -47,8 +47,9 @@ namespace Vapi
         public required string DeprecationDate { get; set; }
 
         /// <summary>
-        /// Day the model is or was retired, `YYYY-MM-DD` in UTC. On and after this<br/>
-        /// day Vapi no longer runs the model as configured.<br/>
+        /// Registry effective retirement day, `YYYY-MM-DD` in UTC. An observation<br/>
+        /// may use an internal effective day; this field establishes neither an<br/>
+        /// announced vendor shutdown nor automatic replacement eligibility.<br/>
         /// Example: 2026-03-26
         /// </summary>
         /// <example>2026-03-26</example>
@@ -101,12 +102,13 @@ namespace Vapi
         /// Example: gpt-4-1106-preview
         /// </param>
         /// <param name="deprecationDate">
-        /// Day the model became deprecated, `YYYY-MM-DD` in UTC.<br/>
+        /// Registry effective deprecation day, `YYYY-MM-DD` in UTC.<br/>
         /// Example: 2025-09-26
         /// </param>
         /// <param name="retirementDate">
-        /// Day the model is or was retired, `YYYY-MM-DD` in UTC. On and after this<br/>
-        /// day Vapi no longer runs the model as configured.<br/>
+        /// Registry effective retirement day, `YYYY-MM-DD` in UTC. An observation<br/>
+        /// may use an internal effective day; this field establishes neither an<br/>
+        /// announced vendor shutdown nor automatic replacement eligibility.<br/>
         /// Example: 2026-03-26
         /// </param>
         /// <param name="replacementStatus">
