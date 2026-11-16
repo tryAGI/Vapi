@@ -19,8 +19,8 @@ namespace Vapi
         /// This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authenticationPlan")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AuthenticationPlan9JsonConverter))]
-        public global::Vapi.AuthenticationPlan9? AuthenticationPlan { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AuthenticationPlan4JsonConverter))]
+        public global::Vapi.AuthenticationPlan4? AuthenticationPlan { get; set; }
 
         /// <summary>
         /// This is the encryption plan for encrypting sensitive data. Currently supports public-key encryption.
@@ -58,7 +58,7 @@ namespace Vapi
 #endif
         public UpdateCustomCredentialDTO(
             global::Vapi.UpdateCustomCredentialDTOProvider? provider,
-            global::Vapi.AuthenticationPlan9? authenticationPlan,
+            global::Vapi.AuthenticationPlan4? authenticationPlan,
             global::Vapi.PublicKeyEncryptionPlan? encryptionPlan,
             string? name)
         {

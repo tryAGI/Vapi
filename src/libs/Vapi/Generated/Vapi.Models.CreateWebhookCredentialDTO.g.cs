@@ -19,9 +19,9 @@ namespace Vapi
         /// This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authenticationPlan")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AuthenticationPlan2JsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.AuthenticationPlan6JsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Vapi.AuthenticationPlan2 AuthenticationPlan { get; set; }
+        public required global::Vapi.AuthenticationPlan6 AuthenticationPlan { get; set; }
 
         /// <summary>
         /// This is the name of credential. This is just for your reference.
@@ -49,7 +49,7 @@ namespace Vapi
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateWebhookCredentialDTO(
-            global::Vapi.AuthenticationPlan2 authenticationPlan,
+            global::Vapi.AuthenticationPlan6 authenticationPlan,
             global::Vapi.CreateWebhookCredentialDTOProvider provider,
             string? name)
         {

@@ -12,7 +12,7 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.AssistantDraftCredentialDiscriminatorProvider? Provider { get; }
+        public global::Vapi.CreateAssistantDTOCredentialDiscriminatorProvider? Provider { get; }
 
         /// <summary>
         ///
@@ -3497,7 +3497,7 @@ namespace Vapi
         ///
         /// </summary>
         public CredentialsItem6(
-            global::Vapi.AssistantDraftCredentialDiscriminatorProvider? provider,
+            global::Vapi.CreateAssistantDTOCredentialDiscriminatorProvider? provider,
             global::Vapi.CreateAnthropicCredentialDTO? anthropic,
             global::Vapi.CreateAnthropicBedrockCredentialDTO? anthropicBedrock,
             global::Vapi.CreateAnyscaleCredentialDTO? anyscale,

@@ -42,7 +42,7 @@ namespace Vapi
         /// of the spoken language.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("languages")]
-        public global::System.Collections.Generic.IList<global::Vapi.VapiTranscriberLanguage2>? Languages { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.VapiTranscriberLanguage>? Languages { get; set; }
 
         /// <summary>
         /// These are custom keywords/vocabulary to boost recognition of use-case<br/>
@@ -104,7 +104,7 @@ namespace Vapi
             global::Vapi.VapiTranscriberProvider provider,
             global::Vapi.VapiTranscriberVersion? version,
             global::Vapi.VapiTranscriberLanguage? language,
-            global::System.Collections.Generic.IList<global::Vapi.VapiTranscriberLanguage2>? languages,
+            global::System.Collections.Generic.IList<global::Vapi.VapiTranscriberLanguage>? languages,
             global::System.Collections.Generic.IList<string>? keywords,
             global::Vapi.VapiTranscriberTurnTaking? turnTaking)
         {

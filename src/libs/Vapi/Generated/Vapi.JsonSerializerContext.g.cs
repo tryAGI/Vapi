@@ -177,17 +177,15 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberProvider), TypeInfoPropertyName = "GladiaTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberModel), TypeInfoPropertyName = "GladiaTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberLanguageBehaviour), TypeInfoPropertyName = "GladiaTranscriberLanguageBehaviour2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberLanguage), TypeInfoPropertyName = "GladiaTranscriberLanguage2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.GladiaTranscriberLanguage2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberLanguage2), TypeInfoPropertyName = "GladiaTranscriberLanguage22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberLanguage), TypeInfoPropertyName = "GladiaTranscriberLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.GladiaTranscriberLanguage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberRegion), TypeInfoPropertyName = "GladiaTranscriberRegion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxContextGeneralItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriber))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberProvider), TypeInfoPropertyName = "SonioxTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberModel), TypeInfoPropertyName = "SonioxTranscriberModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberLanguage), TypeInfoPropertyName = "SonioxTranscriberLanguage2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SonioxTranscriberLanguage2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberLanguage2), TypeInfoPropertyName = "SonioxTranscriberLanguage22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberLanguage), TypeInfoPropertyName = "SonioxTranscriberLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SonioxTranscriberLanguage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.SonioxContextGeneralItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SpeechmaticsCustomVocabularyItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SpeechmaticsTranscriber))]
@@ -221,9 +219,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriber))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberProvider), TypeInfoPropertyName = "VapiTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberVersion), TypeInfoPropertyName = "VapiTranscriberVersion2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberLanguage), TypeInfoPropertyName = "VapiTranscriberLanguage2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.VapiTranscriberLanguage2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberLanguage2), TypeInfoPropertyName = "VapiTranscriberLanguage22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberLanguage), TypeInfoPropertyName = "VapiTranscriberLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.VapiTranscriberLanguage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberTurnTaking), TypeInfoPropertyName = "VapiTranscriberTurnTaking2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackAssemblyAITranscriberProvider), TypeInfoPropertyName = "FallbackAssemblyAITranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackAssemblyAITranscriberLanguage), TypeInfoPropertyName = "FallbackAssemblyAITranscriberLanguage2")]
@@ -250,15 +247,13 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberProvider), TypeInfoPropertyName = "FallbackGladiaTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberModel), TypeInfoPropertyName = "FallbackGladiaTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberLanguageBehaviour), TypeInfoPropertyName = "FallbackGladiaTranscriberLanguageBehaviour2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberLanguage), TypeInfoPropertyName = "FallbackGladiaTranscriberLanguage2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.FallbackGladiaTranscriberLanguage2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberLanguage2), TypeInfoPropertyName = "FallbackGladiaTranscriberLanguage22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberLanguage), TypeInfoPropertyName = "FallbackGladiaTranscriberLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.FallbackGladiaTranscriberLanguage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberRegion), TypeInfoPropertyName = "FallbackGladiaTranscriberRegion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberProvider), TypeInfoPropertyName = "FallbackSonioxTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberModel), TypeInfoPropertyName = "FallbackSonioxTranscriberModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberLanguage), TypeInfoPropertyName = "FallbackSonioxTranscriberLanguage2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.FallbackSonioxTranscriberLanguage2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberLanguage2), TypeInfoPropertyName = "FallbackSonioxTranscriberLanguage22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberLanguage), TypeInfoPropertyName = "FallbackSonioxTranscriberLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.FallbackSonioxTranscriberLanguage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSpeechmaticsTranscriberProvider), TypeInfoPropertyName = "FallbackSpeechmaticsTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSpeechmaticsTranscriberModel), TypeInfoPropertyName = "FallbackSpeechmaticsTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSpeechmaticsTranscriberLanguage), TypeInfoPropertyName = "FallbackSpeechmaticsTranscriberLanguage2")]
@@ -513,6 +508,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransientAssistantDTOVoicemailDetection), TypeInfoPropertyName = "TransientAssistantDTOVoicemailDetection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GoogleVoicemailDetectionPlan))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OpenAIVoicemailDetectionPlan))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TwilioVoicemailDetectionPlan))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiVoicemailDetectionPlan))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TransientAssistantDTOClientMessage>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransientAssistantDTOClientMessage), TypeInfoPropertyName = "TransientAssistantDTOClientMessage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TransientAssistantDTOServerMessage>))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -614,18 +614,13 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TwilioVoicemailDetectionPlan))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiVoicemailDetectionPlan))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TransientAssistantDTOClientMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransientAssistantDTOClientMessage), TypeInfoPropertyName = "TransientAssistantDTOClientMessage2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TransientAssistantDTOServerMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransientAssistantDTOServerMessage), TypeInfoPropertyName = "TransientAssistantDTOServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.TransientAssistantDTOBackgroundSound?, string>), TypeInfoPropertyName = "OneOfTransientAssistantDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransientAssistantDTOBackgroundSound), TypeInfoPropertyName = "TransientAssistantDTOBackgroundSound2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TransportConfigurationTwilio>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransportConfigurationTwilio))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem), TypeInfoPropertyName = "CredentialsItem2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem9>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem9), TypeInfoPropertyName = "CredentialsItem92")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAnthropicCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAnthropicBedrockCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAnyscaleCredentialDTO))]
@@ -697,8 +692,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantOverridesServerMessage), TypeInfoPropertyName = "AssistantOverridesServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.AssistantOverridesBackgroundSound?, string>), TypeInfoPropertyName = "OneOfAssistantOverridesBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantOverridesBackgroundSound), TypeInfoPropertyName = "AssistantOverridesBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem2), TypeInfoPropertyName = "CredentialsItem22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem5>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem5), TypeInfoPropertyName = "CredentialsItem52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantOverridesCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantOverridesCredentialDiscriminatorProvider), TypeInfoPropertyName = "AssistantOverridesCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateApiRequestToolDTO))]
@@ -879,8 +874,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.ConversationNode, global::Vapi.ToolNode>), TypeInfoPropertyName = "OneOfConversationNodeToolNode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.WorkflowUserEditableBackgroundSound?, string>), TypeInfoPropertyName = "OneOfWorkflowUserEditableBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowUserEditableBackgroundSound), TypeInfoPropertyName = "WorkflowUserEditableBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem3>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem3), TypeInfoPropertyName = "CredentialsItem32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem8>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem8), TypeInfoPropertyName = "CredentialsItem82")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowUserEditableCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowUserEditableCredentialDiscriminatorProvider), TypeInfoPropertyName = "WorkflowUserEditableCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowUserEditableVoicemailDetection), TypeInfoPropertyName = "WorkflowUserEditableVoicemailDetection2")]
@@ -1023,6 +1018,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackLMNTVoiceProvider), TypeInfoPropertyName = "FallbackLMNTVoiceProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.FallbackLMNTVoiceVoiceId?, string>), TypeInfoPropertyName = "OneOfFallbackLMNTVoiceVoiceIdString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackLMNTVoiceVoiceId), TypeInfoPropertyName = "FallbackLMNTVoiceVoiceId2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackLMNTVoiceLanguage), TypeInfoPropertyName = "FallbackLMNTVoiceLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackNeuphonicVoiceProvider), TypeInfoPropertyName = "FallbackNeuphonicVoiceProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackNeuphonicVoiceModel), TypeInfoPropertyName = "FallbackNeuphonicVoiceModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackOpenAIVoiceProvider), TypeInfoPropertyName = "FallbackOpenAIVoiceProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AnyOf<global::Vapi.FallbackOpenAIVoiceVoiceId?, string>), TypeInfoPropertyName = "AnyOfFallbackOpenAIVoiceVoiceIdString2")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1124,11 +1124,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackLMNTVoiceLanguage), TypeInfoPropertyName = "FallbackLMNTVoiceLanguage2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackNeuphonicVoiceProvider), TypeInfoPropertyName = "FallbackNeuphonicVoiceProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackNeuphonicVoiceModel), TypeInfoPropertyName = "FallbackNeuphonicVoiceModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackOpenAIVoiceProvider), TypeInfoPropertyName = "FallbackOpenAIVoiceProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AnyOf<global::Vapi.FallbackOpenAIVoiceVoiceId?, string>), TypeInfoPropertyName = "AnyOfFallbackOpenAIVoiceVoiceIdString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackOpenAIVoiceVoiceId), TypeInfoPropertyName = "FallbackOpenAIVoiceVoiceId2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackOpenAIVoiceModel), TypeInfoPropertyName = "FallbackOpenAIVoiceModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackPlayHTVoiceProvider), TypeInfoPropertyName = "FallbackPlayHTVoiceProvider2")]
@@ -1223,7 +1218,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTwilioCredentialDTOProvider), TypeInfoPropertyName = "CreateTwilioCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateVonageCredentialDTOProvider), TypeInfoPropertyName = "CreateVonageCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWebhookCredentialDTOProvider), TypeInfoPropertyName = "CreateWebhookCredentialDTOProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan2), TypeInfoPropertyName = "AuthenticationPlan22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan6), TypeInfoPropertyName = "AuthenticationPlan62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.HMACAuthenticationPlan))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BearerAuthenticationPlan))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWebhookCredentialDTOAuthenticationPlanDiscriminator))]
@@ -1258,8 +1253,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDTOServerMessage), TypeInfoPropertyName = "CreateAssistantDTOServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.CreateAssistantDTOBackgroundSound?, string>), TypeInfoPropertyName = "OneOfCreateAssistantDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDTOBackgroundSound), TypeInfoPropertyName = "CreateAssistantDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem4>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem4), TypeInfoPropertyName = "CredentialsItem42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem6>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem6), TypeInfoPropertyName = "CredentialsItem62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDTOCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDTOCredentialDiscriminatorProvider), TypeInfoPropertyName = "CreateAssistantDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ModelDeprecationNotice))]
@@ -1273,8 +1268,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantServerMessage), TypeInfoPropertyName = "AssistantServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.AssistantBackgroundSound?, string>), TypeInfoPropertyName = "OneOfAssistantBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantBackgroundSound), TypeInfoPropertyName = "AssistantBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem5>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem5), TypeInfoPropertyName = "CredentialsItem52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem13>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem13), TypeInfoPropertyName = "CredentialsItem132")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantCredentialDiscriminatorProvider), TypeInfoPropertyName = "AssistantCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.ModelDeprecationNotice>))]
@@ -1295,8 +1290,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantDraftServerMessage), TypeInfoPropertyName = "AssistantDraftServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.AssistantDraftBackgroundSound?, string>), TypeInfoPropertyName = "OneOfAssistantDraftBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantDraftBackgroundSound), TypeInfoPropertyName = "AssistantDraftBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem6>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem6), TypeInfoPropertyName = "CredentialsItem62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem), TypeInfoPropertyName = "CredentialsItem2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantDraftCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantDraftCredentialDiscriminatorProvider), TypeInfoPropertyName = "AssistantDraftCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantDraftPaginatedMetadata))]
@@ -1314,8 +1309,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantVersionServerMessage), TypeInfoPropertyName = "AssistantVersionServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.AssistantVersionBackgroundSound?, string>), TypeInfoPropertyName = "OneOfAssistantVersionBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantVersionBackgroundSound), TypeInfoPropertyName = "AssistantVersionBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem7>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem7), TypeInfoPropertyName = "CredentialsItem72")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem2), TypeInfoPropertyName = "CredentialsItem22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantVersionCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantVersionCredentialDiscriminatorProvider), TypeInfoPropertyName = "AssistantVersionCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantVersionPaginatedMetadata))]
@@ -1331,8 +1326,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDraftDTOServerMessage), TypeInfoPropertyName = "CreateAssistantDraftDTOServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.CreateAssistantDraftDTOBackgroundSound?, string>), TypeInfoPropertyName = "OneOfCreateAssistantDraftDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDraftDTOBackgroundSound), TypeInfoPropertyName = "CreateAssistantDraftDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem8>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem8), TypeInfoPropertyName = "CredentialsItem82")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem10>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem10), TypeInfoPropertyName = "CredentialsItem102")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDraftDTOCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDraftDTOCredentialDiscriminatorProvider), TypeInfoPropertyName = "CreateAssistantDraftDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantDraftConflictResponseDTO))]
@@ -1345,8 +1340,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDraftDTOServerMessage), TypeInfoPropertyName = "UpdateAssistantDraftDTOServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.UpdateAssistantDraftDTOBackgroundSound?, string>), TypeInfoPropertyName = "OneOfUpdateAssistantDraftDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDraftDTOBackgroundSound), TypeInfoPropertyName = "UpdateAssistantDraftDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem9>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem9), TypeInfoPropertyName = "CredentialsItem92")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem11>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem11), TypeInfoPropertyName = "CredentialsItem112")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDraftDTOCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDraftDTOCredentialDiscriminatorProvider), TypeInfoPropertyName = "UpdateAssistantDraftDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDTO))]
@@ -1358,8 +1353,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDTOServerMessage), TypeInfoPropertyName = "UpdateAssistantDTOServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.UpdateAssistantDTOBackgroundSound?, string>), TypeInfoPropertyName = "OneOfUpdateAssistantDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDTOBackgroundSound), TypeInfoPropertyName = "UpdateAssistantDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem10>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem10), TypeInfoPropertyName = "CredentialsItem102")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem7>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem7), TypeInfoPropertyName = "CredentialsItem72")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDTOCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDTOCredentialDiscriminatorProvider), TypeInfoPropertyName = "UpdateAssistantDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantGoalErrorDTO))]
@@ -1375,24 +1370,24 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.Workflow))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.WorkflowBackgroundSound?, string>), TypeInfoPropertyName = "OneOfWorkflowBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowBackgroundSound), TypeInfoPropertyName = "WorkflowBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem11>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem11), TypeInfoPropertyName = "CredentialsItem112")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem12>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem12), TypeInfoPropertyName = "CredentialsItem122")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCredentialDiscriminatorProvider), TypeInfoPropertyName = "WorkflowCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowVoicemailDetection), TypeInfoPropertyName = "WorkflowVoicemailDetection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWorkflowDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.CreateWorkflowDTOBackgroundSound?, string>), TypeInfoPropertyName = "OneOfCreateWorkflowDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWorkflowDTOBackgroundSound), TypeInfoPropertyName = "CreateWorkflowDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem12>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem12), TypeInfoPropertyName = "CredentialsItem122")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem3>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem3), TypeInfoPropertyName = "CredentialsItem32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWorkflowDTOCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWorkflowDTOCredentialDiscriminatorProvider), TypeInfoPropertyName = "CreateWorkflowDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWorkflowDTOVoicemailDetection), TypeInfoPropertyName = "CreateWorkflowDTOVoicemailDetection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWorkflowDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.UpdateWorkflowDTOBackgroundSound?, string>), TypeInfoPropertyName = "OneOfUpdateWorkflowDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWorkflowDTOBackgroundSound), TypeInfoPropertyName = "UpdateWorkflowDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem13>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem13), TypeInfoPropertyName = "CredentialsItem132")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CredentialsItem4>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem4), TypeInfoPropertyName = "CredentialsItem42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWorkflowDTOCredentialDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWorkflowDTOCredentialDiscriminatorProvider), TypeInfoPropertyName = "UpdateWorkflowDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWorkflowDTOVoicemailDetection), TypeInfoPropertyName = "UpdateWorkflowDTOVoicemailDetection2")]
@@ -1535,6 +1530,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CreateCustomerDTO>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutputFilterDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallPaginatedResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateOutboundCallDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWebCallDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWebCallDTOVideoRecordingStartMode), TypeInfoPropertyName = "CreateWebCallDTOVideoRecordingStartMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCallDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeleteCallDTO))]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1636,11 +1636,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateOutboundCallDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWebCallDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWebCallDTOVideoRecordingStartMode), TypeInfoPropertyName = "CreateWebCallDTOVideoRecordingStartMode2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCallDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeleteCallDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardApiErrorDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardAssistantReferenceDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardGoalDefinitionDTO))]
@@ -2045,6 +2040,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomKnowledgeBase))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomKnowledgeBaseProvider), TypeInfoPropertyName = "CustomKnowledgeBaseProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomKnowledgeBaseDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomKnowledgeBaseDTOProvider), TypeInfoPropertyName = "UpdateCustomKnowledgeBaseDTOProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateKnowledgeBaseV2DTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.KnowledgeBaseV2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.KnowledgeBaseV2File))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.KnowledgeBaseV2FileStatus), TypeInfoPropertyName = "KnowledgeBaseV2FileStatus2")]
     internal sealed partial class SourceGenerationContextChunk3 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -2146,11 +2146,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomKnowledgeBaseDTOProvider), TypeInfoPropertyName = "UpdateCustomKnowledgeBaseDTOProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateKnowledgeBaseV2DTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.KnowledgeBaseV2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.KnowledgeBaseV2File))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.KnowledgeBaseV2FileStatus), TypeInfoPropertyName = "KnowledgeBaseV2FileStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AttachKnowledgeBaseV2FileDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateKnowledgeBaseV2DTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.KnowledgeBaseV2WithFiles))]
@@ -2555,6 +2550,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardAffectedCallDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardAffectedCallDTOCallAvailability), TypeInfoPropertyName = "CallHealthDashboardAffectedCallDTOCallAvailability2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardAffectedCallsResponseDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CallHealthDashboardAffectedCallDTO>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardTriageRequestDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardTriageRequestDTOAction), TypeInfoPropertyName = "CallHealthDashboardTriageRequestDTOAction2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardIssueReferenceDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardIssueReferenceDTOStatus), TypeInfoPropertyName = "CallHealthDashboardIssueReferenceDTOStatus2")]
     internal sealed partial class SourceGenerationContextChunk4 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -2656,11 +2656,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CallHealthDashboardAffectedCallDTO>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardTriageRequestDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardTriageRequestDTOAction), TypeInfoPropertyName = "CallHealthDashboardTriageRequestDTOAction2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardIssueReferenceDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardIssueReferenceDTOStatus), TypeInfoPropertyName = "CallHealthDashboardIssueReferenceDTOStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardIssueActivityDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardIssueActivityDTOAction), TypeInfoPropertyName = "CallHealthDashboardIssueActivityDTOAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardIssueActivityListResponseDTO))]
@@ -2809,7 +2804,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VonageCredentialProvider), TypeInfoPropertyName = "VonageCredentialProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WebhookCredential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WebhookCredentialProvider), TypeInfoPropertyName = "WebhookCredentialProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan4), TypeInfoPropertyName = "AuthenticationPlan42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan2), TypeInfoPropertyName = "AuthenticationPlan22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WebhookCredentialAuthenticationPlanDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WebhookCredentialAuthenticationPlanDiscriminatorType), TypeInfoPropertyName = "WebhookCredentialAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SpkiPemPublicKeyConfig))]
@@ -2821,7 +2816,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PublicKeyEncryptionPlanPublicKeyDiscriminatorFormat), TypeInfoPropertyName = "PublicKeyEncryptionPlanPublicKeyDiscriminatorFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialProvider), TypeInfoPropertyName = "CustomCredentialProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan5), TypeInfoPropertyName = "AuthenticationPlan52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan), TypeInfoPropertyName = "AuthenticationPlan2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialAuthenticationPlanDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialAuthenticationPlanDiscriminatorType), TypeInfoPropertyName = "CustomCredentialAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialEncryptionPlanDiscriminator))]
@@ -2857,7 +2852,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateSonioxCredentialDTOProvider), TypeInfoPropertyName = "CreateSonioxCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateSpeechmaticsCredentialDTOProvider), TypeInfoPropertyName = "CreateSpeechmaticsCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOProvider), TypeInfoPropertyName = "CreateCustomCredentialDTOProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan6), TypeInfoPropertyName = "AuthenticationPlan62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan3), TypeInfoPropertyName = "AuthenticationPlan32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType), TypeInfoPropertyName = "CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOEncryptionPlanDiscriminator))]
@@ -2956,12 +2951,12 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateVonageCredentialDTOProvider), TypeInfoPropertyName = "UpdateVonageCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWebhookCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWebhookCredentialDTOProvider), TypeInfoPropertyName = "UpdateWebhookCredentialDTOProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan8), TypeInfoPropertyName = "AuthenticationPlan82")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan7), TypeInfoPropertyName = "AuthenticationPlan72")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorType), TypeInfoPropertyName = "UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomCredentialDTO))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomCredentialDTOProvider), TypeInfoPropertyName = "UpdateCustomCredentialDTOProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan9), TypeInfoPropertyName = "AuthenticationPlan92")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan4), TypeInfoPropertyName = "AuthenticationPlan42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomCredentialDTOAuthenticationPlanDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomCredentialDTOAuthenticationPlanDiscriminatorType), TypeInfoPropertyName = "UpdateCustomCredentialDTOAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomCredentialDTOEncryptionPlanDiscriminator))]
@@ -3065,6 +3060,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GuardrailPackImpact))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GuardrailPackSnapshot))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SaveGuardrailPackDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GuardrailPackConflictResponseDTO))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GuardrailPackConflictResponseDTOError), TypeInfoPropertyName = "GuardrailPackConflictResponseDTOError2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GuardrailPacksPage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.GuardrailPack>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CartesiaPronunciationDictItem))]
     internal sealed partial class SourceGenerationContextChunk5 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -3166,11 +3166,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GuardrailPackConflictResponseDTO))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GuardrailPackConflictResponseDTOError), TypeInfoPropertyName = "GuardrailPackConflictResponseDTOError2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GuardrailPacksPage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.GuardrailPack>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CartesiaPronunciationDictItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CartesiaPronunciationDictionary))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.CartesiaPronunciationDictItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsPronunciationDictionary))]
@@ -3575,6 +3570,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomTranscriberProvider?), TypeInfoPropertyName = "NullableCustomTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeepgramTranscriberProvider?), TypeInfoPropertyName = "NullableDeepgramTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.DeepgramTranscriberModel?, string>?), TypeInfoPropertyName = "NullableOneOfDeepgramTranscriberModelString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeepgramTranscriberModel?), TypeInfoPropertyName = "NullableDeepgramTranscriberModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeepgramTranscriberLanguage?), TypeInfoPropertyName = "NullableDeepgramTranscriberLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeepgramTranscriberRedactionItem?), TypeInfoPropertyName = "NullableDeepgramTranscriberRedactionItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsTranscriberProvider?), TypeInfoPropertyName = "NullableElevenLabsTranscriberProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsTranscriberModel?), TypeInfoPropertyName = "NullableElevenLabsTranscriberModel2")]
     internal sealed partial class SourceGenerationContextChunk6 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -3676,23 +3676,16 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeepgramTranscriberModel?), TypeInfoPropertyName = "NullableDeepgramTranscriberModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeepgramTranscriberLanguage?), TypeInfoPropertyName = "NullableDeepgramTranscriberLanguage2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.DeepgramTranscriberRedactionItem?), TypeInfoPropertyName = "NullableDeepgramTranscriberRedactionItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsTranscriberProvider?), TypeInfoPropertyName = "NullableElevenLabsTranscriberProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsTranscriberModel?), TypeInfoPropertyName = "NullableElevenLabsTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ElevenLabsTranscriberLanguage?), TypeInfoPropertyName = "NullableElevenLabsTranscriberLanguage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<string, global::Vapi.GladiaVocabularyItemDTO>?), TypeInfoPropertyName = "NullableOneOfStringGladiaVocabularyItemDTO2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberProvider?), TypeInfoPropertyName = "NullableGladiaTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberModel?), TypeInfoPropertyName = "NullableGladiaTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberLanguageBehaviour?), TypeInfoPropertyName = "NullableGladiaTranscriberLanguageBehaviour2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberLanguage?), TypeInfoPropertyName = "NullableGladiaTranscriberLanguage2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberLanguage2?), TypeInfoPropertyName = "NullableGladiaTranscriberLanguage22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberLanguage?), TypeInfoPropertyName = "NullableGladiaTranscriberLanguage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.GladiaTranscriberRegion?), TypeInfoPropertyName = "NullableGladiaTranscriberRegion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberProvider?), TypeInfoPropertyName = "NullableSonioxTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberModel?), TypeInfoPropertyName = "NullableSonioxTranscriberModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberLanguage?), TypeInfoPropertyName = "NullableSonioxTranscriberLanguage2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberLanguage2?), TypeInfoPropertyName = "NullableSonioxTranscriberLanguage22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SonioxTranscriberLanguage?), TypeInfoPropertyName = "NullableSonioxTranscriberLanguage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SpeechmaticsTranscriberProvider?), TypeInfoPropertyName = "NullableSpeechmaticsTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SpeechmaticsTranscriberModel?), TypeInfoPropertyName = "NullableSpeechmaticsTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SpeechmaticsTranscriberLanguage?), TypeInfoPropertyName = "NullableSpeechmaticsTranscriberLanguage2")]
@@ -3716,8 +3709,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.Reson8TranscriberFillerMode?), TypeInfoPropertyName = "NullableReson8TranscriberFillerMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberProvider?), TypeInfoPropertyName = "NullableVapiTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberVersion?), TypeInfoPropertyName = "NullableVapiTranscriberVersion2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberLanguage?), TypeInfoPropertyName = "NullableVapiTranscriberLanguage2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberLanguage2?), TypeInfoPropertyName = "NullableVapiTranscriberLanguage22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberLanguage?), TypeInfoPropertyName = "NullableVapiTranscriberLanguage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiTranscriberTurnTaking?), TypeInfoPropertyName = "NullableVapiTranscriberTurnTaking2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackAssemblyAITranscriberProvider?), TypeInfoPropertyName = "NullableFallbackAssemblyAITranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackAssemblyAITranscriberLanguage?), TypeInfoPropertyName = "NullableFallbackAssemblyAITranscriberLanguage2")]
@@ -3742,13 +3734,11 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberProvider?), TypeInfoPropertyName = "NullableFallbackGladiaTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberModel?), TypeInfoPropertyName = "NullableFallbackGladiaTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberLanguageBehaviour?), TypeInfoPropertyName = "NullableFallbackGladiaTranscriberLanguageBehaviour2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberLanguage?), TypeInfoPropertyName = "NullableFallbackGladiaTranscriberLanguage2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberLanguage2?), TypeInfoPropertyName = "NullableFallbackGladiaTranscriberLanguage22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberLanguage?), TypeInfoPropertyName = "NullableFallbackGladiaTranscriberLanguage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackGladiaTranscriberRegion?), TypeInfoPropertyName = "NullableFallbackGladiaTranscriberRegion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberProvider?), TypeInfoPropertyName = "NullableFallbackSonioxTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberModel?), TypeInfoPropertyName = "NullableFallbackSonioxTranscriberModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberLanguage?), TypeInfoPropertyName = "NullableFallbackSonioxTranscriberLanguage2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberLanguage2?), TypeInfoPropertyName = "NullableFallbackSonioxTranscriberLanguage22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSonioxTranscriberLanguage?), TypeInfoPropertyName = "NullableFallbackSonioxTranscriberLanguage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSpeechmaticsTranscriberProvider?), TypeInfoPropertyName = "NullableFallbackSpeechmaticsTranscriberProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSpeechmaticsTranscriberModel?), TypeInfoPropertyName = "NullableFallbackSpeechmaticsTranscriberModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSpeechmaticsTranscriberLanguage?), TypeInfoPropertyName = "NullableFallbackSpeechmaticsTranscriberLanguage2")]
@@ -3858,7 +3848,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransientAssistantDTOServerMessage?), TypeInfoPropertyName = "NullableTransientAssistantDTOServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.TransientAssistantDTOBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfTransientAssistantDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransientAssistantDTOBackgroundSound?), TypeInfoPropertyName = "NullableTransientAssistantDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem?), TypeInfoPropertyName = "NullableCredentialsItem2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem9?), TypeInfoPropertyName = "NullableCredentialsItem92")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TransientAssistantDTOCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableTransientAssistantDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantOverridesFirstMessageMode?), TypeInfoPropertyName = "NullableAssistantOverridesFirstMessageMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantOverridesVoicemailDetection?), TypeInfoPropertyName = "NullableAssistantOverridesVoicemailDetection2")]
@@ -3866,7 +3856,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantOverridesServerMessage?), TypeInfoPropertyName = "NullableAssistantOverridesServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.AssistantOverridesBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfAssistantOverridesBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantOverridesBackgroundSound?), TypeInfoPropertyName = "NullableAssistantOverridesBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem2?), TypeInfoPropertyName = "NullableCredentialsItem22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem5?), TypeInfoPropertyName = "NullableCredentialsItem52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantOverridesCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableAssistantOverridesCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.HandoffDestinationAssistantType?), TypeInfoPropertyName = "NullableHandoffDestinationAssistantType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.HandoffDestinationDynamicType?), TypeInfoPropertyName = "NullableHandoffDestinationDynamicType2")]
@@ -3971,7 +3961,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.ConversationNode, global::Vapi.ToolNode>?), TypeInfoPropertyName = "NullableOneOfConversationNodeToolNode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.WorkflowUserEditableBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfWorkflowUserEditableBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowUserEditableBackgroundSound?), TypeInfoPropertyName = "NullableWorkflowUserEditableBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem3?), TypeInfoPropertyName = "NullableCredentialsItem32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem8?), TypeInfoPropertyName = "NullableCredentialsItem82")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowUserEditableCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableWorkflowUserEditableCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowUserEditableVoicemailDetection?), TypeInfoPropertyName = "NullableWorkflowUserEditableVoicemailDetection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VapiModelProvider?), TypeInfoPropertyName = "NullableVapiModelProvider2")]
@@ -4087,6 +4077,16 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackOpenAIVoiceModel?), TypeInfoPropertyName = "NullableFallbackOpenAIVoiceModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackPlayHTVoiceProvider?), TypeInfoPropertyName = "NullableFallbackPlayHTVoiceProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.FallbackPlayHTVoiceVoiceId?, string>?), TypeInfoPropertyName = "NullableOneOfFallbackPlayHTVoiceVoiceIdString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackPlayHTVoiceVoiceId?), TypeInfoPropertyName = "NullableFallbackPlayHTVoiceVoiceId2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackPlayHTVoiceEmotion?), TypeInfoPropertyName = "NullableFallbackPlayHTVoiceEmotion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackPlayHTVoiceModel?), TypeInfoPropertyName = "NullableFallbackPlayHTVoiceModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackPlayHTVoiceLanguage?), TypeInfoPropertyName = "NullableFallbackPlayHTVoiceLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackRimeAIVoiceProvider?), TypeInfoPropertyName = "NullableFallbackRimeAIVoiceProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.FallbackRimeAIVoiceVoiceId?, string>?), TypeInfoPropertyName = "NullableOneOfFallbackRimeAIVoiceVoiceIdString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackRimeAIVoiceVoiceId?), TypeInfoPropertyName = "NullableFallbackRimeAIVoiceVoiceId2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackRimeAIVoiceModel?), TypeInfoPropertyName = "NullableFallbackRimeAIVoiceModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackRimeAIVoiceLanguage?), TypeInfoPropertyName = "NullableFallbackRimeAIVoiceLanguage2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSesameVoiceProvider?), TypeInfoPropertyName = "NullableFallbackSesameVoiceProvider2")]
     internal sealed partial class SourceGenerationContextChunk7 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -4188,16 +4188,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackPlayHTVoiceVoiceId?), TypeInfoPropertyName = "NullableFallbackPlayHTVoiceVoiceId2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackPlayHTVoiceEmotion?), TypeInfoPropertyName = "NullableFallbackPlayHTVoiceEmotion2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackPlayHTVoiceModel?), TypeInfoPropertyName = "NullableFallbackPlayHTVoiceModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackPlayHTVoiceLanguage?), TypeInfoPropertyName = "NullableFallbackPlayHTVoiceLanguage2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackRimeAIVoiceProvider?), TypeInfoPropertyName = "NullableFallbackRimeAIVoiceProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.FallbackRimeAIVoiceVoiceId?, string>?), TypeInfoPropertyName = "NullableOneOfFallbackRimeAIVoiceVoiceIdString2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackRimeAIVoiceVoiceId?), TypeInfoPropertyName = "NullableFallbackRimeAIVoiceVoiceId2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackRimeAIVoiceModel?), TypeInfoPropertyName = "NullableFallbackRimeAIVoiceModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackRimeAIVoiceLanguage?), TypeInfoPropertyName = "NullableFallbackRimeAIVoiceLanguage2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSesameVoiceProvider?), TypeInfoPropertyName = "NullableFallbackSesameVoiceProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSesameVoiceModel?), TypeInfoPropertyName = "NullableFallbackSesameVoiceModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.FallbackSmallestAIVoiceProvider?), TypeInfoPropertyName = "NullableFallbackSmallestAIVoiceProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.FallbackSmallestAIVoiceVoiceId?, string>?), TypeInfoPropertyName = "NullableOneOfFallbackSmallestAIVoiceVoiceIdString2")]
@@ -4265,7 +4255,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTwilioCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateTwilioCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateVonageCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateVonageCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWebhookCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateWebhookCredentialDTOProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan2?), TypeInfoPropertyName = "NullableAuthenticationPlan22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan6?), TypeInfoPropertyName = "NullableAuthenticationPlan62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWebhookCredentialDTOAuthenticationPlanDiscriminatorType?), TypeInfoPropertyName = "NullableCreateWebhookCredentialDTOAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateXAiCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateXAiCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateGoogleCalendarOAuth2ClientCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateGoogleCalendarOAuth2ClientCredentialDTOProvider2")]
@@ -4286,7 +4276,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDTOServerMessage?), TypeInfoPropertyName = "NullableCreateAssistantDTOServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.CreateAssistantDTOBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfCreateAssistantDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDTOBackgroundSound?), TypeInfoPropertyName = "NullableCreateAssistantDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem4?), TypeInfoPropertyName = "NullableCredentialsItem42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem6?), TypeInfoPropertyName = "NullableCredentialsItem62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDTOCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableCreateAssistantDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ModelDeprecationNoticeReplacementStatus?), TypeInfoPropertyName = "NullableModelDeprecationNoticeReplacementStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantFirstMessageMode?), TypeInfoPropertyName = "NullableAssistantFirstMessageMode2")]
@@ -4295,7 +4285,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantServerMessage?), TypeInfoPropertyName = "NullableAssistantServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.AssistantBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfAssistantBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantBackgroundSound?), TypeInfoPropertyName = "NullableAssistantBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem5?), TypeInfoPropertyName = "NullableCredentialsItem52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem13?), TypeInfoPropertyName = "NullableCredentialsItem132")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableAssistantCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.BackgroundSoundUrlValidationResultReason?), TypeInfoPropertyName = "NullableBackgroundSoundUrlValidationResultReason2")]
@@ -4306,7 +4296,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantDraftServerMessage?), TypeInfoPropertyName = "NullableAssistantDraftServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.AssistantDraftBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfAssistantDraftBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantDraftBackgroundSound?), TypeInfoPropertyName = "NullableAssistantDraftBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem6?), TypeInfoPropertyName = "NullableCredentialsItem62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem?), TypeInfoPropertyName = "NullableCredentialsItem2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantDraftCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableAssistantDraftCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantVersionFirstMessageMode?), TypeInfoPropertyName = "NullableAssistantVersionFirstMessageMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantVersionVoicemailDetection?), TypeInfoPropertyName = "NullableAssistantVersionVoicemailDetection2")]
@@ -4314,7 +4304,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantVersionServerMessage?), TypeInfoPropertyName = "NullableAssistantVersionServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.AssistantVersionBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfAssistantVersionBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantVersionBackgroundSound?), TypeInfoPropertyName = "NullableAssistantVersionBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem7?), TypeInfoPropertyName = "NullableCredentialsItem72")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem2?), TypeInfoPropertyName = "NullableCredentialsItem22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AssistantVersionCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableAssistantVersionCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDraftDTOFirstMessageMode?), TypeInfoPropertyName = "NullableCreateAssistantDraftDTOFirstMessageMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDraftDTOVoicemailDetection?), TypeInfoPropertyName = "NullableCreateAssistantDraftDTOVoicemailDetection2")]
@@ -4322,7 +4312,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDraftDTOServerMessage?), TypeInfoPropertyName = "NullableCreateAssistantDraftDTOServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.CreateAssistantDraftDTOBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfCreateAssistantDraftDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDraftDTOBackgroundSound?), TypeInfoPropertyName = "NullableCreateAssistantDraftDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem8?), TypeInfoPropertyName = "NullableCredentialsItem82")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem10?), TypeInfoPropertyName = "NullableCredentialsItem102")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateAssistantDraftDTOCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableCreateAssistantDraftDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDraftDTOFirstMessageMode?), TypeInfoPropertyName = "NullableUpdateAssistantDraftDTOFirstMessageMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDraftDTOVoicemailDetection?), TypeInfoPropertyName = "NullableUpdateAssistantDraftDTOVoicemailDetection2")]
@@ -4330,7 +4320,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDraftDTOServerMessage?), TypeInfoPropertyName = "NullableUpdateAssistantDraftDTOServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.UpdateAssistantDraftDTOBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfUpdateAssistantDraftDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDraftDTOBackgroundSound?), TypeInfoPropertyName = "NullableUpdateAssistantDraftDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem9?), TypeInfoPropertyName = "NullableCredentialsItem92")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem11?), TypeInfoPropertyName = "NullableCredentialsItem112")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDraftDTOCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableUpdateAssistantDraftDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDTOFirstMessageMode?), TypeInfoPropertyName = "NullableUpdateAssistantDTOFirstMessageMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDTOVoicemailDetection?), TypeInfoPropertyName = "NullableUpdateAssistantDTOVoicemailDetection2")]
@@ -4338,21 +4328,21 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDTOServerMessage?), TypeInfoPropertyName = "NullableUpdateAssistantDTOServerMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.UpdateAssistantDTOBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfUpdateAssistantDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDTOBackgroundSound?), TypeInfoPropertyName = "NullableUpdateAssistantDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem10?), TypeInfoPropertyName = "NullableCredentialsItem102")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem7?), TypeInfoPropertyName = "NullableCredentialsItem72")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateAssistantDTOCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableUpdateAssistantDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.WorkflowBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfWorkflowBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowBackgroundSound?), TypeInfoPropertyName = "NullableWorkflowBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem11?), TypeInfoPropertyName = "NullableCredentialsItem112")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem12?), TypeInfoPropertyName = "NullableCredentialsItem122")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableWorkflowCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WorkflowVoicemailDetection?), TypeInfoPropertyName = "NullableWorkflowVoicemailDetection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.CreateWorkflowDTOBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfCreateWorkflowDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWorkflowDTOBackgroundSound?), TypeInfoPropertyName = "NullableCreateWorkflowDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem12?), TypeInfoPropertyName = "NullableCredentialsItem122")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem3?), TypeInfoPropertyName = "NullableCredentialsItem32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWorkflowDTOCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableCreateWorkflowDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateWorkflowDTOVoicemailDetection?), TypeInfoPropertyName = "NullableCreateWorkflowDTOVoicemailDetection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.UpdateWorkflowDTOBackgroundSound?, string>?), TypeInfoPropertyName = "NullableOneOfUpdateWorkflowDTOBackgroundSoundString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWorkflowDTOBackgroundSound?), TypeInfoPropertyName = "NullableUpdateWorkflowDTOBackgroundSound2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem13?), TypeInfoPropertyName = "NullableCredentialsItem132")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CredentialsItem4?), TypeInfoPropertyName = "NullableCredentialsItem42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWorkflowDTOCredentialDiscriminatorProvider?), TypeInfoPropertyName = "NullableUpdateWorkflowDTOCredentialDiscriminatorProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWorkflowDTOVoicemailDetection?), TypeInfoPropertyName = "NullableUpdateWorkflowDTOVoicemailDetection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UserMessageConfidenceSource?), TypeInfoPropertyName = "NullableUserMessageConfidenceSource2")]
@@ -4599,6 +4589,16 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomKnowledgeBaseDTOProvider?), TypeInfoPropertyName = "NullableUpdateCustomKnowledgeBaseDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.KnowledgeBaseV2FileStatus?), TypeInfoPropertyName = "NullableKnowledgeBaseV2FileStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardIssueCoverageDTOState?), TypeInfoPropertyName = "NullableCallHealthDashboardIssueCoverageDTOState2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardIssueSummaryDTOStatus?), TypeInfoPropertyName = "NullableCallHealthDashboardIssueSummaryDTOStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardFacetsDTOStatuse?), TypeInfoPropertyName = "NullableCallHealthDashboardFacetsDTOStatuse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutputType?), TypeInfoPropertyName = "NullableStructuredOutputType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateStructuredOutputDTOType?), TypeInfoPropertyName = "NullableUpdateStructuredOutputDTOType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TestSuitePhoneNumberProvider?), TypeInfoPropertyName = "NullableTestSuitePhoneNumberProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TestSuiteTestVoiceType?), TypeInfoPropertyName = "NullableTestSuiteTestVoiceType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TestSuiteTestChatType?), TypeInfoPropertyName = "NullableTestSuiteTestChatType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTestSuiteTestVoiceDtoType?), TypeInfoPropertyName = "NullableCreateTestSuiteTestVoiceDtoType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTestSuiteTestChatDtoType?), TypeInfoPropertyName = "NullableCreateTestSuiteTestChatDtoType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateTestSuiteTestVoiceDtoType?), TypeInfoPropertyName = "NullableUpdateTestSuiteTestVoiceDtoType2")]
     internal sealed partial class SourceGenerationContextChunk8 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -4700,16 +4700,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardIssueSummaryDTOStatus?), TypeInfoPropertyName = "NullableCallHealthDashboardIssueSummaryDTOStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CallHealthDashboardFacetsDTOStatuse?), TypeInfoPropertyName = "NullableCallHealthDashboardFacetsDTOStatuse2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutputType?), TypeInfoPropertyName = "NullableStructuredOutputType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateStructuredOutputDTOType?), TypeInfoPropertyName = "NullableUpdateStructuredOutputDTOType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TestSuitePhoneNumberProvider?), TypeInfoPropertyName = "NullableTestSuitePhoneNumberProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TestSuiteTestVoiceType?), TypeInfoPropertyName = "NullableTestSuiteTestVoiceType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TestSuiteTestChatType?), TypeInfoPropertyName = "NullableTestSuiteTestChatType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTestSuiteTestVoiceDtoType?), TypeInfoPropertyName = "NullableCreateTestSuiteTestVoiceDtoType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateTestSuiteTestChatDtoType?), TypeInfoPropertyName = "NullableCreateTestSuiteTestChatDtoType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateTestSuiteTestVoiceDtoType?), TypeInfoPropertyName = "NullableUpdateTestSuiteTestVoiceDtoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateTestSuiteTestChatDtoType?), TypeInfoPropertyName = "NullableUpdateTestSuiteTestChatDtoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TestSuiteTestScorerAIType?), TypeInfoPropertyName = "NullableTestSuiteTestScorerAIType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::Vapi.TestSuiteTestVoice, global::Vapi.TestSuiteTestChat>?), TypeInfoPropertyName = "NullableOneOfTestSuiteTestVoiceTestSuiteTestChat2")]
@@ -4929,14 +4919,14 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TwilioCredentialProvider?), TypeInfoPropertyName = "NullableTwilioCredentialProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.VonageCredentialProvider?), TypeInfoPropertyName = "NullableVonageCredentialProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WebhookCredentialProvider?), TypeInfoPropertyName = "NullableWebhookCredentialProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan4?), TypeInfoPropertyName = "NullableAuthenticationPlan42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan2?), TypeInfoPropertyName = "NullableAuthenticationPlan22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.WebhookCredentialAuthenticationPlanDiscriminatorType?), TypeInfoPropertyName = "NullableWebhookCredentialAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SpkiPemPublicKeyConfigFormat?), TypeInfoPropertyName = "NullableSpkiPemPublicKeyConfigFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PublicKeyEncryptionPlanType?), TypeInfoPropertyName = "NullablePublicKeyEncryptionPlanType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PublicKeyEncryptionPlanAlgorithm?), TypeInfoPropertyName = "NullablePublicKeyEncryptionPlanAlgorithm2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.PublicKeyEncryptionPlanPublicKeyDiscriminatorFormat?), TypeInfoPropertyName = "NullablePublicKeyEncryptionPlanPublicKeyDiscriminatorFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialProvider?), TypeInfoPropertyName = "NullableCustomCredentialProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan5?), TypeInfoPropertyName = "NullableAuthenticationPlan52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan?), TypeInfoPropertyName = "NullableAuthenticationPlan2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialAuthenticationPlanDiscriminatorType?), TypeInfoPropertyName = "NullableCustomCredentialAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CustomCredentialEncryptionPlanDiscriminatorType?), TypeInfoPropertyName = "NullableCustomCredentialEncryptionPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.XAiCredentialProvider?), TypeInfoPropertyName = "NullableXAiCredentialProvider2")]
@@ -4961,7 +4951,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateSonioxCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateSonioxCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateSpeechmaticsCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateSpeechmaticsCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateCustomCredentialDTOProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan6?), TypeInfoPropertyName = "NullableAuthenticationPlan62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan3?), TypeInfoPropertyName = "NullableAuthenticationPlan32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType?), TypeInfoPropertyName = "NullableCreateCustomCredentialDTOAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateCustomCredentialDTOEncryptionPlanDiscriminatorType?), TypeInfoPropertyName = "NullableCreateCustomCredentialDTOEncryptionPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.CreateGoHighLevelMCPCredentialDTOProvider?), TypeInfoPropertyName = "NullableCreateGoHighLevelMCPCredentialDTOProvider2")]
@@ -5015,10 +5005,10 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateTwilioCredentialDTOProvider?), TypeInfoPropertyName = "NullableUpdateTwilioCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateVonageCredentialDTOProvider?), TypeInfoPropertyName = "NullableUpdateVonageCredentialDTOProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWebhookCredentialDTOProvider?), TypeInfoPropertyName = "NullableUpdateWebhookCredentialDTOProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan8?), TypeInfoPropertyName = "NullableAuthenticationPlan82")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan7?), TypeInfoPropertyName = "NullableAuthenticationPlan72")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorType?), TypeInfoPropertyName = "NullableUpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomCredentialDTOProvider?), TypeInfoPropertyName = "NullableUpdateCustomCredentialDTOProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan9?), TypeInfoPropertyName = "NullableAuthenticationPlan92")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.AuthenticationPlan4?), TypeInfoPropertyName = "NullableAuthenticationPlan42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomCredentialDTOAuthenticationPlanDiscriminatorType?), TypeInfoPropertyName = "NullableUpdateCustomCredentialDTOAuthenticationPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateCustomCredentialDTOEncryptionPlanDiscriminatorType?), TypeInfoPropertyName = "NullableUpdateCustomCredentialDTOEncryptionPlanDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.UpdateXAiCredentialDTOProvider?), TypeInfoPropertyName = "NullableUpdateXAiCredentialDTOProvider2")]
@@ -5109,6 +5099,16 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientMessageSessionUpdatedType?), TypeInfoPropertyName = "NullableClientMessageSessionUpdatedType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientMessageSessionDeletedType?), TypeInfoPropertyName = "NullableClientMessageSessionDeletedType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientMessageCallDeletedType?), TypeInfoPropertyName = "NullableClientMessageCallDeletedType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientMessageCallDeleteFailedType?), TypeInfoPropertyName = "NullableClientMessageCallDeleteFailedType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageAssistantRequestType?), TypeInfoPropertyName = "NullableServerMessageAssistantRequestType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageConversationUpdateType?), TypeInfoPropertyName = "NullableServerMessageConversationUpdateType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageEndOfCallReportType?), TypeInfoPropertyName = "NullableServerMessageEndOfCallReportType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageEndOfCallReportEndedReason?), TypeInfoPropertyName = "NullableServerMessageEndOfCallReportEndedReason2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageHandoffDestinationRequestType?), TypeInfoPropertyName = "NullableServerMessageHandoffDestinationRequestType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageHangType?), TypeInfoPropertyName = "NullableServerMessageHangType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageKnowledgeBaseRequestType?), TypeInfoPropertyName = "NullableServerMessageKnowledgeBaseRequestType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageModelOutputType?), TypeInfoPropertyName = "NullableServerMessageModelOutputType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessagePhoneCallControlType?), TypeInfoPropertyName = "NullableServerMessagePhoneCallControlType2")]
     internal sealed partial class SourceGenerationContextChunk9 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -5210,16 +5210,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ClientMessageCallDeleteFailedType?), TypeInfoPropertyName = "NullableClientMessageCallDeleteFailedType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageAssistantRequestType?), TypeInfoPropertyName = "NullableServerMessageAssistantRequestType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageConversationUpdateType?), TypeInfoPropertyName = "NullableServerMessageConversationUpdateType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageEndOfCallReportType?), TypeInfoPropertyName = "NullableServerMessageEndOfCallReportType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageEndOfCallReportEndedReason?), TypeInfoPropertyName = "NullableServerMessageEndOfCallReportEndedReason2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageHandoffDestinationRequestType?), TypeInfoPropertyName = "NullableServerMessageHandoffDestinationRequestType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageHangType?), TypeInfoPropertyName = "NullableServerMessageHangType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageKnowledgeBaseRequestType?), TypeInfoPropertyName = "NullableServerMessageKnowledgeBaseRequestType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageModelOutputType?), TypeInfoPropertyName = "NullableServerMessageModelOutputType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessagePhoneCallControlType?), TypeInfoPropertyName = "NullableServerMessagePhoneCallControlType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessagePhoneCallControlRequest?), TypeInfoPropertyName = "NullableServerMessagePhoneCallControlRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageSpeechUpdateType?), TypeInfoPropertyName = "NullableServerMessageSpeechUpdateType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.ServerMessageSpeechUpdateStatus?), TypeInfoPropertyName = "NullableServerMessageSpeechUpdateStatus2")]
@@ -5408,15 +5398,15 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.DeepgramTranscriberRedactionItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<string, global::Vapi.GladiaVocabularyItemDTO>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.GladiaTranscriberLanguage2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SonioxTranscriberLanguage2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.GladiaTranscriberLanguage>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SonioxTranscriberLanguage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SonioxContextGeneralItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SpeechmaticsCustomVocabularyItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.VapiTranscriberLanguage2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.VapiTranscriberLanguage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.FallbackAssemblyAITranscriberLanguageCode>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.FallbackDeepgramTranscriberRedactionItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.FallbackGladiaTranscriberLanguage2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.FallbackSonioxTranscriberLanguage2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.FallbackGladiaTranscriberLanguage>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.FallbackSonioxTranscriberLanguage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TextContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Condition>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.RegexCondition, global::Vapi.LiquidCondition, global::Vapi.GroupCondition>>))]
@@ -5436,10 +5426,10 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TransientAssistantDTOClientMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TransientAssistantDTOServerMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TransportConfigurationTwilio>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem9>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantOverridesClientMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantOverridesServerMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem5>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.TransferDestinationAssistant, global::Vapi.HandoffDestinationAssistant>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SquadMemberDTO>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.HandoffDestinationAssistant, global::Vapi.HandoffDestinationDynamic, global::Vapi.HandoffDestinationSquad>>))]
@@ -5460,7 +5450,7 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CallHookFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.SayHookAction, global::Vapi.ToolCallHookAction, global::Vapi.MessageAddHookAction>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ConversationNode, global::Vapi.ToolNode>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem3>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem8>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Edge>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ExactReplacement, global::Vapi.RegexReplacement>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.FormatPlanFormattersEnabledItem>))]
@@ -5472,34 +5462,34 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ToolCallHookAction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CreateAssistantDTOClientMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CreateAssistantDTOServerMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem4>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem6>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantClientMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantServerMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem5>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem13>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ModelDeprecationNotice>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Assistant>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantDraftClientMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantDraftServerMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem6>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantDraft>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.LegacyAssistantVersion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantVersionClientMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantVersionServerMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem7>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem2>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AssistantVersion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CreateAssistantDraftDTOClientMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CreateAssistantDraftDTOServerMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem8>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem10>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.UpdateAssistantDraftDTOClientMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.UpdateAssistantDraftDTOServerMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem9>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem11>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.UpdateAssistantDTOClientMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.UpdateAssistantDTOServerMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem10>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem7>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SquadVersion>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem11>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem12>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem13>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem3>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CredentialsItem4>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TranscriptWordConfidence>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ToolCallResultMessageWarning>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ModelCostServiceTierBreakdown>))]
@@ -5619,6 +5609,16 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.KnowledgeBaseResponseDocument>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ToolCallResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.CampaignControllerGetCampaignV2ContactsStatu>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Squad>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberControllerFindAllResponseItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ToolControllerFindAllResponseItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.KnowledgeBaseV2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Personality>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Scenario>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.List<global::Vapi.SimulationRun>, global::Vapi.SimulationRunsPaginatedResponse>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationRun>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.List<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.List<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>))]
     internal sealed partial class SourceGenerationContextChunk10 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -5720,16 +5720,6 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FilterStringTypeColumnOnCallTable, global::Vapi.FilterStringArrayTypeColumnOnCallTable, global::Vapi.FilterNumberTypeColumnOnCallTable, global::Vapi.FilterNumberArrayTypeColumnOnCallTable, global::Vapi.FilterDateTypeColumnOnCallTable, global::Vapi.FilterStructuredOutputColumnOnCallTable>>), TypeInfoPropertyName = "FilterStructuredOutputColumnOnCallTable_514172078c50ed6e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.ChatEvalAssistantMessageMock, global::Vapi.ChatEvalSystemMessageMock, global::Vapi.ChatEvalToolResponseMessageMock, global::Vapi.ChatEvalToolResponseMessageEvaluation, global::Vapi.ChatEvalUserMessageMock, global::Vapi.ChatEvalAssistantMessageEvaluation>>), TypeInfoPropertyName = "ChatEvalAssistantMessageEvaluation_e520bbe5e5889e56")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.FunctionToolWithToolCall, global::Vapi.GhlToolWithToolCall, global::Vapi.MakeToolWithToolCall, global::Vapi.BashToolWithToolCall, global::Vapi.ComputerToolWithToolCall, global::Vapi.TextEditorToolWithToolCall, global::Vapi.GoogleCalendarCreateEventToolWithToolCall>>), TypeInfoPropertyName = "GoogleCalendarCreateEventToolWithToolCall_4ee6ec9da9c1f25a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Squad>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.PhoneNumberControllerFindAllResponseItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.ToolControllerFindAllResponseItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.KnowledgeBaseV2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Personality>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Scenario>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.List<global::Vapi.SimulationRun>, global::Vapi.SimulationRunsPaginatedResponse>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationRun>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.List<global::Vapi.SimulationRunItem>, global::Vapi.SimulationRunItemsPaginatedResponse>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.OneOf<global::System.Collections.Generic.List<global::Vapi.SimulationSuite>, global::Vapi.SimulationSuitesPaginatedResponse>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.Simulation>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.AnalyticsQueryResult>))]
     internal sealed partial class SourceGenerationContextChunk11 : global::System.Text.Json.Serialization.JsonSerializerContext
@@ -5770,25 +5760,25 @@ namespace Vapi
                 internal static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
             options.Converters.Add(new global::Vapi.JsonConverters.RecordingConsentPlanJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem9JsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem5JsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem8JsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlan6JsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem6JsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem13JsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItemJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem2JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem3JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlan2JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem4JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem5JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem6JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem7JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem8JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem9JsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem10JsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem11JsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem7JsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem12JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem13JsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem3JsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.CredentialsItem4JsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlan2JsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlanJsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlan3JsonConverter());
+            options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlan7JsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlan4JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlan5JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlan6JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlan8JsonConverter());
-            options.Converters.Add(new global::Vapi.JsonConverters.AuthenticationPlan9JsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.TimingJsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.Timing2JsonConverter());
             options.Converters.Add(new global::Vapi.JsonConverters.PhoneNumberControllerCreateRequestJsonConverter());
@@ -6446,10 +6436,6 @@ namespace Vapi
 
                     || typeToConvert == typeof(global::Vapi.GladiaTranscriberLanguage?)
 
-                    || typeToConvert == typeof(global::Vapi.GladiaTranscriberLanguage2)
-
-                    || typeToConvert == typeof(global::Vapi.GladiaTranscriberLanguage2?)
-
                     || typeToConvert == typeof(global::Vapi.GladiaTranscriberRegion)
 
                     || typeToConvert == typeof(global::Vapi.GladiaTranscriberRegion?)
@@ -6465,10 +6451,6 @@ namespace Vapi
                     || typeToConvert == typeof(global::Vapi.SonioxTranscriberLanguage)
 
                     || typeToConvert == typeof(global::Vapi.SonioxTranscriberLanguage?)
-
-                    || typeToConvert == typeof(global::Vapi.SonioxTranscriberLanguage2)
-
-                    || typeToConvert == typeof(global::Vapi.SonioxTranscriberLanguage2?)
 
                     || typeToConvert == typeof(global::Vapi.SpeechmaticsTranscriberProvider)
 
@@ -6566,10 +6548,6 @@ namespace Vapi
 
                     || typeToConvert == typeof(global::Vapi.VapiTranscriberLanguage?)
 
-                    || typeToConvert == typeof(global::Vapi.VapiTranscriberLanguage2)
-
-                    || typeToConvert == typeof(global::Vapi.VapiTranscriberLanguage2?)
-
                     || typeToConvert == typeof(global::Vapi.VapiTranscriberTurnTaking)
 
                     || typeToConvert == typeof(global::Vapi.VapiTranscriberTurnTaking?)
@@ -6666,10 +6644,6 @@ namespace Vapi
 
                     || typeToConvert == typeof(global::Vapi.FallbackGladiaTranscriberLanguage?)
 
-                    || typeToConvert == typeof(global::Vapi.FallbackGladiaTranscriberLanguage2)
-
-                    || typeToConvert == typeof(global::Vapi.FallbackGladiaTranscriberLanguage2?)
-
                     || typeToConvert == typeof(global::Vapi.FallbackGladiaTranscriberRegion)
 
                     || typeToConvert == typeof(global::Vapi.FallbackGladiaTranscriberRegion?)
@@ -6685,10 +6659,6 @@ namespace Vapi
                     || typeToConvert == typeof(global::Vapi.FallbackSonioxTranscriberLanguage)
 
                     || typeToConvert == typeof(global::Vapi.FallbackSonioxTranscriberLanguage?)
-
-                    || typeToConvert == typeof(global::Vapi.FallbackSonioxTranscriberLanguage2)
-
-                    || typeToConvert == typeof(global::Vapi.FallbackSonioxTranscriberLanguage2?)
 
                     || typeToConvert == typeof(global::Vapi.FallbackSpeechmaticsTranscriberProvider)
 
@@ -11791,16 +11761,6 @@ namespace Vapi
                     return new global::Vapi.JsonConverters.GladiaTranscriberLanguageNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.GladiaTranscriberLanguage2))
-                {
-                    return new global::Vapi.JsonConverters.GladiaTranscriberLanguage2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.GladiaTranscriberLanguage2?))
-                {
-                    return new global::Vapi.JsonConverters.GladiaTranscriberLanguage2NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Vapi.GladiaTranscriberRegion))
                 {
                     return new global::Vapi.JsonConverters.GladiaTranscriberRegionJsonConverter();
@@ -11839,16 +11799,6 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.SonioxTranscriberLanguage?))
                 {
                     return new global::Vapi.JsonConverters.SonioxTranscriberLanguageNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.SonioxTranscriberLanguage2))
-                {
-                    return new global::Vapi.JsonConverters.SonioxTranscriberLanguage2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.SonioxTranscriberLanguage2?))
-                {
-                    return new global::Vapi.JsonConverters.SonioxTranscriberLanguage2NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Vapi.SpeechmaticsTranscriberProvider))
@@ -12091,16 +12041,6 @@ namespace Vapi
                     return new global::Vapi.JsonConverters.VapiTranscriberLanguageNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.VapiTranscriberLanguage2))
-                {
-                    return new global::Vapi.JsonConverters.VapiTranscriberLanguage2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.VapiTranscriberLanguage2?))
-                {
-                    return new global::Vapi.JsonConverters.VapiTranscriberLanguage2NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Vapi.VapiTranscriberTurnTaking))
                 {
                     return new global::Vapi.JsonConverters.VapiTranscriberTurnTakingJsonConverter();
@@ -12341,16 +12281,6 @@ namespace Vapi
                     return new global::Vapi.JsonConverters.FallbackGladiaTranscriberLanguageNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Vapi.FallbackGladiaTranscriberLanguage2))
-                {
-                    return new global::Vapi.JsonConverters.FallbackGladiaTranscriberLanguage2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.FallbackGladiaTranscriberLanguage2?))
-                {
-                    return new global::Vapi.JsonConverters.FallbackGladiaTranscriberLanguage2NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Vapi.FallbackGladiaTranscriberRegion))
                 {
                     return new global::Vapi.JsonConverters.FallbackGladiaTranscriberRegionJsonConverter();
@@ -12389,16 +12319,6 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.FallbackSonioxTranscriberLanguage?))
                 {
                     return new global::Vapi.JsonConverters.FallbackSonioxTranscriberLanguageNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.FallbackSonioxTranscriberLanguage2))
-                {
-                    return new global::Vapi.JsonConverters.FallbackSonioxTranscriberLanguage2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Vapi.FallbackSonioxTranscriberLanguage2?))
-                {
-                    return new global::Vapi.JsonConverters.FallbackSonioxTranscriberLanguage2NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Vapi.FallbackSpeechmaticsTranscriberProvider))
