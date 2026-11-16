@@ -17,26 +17,26 @@ namespace Vapi.JsonConverters
 
 
             var readerCopy = reader;
-            var discriminatorTypeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminator), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminator> ??
-                            throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminator)}");
+            var discriminatorTypeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.CreateWebhookCredentialDTOAuthenticationPlanDiscriminator), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.CreateWebhookCredentialDTOAuthenticationPlanDiscriminator> ??
+                            throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.CreateWebhookCredentialDTOAuthenticationPlanDiscriminator)}");
             var discriminator = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, discriminatorTypeInfo);
 
             global::Vapi.OAuth2AuthenticationPlan? oauth2 = default;
-            if (discriminator?.Type == global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType.Oauth2)
+            if (discriminator?.Type == global::Vapi.CreateWebhookCredentialDTOAuthenticationPlanDiscriminatorType.Oauth2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.OAuth2AuthenticationPlan), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.OAuth2AuthenticationPlan> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.OAuth2AuthenticationPlan)}");
                 oauth2 = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.HMACAuthenticationPlan? hmac = default;
-            if (discriminator?.Type == global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType.Hmac)
+            if (discriminator?.Type == global::Vapi.CreateWebhookCredentialDTOAuthenticationPlanDiscriminatorType.Hmac)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.HMACAuthenticationPlan), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.HMACAuthenticationPlan> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.HMACAuthenticationPlan)}");
                 hmac = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::Vapi.BearerAuthenticationPlan? bearer = default;
-            if (discriminator?.Type == global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType.Bearer)
+            if (discriminator?.Type == global::Vapi.CreateWebhookCredentialDTOAuthenticationPlanDiscriminatorType.Bearer)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Vapi.BearerAuthenticationPlan), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Vapi.BearerAuthenticationPlan> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Vapi.BearerAuthenticationPlan)}");

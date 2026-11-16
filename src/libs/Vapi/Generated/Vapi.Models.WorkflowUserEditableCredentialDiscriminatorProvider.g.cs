@@ -11,6 +11,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        x11labs,
+        /// <summary>
+        ///
+        /// </summary>
         Anthropic,
         /// <summary>
         ///
@@ -254,6 +258,7 @@ namespace Vapi
         {
             return value switch
             {
+                WorkflowUserEditableCredentialDiscriminatorProvider.x11labs => "11labs",
                 WorkflowUserEditableCredentialDiscriminatorProvider.Anthropic => "anthropic",
                 WorkflowUserEditableCredentialDiscriminatorProvider.AnthropicBedrock => "anthropic-bedrock",
                 WorkflowUserEditableCredentialDiscriminatorProvider.Anyscale => "anyscale",
@@ -322,6 +327,7 @@ namespace Vapi
         {
             return value switch
             {
+                "11labs" => WorkflowUserEditableCredentialDiscriminatorProvider.x11labs,
                 "anthropic" => WorkflowUserEditableCredentialDiscriminatorProvider.Anthropic,
                 "anthropic-bedrock" => WorkflowUserEditableCredentialDiscriminatorProvider.AnthropicBedrock,
                 "anyscale" => WorkflowUserEditableCredentialDiscriminatorProvider.Anyscale,

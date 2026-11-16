@@ -4,10 +4,10 @@
 namespace Vapi.JsonConverters
 {
     /// <inheritdoc />
-    public class AuthenticationPlan5JsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.AuthenticationPlan5>
+    public class AuthenticationPlanJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Vapi.AuthenticationPlan>
     {
         /// <inheritdoc />
-        public override global::Vapi.AuthenticationPlan5 Read(
+        public override global::Vapi.AuthenticationPlan Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -43,7 +43,7 @@ namespace Vapi.JsonConverters
                 bearer = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
 
-            var __value = new global::Vapi.AuthenticationPlan5(
+            var __value = new global::Vapi.AuthenticationPlan(
                 discriminator?.Type,
                 oauth2,
 
@@ -58,7 +58,7 @@ namespace Vapi.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Vapi.AuthenticationPlan5 value,
+            global::Vapi.AuthenticationPlan value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));

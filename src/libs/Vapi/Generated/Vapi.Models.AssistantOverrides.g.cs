@@ -126,7 +126,7 @@ namespace Vapi
         /// These are dynamic credentials that will be used for the assistant calls. By default, all the credentials are available for use in the call but you can supplement an additional credentials using this. Dynamic credentials override existing credentials.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("credentials")]
-        public global::System.Collections.Generic.IList<global::Vapi.CredentialsItem2>? Credentials { get; set; }
+        public global::System.Collections.Generic.IList<global::Vapi.CredentialsItem5>? Credentials { get; set; }
 
         /// <summary>
         /// This is a set of actions that will be performed on certain events.
@@ -437,7 +437,7 @@ namespace Vapi
             bool? modelOutputInMessagesEnabled,
             global::System.Collections.Generic.IList<global::Vapi.TransportConfigurationTwilio>? transportConfigurations,
             global::Vapi.LangfuseObservabilityPlan? observabilityPlan,
-            global::System.Collections.Generic.IList<global::Vapi.CredentialsItem2>? credentials,
+            global::System.Collections.Generic.IList<global::Vapi.CredentialsItem5>? credentials,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CallHookCallEnding, global::Vapi.CallHookAssistantSpeechInterrupted, global::Vapi.CallHookCustomerSpeechInterrupted, global::Vapi.CallHookCustomerSpeechTimeout, global::Vapi.SessionCreatedHook>>? hooks,
             global::System.Collections.Generic.IList<global::Vapi.OneOf<global::Vapi.CreateApiRequestToolDTO, global::Vapi.CreateBashToolDTO, global::Vapi.CreateCodeToolDTO, global::Vapi.CreateComputerToolDTO, global::Vapi.CreateDtmfToolDTO, global::Vapi.CreateEndCallToolDTO, global::Vapi.CreateFunctionToolDTO, global::Vapi.CreateGoHighLevelCalendarAvailabilityToolDTO, global::Vapi.CreateGoHighLevelCalendarEventCreateToolDTO, global::Vapi.CreateGoHighLevelContactCreateToolDTO, global::Vapi.CreateGoHighLevelContactGetToolDTO, global::Vapi.CreateGoogleCalendarCheckAvailabilityToolDTO, global::Vapi.CreateGoogleCalendarCreateEventToolDTO, global::Vapi.CreateGoogleSheetsRowAppendToolDTO, global::Vapi.CreateHandoffToolDTO, global::Vapi.CreateMcpToolDTO, global::Vapi.CreateQueryToolDTO, global::Vapi.CreateSlackSendMessageToolDTO, global::Vapi.CreateSmsToolDTO, global::Vapi.CreateTextEditorToolDTO, global::Vapi.CreateTransferCallToolDTO, global::Vapi.CreateSipRequestToolDTO, global::Vapi.CreateVoicemailToolDTO>>? tools_append,
             object? variableValues,

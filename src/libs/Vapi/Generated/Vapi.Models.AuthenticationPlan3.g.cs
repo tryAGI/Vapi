@@ -7,12 +7,12 @@ namespace Vapi
     /// <summary>
     /// This is the authentication plan. Supports OAuth2 RFC 6749, HMAC signing, and Bearer authentication.
     /// </summary>
-    public readonly partial struct AuthenticationPlan8 : global::System.IEquatable<AuthenticationPlan8>
+    public readonly partial struct AuthenticationPlan3 : global::System.IEquatable<AuthenticationPlan3>
     {
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorType? Type { get; }
+        public global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType? Type { get; }
 
         /// <summary>
         ///
@@ -127,17 +127,17 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator AuthenticationPlan8(global::Vapi.OAuth2AuthenticationPlan value) => new AuthenticationPlan8((global::Vapi.OAuth2AuthenticationPlan?)value);
+        public static implicit operator AuthenticationPlan3(global::Vapi.OAuth2AuthenticationPlan value) => new AuthenticationPlan3((global::Vapi.OAuth2AuthenticationPlan?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Vapi.OAuth2AuthenticationPlan?(AuthenticationPlan8 @this) => @this.Oauth2;
+        public static implicit operator global::Vapi.OAuth2AuthenticationPlan?(AuthenticationPlan3 @this) => @this.Oauth2;
 
         /// <summary>
         ///
         /// </summary>
-        public AuthenticationPlan8(global::Vapi.OAuth2AuthenticationPlan? value)
+        public AuthenticationPlan3(global::Vapi.OAuth2AuthenticationPlan? value)
         {
             Oauth2 = value;
         }
@@ -145,22 +145,22 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static AuthenticationPlan8 FromOauth2(global::Vapi.OAuth2AuthenticationPlan? value) => new AuthenticationPlan8(value);
+        public static AuthenticationPlan3 FromOauth2(global::Vapi.OAuth2AuthenticationPlan? value) => new AuthenticationPlan3(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator AuthenticationPlan8(global::Vapi.HMACAuthenticationPlan value) => new AuthenticationPlan8((global::Vapi.HMACAuthenticationPlan?)value);
+        public static implicit operator AuthenticationPlan3(global::Vapi.HMACAuthenticationPlan value) => new AuthenticationPlan3((global::Vapi.HMACAuthenticationPlan?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Vapi.HMACAuthenticationPlan?(AuthenticationPlan8 @this) => @this.Hmac;
+        public static implicit operator global::Vapi.HMACAuthenticationPlan?(AuthenticationPlan3 @this) => @this.Hmac;
 
         /// <summary>
         ///
         /// </summary>
-        public AuthenticationPlan8(global::Vapi.HMACAuthenticationPlan? value)
+        public AuthenticationPlan3(global::Vapi.HMACAuthenticationPlan? value)
         {
             Hmac = value;
         }
@@ -168,22 +168,22 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static AuthenticationPlan8 FromHmac(global::Vapi.HMACAuthenticationPlan? value) => new AuthenticationPlan8(value);
+        public static AuthenticationPlan3 FromHmac(global::Vapi.HMACAuthenticationPlan? value) => new AuthenticationPlan3(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator AuthenticationPlan8(global::Vapi.BearerAuthenticationPlan value) => new AuthenticationPlan8((global::Vapi.BearerAuthenticationPlan?)value);
+        public static implicit operator AuthenticationPlan3(global::Vapi.BearerAuthenticationPlan value) => new AuthenticationPlan3((global::Vapi.BearerAuthenticationPlan?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Vapi.BearerAuthenticationPlan?(AuthenticationPlan8 @this) => @this.Bearer;
+        public static implicit operator global::Vapi.BearerAuthenticationPlan?(AuthenticationPlan3 @this) => @this.Bearer;
 
         /// <summary>
         ///
         /// </summary>
-        public AuthenticationPlan8(global::Vapi.BearerAuthenticationPlan? value)
+        public AuthenticationPlan3(global::Vapi.BearerAuthenticationPlan? value)
         {
             Bearer = value;
         }
@@ -191,13 +191,13 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static AuthenticationPlan8 FromBearer(global::Vapi.BearerAuthenticationPlan? value) => new AuthenticationPlan8(value);
+        public static AuthenticationPlan3 FromBearer(global::Vapi.BearerAuthenticationPlan? value) => new AuthenticationPlan3(value);
 
         /// <summary>
         ///
         /// </summary>
-        public AuthenticationPlan8(
-            global::Vapi.UpdateWebhookCredentialDTOAuthenticationPlanDiscriminatorType? type,
+        public AuthenticationPlan3(
+            global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType? type,
             global::Vapi.OAuth2AuthenticationPlan? oauth2,
             global::Vapi.HMACAuthenticationPlan? hmac,
             global::Vapi.BearerAuthenticationPlan? bearer
@@ -350,7 +350,7 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public bool Equals(AuthenticationPlan8 other)
+        public bool Equals(AuthenticationPlan3 other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Vapi.OAuth2AuthenticationPlan?>.Default.Equals(Oauth2, other.Oauth2) &&
@@ -362,15 +362,15 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public static bool operator ==(AuthenticationPlan8 obj1, AuthenticationPlan8 obj2)
+        public static bool operator ==(AuthenticationPlan3 obj1, AuthenticationPlan3 obj2)
         {
-            return global::System.Collections.Generic.EqualityComparer<AuthenticationPlan8>.Default.Equals(obj1, obj2);
+            return global::System.Collections.Generic.EqualityComparer<AuthenticationPlan3>.Default.Equals(obj1, obj2);
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static bool operator !=(AuthenticationPlan8 obj1, AuthenticationPlan8 obj2)
+        public static bool operator !=(AuthenticationPlan3 obj1, AuthenticationPlan3 obj2)
         {
             return !(obj1 == obj2);
         }
@@ -380,7 +380,7 @@ namespace Vapi
         /// </summary>
         public override bool Equals(object? obj)
         {
-            return obj is AuthenticationPlan8 o && Equals(o);
+            return obj is AuthenticationPlan3 o && Equals(o);
         }
     }
 }

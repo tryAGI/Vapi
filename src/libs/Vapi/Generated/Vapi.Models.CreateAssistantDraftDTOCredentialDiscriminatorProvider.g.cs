@@ -11,6 +11,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        x11labs,
+        /// <summary>
+        ///
+        /// </summary>
         Anthropic,
         /// <summary>
         ///
@@ -254,6 +258,7 @@ namespace Vapi
         {
             return value switch
             {
+                CreateAssistantDraftDTOCredentialDiscriminatorProvider.x11labs => "11labs",
                 CreateAssistantDraftDTOCredentialDiscriminatorProvider.Anthropic => "anthropic",
                 CreateAssistantDraftDTOCredentialDiscriminatorProvider.AnthropicBedrock => "anthropic-bedrock",
                 CreateAssistantDraftDTOCredentialDiscriminatorProvider.Anyscale => "anyscale",
@@ -322,6 +327,7 @@ namespace Vapi
         {
             return value switch
             {
+                "11labs" => CreateAssistantDraftDTOCredentialDiscriminatorProvider.x11labs,
                 "anthropic" => CreateAssistantDraftDTOCredentialDiscriminatorProvider.Anthropic,
                 "anthropic-bedrock" => CreateAssistantDraftDTOCredentialDiscriminatorProvider.AnthropicBedrock,
                 "anyscale" => CreateAssistantDraftDTOCredentialDiscriminatorProvider.Anyscale,

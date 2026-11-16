@@ -12,7 +12,7 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
-        public global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType? Type { get; }
+        public global::Vapi.CreateWebhookCredentialDTOAuthenticationPlanDiscriminatorType? Type { get; }
 
         /// <summary>
         ///
@@ -197,7 +197,7 @@ namespace Vapi
         ///
         /// </summary>
         public AuthenticationPlan6(
-            global::Vapi.CreateCustomCredentialDTOAuthenticationPlanDiscriminatorType? type,
+            global::Vapi.CreateWebhookCredentialDTOAuthenticationPlanDiscriminatorType? type,
             global::Vapi.OAuth2AuthenticationPlan? oauth2,
             global::Vapi.HMACAuthenticationPlan? hmac,
             global::Vapi.BearerAuthenticationPlan? bearer
