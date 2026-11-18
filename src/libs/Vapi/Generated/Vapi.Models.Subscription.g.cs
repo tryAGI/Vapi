@@ -291,6 +291,23 @@ namespace Vapi
         public global::Vapi.SubscriptionBillingCollectionMethod? BillingCollectionMethod { get; set; }
 
         /// <summary>
+        /// This is when the current or most recent demo on this subscription started,<br/>
+        /// either when Vapi created the account as a demo or when Vapi made an<br/>
+        /// existing pay-as-you-go account one. Not set if it was never a demo.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("demoStartedAt")]
+        public global::System.DateTime? DemoStartedAt { get; set; }
+
+        /// <summary>
+        /// This is when that demo ended, by an upgrade or by Vapi. Not set while the<br/>
+        /// demo is active, and cleared when an ended demo starts again. A demo is<br/>
+        /// active while `demoStartedAt` is set, this is not, and the subscription is<br/>
+        /// pay-as-you-go.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("demoEndedAt")]
+        public global::System.DateTime? DemoEndedAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -439,6 +456,17 @@ namespace Vapi
         /// This is how payment is collected for the subscription: charged to the card<br/>
         /// on file, or invoiced.
         /// </param>
+        /// <param name="demoStartedAt">
+        /// This is when the current or most recent demo on this subscription started,<br/>
+        /// either when Vapi created the account as a demo or when Vapi made an<br/>
+        /// existing pay-as-you-go account one. Not set if it was never a demo.
+        /// </param>
+        /// <param name="demoEndedAt">
+        /// This is when that demo ended, by an upgrade or by Vapi. Not set while the<br/>
+        /// demo is active, and cleared when an ended demo starts again. A demo is<br/>
+        /// active while `demoStartedAt` is set, this is not, and the subscription is<br/>
+        /// pay-as-you-go.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -485,7 +513,9 @@ namespace Vapi
             global::Vapi.SubscriptionMinutesIncludedResetFrequency? minutesIncludedResetFrequency,
             bool? rbacEnabled,
             double? platformFee,
-            global::Vapi.SubscriptionBillingCollectionMethod? billingCollectionMethod)
+            global::Vapi.SubscriptionBillingCollectionMethod? billingCollectionMethod,
+            global::System.DateTime? demoStartedAt,
+            global::System.DateTime? demoEndedAt)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
@@ -530,6 +560,8 @@ namespace Vapi
             this.RbacEnabled = rbacEnabled;
             this.PlatformFee = platformFee;
             this.BillingCollectionMethod = billingCollectionMethod;
+            this.DemoStartedAt = demoStartedAt;
+            this.DemoEndedAt = demoEndedAt;
         }
 
         /// <summary>

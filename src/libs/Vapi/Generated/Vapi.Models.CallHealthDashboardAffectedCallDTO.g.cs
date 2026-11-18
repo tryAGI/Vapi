@@ -38,6 +38,18 @@ namespace Vapi
         public required global::Vapi.CallHealthDashboardAffectedCallDTOCallAvailability CallAvailability { get; set; }
 
         /// <summary>
+        /// The assistant version the call ran on; absent when it ran on none.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersionId")]
+        public global::System.Guid? AssistantVersionId { get; set; }
+
+        /// <summary>
+        /// That version's label, such as v3; absent when the call ran on none or the label was unavailable at registration.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
+        public string? AssistantVersion { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -52,6 +64,12 @@ namespace Vapi
         /// Call completion time (endedAt), never startedAt.
         /// </param>
         /// <param name="callAvailability"></param>
+        /// <param name="assistantVersionId">
+        /// The assistant version the call ran on; absent when it ran on none.
+        /// </param>
+        /// <param name="assistantVersion">
+        /// That version's label, such as v3; absent when the call ran on none or the label was unavailable at registration.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -59,12 +77,16 @@ namespace Vapi
             global::System.Guid callId,
             global::System.Guid assistantId,
             global::System.DateTime callTime,
-            global::Vapi.CallHealthDashboardAffectedCallDTOCallAvailability callAvailability)
+            global::Vapi.CallHealthDashboardAffectedCallDTOCallAvailability callAvailability,
+            global::System.Guid? assistantVersionId,
+            string? assistantVersion)
         {
             this.CallId = callId;
             this.AssistantId = assistantId;
             this.CallTime = callTime;
             this.CallAvailability = callAvailability;
+            this.AssistantVersionId = assistantVersionId;
+            this.AssistantVersion = assistantVersion;
         }
 
         /// <summary>

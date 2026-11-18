@@ -53,7 +53,8 @@ namespace Vapi
         /// Evaluated instructions, generated from authoring or supplied in advanced mode.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("instructions")]
-        public string? Instructions { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Instructions { get; set; }
 
         /// <summary>
         /// Evaluation sensitivity; numeric cutoffs are internal and provisional.
@@ -85,6 +86,9 @@ namespace Vapi
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
         /// <param name="name"></param>
+        /// <param name="instructions">
+        /// Evaluated instructions, generated from authoring or supplied in advanced mode.
+        /// </param>
         /// <param name="sensitivity">
         /// Evaluation sensitivity; numeric cutoffs are internal and provisional.
         /// </param>
@@ -93,9 +97,6 @@ namespace Vapi
         /// </param>
         /// <param name="authoring">
         /// Structured editor input. Supplied PATCH authoring replaces the complete object; advanced text writes clear it to null.
-        /// </param>
-        /// <param name="instructions">
-        /// Evaluated instructions, generated from authoring or supplied in advanced mode.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -106,10 +107,10 @@ namespace Vapi
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             string name,
+            string instructions,
             global::Vapi.GuardrailRuleSensitivity sensitivity,
             global::Vapi.OneOf<global::Vapi.OneOf<global::Vapi.GuardrailFixedResponseAction, global::Vapi.GuardrailRedirectAction>?, global::Vapi.GuardrailEscalateAction> action,
-            global::Vapi.GuardrailAuthoring? authoring,
-            string? instructions)
+            global::Vapi.GuardrailAuthoring? authoring)
         {
             this.Id = id;
             this.OrgId = orgId;
@@ -117,7 +118,7 @@ namespace Vapi
             this.UpdatedAt = updatedAt;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Authoring = authoring;
-            this.Instructions = instructions;
+            this.Instructions = instructions ?? throw new global::System.ArgumentNullException(nameof(instructions));
             this.Sensitivity = sensitivity;
             this.Action = action;
         }
