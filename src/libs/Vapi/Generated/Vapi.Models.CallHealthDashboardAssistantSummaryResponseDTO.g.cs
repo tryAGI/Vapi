@@ -30,7 +30,7 @@ namespace Vapi
         public required global::Vapi.CallHealthDashboardGoalSummaryDTO Goal { get; set; }
 
         /// <summary>
-        /// One ascending contiguous page of UTC dates, including empty buckets.
+        /// One ascending contiguous page of dates in the requested time zone, including empty buckets.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("results")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -76,7 +76,7 @@ namespace Vapi
         /// Window totals for the selected goal, including zero-result assistants.
         /// </param>
         /// <param name="results">
-        /// One ascending contiguous page of UTC dates, including empty buckets.
+        /// One ascending contiguous page of dates in the requested time zone, including empty buckets.
         /// </param>
         /// <param name="seriesPage"></param>
         /// <param name="coverage">

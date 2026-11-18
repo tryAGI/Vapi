@@ -45,6 +45,13 @@ namespace Vapi
         public required global::System.Guid GoalId { get; set; }
 
         /// <summary>
+        /// The ranking category the issue belongs to, such as `step_skipped`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("categoryKey")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string CategoryKey { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
@@ -79,7 +86,7 @@ namespace Vapi
         public double? AffectedCallRate { get; set; }
 
         /// <summary>
-        /// One ascending contiguous page of UTC buckets; memberships across issues are not unique calls.
+        /// One ascending contiguous page of daily buckets in the requested time zone; memberships across issues are not unique calls.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dailySeries")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -121,6 +128,9 @@ namespace Vapi
         /// <param name="goalId">
         /// Owning goal identity; issue-ID routes derive this selection from the issue.
         /// </param>
+        /// <param name="categoryKey">
+        /// The ranking category the issue belongs to, such as `step_skipped`.
+        /// </param>
         /// <param name="summary"></param>
         /// <param name="assistant"></param>
         /// <param name="affectedCallCount"></param>
@@ -128,7 +138,7 @@ namespace Vapi
         /// Same assistant/current-goal/window denominator used by the goal reads.
         /// </param>
         /// <param name="dailySeries">
-        /// One ascending contiguous page of UTC buckets; memberships across issues are not unique calls.
+        /// One ascending contiguous page of daily buckets in the requested time zone; memberships across issues are not unique calls.
         /// </param>
         /// <param name="assistantVersions">
         /// Full-window counts per assistant version the calls ran on, newest version first; they partition the totals.
@@ -147,6 +157,7 @@ namespace Vapi
             global::Vapi.CallHealthDashboardIssueSummaryDTOStatus status,
             long rowVersion,
             global::System.Guid goalId,
+            string categoryKey,
             string summary,
             global::Vapi.CallHealthDashboardAssistantReferenceDTO assistant,
             long affectedCallCount,
@@ -162,6 +173,7 @@ namespace Vapi
             this.Status = status;
             this.RowVersion = rowVersion;
             this.GoalId = goalId;
+            this.CategoryKey = categoryKey ?? throw new global::System.ArgumentNullException(nameof(categoryKey));
             this.Summary = summary ?? throw new global::System.ArgumentNullException(nameof(summary));
             this.Assistant = assistant ?? throw new global::System.ArgumentNullException(nameof(assistant));
             this.AffectedCallCount = affectedCallCount;

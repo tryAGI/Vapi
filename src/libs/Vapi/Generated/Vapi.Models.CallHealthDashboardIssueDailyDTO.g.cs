@@ -9,7 +9,7 @@ namespace Vapi
     public sealed partial class CallHealthDashboardIssueDailyDTO
     {
         /// <summary>
-        /// UTC calendar date, with boundary buckets clipped to the requested window.
+        /// Calendar date in the requested time zone (UTC by default), with boundary buckets clipped to the requested window.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("date")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -45,7 +45,7 @@ namespace Vapi
         /// Initializes a new instance of the <see cref="CallHealthDashboardIssueDailyDTO" /> class.
         /// </summary>
         /// <param name="date">
-        /// UTC calendar date, with boundary buckets clipped to the requested window.
+        /// Calendar date in the requested time zone (UTC by default), with boundary buckets clipped to the requested window.
         /// </param>
         /// <param name="affectedCallCount">
         /// Distinct visible calls matching this issue in the bucket.
