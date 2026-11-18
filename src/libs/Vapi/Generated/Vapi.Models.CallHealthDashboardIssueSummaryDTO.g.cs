@@ -86,6 +86,13 @@ namespace Vapi
         public required global::System.Collections.Generic.IList<global::Vapi.CallHealthDashboardIssueDailyDTO> DailySeries { get; set; }
 
         /// <summary>
+        /// Full-window counts per assistant version the calls ran on, newest version first; they partition the totals.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersions")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Vapi.CallHealthDashboardIssueVersionDTO> AssistantVersions { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lastSeenAt")]
@@ -123,6 +130,9 @@ namespace Vapi
         /// <param name="dailySeries">
         /// One ascending contiguous page of UTC buckets; memberships across issues are not unique calls.
         /// </param>
+        /// <param name="assistantVersions">
+        /// Full-window counts per assistant version the calls ran on, newest version first; they partition the totals.
+        /// </param>
         /// <param name="coverage"></param>
         /// <param name="affectedCallRate">
         /// Distinct calls matching this issue / analyzedCallCount; absent at zero.
@@ -142,6 +152,7 @@ namespace Vapi
             long affectedCallCount,
             long analyzedCallCount,
             global::System.Collections.Generic.IList<global::Vapi.CallHealthDashboardIssueDailyDTO> dailySeries,
+            global::System.Collections.Generic.IList<global::Vapi.CallHealthDashboardIssueVersionDTO> assistantVersions,
             global::Vapi.CallHealthDashboardIssueCoverageDTO coverage,
             double? affectedCallRate,
             global::System.DateTime? lastSeenAt)
@@ -157,6 +168,7 @@ namespace Vapi
             this.AnalyzedCallCount = analyzedCallCount;
             this.AffectedCallRate = affectedCallRate;
             this.DailySeries = dailySeries ?? throw new global::System.ArgumentNullException(nameof(dailySeries));
+            this.AssistantVersions = assistantVersions ?? throw new global::System.ArgumentNullException(nameof(assistantVersions));
             this.LastSeenAt = lastSeenAt;
             this.Coverage = coverage ?? throw new global::System.ArgumentNullException(nameof(coverage));
         }

@@ -51,6 +51,13 @@ namespace Vapi
         public required global::Vapi.CallHealthDashboardCoverageDTO Coverage { get; set; }
 
         /// <summary>
+        /// Full-window totals per assistant version the calls ran on, newest version first; they partition `goal`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersions")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Vapi.CallHealthDashboardGoalVersionSummaryDTO> AssistantVersions { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -75,6 +82,9 @@ namespace Vapi
         /// <param name="coverage">
         /// Received-work processing coverage, separate from success rates.
         /// </param>
+        /// <param name="assistantVersions">
+        /// Full-window totals per assistant version the calls ran on, newest version first; they partition `goal`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -84,7 +94,8 @@ namespace Vapi
             global::Vapi.CallHealthDashboardGoalSummaryDTO goal,
             global::System.Collections.Generic.IList<global::Vapi.CallHealthDashboardGoalDailyDTO> results,
             global::Vapi.CallHealthDashboardSeriesPageDTO seriesPage,
-            global::Vapi.CallHealthDashboardCoverageDTO coverage)
+            global::Vapi.CallHealthDashboardCoverageDTO coverage,
+            global::System.Collections.Generic.IList<global::Vapi.CallHealthDashboardGoalVersionSummaryDTO> assistantVersions)
         {
             this.Assistant = assistant ?? throw new global::System.ArgumentNullException(nameof(assistant));
             this.GoalDefinition = goalDefinition ?? throw new global::System.ArgumentNullException(nameof(goalDefinition));
@@ -92,6 +103,7 @@ namespace Vapi
             this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
             this.SeriesPage = seriesPage ?? throw new global::System.ArgumentNullException(nameof(seriesPage));
             this.Coverage = coverage ?? throw new global::System.ArgumentNullException(nameof(coverage));
+            this.AssistantVersions = assistantVersions ?? throw new global::System.ArgumentNullException(nameof(assistantVersions));
         }
 
         /// <summary>

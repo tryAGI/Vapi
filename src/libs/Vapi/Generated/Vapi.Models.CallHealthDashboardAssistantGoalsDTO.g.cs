@@ -16,6 +16,12 @@ namespace Vapi
         public required global::System.Guid AssistantId { get; set; }
 
         /// <summary>
+        /// Current assistant.latest_version label; omitted when unavailable, never a goal revision.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latestVersion")]
+        public string? LatestVersion { get; set; }
+
+        /// <summary>
         /// Empty when this visible assistant has no goals; no goal is automatically selected.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("goals")]
@@ -37,14 +43,19 @@ namespace Vapi
         /// <param name="goals">
         /// Empty when this visible assistant has no goals; no goal is automatically selected.
         /// </param>
+        /// <param name="latestVersion">
+        /// Current assistant.latest_version label; omitted when unavailable, never a goal revision.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CallHealthDashboardAssistantGoalsDTO(
             global::System.Guid assistantId,
-            global::System.Collections.Generic.IList<global::Vapi.CallHealthDashboardGoalOptionDTO> goals)
+            global::System.Collections.Generic.IList<global::Vapi.CallHealthDashboardGoalOptionDTO> goals,
+            string? latestVersion)
         {
             this.AssistantId = assistantId;
+            this.LatestVersion = latestVersion;
             this.Goals = goals ?? throw new global::System.ArgumentNullException(nameof(goals));
         }
 

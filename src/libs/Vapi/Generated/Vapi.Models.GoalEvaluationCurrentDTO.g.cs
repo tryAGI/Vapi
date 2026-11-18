@@ -52,6 +52,18 @@ namespace Vapi
         public global::Vapi.GoalEvaluationCurrentDTOGoalOutcome? GoalOutcome { get; set; }
 
         /// <summary>
+        /// The assistant version the call ran on. Absent when the call ran on no version.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersionId")]
+        public global::System.Guid? AssistantVersionId { get; set; }
+
+        /// <summary>
+        /// That version's label, such as v3. Absent when the call ran on no version or the label was not available when the call was registered.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assistantVersion")]
+        public string? AssistantVersion { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -70,6 +82,12 @@ namespace Vapi
         /// <param name="goalOutcome">
         /// Absent until a semantic result is accepted. Processing failures are never goal_not_met.
         /// </param>
+        /// <param name="assistantVersionId">
+        /// The assistant version the call ran on. Absent when the call ran on no version.
+        /// </param>
+        /// <param name="assistantVersion">
+        /// That version's label, such as v3. Absent when the call ran on no version or the label was not available when the call was registered.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -79,7 +97,9 @@ namespace Vapi
             string goalVersion,
             global::System.DateTime callEndedAt,
             global::Vapi.GoalEvaluationCurrentDTOProcessingState processingState,
-            global::Vapi.GoalEvaluationCurrentDTOGoalOutcome? goalOutcome)
+            global::Vapi.GoalEvaluationCurrentDTOGoalOutcome? goalOutcome,
+            global::System.Guid? assistantVersionId,
+            string? assistantVersion)
         {
             this.AssistantId = assistantId;
             this.GoalId = goalId;
@@ -87,6 +107,8 @@ namespace Vapi
             this.CallEndedAt = callEndedAt;
             this.ProcessingState = processingState;
             this.GoalOutcome = goalOutcome;
+            this.AssistantVersionId = assistantVersionId;
+            this.AssistantVersion = assistantVersion;
         }
 
         /// <summary>
