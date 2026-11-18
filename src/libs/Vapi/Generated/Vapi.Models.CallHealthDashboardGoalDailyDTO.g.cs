@@ -77,7 +77,7 @@ namespace Vapi
         public double? GoalNotMetRate { get; set; }
 
         /// <summary>
-        /// UTC calendar date; the first and last buckets are clipped to the requested window.
+        /// Calendar date in the requested time zone (UTC by default); the first and last buckets are clipped to the requested window.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("date")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -109,7 +109,7 @@ namespace Vapi
         /// Accepted current-goal results, including ineligible; independent of issue processing.
         /// </param>
         /// <param name="date">
-        /// UTC calendar date; the first and last buckets are clipped to the requested window.
+        /// Calendar date in the requested time zone (UTC by default); the first and last buckets are clipped to the requested window.
         /// </param>
         /// <param name="goalMetRate">
         /// Goal-met / evaluatedCallCount; omitted when there are no binary outcomes.

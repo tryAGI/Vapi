@@ -29,6 +29,12 @@ namespace Vapi
         public string? NextCursor { get; set; }
 
         /// <summary>
+        /// The requested time zone whose midnights bound this page and label its dates; absent for UTC.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timeZone")]
+        public string? TimeZone { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -46,17 +52,22 @@ namespace Vapi
         /// <param name="nextCursor">
         /// Continue chart dates only; independent of the issue-row nextCursor.
         /// </param>
+        /// <param name="timeZone">
+        /// The requested time zone whose midnights bound this page and label its dates; absent for UTC.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CallHealthDashboardSeriesPageDTO(
             global::Vapi.CallHealthDashboardWindowDTO window,
             global::Vapi.CallHealthDashboardWindowDTO pageWindow,
-            string? nextCursor)
+            string? nextCursor,
+            string? timeZone)
         {
             this.Window = window ?? throw new global::System.ArgumentNullException(nameof(window));
             this.PageWindow = pageWindow ?? throw new global::System.ArgumentNullException(nameof(pageWindow));
             this.NextCursor = nextCursor;
+            this.TimeZone = timeZone;
         }
 
         /// <summary>
