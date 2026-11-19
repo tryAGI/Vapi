@@ -23,18 +23,18 @@ namespace Vapi
         public required string TeamId { get; set; }
 
         /// <summary>
-        /// Region of your application. For example: eu1, eu2, us1, us2
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("region")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Region { get; set; }
-
-        /// <summary>
         /// This is not returned in the API.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apiKey")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ApiKey { get; set; }
+
+        /// <summary>
+        /// Region of your application. For example: eu1, eu2, us1, us2
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("region")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Region { get; set; }
 
         /// <summary>
         /// This is the unique identifier for the credential.
@@ -82,11 +82,11 @@ namespace Vapi
         /// <param name="teamId">
         /// Team ID
         /// </param>
-        /// <param name="region">
-        /// Region of your application. For example: eu1, eu2, us1, us2
-        /// </param>
         /// <param name="apiKey">
         /// This is not returned in the API.
+        /// </param>
+        /// <param name="region">
+        /// Region of your application. For example: eu1, eu2, us1, us2
         /// </param>
         /// <param name="id">
         /// This is the unique identifier for the credential.
@@ -109,8 +109,8 @@ namespace Vapi
 #endif
         public MakeCredential(
             string teamId,
-            string region,
             string apiKey,
+            string region,
             string id,
             string orgId,
             global::System.DateTime createdAt,
@@ -120,8 +120,8 @@ namespace Vapi
         {
             this.Provider = provider;
             this.TeamId = teamId ?? throw new global::System.ArgumentNullException(nameof(teamId));
-            this.Region = region ?? throw new global::System.ArgumentNullException(nameof(region));
             this.ApiKey = apiKey ?? throw new global::System.ArgumentNullException(nameof(apiKey));
+            this.Region = region ?? throw new global::System.ArgumentNullException(nameof(region));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.OrgId = orgId ?? throw new global::System.ArgumentNullException(nameof(orgId));
             this.CreatedAt = createdAt;
