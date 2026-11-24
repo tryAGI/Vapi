@@ -1335,6 +1335,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        CallStartErrorTwilioCredentialRejected,
+        /// <summary>
+        ///
+        /// </summary>
         CallStartErrorVapiNumberInternational,
         /// <summary>
         ///
@@ -2841,6 +2845,7 @@ namespace Vapi
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorSubscriptionInsufficientCredits => "call.start.error-subscription-insufficient-credits",
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorSubscriptionUpgradeFailed => "call.start.error-subscription-upgrade-failed",
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorSubscriptionWalletDoesNotExist => "call.start.error-subscription-wallet-does-not-exist",
+                ServerMessageEndOfCallReportEndedReason.CallStartErrorTwilioCredentialRejected => "call.start.error-twilio-credential-rejected",
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorVapiNumberInternational => "call.start.error-vapi-number-international",
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorVapiNumberOutboundDailyLimit => "call.start.error-vapi-number-outbound-daily-limit",
                 ServerMessageEndOfCallReportEndedReason.CallStartErrorVapifaultDatabaseError => "call.start.error-vapifault-database-error",
@@ -3473,6 +3478,7 @@ namespace Vapi
                 "call.start.error-subscription-insufficient-credits" => ServerMessageEndOfCallReportEndedReason.CallStartErrorSubscriptionInsufficientCredits,
                 "call.start.error-subscription-upgrade-failed" => ServerMessageEndOfCallReportEndedReason.CallStartErrorSubscriptionUpgradeFailed,
                 "call.start.error-subscription-wallet-does-not-exist" => ServerMessageEndOfCallReportEndedReason.CallStartErrorSubscriptionWalletDoesNotExist,
+                "call.start.error-twilio-credential-rejected" => ServerMessageEndOfCallReportEndedReason.CallStartErrorTwilioCredentialRejected,
                 "call.start.error-vapi-number-international" => ServerMessageEndOfCallReportEndedReason.CallStartErrorVapiNumberInternational,
                 "call.start.error-vapi-number-outbound-daily-limit" => ServerMessageEndOfCallReportEndedReason.CallStartErrorVapiNumberOutboundDailyLimit,
                 "call.start.error-vapifault-database-error" => ServerMessageEndOfCallReportEndedReason.CallStartErrorVapifaultDatabaseError,
