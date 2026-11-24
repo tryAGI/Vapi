@@ -1335,6 +1335,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        CallStartErrorTwilioCredentialRejected,
+        /// <summary>
+        ///
+        /// </summary>
         CallStartErrorVapiNumberInternational,
         /// <summary>
         ///
@@ -2841,6 +2845,7 @@ namespace Vapi
                 CallEndedReason.CallStartErrorSubscriptionInsufficientCredits => "call.start.error-subscription-insufficient-credits",
                 CallEndedReason.CallStartErrorSubscriptionUpgradeFailed => "call.start.error-subscription-upgrade-failed",
                 CallEndedReason.CallStartErrorSubscriptionWalletDoesNotExist => "call.start.error-subscription-wallet-does-not-exist",
+                CallEndedReason.CallStartErrorTwilioCredentialRejected => "call.start.error-twilio-credential-rejected",
                 CallEndedReason.CallStartErrorVapiNumberInternational => "call.start.error-vapi-number-international",
                 CallEndedReason.CallStartErrorVapiNumberOutboundDailyLimit => "call.start.error-vapi-number-outbound-daily-limit",
                 CallEndedReason.CallStartErrorVapifaultDatabaseError => "call.start.error-vapifault-database-error",
@@ -3473,6 +3478,7 @@ namespace Vapi
                 "call.start.error-subscription-insufficient-credits" => CallEndedReason.CallStartErrorSubscriptionInsufficientCredits,
                 "call.start.error-subscription-upgrade-failed" => CallEndedReason.CallStartErrorSubscriptionUpgradeFailed,
                 "call.start.error-subscription-wallet-does-not-exist" => CallEndedReason.CallStartErrorSubscriptionWalletDoesNotExist,
+                "call.start.error-twilio-credential-rejected" => CallEndedReason.CallStartErrorTwilioCredentialRejected,
                 "call.start.error-vapi-number-international" => CallEndedReason.CallStartErrorVapiNumberInternational,
                 "call.start.error-vapi-number-outbound-daily-limit" => CallEndedReason.CallStartErrorVapiNumberOutboundDailyLimit,
                 "call.start.error-vapifault-database-error" => CallEndedReason.CallStartErrorVapifaultDatabaseError,
