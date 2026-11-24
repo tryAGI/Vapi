@@ -611,6 +611,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Gpt61Terra,
+        /// <summary>
+        ///
+        /// </summary>
         GptLive1,
         /// <summary>
         ///
@@ -807,6 +811,7 @@ namespace Vapi
                 OpenAIModelModel.Gpt5_swedencentral => "gpt-5:swedencentral",
                 OpenAIModelModel.Gpt5_westeurope => "gpt-5:westeurope",
                 OpenAIModelModel.Gpt6Luna => "gpt-6-luna",
+                OpenAIModelModel.Gpt61Terra => "gpt-6.1-terra",
                 OpenAIModelModel.GptLive1 => "gpt-live-1",
                 OpenAIModelModel.GptRealtime2 => "gpt-realtime-2",
                 OpenAIModelModel.GptRealtime20250828 => "gpt-realtime-2025-08-28",
@@ -975,6 +980,7 @@ namespace Vapi
                 "gpt-5:swedencentral" => OpenAIModelModel.Gpt5_swedencentral,
                 "gpt-5:westeurope" => OpenAIModelModel.Gpt5_westeurope,
                 "gpt-6-luna" => OpenAIModelModel.Gpt6Luna,
+                "gpt-6.1-terra" => OpenAIModelModel.Gpt61Terra,
                 "gpt-live-1" => OpenAIModelModel.GptLive1,
                 "gpt-realtime-2" => OpenAIModelModel.GptRealtime2,
                 "gpt-realtime-2025-08-28" => OpenAIModelModel.GptRealtime20250828,

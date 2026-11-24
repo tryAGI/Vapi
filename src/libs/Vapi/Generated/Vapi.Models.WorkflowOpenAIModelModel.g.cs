@@ -597,6 +597,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Gpt61Terra,
+        /// <summary>
+        ///
+        /// </summary>
         O1Mini,
         /// <summary>
         ///
@@ -774,6 +778,7 @@ namespace Vapi
                 WorkflowOpenAIModelModel.Gpt5_swedencentral => "gpt-5:swedencentral",
                 WorkflowOpenAIModelModel.Gpt5_westeurope => "gpt-5:westeurope",
                 WorkflowOpenAIModelModel.Gpt6Luna => "gpt-6-luna",
+                WorkflowOpenAIModelModel.Gpt61Terra => "gpt-6.1-terra",
                 WorkflowOpenAIModelModel.O1Mini => "o1-mini",
                 WorkflowOpenAIModelModel.O1Mini20240912 => "o1-mini-2024-09-12",
                 WorkflowOpenAIModelModel.O3 => "o3",
@@ -935,6 +940,7 @@ namespace Vapi
                 "gpt-5:swedencentral" => WorkflowOpenAIModelModel.Gpt5_swedencentral,
                 "gpt-5:westeurope" => WorkflowOpenAIModelModel.Gpt5_westeurope,
                 "gpt-6-luna" => WorkflowOpenAIModelModel.Gpt6Luna,
+                "gpt-6.1-terra" => WorkflowOpenAIModelModel.Gpt61Terra,
                 "o1-mini" => WorkflowOpenAIModelModel.O1Mini,
                 "o1-mini-2024-09-12" => WorkflowOpenAIModelModel.O1Mini20240912,
                 "o3" => WorkflowOpenAIModelModel.O3,

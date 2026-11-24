@@ -41,7 +41,7 @@ namespace Vapi
         public global::Vapi.CartesiaVoiceModel? Model { get; set; }
 
         /// <summary>
-        /// This is the language that will be used. This is optional and will default to the correct language for the voiceId.<br/>
+        /// This is the language the voice speaks. When omitted, Vapi uses the voice's native language if it has one on record for that voice; otherwise no language is sent to Cartesia. Regional codes such as `es-MX` require the `sonic-3.6` model.<br/>
         /// Example: en
         /// </summary>
         /// <example>en</example>
@@ -106,7 +106,7 @@ namespace Vapi
         /// Example: sonic-3.5
         /// </param>
         /// <param name="language">
-        /// This is the language that will be used. This is optional and will default to the correct language for the voiceId.<br/>
+        /// This is the language the voice speaks. When omitted, Vapi uses the voice's native language if it has one on record for that voice; otherwise no language is sent to Cartesia. Regional codes such as `es-MX` require the `sonic-3.6` model.<br/>
         /// Example: en
         /// </param>
         /// <param name="experimentalControls">

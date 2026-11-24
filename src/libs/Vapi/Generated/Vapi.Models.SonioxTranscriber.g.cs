@@ -16,7 +16,8 @@ namespace Vapi
         public global::Vapi.SonioxTranscriberProvider Provider { get; set; }
 
         /// <summary>
-        /// The Soniox model to use for transcription.
+        /// The Soniox model to use for transcription. Defaults to stt-rt-v6.<br/>
+        /// Default Value: stt-rt-v6
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.SonioxTranscriberModelJsonConverter))]
@@ -108,7 +109,8 @@ namespace Vapi
         /// </summary>
         /// <param name="provider"></param>
         /// <param name="model">
-        /// The Soniox model to use for transcription.
+        /// The Soniox model to use for transcription. Defaults to stt-rt-v6.<br/>
+        /// Default Value: stt-rt-v6
         /// </param>
         /// <param name="agentTextInputEnabled">
         /// Sends the assistant's speech to Soniox as context, which improves caller transcription and filters out echo. Only supported on stt-rt-v6. Defaults to on; set to false to disable.
