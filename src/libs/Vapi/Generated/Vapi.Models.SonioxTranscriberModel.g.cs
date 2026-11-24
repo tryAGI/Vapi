@@ -4,7 +4,8 @@
 namespace Vapi
 {
     /// <summary>
-    /// The Soniox model to use for transcription.
+    /// The Soniox model to use for transcription. Defaults to stt-rt-v6.<br/>
+    /// Default Value: stt-rt-v6
     /// </summary>
     public enum SonioxTranscriberModel
     {

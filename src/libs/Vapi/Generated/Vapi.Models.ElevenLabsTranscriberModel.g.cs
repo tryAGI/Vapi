@@ -20,6 +20,10 @@ namespace Vapi
         ///
         /// </summary>
         ScribeV2Realtime,
+        /// <summary>
+        ///
+        /// </summary>
+        ScribeV3Live,
     }
 
     /// <summary>
@@ -37,6 +41,7 @@ namespace Vapi
                 ElevenLabsTranscriberModel.ScribeV1 => "scribe_v1",
                 ElevenLabsTranscriberModel.ScribeV2 => "scribe_v2",
                 ElevenLabsTranscriberModel.ScribeV2Realtime => "scribe_v2_realtime",
+                ElevenLabsTranscriberModel.ScribeV3Live => "scribe_v3_live",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -50,6 +55,7 @@ namespace Vapi
                 "scribe_v1" => ElevenLabsTranscriberModel.ScribeV1,
                 "scribe_v2" => ElevenLabsTranscriberModel.ScribeV2,
                 "scribe_v2_realtime" => ElevenLabsTranscriberModel.ScribeV2Realtime,
+                "scribe_v3_live" => ElevenLabsTranscriberModel.ScribeV3Live,
                 _ => null,
             };
         }

@@ -4,7 +4,7 @@
 namespace Vapi
 {
     /// <summary>
-    /// This is the language that will be used for the transcription.
+    /// Language for transcription. `multi` enables automatic code-switching on scribe_v3_live.
     /// </summary>
     public enum ElevenLabsTranscriberLanguage
     {
@@ -447,6 +447,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Multi,
+        /// <summary>
+        ///
+        /// </summary>
         My,
         /// <summary>
         ///
@@ -871,6 +875,7 @@ namespace Vapi
                 ElevenLabsTranscriberLanguage.Mr => "mr",
                 ElevenLabsTranscriberLanguage.Ms => "ms",
                 ElevenLabsTranscriberLanguage.Mt => "mt",
+                ElevenLabsTranscriberLanguage.Multi => "multi",
                 ElevenLabsTranscriberLanguage.My => "my",
                 ElevenLabsTranscriberLanguage.Na => "na",
                 ElevenLabsTranscriberLanguage.Nb => "nb",
@@ -1066,6 +1071,7 @@ namespace Vapi
                 "mr" => ElevenLabsTranscriberLanguage.Mr,
                 "ms" => ElevenLabsTranscriberLanguage.Ms,
                 "mt" => ElevenLabsTranscriberLanguage.Mt,
+                "multi" => ElevenLabsTranscriberLanguage.Multi,
                 "my" => ElevenLabsTranscriberLanguage.My,
                 "na" => ElevenLabsTranscriberLanguage.Na,
                 "nb" => ElevenLabsTranscriberLanguage.Nb,

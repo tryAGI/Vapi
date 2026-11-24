@@ -115,6 +115,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Gpt55,
+        /// <summary>
+        ///
+        /// </summary>
         Gpt56Luna20260709,
         /// <summary>
         ///
@@ -124,6 +128,10 @@ namespace Vapi
         ///
         /// </summary>
         Gpt56Terra20260709,
+        /// <summary>
+        ///
+        /// </summary>
+        Gpt6Luna,
     }
 
     /// <summary>
@@ -164,9 +172,11 @@ namespace Vapi
                 CreateAzureOpenAICredentialDTOModel.Gpt54Mini => "gpt-5.4-mini",
                 CreateAzureOpenAICredentialDTOModel.Gpt54Mini20260317 => "gpt-5.4-mini-2026-03-17",
                 CreateAzureOpenAICredentialDTOModel.Gpt54Nano => "gpt-5.4-nano",
+                CreateAzureOpenAICredentialDTOModel.Gpt55 => "gpt-5.5",
                 CreateAzureOpenAICredentialDTOModel.Gpt56Luna20260709 => "gpt-5.6-luna-2026-07-09",
                 CreateAzureOpenAICredentialDTOModel.Gpt56Sol20260709 => "gpt-5.6-sol-2026-07-09",
                 CreateAzureOpenAICredentialDTOModel.Gpt56Terra20260709 => "gpt-5.6-terra-2026-07-09",
+                CreateAzureOpenAICredentialDTOModel.Gpt6Luna => "gpt-6-luna",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -203,9 +213,11 @@ namespace Vapi
                 "gpt-5.4-mini" => CreateAzureOpenAICredentialDTOModel.Gpt54Mini,
                 "gpt-5.4-mini-2026-03-17" => CreateAzureOpenAICredentialDTOModel.Gpt54Mini20260317,
                 "gpt-5.4-nano" => CreateAzureOpenAICredentialDTOModel.Gpt54Nano,
+                "gpt-5.5" => CreateAzureOpenAICredentialDTOModel.Gpt55,
                 "gpt-5.6-luna-2026-07-09" => CreateAzureOpenAICredentialDTOModel.Gpt56Luna20260709,
                 "gpt-5.6-sol-2026-07-09" => CreateAzureOpenAICredentialDTOModel.Gpt56Sol20260709,
                 "gpt-5.6-terra-2026-07-09" => CreateAzureOpenAICredentialDTOModel.Gpt56Terra20260709,
+                "gpt-6-luna" => CreateAzureOpenAICredentialDTOModel.Gpt6Luna,
                 _ => null,
             };
         }
