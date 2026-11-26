@@ -24,6 +24,19 @@ namespace Vapi
         public global::Vapi.CreateStructuredOutputDTO? StructuredOutput { get; set; }
 
         /// <summary>
+        /// This is a built-in metric to evaluate instead of a structured output. Mutually exclusive with structuredOutputId<br/>
+        /// and structuredOutput, and only available on a scenario with `transcriptReplay`, which takes no other evaluations.<br/>
+        /// - wer: the word error rate of the replayed recording's transcript against the answer key, as a fraction where 0<br/>
+        ///   is perfect and 0.1 is 10%; insertions can push it above 1. `value` must be from 0 to 1. For example,<br/>
+        ///   `{ "metric": "wer", "comparator": "&lt;=", "value": 0.1 }`.<br/>
+        /// Example: wer
+        /// </summary>
+        /// <example>wer</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("metric")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Vapi.JsonConverters.EvaluationPlanItemMetricJsonConverter))]
+        public global::Vapi.EvaluationPlanItemMetric? Metric { get; set; }
+
+        /// <summary>
         /// Optional dot-notation path to a primitive leaf when evaluating an object structured output.<br/>
         /// Example: contact.auth_started
         /// </summary>
@@ -92,6 +105,14 @@ namespace Vapi
         /// Mutually exclusive with structuredOutputId.<br/>
         /// Only primitive schema types (string, number, integer, boolean) are allowed.
         /// </param>
+        /// <param name="metric">
+        /// This is a built-in metric to evaluate instead of a structured output. Mutually exclusive with structuredOutputId<br/>
+        /// and structuredOutput, and only available on a scenario with `transcriptReplay`, which takes no other evaluations.<br/>
+        /// - wer: the word error rate of the replayed recording's transcript against the answer key, as a fraction where 0<br/>
+        ///   is perfect and 0.1 is 10%; insertions can push it above 1. `value` must be from 0 to 1. For example,<br/>
+        ///   `{ "metric": "wer", "comparator": "&lt;=", "value": 0.1 }`.<br/>
+        /// Example: wer
+        /// </param>
         /// <param name="path">
         /// Optional dot-notation path to a primitive leaf when evaluating an object structured output.<br/>
         /// Example: contact.auth_started
@@ -109,11 +130,13 @@ namespace Vapi
             global::Vapi.OneOf<double?, string, bool?> value,
             global::System.Guid? structuredOutputId,
             global::Vapi.CreateStructuredOutputDTO? structuredOutput,
+            global::Vapi.EvaluationPlanItemMetric? metric,
             string? path,
             bool? required)
         {
             this.StructuredOutputId = structuredOutputId;
             this.StructuredOutput = structuredOutput;
+            this.Metric = metric;
             this.Path = path;
             this.Comparator = comparator;
             this.Value = value;

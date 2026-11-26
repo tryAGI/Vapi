@@ -43,8 +43,9 @@ namespace Vapi
         /// This is the script/instructions for the tester to follow during the simulation.
         /// </param>
         /// <param name="evaluations">
-        /// This is the structured output-based evaluation plan for the simulation.<br/>
-        /// Each item defines a structured output to extract and evaluate against an expected value.
+        /// This is the evaluation plan for the simulation.<br/>
+        /// Each item defines a structured output to extract, or with `transcriptReplay` a built-in metric, and evaluates it<br/>
+        /// against an expected value.
         /// </param>
         /// <param name="hooks">
         /// Hooks to run on simulation lifecycle events
@@ -57,6 +58,12 @@ namespace Vapi
         /// <param name="latencyExpectations">
         /// Latency ceilings for voice simulations. Omit to leave unchanged; send an<br/>
         /// empty array to remove all latency expectations.
+        /// </param>
+        /// <param name="transcriptReplay">
+        /// Transcript replay settings. Omit to leave unchanged; send null to turn the<br/>
+        /// scenario back into a normal simulation, which then needs instructions and<br/>
+        /// at least one evaluation. Turning a scenario into a replay needs<br/>
+        /// `evaluations: []` in the same request.
         /// </param>
         /// <param name="path">
         /// Optional folder path for organizing scenarios.<br/>
@@ -75,6 +82,7 @@ namespace Vapi
             global::Vapi.AssistantOverrides? targetOverrides = default,
             global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? toolMocks = default,
             global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? latencyExpectations = default,
+            global::Vapi.TranscriptReplay? transcriptReplay = default,
             string? path = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

@@ -439,12 +439,11 @@ namespace Vapi
         /// Example: Health Enrollment - Eligible Path
         /// </param>
         /// <param name="instructions">
-        /// This is the script/instructions for the tester to follow during the simulation.<br/>
+        /// This is the script/instructions for the tester to follow during the simulation. Optional when `transcriptReplay` is set, which has no tester.<br/>
         /// Example: You are calling to enroll in the Twin Health program. Confirm your identity when asked.
         /// </param>
         /// <param name="evaluations">
-        /// This is the structured output-based evaluation plan for the simulation.<br/>
-        /// Each item defines a structured output to extract and evaluate against an expected value.
+        /// This is the evaluation plan for the simulation. At least one is required. With `transcriptReplay`, only `metric` evaluations are allowed, and none are required.
         /// </param>
         /// <param name="hooks">
         /// Hooks to run on simulation lifecycle events
@@ -463,6 +462,11 @@ namespace Vapi
         /// and GPT Live targets; on any other voice simulation, a metric that no turn<br/>
         /// measured fails.
         /// </param>
+        /// <param name="transcriptReplay">
+        /// This turns the scenario into a transcription test: a recording is streamed<br/>
+        /// into the target's call in place of a simulated caller, and the target's<br/>
+        /// transcript is scored against an answer key.
+        /// </param>
         /// <param name="path">
         /// Optional folder path for organizing scenarios.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
@@ -479,6 +483,7 @@ namespace Vapi
             global::Vapi.AssistantOverrides? targetOverrides = default,
             global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? toolMocks = default,
             global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? latencyExpectations = default,
+            global::Vapi.TranscriptReplay? transcriptReplay = default,
             string? path = default,
             global::Vapi.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -492,6 +497,7 @@ namespace Vapi
                 TargetOverrides = targetOverrides,
                 ToolMocks = toolMocks,
                 LatencyExpectations = latencyExpectations,
+                TranscriptReplay = transcriptReplay,
                 Path = path,
             };
 

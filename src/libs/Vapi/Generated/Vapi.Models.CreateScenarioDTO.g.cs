@@ -18,7 +18,7 @@ namespace Vapi
         public required string Name { get; set; }
 
         /// <summary>
-        /// This is the script/instructions for the tester to follow during the simulation.<br/>
+        /// This is the script/instructions for the tester to follow during the simulation. Optional when `transcriptReplay` is set, which has no tester.<br/>
         /// Example: You are calling to enroll in the Twin Health program. Confirm your identity when asked.
         /// </summary>
         /// <example>You are calling to enroll in the Twin Health program. Confirm your identity when asked.</example>
@@ -27,8 +27,7 @@ namespace Vapi
         public required string Instructions { get; set; }
 
         /// <summary>
-        /// This is the structured output-based evaluation plan for the simulation.<br/>
-        /// Each item defines a structured output to extract and evaluate against an expected value.
+        /// This is the evaluation plan for the simulation. At least one is required. With `transcriptReplay`, only `metric` evaluations are allowed, and none are required.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluations")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -65,6 +64,14 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? LatencyExpectations { get; set; }
 
         /// <summary>
+        /// This turns the scenario into a transcription test: a recording is streamed<br/>
+        /// into the target's call in place of a simulated caller, and the target's<br/>
+        /// transcript is scored against an answer key.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transcriptReplay")]
+        public global::Vapi.TranscriptReplay? TranscriptReplay { get; set; }
+
+        /// <summary>
         /// Optional folder path for organizing scenarios.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
         /// Maps to GitOps resource folder structure.
@@ -86,12 +93,11 @@ namespace Vapi
         /// Example: Health Enrollment - Eligible Path
         /// </param>
         /// <param name="instructions">
-        /// This is the script/instructions for the tester to follow during the simulation.<br/>
+        /// This is the script/instructions for the tester to follow during the simulation. Optional when `transcriptReplay` is set, which has no tester.<br/>
         /// Example: You are calling to enroll in the Twin Health program. Confirm your identity when asked.
         /// </param>
         /// <param name="evaluations">
-        /// This is the structured output-based evaluation plan for the simulation.<br/>
-        /// Each item defines a structured output to extract and evaluate against an expected value.
+        /// This is the evaluation plan for the simulation. At least one is required. With `transcriptReplay`, only `metric` evaluations are allowed, and none are required.
         /// </param>
         /// <param name="hooks">
         /// Hooks to run on simulation lifecycle events
@@ -110,6 +116,11 @@ namespace Vapi
         /// and GPT Live targets; on any other voice simulation, a metric that no turn<br/>
         /// measured fails.
         /// </param>
+        /// <param name="transcriptReplay">
+        /// This turns the scenario into a transcription test: a recording is streamed<br/>
+        /// into the target's call in place of a simulated caller, and the target's<br/>
+        /// transcript is scored against an answer key.
+        /// </param>
         /// <param name="path">
         /// Optional folder path for organizing scenarios.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
@@ -126,6 +137,7 @@ namespace Vapi
             global::Vapi.AssistantOverrides? targetOverrides,
             global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? toolMocks,
             global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? latencyExpectations,
+            global::Vapi.TranscriptReplay? transcriptReplay,
             string? path)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
@@ -135,6 +147,7 @@ namespace Vapi
             this.TargetOverrides = targetOverrides;
             this.ToolMocks = toolMocks;
             this.LatencyExpectations = latencyExpectations;
+            this.TranscriptReplay = transcriptReplay;
             this.Path = path;
         }
 

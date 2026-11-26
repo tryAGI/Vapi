@@ -555,6 +555,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Gpt56Luna_australiaeast,
+        /// <summary>
+        ///
+        /// </summary>
         Gpt56Luna_westus3,
         /// <summary>
         ///
@@ -608,6 +612,10 @@ namespace Vapi
         ///
         /// </summary>
         Gpt6Luna,
+        /// <summary>
+        ///
+        /// </summary>
+        Gpt6Luna_australiaeast,
         /// <summary>
         ///
         /// </summary>
@@ -797,6 +805,7 @@ namespace Vapi
                 OpenAIModelModel.Gpt54_swedencentral => "gpt-5.4:swedencentral",
                 OpenAIModelModel.Gpt55 => "gpt-5.5",
                 OpenAIModelModel.Gpt56Luna => "gpt-5.6-luna",
+                OpenAIModelModel.Gpt56Luna_australiaeast => "gpt-5.6-luna:australiaeast",
                 OpenAIModelModel.Gpt56Luna_westus3 => "gpt-5.6-luna:westus3",
                 OpenAIModelModel.Gpt56Sol => "gpt-5.6-sol",
                 OpenAIModelModel.Gpt56Sol_westus3 => "gpt-5.6-sol:westus3",
@@ -811,6 +820,7 @@ namespace Vapi
                 OpenAIModelModel.Gpt5_swedencentral => "gpt-5:swedencentral",
                 OpenAIModelModel.Gpt5_westeurope => "gpt-5:westeurope",
                 OpenAIModelModel.Gpt6Luna => "gpt-6-luna",
+                OpenAIModelModel.Gpt6Luna_australiaeast => "gpt-6-luna:australiaeast",
                 OpenAIModelModel.Gpt61Terra => "gpt-6.1-terra",
                 OpenAIModelModel.GptLive1 => "gpt-live-1",
                 OpenAIModelModel.GptRealtime2 => "gpt-realtime-2",
@@ -966,6 +976,7 @@ namespace Vapi
                 "gpt-5.4:swedencentral" => OpenAIModelModel.Gpt54_swedencentral,
                 "gpt-5.5" => OpenAIModelModel.Gpt55,
                 "gpt-5.6-luna" => OpenAIModelModel.Gpt56Luna,
+                "gpt-5.6-luna:australiaeast" => OpenAIModelModel.Gpt56Luna_australiaeast,
                 "gpt-5.6-luna:westus3" => OpenAIModelModel.Gpt56Luna_westus3,
                 "gpt-5.6-sol" => OpenAIModelModel.Gpt56Sol,
                 "gpt-5.6-sol:westus3" => OpenAIModelModel.Gpt56Sol_westus3,
@@ -980,6 +991,7 @@ namespace Vapi
                 "gpt-5:swedencentral" => OpenAIModelModel.Gpt5_swedencentral,
                 "gpt-5:westeurope" => OpenAIModelModel.Gpt5_westeurope,
                 "gpt-6-luna" => OpenAIModelModel.Gpt6Luna,
+                "gpt-6-luna:australiaeast" => OpenAIModelModel.Gpt6Luna_australiaeast,
                 "gpt-6.1-terra" => OpenAIModelModel.Gpt61Terra,
                 "gpt-live-1" => OpenAIModelModel.GptLive1,
                 "gpt-realtime-2" => OpenAIModelModel.GptRealtime2,
