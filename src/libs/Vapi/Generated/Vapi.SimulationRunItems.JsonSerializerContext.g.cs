@@ -52,6 +52,14 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LatencyEvaluationResult))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LatencyEvaluationResultMetric), TypeInfoPropertyName = "LatencyEvaluationResultMetric2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LatencyEvaluationResultAggregation), TypeInfoPropertyName = "LatencyEvaluationResultAggregation2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TranscriptKeyValueResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TranscriptKeyValueResultVerdict), TypeInfoPropertyName = "TranscriptKeyValueResultVerdict2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TranscriptMetricEvaluationResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TranscriptMetricEvaluationResultMetric), TypeInfoPropertyName = "TranscriptMetricEvaluationResultMetric2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TranscriptMetricEvaluationResultComparator), TypeInfoPropertyName = "TranscriptMetricEvaluationResultComparator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TranscriptEvaluationResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TranscriptKeyValueResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Vapi.TranscriptMetricEvaluationResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemResults))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Vapi.SimulationRunItemResultsStructuredOutputs2>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemResultsStructuredOutputs2))]
@@ -88,6 +96,9 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.StructuredOutputEvaluationResultComparator?), TypeInfoPropertyName = "NullableStructuredOutputEvaluationResultComparator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LatencyEvaluationResultMetric?), TypeInfoPropertyName = "NullableLatencyEvaluationResultMetric2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.LatencyEvaluationResultAggregation?), TypeInfoPropertyName = "NullableLatencyEvaluationResultAggregation2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TranscriptKeyValueResultVerdict?), TypeInfoPropertyName = "NullableTranscriptKeyValueResultVerdict2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TranscriptMetricEvaluationResultMetric?), TypeInfoPropertyName = "NullableTranscriptMetricEvaluationResultMetric2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.TranscriptMetricEvaluationResultComparator?), TypeInfoPropertyName = "NullableTranscriptMetricEvaluationResultComparator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemResultsSkippedStructuredOutputsReason?), TypeInfoPropertyName = "NullableSimulationRunItemResultsSkippedStructuredOutputsReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunItemStatus?), TypeInfoPropertyName = "NullableSimulationRunItemStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Vapi.SimulationRunControllerFindItemsStatus?), TypeInfoPropertyName = "NullableSimulationRunControllerFindItemsStatus2")]
@@ -97,6 +108,8 @@ namespace Vapi
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationHookWebhookAction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.OneOf<global::Vapi.SimulationHookCallStarted, global::Vapi.SimulationHookCallEnded>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TranscriptKeyValueResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.TranscriptMetricEvaluationResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.StructuredOutputEvaluationResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.LatencyEvaluationResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Vapi.SimulationRunItemImprovementSuggestion>))]
@@ -227,6 +240,18 @@ namespace Vapi
 
                     || typeToConvert == typeof(global::Vapi.LatencyEvaluationResultAggregation?)
 
+                    || typeToConvert == typeof(global::Vapi.TranscriptKeyValueResultVerdict)
+
+                    || typeToConvert == typeof(global::Vapi.TranscriptKeyValueResultVerdict?)
+
+                    || typeToConvert == typeof(global::Vapi.TranscriptMetricEvaluationResultMetric)
+
+                    || typeToConvert == typeof(global::Vapi.TranscriptMetricEvaluationResultMetric?)
+
+                    || typeToConvert == typeof(global::Vapi.TranscriptMetricEvaluationResultComparator)
+
+                    || typeToConvert == typeof(global::Vapi.TranscriptMetricEvaluationResultComparator?)
+
                     || typeToConvert == typeof(global::Vapi.SimulationRunItemResultsSkippedStructuredOutputsReason)
 
                     || typeToConvert == typeof(global::Vapi.SimulationRunItemResultsSkippedStructuredOutputsReason?)
@@ -350,6 +375,36 @@ namespace Vapi
                 if (typeToConvert == typeof(global::Vapi.LatencyEvaluationResultAggregation?))
                 {
                     return new global::Vapi.JsonConverters.LatencyEvaluationResultAggregationNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TranscriptKeyValueResultVerdict))
+                {
+                    return new global::Vapi.JsonConverters.TranscriptKeyValueResultVerdictJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TranscriptKeyValueResultVerdict?))
+                {
+                    return new global::Vapi.JsonConverters.TranscriptKeyValueResultVerdictNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TranscriptMetricEvaluationResultMetric))
+                {
+                    return new global::Vapi.JsonConverters.TranscriptMetricEvaluationResultMetricJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TranscriptMetricEvaluationResultMetric?))
+                {
+                    return new global::Vapi.JsonConverters.TranscriptMetricEvaluationResultMetricNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TranscriptMetricEvaluationResultComparator))
+                {
+                    return new global::Vapi.JsonConverters.TranscriptMetricEvaluationResultComparatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Vapi.TranscriptMetricEvaluationResultComparator?))
+                {
+                    return new global::Vapi.JsonConverters.TranscriptMetricEvaluationResultComparatorNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Vapi.SimulationRunItemResultsSkippedStructuredOutputsReason))

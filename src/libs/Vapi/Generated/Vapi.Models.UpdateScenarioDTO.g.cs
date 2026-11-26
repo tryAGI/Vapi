@@ -21,8 +21,9 @@ namespace Vapi
         public string? Instructions { get; set; }
 
         /// <summary>
-        /// This is the structured output-based evaluation plan for the simulation.<br/>
-        /// Each item defines a structured output to extract and evaluate against an expected value.
+        /// This is the evaluation plan for the simulation.<br/>
+        /// Each item defines a structured output to extract, or with `transcriptReplay` a built-in metric, and evaluates it<br/>
+        /// against an expected value.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluations")]
         public global::System.Collections.Generic.IList<global::Vapi.EvaluationPlanItem>? Evaluations { get; set; }
@@ -55,6 +56,15 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? LatencyExpectations { get; set; }
 
         /// <summary>
+        /// Transcript replay settings. Omit to leave unchanged; send null to turn the<br/>
+        /// scenario back into a normal simulation, which then needs instructions and<br/>
+        /// at least one evaluation. Turning a scenario into a replay needs<br/>
+        /// `evaluations: []` in the same request.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transcriptReplay")]
+        public global::Vapi.TranscriptReplay? TranscriptReplay { get; set; }
+
+        /// <summary>
         /// Optional folder path for organizing scenarios.<br/>
         /// Supports up to 3 levels (e.g., "dept/feature/variant").<br/>
         /// Set to null to remove from folder.
@@ -78,8 +88,9 @@ namespace Vapi
         /// This is the script/instructions for the tester to follow during the simulation.
         /// </param>
         /// <param name="evaluations">
-        /// This is the structured output-based evaluation plan for the simulation.<br/>
-        /// Each item defines a structured output to extract and evaluate against an expected value.
+        /// This is the evaluation plan for the simulation.<br/>
+        /// Each item defines a structured output to extract, or with `transcriptReplay` a built-in metric, and evaluates it<br/>
+        /// against an expected value.
         /// </param>
         /// <param name="hooks">
         /// Hooks to run on simulation lifecycle events
@@ -92,6 +103,12 @@ namespace Vapi
         /// <param name="latencyExpectations">
         /// Latency ceilings for voice simulations. Omit to leave unchanged; send an<br/>
         /// empty array to remove all latency expectations.
+        /// </param>
+        /// <param name="transcriptReplay">
+        /// Transcript replay settings. Omit to leave unchanged; send null to turn the<br/>
+        /// scenario back into a normal simulation, which then needs instructions and<br/>
+        /// at least one evaluation. Turning a scenario into a replay needs<br/>
+        /// `evaluations: []` in the same request.
         /// </param>
         /// <param name="path">
         /// Optional folder path for organizing scenarios.<br/>
@@ -109,6 +126,7 @@ namespace Vapi
             global::Vapi.AssistantOverrides? targetOverrides,
             global::System.Collections.Generic.IList<global::Vapi.ScenarioToolMock>? toolMocks,
             global::System.Collections.Generic.IList<global::Vapi.LatencyExpectation>? latencyExpectations,
+            global::Vapi.TranscriptReplay? transcriptReplay,
             string? path)
         {
             this.Name = name;
@@ -118,6 +136,7 @@ namespace Vapi
             this.TargetOverrides = targetOverrides;
             this.ToolMocks = toolMocks;
             this.LatencyExpectations = latencyExpectations;
+            this.TranscriptReplay = transcriptReplay;
             this.Path = path;
         }
 

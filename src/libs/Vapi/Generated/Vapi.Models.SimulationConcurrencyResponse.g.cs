@@ -37,6 +37,13 @@ namespace Vapi
         public required double AvailableToStart { get; set; }
 
         /// <summary>
+        /// Max chat simulations that can run at once. A count of simulations, not call slots: chat simulations use none.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("chatConcurrencyLimit")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double ChatConcurrencyLimit { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
@@ -74,6 +81,9 @@ namespace Vapi
         /// <param name="availableToStart">
         /// Number of voice simulations that can start now (available call slots / 2)
         /// </param>
+        /// <param name="chatConcurrencyLimit">
+        /// Max chat simulations that can run at once. A count of simulations, not call slots: chat simulations use none.
+        /// </param>
         /// <param name="isDefault">
         /// True if org is using platform default concurrency limit
         /// </param>
@@ -87,6 +97,7 @@ namespace Vapi
             double concurrencyLimit,
             double activeSimulations,
             double availableToStart,
+            double chatConcurrencyLimit,
             bool isDefault,
             global::System.DateTime? createdAt,
             global::System.DateTime? updatedAt)
@@ -95,6 +106,7 @@ namespace Vapi
             this.ConcurrencyLimit = concurrencyLimit;
             this.ActiveSimulations = activeSimulations;
             this.AvailableToStart = availableToStart;
+            this.ChatConcurrencyLimit = chatConcurrencyLimit;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.IsDefault = isDefault;

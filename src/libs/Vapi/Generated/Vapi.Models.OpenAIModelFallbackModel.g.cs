@@ -551,6 +551,10 @@ namespace Vapi
         /// <summary>
         ///
         /// </summary>
+        Gpt56Luna_australiaeast,
+        /// <summary>
+        ///
+        /// </summary>
         Gpt56Luna_westus3,
         /// <summary>
         ///
@@ -604,6 +608,10 @@ namespace Vapi
         ///
         /// </summary>
         Gpt6Luna,
+        /// <summary>
+        ///
+        /// </summary>
+        Gpt6Luna_australiaeast,
         /// <summary>
         ///
         /// </summary>
@@ -789,6 +797,7 @@ namespace Vapi
                 OpenAIModelFallbackModel.Gpt54_swedencentral => "gpt-5.4:swedencentral",
                 OpenAIModelFallbackModel.Gpt55 => "gpt-5.5",
                 OpenAIModelFallbackModel.Gpt56Luna => "gpt-5.6-luna",
+                OpenAIModelFallbackModel.Gpt56Luna_australiaeast => "gpt-5.6-luna:australiaeast",
                 OpenAIModelFallbackModel.Gpt56Luna_westus3 => "gpt-5.6-luna:westus3",
                 OpenAIModelFallbackModel.Gpt56Sol => "gpt-5.6-sol",
                 OpenAIModelFallbackModel.Gpt56Sol_westus3 => "gpt-5.6-sol:westus3",
@@ -803,6 +812,7 @@ namespace Vapi
                 OpenAIModelFallbackModel.Gpt5_swedencentral => "gpt-5:swedencentral",
                 OpenAIModelFallbackModel.Gpt5_westeurope => "gpt-5:westeurope",
                 OpenAIModelFallbackModel.Gpt6Luna => "gpt-6-luna",
+                OpenAIModelFallbackModel.Gpt6Luna_australiaeast => "gpt-6-luna:australiaeast",
                 OpenAIModelFallbackModel.Gpt61Terra => "gpt-6.1-terra",
                 OpenAIModelFallbackModel.GptRealtime2 => "gpt-realtime-2",
                 OpenAIModelFallbackModel.GptRealtime20250828 => "gpt-realtime-2025-08-28",
@@ -957,6 +967,7 @@ namespace Vapi
                 "gpt-5.4:swedencentral" => OpenAIModelFallbackModel.Gpt54_swedencentral,
                 "gpt-5.5" => OpenAIModelFallbackModel.Gpt55,
                 "gpt-5.6-luna" => OpenAIModelFallbackModel.Gpt56Luna,
+                "gpt-5.6-luna:australiaeast" => OpenAIModelFallbackModel.Gpt56Luna_australiaeast,
                 "gpt-5.6-luna:westus3" => OpenAIModelFallbackModel.Gpt56Luna_westus3,
                 "gpt-5.6-sol" => OpenAIModelFallbackModel.Gpt56Sol,
                 "gpt-5.6-sol:westus3" => OpenAIModelFallbackModel.Gpt56Sol_westus3,
@@ -971,6 +982,7 @@ namespace Vapi
                 "gpt-5:swedencentral" => OpenAIModelFallbackModel.Gpt5_swedencentral,
                 "gpt-5:westeurope" => OpenAIModelFallbackModel.Gpt5_westeurope,
                 "gpt-6-luna" => OpenAIModelFallbackModel.Gpt6Luna,
+                "gpt-6-luna:australiaeast" => OpenAIModelFallbackModel.Gpt6Luna_australiaeast,
                 "gpt-6.1-terra" => OpenAIModelFallbackModel.Gpt61Terra,
                 "gpt-realtime-2" => OpenAIModelFallbackModel.GptRealtime2,
                 "gpt-realtime-2025-08-28" => OpenAIModelFallbackModel.GptRealtime20250828,

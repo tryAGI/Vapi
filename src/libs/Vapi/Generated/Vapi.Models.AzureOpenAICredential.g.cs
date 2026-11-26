@@ -79,6 +79,12 @@ namespace Vapi
         public string? Name { get; set; }
 
         /// <summary>
+        /// These are the names of your Azure deployments, one entry for every model in `models`. Omit the field when every deployment is named after its model; once it has any entry, a model with no entry is rejected, so a deployment named after its model takes `{ "model": "&lt;model&gt;", "name": "&lt;model&gt;" }`. Requests use the first of the org's keys that matches the region (on a live call, also the model), so an org holding two keys for the same region and model should pin `credentialIds` on its assistants.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("deployments")]
+        public global::System.Collections.Generic.IList<global::Vapi.AzureOpenAIDeployment>? Deployments { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("openAIEndpoint")]
@@ -121,6 +127,9 @@ namespace Vapi
         /// <param name="name">
         /// This is the name of credential. This is just for your reference.
         /// </param>
+        /// <param name="deployments">
+        /// These are the names of your Azure deployments, one entry for every model in `models`. Omit the field when every deployment is named after its model; once it has any entry, a model with no entry is rejected, so a deployment named after its model takes `{ "model": "&lt;model&gt;", "name": "&lt;model&gt;" }`. Requests use the first of the org's keys that matches the region (on a live call, also the model), so an org holding two keys for the same region and model should pin `credentialIds` on its assistants.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -135,7 +144,8 @@ namespace Vapi
             string openAIEndpoint,
             global::Vapi.AzureOpenAICredentialProvider provider,
             string? ocpApimSubscriptionKey,
-            string? name)
+            string? name,
+            global::System.Collections.Generic.IList<global::Vapi.AzureOpenAIDeployment>? deployments)
         {
             this.Provider = provider;
             this.Region = region;
@@ -147,6 +157,7 @@ namespace Vapi
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.Name = name;
+            this.Deployments = deployments;
             this.OpenAIEndpoint = openAIEndpoint ?? throw new global::System.ArgumentNullException(nameof(openAIEndpoint));
         }
 

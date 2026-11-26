@@ -54,6 +54,13 @@ namespace Vapi
         public global::System.Collections.Generic.IList<global::Vapi.LatencyEvaluationResult>? LatencyEvaluations { get; set; }
 
         /// <summary>
+        /// This is the replayed recording's transcript scored against the scenario's<br/>
+        /// answer key. Present only for scenarios with a transcript replay.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transcriptEvaluation")]
+        public global::Vapi.TranscriptEvaluationResult? TranscriptEvaluation { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -84,6 +91,10 @@ namespace Vapi
         /// This is the list of results from the scenario's latency expectations.<br/>
         /// Absent when the scenario has no latency expectations.
         /// </param>
+        /// <param name="transcriptEvaluation">
+        /// This is the replayed recording's transcript scored against the scenario's<br/>
+        /// answer key. Present only for scenarios with a transcript replay.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -94,7 +105,8 @@ namespace Vapi
             global::System.Collections.Generic.Dictionary<string, global::Vapi.SimulationRunItemResultsSkippedStructuredOutputs2>? skippedStructuredOutputs,
             string? structuredOutputError,
             global::Vapi.LatencyMetrics? latencyMetrics,
-            global::System.Collections.Generic.IList<global::Vapi.LatencyEvaluationResult>? latencyEvaluations)
+            global::System.Collections.Generic.IList<global::Vapi.LatencyEvaluationResult>? latencyEvaluations,
+            global::Vapi.TranscriptEvaluationResult? transcriptEvaluation)
         {
             this.StructuredOutputs = structuredOutputs;
             this.SkippedStructuredOutputs = skippedStructuredOutputs;
@@ -103,6 +115,7 @@ namespace Vapi
             this.Passed = passed;
             this.LatencyMetrics = latencyMetrics;
             this.LatencyEvaluations = latencyEvaluations;
+            this.TranscriptEvaluation = transcriptEvaluation;
         }
 
         /// <summary>

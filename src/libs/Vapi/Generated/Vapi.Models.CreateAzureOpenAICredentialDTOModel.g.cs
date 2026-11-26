@@ -132,6 +132,10 @@ namespace Vapi
         ///
         /// </summary>
         Gpt6Luna,
+        /// <summary>
+        ///
+        /// </summary>
+        Gpt6Luna20260922,
     }
 
     /// <summary>
@@ -177,6 +181,7 @@ namespace Vapi
                 CreateAzureOpenAICredentialDTOModel.Gpt56Sol20260709 => "gpt-5.6-sol-2026-07-09",
                 CreateAzureOpenAICredentialDTOModel.Gpt56Terra20260709 => "gpt-5.6-terra-2026-07-09",
                 CreateAzureOpenAICredentialDTOModel.Gpt6Luna => "gpt-6-luna",
+                CreateAzureOpenAICredentialDTOModel.Gpt6Luna20260922 => "gpt-6-luna-2026-09-22",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -218,6 +223,7 @@ namespace Vapi
                 "gpt-5.6-sol-2026-07-09" => CreateAzureOpenAICredentialDTOModel.Gpt56Sol20260709,
                 "gpt-5.6-terra-2026-07-09" => CreateAzureOpenAICredentialDTOModel.Gpt56Terra20260709,
                 "gpt-6-luna" => CreateAzureOpenAICredentialDTOModel.Gpt6Luna,
+                "gpt-6-luna-2026-09-22" => CreateAzureOpenAICredentialDTOModel.Gpt6Luna20260922,
                 _ => null,
             };
         }
